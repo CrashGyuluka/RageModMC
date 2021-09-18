@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/sandstone_bottom",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_homokko",
+    "east": "ragemod:blocks/savas_homokko",
+    "south": "ragemod:blocks/savas_homokko",
+    "west": "ragemod:blocks/savas_homokko",
+    "particle": "ragemod:blocks/sandstone_bottom"
+  }
+}

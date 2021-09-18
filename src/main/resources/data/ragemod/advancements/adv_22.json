@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:karib_sea_medal"
+    },
+    "title": {
+      "translate": "advancements.adv_22.title"
+    },
+    "description": {
+      "translate": "advancements.adv_22.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_22": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "ragemod:karib_sea_medal",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_1"
+}

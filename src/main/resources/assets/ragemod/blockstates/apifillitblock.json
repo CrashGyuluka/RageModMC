@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/apifillitblock"
+    },
+    "facing=east": {
+      "model": "ragemod:block/apifillitblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/apifillitblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/apifillitblock",
+      "y": 270
+    }
+  }
+}

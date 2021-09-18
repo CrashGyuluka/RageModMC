@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "gold": "portal_jee",
+        "obsidian": "obs2",
+        "portal": "gggg"
+      },
+      "name": "default"
+    }
+  }
+}

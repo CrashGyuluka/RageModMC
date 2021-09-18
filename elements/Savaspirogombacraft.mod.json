@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.NETHER_WART_BLOCK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.NETHER_WART_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Savkristalyp2"
+      },
+      {
+        "value": "Blocks.NETHER_WART_BLOCK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.NETHER_WART_BLOCK"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Savaspirosgomba"
+    },
+    "name": "savaspirogombacraft",
+    "namespace": "mod"
+  }
+}

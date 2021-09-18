@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/jungle_log_top",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/g",
+    "east": "ragemod:blocks/g",
+    "south": "ragemod:blocks/g",
+    "west": "ragemod:blocks/g",
+    "particle": "ragemod:blocks/jungle_log_top"
+  }
+}

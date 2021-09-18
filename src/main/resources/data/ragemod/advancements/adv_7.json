@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:trofea"
+    },
+    "title": {
+      "translate": "advancements.adv_7.title"
+    },
+    "description": {
+      "translate": "advancements.adv_7.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "ragemod:trofea",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_4"
+}

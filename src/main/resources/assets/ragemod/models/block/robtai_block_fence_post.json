@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "ragemod:blocks/------wrr",
+    "particle": "ragemod:blocks/------wrr"
+  }
+}

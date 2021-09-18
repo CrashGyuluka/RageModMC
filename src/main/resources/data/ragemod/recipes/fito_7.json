@@ -1,0 +1,16 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:fakito"
+    },
+    {
+      "item": "minecraft:white_bed"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_bed",
+    "count": 1
+  }
+}

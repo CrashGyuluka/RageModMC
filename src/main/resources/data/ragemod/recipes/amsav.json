@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "ragemod:amazonitblock"
+    },
+    "3": {
+      "item": "ragemod:amazonitblock"
+    },
+    "4": {
+      "item": "ragemod:savkard"
+    },
+    "5": {
+      "item": "ragemod:amazonitblock"
+    },
+    "7": {
+      "item": "ragemod:amazonitblock"
+    }
+  },
+  "result": {
+    "item": "ragemod:amazsavkard",
+    "count": 1
+  }
+}

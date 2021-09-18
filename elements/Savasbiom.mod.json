@@ -1,0 +1,154 @@
+{
+  "_fv": 24,
+  "_type": "biome",
+  "definition": {
+    "name": "Savasbiom",
+    "groundBlock": {
+      "value": "CUSTOM:Savasfold"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:Savasko"
+    },
+    "airColor": {
+      "value": -6684928,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -13395712,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -13369600,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -10027162,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -16724941,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 0,
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "CUSTOM:Savaspart"
+    },
+    "particlesProbability": 2.0,
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "rainingPossibility": 0.7,
+    "temperature": 0.7,
+    "baseHeight": 0.1,
+    "heightVariation": 1.6,
+    "biomeType": "WARM",
+    "spawnBiome": true,
+    "biomeWeight": 2,
+    "biomeDictionaryTypes": [],
+    "grassPerChunk": 5,
+    "seagrassPerChunk": 2,
+    "flowersPerChunk": 5,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPatchesPerChunk": 0,
+    "gravelPatchesPerChunk": 1,
+    "reedsPerChunk": 1,
+    "cactiPerChunk": 1,
+    "treesPerChunk": 5,
+    "vanillaTreeType": "Default",
+    "treeType": 1,
+    "minHeight": 10,
+    "maxWaterDepth": 0,
+    "treeStem": {
+      "value": "CUSTOM:Savaslog"
+    },
+    "treeBranch": {
+      "value": "Blocks.LEAVES#0"
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "spawnStronghold": false,
+    "spawnMineshaft": true,
+    "spawnPillagerOutpost": true,
+    "villageType": "savanna",
+    "spawnWoodlandMansion": true,
+    "spawnJungleTemple": true,
+    "spawnDesertPyramid": true,
+    "spawnIgloo": true,
+    "spawnOceanMonument": true,
+    "spawnShipwreck": true,
+    "oceanRuinType": "COLD",
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "Fossils",
+      "BerryBushes",
+      "FrozenTopLayer"
+    ],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:AtomRageR"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 2,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Ragemite"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 2,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityAnimal"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 3,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityElderGuardian"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 1,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityLightningBolt"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 1,
+        "spawnType": "creature"
+      }
+    ]
+  }
+}

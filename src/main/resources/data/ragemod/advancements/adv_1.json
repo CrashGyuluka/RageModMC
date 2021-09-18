@@ -1,0 +1,37 @@
+{
+  "display": {
+    "background": "ragemod:textures/rageium_ore2.png",
+    "icon": {
+      "item": "ragemod:rageium"
+    },
+    "title": {
+      "translate": "advancements.adv_1.title"
+    },
+    "description": {
+      "translate": "advancements.adv_1.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "ragemod:rageium",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

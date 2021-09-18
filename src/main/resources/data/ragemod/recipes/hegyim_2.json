@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "1": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "2": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "3": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "4": {
+      "item": "minecraft:vine"
+    },
+    "5": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "6": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "7": {
+      "item": "ragemod:hegyikogreen"
+    },
+    "8": {
+      "item": "ragemod:hegyikogreen"
+    }
+  },
+  "result": {
+    "item": "ragemod:hegyikomossyplus",
+    "count": 8
+  }
+}

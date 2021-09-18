@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/parksnake"
+    },
+    "facing=east": {
+      "model": "ragemod:block/parksnake",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/parksnake",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/parksnake",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:rageflower"
+    },
+    "title": {
+      "translate": "advancements.adv_6.title"
+    },
+    "description": {
+      "translate": "advancements.adv_6.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "ragemod:rageflower",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_1"
+}

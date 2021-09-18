@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Hegyikowall"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglawall"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikowall"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "walls",
+    "namespace": "minecraft"
+  }
+}

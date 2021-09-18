@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/andesite",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_andesite",
+    "east": "ragemod:blocks/savas_andesite",
+    "south": "ragemod:blocks/savas_andesite",
+    "west": "ragemod:blocks/savas_andesite",
+    "particle": "ragemod:blocks/andesite"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "ragemod:blocks/0101110102",
+    "top": "ragemod:blocks/0101110102",
+    "side": "ragemod:blocks/0101110102"
+  }
+}

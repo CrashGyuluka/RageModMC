@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/qqqq",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_rageium_alloy_block",
+    "east": "ragemod:blocks/savas_rageium_alloy_block",
+    "south": "ragemod:blocks/savas_rageium_alloy_block",
+    "west": "ragemod:blocks/savas_rageium_alloy_block",
+    "particle": "ragemod:blocks/qqqq"
+  }
+}

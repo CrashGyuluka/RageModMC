@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/mar2",
+    "up": "ragemod:blocks/mar2",
+    "north": "ragemod:blocks/marokriksa_slog3",
+    "east": "ragemod:blocks/marokriksa_slog3",
+    "south": "ragemod:blocks/marokriksa_slog3",
+    "west": "ragemod:blocks/marokriksa_slog3",
+    "particle": "ragemod:blocks/mar2"
+  }
+}

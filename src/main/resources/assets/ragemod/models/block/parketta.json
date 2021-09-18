@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/parketta_p2",
+    "up": "ragemod:blocks/parketta_p2",
+    "north": "ragemod:blocks/parketta_p2",
+    "east": "ragemod:blocks/parketta_p2",
+    "south": "ragemod:blocks/parketta_p2",
+    "west": "ragemod:blocks/parketta_p2",
+    "particle": "ragemod:blocks/parketta_p2"
+  }
+}

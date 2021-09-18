@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ragemod:block/ragefalogb_2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ragemod:block/ragefalogb_2"
+    },
+    "axis=z": {
+      "model": "ragemod:block/ragefalogb_2",
+      "x": 90
+    }
+  }
+}

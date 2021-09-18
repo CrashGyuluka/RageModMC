@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:cerusszit"
+    },
+    "1": {
+      "item": "ragemod:cerusszit"
+    },
+    "2": {
+      "item": "ragemod:cerusszit"
+    },
+    "3": {
+      "item": "ragemod:cerusszit"
+    },
+    "4": {
+      "item": "ragemod:cerusszit"
+    },
+    "5": {
+      "item": "ragemod:cerusszit"
+    },
+    "6": {
+      "item": "ragemod:cerusszit"
+    },
+    "7": {
+      "item": "ragemod:cerusszit"
+    },
+    "8": {
+      "item": "ragemod:cerusszit"
+    }
+  },
+  "result": {
+    "item": "ragemod:cerusszitblock",
+    "count": 1
+  }
+}

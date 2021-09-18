@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Anapait"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Anapait"
+      },
+      {
+        "value": "CUSTOM:Parketta"
+      },
+      {
+        "value": "CUSTOM:Anapait"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Anapait"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Parklass"
+    },
+    "name": "parklasscraft",
+    "namespace": "mod"
+  }
+}

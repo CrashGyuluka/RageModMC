@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/polished_blackstone_bricks",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_blackstone_tegla",
+    "east": "ragemod:blocks/savas_blackstone_tegla",
+    "south": "ragemod:blocks/savas_blackstone_tegla",
+    "west": "ragemod:blocks/savas_blackstone_tegla",
+    "particle": "ragemod:blocks/polished_blackstone_bricks"
+  }
+}

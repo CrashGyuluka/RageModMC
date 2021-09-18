@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/rage_fa_slab"
+    },
+    "type=top": {
+      "model": "ragemod:block/rage_fa_slab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/rage_fa_slab_full"
+    }
+  }
+}

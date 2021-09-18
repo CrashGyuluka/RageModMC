@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/kizukra_block_slab"
+    },
+    "type=top": {
+      "model": "ragemod:block/kizukra_block_slab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/kizukra_block_slab_full"
+    }
+  }
+}

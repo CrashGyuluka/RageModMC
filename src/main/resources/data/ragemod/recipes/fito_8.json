@@ -1,0 +1,16 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:fakito"
+    },
+    {
+      "item": "minecraft:shulker_box"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_shulker_box",
+    "count": 1
+  }
+}

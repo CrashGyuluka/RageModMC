@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:KizukraWood"
+      },
+      {
+        "value": "CUSTOM:KizukraLog"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "kizukra_log",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/parkold"
+    },
+    "facing=east": {
+      "model": "ragemod:block/parkold",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/parkold",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/parkold",
+      "y": 270
+    }
+  }
+}

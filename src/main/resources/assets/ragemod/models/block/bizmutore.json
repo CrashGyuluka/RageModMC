@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/----bizmut",
+    "up": "ragemod:blocks/----bizmut",
+    "north": "ragemod:blocks/----bizmut",
+    "east": "ragemod:blocks/----bizmut",
+    "south": "ragemod:blocks/----bizmut",
+    "west": "ragemod:blocks/----bizmut",
+    "particle": "ragemod:blocks/----bizmut"
+  }
+}

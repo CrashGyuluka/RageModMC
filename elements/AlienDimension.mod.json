@@ -1,0 +1,58 @@
+{
+  "_fv": 24,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:TotallyNotAlien"
+      },
+      {
+        "value": "CUSTOM:Bukkbiome"
+      },
+      {
+        "value": "badlands"
+      },
+      {
+        "value": "badlands_plateau"
+      },
+      {
+        "value": "plains"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:Hegyiko1"
+    },
+    "fluidBlock": {
+      "value": "Blocks.WATER"
+    },
+    "airColor": {
+      "value": -7913825,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:Cvexportalblock"
+    },
+    "portalParticles": {
+      "value": "CUSTOM:Rageparticle"
+    },
+    "portalLuminance": 1,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Alien Dimension Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "texture": "dimension2_igniter",
+    "portalTexture": "portal_block3_animated",
+    "enablePortal": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:kizukra_log"
+    }
+  ],
+  "result": {
+    "item": "ragemod:kizukra_planks",
+    "count": 4
+  }
+}

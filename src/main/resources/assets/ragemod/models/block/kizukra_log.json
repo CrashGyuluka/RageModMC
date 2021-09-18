@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/kizukra_top",
+    "up": "ragemod:blocks/kizukra_top",
+    "north": "ragemod:blocks/kizukralog",
+    "east": "ragemod:blocks/kizukralog",
+    "south": "ragemod:blocks/kizukralog",
+    "west": "ragemod:blocks/kizukralog",
+    "particle": "ragemod:blocks/kizukra_top"
+  }
+}

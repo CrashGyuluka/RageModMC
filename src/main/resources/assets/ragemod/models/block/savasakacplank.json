@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/acacia_planks",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/planks1",
+    "east": "ragemod:blocks/planks1",
+    "south": "ragemod:blocks/planks1",
+    "west": "ragemod:blocks/planks1",
+    "particle": "ragemod:blocks/acacia_planks"
+  }
+}

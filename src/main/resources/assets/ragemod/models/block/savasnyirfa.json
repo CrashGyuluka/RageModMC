@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/birch_log_top",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savaslog",
+    "east": "ragemod:blocks/savaslog",
+    "south": "ragemod:blocks/savaslog",
+    "west": "ragemod:blocks/savaslog",
+    "particle": "ragemod:blocks/birch_log_top"
+  }
+}

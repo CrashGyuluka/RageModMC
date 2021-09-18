@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/warped_planks",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/q",
+    "east": "ragemod:blocks/q",
+    "south": "ragemod:blocks/q",
+    "west": "ragemod:blocks/q",
+    "particle": "ragemod:blocks/warped_planks"
+  }
+}

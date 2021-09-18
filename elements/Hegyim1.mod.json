@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "Blocks.VINE"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Hegyikogreen"
+    },
+    "name": "hegyim_1",
+    "namespace": "mod"
+  }
+}

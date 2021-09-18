@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:savasrageiumalloyblock"
+    },
+    "title": {
+      "translate": "advancements.adv_14.title"
+    },
+    "description": {
+      "translate": "advancements.adv_14.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_14": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "parent": "ragemod:adv_17"
+}

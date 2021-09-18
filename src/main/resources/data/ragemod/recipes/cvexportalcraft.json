@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:hegyiko_1"
+    },
+    "1": {
+      "item": "ragemod:cvexblock"
+    },
+    "2": {
+      "item": "ragemod:hegyiko_1"
+    },
+    "3": {
+      "item": "ragemod:hegyikopolished"
+    },
+    "4": {
+      "item": "ragemod:obsontiumblock"
+    },
+    "5": {
+      "item": "ragemod:hegyikopolished"
+    },
+    "6": {
+      "item": "ragemod:hegyikopolished"
+    },
+    "7": {
+      "item": "ragemod:cvexblock"
+    },
+    "8": {
+      "item": "ragemod:hegyikopolished"
+    }
+  },
+  "result": {
+    "item": "ragemod:cvexblock",
+    "count": 1
+  }
+}

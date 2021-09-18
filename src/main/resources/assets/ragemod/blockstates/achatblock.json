@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/achatblock"
+    },
+    "facing=east": {
+      "model": "ragemod:block/achatblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/achatblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/achatblock",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "--savsapi",
+    "enableBody": true,
+    "textureBody": "--savmellvert",
+    "enableLeggings": true,
+    "textureLeggings": "--savnaci",
+    "enableBoots": true,
+    "textureBoots": "--savcipo",
+    "creativeTab": {
+      "value": "CUSTOM:Svasblocktab"
+    },
+    "armorTextureFile": "--savarmor_",
+    "helmetName": "Toxic Helmet",
+    "bodyName": "Toxic Chestplate",
+    "leggingsName": "Toxic Leggings",
+    "bootsName": "Toxic Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 37,
+    "damageValueHelmet": 5,
+    "damageValueBody": 8,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 4,
+    "enchantability": 15,
+    "toughness": 1.7999999999999998,
+    "knockbackResistance": 0.19999999999999998,
+    "equipSound": {
+      "value": "ambient.cave"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Savkristalyp2"
+      }
+    ]
+  }
+}

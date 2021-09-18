@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/bukkslabstr"
+    },
+    "type=top": {
+      "model": "ragemod:block/bukkslabstr_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/bukkslabstr_full"
+    }
+  }
+}

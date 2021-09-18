@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:robtai_log"
+    },
+    "1": {
+      "item": "ragemod:robtai_log"
+    },
+    "2": {
+      "item": "ragemod:robtai_log"
+    },
+    "3": {
+      "item": "ragemod:robtai_log"
+    }
+  },
+  "result": {
+    "item": "ragemod:robtai_wood",
+    "count": 3
+  }
+}

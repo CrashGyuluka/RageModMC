@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:toroottegla"
+    },
+    "1": {
+      "item": "ragemod:toroottegla"
+    },
+    "2": {
+      "item": "ragemod:toroottegla"
+    },
+    "3": {
+      "item": "ragemod:toroottegla"
+    },
+    "4": {
+      "item": "ragemod:toroottegla"
+    },
+    "5": {
+      "item": "ragemod:toroottegla"
+    },
+    "6": {
+      "item": "ragemod:toroottegla"
+    },
+    "7": {
+      "item": "ragemod:toroottegla"
+    },
+    "8": {
+      "item": "ragemod:toroottegla"
+    }
+  },
+  "result": {
+    "item": "minecraft:bricks",
+    "count": 9
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "ragemod:kizukra_wood"
+  },
+  "result": "ragemod:stripped_kizukra_wood"
+}

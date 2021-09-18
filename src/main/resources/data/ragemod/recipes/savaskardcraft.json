@@ -1,0 +1,24 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:savblockok"
+    },
+    "1": {
+      "item": "ragemod:savblockok"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "ragemod:savkard",
+    "count": 1
+  }
+}

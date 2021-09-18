@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 12,
+    "group": "",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:RageFaLog"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:Ragefaslabred"
+    },
+    "name": "rw_53",
+    "namespace": "mod"
+  }
+}

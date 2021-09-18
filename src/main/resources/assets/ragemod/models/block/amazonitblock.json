@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_amazonite_b",
+    "up": "ragemod:blocks/a_amazonite_b",
+    "north": "ragemod:blocks/a_amazonite_b",
+    "east": "ragemod:blocks/a_amazonite_b",
+    "south": "ragemod:blocks/a_amazonite_b",
+    "west": "ragemod:blocks/a_amazonite_b",
+    "particle": "ragemod:blocks/a_amazonite_b"
+  }
+}

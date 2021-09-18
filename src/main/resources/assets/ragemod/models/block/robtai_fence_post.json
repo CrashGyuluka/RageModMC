@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "ragemod:blocks/rob4",
+    "particle": "ragemod:blocks/rob4"
+  }
+}

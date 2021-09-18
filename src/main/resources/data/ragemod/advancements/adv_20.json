@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:savascsakany"
+    },
+    "title": {
+      "translate": "advancements.adv_20.title"
+    },
+    "description": {
+      "translate": "advancements.adv_20.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_20": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_17"
+}

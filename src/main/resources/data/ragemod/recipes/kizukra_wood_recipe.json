@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:kizukra_log"
+    },
+    "1": {
+      "item": "ragemod:kizukra_log"
+    },
+    "2": {
+      "item": "ragemod:kizukra_log"
+    },
+    "3": {
+      "item": "ragemod:kizukra_log"
+    }
+  },
+  "result": {
+    "item": "ragemod:kizukra_wood",
+    "count": 3
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ragemod:block/stripped_kizukra_pressure_plate"
+    },
+    "powered=true": {
+      "model": "ragemod:block/stripped_kizukra_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/nether_wart_block",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_pirosgomba",
+    "east": "ragemod:blocks/savas_pirosgomba",
+    "south": "ragemod:blocks/savas_pirosgomba",
+    "west": "ragemod:blocks/savas_pirosgomba",
+    "particle": "ragemod:blocks/nether_wart_block"
+  }
+}

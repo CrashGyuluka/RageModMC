@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:opalblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:opal",
+    "count": 9
+  }
+}

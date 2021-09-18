@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "ragemod:blocks/-213-21",
+    "top": "ragemod:blocks/-213-21",
+    "side": "ragemod:blocks/-213-21"
+  }
+}

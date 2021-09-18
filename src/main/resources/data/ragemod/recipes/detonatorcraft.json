@@ -1,0 +1,36 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "1": {
+      "item": "ragemod:rageiumalloyblock"
+    },
+    "2": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "3": {
+      "item": "minecraft:redstone"
+    },
+    "4": {
+      "item": "ragemod:stick_1"
+    },
+    "5": {
+      "item": "minecraft:redstone"
+    },
+    "7": {
+      "item": "ragemod:stick_1"
+    }
+  },
+  "result": {
+    "item": "ragemod:detonatorrt",
+    "count": 1
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:azurit"
+    },
+    "1": {
+      "item": "ragemod:azurit"
+    },
+    "2": {
+      "item": "ragemod:azurit"
+    },
+    "3": {
+      "item": "ragemod:azurit"
+    },
+    "4": {
+      "item": "ragemod:azurit"
+    },
+    "5": {
+      "item": "ragemod:azurit"
+    },
+    "6": {
+      "item": "ragemod:azurit"
+    },
+    "7": {
+      "item": "ragemod:azurit"
+    },
+    "8": {
+      "item": "ragemod:azurit"
+    }
+  },
+  "result": {
+    "item": "ragemod:azuritblock",
+    "count": 1
+  }
+}

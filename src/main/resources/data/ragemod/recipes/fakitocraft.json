@@ -1,0 +1,39 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:quartz"
+    },
+    "2": {
+      "item": "minecraft:quartz"
+    },
+    "3": {
+      "item": "minecraft:glass_bottle"
+    },
+    "4": {
+      "item": "ragemod:rageium"
+    },
+    "5": {
+      "item": "minecraft:glass_bottle"
+    },
+    "6": {
+      "item": "minecraft:glass_bottle"
+    },
+    "7": {
+      "item": "ragemod:savercr"
+    },
+    "8": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "ragemod:fakito",
+    "count": 4
+  }
+}

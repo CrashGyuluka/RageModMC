@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:rageiumalloy"
+    },
+    "2": {
+      "item": "ragemod:rageiumalloy"
+    },
+    "3": {
+      "item": "ragemod:rageiumalloy"
+    },
+    "5": {
+      "item": "ragemod:rageiumalloy"
+    }
+  },
+  "result": {
+    "item": "ragemod:rageiumaromr_boots",
+    "count": 1
+  }
+}

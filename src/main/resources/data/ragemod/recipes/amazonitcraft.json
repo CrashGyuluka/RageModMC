@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:amazonitrt"
+    },
+    "1": {
+      "item": "ragemod:amazonitrt"
+    },
+    "2": {
+      "item": "ragemod:amazonitrt"
+    },
+    "3": {
+      "item": "ragemod:amazonitrt"
+    },
+    "4": {
+      "item": "ragemod:amazonitrt"
+    },
+    "5": {
+      "item": "ragemod:amazonitrt"
+    },
+    "6": {
+      "item": "ragemod:amazonitrt"
+    },
+    "7": {
+      "item": "ragemod:amazonitrt"
+    },
+    "8": {
+      "item": "ragemod:amazonitrt"
+    }
+  },
+  "result": {
+    "item": "ragemod:amazonitblock",
+    "count": 1
+  }
+}

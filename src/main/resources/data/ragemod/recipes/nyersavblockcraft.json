@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:savercr"
+    },
+    "1": {
+      "item": "ragemod:savercr"
+    },
+    "2": {
+      "item": "ragemod:savercr"
+    },
+    "3": {
+      "item": "ragemod:savercr"
+    },
+    "4": {
+      "item": "ragemod:savercr"
+    },
+    "5": {
+      "item": "ragemod:savercr"
+    },
+    "6": {
+      "item": "ragemod:savercr"
+    },
+    "7": {
+      "item": "ragemod:savercr"
+    },
+    "8": {
+      "item": "ragemod:savercr"
+    }
+  },
+  "result": {
+    "item": "ragemod:savblock",
+    "count": 1
+  }
+}

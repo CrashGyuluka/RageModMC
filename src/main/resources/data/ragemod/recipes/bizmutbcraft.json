@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:bizmutblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:bizmut",
+    "count": 9
+  }
+}

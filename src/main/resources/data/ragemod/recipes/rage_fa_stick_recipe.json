@@ -1,0 +1,20 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:rage_fa_planks"
+    },
+    "1": {
+      "item": "ragemod:rage_fa_planks"
+    }
+  },
+  "result": {
+    "item": "ragemod:ragefastick",
+    "count": 4
+  }
+}

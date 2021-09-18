@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_orientable_trapdoor_bottom",
+  "textures": {
+    "texture": "ragemod:blocks/00000000",
+    "particle": "ragemod:blocks/00000000"
+  }
+}

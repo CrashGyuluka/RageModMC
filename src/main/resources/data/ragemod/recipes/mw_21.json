@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 6,
+  "ingredient": {
+    "item": "ragemod:marokriksa_wood"
+  },
+  "result": "ragemod:stripped_marokriksa_pressure_plate"
+}

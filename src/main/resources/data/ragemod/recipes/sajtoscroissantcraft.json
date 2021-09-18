@@ -1,0 +1,34 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:croissant"
+    },
+    {
+      "item": "ragemod:croissant"
+    },
+    {
+      "item": "ragemod:sajt"
+    },
+    {
+      "item": "ragemod:croissant"
+    },
+    {
+      "item": "ragemod:croissant"
+    },
+    {
+      "item": "ragemod:sajt"
+    },
+    {
+      "item": "ragemod:sajt"
+    },
+    {
+      "item": "ragemod:sajt"
+    }
+  ],
+  "result": {
+    "item": "ragemod:sajtosceossian",
+    "count": 8
+  }
+}

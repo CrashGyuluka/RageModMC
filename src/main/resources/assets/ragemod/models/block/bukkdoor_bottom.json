@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "ragemod:blocks/bukk_al",
+    "top": "ragemod:blocks/bukk_fel"
+  }
+}

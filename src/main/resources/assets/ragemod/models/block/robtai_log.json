@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/rob3",
+    "up": "ragemod:blocks/rob3",
+    "north": "ragemod:blocks/rob2",
+    "east": "ragemod:blocks/rob2",
+    "south": "ragemod:blocks/rob2",
+    "west": "ragemod:blocks/rob2",
+    "particle": "ragemod:blocks/rob3"
+  }
+}

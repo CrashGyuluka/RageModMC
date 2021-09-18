@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/rage_woodslab_2"
+    },
+    "type=top": {
+      "model": "ragemod:block/rage_woodslab_2_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/rage_woodslab_2_full"
+    }
+  }
+}

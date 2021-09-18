@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "ragemod:rageiumore"
+    },
+    "3": {
+      "item": "ragemod:rageiumore"
+    },
+    "4": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "5": {
+      "item": "ragemod:rageiumore"
+    },
+    "7": {
+      "item": "ragemod:rageiumore"
+    }
+  },
+  "result": {
+    "item": "ragemod:savasrageiumore",
+    "count": 4
+  }
+}

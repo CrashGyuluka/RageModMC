@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    }
+  ],
+  "result": {
+    "item": "ragemod:bukkspaling",
+    "count": 2
+  }
+}

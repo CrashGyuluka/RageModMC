@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:azuritblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:azurit",
+    "count": 9
+  }
+}

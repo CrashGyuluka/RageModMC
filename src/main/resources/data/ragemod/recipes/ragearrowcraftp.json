@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bow"
+    },
+    {
+      "item": "ragemod:ragearrowscrap"
+    },
+    {
+      "item": "ragemod:ragearrowscrap"
+    },
+    {
+      "item": "ragemod:ragearrowscrap"
+    }
+  ],
+  "result": {
+    "item": "ragemod:ragearrow",
+    "count": 1
+  }
+}

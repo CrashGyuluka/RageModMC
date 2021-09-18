@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:amazonitblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:amazonitrt",
+    "count": 9
+  }
+}

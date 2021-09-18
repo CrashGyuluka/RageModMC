@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 3,
+  "ingredient": {
+    "item": "ragemod:bukk_log"
+  },
+  "result": "ragemod:bukkdoor"
+}

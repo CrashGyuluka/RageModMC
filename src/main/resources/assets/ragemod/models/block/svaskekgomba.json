@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/warped_wart_block",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_kekgomba",
+    "east": "ragemod:blocks/savas_kekgomba",
+    "south": "ragemod:blocks/savas_kekgomba",
+    "west": "ragemod:blocks/savas_kekgomba",
+    "particle": "ragemod:blocks/warped_wart_block"
+  }
+}

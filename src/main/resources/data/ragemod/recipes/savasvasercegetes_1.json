@@ -1,0 +1,12 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 300,
+  "ingredient": {
+    "item": "ragemod:savasvaserc"
+  },
+  "result": {
+    "item": "minecraft:iron_ingot"
+  }
+}

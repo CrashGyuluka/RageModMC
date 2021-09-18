@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:rageium"
+    },
+    "1": {
+      "item": "ragemod:rageium"
+    },
+    "2": {
+      "item": "ragemod:rageium"
+    },
+    "3": {
+      "item": "ragemod:rageium"
+    },
+    "4": {
+      "item": "ragemod:rageium"
+    },
+    "5": {
+      "item": "ragemod:rageium"
+    },
+    "6": {
+      "item": "ragemod:rageium"
+    },
+    "7": {
+      "item": "ragemod:rageium"
+    },
+    "8": {
+      "item": "ragemod:rageium"
+    }
+  },
+  "result": {
+    "item": "ragemod:rageiumblock",
+    "count": 1
+  }
+}

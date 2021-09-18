@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:rage_fa_log"
+    },
+    "1": {
+      "item": "ragemod:rage_fa_log"
+    },
+    "2": {
+      "item": "ragemod:rage_fa_log"
+    },
+    "3": {
+      "item": "ragemod:rage_fa_log"
+    }
+  },
+  "result": {
+    "item": "ragemod:rage_fa_wood",
+    "count": 3
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "ragemod:blocks/marokriksa_log2",
+    "particle": "ragemod:blocks/marokriksa_log2"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    }
+  ],
+  "result": {
+    "item": "ragemod:fa_5sap",
+    "count": 2
+  }
+}

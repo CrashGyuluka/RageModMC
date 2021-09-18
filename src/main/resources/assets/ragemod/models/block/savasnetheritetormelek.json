@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/ancient_debris_top",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas2",
+    "east": "ragemod:blocks/savas2",
+    "south": "ragemod:blocks/savas2",
+    "west": "ragemod:blocks/savas2",
+    "particle": "ragemod:blocks/ancient_debris_top"
+  }
+}

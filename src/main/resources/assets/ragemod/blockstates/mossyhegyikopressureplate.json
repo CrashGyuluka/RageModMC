@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ragemod:block/mossyhegyikopressureplate"
+    },
+    "powered=true": {
+      "model": "ragemod:block/mossyhegyikopressureplate_down"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      },
+      {
+        "value": "CUSTOM:Hegyikofull"
+      },
+      {
+        "value": "CUSTOM:Chiseledhegyiko"
+      },
+      {
+        "value": "CUSTOM:Hegyikotegla"
+      },
+      {
+        "value": "CUSTOM:Hegyimorzsolt"
+      },
+      {
+        "value": "CUSTOM:Hegyikogreen"
+      },
+      {
+        "value": "CUSTOM:Hegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Hegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Hegyikowall"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikoslabu"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikostair"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglaslab"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglastairs"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglawall"
+      },
+      {
+        "value": "CUSTOM:Hegyikopressureplate"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolishedpressureplate"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikopressureplate"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglapressureplate"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikopressureplate"
+      },
+      {
+        "value": "CUSTOM:Hegyikomossyplus"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikowall"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikopr"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "dragon_immune",
+    "namespace": "minecraft"
+  }
+}

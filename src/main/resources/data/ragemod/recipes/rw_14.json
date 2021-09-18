@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 12,
+  "ingredient": {
+    "item": "ragemod:rage_fa_wood"
+  },
+  "result": "ragemod:ragefaslabblue"
+}

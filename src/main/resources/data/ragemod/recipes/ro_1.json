@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "ragemod:robtai_wood"
+  },
+  "result": "ragemod:robtai_log"
+}

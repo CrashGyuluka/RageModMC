@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:aktionit"
+    },
+    "1": {
+      "item": "ragemod:aktionit"
+    },
+    "2": {
+      "item": "ragemod:aktionit"
+    },
+    "3": {
+      "item": "ragemod:aktionit"
+    },
+    "4": {
+      "item": "ragemod:aktionit"
+    },
+    "5": {
+      "item": "ragemod:aktionit"
+    },
+    "6": {
+      "item": "ragemod:aktionit"
+    },
+    "7": {
+      "item": "ragemod:aktionit"
+    },
+    "8": {
+      "item": "ragemod:aktionit"
+    }
+  },
+  "result": {
+    "item": "ragemod:aktinolitblock",
+    "count": 1
+  }
+}

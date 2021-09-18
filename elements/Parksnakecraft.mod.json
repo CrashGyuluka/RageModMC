@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.GREEN_GLAZED_TERRACOTTA"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.GREEN_GLAZED_TERRACOTTA"
+      },
+      {
+        "value": "Blocks.SMOOTH_SANDSTONE"
+      },
+      {
+        "value": "Blocks.GREEN_GLAZED_TERRACOTTA"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.GREEN_GLAZED_TERRACOTTA"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Parksnake"
+    },
+    "name": "parksnakecraft",
+    "namespace": "mod"
+  }
+}

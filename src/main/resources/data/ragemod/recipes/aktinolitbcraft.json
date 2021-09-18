@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:aktinolitblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:aktionit",
+    "count": 9
+  }
+}

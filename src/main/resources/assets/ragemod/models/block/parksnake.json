@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_snake",
+    "up": "ragemod:blocks/a_snake",
+    "north": "ragemod:blocks/a_snake",
+    "east": "ragemod:blocks/a_snake",
+    "south": "ragemod:blocks/a_snake",
+    "west": "ragemod:blocks/a_snake",
+    "particle": "ragemod:blocks/a_snake"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/ragefaslabred"
+    },
+    "type=top": {
+      "model": "ragemod:block/ragefaslabred_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/ragefaslabred_full"
+    }
+  }
+}

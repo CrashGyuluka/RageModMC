@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "ragemod:opal"
+    },
+    "3": {
+      "item": "ragemod:opal"
+    },
+    "4": {
+      "item": "ragemod:parketta"
+    },
+    "5": {
+      "item": "ragemod:opal"
+    },
+    "7": {
+      "item": "ragemod:opal"
+    }
+  },
+  "result": {
+    "item": "ragemod:parkvak",
+    "count": 1
+  }
+}

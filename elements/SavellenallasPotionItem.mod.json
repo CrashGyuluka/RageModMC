@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Protection against toxics",
+    "splashName": "Splash Protection against toxics",
+    "lingeringName": "Lingering Protection against toxics",
+    "arrowName": "Arrow of Protection against toxics",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Savellenallas"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

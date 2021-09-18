@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ragemod:block/bukkbprpl"
+    },
+    "powered=true": {
+      "model": "ragemod:block/bukkbprpl_down"
+    }
+  }
+}

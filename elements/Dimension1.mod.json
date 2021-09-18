@@ -1,0 +1,52 @@
+{
+  "_fv": 24,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:Bukkhighmountainvariatedfordimension"
+      },
+      {
+        "value": "CUSTOM:Bukkmeadowfordimension"
+      },
+      {
+        "value": "CUSTOM:Waterbukkbiomefordimension"
+      }
+    ],
+    "worldGenType": "Nether like gen",
+    "mainFillerBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "fluidBlock": {
+      "value": "Blocks.WATER"
+    },
+    "airColor": {
+      "value": -16771562,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:Obsontiumblock"
+    },
+    "portalParticles": {
+      "value": "CUSTOM:Obsontiumparticle"
+    },
+    "portalLuminance": 1,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Dimension Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "texture": "rageteamdimensionenter",
+    "portalTexture": "obszontium_portal_animated",
+    "enablePortal": true
+  }
+}

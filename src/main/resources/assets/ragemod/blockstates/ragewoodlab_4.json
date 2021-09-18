@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/ragewoodlab_4"
+    },
+    "type=top": {
+      "model": "ragemod:block/ragewoodlab_4_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/ragewoodlab_4_full"
+    }
+  }
+}

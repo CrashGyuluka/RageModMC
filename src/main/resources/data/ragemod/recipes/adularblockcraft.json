@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:adular"
+    },
+    "1": {
+      "item": "ragemod:adular"
+    },
+    "2": {
+      "item": "ragemod:adular"
+    },
+    "3": {
+      "item": "ragemod:adular"
+    },
+    "4": {
+      "item": "ragemod:adular"
+    },
+    "5": {
+      "item": "ragemod:adular"
+    },
+    "6": {
+      "item": "ragemod:adular"
+    },
+    "7": {
+      "item": "ragemod:adular"
+    },
+    "8": {
+      "item": "ragemod:adular"
+    }
+  },
+  "result": {
+    "item": "ragemod:adularblock",
+    "count": 1
+  }
+}

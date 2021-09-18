@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/anapitblock"
+    },
+    "facing=east": {
+      "model": "ragemod:block/anapitblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/anapitblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/anapitblock",
+      "y": 270
+    }
+  }
+}

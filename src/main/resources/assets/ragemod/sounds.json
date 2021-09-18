@@ -1,0 +1,101 @@
+{
+  "toxicmob_idle2": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ragemod:toxicmob_idle2",
+        "stream": false
+      }
+    ]
+  },
+  "toxicmob_idle1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ragemod:toxicmob_idle1",
+        "stream": false
+      }
+    ]
+  },
+  "toxicmob_death1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ragemod:toxicmob_death1",
+        "stream": false
+      }
+    ]
+  },
+  "toxic_mob_sendhelp1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ragemod:toxic_mob_send_help1",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d1": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersongb",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d2": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersonga",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d3": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersongc",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d4": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersonge",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d5": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersongf",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d7": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersongg",
+        "stream": false
+      }
+    ]
+  },
+  "alien_d8": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:usersongh",
+        "stream": false
+      }
+    ]
+  }
+}

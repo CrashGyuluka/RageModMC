@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:bukk_log"
+    }
+  ],
+  "result": {
+    "item": "ragemod:bukk_planks",
+    "count": 4
+  }
+}

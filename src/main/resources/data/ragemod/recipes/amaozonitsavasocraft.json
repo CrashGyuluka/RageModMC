@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "ragemod:savaso"
+  },
+  "addition": {
+    "item": "ragemod:amazonitblock"
+  },
+  "result": {
+    "item": "ragemod:amazonitesavaso"
+  }
+}

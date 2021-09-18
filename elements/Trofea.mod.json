@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "trofea",
+    "customModelName": "Normal",
+    "name": "Trophy",
+    "rarity": "EPIC",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Ragetab"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 4,
+    "saturation": 0.0,
+    "eatingSpeed": 50,
+    "resultItem": {
+      "value": "CUSTOM:Trofea"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "TrofeaFoodEaten"
+    }
+  }
+}

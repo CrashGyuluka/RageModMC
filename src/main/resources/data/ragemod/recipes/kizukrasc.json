@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:kizukra_leaves"
+    },
+    {
+      "item": "ragemod:kizukra_leaves"
+    },
+    {
+      "item": "ragemod:kizukra_leaves"
+    },
+    {
+      "item": "ragemod:kizukra_leaves"
+    }
+  ],
+  "result": {
+    "item": "ragemod:fa_3sap",
+    "count": 2
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:cverx"
+    },
+    "1": {
+      "item": "ragemod:cverx"
+    },
+    "2": {
+      "item": "ragemod:cverx"
+    },
+    "3": {
+      "item": "ragemod:cverx"
+    },
+    "4": {
+      "item": "ragemod:opalblock"
+    },
+    "5": {
+      "item": "ragemod:cverx"
+    },
+    "6": {
+      "item": "ragemod:cverx"
+    },
+    "7": {
+      "item": "ragemod:cverx"
+    },
+    "8": {
+      "item": "ragemod:cverx"
+    }
+  },
+  "result": {
+    "item": "ragemod:cvexblock",
+    "count": 1
+  }
+}

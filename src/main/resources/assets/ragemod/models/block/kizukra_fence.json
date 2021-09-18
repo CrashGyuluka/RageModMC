@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "ragemod:blocks/kizukra_plank",
+    "particle": "ragemod:blocks/kizukra_plank"
+  }
+}

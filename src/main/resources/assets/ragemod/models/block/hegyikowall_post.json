@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "ragemod:blocks/hegyiko1",
+    "particle": "ragemod:blocks/hegyiko1"
+  }
+}

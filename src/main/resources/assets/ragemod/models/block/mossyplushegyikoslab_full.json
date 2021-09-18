@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "ragemod:blocks/hegyiko_2_green",
+    "top": "ragemod:blocks/hegyiko_2_green",
+    "side": "ragemod:blocks/hegyiko_2_green"
+  }
+}

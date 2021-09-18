@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/emerald_ore",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_smaragderc",
+    "east": "ragemod:blocks/savas_smaragderc",
+    "south": "ragemod:blocks/savas_smaragderc",
+    "west": "ragemod:blocks/savas_smaragderc",
+    "particle": "ragemod:blocks/emerald_ore"
+  }
+}

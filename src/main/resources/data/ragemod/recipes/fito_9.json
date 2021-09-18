@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:red_tulip"
+    },
+    "3": {
+      "item": "minecraft:red_tulip"
+    },
+    "4": {
+      "item": "ragemod:fakito"
+    },
+    "5": {
+      "item": "minecraft:red_tulip"
+    },
+    "7": {
+      "item": "minecraft:red_tulip"
+    }
+  },
+  "result": {
+    "item": "minecraft:white_tulip",
+    "count": 4
+  }
+}

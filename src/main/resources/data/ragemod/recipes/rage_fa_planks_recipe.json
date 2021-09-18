@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:ragefa_log"
+    }
+  ],
+  "result": {
+    "item": "ragemod:rage_fa_planks",
+    "count": 4
+  }
+}

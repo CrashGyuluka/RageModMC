@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_apofilli_o",
+    "up": "ragemod:blocks/a_apofilli_o",
+    "north": "ragemod:blocks/a_apofilli_o",
+    "east": "ragemod:blocks/a_apofilli_o",
+    "south": "ragemod:blocks/a_apofilli_o",
+    "west": "ragemod:blocks/a_apofilli_o",
+    "particle": "ragemod:blocks/a_apofilli_o"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ragemod:hegyikofull"
+  },
+  "result": "ragemod:fullhegyikowall"
+}

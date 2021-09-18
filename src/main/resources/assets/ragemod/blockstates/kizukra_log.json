@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ragemod:block/kizukra_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ragemod:block/kizukra_log"
+    },
+    "axis=z": {
+      "model": "ragemod:block/kizukra_log",
+      "x": 90
+    }
+  }
+}

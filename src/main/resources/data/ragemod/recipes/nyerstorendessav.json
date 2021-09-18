@@ -1,0 +1,12 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:smelting",
+  "experience": 3,
+  "cookingtime": 300,
+  "ingredient": {
+    "item": "ragemod:savercr"
+  },
+  "result": {
+    "item": "ragemod:savkristalyp_2"
+  }
+}

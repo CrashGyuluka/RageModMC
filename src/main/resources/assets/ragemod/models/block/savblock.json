@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/saverc_block",
+    "up": "ragemod:blocks/saverc_block",
+    "north": "ragemod:blocks/saverc_block",
+    "east": "ragemod:blocks/saverc_block",
+    "south": "ragemod:blocks/saverc_block",
+    "west": "ragemod:blocks/saverc_block",
+    "particle": "ragemod:blocks/saverc_block"
+  }
+}

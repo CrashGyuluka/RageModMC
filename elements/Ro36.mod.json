@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 12,
+    "group": "",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:RobtaiLog"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:Robtai_2Slab"
+    },
+    "name": "ro_36",
+    "namespace": "mod"
+  }
+}

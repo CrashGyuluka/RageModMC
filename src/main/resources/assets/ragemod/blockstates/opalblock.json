@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/opalblock"
+    },
+    "facing=east": {
+      "model": "ragemod:block/opalblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/opalblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/opalblock",
+      "y": 270
+    }
+  }
+}

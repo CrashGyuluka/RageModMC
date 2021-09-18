@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 5,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Diamondnuget"
+      },
+      {
+        "value": "Items.NETHERITE_SCRAP"
+      },
+      {
+        "value": "CUSTOM:Diamondnuget"
+      },
+      {
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Rageium"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Rageiumalloy"
+    },
+    "name": "rageiumalloycraft",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/fa5",
+    "particle": "ragemod:blocks/fa5"
+  }
+}

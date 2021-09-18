@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:fire"
+    },
+    {
+      "item": "ragemod:air"
+    },
+    {
+      "item": "ragemod:water"
+    },
+    {
+      "item": "ragemod:earth"
+    }
+  ],
+  "result": {
+    "item": "ragemod:rage_boos_spawner",
+    "count": 1
+  }
+}

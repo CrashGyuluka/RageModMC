@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "ragemod:blocks/marokriksa_log2",
+    "top": "ragemod:blocks/marokriksa_log2",
+    "side": "ragemod:blocks/marokriksa_log2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:rageiumalloyblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:rageiumalloy",
+    "count": 9
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:savercr"
+    },
+    "1": {
+      "item": "ragemod:rageiumalloy"
+    },
+    "2": {
+      "item": "ragemod:savercr"
+    },
+    "3": {
+      "item": "ragemod:parketta"
+    },
+    "4": {
+      "item": "ragemod:portalrt"
+    },
+    "5": {
+      "item": "ragemod:parketta"
+    },
+    "6": {
+      "item": "ragemod:parketta"
+    },
+    "7": {
+      "item": "minecraft:redstone_block"
+    },
+    "8": {
+      "item": "ragemod:parketta"
+    }
+  },
+  "result": {
+    "item": "ragemod:konvertalo",
+    "count": 1
+  }
+}

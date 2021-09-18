@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/-213-21",
+    "particle": "ragemod:blocks/-213-21"
+  }
+}

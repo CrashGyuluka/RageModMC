@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT License"
+
+[[mods]]
+modId="ragemod"
+version="1.1.0"
+displayName="RageMod (forge)"
+credits="Made by: RageTeam: CrashGyuluka"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/ragemod-by-rageteam"
+logoFile="logo.png"
+authors="RageTeam: CrashGyuluka"
+description='''
+I hope you will enjoy this mod.
+'''
+
+[[dependencies.ragemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

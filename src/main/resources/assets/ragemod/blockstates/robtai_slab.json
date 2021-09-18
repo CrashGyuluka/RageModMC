@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/robtai_slab"
+    },
+    "type=top": {
+      "model": "ragemod:block/robtai_slab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/robtai_slab_full"
+    }
+  }
+}

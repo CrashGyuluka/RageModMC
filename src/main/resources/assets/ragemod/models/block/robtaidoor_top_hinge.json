@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "ragemod:blocks/m_al",
+    "top": "ragemod:blocks/m_fel"
+  }
+}

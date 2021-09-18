@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/mossyhegyikoslab"
+    },
+    "type=top": {
+      "model": "ragemod:block/mossyhegyikoslab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/mossyhegyikoslab_full"
+    }
+  }
+}

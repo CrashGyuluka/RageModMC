@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "ragemod:hegyiko_1"
+  },
+  "result": "ragemod:hegyikopressureplate"
+}

@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:jungle_planks"
+    },
+    "3": {
+      "item": "minecraft:jungle_planks"
+    },
+    "4": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "5": {
+      "item": "minecraft:jungle_planks"
+    },
+    "7": {
+      "item": "minecraft:jungle_planks"
+    }
+  },
+  "result": {
+    "item": "ragemod:savasjungleplank",
+    "count": 4
+  }
+}

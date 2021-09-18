@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/crashchest1",
+    "up": "ragemod:blocks/crashchest1",
+    "north": "ragemod:blocks/crashchest1",
+    "east": "ragemod:blocks/crashchest1",
+    "south": "ragemod:blocks/crashchest1",
+    "west": "ragemod:blocks/crashchest1",
+    "particle": "ragemod:blocks/crashchest1"
+  }
+}

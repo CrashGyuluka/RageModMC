@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ragemod:block/savasdarkoak",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ragemod:block/savasdarkoak"
+    },
+    "axis=z": {
+      "model": "ragemod:block/savasdarkoak",
+      "x": 90
+    }
+  }
+}

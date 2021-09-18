@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "ragemod:block/dimension_1_portal_ew"
+    },
+    "axis=x": {
+      "model": "ragemod:block/dimension_1_portal_ns"
+    }
+  }
+}

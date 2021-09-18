@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:savellenalasbottle"
+    },
+    "title": {
+      "translate": "advancements.adv_23.title"
+    },
+    "description": {
+      "translate": "advancements.adv_23.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_23": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "ragemod:savellenalasbottle",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "parent": "ragemod:adv_3"
+}

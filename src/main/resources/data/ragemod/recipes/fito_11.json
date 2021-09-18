@@ -1,0 +1,25 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_tulip"
+    },
+    {
+      "item": "minecraft:pink_tulip"
+    },
+    {
+      "item": "ragemod:fakito"
+    },
+    {
+      "item": "minecraft:pink_tulip"
+    },
+    {
+      "item": "minecraft:pink_tulip"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_tulip",
+    "count": 4
+  }
+}

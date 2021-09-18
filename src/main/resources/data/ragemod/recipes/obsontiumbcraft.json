@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:obsontiumblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:obsontium",
+    "count": 9
+  }
+}

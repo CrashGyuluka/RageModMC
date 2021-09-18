@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:anapait"
+    },
+    "1": {
+      "item": "ragemod:anapait"
+    },
+    "2": {
+      "item": "ragemod:anapait"
+    },
+    "3": {
+      "item": "ragemod:anapait"
+    },
+    "4": {
+      "item": "ragemod:anapait"
+    },
+    "5": {
+      "item": "ragemod:anapait"
+    },
+    "6": {
+      "item": "ragemod:anapait"
+    },
+    "7": {
+      "item": "ragemod:anapait"
+    },
+    "8": {
+      "item": "ragemod:anapait"
+    }
+  },
+  "result": {
+    "item": "ragemod:anapitblock",
+    "count": 1
+  }
+}

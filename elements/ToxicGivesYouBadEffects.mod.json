@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "ToxicThingsGiveYouBadEffects",
+    "description": "default=true=toxic mobs, blocks will give you bad effects, like blindness. ",
+    "category": "PLAYER",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

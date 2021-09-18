@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "ragemod:blocks/bukkk1",
+    "top": "ragemod:blocks/bukkk1",
+    "side": "ragemod:blocks/bukkk1"
+  }
+}

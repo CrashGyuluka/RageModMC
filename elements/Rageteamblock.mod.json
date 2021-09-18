@@ -1,0 +1,2024 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Rageiumore"
+      },
+      {
+        "value": "CUSTOM:Rageflower"
+      },
+      {
+        "value": "CUSTOM:Crashchest"
+      },
+      {
+        "value": "CUSTOM:Rageiumblock"
+      },
+      {
+        "value": "CUSTOM:Rageiumblock"
+      },
+      {
+        "value": "CUSTOM:Rageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Savasko"
+      },
+      {
+        "value": "CUSTOM:Savasnetherrack"
+      },
+      {
+        "value": "CUSTOM:Savasendko"
+      },
+      {
+        "value": "CUSTOM:Savasfold"
+      },
+      {
+        "value": "CUSTOM:Savaslog"
+      },
+      {
+        "value": "CUSTOM:Savaspanks"
+      },
+      {
+        "value": "CUSTOM:Savasandesite"
+      },
+      {
+        "value": "CUSTOM:Savasdiorit"
+      },
+      {
+        "value": "CUSTOM:Savasgranit"
+      },
+      {
+        "value": "CUSTOM:Savasdiorit"
+      },
+      {
+        "value": "CUSTOM:Savascsont"
+      },
+      {
+        "value": "CUSTOM:Savastegla"
+      },
+      {
+        "value": "CUSTOM:Savaskotegla"
+      },
+      {
+        "value": "CUSTOM:Savaskotegla"
+      },
+      {
+        "value": "CUSTOM:Savasnyirfa"
+      },
+      {
+        "value": "CUSTOM:Savasakac"
+      },
+      {
+        "value": "CUSTOM:Savasjungle"
+      },
+      {
+        "value": "CUSTOM:Savasdarkoak"
+      },
+      {
+        "value": "CUSTOM:Savasfenyo"
+      },
+      {
+        "value": "CUSTOM:Savasakacplank"
+      },
+      {
+        "value": "CUSTOM:Savasfenyo"
+      },
+      {
+        "value": "CUSTOM:Savasakacplank"
+      },
+      {
+        "value": "CUSTOM:Savasnyirplank"
+      },
+      {
+        "value": "CUSTOM:Savasnyirplank"
+      },
+      {
+        "value": "CUSTOM:Savassotetoakplamk"
+      },
+      {
+        "value": "CUSTOM:Savasnyirplank"
+      },
+      {
+        "value": "CUSTOM:Savasjungleplank"
+      },
+      {
+        "value": "CUSTOM:Savaspruceplanks"
+      },
+      {
+        "value": "CUSTOM:Savaspirosnetherfa"
+      },
+      {
+        "value": "CUSTOM:Savaskeknetherfa"
+      },
+      {
+        "value": "CUSTOM:Savaspiroslog"
+      },
+      {
+        "value": "CUSTOM:Savaskeklog"
+      },
+      {
+        "value": "CUSTOM:Savasnetheritetormelek"
+      },
+      {
+        "value": "CUSTOM:Savasbazalt"
+      },
+      {
+        "value": "CUSTOM:Savaszuzott"
+      },
+      {
+        "value": "CUSTOM:Savassoder"
+      },
+      {
+        "value": "CUSTOM:Savasbuzablock"
+      },
+      {
+        "value": "CUSTOM:Savasblackstone"
+      },
+      {
+        "value": "CUSTOM:Savasblackkotegla"
+      },
+      {
+        "value": "CUSTOM:Savasbedrock"
+      },
+      {
+        "value": "CUSTOM:Svaskekgomba"
+      },
+      {
+        "value": "CUSTOM:Savaspirosgomba"
+      },
+      {
+        "value": "CUSTOM:Savassand"
+      },
+      {
+        "value": "CUSTOM:Savasredsand"
+      },
+      {
+        "value": "CUSTOM:Savassand"
+      },
+      {
+        "value": "CUSTOM:Savashomokko"
+      },
+      {
+        "value": "CUSTOM:Savashomokkopiros"
+      },
+      {
+        "value": "CUSTOM:Saverc"
+      },
+      {
+        "value": "CUSTOM:Savashomokkopiros"
+      },
+      {
+        "value": "CUSTOM:Konvertalo"
+      },
+      {
+        "value": "CUSTOM:Savasnoveny"
+      },
+      {
+        "value": "CUSTOM:Savblock"
+      },
+      {
+        "value": "CUSTOM:Savasobszidian"
+      },
+      {
+        "value": "CUSTOM:Svaskekgomba"
+      },
+      {
+        "value": "CUSTOM:Savblockok"
+      },
+      {
+        "value": "CUSTOM:Savasszenerc"
+      },
+      {
+        "value": "CUSTOM:Savasdiamondore"
+      },
+      {
+        "value": "CUSTOM:Savassmaragderc"
+      },
+      {
+        "value": "CUSTOM:Savasaranyerc"
+      },
+      {
+        "value": "CUSTOM:Savasvaserc"
+      },
+      {
+        "value": "CUSTOM:Savaslapiserc"
+      },
+      {
+        "value": "CUSTOM:Savasnetherarany"
+      },
+      {
+        "value": "CUSTOM:Savaskvarcerc"
+      },
+      {
+        "value": "CUSTOM:Savasredstoneerc"
+      },
+      {
+        "value": "CUSTOM:Savascryobszidian"
+      },
+      {
+        "value": "CUSTOM:Savasfeketebeton"
+      },
+      {
+        "value": "CUSTOM:Savasfeketebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaskekbeton"
+      },
+      {
+        "value": "CUSTOM:Savaskekbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasbarnabeton"
+      },
+      {
+        "value": "CUSTOM:Savasbarnabetonpor"
+      },
+      {
+        "value": "CUSTOM:Savascyanbeton"
+      },
+      {
+        "value": "CUSTOM:Savascyanbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasszurbeton"
+      },
+      {
+        "value": "CUSTOM:Savasszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbeton"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbeton"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekbeton"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurbeton"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaslimebeton"
+      },
+      {
+        "value": "CUSTOM:Savaslimebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasmagbeton"
+      },
+      {
+        "value": "CUSTOM:Savasmagbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasnarbeton"
+      },
+      {
+        "value": "CUSTOM:Savasnarbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaspinkbeton"
+      },
+      {
+        "value": "CUSTOM:Savaspinkbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaslilabeton"
+      },
+      {
+        "value": "CUSTOM:Savaslilabetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasredbeton"
+      },
+      {
+        "value": "CUSTOM:Savasredbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbeton"
+      },
+      {
+        "value": "CUSTOM:Savaslimebeton"
+      },
+      {
+        "value": "CUSTOM:Savaslimebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbeton"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savassargbeton"
+      },
+      {
+        "value": "CUSTOM:Savassargbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savassargbeton"
+      },
+      {
+        "value": "CUSTOM:Savasfekgterra"
+      },
+      {
+        "value": "CUSTOM:Savasfekgterra"
+      },
+      {
+        "value": "CUSTOM:Savaskeksterra"
+      },
+      {
+        "value": "CUSTOM:Savasbarnasterra"
+      },
+      {
+        "value": "CUSTOM:Savascyansterra"
+      },
+      {
+        "value": "CUSTOM:Savasszursterra"
+      },
+      {
+        "value": "CUSTOM:Savassargasterra"
+      },
+      {
+        "value": "CUSTOM:Savaszoldsterra"
+      },
+      {
+        "value": "CUSTOM:Savasszursterra"
+      },
+      {
+        "value": "CUSTOM:Savasfehersterra"
+      },
+      {
+        "value": "CUSTOM:Savaspirossterra"
+      },
+      {
+        "value": "CUSTOM:Savaslilasterra"
+      },
+      {
+        "value": "CUSTOM:Savaspinksterra"
+      },
+      {
+        "value": "CUSTOM:Savasnarsterra"
+      },
+      {
+        "value": "CUSTOM:Savasnarsterra"
+      },
+      {
+        "value": "CUSTOM:Savamagesterra"
+      },
+      {
+        "value": "CUSTOM:Savaslimesterra"
+      },
+      {
+        "value": "CUSTOM:Savaslimesterra"
+      },
+      {
+        "value": "CUSTOM:Savasvilszursterra"
+      },
+      {
+        "value": "CUSTOM:Savsvilkeksterra"
+      },
+      {
+        "value": "CUSTOM:Savasfekterr"
+      },
+      {
+        "value": "CUSTOM:Savaskekterr"
+      },
+      {
+        "value": "CUSTOM:Savasbarterr"
+      },
+      {
+        "value": "CUSTOM:Savascyanterra"
+      },
+      {
+        "value": "CUSTOM:Savasszurkterra"
+      },
+      {
+        "value": "CUSTOM:Savaszoldterr"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekterr"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurterr"
+      },
+      {
+        "value": "CUSTOM:Savaslimeterra"
+      },
+      {
+        "value": "CUSTOM:Savasmageterr"
+      },
+      {
+        "value": "CUSTOM:Savasnaraterr"
+      },
+      {
+        "value": "CUSTOM:Savaspinkterr"
+      },
+      {
+        "value": "CUSTOM:Savaslilaterr"
+      },
+      {
+        "value": "CUSTOM:Savasredterr"
+      },
+      {
+        "value": "CUSTOM:Savasterr"
+      },
+      {
+        "value": "CUSTOM:Savasfeherterr"
+      },
+      {
+        "value": "CUSTOM:Savasterr"
+      },
+      {
+        "value": "CUSTOM:Savasfeherterr"
+      },
+      {
+        "value": "CUSTOM:Savassargaterr"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumore"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumblock"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumsecret"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumsecret2"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumsecret"
+      },
+      {
+        "value": "CUSTOM:Epitoblock"
+      },
+      {
+        "value": "CUSTOM:Rageiumore"
+      },
+      {
+        "value": "CUSTOM:Rageflower"
+      },
+      {
+        "value": "CUSTOM:Crashchest"
+      },
+      {
+        "value": "CUSTOM:Rageiumblock"
+      },
+      {
+        "value": "CUSTOM:Rageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Parketta"
+      },
+      {
+        "value": "CUSTOM:Savasko"
+      },
+      {
+        "value": "CUSTOM:Savasnetherrack"
+      },
+      {
+        "value": "CUSTOM:Savasendko"
+      },
+      {
+        "value": "CUSTOM:Savasfold"
+      },
+      {
+        "value": "CUSTOM:Savaslog"
+      },
+      {
+        "value": "CUSTOM:Savaspanks"
+      },
+      {
+        "value": "CUSTOM:Savasandesite"
+      },
+      {
+        "value": "CUSTOM:Savasdiorit"
+      },
+      {
+        "value": "CUSTOM:Savasgranit"
+      },
+      {
+        "value": "CUSTOM:Savascsont"
+      },
+      {
+        "value": "CUSTOM:Savastegla"
+      },
+      {
+        "value": "CUSTOM:Savaskotegla"
+      },
+      {
+        "value": "CUSTOM:Savasnyirfa"
+      },
+      {
+        "value": "CUSTOM:Savasakac"
+      },
+      {
+        "value": "CUSTOM:Savasjungle"
+      },
+      {
+        "value": "CUSTOM:Savasdarkoak"
+      },
+      {
+        "value": "CUSTOM:Savasfenyo"
+      },
+      {
+        "value": "CUSTOM:Savasakacplank"
+      },
+      {
+        "value": "CUSTOM:Savasnyirplank"
+      },
+      {
+        "value": "CUSTOM:Savassotetoakplamk"
+      },
+      {
+        "value": "CUSTOM:Savasjungleplank"
+      },
+      {
+        "value": "CUSTOM:Savaspruceplanks"
+      },
+      {
+        "value": "CUSTOM:Savaspirosnetherfa"
+      },
+      {
+        "value": "CUSTOM:Savaskeknetherfa"
+      },
+      {
+        "value": "CUSTOM:Savaspiroslog"
+      },
+      {
+        "value": "CUSTOM:Savaskeklog"
+      },
+      {
+        "value": "CUSTOM:Savasnetheritetormelek"
+      },
+      {
+        "value": "CUSTOM:Savasbazalt"
+      },
+      {
+        "value": "CUSTOM:Savaszuzott"
+      },
+      {
+        "value": "CUSTOM:Savassoder"
+      },
+      {
+        "value": "CUSTOM:Savasbuzablock"
+      },
+      {
+        "value": "CUSTOM:Savasblackstone"
+      },
+      {
+        "value": "CUSTOM:Savasblackkotegla"
+      },
+      {
+        "value": "CUSTOM:Savasbedrock"
+      },
+      {
+        "value": "CUSTOM:Svaskekgomba"
+      },
+      {
+        "value": "CUSTOM:Savaspirosgomba"
+      },
+      {
+        "value": "CUSTOM:Savassand"
+      },
+      {
+        "value": "CUSTOM:Savasredsand"
+      },
+      {
+        "value": "CUSTOM:Savashomokko"
+      },
+      {
+        "value": "CUSTOM:Savashomokkopiros"
+      },
+      {
+        "value": "CUSTOM:Saverc"
+      },
+      {
+        "value": "CUSTOM:Konvertalo"
+      },
+      {
+        "value": "CUSTOM:Savasnoveny"
+      },
+      {
+        "value": "CUSTOM:Savblock"
+      },
+      {
+        "value": "CUSTOM:Savblockok"
+      },
+      {
+        "value": "CUSTOM:Savasszenerc"
+      },
+      {
+        "value": "CUSTOM:Savasdiamondore"
+      },
+      {
+        "value": "CUSTOM:Savassmaragderc"
+      },
+      {
+        "value": "CUSTOM:Savasaranyerc"
+      },
+      {
+        "value": "CUSTOM:Savasvaserc"
+      },
+      {
+        "value": "CUSTOM:Savaslapiserc"
+      },
+      {
+        "value": "CUSTOM:Savasnetherarany"
+      },
+      {
+        "value": "CUSTOM:Savaskvarcerc"
+      },
+      {
+        "value": "CUSTOM:Savasredstoneerc"
+      },
+      {
+        "value": "CUSTOM:Savasobszidian"
+      },
+      {
+        "value": "CUSTOM:Savascryobszidian"
+      },
+      {
+        "value": "CUSTOM:Savasfeketebeton"
+      },
+      {
+        "value": "CUSTOM:Savasfeketebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaskekbeton"
+      },
+      {
+        "value": "CUSTOM:Savaskekbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasbarnabeton"
+      },
+      {
+        "value": "CUSTOM:Savasbarnabetonpor"
+      },
+      {
+        "value": "CUSTOM:Savascyanbeton"
+      },
+      {
+        "value": "CUSTOM:Savascyanbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasszurbeton"
+      },
+      {
+        "value": "CUSTOM:Savasszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbeton"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekbeton"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurbeton"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaslimebeton"
+      },
+      {
+        "value": "CUSTOM:Savaslimebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasmagbeton"
+      },
+      {
+        "value": "CUSTOM:Savasmagbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasnarbeton"
+      },
+      {
+        "value": "CUSTOM:Savasnarbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaspinkbeton"
+      },
+      {
+        "value": "CUSTOM:Savaspinkbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaslilabeton"
+      },
+      {
+        "value": "CUSTOM:Savaslilabetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasredbeton"
+      },
+      {
+        "value": "CUSTOM:Savasredbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbeton"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savassargbeton"
+      },
+      {
+        "value": "CUSTOM:Savassargbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasfekgterra"
+      },
+      {
+        "value": "CUSTOM:Savaskeksterra"
+      },
+      {
+        "value": "CUSTOM:Savasbarnasterra"
+      },
+      {
+        "value": "CUSTOM:Savascyansterra"
+      },
+      {
+        "value": "CUSTOM:Savasszursterra"
+      },
+      {
+        "value": "CUSTOM:Savaszoldsterra"
+      },
+      {
+        "value": "CUSTOM:Savsvilkeksterra"
+      },
+      {
+        "value": "CUSTOM:Savasvilszursterra"
+      },
+      {
+        "value": "CUSTOM:Savaslimesterra"
+      },
+      {
+        "value": "CUSTOM:Savamagesterra"
+      },
+      {
+        "value": "CUSTOM:Savasnarsterra"
+      },
+      {
+        "value": "CUSTOM:Savaspinksterra"
+      },
+      {
+        "value": "CUSTOM:Savaslilasterra"
+      },
+      {
+        "value": "CUSTOM:Savaspirossterra"
+      },
+      {
+        "value": "CUSTOM:Savasfehersterra"
+      },
+      {
+        "value": "CUSTOM:Savassargasterra"
+      },
+      {
+        "value": "CUSTOM:Savasfekterr"
+      },
+      {
+        "value": "CUSTOM:Savaskekterr"
+      },
+      {
+        "value": "CUSTOM:Savasbarterr"
+      },
+      {
+        "value": "CUSTOM:Savascyanterra"
+      },
+      {
+        "value": "CUSTOM:Savasszurkterra"
+      },
+      {
+        "value": "CUSTOM:Savaszoldterr"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekterr"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurterr"
+      },
+      {
+        "value": "CUSTOM:Savaslimeterra"
+      },
+      {
+        "value": "CUSTOM:Savasmageterr"
+      },
+      {
+        "value": "CUSTOM:Savasnaraterr"
+      },
+      {
+        "value": "CUSTOM:Savaspinkterr"
+      },
+      {
+        "value": "CUSTOM:Savaslilaterr"
+      },
+      {
+        "value": "CUSTOM:Savasredterr"
+      },
+      {
+        "value": "CUSTOM:Savasterr"
+      },
+      {
+        "value": "CUSTOM:Savasfeherterr"
+      },
+      {
+        "value": "CUSTOM:Savassargaterr"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumore"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumblock"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumsecret"
+      },
+      {
+        "value": "CUSTOM:Epitoblock"
+      },
+      {
+        "value": "CUSTOM:Portalrt"
+      },
+      {
+        "value": "CUSTOM:Secretboomko"
+      },
+      {
+        "value": "CUSTOM:Anapaitore"
+      },
+      {
+        "value": "CUSTOM:Aktinolitore"
+      },
+      {
+        "value": "CUSTOM:Adularore"
+      },
+      {
+        "value": "CUSTOM:Achatore"
+      },
+      {
+        "value": "CUSTOM:Azuritore"
+      },
+      {
+        "value": "CUSTOM:Amazonitore"
+      },
+      {
+        "value": "CUSTOM:Cerusszitore"
+      },
+      {
+        "value": "CUSTOM:Bizmutore"
+      },
+      {
+        "value": "CUSTOM:Apofillitore"
+      },
+      {
+        "value": "CUSTOM:Amazonitblock"
+      },
+      {
+        "value": "CUSTOM:Toroottegla"
+      },
+      {
+        "value": "CUSTOM:Apifillitblock"
+      },
+      {
+        "value": "CUSTOM:Azuritblock"
+      },
+      {
+        "value": "CUSTOM:Bizmutblock"
+      },
+      {
+        "value": "CUSTOM:Achatblock"
+      },
+      {
+        "value": "CUSTOM:Adularblock"
+      },
+      {
+        "value": "CUSTOM:Aktinolitblock"
+      },
+      {
+        "value": "CUSTOM:Opalore"
+      },
+      {
+        "value": "CUSTOM:Opalblock"
+      },
+      {
+        "value": "CUSTOM:Anapitblock"
+      },
+      {
+        "value": "CUSTOM:Cerusszitblock"
+      },
+      {
+        "value": "CUSTOM:Parkourfel"
+      },
+      {
+        "value": "CUSTOM:Parkfelplus"
+      },
+      {
+        "value": "CUSTOM:Parkold"
+      },
+      {
+        "value": "CUSTOM:Parkold2"
+      },
+      {
+        "value": "CUSTOM:Parkol"
+      },
+      {
+        "value": "CUSTOM:Parksnake"
+      },
+      {
+        "value": "CUSTOM:Rageiumore"
+      },
+      {
+        "value": "CUSTOM:Rageflower"
+      },
+      {
+        "value": "CUSTOM:Crashchest"
+      },
+      {
+        "value": "CUSTOM:Rageiumblock"
+      },
+      {
+        "value": "CUSTOM:Rageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Parketta"
+      },
+      {
+        "value": "CUSTOM:Savasko"
+      },
+      {
+        "value": "CUSTOM:Savasnetherrack"
+      },
+      {
+        "value": "CUSTOM:Savasendko"
+      },
+      {
+        "value": "CUSTOM:Savasfold"
+      },
+      {
+        "value": "CUSTOM:Savaslog"
+      },
+      {
+        "value": "CUSTOM:Savaspanks"
+      },
+      {
+        "value": "CUSTOM:Savasandesite"
+      },
+      {
+        "value": "CUSTOM:Savasdiorit"
+      },
+      {
+        "value": "CUSTOM:Savasgranit"
+      },
+      {
+        "value": "CUSTOM:Savascsont"
+      },
+      {
+        "value": "CUSTOM:Savastegla"
+      },
+      {
+        "value": "CUSTOM:Savaskotegla"
+      },
+      {
+        "value": "CUSTOM:Savasnyirfa"
+      },
+      {
+        "value": "CUSTOM:Savasakac"
+      },
+      {
+        "value": "CUSTOM:Savasjungle"
+      },
+      {
+        "value": "CUSTOM:Savasdarkoak"
+      },
+      {
+        "value": "CUSTOM:Savasfenyo"
+      },
+      {
+        "value": "CUSTOM:Savasakacplank"
+      },
+      {
+        "value": "CUSTOM:Savasnyirplank"
+      },
+      {
+        "value": "CUSTOM:Savassotetoakplamk"
+      },
+      {
+        "value": "CUSTOM:Savasjungleplank"
+      },
+      {
+        "value": "CUSTOM:Savaspruceplanks"
+      },
+      {
+        "value": "CUSTOM:Savaspirosnetherfa"
+      },
+      {
+        "value": "CUSTOM:Savaskeknetherfa"
+      },
+      {
+        "value": "CUSTOM:Savaspiroslog"
+      },
+      {
+        "value": "CUSTOM:Savaskeklog"
+      },
+      {
+        "value": "CUSTOM:Savasnetheritetormelek"
+      },
+      {
+        "value": "CUSTOM:Savasbazalt"
+      },
+      {
+        "value": "CUSTOM:Savaszuzott"
+      },
+      {
+        "value": "CUSTOM:Savassoder"
+      },
+      {
+        "value": "CUSTOM:Savasbuzablock"
+      },
+      {
+        "value": "CUSTOM:Savasblackstone"
+      },
+      {
+        "value": "CUSTOM:Savasblackkotegla"
+      },
+      {
+        "value": "CUSTOM:Savasbedrock"
+      },
+      {
+        "value": "CUSTOM:Svaskekgomba"
+      },
+      {
+        "value": "CUSTOM:Savaspirosgomba"
+      },
+      {
+        "value": "CUSTOM:Savassand"
+      },
+      {
+        "value": "CUSTOM:Savasredsand"
+      },
+      {
+        "value": "CUSTOM:Savashomokko"
+      },
+      {
+        "value": "CUSTOM:Savashomokkopiros"
+      },
+      {
+        "value": "CUSTOM:Saverc"
+      },
+      {
+        "value": "CUSTOM:Savasnoveny"
+      },
+      {
+        "value": "CUSTOM:Savblock"
+      },
+      {
+        "value": "CUSTOM:Savblockok"
+      },
+      {
+        "value": "CUSTOM:Savasszenerc"
+      },
+      {
+        "value": "CUSTOM:Savasdiamondore"
+      },
+      {
+        "value": "CUSTOM:Savassmaragderc"
+      },
+      {
+        "value": "CUSTOM:Savasaranyerc"
+      },
+      {
+        "value": "CUSTOM:Savasvaserc"
+      },
+      {
+        "value": "CUSTOM:Savaslapiserc"
+      },
+      {
+        "value": "CUSTOM:Savasnetherarany"
+      },
+      {
+        "value": "CUSTOM:Savaskvarcerc"
+      },
+      {
+        "value": "CUSTOM:Savasredstoneerc"
+      },
+      {
+        "value": "CUSTOM:Savasobszidian"
+      },
+      {
+        "value": "CUSTOM:Savascryobszidian"
+      },
+      {
+        "value": "CUSTOM:Savasfeketebeton"
+      },
+      {
+        "value": "CUSTOM:Savasfeketebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaskekbeton"
+      },
+      {
+        "value": "CUSTOM:Savaskekbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasbarnabeton"
+      },
+      {
+        "value": "CUSTOM:Savasbarnabetonpor"
+      },
+      {
+        "value": "CUSTOM:Savascyanbeton"
+      },
+      {
+        "value": "CUSTOM:Savascyanbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasszurbeton"
+      },
+      {
+        "value": "CUSTOM:Savasszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbeton"
+      },
+      {
+        "value": "CUSTOM:Savaszoldbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekbeton"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurbeton"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaslimebeton"
+      },
+      {
+        "value": "CUSTOM:Savaslimebetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasmagbeton"
+      },
+      {
+        "value": "CUSTOM:Savasmagbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasnarbeton"
+      },
+      {
+        "value": "CUSTOM:Savasnarbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaspinkbeton"
+      },
+      {
+        "value": "CUSTOM:Savaspinkbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savaslilabeton"
+      },
+      {
+        "value": "CUSTOM:Savaslilabetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasredbeton"
+      },
+      {
+        "value": "CUSTOM:Savasredbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbeton"
+      },
+      {
+        "value": "CUSTOM:Savasfeherbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savassargbeton"
+      },
+      {
+        "value": "CUSTOM:Savassargbetonpor"
+      },
+      {
+        "value": "CUSTOM:Savasfekgterra"
+      },
+      {
+        "value": "CUSTOM:Savaskeksterra"
+      },
+      {
+        "value": "CUSTOM:Savasbarnasterra"
+      },
+      {
+        "value": "CUSTOM:Savascyansterra"
+      },
+      {
+        "value": "CUSTOM:Savasszursterra"
+      },
+      {
+        "value": "CUSTOM:Savaszoldsterra"
+      },
+      {
+        "value": "CUSTOM:Savsvilkeksterra"
+      },
+      {
+        "value": "CUSTOM:Savasvilszursterra"
+      },
+      {
+        "value": "CUSTOM:Savaslimesterra"
+      },
+      {
+        "value": "CUSTOM:Savamagesterra"
+      },
+      {
+        "value": "CUSTOM:Savasnarsterra"
+      },
+      {
+        "value": "CUSTOM:Savaspinksterra"
+      },
+      {
+        "value": "CUSTOM:Savaslilasterra"
+      },
+      {
+        "value": "CUSTOM:Savaspirossterra"
+      },
+      {
+        "value": "CUSTOM:Savasfehersterra"
+      },
+      {
+        "value": "CUSTOM:Savassargasterra"
+      },
+      {
+        "value": "CUSTOM:Savasfekterr"
+      },
+      {
+        "value": "CUSTOM:Savaskekterr"
+      },
+      {
+        "value": "CUSTOM:Savasbarterr"
+      },
+      {
+        "value": "CUSTOM:Savascyanterra"
+      },
+      {
+        "value": "CUSTOM:Savasszurkterra"
+      },
+      {
+        "value": "CUSTOM:Savaszoldterr"
+      },
+      {
+        "value": "CUSTOM:Savasvilkekterr"
+      },
+      {
+        "value": "CUSTOM:Savasvilszurterr"
+      },
+      {
+        "value": "CUSTOM:Savaslimeterra"
+      },
+      {
+        "value": "CUSTOM:Savasmageterr"
+      },
+      {
+        "value": "CUSTOM:Savasnaraterr"
+      },
+      {
+        "value": "CUSTOM:Savaspinkterr"
+      },
+      {
+        "value": "CUSTOM:Savaslilaterr"
+      },
+      {
+        "value": "CUSTOM:Savasredterr"
+      },
+      {
+        "value": "CUSTOM:Savasterr"
+      },
+      {
+        "value": "CUSTOM:Savasfeherterr"
+      },
+      {
+        "value": "CUSTOM:Savassargaterr"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumore"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumblock"
+      },
+      {
+        "value": "CUSTOM:Savasrageiumsecret"
+      },
+      {
+        "value": "CUSTOM:Epitoblock"
+      },
+      {
+        "value": "CUSTOM:Portalrt"
+      },
+      {
+        "value": "CUSTOM:Secretboomko"
+      },
+      {
+        "value": "CUSTOM:Anapaitore"
+      },
+      {
+        "value": "CUSTOM:Aktinolitore"
+      },
+      {
+        "value": "CUSTOM:Adularore"
+      },
+      {
+        "value": "CUSTOM:Achatore"
+      },
+      {
+        "value": "CUSTOM:Azuritore"
+      },
+      {
+        "value": "CUSTOM:Amazonitore"
+      },
+      {
+        "value": "CUSTOM:Cerusszitore"
+      },
+      {
+        "value": "CUSTOM:Bizmutore"
+      },
+      {
+        "value": "CUSTOM:Apofillitore"
+      },
+      {
+        "value": "CUSTOM:Amazonitblock"
+      },
+      {
+        "value": "CUSTOM:Toroottegla"
+      },
+      {
+        "value": "CUSTOM:Apifillitblock"
+      },
+      {
+        "value": "CUSTOM:Azuritblock"
+      },
+      {
+        "value": "CUSTOM:Bizmutblock"
+      },
+      {
+        "value": "CUSTOM:Achatblock"
+      },
+      {
+        "value": "CUSTOM:Adularblock"
+      },
+      {
+        "value": "CUSTOM:Aktinolitblock"
+      },
+      {
+        "value": "CUSTOM:Opalore"
+      },
+      {
+        "value": "CUSTOM:Opalblock"
+      },
+      {
+        "value": "CUSTOM:Anapitblock"
+      },
+      {
+        "value": "CUSTOM:Cerusszitblock"
+      },
+      {
+        "value": "CUSTOM:Parkourfel"
+      },
+      {
+        "value": "CUSTOM:Parkfelplus"
+      },
+      {
+        "value": "CUSTOM:Parkold"
+      },
+      {
+        "value": "CUSTOM:Parkold2"
+      },
+      {
+        "value": "CUSTOM:Parkol"
+      },
+      {
+        "value": "CUSTOM:Parksnake"
+      },
+      {
+        "value": "CUSTOM:Parklev"
+      },
+      {
+        "value": "CUSTOM:Parklevplus"
+      },
+      {
+        "value": "CUSTOM:Parkgyors"
+      },
+      {
+        "value": "CUSTOM:Parkgyorsplus"
+      },
+      {
+        "value": "CUSTOM:Parklass"
+      },
+      {
+        "value": "CUSTOM:Parklassplus"
+      },
+      {
+        "value": "CUSTOM:Parkvak"
+      },
+      {
+        "value": "CUSTOM:Parkvakp"
+      },
+      {
+        "value": "CUSTOM:RageFaWood"
+      },
+      {
+        "value": "CUSTOM:RageFaLog"
+      },
+      {
+        "value": "CUSTOM:RageFaPlanks"
+      },
+      {
+        "value": "CUSTOM:RageFaLeaves"
+      },
+      {
+        "value": "CUSTOM:RageFaStairs"
+      },
+      {
+        "value": "CUSTOM:RageFaSlab"
+      },
+      {
+        "value": "CUSTOM:RageFaFence"
+      },
+      {
+        "value": "CUSTOM:RageFaFenceGate"
+      },
+      {
+        "value": "CUSTOM:BukkWood"
+      },
+      {
+        "value": "CUSTOM:BukkLog"
+      },
+      {
+        "value": "CUSTOM:BukkPlanks"
+      },
+      {
+        "value": "CUSTOM:BukkLeaves"
+      },
+      {
+        "value": "CUSTOM:BukkStairs"
+      },
+      {
+        "value": "CUSTOM:BukkSlab"
+      },
+      {
+        "value": "CUSTOM:BukkFence"
+      },
+      {
+        "value": "CUSTOM:BukkFenceGate"
+      },
+      {
+        "value": "CUSTOM:Ragefasapling"
+      },
+      {
+        "value": "CUSTOM:Bukkspaling"
+      },
+      {
+        "value": "CUSTOM:Obszontiumvarazslo"
+      },
+      {
+        "value": "CUSTOM:KizukraWood"
+      },
+      {
+        "value": "CUSTOM:KizukraLog"
+      },
+      {
+        "value": "CUSTOM:KizukraPlanks"
+      },
+      {
+        "value": "CUSTOM:KizukraLeaves"
+      },
+      {
+        "value": "CUSTOM:KizukraStairs"
+      },
+      {
+        "value": "CUSTOM:KizukraSlab"
+      },
+      {
+        "value": "CUSTOM:KizukraFence"
+      },
+      {
+        "value": "CUSTOM:KizukraFenceGate"
+      },
+      {
+        "value": "CUSTOM:RobtaiWood"
+      },
+      {
+        "value": "CUSTOM:RobtaiLog"
+      },
+      {
+        "value": "CUSTOM:RobtaiPlanks"
+      },
+      {
+        "value": "CUSTOM:RobtaiLeaves"
+      },
+      {
+        "value": "CUSTOM:RobtaiStairs"
+      },
+      {
+        "value": "CUSTOM:RobtaiSlab"
+      },
+      {
+        "value": "CUSTOM:RobtaiFence"
+      },
+      {
+        "value": "CUSTOM:RobtaiFenceGate"
+      },
+      {
+        "value": "CUSTOM:MarokriksaWood"
+      },
+      {
+        "value": "CUSTOM:MarokriksaLog"
+      },
+      {
+        "value": "CUSTOM:MarokriksaPlanks"
+      },
+      {
+        "value": "CUSTOM:MarokriksaLeaves"
+      },
+      {
+        "value": "CUSTOM:MarokriksaStairs"
+      },
+      {
+        "value": "CUSTOM:MarokriksaSlab"
+      },
+      {
+        "value": "CUSTOM:MarokriksaFence"
+      },
+      {
+        "value": "CUSTOM:MarokriksaFenceGate"
+      },
+      {
+        "value": "CUSTOM:Fa3sap"
+      },
+      {
+        "value": "CUSTOM:Fa4sap"
+      },
+      {
+        "value": "CUSTOM:Fa5sap"
+      },
+      {
+        "value": "CUSTOM:Ragedoor"
+      },
+      {
+        "value": "CUSTOM:Bukkdoor"
+      },
+      {
+        "value": "CUSTOM:Kizukradoor"
+      },
+      {
+        "value": "CUSTOM:Robtaidoor"
+      },
+      {
+        "value": "CUSTOM:Marokriksadoor"
+      },
+      {
+        "value": "CUSTOM:Ragefatrapdoor"
+      },
+      {
+        "value": "CUSTOM:Bukktd"
+      },
+      {
+        "value": "CUSTOM:Kizukratd"
+      },
+      {
+        "value": "CUSTOM:Robtaitd"
+      },
+      {
+        "value": "CUSTOM:Marokriksatd"
+      },
+      {
+        "value": "CUSTOM:RageWood_BlockStairs"
+      },
+      {
+        "value": "CUSTOM:RageWood_BlockSlab"
+      },
+      {
+        "value": "CUSTOM:RageWood_BlockFence"
+      },
+      {
+        "value": "CUSTOM:RageWood_BlockFenceGate"
+      },
+      {
+        "value": "CUSTOM:Bukk_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Bukk_BlockFenceGate"
+      },
+      {
+        "value": "CUSTOM:RageFaPlanksblue"
+      },
+      {
+        "value": "CUSTOM:Ragefaplanksred"
+      },
+      {
+        "value": "CUSTOM:Ragefastairsblue"
+      },
+      {
+        "value": "CUSTOM:Ragefastairsred"
+      },
+      {
+        "value": "CUSTOM:Ragefaslabblue"
+      },
+      {
+        "value": "CUSTOM:Ragefaslabred"
+      },
+      {
+        "value": "CUSTOM:Ragefatd2"
+      },
+      {
+        "value": "CUSTOM:Ragefalogs1"
+      },
+      {
+        "value": "CUSTOM:Ragefalog2"
+      },
+      {
+        "value": "CUSTOM:Ragefalogb1"
+      },
+      {
+        "value": "CUSTOM:Ragefalogb2"
+      },
+      {
+        "value": "CUSTOM:Ragefaslab2"
+      },
+      {
+        "value": "CUSTOM:Ragefastairs2"
+      },
+      {
+        "value": "CUSTOM:Ragefastairs3"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstairs4"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstairs5"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstairs6"
+      },
+      {
+        "value": "CUSTOM:RageWoodslab2"
+      },
+      {
+        "value": "CUSTOM:RageWoodslab3"
+      },
+      {
+        "value": "CUSTOM:Ragewoodlab4"
+      },
+      {
+        "value": "CUSTOM:Ragewoodslab5"
+      },
+      {
+        "value": "CUSTOM:Ragefaslab7"
+      },
+      {
+        "value": "CUSTOM:Ragefaslab8"
+      },
+      {
+        "value": "CUSTOM:Ragewoodfenceb"
+      },
+      {
+        "value": "CUSTOM:Ragewoodfgb"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstrfence"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstrfencegate"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstr2f"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstr2fg"
+      },
+      {
+        "value": "CUSTOM:Strippedbukkwood"
+      },
+      {
+        "value": "CUSTOM:Strippedbukklog"
+      },
+      {
+        "value": "CUSTOM:Bukkstairb"
+      },
+      {
+        "value": "CUSTOM:Bukkstairstr"
+      },
+      {
+        "value": "CUSTOM:Bukkslabb"
+      },
+      {
+        "value": "CUSTOM:Bukkslabstr"
+      },
+      {
+        "value": "CUSTOM:Bukkfencestr"
+      },
+      {
+        "value": "CUSTOM:Bukkfgstr"
+      },
+      {
+        "value": "CUSTOM:Structurehatarolo1"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraWood"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraLog"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraStairs"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraSlab"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraFence"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraFenceGate"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraPressurePlate"
+      },
+      {
+        "value": "CUSTOM:Kizukra_BlockStairs"
+      },
+      {
+        "value": "CUSTOM:Kizukra_BlockSlab"
+      },
+      {
+        "value": "CUSTOM:Kizukra_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Kizukra_BlockFenceGate"
+      },
+      {
+        "value": "CUSTOM:Kizukra_BlockPressurePlate"
+      },
+      {
+        "value": "CUSTOM:Kizukraplankspressureplate"
+      },
+      {
+        "value": "CUSTOM:Bukkbprpl"
+      },
+      {
+        "value": "CUSTOM:Bukkstrprpl"
+      },
+      {
+        "value": "CUSTOM:Bukkplanksprpl"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockWood"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockLog"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockStairs"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockSlab"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockFenceGate"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockPressurePlate"
+      },
+      {
+        "value": "CUSTOM:Robtai_2Stairs"
+      },
+      {
+        "value": "CUSTOM:Robtai_2Slab"
+      },
+      {
+        "value": "CUSTOM:Robtai_2Fence"
+      },
+      {
+        "value": "CUSTOM:Robtai_2FenceGate"
+      },
+      {
+        "value": "CUSTOM:Robtai_2PressurePlate"
+      },
+      {
+        "value": "CUSTOM:Robtaipressureplate"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2Wood"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2Log"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2Stairs"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2Slab"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2Fence"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2FenceGate"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2PressurePlate"
+      },
+      {
+        "value": "CUSTOM:Marokriksapressureplate"
+      },
+      {
+        "value": "CUSTOM:Stripped_MarokriksaStairs"
+      },
+      {
+        "value": "CUSTOM:Stripped_MarokriksaSlab"
+      },
+      {
+        "value": "CUSTOM:Stripped_MarokriksaFence"
+      },
+      {
+        "value": "CUSTOM:Stripped_MarokriksaFenceGate"
+      },
+      {
+        "value": "CUSTOM:Stripped_MarokriksaPressurePlate"
+      },
+      {
+        "value": "CUSTOM:SavBucket"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      },
+      {
+        "value": "CUSTOM:Hegyikofull"
+      },
+      {
+        "value": "CUSTOM:Chiseledhegyiko"
+      },
+      {
+        "value": "CUSTOM:Hegyikotegla"
+      },
+      {
+        "value": "CUSTOM:Hegyimorzsolt"
+      },
+      {
+        "value": "CUSTOM:Deepslateanapaitore"
+      },
+      {
+        "value": "CUSTOM:Deepslateaktinolitore"
+      },
+      {
+        "value": "CUSTOM:Deepslateadularore"
+      },
+      {
+        "value": "CUSTOM:Deepslateachatore"
+      },
+      {
+        "value": "CUSTOM:Deepslateazuritore"
+      },
+      {
+        "value": "CUSTOM:Hegyikogreen"
+      },
+      {
+        "value": "CUSTOM:Hegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Hegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Hegyikowall"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikoslabu"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Polishedhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikostair"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglaslab"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglastairs"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglawall"
+      },
+      {
+        "value": "CUSTOM:Hegyikopressureplate"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolishedpressureplate"
+      },
+      {
+        "value": "CUSTOM:Fullhegyikopressureplate"
+      },
+      {
+        "value": "CUSTOM:Hegyikoteglapressureplate"
+      },
+      {
+        "value": "CUSTOM:Ragefapr1"
+      },
+      {
+        "value": "CUSTOM:Ragefapr2"
+      },
+      {
+        "value": "CUSTOM:Ragefapr3"
+      },
+      {
+        "value": "CUSTOM:Ragefapr4"
+      },
+      {
+        "value": "CUSTOM:Ragefape5"
+      },
+      {
+        "value": "CUSTOM:Ragefapr6"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikowall"
+      },
+      {
+        "value": "CUSTOM:Mossyhegyikopressureplate"
+      },
+      {
+        "value": "CUSTOM:Hegyikomossyplus"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikoslab"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikostairs"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikowall"
+      },
+      {
+        "value": "CUSTOM:Mossyplushegyikopr"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "rageteamblock",
+    "namespace": "mod"
+  }
+}

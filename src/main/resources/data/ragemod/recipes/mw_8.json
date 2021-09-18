@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "ragemod:marokriksa_wood"
+  },
+  "result": "ragemod:marokriksatd"
+}

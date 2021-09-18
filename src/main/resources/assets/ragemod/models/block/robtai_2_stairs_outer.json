@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "ragemod:blocks/rob2",
+    "top": "ragemod:blocks/rob2",
+    "side": "ragemod:blocks/rob2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "ragemod:custom/teleporter",
+  "textures": {
+    "all": "ragemod:blocks/obs2",
+    "particle": "ragemod:blocks/obs2",
+    "gold": "ragemod:blocks/portal_jee",
+    "obsidian": "ragemod:blocks/obs2",
+    "portal": "ragemod:blocks/gggg"
+  }
+}

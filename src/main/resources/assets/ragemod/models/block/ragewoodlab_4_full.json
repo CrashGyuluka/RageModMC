@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "ragemod:blocks/rage_s_oldal",
+    "top": "ragemod:blocks/rage_s_oldal",
+    "side": "ragemod:blocks/rage_s_oldal"
+  }
+}

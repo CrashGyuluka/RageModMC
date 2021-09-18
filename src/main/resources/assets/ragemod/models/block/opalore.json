@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/opal_new",
+    "up": "ragemod:blocks/opal_new",
+    "north": "ragemod:blocks/opal_new",
+    "east": "ragemod:blocks/opal_new",
+    "south": "ragemod:blocks/opal_new",
+    "west": "ragemod:blocks/opal_new",
+    "particle": "ragemod:blocks/opal_new"
+  }
+}

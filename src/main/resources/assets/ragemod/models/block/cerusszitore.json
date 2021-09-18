@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/----cerusszit",
+    "up": "ragemod:blocks/----cerusszit",
+    "north": "ragemod:blocks/----cerusszit",
+    "east": "ragemod:blocks/----cerusszit",
+    "south": "ragemod:blocks/----cerusszit",
+    "west": "ragemod:blocks/----cerusszit",
+    "particle": "ragemod:blocks/----cerusszit"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_anapait_ore",
+    "up": "ragemod:blocks/a_anapait_ore",
+    "north": "ragemod:blocks/a_anapait_ore",
+    "east": "ragemod:blocks/a_anapait_ore",
+    "south": "ragemod:blocks/a_anapait_ore",
+    "west": "ragemod:blocks/a_anapait_ore",
+    "particle": "ragemod:blocks/a_anapait_ore"
+  }
+}

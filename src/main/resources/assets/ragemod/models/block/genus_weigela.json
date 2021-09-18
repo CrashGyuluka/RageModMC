@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/genus_weigela",
+    "particle": "ragemod:blocks/genus_weigela"
+  }
+}

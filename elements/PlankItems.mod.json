@@ -1,0 +1,35 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:RageFaPlanks"
+      },
+      {
+        "value": "CUSTOM:BukkPlanks"
+      },
+      {
+        "value": "CUSTOM:KizukraPlanks"
+      },
+      {
+        "value": "CUSTOM:RobtaiPlanks"
+      },
+      {
+        "value": "CUSTOM:MarokriksaPlanks"
+      },
+      {
+        "value": "CUSTOM:RageFaPlanksblue"
+      },
+      {
+        "value": "CUSTOM:Ragefaplanksred"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "planks",
+    "namespace": "minecraft"
+  }
+}

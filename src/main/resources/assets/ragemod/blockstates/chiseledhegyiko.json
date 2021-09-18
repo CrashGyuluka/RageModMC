@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/chiseledhegyiko"
+    },
+    "facing=east": {
+      "model": "ragemod:block/chiseledhegyiko",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/chiseledhegyiko",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/chiseledhegyiko",
+      "y": 270
+    }
+  }
+}

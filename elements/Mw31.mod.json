@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 12,
+    "group": "",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:MarokriksaLog"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:Marokriksa2Slab"
+    },
+    "name": "mw_31",
+    "namespace": "mod"
+  }
+}

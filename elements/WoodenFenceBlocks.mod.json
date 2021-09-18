@@ -1,0 +1,62 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:RageFaFence"
+      },
+      {
+        "value": "CUSTOM:BukkFence"
+      },
+      {
+        "value": "CUSTOM:KizukraFence"
+      },
+      {
+        "value": "CUSTOM:RobtaiFence"
+      },
+      {
+        "value": "CUSTOM:MarokriksaFence"
+      },
+      {
+        "value": "CUSTOM:RageWood_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Bukk_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Ragewoodfenceb"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstrfence"
+      },
+      {
+        "value": "CUSTOM:Ragewoodstr2f"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraFence"
+      },
+      {
+        "value": "CUSTOM:Kizukra_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockFence"
+      },
+      {
+        "value": "CUSTOM:Robtai_2Fence"
+      },
+      {
+        "value": "CUSTOM:Marokriksa2Fence"
+      },
+      {
+        "value": "CUSTOM:Stripped_MarokriksaFence"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "wooden_fences",
+    "namespace": "minecraft"
+  }
+}

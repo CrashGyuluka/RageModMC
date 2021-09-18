@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Croissant"
+      },
+      {
+        "value": "CUSTOM:Croissant"
+      },
+      {
+        "value": "CUSTOM:Chocolate"
+      },
+      {
+        "value": "CUSTOM:Croissant"
+      },
+      {
+        "value": "CUSTOM:Croissant"
+      },
+      {
+        "value": "CUSTOM:Chocolate"
+      },
+      {
+        "value": "CUSTOM:Chocolate"
+      },
+      {
+        "value": "CUSTOM:Chocolate"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Csokiscrossaint"
+    },
+    "name": "csokiscroissantcraft",
+    "namespace": "mod"
+  }
+}

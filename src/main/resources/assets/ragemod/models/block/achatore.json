@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/----achat",
+    "up": "ragemod:blocks/----achat",
+    "north": "ragemod:blocks/----achat",
+    "east": "ragemod:blocks/----achat",
+    "south": "ragemod:blocks/----achat",
+    "west": "ragemod:blocks/----achat",
+    "particle": "ragemod:blocks/----achat"
+  }
+}

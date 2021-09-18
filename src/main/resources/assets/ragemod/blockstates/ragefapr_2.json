@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ragemod:block/ragefapr_2"
+    },
+    "powered=true": {
+      "model": "ragemod:block/ragefapr_2_down"
+    }
+  }
+}

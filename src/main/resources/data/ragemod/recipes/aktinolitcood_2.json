@@ -1,0 +1,12 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 150,
+  "ingredient": {
+    "item": "ragemod:deepslateaktinolitore"
+  },
+  "result": {
+    "item": "ragemod:aktionit"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/nether_quartz_ore",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_kvarcerc",
+    "east": "ragemod:blocks/savas_kvarcerc",
+    "south": "ragemod:blocks/savas_kvarcerc",
+    "west": "ragemod:blocks/savas_kvarcerc",
+    "particle": "ragemod:blocks/nether_quartz_ore"
+  }
+}

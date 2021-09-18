@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 6,
+  "ingredient": {
+    "item": "ragemod:kizukra_log"
+  },
+  "result": "ragemod:kizukraplankspressureplate"
+}

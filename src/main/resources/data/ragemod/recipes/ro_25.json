@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "ragemod:robtai_log"
+  },
+  "result": "ragemod:robtai_fence_gate"
+}

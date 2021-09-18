@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    }
+  ],
+  "result": {
+    "item": "ragemod:ragefasapling",
+    "count": 2
+  }
+}

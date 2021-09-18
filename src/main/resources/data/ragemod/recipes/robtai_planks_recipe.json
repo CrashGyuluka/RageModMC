@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:robtai_log"
+    }
+  ],
+  "result": {
+    "item": "ragemod:robtai_planks",
+    "count": 4
+  }
+}

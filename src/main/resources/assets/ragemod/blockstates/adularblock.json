@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/adularblock"
+    },
+    "facing=east": {
+      "model": "ragemod:block/adularblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/adularblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/adularblock",
+      "y": 270
+    }
+  }
+}

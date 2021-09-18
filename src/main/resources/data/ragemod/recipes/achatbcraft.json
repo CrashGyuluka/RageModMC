@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:achatblock"
+    }
+  ],
+  "result": {
+    "item": "ragemod:achat",
+    "count": 9
+  }
+}

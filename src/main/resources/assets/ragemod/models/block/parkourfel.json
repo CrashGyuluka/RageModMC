@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_fel_f",
+    "up": "ragemod:blocks/a_fel_f",
+    "north": "ragemod:blocks/parkfel1_an",
+    "east": "ragemod:blocks/parkfel1_an",
+    "south": "ragemod:blocks/parkfel1_an",
+    "west": "ragemod:blocks/parkfel1_an",
+    "particle": "ragemod:blocks/a_fel_f"
+  }
+}

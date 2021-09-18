@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "command",
+  "definition": {
+    "commandName": "fighthelp",
+    "permissionLevel": "2",
+    "onCommandExecuted": {
+      "name": "HarchelpcommCommandExecuted"
+    }
+  }
+}

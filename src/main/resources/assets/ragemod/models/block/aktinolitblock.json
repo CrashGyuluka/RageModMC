@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/aktinolit_block",
+    "up": "ragemod:blocks/aktinolit_block",
+    "north": "ragemod:blocks/aktinolit_block",
+    "east": "ragemod:blocks/aktinolit_block",
+    "south": "ragemod:blocks/aktinolit_block",
+    "west": "ragemod:blocks/aktinolit_block",
+    "particle": "ragemod:blocks/aktinolit_block"
+  }
+}

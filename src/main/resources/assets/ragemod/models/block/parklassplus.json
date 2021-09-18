@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_antigyors_p_p",
+    "up": "ragemod:blocks/a_antigyors_p_p",
+    "north": "ragemod:blocks/a_antigyors_p_p",
+    "east": "ragemod:blocks/a_antigyors_p_p",
+    "south": "ragemod:blocks/a_antigyors_p_p",
+    "west": "ragemod:blocks/a_antigyors_p_p",
+    "particle": "ragemod:blocks/a_antigyors_p_p"
+  }
+}

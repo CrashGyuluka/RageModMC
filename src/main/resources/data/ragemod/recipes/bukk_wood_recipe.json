@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:bukk_log"
+    },
+    "1": {
+      "item": "ragemod:bukk_log"
+    },
+    "2": {
+      "item": "ragemod:bukk_log"
+    },
+    "3": {
+      "item": "ragemod:bukk_log"
+    }
+  },
+  "result": {
+    "item": "ragemod:bukk_wood",
+    "count": 3
+  }
+}

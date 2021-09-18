@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:diamondnuget"
+    },
+    "1": {
+      "item": "ragemod:diamondnuget"
+    },
+    "2": {
+      "item": "ragemod:diamondnuget"
+    },
+    "3": {
+      "item": "ragemod:diamondnuget"
+    },
+    "4": {
+      "item": "ragemod:diamondnuget"
+    },
+    "5": {
+      "item": "ragemod:diamondnuget"
+    },
+    "6": {
+      "item": "ragemod:diamondnuget"
+    },
+    "7": {
+      "item": "ragemod:diamondnuget"
+    },
+    "8": {
+      "item": "ragemod:diamondnuget"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond",
+    "count": 1
+  }
+}

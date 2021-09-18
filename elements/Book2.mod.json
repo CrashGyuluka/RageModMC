@@ -1,0 +1,173 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 216,
+    "height": 63,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "RECEPT KÖNYV",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "RECEPT KÖNYV",
+          "x": 185,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 110,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 127,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 144,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 110,
+          "y": 130
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 127,
+          "y": 130
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 144,
+          "y": 130
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 110,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 127,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 144,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "zdfhsx.png",
+          "use1Xscale": false,
+          "name": "zdfhsx.png",
+          "x": 151,
+          "y": 111
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium_block2.png",
+          "use1Xscale": false,
+          "name": "rageium_block2.png",
+          "x": 207,
+          "y": 112
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "KÖVETKEZÕ",
+          "onClick": {
+            "name": "Book3proc"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "KÖVETKEZÕ",
+          "x": 246,
+          "y": 127
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "ELÕZÕ",
+          "onClick": {
+            "name": "Book1proc"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "ELÕZÕ",
+          "x": 266,
+          "y": 94
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

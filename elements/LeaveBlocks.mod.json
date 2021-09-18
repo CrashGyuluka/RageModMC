@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:RageFaLeaves"
+      },
+      {
+        "value": "CUSTOM:BukkLeaves"
+      },
+      {
+        "value": "CUSTOM:KizukraLeaves"
+      },
+      {
+        "value": "CUSTOM:RobtaiLeaves"
+      },
+      {
+        "value": "CUSTOM:MarokriksaLeaves"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "leaves",
+    "namespace": "minecraft"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:birch_log"
+    },
+    {
+      "item": "minecraft:birch_log"
+    },
+    {
+      "item": "ragemod:savkristalyp_2"
+    },
+    {
+      "item": "minecraft:birch_log"
+    },
+    {
+      "item": "minecraft:birch_log"
+    }
+  ],
+  "result": {
+    "item": "ragemod:savasnyirfa",
+    "count": 4
+  }
+}

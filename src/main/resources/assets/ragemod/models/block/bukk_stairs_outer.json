@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "ragemod:blocks/000000",
+    "top": "ragemod:blocks/000000",
+    "side": "ragemod:blocks/000000"
+  }
+}

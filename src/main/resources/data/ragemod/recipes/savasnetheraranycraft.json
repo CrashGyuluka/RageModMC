@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:nether_gold_ore"
+    },
+    "3": {
+      "item": "minecraft:nether_gold_ore"
+    },
+    "4": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "5": {
+      "item": "minecraft:nether_gold_ore"
+    },
+    "7": {
+      "item": "minecraft:nether_gold_ore"
+    }
+  },
+  "result": {
+    "item": "ragemod:savasnetherarany",
+    "count": 4
+  }
+}

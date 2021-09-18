@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:savblockok"
+    },
+    "2": {
+      "item": "ragemod:savblockok"
+    },
+    "3": {
+      "item": "ragemod:savblockok"
+    },
+    "5": {
+      "item": "ragemod:savblockok"
+    }
+  },
+  "result": {
+    "item": "ragemod:savarmor_boots",
+    "count": 1
+  }
+}

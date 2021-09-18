@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Cvexblock"
+      },
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      },
+      {
+        "value": "CUSTOM:Obsontiumblock"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      },
+      {
+        "value": "CUSTOM:Cvexblock"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Cvexblock"
+    },
+    "name": "cvexportalcraft",
+    "namespace": "mod"
+  }
+}

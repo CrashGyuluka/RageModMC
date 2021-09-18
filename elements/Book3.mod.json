@@ -1,0 +1,173 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 216,
+    "height": 63,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "RECEPT KÖNYV",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "RECEPT KÖNYV",
+          "x": 185,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "ELÕZÕ",
+          "onClick": {
+            "name": "Book1eproc"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "ELÕZÕ",
+          "x": 265,
+          "y": 94
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "KÖVETKEZÕ",
+          "onClick": {
+            "name": "Book3proc"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "KÖVETKEZÕ",
+          "x": 245,
+          "y": 126
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "nagynyil.png",
+          "use1Xscale": false,
+          "name": "nagynyil.png",
+          "x": 122,
+          "y": 110
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium_block2.png",
+          "use1Xscale": false,
+          "name": "rageium_block2.png",
+          "x": 113,
+          "y": 111
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 187,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 204,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 221,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 204,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 221,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 221,
+          "y": 132
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 187,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 204,
+          "y": 132
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rageium.png",
+          "use1Xscale": false,
+          "name": "rageium.png",
+          "x": 187,
+          "y": 132
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

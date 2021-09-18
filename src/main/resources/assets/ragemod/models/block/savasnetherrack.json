@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/netherrack",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_netherrack",
+    "east": "ragemod:blocks/savas_netherrack",
+    "south": "ragemod:blocks/savas_netherrack",
+    "west": "ragemod:blocks/savas_netherrack",
+    "particle": "ragemod:blocks/netherrack"
+  }
+}

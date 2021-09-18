@@ -1,0 +1,118 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Favago5"
+          },
+          "name": "Slot #0",
+          "x": 149,
+          "y": 58
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Favago6"
+          },
+          "onStackTransfer": {
+            "name": "Favago6"
+          },
+          "name": "Slot #1",
+          "x": 259,
+          "y": 58
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "LUMBERJACK",
+          "color": {
+            "value": -16763905,
+            "falpha": 0.0
+          },
+          "name": "LUMBERJACK",
+          "x": 188,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "EMERALD",
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "name": "EMERALD",
+          "x": 140,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">>>>>",
+          "onClick": {
+            "name": "Favago4"
+          },
+          "width": 50,
+          "height": 20,
+          "name": ">>>>>",
+          "x": 233,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<<<<<",
+          "onClick": {
+            "name": "Favago3"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "<<<<<",
+          "x": 143,
+          "y": 92
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

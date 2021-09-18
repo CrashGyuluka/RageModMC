@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "ragemod:bukk_wood"
+  },
+  "result": "ragemod:bukk_block_fence_gate"
+}

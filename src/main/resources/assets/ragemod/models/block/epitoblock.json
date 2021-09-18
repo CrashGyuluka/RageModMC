@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/hazepito",
+    "up": "ragemod:blocks/hazepito",
+    "north": "ragemod:blocks/hazepito",
+    "east": "ragemod:blocks/hazepito",
+    "south": "ragemod:blocks/hazepito",
+    "west": "ragemod:blocks/hazepito",
+    "particle": "ragemod:blocks/hazepito"
+  }
+}

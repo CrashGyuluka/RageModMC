@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:rageium"
+    },
+    "1": {
+      "item": "ragemod:rageium"
+    },
+    "2": {
+      "item": "ragemod:rageium"
+    },
+    "3": {
+      "item": "ragemod:diamondnuget"
+    },
+    "4": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "5": {
+      "item": "ragemod:diamondnuget"
+    },
+    "6": {
+      "item": "ragemod:rageium"
+    },
+    "7": {
+      "item": "ragemod:rageium"
+    },
+    "8": {
+      "item": "ragemod:rageium"
+    }
+  },
+  "result": {
+    "item": "ragemod:rageiumalloy",
+    "count": 5
+  }
+}

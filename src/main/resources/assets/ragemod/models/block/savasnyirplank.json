@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/birch_planks",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/f",
+    "east": "ragemod:blocks/f",
+    "south": "ragemod:blocks/f",
+    "west": "ragemod:blocks/f",
+    "particle": "ragemod:blocks/birch_planks"
+  }
+}

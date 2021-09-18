@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/konverter_fent",
+    "up": "ragemod:blocks/konverter_fent",
+    "north": "ragemod:blocks/konverter",
+    "east": "ragemod:blocks/konverter",
+    "south": "ragemod:blocks/konverter",
+    "west": "ragemod:blocks/konverter",
+    "particle": "ragemod:blocks/konverter_fent"
+  }
+}

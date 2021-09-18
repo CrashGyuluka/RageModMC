@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/a_lev",
+    "up": "ragemod:blocks/a_lev",
+    "north": "ragemod:blocks/a_lev",
+    "east": "ragemod:blocks/a_lev",
+    "south": "ragemod:blocks/a_lev",
+    "west": "ragemod:blocks/a_lev",
+    "particle": "ragemod:blocks/a_lev"
+  }
+}

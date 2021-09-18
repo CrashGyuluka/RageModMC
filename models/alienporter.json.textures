@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cvex_block",
+        "1": "hegyiko1",
+        "2": "hegyikonagy",
+        "5": "obszontium_block",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

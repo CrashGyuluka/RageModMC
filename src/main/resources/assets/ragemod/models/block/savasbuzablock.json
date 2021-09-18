@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/hay_block_top",
+    "up": "ragemod:blocks/savas_felul",
+    "north": "ragemod:blocks/savas_haybaal",
+    "east": "ragemod:blocks/savas_haybaal",
+    "south": "ragemod:blocks/savas_haybaal",
+    "west": "ragemod:blocks/savas_haybaal",
+    "particle": "ragemod:blocks/hay_block_top"
+  }
+}

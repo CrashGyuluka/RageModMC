@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "ragemod:blocks/bukkfa_level",
+    "particle": "ragemod:blocks/bukkfa_level"
+  }
+}

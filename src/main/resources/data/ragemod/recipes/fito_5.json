@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "1": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "2": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "3": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "4": {
+      "item": "ragemod:fakito"
+    },
+    "5": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "6": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "7": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "8": {
+      "item": "minecraft:white_concrete_powder"
+    }
+  },
+  "result": {
+    "item": "minecraft:white_wool",
+    "count": 8
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:achat"
+    },
+    "1": {
+      "item": "ragemod:achat"
+    },
+    "2": {
+      "item": "ragemod:achat"
+    },
+    "3": {
+      "item": "ragemod:achat"
+    },
+    "4": {
+      "item": "ragemod:achat"
+    },
+    "5": {
+      "item": "ragemod:achat"
+    },
+    "6": {
+      "item": "ragemod:achat"
+    },
+    "7": {
+      "item": "ragemod:achat"
+    },
+    "8": {
+      "item": "ragemod:achat"
+    }
+  },
+  "result": {
+    "item": "ragemod:achatblock",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/hegyikotegla",
+    "particle": "ragemod:blocks/hegyikotegla"
+  }
+}
