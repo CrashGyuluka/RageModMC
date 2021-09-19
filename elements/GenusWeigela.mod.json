@@ -78,7 +78,7 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 13,
+    "frequencyOnChunks": 10,
     "spawnWorldTypes": [
       "Surface"
     ],
@@ -117,6 +117,6 @@
         "value": "mutated_plains"
       }
     ],
-    "patchSize": 14
+    "patchSize": 5
   }
 }

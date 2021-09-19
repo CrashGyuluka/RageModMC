@@ -97,8 +97,8 @@ public class MagentahydrangeaBlock extends RagemodModElements.ModElement {
 			configuredFeature = feature
 					.withConfiguration(
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
-									.tries(10).build())
-					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(15);
+									.tries(2).build())
+					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(2);
 			event.getRegistry().register(feature.setRegistryName("magentahydrangea"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:magentahydrangea"), configuredFeature);
 		}
@@ -127,6 +127,8 @@ public class MagentahydrangeaBlock extends RagemodModElements.ModElement {
 		if (new ResourceLocation("jungle_edge").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("flower_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("plains").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
