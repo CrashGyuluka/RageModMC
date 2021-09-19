@@ -13746,6 +13746,46 @@
       "ids": {},
       "registry_name": "yellowhydrangea",
       "path": "~/termeszet"
+    },
+    {
+      "name": "Alpivblock",
+      "type": "block",
+      "sortid": 1291,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alpivblock",
+      "path": "~/obszontium/alpiv"
+    },
+    {
+      "name": "Chiseledalpiv",
+      "type": "block",
+      "sortid": 1292,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chiseledalpiv",
+      "path": "~/obszontium/alpiv"
+    },
+    {
+      "name": "Alpivpillar",
+      "type": "block",
+      "sortid": 1293,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alpivpillar",
+      "path": "~/obszontium/alpiv"
+    },
+    {
+      "name": "Polishedalpiv",
+      "type": "block",
+      "sortid": 1294,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "polishedalpiv",
+      "path": "~/obszontium/alpiv"
     }
   ],
   "variable_elements": [
@@ -13853,6 +13893,7 @@
       "block.ragemod.marokriksa_leaves": "Marokriksa Leaves",
       "block.ragemod.savaslog": "Toxic Oak Log",
       "block.ragemod.rage_fa_leaves": "RageWood Leaves",
+      "block.ragemod.polishedalpiv": "Alpiv Pillar",
       "block.ragemod.opalblock": "Opal Block",
       "block.ragemod.purplehydrangea": "Magenta Hydrangea",
       "block.ragemod.rage_fa_log": "RageWood Log",
@@ -13942,6 +13983,7 @@
       "block.ragemod.bukk_leaves": "Beech Leaves",
       "advancements.adv_17.descr": "The start of a long journey..",
       "item.ragemod.apofillit": "Apophyllite ",
+      "block.ragemod.alpivpillar": "Alpiv Block",
       "block.ragemod.robtai_block_fence": "Stripped Robtai Fence",
       "block.ragemod.parkgyorsplus": "Parkour - Speed Plus",
       "block.ragemod.polishedhegyikoslab": "Polished Mountain Stone Slab",
@@ -14071,6 +14113,7 @@
       "item.ragemod.receptbook": "Recept Könyv (Prot)",
       "block.ragemod.strippedbukkwood": "Stripped Beech Block",
       "item.minecraft.tipped_arrow.effect.savellenallas": "Arrow of Protection against toxics",
+      "block.ragemod.alpivblock": "Alpiv Block",
       "item.ragemod.stick_3": "Marokriksa Stick",
       "block.ragemod.ragefasapling": "RageWood Sapling",
       "item.ragemod.savellenalasbottle": "PAT Potion",
@@ -14271,6 +14314,7 @@
       "entity.ragemod.atom_rage_r": "AtomRageR",
       "biome.ragemod.b_3": "B 3",
       "biome.ragemod.b_2": "B 2",
+      "block.ragemod.chiseledalpiv": "Alpiv Block",
       "block.ragemod.cvexore": "Cvex Ore",
       "block.ragemod.deepslateazuritore": "Deepslate Azurite Ore",
       "block.ragemod.robtai_block_log": "Stripped Robtai Log",
@@ -14347,6 +14391,7 @@
       "block.ragemod.marokriksa_leaves": "Marokriksa Leaves",
       "block.ragemod.savaslog": "Toxic Oak Log",
       "block.ragemod.rage_fa_leaves": "RageWood Leaves",
+      "block.ragemod.polishedalpiv": "Alpiv Pillar",
       "block.ragemod.opalblock": "Opal Block",
       "block.ragemod.purplehydrangea": "Purple Hydrangea",
       "block.ragemod.rage_fa_log": "RageWood Log",
@@ -14436,6 +14481,7 @@
       "block.ragemod.bukk_leaves": "Beech Leaves",
       "advancements.adv_17.descr": "The start of a long journey..",
       "item.ragemod.apofillit": "Apophyllite ",
+      "block.ragemod.alpivpillar": "Alpiv Pillar",
       "block.ragemod.robtai_block_fence": "Stripped Robtai Fence",
       "block.ragemod.parkgyorsplus": "Parkour - Speed Plus",
       "block.ragemod.polishedhegyikoslab": "Polished Mountain Stone Slab",
@@ -14565,6 +14611,7 @@
       "item.ragemod.receptbook": "Recept Könyv (Prot)",
       "block.ragemod.strippedbukkwood": "Stripped Beech Block",
       "item.minecraft.tipped_arrow.effect.savellenallas": "Arrow of Protection against toxics",
+      "block.ragemod.alpivblock": "Alpiv Block",
       "item.ragemod.stick_3": "Marokriksa Stick",
       "block.ragemod.ragefasapling": "RageWood Sapling",
       "item.ragemod.savellenalasbottle": "PAT Potion",
@@ -14765,6 +14812,7 @@
       "entity.ragemod.atom_rage_r": "AtomRageR",
       "biome.ragemod.b_3": "B 3",
       "biome.ragemod.b_2": "B 2",
+      "block.ragemod.chiseledalpiv": "Chiseled Alpiv ",
       "block.ragemod.cvexore": "CveX Ore",
       "block.ragemod.deepslateazuritore": "Deepslate Azurite Ore",
       "block.ragemod.robtai_block_log": "Stripped Robtai Log",
@@ -14841,6 +14889,7 @@
       "block.ragemod.marokriksa_leaves": "Marokriksa Levelek",
       "block.ragemod.savaslog": "Savas Tölgyfarönk",
       "block.ragemod.rage_fa_leaves": "RageFa Levelek",
+      "block.ragemod.polishedalpiv": "Alpiv Pillar",
       "block.ragemod.opalblock": "Opál Blokk",
       "block.ragemod.purplehydrangea": "Magenta Hydrangea",
       "block.ragemod.rage_fa_log": "RageFa Rönk",
@@ -14930,6 +14979,7 @@
       "block.ragemod.bukk_leaves": "Bükk Levelek",
       "advancements.adv_17.descr": "Egy hosszú utazás kezdete...",
       "item.ragemod.apofillit": "Apofillit",
+      "block.ragemod.alpivpillar": "Alpiv Block",
       "block.ragemod.robtai_block_fence": "Kérgezett Robtai Kerítés",
       "block.ragemod.parkgyorsplus": "Parkour - Gyors Plusz",
       "block.ragemod.polishedhegyikoslab": "Csiszolt Hegyikõ Lap",
@@ -15059,6 +15109,7 @@
       "item.ragemod.receptbook": "Recept Könyv (Prototípus)",
       "block.ragemod.strippedbukkwood": "Kérgezett Bükk Blokk",
       "item.minecraft.tipped_arrow.effect.savellenallas": "PAT nyila",
+      "block.ragemod.alpivblock": "Alpiv Block",
       "item.ragemod.stick_3": "Marokriksa Bot",
       "block.ragemod.ragefasapling": "RageFa Csemete",
       "item.ragemod.savellenalasbottle": "PAT Bájital",
@@ -15259,6 +15310,7 @@
       "entity.ragemod.atom_rage_r": "AtomRageR",
       "biome.ragemod.b_3": "Biome3",
       "biome.ragemod.b_2": "Biome2",
+      "block.ragemod.chiseledalpiv": "Alpiv Block",
       "block.ragemod.cvexore": "CveX Érc",
       "block.ragemod.deepslateazuritore": "Mélypala Azurit Érc",
       "block.ragemod.robtai_block_log": "Kérgezett Robtai Rönk",
@@ -15664,6 +15716,10 @@
           },
           {
             "name": "novenyzet",
+            "children": []
+          },
+          {
+            "name": "alpiv",
             "children": []
           }
         ]

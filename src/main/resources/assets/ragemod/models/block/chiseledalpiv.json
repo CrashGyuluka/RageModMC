@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/alpiv_chiseled_bottom",
+    "up": "ragemod:blocks/alpiv_chiseled_bottom",
+    "north": "ragemod:blocks/alpiv_chiseled_2",
+    "east": "ragemod:blocks/alpiv_chiseled_2",
+    "south": "ragemod:blocks/alpiv_chiseled_2",
+    "west": "ragemod:blocks/alpiv_chiseled_2",
+    "particle": "ragemod:blocks/alpiv_chiseled_bottom"
+  }
+}

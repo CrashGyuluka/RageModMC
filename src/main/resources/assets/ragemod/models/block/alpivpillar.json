@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/alpiv_pillar_bottom2",
+    "up": "ragemod:blocks/alpiv_pillar_bottom2",
+    "north": "ragemod:blocks/alpiv_pillar",
+    "east": "ragemod:blocks/alpiv_pillar",
+    "south": "ragemod:blocks/alpiv_pillar",
+    "west": "ragemod:blocks/alpiv_pillar",
+    "particle": "ragemod:blocks/alpiv_pillar_bottom2"
+  }
+}
