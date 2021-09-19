@@ -29,7 +29,7 @@ public class RageFaFenceBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_fence")
 	public static final Block block = null;
 	public RageFaFenceBlock(RagemodModElements instance) {
-		super(instance, 105);
+		super(instance, 109);
 	}
 
 	@Override

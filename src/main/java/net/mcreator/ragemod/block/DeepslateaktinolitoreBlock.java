@@ -21,7 +21,7 @@ public class DeepslateaktinolitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateaktinolitore")
 	public static final Block block = null;
 	public DeepslateaktinolitoreBlock(RagemodModElements instance) {
-		super(instance, 255);
+		super(instance, 259);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class SvasblocktabItemGroup extends RagemodModElements.ModElement {
 	public SvasblocktabItemGroup(RagemodModElements instance) {
-		super(instance, 526);
+		super(instance, 465);
 	}
 
 	@Override

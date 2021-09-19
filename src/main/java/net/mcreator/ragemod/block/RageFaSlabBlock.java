@@ -29,7 +29,7 @@ public class RageFaSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_slab")
 	public static final Block block = null;
 	public RageFaSlabBlock(RagemodModElements instance) {
-		super(instance, 100);
+		super(instance, 104);
 	}
 
 	@Override

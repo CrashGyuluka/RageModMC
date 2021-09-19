@@ -16,7 +16,7 @@ public class ApofillitItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:apofillit")
 	public static final Item block = null;
 	public ApofillitItem(RagemodModElements instance) {
-		super(instance, 245);
+		super(instance, 249);
 	}
 
 	@Override

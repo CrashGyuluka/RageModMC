@@ -16,7 +16,7 @@ public class AchatItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:achat")
 	public static final Item block = null;
 	public AchatItem(RagemodModElements instance) {
-		super(instance, 239);
+		super(instance, 243);
 	}
 
 	@Override

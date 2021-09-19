@@ -53,7 +53,7 @@ import com.google.common.collect.ImmutableList;
 public class SavasbiomBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public SavasbiomBiome(RagemodModElements instance) {
-		super(instance, 525);
+		super(instance, 464);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

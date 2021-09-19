@@ -56,7 +56,7 @@ public class SavaspirosnetherfaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaspirosnetherfa")
 	public static final Block block = null;
 	public SavaspirosnetherfaBlock(RagemodModElements instance) {
-		super(instance, 332);
+		super(instance, 336);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

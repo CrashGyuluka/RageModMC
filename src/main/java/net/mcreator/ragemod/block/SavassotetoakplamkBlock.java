@@ -56,7 +56,7 @@ public class SavassotetoakplamkBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savassotetoakplamk")
 	public static final Block block = null;
 	public SavassotetoakplamkBlock(RagemodModElements instance) {
-		super(instance, 330);
+		super(instance, 334);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

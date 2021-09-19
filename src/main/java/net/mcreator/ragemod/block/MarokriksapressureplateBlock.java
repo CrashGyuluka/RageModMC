@@ -28,7 +28,7 @@ public class MarokriksapressureplateBlock extends RagemodModElements.ModElement 
 	@ObjectHolder("ragemod:marokriksapressureplate")
 	public static final Block block = null;
 	public MarokriksapressureplateBlock(RagemodModElements instance) {
-		super(instance, 219);
+		super(instance, 223);
 	}
 
 	@Override

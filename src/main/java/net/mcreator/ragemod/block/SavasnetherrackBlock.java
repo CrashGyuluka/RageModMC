@@ -56,7 +56,7 @@ public class SavasnetherrackBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnetherrack")
 	public static final Block block = null;
 	public SavasnetherrackBlock(RagemodModElements instance) {
-		super(instance, 317);
+		super(instance, 321);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

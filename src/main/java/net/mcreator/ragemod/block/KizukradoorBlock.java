@@ -32,7 +32,7 @@ public class KizukradoorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukradoor")
 	public static final Block block = null;
 	public KizukradoorBlock(RagemodModElements instance) {
-		super(instance, 165);
+		super(instance, 169);
 	}
 
 	@Override

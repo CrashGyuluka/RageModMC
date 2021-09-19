@@ -33,7 +33,7 @@ public class ApifillitblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:apifillitblock")
 	public static final Block block = null;
 	public ApifillitblockBlock(RagemodModElements instance) {
-		super(instance, 270);
+		super(instance, 274);
 	}
 
 	@Override

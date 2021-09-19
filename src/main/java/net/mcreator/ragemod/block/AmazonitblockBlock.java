@@ -33,7 +33,7 @@ public class AmazonitblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitblock")
 	public static final Block block = null;
 	public AmazonitblockBlock(RagemodModElements instance) {
-		super(instance, 269);
+		super(instance, 273);
 	}
 
 	@Override

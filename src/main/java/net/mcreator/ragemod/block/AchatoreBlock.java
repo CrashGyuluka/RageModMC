@@ -52,7 +52,7 @@ public class AchatoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:achatore")
 	public static final Block block = null;
 	public AchatoreBlock(RagemodModElements instance) {
-		super(instance, 250);
+		super(instance, 254);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

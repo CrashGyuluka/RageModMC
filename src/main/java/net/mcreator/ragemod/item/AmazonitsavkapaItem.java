@@ -17,7 +17,7 @@ public class AmazonitsavkapaItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitsavkapa")
 	public static final Item block = null;
 	public AmazonitsavkapaItem(RagemodModElements instance) {
-		super(instance, 279);
+		super(instance, 283);
 	}
 
 	@Override

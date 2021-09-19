@@ -46,7 +46,7 @@ public class SavBucketBlock extends RagemodModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public SavBucketBlock(RagemodModElements instance) {
-		super(instance, 313);
+		super(instance, 317);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
 	private static class FluidRegisterHandler {

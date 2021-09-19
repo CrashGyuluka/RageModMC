@@ -22,7 +22,7 @@ public class AktinolitgyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aktinolitgyuru")
 	public static final Item block = null;
 	public AktinolitgyuruItem(RagemodModElements instance) {
-		super(instance, 289);
+		super(instance, 293);
 	}
 
 	@Override

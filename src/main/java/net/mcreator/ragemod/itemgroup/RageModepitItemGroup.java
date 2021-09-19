@@ -13,7 +13,7 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class RageModepitItemGroup extends RagemodModElements.ModElement {
 	public RageModepitItemGroup(RagemodModElements instance) {
-		super(instance, 757);
+		super(instance, 693);
 	}
 
 	@Override

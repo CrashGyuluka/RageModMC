@@ -16,7 +16,7 @@ public class PingvinhunenchantEnchantment extends RagemodModElements.ModElement 
 	@ObjectHolder("ragemod:pingvinhunenchant")
 	public static final Enchantment enchantment = null;
 	public PingvinhunenchantEnchantment(RagemodModElements instance) {
-		super(instance, 437);
+		super(instance, 376);
 	}
 
 	@Override

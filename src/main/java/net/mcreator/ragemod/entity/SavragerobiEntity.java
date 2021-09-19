@@ -53,7 +53,7 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 2.8f)).build("savragerobi").setRegistryName("savragerobi");
 	public SavragerobiEntity(RagemodModElements instance) {
-		super(instance, 273);
+		super(instance, 277);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SavragerobiRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

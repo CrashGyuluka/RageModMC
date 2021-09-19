@@ -43,7 +43,7 @@ public class ApofillitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:apofillitore")
 	public static final Block block = null;
 	public ApofillitoreBlock(RagemodModElements instance) {
-		super(instance, 260);
+		super(instance, 264);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
