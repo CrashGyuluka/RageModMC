@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ragemod:rageflower"
+    "ragemod:rageflower",
+    "ragemod:genus_weigela",
+    "ragemod:bluehydrangea",
+    "ragemod:magentahydrangea",
+    "ragemod:purplehydrangea",
+    "ragemod:yellowhydrangea"
   ]
 }

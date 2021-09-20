@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Miner"
+      },
+      {
+        "value": "CUSTOM:Mob1"
+      },
+      {
+        "value": "CUSTOM:Polipos"
+      },
+      {
+        "value": "CUSTOM:Savragerobi"
+      }
+    ],
+    "name": "rage_mod_toxic_mobs",
+    "namespace": "forge"
+  }
+}

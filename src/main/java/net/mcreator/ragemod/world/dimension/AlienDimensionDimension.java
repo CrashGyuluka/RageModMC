@@ -103,7 +103,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 		DimensionRenderInfo customEffect = new DimensionRenderInfo(Float.NaN, true, DimensionRenderInfo.FogType.NONE, false, false) {
 			@Override
 			public Vector3d func_230494_a_(Vector3d color, float sunHeight) {
-				return new Vector3d(0.529411764706, 0.243137254902, 0.623529411765);
+				return new Vector3d(0.4, 0, 0.4);
 			}
 
 			@Override

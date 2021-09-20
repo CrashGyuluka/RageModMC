@@ -99,7 +99,7 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.33);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 40);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 10);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 6);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 5);

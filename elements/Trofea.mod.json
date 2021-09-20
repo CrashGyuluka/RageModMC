@@ -14,7 +14,7 @@
     "stackSize": 1,
     "nutritionalValue": 4,
     "saturation": 0.0,
-    "eatingSpeed": 50,
+    "eatingSpeed": 65,
     "resultItem": {
       "value": "CUSTOM:Trofea"
     },

@@ -5,18 +5,6 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:TotallyNotAlien"
-      },
-      {
-        "value": "CUSTOM:Bukkbiome"
-      },
-      {
-        "value": "badlands"
-      },
-      {
-        "value": "badlands_plateau"
-      },
-      {
-        "value": "plains"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -27,7 +15,7 @@
       "value": "Blocks.WATER"
     },
     "airColor": {
-      "value": -7913825,
+      "value": -10092442,
       "falpha": 0.0
     },
     "canRespawnHere": true,

@@ -4,7 +4,11 @@
   "definition": {
     "type": "Blocks",
     "items": [],
-    "blocks": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Aliensoil"
+      }
+    ],
     "functions": [],
     "entities": [],
     "name": "dirt",

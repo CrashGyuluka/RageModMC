@@ -44,7 +44,7 @@ public class AlpivpillarBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 4).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(AXIS, Direction.Axis.Y));
 			setRegistryName("alpivpillar");

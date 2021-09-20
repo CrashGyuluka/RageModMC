@@ -1,8 +1,8 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.DamageSource;
+import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.ragemod.RagemodMod;
@@ -17,11 +17,9 @@ public class TrofeaFoodEatenProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 9999999, (int) 2, (false), (false)));
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 9999999, (int) 2, (false), (false)));
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.LUCK, (int) 9999999, (int) 2, (false), (false)));
+		if ((EntityTypeTags.getCollection().getTagByID(new ResourceLocation(("forge:rage_mod_rageium_mobs").toLowerCase(java.util.Locale.ENGLISH)))
+				.contains(entity.getType()))) {
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) 40);
+		}
 	}
 }

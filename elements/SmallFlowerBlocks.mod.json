@@ -7,6 +7,21 @@
     "blocks": [
       {
         "value": "CUSTOM:Rageflower"
+      },
+      {
+        "value": "CUSTOM:GenusWeigela"
+      },
+      {
+        "value": "CUSTOM:Bluehydrangea"
+      },
+      {
+        "value": "CUSTOM:Magentahydrangea"
+      },
+      {
+        "value": "CUSTOM:Purplehydrangea"
+      },
+      {
+        "value": "CUSTOM:Yellowhydrangea"
       }
     ],
     "functions": [],

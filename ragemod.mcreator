@@ -6793,7 +6793,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "obszontiumvarazslo",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Ragefallingtree",
@@ -13385,7 +13385,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "obsontiumblock",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Dimension1",
@@ -13398,7 +13398,7 @@
       "metadata": {
         "ep": true
       },
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Obsontiumparticle",
@@ -13408,7 +13408,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "obsontiumparticle",
-      "path": "~/obszontium/egyeb"
+      "path": "~/dimensions/egyeb"
     },
     {
       "name": "Miner",
@@ -13458,7 +13458,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexore",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Obsontium",
@@ -13468,7 +13468,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "obsontium",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Konvertalo",
@@ -13478,7 +13478,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "konvertalo",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Konvertalogui",
@@ -13488,7 +13488,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "konvertalogui",
-      "path": "~/obszontium/egyeb"
+      "path": "~/dimensions/egyeb"
     },
     {
       "name": "Convertercheckguifull",
@@ -13506,7 +13506,7 @@
           }
         ]
       },
-      "path": "~/obszontium/proc"
+      "path": "~/dimensions/proc"
     },
     {
       "name": "ConverterSlotChanges",
@@ -13524,7 +13524,7 @@
           }
         ]
       },
-      "path": "~/obszontium/proc"
+      "path": "~/dimensions/proc"
     },
     {
       "name": "Obsontiumblockcraft",
@@ -13534,7 +13534,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "obsontiumblockcraft",
-      "path": "~/obszontium/craft"
+      "path": "~/dimensions/craft"
     },
     {
       "name": "Obsontiumbcraft",
@@ -13544,7 +13544,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "obsontiumbcraft",
-      "path": "~/obszontium/craft"
+      "path": "~/dimensions/craft"
     },
     {
       "name": "Convertercraft",
@@ -13554,7 +13554,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "convertercraft",
-      "path": "~/obszontium/craft"
+      "path": "~/dimensions/craft"
     },
     {
       "name": "Cverx",
@@ -13564,7 +13564,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cverx",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Cvexoreloot",
@@ -13574,7 +13574,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexoreloot",
-      "path": "~/obszontium/egyeb"
+      "path": "~/dimensions/egyeb"
     },
     {
       "name": "Cvexblock",
@@ -13584,7 +13584,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexblock",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Cvexparticle",
@@ -13594,7 +13594,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexparticle",
-      "path": "~/obszontium/egyeb"
+      "path": "~/dimensions/egyeb"
     },
     {
       "name": "Cvexblockcraft",
@@ -13604,7 +13604,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexblockcraft",
-      "path": "~/obszontium/craft"
+      "path": "~/dimensions/craft"
     },
     {
       "name": "Cvexblockbcraft",
@@ -13614,7 +13614,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexblockbcraft",
-      "path": "~/obszontium/craft"
+      "path": "~/dimensions/craft"
     },
     {
       "name": "Cvexblockstandon",
@@ -13632,7 +13632,7 @@
           }
         ]
       },
-      "path": "~/obszontium/proc"
+      "path": "~/dimensions/proc"
     },
     {
       "name": "TotallyNotAlien",
@@ -13642,7 +13642,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "totally_not_alien",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "AlienDimension",
@@ -13655,7 +13655,7 @@
       "metadata": {
         "ep": true
       },
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Marokriksaaliendimension",
@@ -13675,7 +13675,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexportalcraft",
-      "path": "~/obszontium/craft"
+      "path": "~/dimensions/craft"
     },
     {
       "name": "Cvexportalblock",
@@ -13685,7 +13685,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cvexportalblock",
-      "path": "~/obszontium"
+      "path": "~/dimensions"
     },
     {
       "name": "Marokriksaalienstr",
@@ -13695,7 +13695,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "marokriksaalienstr",
-      "path": "~/obszontium/stucture"
+      "path": "~/dimensions/stucture"
     },
     {
       "name": "GenusWeigela",
@@ -13755,7 +13755,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "alpivblock",
-      "path": "~/obszontium/alpiv"
+      "path": "~/dimensions/alpiv"
     },
     {
       "name": "Chiseledalpiv",
@@ -13765,7 +13765,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "chiseledalpiv",
-      "path": "~/obszontium/alpiv"
+      "path": "~/dimensions/alpiv"
     },
     {
       "name": "Alpivpillar",
@@ -13775,7 +13775,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "alpivpillar",
-      "path": "~/obszontium/alpiv"
+      "path": "~/dimensions/alpiv"
     },
     {
       "name": "Polishedalpiv",
@@ -13785,7 +13785,77 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "polishedalpiv",
-      "path": "~/obszontium/alpiv"
+      "path": "~/dimensions/alpiv"
+    },
+    {
+      "name": "Alienparticle",
+      "type": "particle",
+      "sortid": 1227,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alienparticle",
+      "path": "~/dimensions/particle"
+    },
+    {
+      "name": "RageModRageiumMobs",
+      "type": "tag",
+      "sortid": 1228,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rage_mod_rageium_mobs",
+      "path": "~/tag"
+    },
+    {
+      "name": "RageModToxicMobs",
+      "type": "tag",
+      "sortid": 1229,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rage_mod_toxic_mobs",
+      "path": "~/tag"
+    },
+    {
+      "name": "Aliensoil",
+      "type": "block",
+      "sortid": 1230,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aliensoil",
+      "path": "~/dimensions"
+    },
+    {
+      "name": "Aliensoilloottable",
+      "type": "loottable",
+      "sortid": 1231,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aliensoilloottable",
+      "path": "~/dimensions/loot_table"
+    },
+    {
+      "name": "Aliendirt",
+      "type": "block",
+      "sortid": 1232,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aliendirt",
+      "path": "~/dimensions"
+    },
+    {
+      "name": "Alienfood",
+      "type": "food",
+      "sortid": 1233,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alienfood",
+      "path": "~/dimensions"
     }
   ],
   "variable_elements": [
@@ -13915,14 +13985,14 @@
       "item.minecraft.lingering_potion.effect.rage_potion_plus": "Lingering Potion of Rage ",
       "item.ragemod.rageboos_1_spawn_egg": "RageBoss Spawn Egg",
       "item.ragemod.opal": "Opal",
-      "block.ragemod.fa_5sap": "Marokriksa Sapling",
       "en_us": "",
+      "block.ragemod.fa_5sap": "Marokriksa Sapling",
       "item.ragemod.ragefastick": "RageWood Stick",
       "block.ragemod.rageiumblock": "Block Of Rageium",
       "block.ragemod.savasfenyo": "Toxic Spruce Log",
-      "block.ragemod.ragewoodstr_2f": "Better Stripped RageWood Fence",
-      "block.ragemod.bukk_fence": "Beech Fence",
       "block.ragemod.parkvak": "Parkor - Blind",
+      "block.ragemod.bukk_fence": "Beech Fence",
+      "block.ragemod.ragewoodstr_2f": "Better Stripped RageWood Fence",
       "block.ragemod.parkold_2": "Parkour - Sideway Plus",
       "block.ragemod.robtai_block_pressure_plate": "Stripped Robtai Pressure Plate",
       "advancements.adv_10.descr": "Craft 9 rageium into a rageium block!",
@@ -13950,21 +14020,21 @@
       "biome.ragemod.bukkmeadowfordimension": "Bukk_meadow",
       "block.ragemod.ragefaslab_8": "Better Stripped RageWood Stairs",
       "item.ragemod.ragearrow": "Rageium Bow",
-      "block.ragemod.parklass": "Parkour - Slow",
       "item.ragemod.polipos_spawn_egg": "Tentacle Dude (coming soon) Spawn Egg",
+      "block.ragemod.parklass": "Parkour - Slow",
       "block.ragemod.ragefalogs_1": "Stripped RageWood Log",
       "block.ragemod.amazonitblock": "Amazonite Block",
       "item.ragemod.ragearrowammo": "Rageium Arrow",
       "subtitles.rage1": "",
       "item.ragemod.apofillitgyuru": "Apophyllite Ring",
       "block.ragemod.savblockok": "Block Of Toxic Crystal",
-      "block.ragemod.kizukra_slab": "Kizukra Slab",
       "block.ragemod.kizukra_block_slab": "Kizukra Block Slab",
+      "block.ragemod.kizukra_slab": "Kizukra Slab",
       "block.ragemod.mossyplushegyikoslab": "Mossy Mountain Stone Slab",
       "block.ragemod.stripped_kizukra_stairs": "Stripped Kizukra Block Stairs",
       "block.ragemod.parklevplus": "Parkour - Levitate Plus",
-      "block.ragemod.fa_4sap": "Robtai Sapling",
       "block.ragemod.robtai_wood": "Robtai Wood",
+      "block.ragemod.fa_4sap": "Robtai Sapling",
       "advancements.adv_21.descr": "Cooool...",
       "block.ragemod.ragefaslab_2": "RageWood Slab - BRB",
       "item.ragemod.air": "Air Relic",
@@ -13985,11 +14055,11 @@
       "item.ragemod.apofillit": "Apophyllite ",
       "block.ragemod.alpivpillar": "Alpiv Block",
       "block.ragemod.robtai_block_fence": "Stripped Robtai Fence",
-      "block.ragemod.parkgyorsplus": "Parkour - Speed Plus",
       "block.ragemod.polishedhegyikoslab": "Polished Mountain Stone Slab",
+      "block.ragemod.parkgyorsplus": "Parkour - Speed Plus",
       "block.ragemod.parkgyors": "Parkour - Speed",
-      "block.ragemod.marokriksa_2_stairs": "Marokriksa Block Stairs",
       "advancements.adv_23.descr": "PAT Potion",
+      "block.ragemod.marokriksa_2_stairs": "Marokriksa Block Stairs",
       "block.ragemod.savascryobszidian": "Toxic Crying Obsidian",
       "block.ragemod.epitoblock": "Builder Block (NOT FINSIHED!)",
       "block.ragemod.bukkbprpl": "Beech Block Pressure Plate",
@@ -14007,9 +14077,9 @@
       "block.ragemod.robtai_stairs": "Robtai Stairs",
       "block.ragemod.fa_3sap": "Kizukra Sapling",
       "block.ragemod.rage_wood_block_fence": "RageWood Block Fence",
-      "block.ragemod.azuritore": "Azurite Ore",
-      "block.ragemod.obszontiumvarazslo": "Magicis Obsontium (Coming Soon)",
       "block.ragemod.ragefatd_2": "RageWood Trapdoor - RB",
+      "block.ragemod.obszontiumvarazslo": "Magicis Obsontium (Coming Soon)",
+      "block.ragemod.azuritore": "Azurite Ore",
       "item.minecraft.tipped_arrow.effect.rage_potion_plus": "Arrow of Rage Potion ",
       "advancements.adv_25.descr": ".",
       "block.ragemod.mossyhegyikowall": "Mossy Mountain Stone Wall",
@@ -14018,8 +14088,8 @@
       "block.ragemod.kizukra_block_pressure_plate": "Kizukra Block Pressure Plate",
       "block.ragemod.parkfelplus": "Parkour - Up Plus",
       "item.minecraft.potion.effect.rage_potion_plus": "Potion of Rage",
-      "item.ragemod.aktinolitgyuru": "Aktinolite Ring",
       "block.ragemod.stripped_kizukra_log": "Stripped Kizukra Log",
+      "item.ragemod.aktinolitgyuru": "Aktinolite Ring",
       "item.ragemod.savascsakany": "Toxic Pickaxe",
       "block.ragemod.stripped_kizukra_fence": "Stripped Kizukra Block Fence",
       "block.ragemod.stripped_marokriksa_stairs": "Stripped Marokriksa Stairs",
@@ -14036,9 +14106,9 @@
       "item.ragemod.earth": "Earth Relic",
       "block.ragemod.rage_wood_block_slab": "RageWood Block Slab",
       "item.ragemod.obsontium": "Obsontium",
-      "fluid.ragemod.sav_bucket": "Toxic Fluid",
-      "item.ragemod.sajtosceossian": "Cheese Croissant",
       "advancements.adv_1.descr": "Rageium",
+      "item.ragemod.sajtosceossian": "Cheese Croissant",
+      "fluid.ragemod.sav_bucket": "Toxic Fluid",
       "item.ragemod.rage_boos_spawner": "RageBoss Spawn Egg",
       "block.ragemod.parklev": "Parkour - Levitate",
       "block.ragemod.hegyikopolished": "Polished Mountain Stone",
@@ -14152,6 +14222,7 @@
       "block.ragemod.kizukratd": "Kizukra Trapdoor",
       "block.ragemod.deepslateachatore": "Deepslate Achat Ore",
       "block.ragemod.mossyhegyikostairs": "Mossy Mountain Stone Stairs",
+      "block.ragemod.aliendirt": "Alien Grass",
       "block.ragemod.saverc": "Toxic Crystal Ore",
       "advancements.adv_22.descr": "Jack Sparrow...xD",
       "block.ragemod.kizukradoor": "Kizukra Door",
@@ -14289,6 +14360,7 @@
       "biome.ragemod.totally_not_alien": "Totally_Not_Alien",
       "block.ragemod.savasbazalt": "Toxic Basalt",
       "block.ragemod.konvertalo": "Converter",
+      "block.ragemod.aliensoil": "Alien Grass",
       "block.ragemod.savasgranit": "Toxic Granite",
       "itemGroup.tabrage_modepit": "RageMod:Building\u0026Parkour",
       "block.ragemod.savasdiamondore": "Toxic Diamond Ore",
@@ -14345,6 +14417,7 @@
       "advancements.adv_14.descr": "One word: NO!",
       "item.ragemod.amazonitrt": "Amazonite",
       "block.ragemod.parketta": "Floor Block",
+      "item.ragemod.alienfood": "Alien Food",
       "block.ragemod.savasnetheritetormelek": "Toxic Ancient Debris",
       "block.ragemod.marokriksa_fence": "Marokriksa Fence",
       "gamerule.portalSendsFeedback.description": "default\u003dtrue\u003dThe portal sends feedback about connecting 2 together and using it.",
@@ -14413,14 +14486,14 @@
       "item.minecraft.lingering_potion.effect.rage_potion_plus": "Lingering Potion of Rage ",
       "item.ragemod.rageboos_1_spawn_egg": "RageBoss Spawn Egg",
       "item.ragemod.opal": "Opal",
-      "block.ragemod.fa_5sap": "Marokriksa Sapling",
       "en_us": "",
+      "block.ragemod.fa_5sap": "Marokriksa Sapling",
       "item.ragemod.ragefastick": "RageWood Stick",
       "block.ragemod.rageiumblock": "Block Of Rageium",
       "block.ragemod.savasfenyo": "Toxic Spruce Log",
-      "block.ragemod.ragewoodstr_2f": "Better Stripped RageWood Fence",
-      "block.ragemod.bukk_fence": "Beech Fence",
       "block.ragemod.parkvak": "Parkor - Blind",
+      "block.ragemod.bukk_fence": "Beech Fence",
+      "block.ragemod.ragewoodstr_2f": "Better Stripped RageWood Fence",
       "block.ragemod.parkold_2": "Parkour - Sideway Plus",
       "block.ragemod.robtai_block_pressure_plate": "Stripped Robtai Pressure Plate",
       "advancements.adv_10.descr": "Craft 9 rageium into a rageium block!",
@@ -14448,21 +14521,21 @@
       "biome.ragemod.bukkmeadowfordimension": "Bukk_meadow_for_dimension",
       "block.ragemod.ragefaslab_8": "Better Stripped RageWood Stairs",
       "item.ragemod.ragearrow": "Rageium Bow",
-      "block.ragemod.parklass": "Parkour - Slow",
       "item.ragemod.polipos_spawn_egg": "Tentacle Dude (coming soon) Spawn Egg",
+      "block.ragemod.parklass": "Parkour - Slow",
       "block.ragemod.ragefalogs_1": "Stripped RageWood Log",
       "block.ragemod.amazonitblock": "Amazonite Block",
       "item.ragemod.ragearrowammo": "Rageium Arrow",
       "subtitles.rage1": "",
       "item.ragemod.apofillitgyuru": "Apophyllite Ring",
       "block.ragemod.savblockok": "Block Of Toxic Crystal",
-      "block.ragemod.kizukra_slab": "Kizukra Slab",
       "block.ragemod.kizukra_block_slab": "Kizukra Block Slab",
+      "block.ragemod.kizukra_slab": "Kizukra Slab",
       "block.ragemod.mossyplushegyikoslab": "More Mossy Mountain Stone Slab",
       "block.ragemod.stripped_kizukra_stairs": "Stripped Kizukra Block Stairs",
       "block.ragemod.parklevplus": "Parkour - Levitate Plus",
-      "block.ragemod.fa_4sap": "Robtai Sapling",
       "block.ragemod.robtai_wood": "Robtai Wood",
+      "block.ragemod.fa_4sap": "Robtai Sapling",
       "advancements.adv_21.descr": "Cooool...",
       "block.ragemod.ragefaslab_2": "RageWood Slab - BRB",
       "item.ragemod.air": "Air Relic",
@@ -14483,11 +14556,11 @@
       "item.ragemod.apofillit": "Apophyllite ",
       "block.ragemod.alpivpillar": "Alpiv Pillar",
       "block.ragemod.robtai_block_fence": "Stripped Robtai Fence",
-      "block.ragemod.parkgyorsplus": "Parkour - Speed Plus",
       "block.ragemod.polishedhegyikoslab": "Polished Mountain Stone Slab",
+      "block.ragemod.parkgyorsplus": "Parkour - Speed Plus",
       "block.ragemod.parkgyors": "Parkour - Speed",
-      "block.ragemod.marokriksa_2_stairs": "Marokriksa Block Stairs",
       "advancements.adv_23.descr": "PAT Potion",
+      "block.ragemod.marokriksa_2_stairs": "Marokriksa Block Stairs",
       "block.ragemod.savascryobszidian": "Toxic Crying Obsidian",
       "block.ragemod.epitoblock": "Builder Block (NOT FINSIHED!)",
       "block.ragemod.bukkbprpl": "Beech Block Pressure Plate",
@@ -14505,9 +14578,9 @@
       "block.ragemod.robtai_stairs": "Robtai Stairs",
       "block.ragemod.fa_3sap": "Kizukra Sapling",
       "block.ragemod.rage_wood_block_fence": "RageWood Block Fence",
-      "block.ragemod.azuritore": "Azurite Ore",
-      "block.ragemod.obszontiumvarazslo": "Magicis Obsontium (Coming Soon)",
       "block.ragemod.ragefatd_2": "RageWood Trapdoor - RB",
+      "block.ragemod.obszontiumvarazslo": "Magicis Obsontium (Coming Soon)",
+      "block.ragemod.azuritore": "Azurite Ore",
       "item.minecraft.tipped_arrow.effect.rage_potion_plus": "Arrow of Rage Potion ",
       "advancements.adv_25.descr": ".",
       "block.ragemod.mossyhegyikowall": "Mossy Mountain Stone Wall",
@@ -14516,8 +14589,8 @@
       "block.ragemod.kizukra_block_pressure_plate": "Kizukra Block Pressure Plate",
       "block.ragemod.parkfelplus": "Parkour - Up Plus",
       "item.minecraft.potion.effect.rage_potion_plus": "Potion of Rage",
-      "item.ragemod.aktinolitgyuru": "Aktinolite Ring",
       "block.ragemod.stripped_kizukra_log": "Stripped Kizukra Log",
+      "item.ragemod.aktinolitgyuru": "Aktinolite Ring",
       "item.ragemod.savascsakany": "Toxic Pickaxe",
       "block.ragemod.stripped_kizukra_fence": "Stripped Kizukra Block Fence",
       "block.ragemod.stripped_marokriksa_stairs": "Stripped Marokriksa Stairs",
@@ -14534,9 +14607,9 @@
       "item.ragemod.earth": "Earth Relic",
       "block.ragemod.rage_wood_block_slab": "RageWood Block Slab",
       "item.ragemod.obsontium": "Obsontium",
-      "fluid.ragemod.sav_bucket": "Toxic Fluid",
-      "item.ragemod.sajtosceossian": "Cheese Croissant",
       "advancements.adv_1.descr": "Rageium",
+      "item.ragemod.sajtosceossian": "Cheese Croissant",
+      "fluid.ragemod.sav_bucket": "Toxic Fluid",
       "item.ragemod.rage_boos_spawner": "RageBoss Spawn Egg",
       "block.ragemod.parklev": "Parkour - Levitate",
       "block.ragemod.hegyikopolished": "Polished Mountain Stone",
@@ -14650,6 +14723,7 @@
       "block.ragemod.kizukratd": "Kizukra Trapdoor",
       "block.ragemod.deepslateachatore": "Deepslate Achat Ore",
       "block.ragemod.mossyhegyikostairs": "Mossy Mountain Stone Stairs",
+      "block.ragemod.aliendirt": "Alien Dirt",
       "block.ragemod.saverc": "Toxic Crystal Ore",
       "advancements.adv_22.descr": "Jack Sparrow...xD",
       "block.ragemod.kizukradoor": "Kizukra Door",
@@ -14787,6 +14861,7 @@
       "biome.ragemod.totally_not_alien": "Totally_Not_Alien",
       "block.ragemod.savasbazalt": "Toxic Basalt",
       "block.ragemod.konvertalo": "Converter",
+      "block.ragemod.aliensoil": "Alien Grass",
       "block.ragemod.savasgranit": "Toxic Granite",
       "itemGroup.tabrage_modepit": "RageMod:Building\u0026Parkour",
       "block.ragemod.savasdiamondore": "Toxic Diamond Ore",
@@ -14843,6 +14918,7 @@
       "advancements.adv_14.descr": "One word: NO!",
       "item.ragemod.amazonitrt": "Amazonite",
       "block.ragemod.parketta": "Floor Block",
+      "item.ragemod.alienfood": "Alien Food",
       "block.ragemod.savasnetheritetormelek": "Toxic Ancient Debris",
       "block.ragemod.marokriksa_fence": "Marokriksa Fence",
       "gamerule.portalSendsFeedback.description": "default\u003dtrue\u003dThe portal sends feedback about connecting 2 together and using it.",
@@ -14911,14 +14987,14 @@
       "item.minecraft.lingering_potion.effect.rage_potion_plus": "Rage-Idõzõ Bájital ",
       "item.ragemod.rageboos_1_spawn_egg": "RageBoss Idézõ Tojás",
       "item.ragemod.opal": "Opál",
-      "block.ragemod.fa_5sap": "Marokriksa Facsemete",
       "en_us": "",
+      "block.ragemod.fa_5sap": "Marokriksa Facsemete",
       "item.ragemod.ragefastick": "RageFa Bot",
       "block.ragemod.rageiumblock": "Rageium Blokk",
       "block.ragemod.savasfenyo": "Savas Fenyõrönk",
-      "block.ragemod.ragewoodstr_2f": "Jobban Kérgezett RageFa Kerítés",
-      "block.ragemod.bukk_fence": "Bükk Kerítés",
       "block.ragemod.parkvak": "Parkor - Vak",
+      "block.ragemod.bukk_fence": "Bükk Kerítés",
+      "block.ragemod.ragewoodstr_2f": "Jobban Kérgezett RageFa Kerítés",
       "block.ragemod.parkold_2": "Parkour - Oldal Plus",
       "block.ragemod.robtai_block_pressure_plate": "Kérgezett Robtai Nyomólap",
       "advancements.adv_10.descr": "Barkácsolj 9 Rageium-ot 1 Rageium Blokk-á!",
@@ -14946,21 +15022,21 @@
       "biome.ragemod.bukkmeadowfordimension": "Bukk_meadow",
       "block.ragemod.ragefaslab_8": "Jobban Kérgezett RageFa Lap",
       "item.ragemod.ragearrow": "Rageium Íj",
-      "block.ragemod.parklass": "Parkour - Lassú",
       "item.ragemod.polipos_spawn_egg": "Polipos Csávó (hamarosan...) Idézõ Tojás",
+      "block.ragemod.parklass": "Parkour - Lassú",
       "block.ragemod.ragefalogs_1": "Kérgezett RageFa Rönk",
       "block.ragemod.amazonitblock": "Amazonit Blokk",
       "item.ragemod.ragearrowammo": "Rageium Nyílvesszõ",
       "subtitles.rage1": "",
       "item.ragemod.apofillitgyuru": "Apofillit Gyûrû",
       "block.ragemod.savblockok": "Savkristály Blokk",
-      "block.ragemod.kizukra_slab": "Kizukra Lap",
       "block.ragemod.kizukra_block_slab": "Kizukra Blokk Lap",
+      "block.ragemod.kizukra_slab": "Kizukra Lap",
       "block.ragemod.mossyplushegyikoslab": "Mohásabb Hegyikõ Lap",
       "block.ragemod.stripped_kizukra_stairs": "Kérgezett Kizukra Lépcsõ",
       "block.ragemod.parklevplus": "Parkour - Levitál Plusz",
-      "block.ragemod.fa_4sap": "Robtai Facsemete",
       "block.ragemod.robtai_wood": "Robtai Blokk",
+      "block.ragemod.fa_4sap": "Robtai Facsemete",
       "advancements.adv_21.descr": "Cooool...",
       "block.ragemod.ragefaslab_2": "RageFa Lap - KPK",
       "item.ragemod.air": "Levegõ Relikvia",
@@ -14981,11 +15057,11 @@
       "item.ragemod.apofillit": "Apofillit",
       "block.ragemod.alpivpillar": "Alpiv Block",
       "block.ragemod.robtai_block_fence": "Kérgezett Robtai Kerítés",
-      "block.ragemod.parkgyorsplus": "Parkour - Gyors Plusz",
       "block.ragemod.polishedhegyikoslab": "Csiszolt Hegyikõ Lap",
+      "block.ragemod.parkgyorsplus": "Parkour - Gyors Plusz",
       "block.ragemod.parkgyors": "Parkour - Gyors",
-      "block.ragemod.marokriksa_2_stairs": "Marokriksa Blokk Lépcsõ",
       "advancements.adv_23.descr": "PAT Varázsital",
+      "block.ragemod.marokriksa_2_stairs": "Marokriksa Blokk Lépcsõ",
       "block.ragemod.savascryobszidian": "Savas Könnyezõ Obszidián",
       "block.ragemod.epitoblock": "Építõ Blokk (Hamarosan...)",
       "block.ragemod.bukkbprpl": "Bükk Blokk Nyomólap",
@@ -15003,9 +15079,9 @@
       "block.ragemod.robtai_stairs": "Robtai Lépcsõ",
       "block.ragemod.fa_3sap": "Kizukra Facsemete",
       "block.ragemod.rage_wood_block_fence": "RageFa Blokk Kerítés",
-      "block.ragemod.ragefatd_2": "RageFa Csapóajtó - PK",
-      "block.ragemod.obszontiumvarazslo": "Magicis Obsontium (Hamarosan)",
       "block.ragemod.azuritore": "Azurit Érc",
+      "block.ragemod.obszontiumvarazslo": "Magicis Obsontium (Hamarosan)",
+      "block.ragemod.ragefatd_2": "RageFa Csapóajtó - PK",
       "item.minecraft.tipped_arrow.effect.rage_potion_plus": "Rage Nyila",
       "advancements.adv_25.descr": ".",
       "block.ragemod.mossyhegyikowall": "Mohás Hegyikõ Fal",
@@ -15014,8 +15090,8 @@
       "block.ragemod.kizukra_block_pressure_plate": "Kizukra Blokk Nyomólap",
       "block.ragemod.parkfelplus": "Parkour - Fel Plusz",
       "item.minecraft.potion.effect.rage_potion_plus": "Rage Bájital",
-      "block.ragemod.stripped_kizukra_log": "Kérgezett Kizukra Rönk",
       "item.ragemod.aktinolitgyuru": "Aktinolit Gyûrû",
+      "block.ragemod.stripped_kizukra_log": "Kérgezett Kizukra Rönk",
       "item.ragemod.savascsakany": "Sav Csákány",
       "block.ragemod.stripped_kizukra_fence": "Kérgezett Kizukra Blokk Kerítés",
       "block.ragemod.stripped_marokriksa_stairs": "Kérgezett Marokriksa Lépcsõ",
@@ -15032,9 +15108,9 @@
       "item.ragemod.earth": "Föld Relikvia",
       "block.ragemod.rage_wood_block_slab": "RageFa Blokk Lap",
       "item.ragemod.obsontium": "Obsontium",
-      "fluid.ragemod.sav_bucket": "Sav Folyadékos Vödör",
-      "item.ragemod.sajtosceossian": "Sajtos Croissant",
       "advancements.adv_1.descr": "Rageium",
+      "item.ragemod.sajtosceossian": "Sajtos Croissant",
+      "fluid.ragemod.sav_bucket": "Sav Folyadékos Vödör",
       "item.ragemod.rage_boos_spawner": "RageBoss Idézõ Tojás",
       "block.ragemod.parklev": "Parkour - Levitál",
       "block.ragemod.hegyikopolished": "Csiszolt Hegyikõ",
@@ -15148,6 +15224,7 @@
       "block.ragemod.kizukratd": "Kizukra Csapóajtó",
       "block.ragemod.deepslateachatore": "Mélypala Achát Érc",
       "block.ragemod.mossyhegyikostairs": "Mohás Hegyikõ Lépcsõ",
+      "block.ragemod.aliendirt": "Alien Grass",
       "block.ragemod.saverc": "Savkristály Érc",
       "advancements.adv_22.descr": "Jack Sparrow...xD",
       "block.ragemod.kizukradoor": "Kizukra Ajtó",
@@ -15285,6 +15362,7 @@
       "biome.ragemod.totally_not_alien": "Totally_Not_Alien",
       "block.ragemod.savasbazalt": "Savas Bazalt",
       "block.ragemod.konvertalo": "Converter",
+      "block.ragemod.aliensoil": "Alien Grass",
       "block.ragemod.savasgranit": "Savas Gránit",
       "itemGroup.tabrage_modepit": "RageMod:Építés\u0026Parkour",
       "block.ragemod.savasdiamondore": "Savas Gyémánt Érc",
@@ -15341,6 +15419,7 @@
       "advancements.adv_14.descr": "Egy szó: NE!",
       "item.ragemod.amazonitrt": "Amazonit",
       "block.ragemod.parketta": "Padló Blokk",
+      "item.ragemod.alienfood": "Alien Food",
       "block.ragemod.savasnetheritetormelek": "Savas Õsi Törmelék",
       "block.ragemod.marokriksa_fence": "Marokriksa Kerítés",
       "gamerule.portalSendsFeedback.description": "alap\u003dtrue\u003dA porál visszajelzést küld használatkor",
@@ -15688,7 +15767,7 @@
         ]
       },
       {
-        "name": "obszontium",
+        "name": "dimensions",
         "children": [
           {
             "name": "proc",
@@ -15720,6 +15799,14 @@
           },
           {
             "name": "alpiv",
+            "children": []
+          },
+          {
+            "name": "particle",
+            "children": []
+          },
+          {
+            "name": "loot_table",
             "children": []
           }
         ]

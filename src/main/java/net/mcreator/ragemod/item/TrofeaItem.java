@@ -40,7 +40,7 @@ public class TrofeaItem extends RagemodModElements.ModElement {
 
 		@Override
 		public int getUseDuration(ItemStack stack) {
-			return 50;
+			return 65;
 		}
 
 		@Override

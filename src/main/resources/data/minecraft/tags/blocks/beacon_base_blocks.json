@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "ragemod:rageiumalloyblock",
-    "ragemod:savblockok"
+    "ragemod:savblockok",
+    "ragemod:obsontiumblock",
+    "ragemod:cvexblock",
+    "ragemod:cvexportalblock"
   ]
 }

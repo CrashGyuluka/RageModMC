@@ -4,7 +4,7 @@
   "definition": {
     "name": "Totally_Not_Alien",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:Aliensoil"
     },
     "undergroundBlock": {
       "value": "CUSTOM:Hegyiko1"
@@ -33,28 +33,28 @@
       "value": ""
     },
     "additionsSound": {
-      "value": "CUSTOM:alien_d5"
+      "value": "CUSTOM:alien_d1"
     },
     "music": {
-      "value": "CUSTOM:alien_d2"
+      "value": "CUSTOM:alien_d5"
     },
     "moodSound": {
       "value": "CUSTOM:alien_d7"
     },
     "moodSoundDelay": 30000,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "CUSTOM:Rageparticle"
+      "value": "CUSTOM:Alienparticle"
     },
-    "particlesProbability": 0.5,
+    "particlesProbability": 0.6,
     "biomeCategory": "NONE",
     "parent": {
       "value": "No parent"
     },
     "rainingPossibility": 0.0,
     "temperature": 0.0,
-    "baseHeight": 0.4,
-    "heightVariation": 0.30000000000000004,
+    "baseHeight": 0.6,
+    "heightVariation": 0.6,
     "biomeType": "COOL",
     "spawnBiome": false,
     "biomeWeight": 5,
@@ -113,7 +113,7 @@
         },
         "minGroup": 1,
         "maxGroup": 2,
-        "weight": 20,
+        "weight": 4,
         "spawnType": "monster"
       },
       {
@@ -122,12 +122,12 @@
         },
         "minGroup": 1,
         "maxGroup": 2,
-        "weight": 10,
+        "weight": 2,
         "spawnType": "monster"
       },
       {
         "entity": {
-          "value": "EntityMonster"
+          "value": "EntityZombie"
         },
         "minGroup": 1,
         "maxGroup": 2,
