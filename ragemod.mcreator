@@ -13894,8 +13894,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "tesztitem",
-      "path": "~/teszt"
+      "registry_name": "tesztitem"
     }
   ],
   "variable_elements": [
@@ -15922,10 +15921,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "teszt",
-        "children": []
       }
     ]
   },
