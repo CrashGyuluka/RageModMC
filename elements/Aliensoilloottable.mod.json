@@ -39,7 +39,7 @@
             "item": {
               "value": "CUSTOM:Aliendirt"
             },
-            "weight": 20,
+            "weight": 40,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,

@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 1,
+    "recipeRetstackSize": 2,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -22,7 +22,7 @@
         "value": "CUSTOM:Cverx"
       },
       {
-        "value": "CUSTOM:Opalblock"
+        "value": "CUSTOM:Cverx"
       },
       {
         "value": "CUSTOM:Cverx"

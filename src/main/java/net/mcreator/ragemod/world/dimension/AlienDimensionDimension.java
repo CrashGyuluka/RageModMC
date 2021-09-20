@@ -52,7 +52,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 import net.minecraft.block.AbstractBlock;
 
-import net.mcreator.ragemod.particle.RageparticleParticle;
+import net.mcreator.ragemod.particle.AlienparticleParticle;
 import net.mcreator.ragemod.item.AlienDimensionItem;
 import net.mcreator.ragemod.block.Hegyiko1Block;
 import net.mcreator.ragemod.block.CvexportalblockBlock;
@@ -194,7 +194,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 					pz = pos.getZ() + 0.5 + 0.25 * j;
 					vz = random.nextFloat() * 2 * j;
 				}
-				world.addParticle(RageparticleParticle.particle, px, py, pz, vx, vy, vz);
+				world.addParticle(AlienparticleParticle.particle, px, py, pz, vx, vy, vz);
 			}
 			if (random.nextInt(110) == 0)
 				world.playSound(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,

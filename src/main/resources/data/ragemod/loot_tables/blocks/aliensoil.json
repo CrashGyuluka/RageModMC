@@ -41,7 +41,7 @@
         {
           "type": "minecraft:item",
           "name": "ragemod:aliendirt",
-          "weight": 20,
+          "weight": 40,
           "conditions": [
             {
               "condition": "minecraft:inverted",

@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:aliensoil"
+    },
+    "1": {
+      "item": "ragemod:aliensoil"
+    },
+    "2": {
+      "item": "ragemod:aliensoil"
+    },
+    "3": {
+      "item": "ragemod:aliensoil"
+    },
+    "4": {
+      "item": "ragemod:aliensoil"
+    },
+    "5": {
+      "item": "ragemod:aliensoil"
+    },
+    "6": {
+      "item": "ragemod:aliensoil"
+    },
+    "7": {
+      "item": "ragemod:aliensoil"
+    },
+    "8": {
+      "item": "ragemod:aliensoil"
+    }
+  },
+  "result": {
+    "item": "ragemod:coveredaliengrass",
+    "count": 8
+  }
+}

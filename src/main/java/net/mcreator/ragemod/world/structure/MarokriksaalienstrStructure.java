@@ -27,8 +27,9 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
+
+import net.mcreator.ragemod.block.AliensoilBlock;
 
 import java.util.Random;
 
@@ -60,7 +61,7 @@ public class MarokriksaalienstrStructure {
 							j -= 1;
 							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
 							boolean blockCriteria = false;
-							if (blockAt.getBlock() == Blocks.GRASS_BLOCK)
+							if (blockAt.getBlock() == AliensoilBlock.block)
 								blockCriteria = true;
 							if (!blockCriteria)
 								continue;

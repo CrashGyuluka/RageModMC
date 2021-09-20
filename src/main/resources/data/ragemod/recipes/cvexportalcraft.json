@@ -29,14 +29,14 @@
       "item": "ragemod:hegyikopolished"
     },
     "7": {
-      "item": "ragemod:cvexblock"
+      "item": "ragemod:hegyikopolished"
     },
     "8": {
       "item": "ragemod:hegyikopolished"
     }
   },
   "result": {
-    "item": "ragemod:cvexblock",
-    "count": 1
+    "item": "ragemod:cvexportalblock",
+    "count": 4
   }
 }

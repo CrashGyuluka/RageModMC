@@ -33,7 +33,7 @@
       "value": ""
     },
     "additionsSound": {
-      "value": "CUSTOM:alien_d1"
+      "value": ""
     },
     "music": {
       "value": "CUSTOM:alien_d5"
@@ -53,8 +53,8 @@
     },
     "rainingPossibility": 0.0,
     "temperature": 0.0,
-    "baseHeight": 0.6,
-    "heightVariation": 0.6,
+    "baseHeight": 0.4,
+    "heightVariation": 0.9,
     "biomeType": "COOL",
     "spawnBiome": false,
     "biomeWeight": 5,
