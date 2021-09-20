@@ -29,7 +29,7 @@
       "value": "CUSTOM:Cvexportalblock"
     },
     "portalParticles": {
-      "value": "CUSTOM:Rageparticle"
+      "value": "CUSTOM:Alienparticle"
     },
     "portalLuminance": 1,
     "portalSound": {

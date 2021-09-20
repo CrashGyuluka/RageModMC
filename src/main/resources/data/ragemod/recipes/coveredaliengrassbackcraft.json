@@ -3,11 +3,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ragemod:cvexblock"
+      "item": "ragemod:coveredaliengrass"
     }
   ],
   "result": {
-    "item": "ragemod:cverx",
-    "count": 18
+    "item": "ragemod:aliensoil",
+    "count": 8
   }
 }

@@ -20,7 +20,7 @@
       "item": "ragemod:cverx"
     },
     "4": {
-      "item": "ragemod:opalblock"
+      "item": "ragemod:cverx"
     },
     "5": {
       "item": "ragemod:cverx"
@@ -37,6 +37,6 @@
   },
   "result": {
     "item": "ragemod:cvexblock",
-    "count": 1
+    "count": 2
   }
 }

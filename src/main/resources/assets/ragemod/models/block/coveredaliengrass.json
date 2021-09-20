@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/alien_soil_top",
+    "particle": "ragemod:blocks/alien_soil_top"
+  }
+}
