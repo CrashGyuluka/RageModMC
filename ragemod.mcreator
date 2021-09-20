@@ -13886,24 +13886,6 @@
       "ids": {},
       "registry_name": "coveredaliengrassbackcraft",
       "path": "~/dimensions/craft"
-    },
-    {
-      "name": "Tesztitem",
-      "type": "item",
-      "sortid": 1237,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "tesztitem"
-    },
-    {
-      "name": "Tezst5",
-      "type": "item",
-      "sortid": 1238,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "tezst_5"
     }
   ],
   "variable_elements": [
@@ -14056,7 +14038,6 @@
       "block.ragemod.stripped_marokriksa_pressure_plate": "Stripped Marokriksa Pressure Plate",
       "item.ragemod.ragearrowscrap": "Rageium Bow Piece",
       "item.ragemod.rageiumaromr_helmet": "Rageium Helmet",
-      "item.ragemod.tesztitem": "Tesztitem",
       "advancements.adv_3.descr": "RagePotion!!!",
       "enchantment.ragemod.vedelemplus": "LastHelp",
       "advancements.adv_1.title": "Don\u0027t rage!",
@@ -14433,7 +14414,6 @@
       "biome.ragemod.b_4": "otixbiome",
       "biome.ragemod.b_1": "B 1",
       "block.ragemod.aktinolitblock": "Actinolite Block",
-      "item.ragemod.tezst_5": "sdgsígdfg",
       "entity.ragemod.atom_rage_r": "AtomRageR",
       "biome.ragemod.b_3": "B 3",
       "biome.ragemod.b_2": "B 2",
@@ -14560,7 +14540,6 @@
       "block.ragemod.stripped_marokriksa_pressure_plate": "Stripped Marokriksa Pressure Plate",
       "item.ragemod.ragearrowscrap": "Rageium Bow Piece",
       "item.ragemod.rageiumaromr_helmet": "Rageium Helmet",
-      "item.ragemod.tesztitem": "sdgsígdfg",
       "advancements.adv_3.descr": "RagePotion!!!",
       "enchantment.ragemod.vedelemplus": "LastHelp",
       "advancements.adv_1.title": "Don\u0027t rage!",
@@ -14937,7 +14916,6 @@
       "biome.ragemod.b_4": "otixbiome",
       "biome.ragemod.b_1": "B 1",
       "block.ragemod.aktinolitblock": "Actinolite Block",
-      "item.ragemod.tezst_5": "sdgsígdfg",
       "entity.ragemod.atom_rage_r": "AtomRageR",
       "biome.ragemod.b_3": "B 3",
       "biome.ragemod.b_2": "B 2",
@@ -15064,7 +15042,6 @@
       "block.ragemod.stripped_marokriksa_pressure_plate": "Kérgezett Marokriksa Nyomólap",
       "item.ragemod.ragearrowscrap": "RageiumÍj Darabka",
       "item.ragemod.rageiumaromr_helmet": "Rageium Sisak",
-      "item.ragemod.tesztitem": "Tesztitem",
       "advancements.adv_3.descr": "RagePotion!!!",
       "enchantment.ragemod.vedelemplus": "PáncélPlusz",
       "advancements.adv_1.title": "Ne légy ideges!",
@@ -15441,7 +15418,6 @@
       "biome.ragemod.b_4": "OtixBiome",
       "biome.ragemod.b_1": "Biome1",
       "block.ragemod.aktinolitblock": "Aktinolit Blokk",
-      "item.ragemod.tezst_5": "sdgsígdfg",
       "entity.ragemod.atom_rage_r": "AtomRageR",
       "biome.ragemod.b_3": "Biome3",
       "biome.ragemod.b_2": "Biome2",
