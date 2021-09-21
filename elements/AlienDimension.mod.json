@@ -5,6 +5,18 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:TotallyNotAlien"
+      },
+      {
+        "value": "CUSTOM:Alienlake"
+      },
+      {
+        "value": "CUSTOM:Alienplains"
+      },
+      {
+        "value": "CUSTOM:Ruinedalienbiome"
+      },
+      {
+        "value": "CUSTOM:Alienjungle"
       }
     ],
     "worldGenType": "Normal world gen",

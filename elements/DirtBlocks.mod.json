@@ -7,6 +7,15 @@
     "blocks": [
       {
         "value": "CUSTOM:Aliensoil"
+      },
+      {
+        "value": "CUSTOM:Destroyablealiensoildev"
+      },
+      {
+        "value": "CUSTOM:Coveredaliengrass"
+      },
+      {
+        "value": "CUSTOM:Aliendirt"
       }
     ],
     "functions": [],

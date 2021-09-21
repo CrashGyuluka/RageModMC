@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/alien_growth",
+    "particle": "ragemod:blocks/alien_growth"
+  }
+}

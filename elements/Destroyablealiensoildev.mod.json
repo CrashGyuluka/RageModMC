@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alpiv_smooth",
-    "textureTop": "alpiv_pillar_bottom2",
-    "textureLeft": "alpiv_pillar",
-    "textureFront": "alpiv_pillar",
-    "textureRight": "alpiv_pillar",
-    "textureBack": "alpiv_pillar",
-    "renderType": 11,
-    "customModelName": "Single texture",
+    "texture": "alien_soil_bottom",
+    "textureTop": "alien_soil_top",
+    "textureLeft": "alien_soil",
+    "textureFront": "alien_soil",
+    "textureRight": "alien_soil",
+    "textureBack": "alien_soil",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -32,27 +32,27 @@
         "subtract": false
       }
     ],
-    "name": "Alpiv Pillar",
+    "name": "Destroyable Alien Grass (DEV)",
     "specialInfo": [],
-    "hardness": 3.0,
+    "hardness": 2.0,
     "resistance": 10.0,
-    "hasGravity": false,
+    "hasGravity": true,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Termeszettab"
+      "value": "No creative tab entry"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "shovel",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
-    "useLootTableForDrops": false,
+    "useLootTableForDrops": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "ROCK"
+      "value": "GRASS"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -63,7 +63,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:Aliensoil"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -77,7 +77,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "WET_GRASS"
     },
     "breakSound": {
       "value": ""
@@ -94,7 +94,7 @@
     "fallSound": {
       "value": ""
     },
-    "luminance": 11,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "spawnParticles": false,

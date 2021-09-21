@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "cursed_alienite",
+    "customModelName": "Normal",
+    "name": "Cursed Alienite",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Ragetab"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 3,
+    "saturation": 0.2,
+    "eatingSpeed": 20,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "CursedalieniteFoodEaten"
+    }
+  }
+}

@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ragemod:aliensoil"
+    "ragemod:aliensoil",
+    "ragemod:destroyablealiensoildev",
+    "ragemod:coveredaliengrass",
+    "ragemod:aliendirt"
   ]
 }
