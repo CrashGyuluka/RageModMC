@@ -29,7 +29,7 @@ public class SavarmorItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savarmor_boots")
 	public static final Item boots = null;
 	public SavarmorItem(RagemodModElements instance) {
-		super(instance, 315);
+		super(instance, 324);
 	}
 
 	@Override

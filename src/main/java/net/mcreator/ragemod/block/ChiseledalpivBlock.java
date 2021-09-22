@@ -26,7 +26,7 @@ public class ChiseledalpivBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:chiseledalpiv")
 	public static final Block block = null;
 	public ChiseledalpivBlock(RagemodModElements instance) {
-		super(instance, 41);
+		super(instance, 49);
 	}
 
 	@Override

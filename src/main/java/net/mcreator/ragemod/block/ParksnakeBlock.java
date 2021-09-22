@@ -33,7 +33,7 @@ public class ParksnakeBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parksnake")
 	public static final Block block = null;
 	public ParksnakeBlock(RagemodModElements instance) {
-		super(instance, 227);
+		super(instance, 235);
 	}
 
 	@Override

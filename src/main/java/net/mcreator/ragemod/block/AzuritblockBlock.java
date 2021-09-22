@@ -33,7 +33,7 @@ public class AzuritblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:azuritblock")
 	public static final Block block = null;
 	public AzuritblockBlock(RagemodModElements instance) {
-		super(instance, 267);
+		super(instance, 275);
 	}
 
 	@Override

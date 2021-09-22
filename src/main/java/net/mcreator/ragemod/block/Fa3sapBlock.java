@@ -71,7 +71,7 @@ public class Fa3sapBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:fa_3sap")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public Fa3sapBlock(RagemodModElements instance) {
-		super(instance, 175);
+		super(instance, 183);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

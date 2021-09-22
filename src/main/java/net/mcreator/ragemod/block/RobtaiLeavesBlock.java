@@ -58,7 +58,7 @@ public class RobtaiLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public RobtaiLeavesBlock(RagemodModElements instance) {
-		super(instance, 201);
+		super(instance, 209);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

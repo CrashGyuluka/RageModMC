@@ -62,7 +62,7 @@ public class SavasnyirfaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnyirfa")
 	public static final Block block = null;
 	public SavasnyirfaBlock(RagemodModElements instance) {
-		super(instance, 329);
+		super(instance, 338);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

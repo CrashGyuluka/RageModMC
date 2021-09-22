@@ -28,7 +28,7 @@ public class Robtai_BlockPressurePlateBlock extends RagemodModElements.ModElemen
 	@ObjectHolder("ragemod:robtai_block_pressure_plate")
 	public static final Block block = null;
 	public Robtai_BlockPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 197);
+		super(instance, 205);
 	}
 
 	@Override

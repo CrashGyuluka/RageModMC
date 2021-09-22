@@ -55,7 +55,7 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aliengrowth")
 	public static final Block block = null;
 	public AliengrowthBlock(RagemodModElements instance) {
-		super(instance, 1247);
+		super(instance, 43);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -97,8 +97,8 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 			configuredFeature = feature
 					.withConfiguration(
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
-									.tries(10).build())
-					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(5);
+									.tries(33).build())
+					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(20);
 			event.getRegistry().register(feature.setRegistryName("aliengrowth"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:aliengrowth"), configuredFeature);
 		}
@@ -123,7 +123,7 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 			super(Effects.BLINDNESS, 5,
 					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)
 							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).jumpFactor(1.1f)
-							.setLightLevel(s -> 0));
+							.setLightLevel(s -> 2));
 			setRegistryName("aliengrowth");
 		}
 

@@ -43,7 +43,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AlienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public AlienplainsBiome(RagemodModElements instance) {
-		super(instance, 1237);
+		super(instance, 1242);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -58,7 +58,7 @@ public class AlienplainsBiome extends RagemodModElements.ModElement {
 						.setMusic(new BackgroundMusicSelector(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")),
 								12000, 24000, true))
-						.setParticle(new ParticleEffectAmbience(AlienparticleParticle.particle, 0.003f)).build();
+						.setParticle(new ParticleEffectAmbience(AlienparticleParticle.particle, 0.002f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(AliensoilBlock.block.getDefaultState(),
 								Hegyiko1Block.block.getDefaultState(), Hegyiko1Block.block.getDefaultState())));

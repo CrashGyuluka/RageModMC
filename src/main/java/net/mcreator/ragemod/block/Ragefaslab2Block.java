@@ -26,7 +26,7 @@ public class Ragefaslab2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragefaslab_2")
 	public static final Block block = null;
 	public Ragefaslab2Block(RagemodModElements instance) {
-		super(instance, 101);
+		super(instance, 109);
 	}
 
 	@Override

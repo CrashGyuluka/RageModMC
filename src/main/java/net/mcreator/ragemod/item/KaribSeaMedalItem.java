@@ -24,7 +24,7 @@ public class KaribSeaMedalItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:karib_sea_medal")
 	public static final Item block = null;
 	public KaribSeaMedalItem(RagemodModElements instance) {
-		super(instance, 285);
+		super(instance, 293);
 	}
 
 	@Override

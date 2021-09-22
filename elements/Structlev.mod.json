@@ -5,7 +5,7 @@
     "structure": "struct_lev",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 3,
+    "spawnProbability": 30,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",

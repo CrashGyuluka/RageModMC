@@ -35,7 +35,7 @@ public class Structurehatarolo1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:structurehatarolo_1")
 	public static final Block block = null;
 	public Structurehatarolo1Block(RagemodModElements instance) {
-		super(instance, 867);
+		super(instance, 876);
 	}
 
 	@Override

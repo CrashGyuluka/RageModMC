@@ -30,7 +30,7 @@ public class Ragefapr2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragefapr_2")
 	public static final Block block = null;
 	public Ragefapr2Block(RagemodModElements instance) {
-		super(instance, 122);
+		super(instance, 130);
 	}
 
 	@Override

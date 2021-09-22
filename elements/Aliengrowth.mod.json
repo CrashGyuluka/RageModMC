@@ -37,7 +37,7 @@
     },
     "hardness": 0.5,
     "resistance": 0.0,
-    "luminance": 0,
+    "luminance": 2,
     "unbreakable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
@@ -78,7 +78,7 @@
     "jumpFactor": 1.1,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 5,
+    "frequencyOnChunks": 20,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],
@@ -96,6 +96,6 @@
         "value": "CUSTOM:TotallyNotAlien"
       }
     ],
-    "patchSize": 10
+    "patchSize": 33
   }
 }

@@ -56,7 +56,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnoveny")
 	public static final Block block = null;
 	public SavasnovenyBlock(RagemodModElements instance) {
-		super(instance, 316);
+		super(instance, 325);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

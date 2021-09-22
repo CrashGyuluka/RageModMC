@@ -56,7 +56,7 @@ public class SavasnetheritetormelekBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnetheritetormelek")
 	public static final Block block = null;
 	public SavasnetheritetormelekBlock(RagemodModElements instance) {
-		super(instance, 349);
+		super(instance, 358);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

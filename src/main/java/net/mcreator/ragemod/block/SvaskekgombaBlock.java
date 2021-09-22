@@ -56,7 +56,7 @@ public class SvaskekgombaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:svaskekgomba")
 	public static final Block block = null;
 	public SvaskekgombaBlock(RagemodModElements instance) {
-		super(instance, 353);
+		super(instance, 362);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

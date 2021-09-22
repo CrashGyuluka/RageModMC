@@ -58,7 +58,7 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public KizukraLeavesBlock(RagemodModElements instance) {
-		super(instance, 176);
+		super(instance, 184);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

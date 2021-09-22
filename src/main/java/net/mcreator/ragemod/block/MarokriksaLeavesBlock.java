@@ -58,7 +58,7 @@ public class MarokriksaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public MarokriksaLeavesBlock(RagemodModElements instance) {
-		super(instance, 226);
+		super(instance, 234);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

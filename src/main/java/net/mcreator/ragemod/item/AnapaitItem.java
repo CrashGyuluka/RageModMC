@@ -16,7 +16,7 @@ public class AnapaitItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:anapait")
 	public static final Item block = null;
 	public AnapaitItem(RagemodModElements instance) {
-		super(instance, 246);
+		super(instance, 254);
 	}
 
 	@Override

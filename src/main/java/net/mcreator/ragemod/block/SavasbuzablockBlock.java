@@ -56,7 +56,7 @@ public class SavasbuzablockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasbuzablock")
 	public static final Block block = null;
 	public SavasbuzablockBlock(RagemodModElements instance) {
-		super(instance, 355);
+		super(instance, 364);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

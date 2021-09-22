@@ -62,7 +62,7 @@ import com.google.common.collect.ImmutableList;
 public class B2Biome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public B2Biome(RagemodModElements instance) {
-		super(instance, 404);
+		super(instance, 413);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

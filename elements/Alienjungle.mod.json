@@ -46,7 +46,7 @@
     "particleToSpawn": {
       "value": "CUSTOM:Alienparticle"
     },
-    "particlesProbability": 0.6,
+    "particlesProbability": 0.19999999999999998,
     "biomeCategory": "NONE",
     "parent": {
       "value": "No parent"
