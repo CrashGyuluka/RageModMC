@@ -16,7 +16,7 @@ public class RagearrowammoItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragearrowammo")
 	public static final Item block = null;
 	public RagearrowammoItem(RagemodModElements instance) {
-		super(instance, 19);
+		super(instance, 18);
 	}
 
 	@Override

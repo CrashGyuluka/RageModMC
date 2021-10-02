@@ -49,7 +49,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RuinedalienbiomeBiome(RagemodModElements instance) {
-		super(instance, 1245);
+		super(instance, 1252);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -58,6 +58,8 @@ public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-8185981).setWaterColor(-8450233).setWaterFogColor(-10092493)
 						.withSkyColor(-8185981).withFoliageColor(-10079233).withGrassColor(-11462262)
+						.setAmbientSound(
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")))
 						.setMoodSound(new MoodSoundAmbience(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d7")),
 								30000, 8, 2))
@@ -108,7 +110,7 @@ public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(MinerEntity.entity, 20, 5, 10));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(Mob1Entity.entity, 1, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ENDERMAN, 4, 1, 3));
-				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.3f).scale(0.2f).temperature(0f)
+				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.5f).scale(0.3f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("ragemod:ruinedalienbiome"));

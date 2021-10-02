@@ -23,7 +23,7 @@ public class Stick2Item extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stick_2")
 	public static final Item block = null;
 	public Stick2Item(RagemodModElements instance) {
-		super(instance, 207);
+		super(instance, 361);
 	}
 
 	@Override

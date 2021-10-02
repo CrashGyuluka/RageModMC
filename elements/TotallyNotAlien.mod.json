@@ -30,7 +30,7 @@
       "falpha": 0.0
     },
     "ambientSound": {
-      "value": ""
+      "value": "CUSTOM:alien_d5"
     },
     "additionsSound": {
       "value": ""
@@ -53,11 +53,11 @@
     },
     "rainingPossibility": 0.0,
     "temperature": 0.0,
-    "baseHeight": 0.4,
+    "baseHeight": 0.6,
     "heightVariation": 0.9,
     "biomeType": "COOL",
     "spawnBiome": false,
-    "biomeWeight": 5,
+    "biomeWeight": 7,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 3,
     "seagrassPerChunk": 0,

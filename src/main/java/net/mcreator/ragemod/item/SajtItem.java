@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class SajtItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sajt")
 	public static final Item block = null;
 	public SajtItem(RagemodModElements instance) {
-		super(instance, 29);
+		super(instance, 43);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class SajtItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(MoretabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(6).saturation(6f).build()));
 			setRegistryName("sajt");
 		}

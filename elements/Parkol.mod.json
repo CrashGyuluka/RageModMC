@@ -42,7 +42,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:RageModepit"
+      "value": "CUSTOM:Moretab"
     },
     "destroyTool": "pickaxe",
     "customDrop": {

@@ -6,6 +6,6 @@
     "icon": {
       "value": "CUSTOM:RageFaLog"
     },
-    "showSearch": false
+    "showSearch": true
   }
 }

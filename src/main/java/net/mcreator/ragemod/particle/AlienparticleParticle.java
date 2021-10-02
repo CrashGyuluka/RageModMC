@@ -40,11 +40,11 @@ public class AlienparticleParticle {
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
 			this.maxAge = (int) Math.max(1, 22 + (this.rand.nextInt(6) - 3));
-			this.particleGravity = (float) -0.2;
+			this.particleGravity = (float) -0.1;
 			this.canCollide = true;
-			this.motionX = vx * 1;
-			this.motionY = vy * 1;
-			this.motionZ = vz * 1;
+			this.motionX = vx * 0.7000000000000001;
+			this.motionY = vy * 0.7000000000000001;
+			this.motionZ = vz * 0.7000000000000001;
 			this.selectSpriteWithAge(spriteSet);
 		}
 

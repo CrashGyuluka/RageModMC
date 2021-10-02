@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alien_axe2",
+    "customModelName": "Normal",
+    "name": "Alienite Axe",
+    "specialInfo": [
+      "Mine with the MegaMine effect active!"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 5,
+    "efficiency": 15.0,
+    "attackSpeed": 0.9,
+    "enchantability": 25,
+    "damageVsEntity": 6.0,
+    "usageCount": 4690,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alienite"
+      },
+      {
+        "value": "CUSTOM:Cursedalienite"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "AlieniteaxeBlockDestroyedWithTool"
+    }
+  }
+}

@@ -43,7 +43,7 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cvexore")
 	public static final Block block = null;
 	public CvexoreBlock(RagemodModElements instance) {
-		super(instance, 308);
+		super(instance, 175);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -100,7 +100,7 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 3)).range(100)
-					.square().func_242731_b(2);
+					.square().func_242731_b(3);
 			event.getRegistry().register(feature.setRegistryName("cvexore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:cvexore"), configuredFeature);
 		}

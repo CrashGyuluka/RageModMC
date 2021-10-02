@@ -12,7 +12,7 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.ragemod.procedures.CursedalieniteFoodEatenProcedure;
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -23,7 +23,7 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cursedalienite")
 	public static final Item block = null;
 	public CursedalieniteItem(RagemodModElements instance) {
-		super(instance, 35);
+		super(instance, 181);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(3).saturation(0.2f).setAlwaysEdible().build()));
 			setRegistryName("cursedalienite");
 		}

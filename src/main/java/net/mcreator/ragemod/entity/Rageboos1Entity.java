@@ -102,7 +102,7 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Mob1Entity.CustomEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, SavragerobiEntity.CustomEntity.class, false, false));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PoliposEntity.CustomEntity.class, false, false));
 			this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false));
 			this.goalSelector.addGoal(6, new RandomWalkingGoal(this, 1));
 			this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));

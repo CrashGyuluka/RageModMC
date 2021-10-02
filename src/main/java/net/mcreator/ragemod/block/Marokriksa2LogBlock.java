@@ -28,7 +28,7 @@ public class Marokriksa2LogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_2_log")
 	public static final Block block = null;
 	public Marokriksa2LogBlock(RagemodModElements instance) {
-		super(instance, 213);
+		super(instance, 367);
 	}
 
 	@Override

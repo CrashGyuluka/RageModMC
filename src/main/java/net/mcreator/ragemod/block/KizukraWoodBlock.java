@@ -33,7 +33,7 @@ public class KizukraWoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_wood")
 	public static final Block block = null;
 	public KizukraWoodBlock(RagemodModElements instance) {
-		super(instance, 160);
+		super(instance, 314);
 	}
 
 	@Override

@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "megamine_potion_1",
+    "customModelName": "Normal",
+    "name": "MegaMine Potion II.",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "stackSize": 16,
+    "nutritionalValue": 0,
+    "saturation": 0.0,
+    "eatingSpeed": 30,
+    "resultItem": {
+      "value": "Items.GLASS_BOTTLE"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "MegaMinePotion2FoodEaten"
+    }
+  }
+}

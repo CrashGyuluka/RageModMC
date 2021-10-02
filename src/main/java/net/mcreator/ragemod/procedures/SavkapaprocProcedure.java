@@ -15,6 +15,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.item.SavkapaItem;
+import net.mcreator.ragemod.item.AlienitehoeItem;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.Map;
@@ -77,7 +78,9 @@ public class SavkapaprocProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavkapaItem.block)) {
+		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavkapaItem.block)
+				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == AlienitehoeItem.block))) {
 			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0))))
 					.getMaterial() == net.minecraft.block.material.Material.EARTH)
 					|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0))))

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "rope": "rope"
+      },
+      "name": "default"
+    }
+  }
+}

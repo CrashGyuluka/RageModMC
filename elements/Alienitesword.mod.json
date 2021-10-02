@@ -1,0 +1,37 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alienite_sword1",
+    "customModelName": "Normal",
+    "name": "Alienite Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 0.6,
+    "enchantability": 2,
+    "damageVsEntity": 10.0,
+    "usageCount": 4690,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alienite"
+      },
+      {
+        "value": "CUSTOM:Cursedalienite"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "AlieniteswordLivingEntityIsHitWithTool"
+    }
+  }
+}

@@ -53,7 +53,7 @@ public class MarokriksajunglealienStructure {
 					if (!dimensionCriteria)
 						return false;
 					if ((random.nextInt(1000000) + 1) <= 1000000) {
-						int count = random.nextInt(7) + 6;
+						int count = random.nextInt(3) + 14;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
@@ -93,7 +93,7 @@ public class MarokriksajunglealienStructure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:alienjungle").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alienforest").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

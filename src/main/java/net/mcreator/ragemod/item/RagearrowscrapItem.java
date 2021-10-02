@@ -16,7 +16,7 @@ public class RagearrowscrapItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragearrowscrap")
 	public static final Item block = null;
 	public RagearrowscrapItem(RagemodModElements instance) {
-		super(instance, 17);
+		super(instance, 16);
 	}
 
 	@Override

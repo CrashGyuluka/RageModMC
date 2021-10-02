@@ -43,7 +43,7 @@ public class PoliposEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(1.6f, 6.5f)).build("polipos").setRegistryName("polipos");
 	public PoliposEntity(RagemodModElements instance) {
-		super(instance, 654);
+		super(instance, 662);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PoliposRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

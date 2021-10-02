@@ -74,7 +74,7 @@ public class PortalrtBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:portalrt")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public PortalrtBlock(RagemodModElements instance) {
-		super(instance, 22);
+		super(instance, 21);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

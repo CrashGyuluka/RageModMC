@@ -30,7 +30,7 @@ public class MarokriksatdBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksatd")
 	public static final Block block = null;
 	public MarokriksatdBlock(RagemodModElements instance) {
-		super(instance, 228);
+		super(instance, 382);
 	}
 
 	@Override

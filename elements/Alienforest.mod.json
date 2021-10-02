@@ -1,0 +1,139 @@
+{
+  "_fv": 24,
+  "_type": "biome",
+  "definition": {
+    "name": "Aline_forest",
+    "groundBlock": {
+      "value": "CUSTOM:Aliensoil"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:Hegyiko1"
+    },
+    "airColor": {
+      "value": -4114751,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -11462262,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -10079233,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -8450233,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -10092493,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": "CUSTOM:alien_d5"
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": "CUSTOM:alien_d5"
+    },
+    "moodSound": {
+      "value": "CUSTOM:alien_d7"
+    },
+    "moodSoundDelay": 30000,
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "CUSTOM:Alienparticle"
+    },
+    "particlesProbability": 0.19999999999999998,
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "rainingPossibility": 0.0,
+    "temperature": 0.0,
+    "baseHeight": 0.30000000000000004,
+    "heightVariation": 0.30000000000000004,
+    "biomeType": "COOL",
+    "spawnBiome": false,
+    "biomeWeight": 3,
+    "biomeDictionaryTypes": [],
+    "grassPerChunk": 5,
+    "seagrassPerChunk": 0,
+    "flowersPerChunk": 4,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 1,
+    "sandPatchesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "treesPerChunk": 3,
+    "vanillaTreeType": "Default",
+    "treeType": 1,
+    "minHeight": 4,
+    "maxWaterDepth": 2,
+    "treeStem": {
+      "value": "CUSTOM:MarokriksaLog"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:MarokriksaLeaves"
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "oceanRuinType": "NONE",
+    "defaultFeatures": [
+      "Caves",
+      "ExtraEmeraldOre",
+      "ExtraGoldOre",
+      "Fossils",
+      "InfestedStone",
+      "MonsterRooms",
+      "OceanCaves",
+      "Ores"
+    ],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:Miner"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 4,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Mob1"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 2,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityEnderman"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "monster"
+      }
+    ]
+  }
+}

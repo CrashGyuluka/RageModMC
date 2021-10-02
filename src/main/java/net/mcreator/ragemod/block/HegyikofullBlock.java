@@ -26,7 +26,7 @@ public class HegyikofullBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikofull")
 	public static final Block block = null;
 	public HegyikofullBlock(RagemodModElements instance) {
-		super(instance, 55);
+		super(instance, 210);
 	}
 
 	@Override

@@ -49,7 +49,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AlienlakeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public AlienlakeBiome(RagemodModElements instance) {
-		super(instance, 1246);
+		super(instance, 1253);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -58,6 +58,8 @@ public class AlienlakeBiome extends RagemodModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-4114751).setWaterColor(-8450233).setWaterFogColor(-10092493)
 						.withSkyColor(-4114751).withFoliageColor(-10079233).withGrassColor(-11462262)
+						.setAmbientSound(
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")))
 						.setMoodSound(new MoodSoundAmbience(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d7")),
 								30000, 8, 2))
@@ -108,8 +110,8 @@ public class AlienlakeBiome extends RagemodModElements.ModElement {
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(MinerEntity.entity, 4, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(Mob1Entity.entity, 2, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ENDERMAN, 20, 4, 4));
-				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(-0.2f).scale(0.1f).temperature(0f)
-						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
+				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(-0.7000000000000001f).scale(0f)
+						.temperature(0f).downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("ragemod:alienlake"));
 			}

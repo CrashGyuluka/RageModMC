@@ -8,7 +8,7 @@
     "spawnProbability": 1000000,
     "minCountPerChunk": 15,
     "maxCountPerChunk": 16,
-    "spawnLocation": "Underground",
+    "spawnLocation": "Ground",
     "spawnHeightOffset": -1,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
@@ -20,19 +20,13 @@
         "value": "Blocks.STONE#0"
       },
       {
-        "value": "CUSTOM:Hegyiko1"
-      },
-      {
-        "value": "CUSTOM:Hegyimorzsolt"
-      },
-      {
         "value": "Blocks.STONE#3"
       },
       {
-        "value": "Blocks.STONE#1"
+        "value": "Blocks.STONE#5"
       },
       {
-        "value": "Blocks.STONE#5"
+        "value": "Blocks.STONE#1"
       },
       {
         "value": "Blocks.DIRT#0"
@@ -41,13 +35,16 @@
         "value": "Blocks.GRASS"
       },
       {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
         "value": "CUSTOM:Aliensoil"
       },
       {
-        "value": "CUSTOM:Coveredaliengrass"
+        "value": "CUSTOM:Aliendirt"
       },
       {
-        "value": "CUSTOM:Aliendirt"
+        "value": "CUSTOM:Coveredaliengrass"
       },
       {
         "value": "CUSTOM:Destroyablealiensoildev"
@@ -56,7 +53,7 @@
     "restrictionBiomes": [],
     "ignoreBlocks": "STRUCTURE_BLOCK",
     "generateCondition": {
-      "name": "HangingalienshroomAdditionalPlacinggrowthCondition"
+      "name": "Hangingalienplant2AdditionalGenerationCondition"
     }
   }
 }

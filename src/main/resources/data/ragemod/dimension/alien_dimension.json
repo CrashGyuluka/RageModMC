@@ -76,7 +76,7 @@
           }
         },
         {
-          "biome": "ragemod:alienjungle",
+          "biome": "ragemod:alienforest",
           "parameters": {
             "temperature": -1,
             "humidity": 1,

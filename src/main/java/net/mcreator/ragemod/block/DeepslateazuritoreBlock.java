@@ -26,7 +26,7 @@ public class DeepslateazuritoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateazuritore")
 	public static final Block block = null;
 	public DeepslateazuritoreBlock(RagemodModElements instance) {
-		super(instance, 261);
+		super(instance, 128);
 	}
 
 	@Override

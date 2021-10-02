@@ -39,28 +39,22 @@ public class HangingalienshroomAdditionalPlacinggrowthConditionProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.AIR)
-				|| (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.VOID_AIR)
-						|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR)))
-				&& (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Hegyiko1Block.block) || (((world
-						.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.STONE)
-						|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == HegyikopolishedBlock.block)
-								|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.DIORITE) || (((world
-										.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.ANDESITE)
-										|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.GRANITE)
-												|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.DIRT)
+		if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Hegyiko1Block.block) || (((world
+				.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.STONE)
+				|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == HegyikopolishedBlock.block) || (((world
+						.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.DIORITE)
+						|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.ANDESITE) || (((world
+								.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.GRANITE)
+								|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.DIRT)
+										|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.COBBLESTONE)
+												|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
+														.getBlock() == AliendirtBlock.block)
 														|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
-																.getBlock() == Blocks.COBBLESTONE)
+																.getBlock() == AliensoilBlock.block)
 																|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
-																		.getBlock() == AliendirtBlock.block)
-																		|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
-																				.getBlock() == AliensoilBlock.block)
-																				|| (((world
-																						.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
-																								.getBlock() == CoveredaliengrassBlock.block)
-																						|| ((world.getBlockState(
-																								new BlockPos((int) x, (int) (y + 1), (int) z)))
-																										.getBlock() == Blocks.GRASS_BLOCK)))))))))))))) {
+																		.getBlock() == CoveredaliengrassBlock.block)
+																		|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
+																				.getBlock() == Blocks.GRASS_BLOCK))))))))))))) {
 			return (true);
 		}
 		return (false);

@@ -30,7 +30,7 @@
         "subtract": false
       }
     ],
-    "name": "Alien-Shroom",
+    "name": "Alien Plant",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Termeszettab"
@@ -78,14 +78,11 @@
     "jumpFactor": 1.2000000000000002,
     "speedFactor": 1.2000000000000002,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 20,
+    "frequencyOnChunks": 31,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [
-      {
-        "value": "CUSTOM:Alienjungle"
-      },
       {
         "value": "CUSTOM:Alienplains"
       },
@@ -94,8 +91,14 @@
       },
       {
         "value": "CUSTOM:TotallyNotAlien"
+      },
+      {
+        "value": "CUSTOM:Alienforest"
       }
     ],
-    "patchSize": 18
+    "patchSize": 23,
+    "onRightClicked": {
+      "name": "AlienshroomPlantRightClicked"
+    }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:alienite"
+    },
+    "1": {
+      "item": "ragemod:alienite"
+    },
+    "3": {
+      "item": "ragemod:stick_3"
+    },
+    "5": {
+      "item": "ragemod:stick_3"
+    }
+  },
+  "result": {
+    "item": "ragemod:alienitehoe",
+    "count": 1
+  }
+}

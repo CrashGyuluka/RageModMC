@@ -77,7 +77,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_dimension_portal")
 	public static final CustomPortalBlock portal = null;
 	public AlienDimensionDimension(RagemodModElements instance) {
-		super(instance, 312);
+		super(instance, 179);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

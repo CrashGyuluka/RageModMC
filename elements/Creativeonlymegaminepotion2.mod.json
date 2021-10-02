@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of MegaMine II. (CREATIVEONLY)",
+    "splashName": "Splash Potion of MegaMine II. (CREATIVEONLY)",
+    "lingeringName": "Lingering Potion of MegaMine II. (CREATIVEONLY)",
+    "arrowName": "Arrow of MegaMine II. (CREATIVEONLY)",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:MegaMineeffect"
+        },
+        "duration": 12000,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

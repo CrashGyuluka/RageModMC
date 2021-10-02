@@ -52,7 +52,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("toxic_mob").setRegistryName("toxic_mob");
 	public Mob1Entity(RagemodModElements instance) {
-		super(instance, 327);
+		super(instance, 62);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Mob1Renderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -98,9 +98,9 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 40);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 30);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 3);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 2);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 5);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 2);
 			event.put(entity, ammma.create());
@@ -114,7 +114,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 
 		public CustomEntity(EntityType<CustomEntity> type, World world) {
 			super(type, world);
-			experienceValue = 10;
+			experienceValue = 12;
 			setNoAI(false);
 		}
 

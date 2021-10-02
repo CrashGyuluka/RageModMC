@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "structure",
   "definition": {
-    "structure": "robtai1",
+    "structure": "robtaitree03",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 1400,
+    "spawnProbability": 1510,
     "minCountPerChunk": 6,
     "maxCountPerChunk": 9,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 0,
+    "spawnHeightOffset": -3,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [

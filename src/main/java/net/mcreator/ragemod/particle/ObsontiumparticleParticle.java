@@ -34,17 +34,21 @@ public class ObsontiumparticleParticle {
 	@OnlyIn(Dist.CLIENT)
 	private static class CustomParticle extends SpriteTexturedParticle {
 		private final IAnimatedSprite spriteSet;
+		private float angularVelocity;
+		private float angularAcceleration;
 		protected CustomParticle(ClientWorld world, double x, double y, double z, double vx, double vy, double vz, IAnimatedSprite spriteSet) {
 			super(world, x, y, z);
 			this.spriteSet = spriteSet;
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
 			this.maxAge = 7;
-			this.particleGravity = (float) -0.1;
+			this.particleGravity = (float) -0.2;
 			this.canCollide = true;
-			this.motionX = vx * 1;
-			this.motionY = vy * 1;
-			this.motionZ = vz * 1;
+			this.motionX = vx * 0.3;
+			this.motionY = vy * 0.3;
+			this.motionZ = vz * 0.3;
+			this.angularVelocity = (float) 0;
+			this.angularAcceleration = (float) 0.02;
 			this.selectSpriteRandomly(spriteSet);
 		}
 
@@ -56,6 +60,9 @@ public class ObsontiumparticleParticle {
 		@Override
 		public void tick() {
 			super.tick();
+			this.prevParticleAngle = this.particleAngle;
+			this.particleAngle += this.angularVelocity;
+			this.angularVelocity += this.angularAcceleration;
 		}
 	}
 

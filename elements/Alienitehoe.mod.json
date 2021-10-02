@@ -1,0 +1,37 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alienite_hoe",
+    "customModelName": "Normal",
+    "name": "Alienite Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 5,
+    "efficiency": 16.0,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 4.0,
+    "usageCount": 8000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alienite"
+      },
+      {
+        "value": "CUSTOM:Cursedalienite"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "Savkapaproc"
+    }
+  }
+}

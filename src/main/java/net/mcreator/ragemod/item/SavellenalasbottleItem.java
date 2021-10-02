@@ -14,7 +14,7 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.ragemod.procedures.SavellenalasbottleFoodEatenProcedure;
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -25,7 +25,7 @@ public class SavellenalasbottleItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savellenalasbottle")
 	public static final Item block = null;
 	public SavellenalasbottleItem(RagemodModElements instance) {
-		super(instance, 16);
+		super(instance, 59);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class SavellenalasbottleItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(SvasblocktabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
 			setRegistryName("savellenalasbottle");
 		}

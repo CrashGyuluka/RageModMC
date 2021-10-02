@@ -55,7 +55,7 @@
     "material": {
       "value": "LEAVES"
     },
-    "tickRate": 10,
+    "tickRate": 2,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -103,8 +103,8 @@
       "value": "CUSTOM:Ragefallingtree"
     },
     "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.3999999985098839,
-    "particleAmount": 4,
+    "particleSpawningRadious": 0.1,
+    "particleAmount": 1,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

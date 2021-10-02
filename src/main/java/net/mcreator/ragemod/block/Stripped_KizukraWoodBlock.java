@@ -28,7 +28,7 @@ public class Stripped_KizukraWoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_kizukra_wood")
 	public static final Block block = null;
 	public Stripped_KizukraWoodBlock(RagemodModElements instance) {
-		super(instance, 161);
+		super(instance, 315);
 	}
 
 	@Override

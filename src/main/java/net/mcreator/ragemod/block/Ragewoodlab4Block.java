@@ -26,7 +26,7 @@ public class Ragewoodlab4Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragewoodlab_4")
 	public static final Block block = null;
 	public Ragewoodlab4Block(RagemodModElements instance) {
-		super(instance, 105);
+		super(instance, 259);
 	}
 
 	@Override

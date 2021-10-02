@@ -29,7 +29,7 @@ public class RageiumaromrItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rageiumaromr_boots")
 	public static final Item boots = null;
 	public RageiumaromrItem(RagemodModElements instance) {
-		super(instance, 20);
+		super(instance, 19);
 	}
 
 	@Override

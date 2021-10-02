@@ -15,6 +15,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.item.SavascsakanyItem;
+import net.mcreator.ragemod.item.MegasavcsakaknyItem;
+import net.mcreator.ragemod.item.AlienitepickaxeItem;
 import net.mcreator.ragemod.block.TorootteglaBlock;
 import net.mcreator.ragemod.RagemodMod;
 
@@ -80,28 +82,14 @@ public class Savascsakanyproc5Procedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == SavascsakanyItem.block)
-				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.MOSSY_STONE_BRICK_SLAB))) {
-			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = Blocks.STONE_BRICK_SLAB.getDefaultState();
-				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.get(_property) != null)
-						try {
-							_bs = _bs.with(_property, (Comparable) entry.getValue());
-						} catch (Exception e) {
-						}
-				}
-				world.setBlockState(_bp, _bs, 3);
-			}
-		} else {
-			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == SavascsakanyItem.block)
-					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE_SLAB))) {
+				|| ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == MegasavcsakaknyItem.block)
+						|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == AlienitepickaxeItem.block)))) {
+			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.MOSSY_STONE_BRICK_SLAB)) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_SLAB.getDefaultState();
+					BlockState _bs = Blocks.STONE_BRICK_SLAB.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -114,12 +102,10 @@ public class Savascsakanyproc5Procedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			} else {
-				if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == SavascsakanyItem.block)
-						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BLACKSTONE_SLAB))) {
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE_SLAB)) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						BlockState _bs = Blocks.POLISHED_BLACKSTONE_SLAB.getDefaultState();
+						BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_SLAB.getDefaultState();
 						BlockState _bso = world.getBlockState(_bp);
 						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -132,12 +118,10 @@ public class Savascsakanyproc5Procedure {
 						world.setBlockState(_bp, _bs, 3);
 					}
 				} else {
-					if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SavascsakanyItem.block)
-							&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.STONE_STAIRS))) {
+					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BLACKSTONE_SLAB)) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = Blocks.STONE_BRICK_STAIRS.getDefaultState();
+							BlockState _bs = Blocks.POLISHED_BLACKSTONE_SLAB.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -150,12 +134,10 @@ public class Savascsakanyproc5Procedure {
 							world.setBlockState(_bp, _bs, 3);
 						}
 					} else {
-						if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == SavascsakanyItem.block)
-								&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.COBBLESTONE_STAIRS))) {
+						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.STONE_STAIRS)) {
 							{
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								BlockState _bs = Blocks.STONE_STAIRS.getDefaultState();
+								BlockState _bs = Blocks.STONE_BRICK_STAIRS.getDefaultState();
 								BlockState _bso = world.getBlockState(_bp);
 								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -168,13 +150,10 @@ public class Savascsakanyproc5Procedure {
 								world.setBlockState(_bp, _bs, 3);
 							}
 						} else {
-							if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-									.getItem() == SavascsakanyItem.block)
-									&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-											.getBlock() == Blocks.MOSSY_STONE_BRICK_STAIRS))) {
+							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.COBBLESTONE_STAIRS)) {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = Blocks.STONE_BRICK_STAIRS.getDefaultState();
+									BlockState _bs = Blocks.STONE_STAIRS.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -187,13 +166,10 @@ public class Savascsakanyproc5Procedure {
 									world.setBlockState(_bp, _bs, 3);
 								}
 							} else {
-								if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-										.getItem() == SavascsakanyItem.block)
-										&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-												.getBlock() == Blocks.POLISHED_BLACKSTONE_STAIRS))) {
+								if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.MOSSY_STONE_BRICK_STAIRS)) {
 									{
 										BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-										BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS.getDefaultState();
+										BlockState _bs = Blocks.STONE_BRICK_STAIRS.getDefaultState();
 										BlockState _bso = world.getBlockState(_bp);
 										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 											Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -206,13 +182,11 @@ public class Savascsakanyproc5Procedure {
 										world.setBlockState(_bp, _bs, 3);
 									}
 								} else {
-									if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-											.getItem() == SavascsakanyItem.block)
-											&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-													.getBlock() == Blocks.BLACKSTONE_STAIRS))) {
+									if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+											.getBlock() == Blocks.POLISHED_BLACKSTONE_STAIRS)) {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = Blocks.POLISHED_BLACKSTONE_STAIRS.getDefaultState();
+											BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -225,13 +199,10 @@ public class Savascsakanyproc5Procedure {
 											world.setBlockState(_bp, _bs, 3);
 										}
 									} else {
-										if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-												.getItem() == SavascsakanyItem.block)
-												&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-														.getBlock() == Blocks.COBBLESTONE_WALL))) {
+										if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BLACKSTONE_STAIRS)) {
 											{
 												BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-												BlockState _bs = Blocks.STONE_BRICK_WALL.getDefaultState();
+												BlockState _bs = Blocks.POLISHED_BLACKSTONE_STAIRS.getDefaultState();
 												BlockState _bso = world.getBlockState(_bp);
 												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 													Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -244,13 +215,11 @@ public class Savascsakanyproc5Procedure {
 												world.setBlockState(_bp, _bs, 3);
 											}
 										} else {
-											if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-													.getItem() == SavascsakanyItem.block)
-													&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-															.getBlock() == Blocks.POLISHED_BLACKSTONE_WALL))) {
+											if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+													.getBlock() == Blocks.COBBLESTONE_WALL)) {
 												{
 													BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-													BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_WALL.getDefaultState();
+													BlockState _bs = Blocks.STONE_BRICK_WALL.getDefaultState();
 													BlockState _bso = world.getBlockState(_bp);
 													for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 														Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -263,14 +232,11 @@ public class Savascsakanyproc5Procedure {
 													world.setBlockState(_bp, _bs, 3);
 												}
 											} else {
-												if (((((entity instanceof LivingEntity)
-														? ((LivingEntity) entity).getHeldItemMainhand()
-														: ItemStack.EMPTY).getItem() == SavascsakanyItem.block)
-														&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																.getBlock() == Blocks.BLACKSTONE_WALL))) {
+												if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+														.getBlock() == Blocks.POLISHED_BLACKSTONE_WALL)) {
 													{
 														BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-														BlockState _bs = Blocks.POLISHED_BLACKSTONE_WALL.getDefaultState();
+														BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_WALL.getDefaultState();
 														BlockState _bso = world.getBlockState(_bp);
 														for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 															Property _property = _bs.getBlock().getStateContainer()
@@ -284,14 +250,11 @@ public class Savascsakanyproc5Procedure {
 														world.setBlockState(_bp, _bs, 3);
 													}
 												} else {
-													if (((((entity instanceof LivingEntity)
-															? ((LivingEntity) entity).getHeldItemMainhand()
-															: ItemStack.EMPTY).getItem() == SavascsakanyItem.block)
-															&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																	.getBlock() == Blocks.MOSSY_STONE_BRICK_WALL))) {
+													if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+															.getBlock() == Blocks.BLACKSTONE_WALL)) {
 														{
 															BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-															BlockState _bs = Blocks.STONE_BRICK_WALL.getDefaultState();
+															BlockState _bs = Blocks.POLISHED_BLACKSTONE_WALL.getDefaultState();
 															BlockState _bso = world.getBlockState(_bp);
 															for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 																Property _property = _bs.getBlock().getStateContainer()
@@ -305,14 +268,11 @@ public class Savascsakanyproc5Procedure {
 															world.setBlockState(_bp, _bs, 3);
 														}
 													} else {
-														if (((((entity instanceof LivingEntity)
-																? ((LivingEntity) entity).getHeldItemMainhand()
-																: ItemStack.EMPTY).getItem() == SavascsakanyItem.block)
-																&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																		.getBlock() == Blocks.BRICKS))) {
+														if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																.getBlock() == Blocks.MOSSY_STONE_BRICK_WALL)) {
 															{
 																BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-																BlockState _bs = TorootteglaBlock.block.getDefaultState();
+																BlockState _bs = Blocks.STONE_BRICK_WALL.getDefaultState();
 																BlockState _bso = world.getBlockState(_bp);
 																for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 																	Property _property = _bs.getBlock().getStateContainer()
@@ -326,14 +286,11 @@ public class Savascsakanyproc5Procedure {
 																world.setBlockState(_bp, _bs, 3);
 															}
 														} else {
-															if (((((entity instanceof LivingEntity)
-																	? ((LivingEntity) entity).getHeldItemMainhand()
-																	: ItemStack.EMPTY).getItem() == SavascsakanyItem.block)
-																	&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																			.getBlock() == TorootteglaBlock.block))) {
+															if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																	.getBlock() == Blocks.BRICKS)) {
 																{
 																	BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-																	BlockState _bs = Blocks.BRICKS.getDefaultState();
+																	BlockState _bs = TorootteglaBlock.block.getDefaultState();
 																	BlockState _bso = world.getBlockState(_bp);
 																	for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 																		Property _property = _bs.getBlock().getStateContainer()
@@ -345,6 +302,26 @@ public class Savascsakanyproc5Procedure {
 																			}
 																	}
 																	world.setBlockState(_bp, _bs, 3);
+																}
+															} else {
+																if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																		.getBlock() == TorootteglaBlock.block)) {
+																	{
+																		BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+																		BlockState _bs = Blocks.BRICKS.getDefaultState();
+																		BlockState _bso = world.getBlockState(_bp);
+																		for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues()
+																				.entrySet()) {
+																			Property _property = _bs.getBlock().getStateContainer()
+																					.getProperty(entry.getKey().getName());
+																			if (_property != null && _bs.get(_property) != null)
+																				try {
+																					_bs = _bs.with(_property, (Comparable) entry.getValue());
+																				} catch (Exception e) {
+																				}
+																		}
+																		world.setBlockState(_bp, _bs, 3);
+																	}
 																}
 															}
 														}

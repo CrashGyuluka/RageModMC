@@ -1,0 +1,118 @@
+{
+  "_fv": 24,
+  "_type": "biome",
+  "definition": {
+    "name": "Ragetree_biome",
+    "groundBlock": {
+      "value": "Blocks.GRASS"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "airColor": {
+      "value": -15058084,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -10092544,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "CUSTOM:Ragefallingtree"
+    },
+    "particlesProbability": 0.4,
+    "biomeCategory": "FOREST",
+    "parent": {
+      "value": "No parent"
+    },
+    "rainingPossibility": 0.4,
+    "temperature": 0.6,
+    "baseHeight": 0.4,
+    "heightVariation": 0.4,
+    "biomeType": "WARM",
+    "spawnBiome": true,
+    "biomeWeight": 2,
+    "biomeDictionaryTypes": [
+      "FOREST"
+    ],
+    "grassPerChunk": 6,
+    "seagrassPerChunk": 0,
+    "flowersPerChunk": 6,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPatchesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "treesPerChunk": 0,
+    "vanillaTreeType": "Default",
+    "treeType": 0,
+    "minHeight": 7,
+    "maxWaterDepth": 0,
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "spawnStronghold": true,
+    "spawnMineshaft": false,
+    "spawnPillagerOutpost": true,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "oceanRuinType": "NONE",
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "Fossils",
+      "Lakes",
+      "OceanCaves",
+      "MonsterRooms"
+    ],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityAnimal"
+        },
+        "minGroup": 2,
+        "maxGroup": 2,
+        "weight": 20,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityMonster"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 5,
+        "spawnType": "monster"
+      }
+    ]
+  }
+}

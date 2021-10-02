@@ -17,7 +17,7 @@ public class AmazonitesavasoItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitesavaso")
 	public static final Item block = null;
 	public AmazonitesavasoItem(RagemodModElements instance) {
-		super(instance, 290);
+		super(instance, 157);
 	}
 
 	@Override

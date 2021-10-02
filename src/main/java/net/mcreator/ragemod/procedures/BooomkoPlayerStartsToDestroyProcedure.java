@@ -53,7 +53,7 @@ public class BooomkoPlayerStartsToDestroyProcedure {
 			world.setBlockState(_bp, _bs, 3);
 		}
 		if (world instanceof World && !((World) world).isRemote) {
-			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.DESTROY);
+			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.NONE);
 		}
 	}
 }

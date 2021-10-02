@@ -21,7 +21,6 @@ import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -130,7 +129,7 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 			this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, SavragerobiEntity.CustomEntity.class, false, false));
 			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Mob1Entity.CustomEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PoliposEntity.CustomEntity.class, false, false));
 			this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false));
 			this.goalSelector.addGoal(6, new RandomWalkingGoal(this, 1));
 			this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
@@ -178,14 +177,14 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 			Random random = this.rand;
 			Entity entity = this;
 			if (true)
-				for (int l = 0; l < 5; ++l) {
+				for (int l = 0; l < 1; ++l) {
 					double d0 = (x + random.nextFloat());
 					double d1 = (y + random.nextFloat());
 					double d2 = (z + random.nextFloat());
 					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.6000000014901161D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.6000000014901161D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.6000000014901161D;
+					double d3 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
 					world.addParticle(RageparticleParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
 		}

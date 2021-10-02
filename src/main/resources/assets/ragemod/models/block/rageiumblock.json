@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/rageium_block2",
-    "up": "ragemod:blocks/rageium_block2",
-    "north": "ragemod:blocks/rageium_block2",
-    "east": "ragemod:blocks/rageium_block2",
-    "south": "ragemod:blocks/rageium_block2",
-    "west": "ragemod:blocks/rageium_block2",
-    "particle": "ragemod:blocks/rageium_block2"
+    "down": "ragemod:blocks/rageium_block4",
+    "up": "ragemod:blocks/rageium_block4",
+    "north": "ragemod:blocks/rageium_block4",
+    "east": "ragemod:blocks/rageium_block4",
+    "south": "ragemod:blocks/rageium_block4",
+    "west": "ragemod:blocks/rageium_block4",
+    "particle": "ragemod:blocks/rageium_block4"
   }
 }

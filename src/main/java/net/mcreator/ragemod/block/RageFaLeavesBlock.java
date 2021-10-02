@@ -35,7 +35,7 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_leaves")
 	public static final Block block = null;
 	public RageFaLeavesBlock(RagemodModElements instance) {
-		super(instance, 134);
+		super(instance, 288);
 	}
 
 	@Override
@@ -78,14 +78,14 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			if (true)
-				for (int l = 0; l < 4; ++l) {
+				for (int l = 0; l < 1; ++l) {
 					double d0 = (x + random.nextFloat());
 					double d1 = (y + random.nextFloat());
 					double d2 = (z + random.nextFloat());
 					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+					double d3 = (random.nextFloat() - 0.5D) * 0.1D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.1D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.1D;
 					world.addParticle(RagefallingtreeParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
 		}

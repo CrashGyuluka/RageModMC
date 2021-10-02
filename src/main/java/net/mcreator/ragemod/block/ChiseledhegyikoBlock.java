@@ -33,7 +33,7 @@ public class ChiseledhegyikoBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:chiseledhegyiko")
 	public static final Block block = null;
 	public ChiseledhegyikoBlock(RagemodModElements instance) {
-		super(instance, 58);
+		super(instance, 213);
 	}
 
 	@Override

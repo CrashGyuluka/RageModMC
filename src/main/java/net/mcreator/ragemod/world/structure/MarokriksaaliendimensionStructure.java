@@ -52,7 +52,7 @@ public class MarokriksaaliendimensionStructure {
 					if (!dimensionCriteria)
 						return false;
 					if ((random.nextInt(1000000) + 1) <= 10000) {
-						int count = random.nextInt(13) + 3;
+						int count = random.nextInt(13) + 4;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
@@ -66,12 +66,12 @@ public class MarokriksaaliendimensionStructure {
 								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + -4, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("ragemod", "marokriksa1"));
+									.getTemplateDefaulted(new ResourceLocation("ragemod", "marokriksatree01"));
 							if (template == null)
 								return false;
 							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

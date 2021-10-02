@@ -13,7 +13,7 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class TermeszettabItemGroup extends RagemodModElements.ModElement {
 	public TermeszettabItemGroup(RagemodModElements instance) {
-		super(instance, 766);
+		super(instance, 773);
 	}
 
 	@Override
@@ -27,9 +27,9 @@ public class TermeszettabItemGroup extends RagemodModElements.ModElement {
 
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
-				return false;
+				return true;
 			}
-		};
+		}.setBackgroundImageName("item_search.png");
 	}
 	public static ItemGroup tab;
 }

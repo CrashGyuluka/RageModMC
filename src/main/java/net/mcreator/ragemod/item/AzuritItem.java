@@ -16,7 +16,7 @@ public class AzuritItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:azurit")
 	public static final Item block = null;
 	public AzuritItem(RagemodModElements instance) {
-		super(instance, 250);
+		super(instance, 117);
 	}
 
 	@Override

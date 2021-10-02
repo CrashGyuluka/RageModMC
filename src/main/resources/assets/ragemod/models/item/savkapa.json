@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "ragemod:items/savkapa"
+    "layer0": "ragemod:items/sav_kapa"
   }
 }

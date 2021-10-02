@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "savkapa",
+    "texture": "sav_kapa",
     "customModelName": "Normal",
     "name": "Toxic Hoe",
     "specialInfo": [],

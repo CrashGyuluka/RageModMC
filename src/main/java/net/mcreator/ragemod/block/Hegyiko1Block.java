@@ -47,7 +47,7 @@ public class Hegyiko1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyiko_1")
 	public static final Block block = null;
 	public Hegyiko1Block(RagemodModElements instance) {
-		super(instance, 51);
+		super(instance, 206);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

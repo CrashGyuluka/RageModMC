@@ -25,7 +25,7 @@ public class Ragewoodstairs6Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragewoodstairs_6")
 	public static final Block block = null;
 	public Ragewoodstairs6Block(RagemodModElements instance) {
-		super(instance, 102);
+		super(instance, 256);
 	}
 
 	@Override

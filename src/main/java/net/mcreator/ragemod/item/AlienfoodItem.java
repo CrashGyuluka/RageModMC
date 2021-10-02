@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class AlienfoodItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienfood")
 	public static final Item block = null;
 	public AlienfoodItem(RagemodModElements instance) {
-		super(instance, 34);
+		super(instance, 182);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class AlienfoodItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(4).saturation(0.3f).build()));
 			setRegistryName("alienfood");
 		}

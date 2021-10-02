@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/chainmail_helmet"
+    "layer0": "ragemod:items/ragium_helmet"
   }
 }

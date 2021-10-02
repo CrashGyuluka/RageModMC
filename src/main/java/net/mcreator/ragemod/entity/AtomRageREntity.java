@@ -173,14 +173,14 @@ public class AtomRageREntity extends RagemodModElements.ModElement {
 			Random random = this.rand;
 			Entity entity = this;
 			if (true)
-				for (int l = 0; l < 2; ++l) {
+				for (int l = 0; l < 1; ++l) {
 					double d0 = (x + random.nextFloat());
 					double d1 = (y + random.nextFloat());
 					double d2 = (z + random.nextFloat());
 					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 1.000000001490116D;
-					double d4 = (random.nextFloat() - 0.5D) * 1.000000001490116D;
-					double d5 = (random.nextFloat() - 0.5D) * 1.000000001490116D;
+					double d3 = (random.nextFloat() - 0.5D) * 0.0999999985098839D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.0999999985098839D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.0999999985098839D;
 					world.addParticle(RageparticleParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
 		}

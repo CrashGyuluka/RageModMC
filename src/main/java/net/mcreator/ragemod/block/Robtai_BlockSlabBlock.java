@@ -29,7 +29,7 @@ public class Robtai_BlockSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_block_slab")
 	public static final Block block = null;
 	public Robtai_BlockSlabBlock(RagemodModElements instance) {
-		super(instance, 194);
+		super(instance, 348);
 	}
 
 	@Override

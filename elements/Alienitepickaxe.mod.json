@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alien_pickaxe",
+    "customModelName": "Normal",
+    "name": "Alienite Pickaxe",
+    "specialInfo": [
+      "Mine with the MegaMine effect active!"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 5,
+    "efficiency": 13.0,
+    "attackSpeed": 1.0,
+    "enchantability": 23,
+    "damageVsEntity": 1.0,
+    "usageCount": 4690,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alienite"
+      },
+      {
+        "value": "CUSTOM:Cursedalienite"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "AlienitepickaxeBlockDestroyedWithTool"
+    }
+  }
+}

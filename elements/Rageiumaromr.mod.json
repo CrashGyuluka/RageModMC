@@ -3,7 +3,7 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "chainmail_helmet",
+    "textureHelmet": "ragium_helmet",
     "enableBody": true,
     "textureBody": "chainmail_chestplate",
     "enableLeggings": true,

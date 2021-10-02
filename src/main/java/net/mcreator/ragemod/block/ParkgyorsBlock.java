@@ -18,7 +18,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.procedures.ParkgyorsEntityWalksOnTheBlockProcedure;
-import net.mcreator.ragemod.itemgroup.RageModepitItemGroup;
+import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -31,14 +31,13 @@ public class ParkgyorsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parkgyors")
 	public static final Block block = null;
 	public ParkgyorsBlock(RagemodModElements instance) {
-		super(instance, 245);
+		super(instance, 35);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(RageModepitItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MoretabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

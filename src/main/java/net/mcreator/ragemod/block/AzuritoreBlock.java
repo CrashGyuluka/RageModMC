@@ -47,7 +47,7 @@ public class AzuritoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:azuritore")
 	public static final Block block = null;
 	public AzuritoreBlock(RagemodModElements instance) {
-		super(instance, 260);
+		super(instance, 127);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "rope": "rope",
+        "metal": "hook_metal"
+      },
+      "name": "default"
+    }
+  }
+}

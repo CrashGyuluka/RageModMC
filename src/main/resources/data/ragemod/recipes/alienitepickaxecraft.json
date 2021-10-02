@@ -1,0 +1,30 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:alienite"
+    },
+    "1": {
+      "item": "ragemod:alienite"
+    },
+    "2": {
+      "item": "ragemod:alienite"
+    },
+    "4": {
+      "item": "ragemod:stick_3"
+    },
+    "7": {
+      "item": "ragemod:stick_3"
+    }
+  },
+  "result": {
+    "item": "ragemod:alienitepickaxe",
+    "count": 1
+  }
+}

@@ -30,8 +30,7 @@ import net.minecraft.util.Mirror;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.ragemod.procedures.HangingalienshroomAdditionalPlacinggrowthConditionProcedure;
-import net.mcreator.ragemod.block.HegyimorzsoltBlock;
+import net.mcreator.ragemod.procedures.Hangingalienplant2AdditionalGenerationConditionProcedure;
 import net.mcreator.ragemod.block.Hegyiko1Block;
 import net.mcreator.ragemod.block.DestroyablealiensoildevBlock;
 import net.mcreator.ragemod.block.CoveredaliengrassBlock;
@@ -67,30 +66,28 @@ public class Hangingalienplant2Structure {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.WORLD_SURFACE_WG, i, k);
-							j = Math.abs(random.nextInt(Math.max(1, j)) - 24);
+							j -= 1;
 							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
 							boolean blockCriteria = false;
 							if (blockAt.getBlock() == Blocks.STONE)
 								blockCriteria = true;
-							if (blockAt.getBlock() == Hegyiko1Block.block)
-								blockCriteria = true;
-							if (blockAt.getBlock() == HegyimorzsoltBlock.block)
-								blockCriteria = true;
 							if (blockAt.getBlock() == Blocks.DIORITE)
 								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.GRANITE)
-								blockCriteria = true;
 							if (blockAt.getBlock() == Blocks.ANDESITE)
+								blockCriteria = true;
+							if (blockAt.getBlock() == Blocks.GRANITE)
 								blockCriteria = true;
 							if (blockAt.getBlock() == Blocks.DIRT)
 								blockCriteria = true;
 							if (blockAt.getBlock() == Blocks.GRASS_BLOCK)
 								blockCriteria = true;
+							if (blockAt.getBlock() == Hegyiko1Block.block)
+								blockCriteria = true;
 							if (blockAt.getBlock() == AliensoilBlock.block)
 								blockCriteria = true;
-							if (blockAt.getBlock() == CoveredaliengrassBlock.block)
-								blockCriteria = true;
 							if (blockAt.getBlock() == AliendirtBlock.block)
+								blockCriteria = true;
+							if (blockAt.getBlock() == CoveredaliengrassBlock.block)
 								blockCriteria = true;
 							if (blockAt.getBlock() == DestroyablealiensoildevBlock.block)
 								blockCriteria = true;
@@ -102,7 +99,7 @@ public class Hangingalienplant2Structure {
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
-							if (!HangingalienshroomAdditionalPlacinggrowthConditionProcedure
+							if (!Hangingalienplant2AdditionalGenerationConditionProcedure
 									.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
@@ -126,6 +123,6 @@ public class Hangingalienplant2Structure {
 	}
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_STRUCTURES).add(() -> configuredFeature);
+		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
 	}
 }

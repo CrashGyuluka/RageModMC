@@ -39,12 +39,12 @@ public class RagefallingtreeParticle {
 			this.spriteSet = spriteSet;
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
-			this.maxAge = 7;
-			this.particleGravity = (float) 1.3;
+			this.maxAge = (int) Math.max(1, 6 + (this.rand.nextInt(4) - 2));
+			this.particleGravity = (float) 1.5;
 			this.canCollide = true;
-			this.motionX = vx * 0.9;
-			this.motionY = vy * 0.9;
-			this.motionZ = vz * 0.9;
+			this.motionX = vx * 0.5;
+			this.motionY = vy * 0.5;
+			this.motionZ = vz * 0.5;
 			this.selectSpriteRandomly(spriteSet);
 		}
 

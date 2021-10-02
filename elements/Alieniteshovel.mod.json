@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "alienite_shovel",
+    "customModelName": "Normal",
+    "name": "Alienite Shovel",
+    "specialInfo": [
+      "Rightclick on path or dirt block while shifting!"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 5,
+    "efficiency": 16.0,
+    "attackSpeed": 1.0,
+    "enchantability": 24,
+    "damageVsEntity": 1.0,
+    "usageCount": 4690,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Alienite"
+      },
+      {
+        "value": "CUSTOM:Cursedalienite"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "AlieniteshovelRightClickedOnBlock"
+    }
+  }
+}

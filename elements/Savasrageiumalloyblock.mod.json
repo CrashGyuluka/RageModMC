@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "qqqq",
+    "texture": "rageium_block3",
     "textureTop": "savas_felul",
-    "textureLeft": "savas_rageium_alloy_block",
-    "textureFront": "savas_rageium_alloy_block",
-    "textureRight": "savas_rageium_alloy_block",
-    "textureBack": "savas_rageium_alloy_block",
+    "textureLeft": "savas_rageium_block3",
+    "textureFront": "savas_rageium_block3",
+    "textureRight": "savas_rageium_block3",
+    "textureBack": "savas_rageium_block3",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -58,6 +58,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -75,6 +78,21 @@
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "METAL"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,

@@ -25,7 +25,7 @@ public class PolishedhegyikostairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:polishedhegyikostairs")
 	public static final Block block = null;
 	public PolishedhegyikostairsBlock(RagemodModElements instance) {
-		super(instance, 63);
+		super(instance, 218);
 	}
 
 	@Override

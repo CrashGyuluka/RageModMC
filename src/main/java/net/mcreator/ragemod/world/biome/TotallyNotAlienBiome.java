@@ -49,7 +49,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public TotallyNotAlienBiome(RagemodModElements instance) {
-		super(instance, 1232);
+		super(instance, 1239);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -58,6 +58,8 @@ public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-6750055).setWaterColor(-10092493).setWaterFogColor(-10092493)
 						.withSkyColor(-6750055).withFoliageColor(-10079233).withGrassColor(-13434778)
+						.setAmbientSound(
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")))
 						.setMoodSound(new MoodSoundAmbience(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d7")),
 								30000, 8, 2))
@@ -109,7 +111,7 @@ public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(Mob1Entity.entity, 2, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 5, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ENDERMAN, 20, 4, 4));
-				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.4f).scale(0.9f).temperature(0f)
+				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.6f).scale(0.9f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("ragemod:totally_not_alien"));

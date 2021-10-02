@@ -51,7 +51,7 @@ public class Fa3Structure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 400) {
+					if ((random.nextInt(1000000) + 1) <= 200) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -66,12 +66,12 @@ public class Fa3Structure {
 								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + -3, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("ragemod", "kizukra_with"));
+									.getTemplateDefaulted(new ResourceLocation("ragemod", "kizukratree01"));
 							if (template == null)
 								return false;
 							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

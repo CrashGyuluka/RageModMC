@@ -25,7 +25,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.procedures.ParkoldEntityWalksOnTheBlockProcedure;
-import net.mcreator.ragemod.itemgroup.RageModepitItemGroup;
+import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -38,14 +38,13 @@ public class Parkold2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parkold_2")
 	public static final Block block = null;
 	public Parkold2Block(RagemodModElements instance) {
-		super(instance, 241);
+		super(instance, 32);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(RageModepitItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MoretabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;

@@ -49,7 +49,7 @@ import com.google.common.collect.ImmutableList;
 public class WaterbukkbiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public WaterbukkbiomeBiome(RagemodModElements instance) {
-		super(instance, 1209);
+		super(instance, 1216);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

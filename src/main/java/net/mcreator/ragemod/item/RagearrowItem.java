@@ -51,7 +51,7 @@ public class RagearrowItem extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletragearrow").setRegistryName("entitybulletragearrow");
 	public RagearrowItem(RagemodModElements instance) {
-		super(instance, 18);
+		super(instance, 17);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RagearrowRenderer.ModelRegisterHandler());
 	}
 

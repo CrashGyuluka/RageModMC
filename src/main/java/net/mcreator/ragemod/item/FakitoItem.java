@@ -23,7 +23,7 @@ public class FakitoItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:fakito")
 	public static final Item block = null;
 	public FakitoItem(RagemodModElements instance) {
-		super(instance, 24);
+		super(instance, 23);
 	}
 
 	@Override

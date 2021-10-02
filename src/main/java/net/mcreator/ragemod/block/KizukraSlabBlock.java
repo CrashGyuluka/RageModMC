@@ -28,7 +28,7 @@ public class KizukraSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_slab")
 	public static final Block block = null;
 	public KizukraSlabBlock(RagemodModElements instance) {
-		super(instance, 170);
+		super(instance, 324);
 	}
 
 	@Override

@@ -32,7 +32,7 @@ public class RagedoorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragedoor")
 	public static final Block block = null;
 	public RagedoorBlock(RagemodModElements instance) {
-		super(instance, 123);
+		super(instance, 277);
 	}
 
 	@Override

@@ -33,7 +33,7 @@ public class OpalblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:opalblock")
 	public static final Block block = null;
 	public OpalblockBlock(RagemodModElements instance) {
-		super(instance, 284);
+		super(instance, 151);
 	}
 
 	@Override

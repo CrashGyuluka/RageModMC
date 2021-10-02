@@ -12,18 +12,15 @@
       "value": "CUSTOM:Ragetab"
     },
     "stackSize": 1,
-    "nutritionalValue": 4,
+    "nutritionalValue": 30,
     "saturation": 0.0,
-    "eatingSpeed": 65,
+    "eatingSpeed": 40,
     "resultItem": {
       "value": "CUSTOM:Trofea"
     },
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "drink",
-    "hasGlow": false,
-    "onEaten": {
-      "name": "TrofeaFoodEaten"
-    }
+    "hasGlow": false
   }
 }

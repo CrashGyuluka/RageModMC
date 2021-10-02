@@ -16,7 +16,7 @@ public class DiamondnugetItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:diamondnuget")
 	public static final Item block = null;
 	public DiamondnugetItem(RagemodModElements instance) {
-		super(instance, 25);
+		super(instance, 24);
 	}
 
 	@Override

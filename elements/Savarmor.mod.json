@@ -3,7 +3,7 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "--savsapi",
+    "textureHelmet": "toxic_helmet2",
     "enableBody": true,
     "textureBody": "--savmellvert",
     "enableLeggings": true,
