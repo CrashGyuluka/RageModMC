@@ -564,56 +564,6 @@
       "path": "~/tag"
     },
     {
-      "name": "B1",
-      "type": "biome",
-      "sortid": 422,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "b_1",
-      "path": "~/bijom"
-    },
-    {
-      "name": "B2",
-      "type": "biome",
-      "sortid": 423,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "b_2",
-      "path": "~/bijom"
-    },
-    {
-      "name": "B3",
-      "type": "biome",
-      "sortid": 424,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "b_3",
-      "path": "~/bijom"
-    },
-    {
-      "name": "B4",
-      "type": "biome",
-      "sortid": 425,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "b_4",
-      "path": "~/bijom"
-    },
-    {
-      "name": "B5",
-      "type": "biome",
-      "sortid": 426,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "b_5",
-      "path": "~/bijom"
-    },
-    {
       "name": "Str1",
       "type": "structure",
       "sortid": 427,
@@ -14961,6 +14911,112 @@
       "ids": {},
       "registry_name": "oreplus_5",
       "path": "~/dimensions/structure"
+    },
+    {
+      "name": "BedrockBraker",
+      "type": "potioneffect",
+      "sortid": 1313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bedrock_braker",
+      "path": "~/dimensions"
+    },
+    {
+      "name": "BedrockbrakerpotionFoodEaten",
+      "type": "procedure",
+      "sortid": 1313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bedrockbrakerpotion_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/dimensions/proc"
+    },
+    {
+      "name": "Bedrockbrakerpotion",
+      "type": "food",
+      "sortid": 1313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bedrockbrakerpotion",
+      "path": "~/dimensions"
+    },
+    {
+      "name": "Dimension1PlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 1313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dimension_1_player_enters_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/proc"
+    },
+    {
+      "name": "BedrockBrakerRightClicksBlock",
+      "type": "procedure",
+      "sortid": 1314,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bedrock_braker_right_clicks_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/proc"
     }
   ],
   "variable_elements": [
@@ -15104,6 +15160,7 @@
       "block.ragemod.parkold_2": "Parkour - Sideway Plus",
       "block.ragemod.robtai_block_pressure_plate": "Stripped Robtai Pressure Plate",
       "block.ragemod.aliengrowth": "Alien Growth",
+      "effect.bedrock_braker": "BedrockBraker",
       "advancements.adv_10.descr": "Craft 9 rageium into a rageium block!",
       "item.ragemod.fire": "Fire Relic",
       "block.ragemod.savasjungleplank": "Toxic Jungle Planks",
@@ -15202,6 +15259,7 @@
       "block.ragemod.kizukra_block_pressure_plate": "Kizukra Block Pressure Plate",
       "block.ragemod.parkfelplus": "Parkour - Up Plus",
       "item.minecraft.potion.effect.rage_potion_plus": "Potion of Rage",
+      "item.ragemod.bedrockbrakerpotion": "BedrockBraker Potion",
       "item.ragemod.aktinolitgyuru": "Aktinolite Ring",
       "block.ragemod.stripped_kizukra_log": "Stripped Kizukra Log",
       "item.ragemod.savascsakany": "Toxic Pickaxe",
@@ -15512,15 +15570,10 @@
       "block.ragemod.savasnyirplank": "Toxic Birch Planks",
       "item.ragemod.mega_mine_potion_2": "MegaMine Potion",
       "itemGroup.tabercek": "RageMod:Ores",
-      "biome.ragemod.b_5": "B 5",
       "block.ragemod.bukk_stairs": "Beech Stairs",
-      "biome.ragemod.b_4": "otixbiome",
       "biome.ragemod.ragetreebiome": "Ragetree_biome",
-      "biome.ragemod.b_1": "B 1",
       "block.ragemod.aktinolitblock": "Actinolite Block",
       "entity.ragemod.atom_rage_r": "AtomRageR",
-      "biome.ragemod.b_3": "B 3",
-      "biome.ragemod.b_2": "B 2",
       "block.ragemod.chiseledalpiv": "Alpiv Block",
       "block.ragemod.cvexore": "Cvex Ore",
       "block.ragemod.alientrapblock": "Alien Trap",
@@ -15644,6 +15697,7 @@
       "block.ragemod.parkold_2": "Parkour - Sideway Plus",
       "block.ragemod.robtai_block_pressure_plate": "Stripped Robtai Pressure Plate",
       "block.ragemod.aliengrowth": "Alien Lawn",
+      "effect.bedrock_braker": "BedrockBraker",
       "advancements.adv_10.descr": "Craft 9 rageium into a rageium block!",
       "item.ragemod.fire": "Fire Relic",
       "block.ragemod.savasjungleplank": "Toxic Jungle Planks",
@@ -15742,6 +15796,7 @@
       "block.ragemod.kizukra_block_pressure_plate": "Kizukra Block Pressure Plate",
       "block.ragemod.parkfelplus": "Parkour - Up Plus",
       "item.minecraft.potion.effect.rage_potion_plus": "Potion of Rage",
+      "item.ragemod.bedrockbrakerpotion": "BedrockBraker Potion",
       "item.ragemod.aktinolitgyuru": "Aktinolite Ring",
       "block.ragemod.stripped_kizukra_log": "Stripped Kizukra Log",
       "item.ragemod.savascsakany": "Toxic Pickaxe",
@@ -16052,15 +16107,10 @@
       "block.ragemod.savasnyirplank": "Toxic Birch Planks",
       "item.ragemod.mega_mine_potion_2": "MegaMine Potion II.",
       "itemGroup.tabercek": "RageMod:Ores",
-      "biome.ragemod.b_5": "B 5",
       "block.ragemod.bukk_stairs": "Beech Stairs",
-      "biome.ragemod.b_4": "otixbiome",
       "biome.ragemod.ragetreebiome": "Ragetree_biome",
-      "biome.ragemod.b_1": "B 1",
       "block.ragemod.aktinolitblock": "Actinolite Block",
       "entity.ragemod.atom_rage_r": "AtomRageR",
-      "biome.ragemod.b_3": "B 3",
-      "biome.ragemod.b_2": "B 2",
       "block.ragemod.chiseledalpiv": "Chiseled Alpiv ",
       "block.ragemod.cvexore": "CveX Ore",
       "block.ragemod.alientrapblock": "Alien Trap",
@@ -16184,6 +16234,7 @@
       "block.ragemod.parkold_2": "Parkour - Oldal Plus",
       "block.ragemod.robtai_block_pressure_plate": "Kérgezett Robtai Nyomólap",
       "block.ragemod.aliengrowth": "Alien Growth",
+      "effect.bedrock_braker": "BedrockBraker",
       "advancements.adv_10.descr": "Barkácsolj 9 Rageium-ot 1 Rageium Blokk-á!",
       "item.ragemod.fire": "Tûz Relikvia",
       "block.ragemod.savasjungleplank": "Savas Dzsungelfa Deszka",
@@ -16282,6 +16333,7 @@
       "block.ragemod.kizukra_block_pressure_plate": "Kizukra Blokk Nyomólap",
       "block.ragemod.parkfelplus": "Parkour - Fel Plusz",
       "item.minecraft.potion.effect.rage_potion_plus": "Rage Bájital",
+      "item.ragemod.bedrockbrakerpotion": "BedrockBraker Potion",
       "block.ragemod.stripped_kizukra_log": "Kérgezett Kizukra Rönk",
       "item.ragemod.aktinolitgyuru": "Aktinolit Gyûrû",
       "item.ragemod.savascsakany": "Sav Csákány",
@@ -16592,15 +16644,10 @@
       "block.ragemod.savasnyirplank": "Savas Nyírfa Deszka",
       "item.ragemod.mega_mine_potion_2": "MegaMine Potion",
       "itemGroup.tabercek": "RageMod:Ércek",
-      "biome.ragemod.b_5": "Biome5",
       "block.ragemod.bukk_stairs": "Bükk Lépcsõ",
-      "biome.ragemod.b_4": "OtixBiome",
       "biome.ragemod.ragetreebiome": "Ragetree_biome",
-      "biome.ragemod.b_1": "Biome1",
       "block.ragemod.aktinolitblock": "Aktinolit Blokk",
       "entity.ragemod.atom_rage_r": "AtomRageR",
-      "biome.ragemod.b_3": "Biome3",
-      "biome.ragemod.b_2": "Biome2",
       "block.ragemod.chiseledalpiv": "Alpiv Block",
       "block.ragemod.cvexore": "CveX Érc",
       "block.ragemod.alientrapblock": "Alien Trap",

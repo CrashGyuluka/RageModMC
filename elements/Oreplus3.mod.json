@@ -15,7 +15,11 @@
     "spawnWorldTypes": [
       "CUSTOM:Dimension1"
     ],
-    "restrictionBlocks": [],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.STONE#0"
+      }
+    ],
     "restrictionBiomes": [],
     "ignoreBlocks": "STRUCTURE_BLOCK"
   }
