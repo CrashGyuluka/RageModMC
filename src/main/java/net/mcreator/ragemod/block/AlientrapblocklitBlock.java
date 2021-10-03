@@ -133,7 +133,7 @@ public class AlientrapblocklitBlock extends RagemodModElements.ModElement {
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
-			if (blockAt.getBlock() == Hegyiko1Block.block)
+			if (blockAt.getBlock() == AlientrapblockBlock.block)
 				blockCriteria = true;
 			return blockCriteria;
 		}
@@ -160,7 +160,7 @@ public class AlientrapblocklitBlock extends RagemodModElements.ModElement {
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 2)).range(64)
-					.square().func_242731_b(56);
+					.square().func_242731_b(10);
 			event.getRegistry().register(feature.setRegistryName("alientrapblocklit"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alientrapblocklit"), configuredFeature);
 		}

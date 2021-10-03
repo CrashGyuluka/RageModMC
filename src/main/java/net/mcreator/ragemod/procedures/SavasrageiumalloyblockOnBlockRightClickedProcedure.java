@@ -60,7 +60,7 @@ public class SavasrageiumalloyblockOnBlockRightClickedProcedure {
 			world.setBlockState(_bp, _bs, 3);
 		}
 		if (world instanceof World && !((World) world).isRemote) {
-			((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 5,
+			((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 4,
 					Explosion.Mode.BREAK);
 		}
 	}
