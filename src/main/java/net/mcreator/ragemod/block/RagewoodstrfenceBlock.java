@@ -32,7 +32,7 @@ public class RagewoodstrfenceBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragewoodstrfence")
 	public static final Block block = null;
 	public RagewoodstrfenceBlock(RagemodModElements instance) {
-		super(instance, 268);
+		super(instance, 271);
 	}
 
 	@Override

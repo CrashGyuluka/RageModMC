@@ -10,7 +10,7 @@ import net.minecraft.entity.Entity;
 import net.mcreator.ragemod.item.SavercrItem;
 import net.mcreator.ragemod.item.RageiumItem;
 import net.mcreator.ragemod.item.OpalItem;
-import net.mcreator.ragemod.item.ObsontiumItem;
+import net.mcreator.ragemod.block.ObsontiumblockBlock;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
@@ -114,8 +114,8 @@ public class ConvertercheckguifullProcedure {
 				if (_current instanceof Supplier) {
 					Object invobj = ((Supplier) _current).get();
 					if (invobj instanceof Map) {
-						ItemStack _setstack = new ItemStack(ObsontiumItem.block);
-						_setstack.setCount((int) 3);
+						ItemStack _setstack = new ItemStack(ObsontiumblockBlock.block);
+						_setstack.setCount((int) 2);
 						((Slot) ((Map) invobj).get((int) (6))).putStack(_setstack);
 						_current.detectAndSendChanges();
 					}

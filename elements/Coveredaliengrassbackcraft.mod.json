@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 8,
+    "recipeRetstackSize": 9,
     "group": "",
     "recipeShapeless": true,
     "recipeSlots": [
@@ -13,13 +13,7 @@
         "value": ""
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:Coveredaliengrass"
       },
       {
         "value": "CUSTOM:Coveredaliengrass"
@@ -28,13 +22,19 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:Coveredaliengrass"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Coveredaliengrass"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Coveredaliengrass"
+      },
+      {
+        "value": "CUSTOM:Coveredaliengrass"
+      },
+      {
+        "value": "CUSTOM:Coveredaliengrass"
       }
     ],
     "recipeReturnStack": {

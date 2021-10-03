@@ -26,7 +26,7 @@ public class RageWoodslab2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_woodslab_2")
 	public static final Block block = null;
 	public RageWoodslab2Block(RagemodModElements instance) {
-		super(instance, 265);
+		super(instance, 268);
 	}
 
 	@Override

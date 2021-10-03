@@ -54,7 +54,6 @@ import net.mcreator.ragemod.procedures.HangingalienshroomAdditionalPlacinggrowth
 import net.mcreator.ragemod.procedures.HangingalienplantUpdateTickProcedure;
 import net.mcreator.ragemod.procedures.HangingalienplantOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.particle.AlienplantparticleParticle;
-import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -70,7 +69,7 @@ public class Hangingalienplantexluse1Block extends RagemodModElements.ModElement
 	@ObjectHolder("ragemod:hangingalienplantexluse_1")
 	public static final Block block = null;
 	public Hangingalienplantexluse1Block(RagemodModElements instance) {
-		super(instance, 389);
+		super(instance, 201);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -78,8 +77,7 @@ public class Hangingalienplantexluse1Block extends RagemodModElements.ModElement
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

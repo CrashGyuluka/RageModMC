@@ -39,7 +39,7 @@ public class SavasrageiumsecretBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasrageiumsecret")
 	public static final Block block = null;
 	public SavasrageiumsecretBlock(RagemodModElements instance) {
-		super(instance, 620);
+		super(instance, 622);
 	}
 
 	@Override

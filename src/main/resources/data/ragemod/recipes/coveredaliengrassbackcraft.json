@@ -4,10 +4,28 @@
   "ingredients": [
     {
       "item": "ragemod:coveredaliengrass"
+    },
+    {
+      "item": "ragemod:coveredaliengrass"
+    },
+    {
+      "item": "ragemod:coveredaliengrass"
+    },
+    {
+      "item": "ragemod:coveredaliengrass"
+    },
+    {
+      "item": "ragemod:coveredaliengrass"
+    },
+    {
+      "item": "ragemod:coveredaliengrass"
+    },
+    {
+      "item": "ragemod:coveredaliengrass"
     }
   ],
   "result": {
     "item": "ragemod:aliensoil",
-    "count": 8
+    "count": 9
   }
 }

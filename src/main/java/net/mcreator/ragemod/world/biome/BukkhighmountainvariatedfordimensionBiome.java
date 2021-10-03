@@ -46,7 +46,7 @@ import com.google.common.collect.ImmutableList;
 public class BukkhighmountainvariatedfordimensionBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public BukkhighmountainvariatedfordimensionBiome(RagemodModElements instance) {
-		super(instance, 1226);
+		super(instance, 1228);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

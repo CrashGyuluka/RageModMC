@@ -28,7 +28,7 @@ public class Stripped_KizukraPressurePlateBlock extends RagemodModElements.ModEl
 	@ObjectHolder("ragemod:stripped_kizukra_pressure_plate")
 	public static final Block block = null;
 	public Stripped_KizukraPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 334);
+		super(instance, 337);
 	}
 
 	@Override

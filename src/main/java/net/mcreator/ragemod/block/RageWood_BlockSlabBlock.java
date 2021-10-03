@@ -29,7 +29,7 @@ public class RageWood_BlockSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_wood_block_slab")
 	public static final Block block = null;
 	public RageWood_BlockSlabBlock(RagemodModElements instance) {
-		super(instance, 258);
+		super(instance, 261);
 	}
 
 	@Override

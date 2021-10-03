@@ -28,7 +28,7 @@ public class Kizukra_BlockPressurePlateBlock extends RagemodModElements.ModEleme
 	@ObjectHolder("ragemod:kizukra_block_pressure_plate")
 	public static final Block block = null;
 	public Kizukra_BlockPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 333);
+		super(instance, 336);
 	}
 
 	@Override

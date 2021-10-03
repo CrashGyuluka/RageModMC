@@ -27,7 +27,7 @@ public class MarokriksaStairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_stairs")
 	public static final Block block = null;
 	public MarokriksaStairsBlock(RagemodModElements instance) {
-		super(instance, 371);
+		super(instance, 374);
 	}
 
 	@Override

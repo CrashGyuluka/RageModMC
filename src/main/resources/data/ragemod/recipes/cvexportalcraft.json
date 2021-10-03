@@ -11,7 +11,7 @@
       "item": "ragemod:hegyiko_1"
     },
     "1": {
-      "item": "ragemod:cvexblock"
+      "item": "ragemod:hegyikopolished"
     },
     "2": {
       "item": "ragemod:hegyiko_1"
@@ -20,23 +20,23 @@
       "item": "ragemod:hegyikopolished"
     },
     "4": {
-      "item": "ragemod:obsontium"
+      "item": "ragemod:cvexblock"
     },
     "5": {
       "item": "ragemod:hegyikopolished"
     },
     "6": {
-      "item": "ragemod:hegyikopolished"
+      "item": "ragemod:hegyiko_1"
     },
     "7": {
       "item": "ragemod:hegyikopolished"
     },
     "8": {
-      "item": "ragemod:hegyikopolished"
+      "item": "ragemod:hegyiko_1"
     }
   },
   "result": {
     "item": "ragemod:cvexportalblock",
-    "count": 4
+    "count": 5
   }
 }

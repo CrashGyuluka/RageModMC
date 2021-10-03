@@ -23,7 +23,7 @@ public class AlieniteswordItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienitesword")
 	public static final Item block = null;
 	public AlieniteswordItem(RagemodModElements instance) {
-		super(instance, 1303);
+		super(instance, 183);
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class AlieniteswordItem extends RagemodModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(AlieniteItem.block), new ItemStack(CursedalieniteItem.block));
 			}
-		}, 3, -3.4f, new Item.Properties().group(ErcekItemGroup.tab).isImmuneToFire()) {
+		}, 3, -2.2999999999999998f, new Item.Properties().group(ErcekItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

@@ -69,7 +69,7 @@ public class Haningalienplant5Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:haningalienplant_5")
 	public static final Block block = null;
 	public Haningalienplant5Block(RagemodModElements instance) {
-		super(instance, 1280);
+		super(instance, 1282);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

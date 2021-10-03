@@ -30,7 +30,7 @@ public class BukkplanksprplBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukkplanksprpl")
 	public static final Block block = null;
 	public BukkplanksprplBlock(RagemodModElements instance) {
-		super(instance, 310);
+		super(instance, 313);
 	}
 
 	@Override

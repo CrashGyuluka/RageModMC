@@ -36,7 +36,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RagetreebiomeBiome(RagemodModElements instance) {
-		super(instance, 1300);
+		super(instance, 1301);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

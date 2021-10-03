@@ -40,7 +40,7 @@ public class ParkfelplusEntityWalksOnTheBlockProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		entity.setMotion(0, 3, 0);
+		entity.setMotion(0, 2.5, 0);
 		world.addParticle(ParticleTypes.TOTEM_OF_UNDYING, x, y, z, 1, 1, 1);
 	}
 }
