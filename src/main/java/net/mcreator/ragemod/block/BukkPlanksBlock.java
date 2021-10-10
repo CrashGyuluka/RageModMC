@@ -27,7 +27,7 @@ public class BukkPlanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_planks")
 	public static final Block block = null;
 	public BukkPlanksBlock(RagemodModElements instance) {
-		super(instance, 296);
+		super(instance, 163);
 	}
 
 	@Override

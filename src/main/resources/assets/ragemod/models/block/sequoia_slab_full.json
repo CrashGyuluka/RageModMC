@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "ragemod:blocks/sequoia_planks",
+    "top": "ragemod:blocks/sequoia_planks",
+    "side": "ragemod:blocks/sequoia_planks"
+  }
+}

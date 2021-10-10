@@ -46,15 +46,15 @@
     "particleToSpawn": {
       "value": "CUSTOM:Alienparticle"
     },
-    "particlesProbability": 0.4,
+    "particlesProbability": 0.5,
     "biomeCategory": "NONE",
     "parent": {
       "value": "No parent"
     },
     "rainingPossibility": 0.0,
     "temperature": 0.0,
-    "baseHeight": 0.6,
-    "heightVariation": 0.9,
+    "baseHeight": 1.3,
+    "heightVariation": 1.2,
     "biomeType": "COOL",
     "spawnBiome": false,
     "biomeWeight": 7,

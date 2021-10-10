@@ -29,7 +29,7 @@ public class MarokriksaFenceBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_fence")
 	public static final Block block = null;
 	public MarokriksaFenceBlock(RagemodModElements instance) {
-		super(instance, 380);
+		super(instance, 247);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class MarokriksaFenceBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(10f, 15f).setLightLevel(s -> 0).harvestLevel(2)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 15f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("marokriksa_fence");
 		}

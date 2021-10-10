@@ -21,7 +21,7 @@ public class DeepslateadularoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateadularore")
 	public static final Block block = null;
 	public DeepslateadularoreBlock(RagemodModElements instance) {
-		super(instance, 132);
+		super(instance, 356);
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class DeepslateadularoreBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(7f, 1f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(7f, 1f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("deepslateadularore");
 		}

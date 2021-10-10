@@ -34,7 +34,7 @@
     ],
     "name": "Marokriksa Block",
     "specialInfo": [],
-    "hardness": 8.0,
+    "hardness": 4.0,
     "resistance": 8.0,
     "hasGravity": false,
     "isWaterloggable": false,

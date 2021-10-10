@@ -56,7 +56,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnoveny")
 	public static final Block block = null;
 	public SavasnovenyBlock(RagemodModElements instance) {
-		super(instance, 60);
+		super(instance, 284);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -92,7 +92,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(
 					(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new DoublePlantBlockPlacer()))
-							.tries(64).func_227317_b_().build())
+							.tries(2).func_227317_b_().build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(1);
 			event.getRegistry().register(feature.setRegistryName("savasnoveny"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:savasnoveny"), configuredFeature);
@@ -101,21 +101,11 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:b_1").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_2").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_3").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_4").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_5").equals(event.getName()))
-			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("swamp").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("savanna_plateau").equals(event.getName()))
+		if (new ResourceLocation("swamp_hills").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

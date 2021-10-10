@@ -29,6 +29,7 @@ import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
@@ -82,8 +83,8 @@ public class SecretboomkoBlock extends RagemodModElements.ModElement {
 		}
 
 		@Override
-		public void onBlockClicked(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity) {
-			super.onBlockClicked(blockstate, world, pos, entity);
+		public boolean removedByPlayer(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
@@ -95,6 +96,7 @@ public class SecretboomkoBlock extends RagemodModElements.ModElement {
 				$_dependencies.put("world", world);
 				BooomkoPlayerStartsToDestroyProcedure.executeProcedure($_dependencies);
 			}
+			return retval;
 		}
 	}
 	private static Feature<OreFeatureConfig> feature = null;

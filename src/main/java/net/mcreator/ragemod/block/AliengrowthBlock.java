@@ -55,7 +55,7 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aliengrowth")
 	public static final Block block = null;
 	public AliengrowthBlock(RagemodModElements instance) {
-		super(instance, 198);
+		super(instance, 69);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -97,25 +97,14 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 			configuredFeature = feature
 					.withConfiguration(
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
-									.tries(36).build())
-					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(30);
+									.tries(37).build())
+					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(32);
 			event.getRegistry().register(feature.setRegistryName("aliengrowth"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:aliengrowth"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:alienplains").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:ruinedalienbiome").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:totally_not_alien").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:alienforest").equals(event.getName()))
-			biomeCriteria = true;
-		if (!biomeCriteria)
-			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
 	public static class BlockCustomFlower extends FlowerBlock {

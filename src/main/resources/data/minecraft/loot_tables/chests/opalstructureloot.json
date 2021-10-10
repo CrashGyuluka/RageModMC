@@ -13,7 +13,7 @@
               "function": "set_count",
               "count": {
                 "min": 2,
-                "max": 3
+                "max": 4
               }
             },
             {
@@ -58,8 +58,8 @@
             {
               "function": "set_count",
               "count": {
-                "min": 3,
-                "max": 5
+                "min": 4,
+                "max": 8
               }
             },
             {

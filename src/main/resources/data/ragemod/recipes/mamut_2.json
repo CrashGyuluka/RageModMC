@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 8,
+  "ingredient": {
+    "item": "ragemod:sequoia_wood"
+  },
+  "result": "ragemod:sequoia_planks"
+}

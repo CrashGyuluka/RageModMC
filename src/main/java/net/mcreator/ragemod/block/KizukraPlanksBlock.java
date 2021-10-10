@@ -27,7 +27,7 @@ public class KizukraPlanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_planks")
 	public static final Block block = null;
 	public KizukraPlanksBlock(RagemodModElements instance) {
-		super(instance, 321);
+		super(instance, 188);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class KizukraPlanksBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("kizukra_planks");
 		}

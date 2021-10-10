@@ -29,7 +29,7 @@ public class BukkSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_slab")
 	public static final Block block = null;
 	public BukkSlabBlock(RagemodModElements instance) {
-		super(instance, 302);
+		super(instance, 169);
 	}
 
 	@Override

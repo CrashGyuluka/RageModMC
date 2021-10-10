@@ -9,6 +9,12 @@
       },
       {
         "value": "CUSTOM:RobtaiLog"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockWood"
+      },
+      {
+        "value": "CUSTOM:Robtai_BlockLog"
       }
     ],
     "blocks": [],

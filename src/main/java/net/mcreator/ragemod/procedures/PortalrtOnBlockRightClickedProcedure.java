@@ -348,10 +348,12 @@ public class PortalrtOnBlockRightClickedProcedure {
 							return false;
 						}
 					}.checkGamemode(entity)))) {
-						if (entity instanceof PlayerEntity) {
-							ItemStack _stktoremove = new ItemStack(Items.GOLD_NUGGET);
-							((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-									((PlayerEntity) entity).container.func_234641_j_());
+						if ((Math.random() < 0.5)) {
+							if (entity instanceof PlayerEntity) {
+								ItemStack _stktoremove = new ItemStack(Items.GOLD_NUGGET);
+								((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+										((PlayerEntity) entity).container.func_234641_j_());
+							}
 						}
 					}
 					if (((world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule)) == (true))) {

@@ -10,8 +10,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.entity.player.PlayerEntity;
@@ -27,15 +25,13 @@ import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.List;
-import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_leaves")
 	public static final Block block = null;
 	public RageFaLeavesBlock(RagemodModElements instance) {
-		super(instance, 288);
+		super(instance, 158);
 	}
 
 	@Override
@@ -46,7 +42,7 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.2f).setLightLevel(s -> 0)
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.1f, 0.2f).setLightLevel(s -> 0)
 					.harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid());
 			setRegistryName("rage_fa_leaves");
 		}
@@ -59,14 +55,6 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 30;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
 		@OnlyIn(Dist.CLIENT)

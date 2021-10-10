@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 5,
+    "recipeRetstackSize": 2,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -13,25 +13,25 @@
         "value": "CUSTOM:Hegyiko1"
       },
       {
-        "value": "CUSTOM:Hegyikopolished"
+        "value": "CUSTOM:Hegyiko1"
       },
       {
         "value": "CUSTOM:Hegyiko1"
       },
       {
-        "value": "CUSTOM:Hegyikopolished"
+        "value": "CUSTOM:Hegyiko1"
       },
       {
         "value": "CUSTOM:Cvexblock"
       },
       {
-        "value": "CUSTOM:Hegyikopolished"
+        "value": "CUSTOM:Hegyiko1"
       },
       {
         "value": "CUSTOM:Hegyiko1"
       },
       {
-        "value": "CUSTOM:Hegyikopolished"
+        "value": "CUSTOM:Hegyiko1"
       },
       {
         "value": "CUSTOM:Hegyiko1"

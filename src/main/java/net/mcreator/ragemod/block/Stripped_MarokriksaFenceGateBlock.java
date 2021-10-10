@@ -28,7 +28,7 @@ public class Stripped_MarokriksaFenceGateBlock extends RagemodModElements.ModEle
 	@ObjectHolder("ragemod:stripped_marokriksa_fence_gate")
 	public static final Block block = null;
 	public Stripped_MarokriksaFenceGateBlock(RagemodModElements instance) {
-		super(instance, 382);
+		super(instance, 249);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class Stripped_MarokriksaFenceGateBlock extends RagemodModElements.ModEle
 	}
 	public static class CustomBlock extends FenceGateBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(8f, 8f).setLightLevel(s -> 0).harvestLevel(2)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("stripped_marokriksa_fence_gate");
 		}

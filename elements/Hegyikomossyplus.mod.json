@@ -127,11 +127,11 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "CUSTOM:Hegyiko1"
+        "value": "Blocks.STONE#0"
       }
     ],
-    "frequencyPerChunks": 1,
-    "frequencyOnChunk": 1,
+    "frequencyPerChunks": 2,
+    "frequencyOnChunk": 3,
     "minGenerateHeight": 85,
     "maxGenerateHeight": 256
   }

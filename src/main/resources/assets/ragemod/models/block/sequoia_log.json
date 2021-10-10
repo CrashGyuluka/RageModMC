@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/mamautfenyo5",
+    "up": "ragemod:blocks/mamautfenyo5",
+    "north": "ragemod:blocks/mamut9",
+    "east": "ragemod:blocks/mamut9",
+    "south": "ragemod:blocks/mamut9",
+    "west": "ragemod:blocks/mamut9",
+    "particle": "ragemod:blocks/mamautfenyo5"
+  }
+}

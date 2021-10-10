@@ -43,7 +43,7 @@ public class AnapaitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:anapaitore")
 	public static final Block block = null;
 	public AnapaitoreBlock(RagemodModElements instance) {
-		super(instance, 135);
+		super(instance, 359);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -94,13 +94,15 @@ public class AnapaitoreBlock extends RagemodModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
+						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(64)
-					.square().func_242731_b(5);
+					.square().func_242731_b(6);
 			event.getRegistry().register(feature.setRegistryName("anapaitore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:anapaitore"), configuredFeature);
 		}

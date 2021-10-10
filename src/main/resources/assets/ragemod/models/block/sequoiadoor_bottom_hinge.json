@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "ragemod:blocks/mamut_d_down",
+    "top": "ragemod:blocks/mamut_d_top"
+  }
+}

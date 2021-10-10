@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "structure",
   "definition": {
-    "structure": "kizukratree02",
+    "structure": "kizukra_without",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 1600,
     "minCountPerChunk": 2,
     "maxCountPerChunk": 4,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": -3,
+    "spawnHeightOffset": 0,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [

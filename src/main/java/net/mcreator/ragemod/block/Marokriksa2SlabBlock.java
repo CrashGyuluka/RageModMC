@@ -29,7 +29,7 @@ public class Marokriksa2SlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_2_slab")
 	public static final Block block = null;
 	public Marokriksa2SlabBlock(RagemodModElements instance) {
-		super(instance, 375);
+		super(instance, 242);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class Marokriksa2SlabBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(8f, 8f).setLightLevel(s -> 0).harvestLevel(2)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("marokriksa_2_slab");
 		}

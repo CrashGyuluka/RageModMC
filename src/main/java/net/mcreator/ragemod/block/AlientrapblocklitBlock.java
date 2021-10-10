@@ -55,7 +55,7 @@ public class AlientrapblocklitBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alientrapblocklit")
 	public static final Block block = null;
 	public AlientrapblocklitBlock(RagemodModElements instance) {
-		super(instance, 1285);
+		super(instance, 1303);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

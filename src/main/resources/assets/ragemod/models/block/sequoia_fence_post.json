@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "ragemod:blocks/sequoia_planks",
+    "particle": "ragemod:blocks/sequoia_planks"
+  }
+}

@@ -22,6 +22,7 @@ import net.minecraft.world.gen.feature.BigMushroomFeatureConfig;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.biome.SoundAdditionsAmbience;
 import net.minecraft.world.biome.ParticleEffectAmbience;
 import net.minecraft.world.biome.MoodSoundAmbience;
 import net.minecraft.world.biome.MobSpawnInfo;
@@ -49,7 +50,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RuinedalienbiomeBiome(RagemodModElements instance) {
-		super(instance, 1254);
+		super(instance, 1272);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -58,11 +59,12 @@ public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-8185981).setWaterColor(-8450233).setWaterFogColor(-10092493)
 						.withSkyColor(-8185981).withFoliageColor(-10079233).withGrassColor(-11462262)
-						.setAmbientSound(
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")))
 						.setMoodSound(new MoodSoundAmbience(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d7")),
 								30000, 8, 2))
+						.setAdditionsSound(new SoundAdditionsAmbience(
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")),
+								0.0111D))
 						.setMusic(new BackgroundMusicSelector(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")),
 								12000, 24000, true))

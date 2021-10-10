@@ -28,7 +28,7 @@ public class Robtai_BlockFenceGateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_block_fence_gate")
 	public static final Block block = null;
 	public Robtai_BlockFenceGateBlock(RagemodModElements instance) {
-		super(instance, 357);
+		super(instance, 224);
 	}
 
 	@Override

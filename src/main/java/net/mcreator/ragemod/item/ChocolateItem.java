@@ -17,7 +17,7 @@ public class ChocolateItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:chocolate")
 	public static final Item block = null;
 	public ChocolateItem(RagemodModElements instance) {
-		super(instance, 42);
+		super(instance, 55);
 	}
 
 	@Override

@@ -68,16 +68,6 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:b_1").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_2").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_3").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_4").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:b_5").equals(event.getName()))
-			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("desert").equals(event.getName()))

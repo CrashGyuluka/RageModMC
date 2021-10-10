@@ -21,7 +21,7 @@ public class DeepslateaktinolitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateaktinolitore")
 	public static final Block block = null;
 	public DeepslateaktinolitoreBlock(RagemodModElements instance) {
-		super(instance, 134);
+		super(instance, 358);
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class DeepslateaktinolitoreBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 20f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 20f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7f));
 			setRegistryName("deepslateaktinolitore");
 		}

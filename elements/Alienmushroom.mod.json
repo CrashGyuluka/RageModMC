@@ -78,7 +78,7 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 19,
+    "frequencyOnChunks": 23,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],

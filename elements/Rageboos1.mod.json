@@ -46,9 +46,9 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 12,
+    "attackStrength": 10,
     "attackKnockback": 2.0,
-    "knockbackResistance": 2.0,
+    "knockbackResistance": 3.0,
     "movementSpeed": 0.33,
     "armorBaseValue": 20.0,
     "trackingRange": 128,
@@ -68,16 +68,16 @@
     "immuneToFallDamage": true,
     "immuneToCactus": true,
     "immuneToDrowning": true,
-    "immuneToLightning": true,
+    "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
     "immuneToTrident": false,
-    "immuneToAnvil": false,
+    "immuneToAnvil": true,
     "immuneToWither": false,
-    "immuneToDragonBreath": false,
+    "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "CUSTOM:Trofea"
+      "value": "CUSTOM:Dimension1"
     },
     "livingSound": {
       "value": ""

@@ -28,7 +28,7 @@ public class KizukraplankspressureplateBlock extends RagemodModElements.ModEleme
 	@ObjectHolder("ragemod:kizukraplankspressureplate")
 	public static final Block block = null;
 	public KizukraplankspressureplateBlock(RagemodModElements instance) {
-		super(instance, 338);
+		super(instance, 205);
 	}
 
 	@Override

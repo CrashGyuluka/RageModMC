@@ -39,7 +39,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Termeszettab"
+      "value": "CUSTOM:Moretab"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -94,7 +94,7 @@
     "fallSound": {
       "value": ""
     },
-    "luminance": 10,
+    "luminance": 1,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "spawnParticles": false,

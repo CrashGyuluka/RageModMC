@@ -31,6 +31,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -46,7 +47,7 @@ public class HegyikogreenBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikogreen")
 	public static final Block block = null;
 	public HegyikogreenBlock(RagemodModElements instance) {
-		super(instance, 210);
+		super(instance, 77);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -85,7 +86,7 @@ public class HegyikogreenBlock extends RagemodModElements.ModElement {
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
-			if (blockAt.getBlock() == Hegyiko1Block.block)
+			if (blockAt.getBlock() == Blocks.STONE)
 				blockCriteria = true;
 			return blockCriteria;
 		}
@@ -111,8 +112,8 @@ public class HegyikogreenBlock extends RagemodModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 1)).range(256)
-					.square().func_242731_b(1);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 3)).range(256)
+					.square().func_242731_b(2);
 			event.getRegistry().register(feature.setRegistryName("hegyikogreen"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hegyikogreen"), configuredFeature);
 		}

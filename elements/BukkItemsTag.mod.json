@@ -9,6 +9,12 @@
       },
       {
         "value": "CUSTOM:BukkLog"
+      },
+      {
+        "value": "CUSTOM:Strippedbukkwood"
+      },
+      {
+        "value": "CUSTOM:Strippedbukklog"
       }
     ],
     "blocks": [],

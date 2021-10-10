@@ -25,7 +25,7 @@ public class HegyikopolishedpressureplateBlock extends RagemodModElements.ModEle
 	@ObjectHolder("ragemod:hegyikopolishedpressureplate")
 	public static final Block block = null;
 	public HegyikopolishedpressureplateBlock(RagemodModElements instance) {
-		super(instance, 239);
+		super(instance, 106);
 	}
 
 	@Override

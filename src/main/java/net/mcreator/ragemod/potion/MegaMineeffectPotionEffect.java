@@ -24,7 +24,7 @@ public class MegaMineeffectPotionEffect {
 		public EffectCustom() {
 			super(EffectType.NEUTRAL, -13434829);
 			setRegistryName("mega_mineeffect");
-			potionIcon = new ResourceLocation("ragemod:textures/megamine_effect1.png");
+			potionIcon = new ResourceLocation("ragemod:textures/megamine_effect2.png");
 		}
 
 		@Override

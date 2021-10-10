@@ -43,7 +43,7 @@ public class CerusszitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cerusszitore")
 	public static final Block block = null;
 	public CerusszitoreBlock(RagemodModElements instance) {
-		super(instance, 137);
+		super(instance, 361);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -55,7 +55,7 @@ public class CerusszitoreBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.1f, 1f).setLightLevel(s -> 0).harvestLevel(4)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.1f, 1f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(1.2000000000000002f));
 			setRegistryName("cerusszitore");
 		}
@@ -100,7 +100,7 @@ public class CerusszitoreBlock extends RagemodModElements.ModElement {
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 3)).range(128)
-					.square().func_242731_b(4);
+					.square().func_242731_b(6);
 			event.getRegistry().register(feature.setRegistryName("cerusszitore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:cerusszitore"), configuredFeature);
 		}

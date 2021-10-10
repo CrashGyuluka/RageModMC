@@ -34,8 +34,8 @@
     ],
     "name": "Marokriksa Log",
     "specialInfo": [],
-    "hardness": 10.0,
-    "resistance": 7.247796636776956,
+    "hardness": 4.0,
+    "resistance": 7.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {

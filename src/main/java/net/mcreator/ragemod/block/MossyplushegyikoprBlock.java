@@ -25,7 +25,7 @@ public class MossyplushegyikoprBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:mossyplushegyikopr")
 	public static final Block block = null;
 	public MossyplushegyikoprBlock(RagemodModElements instance) {
-		super(instance, 237);
+		super(instance, 104);
 	}
 
 	@Override

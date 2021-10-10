@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 4,
+    "breakHarvestLevel": 2,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"
@@ -130,7 +130,7 @@
         "value": "Blocks.NETHERRACK"
       }
     ],
-    "frequencyPerChunks": 4,
+    "frequencyPerChunks": 6,
     "frequencyOnChunk": 3,
     "minGenerateHeight": 20,
     "maxGenerateHeight": 128

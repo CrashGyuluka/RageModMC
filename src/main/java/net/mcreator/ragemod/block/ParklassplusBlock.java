@@ -31,7 +31,7 @@ public class ParklassplusBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parklassplus")
 	public static final Block block = null;
 	public ParklassplusBlock(RagemodModElements instance) {
-		super(instance, 38);
+		super(instance, 51);
 	}
 
 	@Override

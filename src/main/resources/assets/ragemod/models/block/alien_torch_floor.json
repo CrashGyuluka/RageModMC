@@ -1,0 +1,9 @@
+{
+  "parent": "ragemod:custom/metal_torch_floor",
+  "textures": {
+    "all": "ragemod:blocks/base",
+    "particle": "ragemod:blocks/base",
+    "0": "ragemod:blocks/base",
+    "1": "ragemod:blocks/flame"
+  }
+}

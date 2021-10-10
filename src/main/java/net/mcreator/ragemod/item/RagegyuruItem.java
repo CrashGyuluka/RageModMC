@@ -29,7 +29,7 @@ public class RagegyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragegyuru")
 	public static final Item block = null;
 	public RagegyuruItem(RagemodModElements instance) {
-		super(instance, 161);
+		super(instance, 385);
 	}
 
 	@Override

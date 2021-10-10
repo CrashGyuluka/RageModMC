@@ -16,7 +16,7 @@ public class CerusszitItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cerusszit")
 	public static final Item block = null;
 	public CerusszitItem(RagemodModElements instance) {
-		super(instance, 122);
+		super(instance, 346);
 	}
 
 	@Override

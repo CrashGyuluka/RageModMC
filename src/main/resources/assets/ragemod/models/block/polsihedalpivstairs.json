@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "ragemod:blocks/alpiv_smooth",
+    "top": "ragemod:blocks/alpiv_smooth",
+    "side": "ragemod:blocks/alpiv_smooth"
+  }
+}

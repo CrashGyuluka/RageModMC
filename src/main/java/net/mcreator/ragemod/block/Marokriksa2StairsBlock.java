@@ -28,7 +28,7 @@ public class Marokriksa2StairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_2_stairs")
 	public static final Block block = null;
 	public Marokriksa2StairsBlock(RagemodModElements instance) {
-		super(instance, 372);
+		super(instance, 239);
 	}
 
 	@Override
@@ -39,9 +39,9 @@ public class Marokriksa2StairsBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
-			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(8f, 8f).setLightLevel(s -> 0)
+			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f).setLightLevel(s -> 0)
 					.harvestLevel(2).harvestTool(ToolType.AXE).setRequiresTool()).getDefaultState(),
-					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(8f, 8f).setLightLevel(s -> 0).harvestLevel(2)
+					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f).setLightLevel(s -> 0).harvestLevel(2)
 							.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("marokriksa_2_stairs");
 		}

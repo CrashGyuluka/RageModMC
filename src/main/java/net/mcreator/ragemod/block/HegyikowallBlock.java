@@ -39,7 +39,7 @@ public class HegyikowallBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikowall")
 	public static final Block block = null;
 	public HegyikowallBlock(RagemodModElements instance) {
-		super(instance, 229);
+		super(instance, 96);
 	}
 
 	@Override

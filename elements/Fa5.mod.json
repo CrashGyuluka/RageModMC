@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "structure",
   "definition": {
-    "structure": "marokriksatree01",
+    "structure": "marokriksa1",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 1300,
     "minCountPerChunk": 5,
     "maxCountPerChunk": 15,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": -4,
+    "spawnHeightOffset": 0,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [

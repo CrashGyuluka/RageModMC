@@ -4,6 +4,8 @@ package net.mcreator.ragemod.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.Items;
@@ -12,12 +14,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.util.ITooltipFlag;
 
 import net.mcreator.ragemod.procedures.BedrockbrakerpotionFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
@@ -25,7 +29,7 @@ public class BedrockbrakerpotionItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bedrockbrakerpotion")
 	public static final Item block = null;
 	public BedrockbrakerpotionItem(RagemodModElements instance) {
-		super(instance, 1313);
+		super(instance, 414);
 	}
 
 	@Override
@@ -52,6 +56,12 @@ public class BedrockbrakerpotionItem extends RagemodModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getEatSound() {
 			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
+		}
+
+		@Override
+		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
+			super.addInformation(itemstack, world, list, flag);
+			list.add(new StringTextComponent("Right click to delete bedrock in the cave dimension."));
 		}
 
 		@Override

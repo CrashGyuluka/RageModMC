@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/mamut10",
+    "particle": "ragemod:blocks/mamut10"
+  }
+}

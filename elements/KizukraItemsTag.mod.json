@@ -9,6 +9,12 @@
       },
       {
         "value": "CUSTOM:KizukraLog"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraWood"
+      },
+      {
+        "value": "CUSTOM:Stripped_KizukraLog"
       }
     ],
     "blocks": [],

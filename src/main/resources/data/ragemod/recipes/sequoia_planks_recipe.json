@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:sequoia_log"
+    }
+  ],
+  "result": {
+    "item": "ragemod:sequoia_planks",
+    "count": 4
+  }
+}

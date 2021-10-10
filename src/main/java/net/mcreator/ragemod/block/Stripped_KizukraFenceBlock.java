@@ -29,7 +29,7 @@ public class Stripped_KizukraFenceBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_kizukra_fence")
 	public static final Block block = null;
 	public Stripped_KizukraFenceBlock(RagemodModElements instance) {
-		super(instance, 329);
+		super(instance, 196);
 	}
 
 	@Override

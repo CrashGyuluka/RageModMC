@@ -1,0 +1,36 @@
+{
+  "_fv": 24,
+  "_type": "structure",
+  "definition": {
+    "structure": "light_str1",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 40000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Ground",
+    "spawnHeightOffset": -1,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "CUSTOM:AlienDimension"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:Aliensoil"
+      },
+      {
+        "value": "CUSTOM:Destroyablealiensoildev"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Alienforest"
+      },
+      {
+        "value": "CUSTOM:TotallyNotAlien"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

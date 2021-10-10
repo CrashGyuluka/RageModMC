@@ -9,6 +9,15 @@ import net.minecraft.entity.Entity;
 import net.mcreator.ragemod.block.Sturtureplacer1Block;
 import net.mcreator.ragemod.block.Structureplacer2Block;
 import net.mcreator.ragemod.block.Structurehatarolo1Block;
+import net.mcreator.ragemod.block.Strplacer6Block;
+import net.mcreator.ragemod.block.Strplacer5Block;
+import net.mcreator.ragemod.block.Strplacer4Block;
+import net.mcreator.ragemod.block.Strplacer3Block;
+import net.mcreator.ragemod.block.Strhatarolo6Block;
+import net.mcreator.ragemod.block.Strhatarolo5Block;
+import net.mcreator.ragemod.block.Strhatarolo4Block;
+import net.mcreator.ragemod.block.Strhatarolo3Block;
+import net.mcreator.ragemod.block.Strhatarolo2Block;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.Map;
@@ -33,6 +42,51 @@ public class GivestrdevblockCommandExecutedProcedure {
 		}
 		if (entity instanceof PlayerEntity) {
 			ItemStack _setstack = new ItemStack(Structureplacer2Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strhatarolo2Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strhatarolo3Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strplacer3Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strplacer4Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strplacer5Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strplacer6Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strhatarolo4Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strhatarolo5Block.block);
+			_setstack.setCount((int) 1);
+			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+		}
+		if (entity instanceof PlayerEntity) {
+			ItemStack _setstack = new ItemStack(Strhatarolo6Block.block);
 			_setstack.setCount((int) 1);
 			ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 		}

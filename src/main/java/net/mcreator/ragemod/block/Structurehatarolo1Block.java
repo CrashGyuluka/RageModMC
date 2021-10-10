@@ -35,7 +35,7 @@ public class Structurehatarolo1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:structurehatarolo_1")
 	public static final Block block = null;
 	public Structurehatarolo1Block(RagemodModElements instance) {
-		super(instance, 885);
+		super(instance, 903);
 	}
 
 	@Override
@@ -87,10 +87,6 @@ public class Structurehatarolo1Block extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				Structurehatarolo1BlockAddedProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);

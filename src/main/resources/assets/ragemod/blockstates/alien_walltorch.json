@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ragemod:block/alien_walltorch"
+    },
+    "facing=east": {
+      "model": "ragemod:block/alien_walltorch",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ragemod:block/alien_walltorch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ragemod:block/alien_walltorch",
+      "y": 270
+    }
+  }
+}

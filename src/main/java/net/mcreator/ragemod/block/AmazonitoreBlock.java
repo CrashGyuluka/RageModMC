@@ -43,7 +43,7 @@ public class AmazonitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitore")
 	public static final Block block = null;
 	public AmazonitoreBlock(RagemodModElements instance) {
-		super(instance, 138);
+		super(instance, 362);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -100,7 +100,7 @@ public class AmazonitoreBlock extends RagemodModElements.ModElement {
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 3)).range(64)
-					.square().func_242731_b(5);
+					.square().func_242731_b(6);
 			event.getRegistry().register(feature.setRegistryName("amazonitore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:amazonitore"), configuredFeature);
 		}

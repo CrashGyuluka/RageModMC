@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SequoiaWood"
+      },
+      {
+        "value": "CUSTOM:SequoiaLog"
+      },
+      {
+        "value": "CUSTOM:Stripped_SequoiaWood"
+      },
+      {
+        "value": "CUSTOM:Stripped_SequoiaLog"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "sequoia_log",
+    "namespace": "forge"
+  }
+}

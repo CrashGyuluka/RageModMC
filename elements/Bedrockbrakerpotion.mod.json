@@ -7,7 +7,9 @@
     "customModelName": "Normal",
     "name": "BedrockBraker Potion",
     "rarity": "COMMON",
-    "specialInfo": [],
+    "specialInfo": [
+      "Right click to delete bedrock in the cave dimension."
+    ],
     "creativeTab": {
       "value": "CUSTOM:Ercek"
     },

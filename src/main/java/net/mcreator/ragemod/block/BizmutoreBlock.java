@@ -43,7 +43,7 @@ public class BizmutoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bizmutore")
 	public static final Block block = null;
 	public BizmutoreBlock(RagemodModElements instance) {
-		super(instance, 140);
+		super(instance, 364);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -100,7 +100,7 @@ public class BizmutoreBlock extends RagemodModElements.ModElement {
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 5)).range(64)
-					.square().func_242731_b(4);
+					.square().func_242731_b(5);
 			event.getRegistry().register(feature.setRegistryName("bizmutore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:bizmutore"), configuredFeature);
 		}

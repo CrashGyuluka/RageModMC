@@ -28,7 +28,7 @@ public class Stripped_MarokriksaPressurePlateBlock extends RagemodModElements.Mo
 	@ObjectHolder("ragemod:stripped_marokriksa_pressure_plate")
 	public static final Block block = null;
 	public Stripped_MarokriksaPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 387);
+		super(instance, 254);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class Stripped_MarokriksaPressurePlateBlock extends RagemodModElements.Mo
 	}
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
-			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(8f, 8f)
+			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f)
 					.setLightLevel(s -> 0).harvestLevel(2).harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("stripped_marokriksa_pressure_plate");
 		}

@@ -27,7 +27,7 @@ public class MarokriksaPlanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_planks")
 	public static final Block block = null;
 	public MarokriksaPlanksBlock(RagemodModElements instance) {
-		super(instance, 371);
+		super(instance, 238);
 	}
 
 	@Override
@@ -38,8 +38,8 @@ public class MarokriksaPlanksBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(10f, 10.871694955165434f).setLightLevel(s -> 0)
-					.harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool());
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(0)
+					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("marokriksa_planks");
 		}
 

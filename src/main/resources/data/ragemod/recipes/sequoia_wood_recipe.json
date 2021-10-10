@@ -1,0 +1,26 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:sequoia_log"
+    },
+    "1": {
+      "item": "ragemod:sequoia_log"
+    },
+    "2": {
+      "item": "ragemod:sequoia_log"
+    },
+    "3": {
+      "item": "ragemod:sequoia_log"
+    }
+  },
+  "result": {
+    "item": "ragemod:sequoia_wood",
+    "count": 3
+  }
+}

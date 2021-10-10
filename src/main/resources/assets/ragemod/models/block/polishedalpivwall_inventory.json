@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "ragemod:blocks/alpiv_smooth",
+    "particle": "ragemod:blocks/alpiv_smooth"
+  }
+}

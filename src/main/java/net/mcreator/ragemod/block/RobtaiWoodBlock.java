@@ -33,7 +33,7 @@ public class RobtaiWoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_wood")
 	public static final Block block = null;
 	public RobtaiWoodBlock(RagemodModElements instance) {
-		super(instance, 342);
+		super(instance, 209);
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class RobtaiWoodBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2.2f, 2f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(AXIS, Direction.Axis.Y));
 			setRegistryName("robtai_wood");

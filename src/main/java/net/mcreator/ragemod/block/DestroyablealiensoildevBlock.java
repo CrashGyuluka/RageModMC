@@ -24,7 +24,7 @@ public class DestroyablealiensoildevBlock extends RagemodModElements.ModElement 
 	@ObjectHolder("ragemod:destroyablealiensoildev")
 	public static final Block block = null;
 	public DestroyablealiensoildevBlock(RagemodModElements instance) {
-		super(instance, 1252);
+		super(instance, 1270);
 	}
 
 	@Override

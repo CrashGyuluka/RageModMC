@@ -25,7 +25,6 @@ import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -48,8 +47,6 @@ import net.mcreator.ragemod.RagemodModElements;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
-import java.util.List;
-import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class KizukraLeavesBlock extends RagemodModElements.ModElement {
@@ -58,7 +55,7 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public KizukraLeavesBlock(RagemodModElements instance) {
-		super(instance, 341);
+		super(instance, 208);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -78,7 +75,7 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.6000000000000001f, 0.6000000000000001f)
-					.setLightLevel(s -> 0).harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid().tickRandomly());
+					.setLightLevel(s -> 0).harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid());
 			setRegistryName("kizukra_leaves");
 		}
 
@@ -90,14 +87,6 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 90;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
 		@Override

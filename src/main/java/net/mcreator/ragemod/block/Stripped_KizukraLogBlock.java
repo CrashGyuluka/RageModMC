@@ -28,7 +28,7 @@ public class Stripped_KizukraLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_kizukra_log")
 	public static final Block block = null;
 	public Stripped_KizukraLogBlock(RagemodModElements instance) {
-		super(instance, 320);
+		super(instance, 187);
 	}
 
 	@Override

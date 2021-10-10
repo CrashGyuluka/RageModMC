@@ -33,7 +33,7 @@ public class MarokriksaLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_log")
 	public static final Block block = null;
 	public MarokriksaLogBlock(RagemodModElements instance) {
-		super(instance, 369);
+		super(instance, 236);
 	}
 
 	@Override
@@ -45,8 +45,8 @@ public class MarokriksaLogBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(10f, 7.247796636776956f).setLightLevel(s -> 0)
-					.harvestLevel(2).harvestTool(ToolType.AXE).setRequiresTool());
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 7f).setLightLevel(s -> 0).harvestLevel(2)
+					.harvestTool(ToolType.AXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(AXIS, Direction.Axis.Y));
 			setRegistryName("marokriksa_log");
 		}

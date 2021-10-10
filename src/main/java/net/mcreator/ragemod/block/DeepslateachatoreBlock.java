@@ -30,7 +30,7 @@ public class DeepslateachatoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateachatore")
 	public static final Block block = null;
 	public DeepslateachatoreBlock(RagemodModElements instance) {
-		super(instance, 130);
+		super(instance, 354);
 	}
 
 	@Override

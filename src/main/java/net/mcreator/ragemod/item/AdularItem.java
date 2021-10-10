@@ -16,7 +16,7 @@ public class AdularItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:adular")
 	public static final Item block = null;
 	public AdularItem(RagemodModElements instance) {
-		super(instance, 119);
+		super(instance, 343);
 	}
 
 	@Override

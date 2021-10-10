@@ -58,22 +58,6 @@ public class RageBoosSpawnerRightClickedOnBlockProcedure {
 			world.addEntity(entityToSpawn);
 		}
 		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new AtomRageREntity.CustomEntity(AtomRageREntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), world.getRandom().nextFloat() * 360F, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new RagemiteEntity.CustomEntity(RagemiteEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), world.getRandom().nextFloat() * 360F, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new RagemiteEntity.CustomEntity(RagemiteEntity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), world.getRandom().nextFloat() * 360F, 0);
 			if (entityToSpawn instanceof MobEntity)

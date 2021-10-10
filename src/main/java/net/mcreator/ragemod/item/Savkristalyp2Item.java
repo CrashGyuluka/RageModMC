@@ -16,7 +16,7 @@ public class Savkristalyp2Item extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savkristalyp_2")
 	public static final Item block = null;
 	public Savkristalyp2Item(RagemodModElements instance) {
-		super(instance, 52);
+		super(instance, 276);
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public class AdularoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:adularore")
 	public static final Block block = null;
 	public AdularoreBlock(RagemodModElements instance) {
-		super(instance, 131);
+		super(instance, 355);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -55,7 +55,7 @@ public class AdularoreBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(6f, 1f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(6f, 1f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("adularore");
 		}
@@ -93,6 +93,8 @@ public class AdularoreBlock extends RagemodModElements.ModElement {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
+						dimensionCriteria = true;
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

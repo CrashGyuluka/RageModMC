@@ -39,7 +39,7 @@ public class FullhegyikowallBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:fullhegyikowall")
 	public static final Block block = null;
 	public FullhegyikowallBlock(RagemodModElements instance) {
-		super(instance, 232);
+		super(instance, 99);
 	}
 
 	@Override

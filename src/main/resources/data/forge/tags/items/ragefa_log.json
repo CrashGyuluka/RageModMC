@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "ragemod:rage_fa_wood",
-    "ragemod:rage_fa_log"
+    "ragemod:rage_fa_log",
+    "ragemod:ragefalogs_1",
+    "ragemod:ragefalog_2",
+    "ragemod:ragefalogb_1",
+    "ragemod:ragefalogb_2"
   ]
 }

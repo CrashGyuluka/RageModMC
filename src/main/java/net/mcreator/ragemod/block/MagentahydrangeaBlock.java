@@ -55,7 +55,7 @@ public class MagentahydrangeaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:magentahydrangea")
 	public static final Block block = null;
 	public MagentahydrangeaBlock(RagemodModElements instance) {
-		super(instance, 192);
+		super(instance, 63);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -97,8 +97,8 @@ public class MagentahydrangeaBlock extends RagemodModElements.ModElement {
 			configuredFeature = feature
 					.withConfiguration(
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
-									.tries(2).build())
-					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(2);
+									.tries(5).build())
+					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(9);
 			event.getRegistry().register(feature.setRegistryName("magentahydrangea"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:magentahydrangea"), configuredFeature);
 		}

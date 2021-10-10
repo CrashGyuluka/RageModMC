@@ -17,7 +17,7 @@ public class AmazonitsavasfejszeItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitsavasfejsze")
 	public static final Item block = null;
 	public AmazonitsavasfejszeItem(RagemodModElements instance) {
-		super(instance, 156);
+		super(instance, 380);
 	}
 
 	@Override

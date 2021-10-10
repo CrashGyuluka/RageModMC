@@ -16,7 +16,7 @@ public class BizmutItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bizmut")
 	public static final Item block = null;
 	public BizmutItem(RagemodModElements instance) {
-		super(instance, 125);
+		super(instance, 349);
 	}
 
 	@Override

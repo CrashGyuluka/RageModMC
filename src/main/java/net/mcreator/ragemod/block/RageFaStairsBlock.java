@@ -28,7 +28,7 @@ public class RageFaStairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_stairs")
 	public static final Block block = null;
 	public RageFaStairsBlock(RagemodModElements instance) {
-		super(instance, 255);
+		super(instance, 122);
 	}
 
 	@Override

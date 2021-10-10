@@ -25,7 +25,7 @@ public class HegyikostairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikostairs")
 	public static final Block block = null;
 	public HegyikostairsBlock(RagemodModElements instance) {
-		super(instance, 217);
+		super(instance, 84);
 	}
 
 	@Override

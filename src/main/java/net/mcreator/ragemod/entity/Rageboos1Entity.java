@@ -38,7 +38,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.ragemod.particle.RageparticleParticle;
 import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
-import net.mcreator.ragemod.item.TrofeaItem;
+import net.mcreator.ragemod.item.Dimension1Item;
 import net.mcreator.ragemod.entity.renderer.Rageboos1Renderer;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -72,8 +72,8 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.33);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 200);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 20);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 12);
-			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 2);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 10);
+			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 3);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 2);
 			event.put(entity, ammma.create());
 		}
@@ -124,7 +124,7 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
 			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(TrofeaItem.block));
+			this.entityDropItem(new ItemStack(Dimension1Item.block));
 		}
 
 		@Override
@@ -145,7 +145,9 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 				return false;
 			if (source == DamageSource.DROWN)
 				return false;
-			if (source == DamageSource.LIGHTNING_BOLT)
+			if (source == DamageSource.ANVIL)
+				return false;
+			if (source == DamageSource.DRAGON_BREATH)
 				return false;
 			return super.attackEntityFrom(source, amount);
 		}

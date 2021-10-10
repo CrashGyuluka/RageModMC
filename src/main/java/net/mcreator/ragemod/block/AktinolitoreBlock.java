@@ -43,7 +43,7 @@ public class AktinolitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aktinolitore")
 	public static final Block block = null;
 	public AktinolitoreBlock(RagemodModElements instance) {
-		super(instance, 133);
+		super(instance, 357);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -55,7 +55,7 @@ public class AktinolitoreBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 20f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 20f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7f));
 			setRegistryName("aktinolitore");
 		}
@@ -93,6 +93,8 @@ public class AktinolitoreBlock extends RagemodModElements.ModElement {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
+						dimensionCriteria = true;
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

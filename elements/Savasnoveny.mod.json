@@ -33,6 +33,21 @@
     "soundOnStep": {
       "value": "PLANT"
     },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
     "useLootTableForDrops": false,
     "customDrop": {
       "value": ""
@@ -59,30 +74,15 @@
     ],
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:B1"
-      },
-      {
-        "value": "CUSTOM:B2"
-      },
-      {
-        "value": "CUSTOM:B3"
-      },
-      {
-        "value": "CUSTOM:B4"
-      },
-      {
-        "value": "CUSTOM:B5"
-      },
-      {
         "value": "CUSTOM:Savasbiom"
       },
       {
         "value": "swamp"
       },
       {
-        "value": "savanna_rock"
+        "value": "mutated_swampland"
       }
     ],
-    "patchSize": 64
+    "patchSize": 2
   }
 }

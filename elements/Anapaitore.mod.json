@@ -122,7 +122,8 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "Surface"
+      "Surface",
+      "CUSTOM:Dimension1"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
@@ -130,7 +131,7 @@
         "value": "Blocks.STONE"
       }
     ],
-    "frequencyPerChunks": 5,
+    "frequencyPerChunks": 6,
     "frequencyOnChunk": 4,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64

@@ -43,7 +43,7 @@ public class ApofillitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:apofillitore")
 	public static final Block block = null;
 	public ApofillitoreBlock(RagemodModElements instance) {
-		super(instance, 139);
+		super(instance, 363);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -99,8 +99,8 @@ public class ApofillitoreBlock extends RagemodModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(64)
-					.square().func_242731_b(5);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 5)).range(64)
+					.square().func_242731_b(6);
 			event.getRegistry().register(feature.setRegistryName("apofillitore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:apofillitore"), configuredFeature);
 		}
