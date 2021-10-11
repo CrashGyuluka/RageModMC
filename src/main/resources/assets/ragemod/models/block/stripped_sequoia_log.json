@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/mamut11",
     "up": "ragemod:blocks/mamut11",
-    "north": "ragemod:blocks/mamut10",
-    "east": "ragemod:blocks/mamut10",
-    "south": "ragemod:blocks/mamut10",
-    "west": "ragemod:blocks/mamut10",
+    "north": "ragemod:blocks/mamut12",
+    "east": "ragemod:blocks/mamut12",
+    "south": "ragemod:blocks/mamut12",
+    "west": "ragemod:blocks/mamut12",
     "particle": "ragemod:blocks/mamut11"
   }
 }

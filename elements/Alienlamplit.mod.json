@@ -124,15 +124,20 @@
     "onRightClicked": {
       "name": "AlienlamplitOnBlockRightClicked"
     },
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "CUSTOM:AlienDimension"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "CUSTOM:Aliensoil"
+      },
+      {
+        "value": "CUSTOM:Destroyablealiensoildev"
       }
     ],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 1,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64
   }

@@ -39,8 +39,8 @@ public class RagefallingtreeParticle {
 			this.spriteSet = spriteSet;
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
-			this.maxAge = (int) Math.max(1, 6 + (this.rand.nextInt(4) - 2));
-			this.particleGravity = (float) 1.5;
+			this.maxAge = (int) Math.max(1, 6 + (this.rand.nextInt(2) - 1));
+			this.particleGravity = (float) 1.4;
 			this.canCollide = true;
 			this.motionX = vx * 0.5;
 			this.motionY = vy * 0.5;
