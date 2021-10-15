@@ -10,6 +10,8 @@
     "ragemod:robtai_wood",
     "ragemod:robtai_log",
     "ragemod:marokriksa_wood",
-    "ragemod:marokriksa_log"
+    "ragemod:marokriksa_log",
+    "ragemod:sequoia_wood",
+    "ragemod:sequoia_log"
   ]
 }

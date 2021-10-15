@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "ragemod:dimension_1"
+      "item": "ragemod:alien_dimension"
     },
     "title": {
-      "translate": "advancements.adv_24.title"
+      "translate": "advancements.adv_27.title"
     },
     "description": {
-      "translate": "advancements.adv_24.descr"
+      "translate": "advancements.adv_27.descr"
     },
     "frame": "task",
     "show_toast": true,
@@ -15,11 +15,11 @@
     "hidden": false
   },
   "criteria": {
-    "adv_24": {
+    "adv_27": {
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "ragemod:dimension_1"
+          "item": "ragemod:alien_dimension"
         }
       }
     }
@@ -27,5 +27,5 @@
   "rewards": {
     "experience": 1
   },
-  "parent": "ragemod:adv_25"
+  "parent": "ragemod:adv_27"
 }

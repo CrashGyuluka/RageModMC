@@ -1,7 +1,8 @@
 {
   "display": {
+    "background": "ragemod:textures/adv_b1.png",
     "icon": {
-      "item": "ragemod:sav_bucket"
+      "item": "ragemod:opal"
     },
     "title": {
       "translate": "advancements.adv_25.title"
@@ -19,13 +20,12 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "ragemod:sav_bucket"
+          "item": "ragemod:opal"
         }
       }
     }
   },
   "rewards": {
-    "experience": 2
-  },
-  "parent": "ragemod:adv_17"
+    "experience": 1
+  }
 }

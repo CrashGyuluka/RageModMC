@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Spicy!",
-    "achievementDescription": ".",
+    "achievementName": "Piece for a new world...",
+    "achievementDescription": "Consume an opal",
     "achievementIcon": {
-      "value": "CUSTOM:SavBucket"
+      "value": "CUSTOM:Opal"
     },
-    "background": "Default",
+    "background": "adv_b1.png",
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,
@@ -15,11 +15,11 @@
     "rewardLoot": [],
     "rewardRecipes": [],
     "rewardFunction": "No function",
-    "rewardXP": 2,
+    "rewardXP": 1,
     "achievementType": "task",
     "parent": {
-      "value": "CUSTOM:Adv17"
+      "value": "No parent: root"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_consumed\" x=\"23\" y=\"13\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:SavBucket</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_consumed\" x=\"64\" y=\"67\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Opal</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

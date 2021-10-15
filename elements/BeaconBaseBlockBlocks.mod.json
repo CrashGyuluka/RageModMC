@@ -19,6 +19,12 @@
       },
       {
         "value": "CUSTOM:Cvexportalblock"
+      },
+      {
+        "value": "CUSTOM:Cvexblock"
+      },
+      {
+        "value": "CUSTOM:Cvexportalblock"
       }
     ],
     "functions": [],
