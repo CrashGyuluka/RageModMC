@@ -51,7 +51,7 @@ import com.google.common.collect.ImmutableList;
 public class BukkmountainBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public BukkmountainBiome(RagemodModElements instance) {
-		super(instance, 1223);
+		super(instance, 1214);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -122,7 +122,7 @@ public class BukkmountainBiome extends RagemodModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(1.9000000000000001f)
 						.scale(0.7000000000000001f).temperature(0.5f).downfall(0.6f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("ragemod:bukkmountain"));
+				event.getRegistry().register(biome.setRegistryName("ragemod:beech_hill"));
 			}
 		}
 	}

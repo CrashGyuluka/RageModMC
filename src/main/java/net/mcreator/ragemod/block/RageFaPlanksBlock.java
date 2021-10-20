@@ -27,7 +27,7 @@ public class RageFaPlanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_planks")
 	public static final Block block = null;
 	public RageFaPlanksBlock(RagemodModElements instance) {
-		super(instance, 114);
+		super(instance, 136);
 	}
 
 	@Override

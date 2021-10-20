@@ -52,7 +52,7 @@ public class SavaskvarcercBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaskvarcerc")
 	public static final Block block = null;
 	public SavaskvarcercBlock(RagemodModElements instance) {
-		super(instance, 336);
+		super(instance, 328);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -61,12 +61,12 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class BukkspalingBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bukkspaling")
+	@ObjectHolder("ragemod:beech_sapling")
 	public static final Block block = null;
-	@ObjectHolder("ragemod:bukkspaling")
+	@ObjectHolder("ragemod:beech_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BukkspalingBlock(RagemodModElements instance) {
-		super(instance, 182);
+		super(instance, 254);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
@@ -81,7 +81,7 @@ public class BukkspalingBlock extends RagemodModElements.ModElement {
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("bukkspaling"));
+			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("beech_sapling"));
 		}
 	}
 	@Override
@@ -116,8 +116,8 @@ public class BukkspalingBlock extends RagemodModElements.ModElement {
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
 									.tries(2).build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(0);
-			event.getRegistry().register(feature.setRegistryName("bukkspaling"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:bukkspaling"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("beech_sapling"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:beech_sapling"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
@@ -128,7 +128,7 @@ public class BukkspalingBlock extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Effects.SATURATION, 0, Block.Properties.create(Material.PLANTS).tickRandomly().doesNotBlockMovement().sound(SoundType.PLANT)
 					.hardnessAndResistance(0f, 0f).setLightLevel(s -> 0));
-			setRegistryName("bukkspaling");
+			setRegistryName("beech_sapling");
 		}
 
 		@Override

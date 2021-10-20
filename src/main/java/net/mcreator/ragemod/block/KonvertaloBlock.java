@@ -66,7 +66,7 @@ public class KonvertaloBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:konvertalo")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public KonvertaloBlock(RagemodModElements instance) {
-		super(instance, 394);
+		super(instance, 386);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -84,7 +84,7 @@ public class KonvertaloBlock extends RagemodModElements.ModElement {
 
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(7f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("konvertalo");
 		}

@@ -27,10 +27,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Ragefapr1Block extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:ragefapr_1")
+	@ObjectHolder("ragemod:ragewood_pressure_plate")
 	public static final Block block = null;
 	public Ragefapr1Block(RagemodModElements instance) {
-		super(instance, 153);
+		super(instance, 231);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class Ragefapr1Block extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 5f)
 					.setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.AXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
-			setRegistryName("ragefapr_1");
+			setRegistryName("ragewood_pressure_plate");
 		}
 
 		@Override

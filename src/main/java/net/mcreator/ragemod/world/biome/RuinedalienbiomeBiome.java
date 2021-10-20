@@ -50,7 +50,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RuinedalienbiomeBiome(RagemodModElements instance) {
-		super(instance, 1272);
+		super(instance, 1261);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -115,7 +115,7 @@ public class RuinedalienbiomeBiome extends RagemodModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.5f).scale(0.3f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("ragemod:ruinedalienbiome"));
+				event.getRegistry().register(biome.setRegistryName("ragemod:ruined_alien_biome"));
 			}
 		}
 	}

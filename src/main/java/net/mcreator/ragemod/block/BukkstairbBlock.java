@@ -22,10 +22,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class BukkstairbBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bukkstairb")
+	@ObjectHolder("ragemod:beech_block_stairs")
 	public static final Block block = null;
 	public BukkstairbBlock(RagemodModElements instance) {
-		super(instance, 164);
+		super(instance, 149);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class BukkstairbBlock extends RagemodModElements.ModElement {
 					.harvestLevel(2).harvestTool(ToolType.AXE).setRequiresTool()).getDefaultState(),
 					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)
 							.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("bukkstairb");
+			setRegistryName("beech_block_stairs");
 		}
 
 		@Override

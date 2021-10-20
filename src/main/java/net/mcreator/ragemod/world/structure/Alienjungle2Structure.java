@@ -93,7 +93,7 @@ public class Alienjungle2Structure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:alienforest").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_forest").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

@@ -27,7 +27,7 @@ public class PolsihedalpivstairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:polsihedalpivstairs")
 	public static final Block block = null;
 	public PolsihedalpivstairsBlock(RagemodModElements instance) {
-		super(instance, 32);
+		super(instance, 31);
 	}
 
 	@Override

@@ -39,7 +39,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Termeszettab"
+      "value": "CUSTOM:Moretab"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -122,16 +122,20 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "Surface"
+      "Surface",
+      "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "Blocks.STONE#0"
       }
     ],
-    "frequencyPerChunks": 1,
-    "frequencyOnChunk": 1,
+    "frequencyPerChunks": 2,
+    "frequencyOnChunk": 4,
     "minGenerateHeight": 80,
     "maxGenerateHeight": 256
   }

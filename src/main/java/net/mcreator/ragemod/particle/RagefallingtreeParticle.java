@@ -23,7 +23,7 @@ public class RagefallingtreeParticle {
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	@SubscribeEvent
 	public static void registerParticleType(RegistryEvent.Register<ParticleType<?>> event) {
-		event.getRegistry().register(particle.setRegistryName("ragefallingtree"));
+		event.getRegistry().register(particle.setRegistryName("ragetree_falling"));
 	}
 
 	@OnlyIn(Dist.CLIENT)

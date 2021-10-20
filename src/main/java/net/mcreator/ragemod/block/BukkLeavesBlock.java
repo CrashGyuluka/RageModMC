@@ -10,27 +10,34 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.biome.BiomeColors;
+import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.FoliageColors;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.ragemod.procedures.BukkLeavesBlockDestroyedByPlayerProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
 public class BukkLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_leaves")
 	public static final Block block = null;
 	public BukkLeavesBlock(RagemodModElements instance) {
-		super(instance, 183);
+		super(instance, 259);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlockColorRegisterHandler());
 	}
 
@@ -65,6 +72,24 @@ public class BukkLeavesBlock extends RagemodModElements.ModElement {
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 45;
+		}
+
+		@Override
+		public boolean removedByPlayer(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				BukkLeavesBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 	}
 }

@@ -31,10 +31,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -46,7 +47,7 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyimorzsolt")
 	public static final Block block = null;
 	public HegyimorzsoltBlock(RagemodModElements instance) {
-		super(instance, 79);
+		super(instance, 46);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -54,8 +55,7 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MoretabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
@@ -87,6 +87,8 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Hegyiko1Block.block)
 				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.STONE)
+				blockCriteria = true;
 			return blockCriteria;
 		}
 
@@ -106,13 +108,15 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 1)).range(256)
-					.square().func_242731_b(1);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(256)
+					.square().func_242731_b(2);
 			event.getRegistry().register(feature.setRegistryName("hegyimorzsolt"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hegyimorzsolt"), configuredFeature);
 		}

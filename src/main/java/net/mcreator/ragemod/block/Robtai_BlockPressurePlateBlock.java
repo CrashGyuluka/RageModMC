@@ -25,10 +25,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Robtai_BlockPressurePlateBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:robtai_block_pressure_plate")
+	@ObjectHolder("ragemod:stripped_robtai_pressure_plate")
 	public static final Block block = null;
 	public Robtai_BlockPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 229);
+		super(instance, 241);
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class Robtai_BlockPressurePlateBlock extends RagemodModElements.ModElemen
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f)
 					.setLightLevel(s -> 0).harvestLevel(3).harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("robtai_block_pressure_plate");
+			setRegistryName("stripped_robtai_pressure_plate");
 		}
 
 		@Override

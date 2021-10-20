@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Termeszettab"
+      "value": "CUSTOM:Moretab"
     },
     "destroyTool": "pickaxe",
     "customDrop": {

@@ -55,7 +55,7 @@ public class GenusWeigelaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:genus_weigela")
 	public static final Block block = null;
 	public GenusWeigelaBlock(RagemodModElements instance) {
-		super(instance, 61);
+		super(instance, 94);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -106,9 +106,9 @@ public class GenusWeigelaBlock extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:bukkbiome").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:bukkmeadow").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_meadow").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("badlands").equals(event.getName()))
 			biomeCriteria = true;

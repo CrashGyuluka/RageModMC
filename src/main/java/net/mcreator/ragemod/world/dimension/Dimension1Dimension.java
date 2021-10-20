@@ -9,10 +9,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.ITeleporter;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -54,7 +52,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 import net.minecraft.block.AbstractBlock;
 
-import net.mcreator.ragemod.procedures.Dimension1PlayerEntersDimensionProcedure;
 import net.mcreator.ragemod.particle.ObsontiumparticleParticle;
 import net.mcreator.ragemod.item.Dimension1Item;
 import net.mcreator.ragemod.block.ObsontiumblockBlock;
@@ -67,8 +64,6 @@ import java.util.function.Function;
 import java.util.Set;
 import java.util.Random;
 import java.util.Optional;
-import java.util.Map;
-import java.util.HashMap;
 import java.util.Comparator;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
@@ -81,8 +76,7 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:dimension_1_portal")
 	public static final CustomPortalBlock portal = null;
 	public Dimension1Dimension(RagemodModElements instance) {
-		super(instance, 397);
-		MinecraftForge.EVENT_BUS.register(this);
+		super(instance, 389);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 
@@ -608,25 +602,6 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 				}
 			} else {
 				return optional;
-			}
-		}
-	}
-	@SubscribeEvent
-	public void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
-		Entity entity = event.getPlayer();
-		World world = entity.world;
-		double x = entity.getPosX();
-		double y = entity.getPosY();
-		double z = entity.getPosZ();
-		if (event.getTo() == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1"))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				Dimension1PlayerEntersDimensionProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

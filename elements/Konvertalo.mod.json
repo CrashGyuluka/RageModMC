@@ -34,7 +34,7 @@
     ],
     "name": "Converter",
     "specialInfo": [],
-    "hardness": 3.0,
+    "hardness": 7.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -52,7 +52,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "ROCK"
+      "value": "IRON"
     },
     "tickRate": 10,
     "tickRandomly": false,

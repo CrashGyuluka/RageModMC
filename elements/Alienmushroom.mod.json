@@ -78,7 +78,7 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 23,
+    "frequencyOnChunks": 28,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],
@@ -86,6 +86,6 @@
     "generateCondition": {
       "name": "Alienmushroom2AdditionalGenerationCondition"
     },
-    "patchSize": 31
+    "patchSize": 35
   }
 }

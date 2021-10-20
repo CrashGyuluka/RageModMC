@@ -32,7 +32,7 @@ public class AlieniteshovelItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alieniteshovel")
 	public static final Item block = null;
 	public AlieniteshovelItem(RagemodModElements instance) {
-		super(instance, 410);
+		super(instance, 402);
 	}
 
 	@Override

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/beech_slab"
+    },
+    "type=top": {
+      "model": "ragemod:block/beech_slab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/beech_slab_full"
+    }
+  }
+}

@@ -69,7 +69,7 @@ public class Hangingalienplantexluse1Block extends RagemodModElements.ModElement
 	@ObjectHolder("ragemod:hangingalienplantexluse_1")
 	public static final Block block = null;
 	public Hangingalienplantexluse1Block(RagemodModElements instance) {
-		super(instance, 1308);
+		super(instance, 1297);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -270,7 +270,7 @@ public class Hangingalienplantexluse1Block extends RagemodModElements.ModElement
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:alienforest").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_forest").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

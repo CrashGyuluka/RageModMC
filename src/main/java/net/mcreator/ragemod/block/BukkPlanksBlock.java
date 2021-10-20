@@ -24,10 +24,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class BukkPlanksBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bukk_planks")
+	@ObjectHolder("ragemod:beech_planks")
 	public static final Block block = null;
 	public BukkPlanksBlock(RagemodModElements instance) {
-		super(instance, 163);
+		super(instance, 139);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class BukkPlanksBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("bukk_planks");
+			setRegistryName("beech_planks");
 		}
 
 		@Override

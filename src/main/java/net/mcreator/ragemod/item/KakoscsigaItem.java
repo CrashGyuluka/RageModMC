@@ -17,7 +17,7 @@ public class KakoscsigaItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kakoscsiga")
 	public static final Item block = null;
 	public KakoscsigaItem(RagemodModElements instance) {
-		super(instance, 59);
+		super(instance, 92);
 	}
 
 	@Override

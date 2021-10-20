@@ -23,10 +23,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class StrippedbukkwoodBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:strippedbukkwood")
+	@ObjectHolder("ragemod:stripped_beech_block")
 	public static final Block block = null;
 	public StrippedbukkwoodBlock(RagemodModElements instance) {
-		super(instance, 160);
+		super(instance, 118);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class StrippedbukkwoodBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("strippedbukkwood");
+			setRegistryName("stripped_beech_block");
 		}
 
 		@Override

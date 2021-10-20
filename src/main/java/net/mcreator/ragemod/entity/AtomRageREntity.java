@@ -67,7 +67,7 @@ public class AtomRageREntity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
+		if (new ResourceLocation("ragemod:toxic_waste").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

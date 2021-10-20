@@ -23,9 +23,6 @@
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Bukkmountain"
-      },
-      {
-        "value": "CUSTOM:Bukkmountainfordimension"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"

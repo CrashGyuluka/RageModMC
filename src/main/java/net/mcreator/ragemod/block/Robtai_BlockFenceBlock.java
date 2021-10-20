@@ -26,10 +26,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Robtai_BlockFenceBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:robtai_block_fence")
+	@ObjectHolder("ragemod:stripped_robtai_fence")
 	public static final Block block = null;
 	public Robtai_BlockFenceBlock(RagemodModElements instance) {
-		super(instance, 221);
+		super(instance, 192);
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class Robtai_BlockFenceBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("robtai_block_fence");
+			setRegistryName("stripped_robtai_fence");
 		}
 
 		@Override

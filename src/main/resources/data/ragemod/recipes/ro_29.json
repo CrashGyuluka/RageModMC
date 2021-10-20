@@ -5,5 +5,5 @@
   "ingredient": {
     "item": "ragemod:robtai_log"
   },
-  "result": "ragemod:robtai_block_log"
+  "result": "ragemod:stripped_robtai_log"
 }

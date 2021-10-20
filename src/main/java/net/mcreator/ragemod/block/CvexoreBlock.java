@@ -43,7 +43,7 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cvexore")
 	public static final Block block = null;
 	public CvexoreBlock(RagemodModElements instance) {
-		super(instance, 399);
+		super(instance, 391);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

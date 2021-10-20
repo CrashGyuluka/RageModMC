@@ -49,7 +49,7 @@ public class Str7Structure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 100) {
+					if ((random.nextInt(1000000) + 1) <= 200) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -58,7 +58,7 @@ public class Str7Structure {
 							j += random.nextInt(50) + 16;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + -40, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();

@@ -2,7 +2,6 @@
 package net.mcreator.ragemod.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -12,6 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
@@ -20,18 +20,21 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.ragemod.procedures.RageFaLeavesBlockDestroyedByPlayerProcedure;
 import net.mcreator.ragemod.particle.RagefallingtreeParticle;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
 public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_leaves")
 	public static final Block block = null;
 	public RageFaLeavesBlock(RagemodModElements instance) {
-		super(instance, 158);
+		super(instance, 258);
 	}
 
 	@Override
@@ -42,8 +45,7 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.1f, 0.2f).setLightLevel(s -> 0)
-					.harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid());
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.1f, 0.2f).setLightLevel(s -> 0).notSolid());
 			setRegistryName("rage_fa_leaves");
 		}
 
@@ -76,6 +78,24 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 					double d5 = (random.nextFloat() - 0.5D) * 0.1D;
 					world.addParticle(RagefallingtreeParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
+		}
+
+		@Override
+		public boolean removedByPlayer(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				RageFaLeavesBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 	}
 }

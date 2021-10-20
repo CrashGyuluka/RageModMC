@@ -68,7 +68,7 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
+		if (new ResourceLocation("ragemod:toxic_waste").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("desert").equals(event.getName()))
 			biomeCriteria = true;

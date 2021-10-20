@@ -68,7 +68,7 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("traderrt").setRegistryName("traderrt");
 	public TraderrtEntity(RagemodModElements instance) {
-		super(instance, 74);
+		super(instance, 108);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TraderrtRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

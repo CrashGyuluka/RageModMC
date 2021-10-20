@@ -25,10 +25,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class RageWood_BlockFenceGateBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:rage_wood_block_fence_gate")
+	@ObjectHolder("ragemod:ragewood_block_fence_gate")
 	public static final Block block = null;
 	public RageWood_BlockFenceGateBlock(RagemodModElements instance) {
-		super(instance, 142);
+		super(instance, 198);
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class RageWood_BlockFenceGateBlock extends RagemodModElements.ModElement 
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("rage_wood_block_fence_gate");
+			setRegistryName("ragewood_block_fence_gate");
 		}
 
 		@Override

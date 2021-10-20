@@ -5,5 +5,5 @@
   "ingredient": {
     "item": "ragemod:robtai_wood"
   },
-  "result": "ragemod:robtai_block_pressure_plate"
+  "result": "ragemod:stripped_robtai_pressure_plate"
 }

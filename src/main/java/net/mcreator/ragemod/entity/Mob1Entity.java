@@ -52,7 +52,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("toxic_mob").setRegistryName("toxic_mob");
 	public Mob1Entity(RagemodModElements instance) {
-		super(instance, 286);
+		super(instance, 278);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Mob1Renderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -68,7 +68,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
+		if (new ResourceLocation("ragemod:toxic_waste").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("swamp").equals(event.getName()))
 			biomeCriteria = true;

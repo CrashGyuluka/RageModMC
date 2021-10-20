@@ -23,10 +23,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class RagefaslabblueBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:ragefaslabblue")
+	@ObjectHolder("ragemod:blue_ragewood_slab")
 	public static final Block block = null;
 	public RagefaslabblueBlock(RagemodModElements instance) {
-		super(instance, 131);
+		super(instance, 165);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class RagefaslabblueBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("ragefaslabblue");
+			setRegistryName("blue_ragewood_slab");
 		}
 
 		@Override

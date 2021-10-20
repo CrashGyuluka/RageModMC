@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Termeszettab"
+      "value": "CUSTOM:Moretab"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -122,19 +122,21 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "CUSTOM:AlienDimension"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.CAVE_AIR"
       }
     ],
-    "frequencyPerChunks": 20,
-    "frequencyOnChunk": 8,
-    "minGenerateHeight": 80,
-    "maxGenerateHeight": 256,
-    "generateCondition": {
-      "name": "Hegyiko1AdditionalGenerationCondition"
-    }
+    "frequencyPerChunks": 15,
+    "frequencyOnChunk": 6,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 60
   }
 }

@@ -33,7 +33,7 @@ public class AdularblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:adularblock")
 	public static final Block block = null;
 	public AdularblockBlock(RagemodModElements instance) {
-		super(instance, 368);
+		super(instance, 360);
 	}
 
 	@Override

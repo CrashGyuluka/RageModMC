@@ -17,7 +17,7 @@ public class CroissantItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:croissant")
 	public static final Item block = null;
 	public CroissantItem(RagemodModElements instance) {
-		super(instance, 54);
+		super(instance, 87);
 	}
 
 	@Override

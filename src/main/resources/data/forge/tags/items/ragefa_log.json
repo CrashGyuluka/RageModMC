@@ -3,9 +3,9 @@
   "values": [
     "ragemod:rage_fa_wood",
     "ragemod:rage_fa_log",
-    "ragemod:ragefalogs_1",
-    "ragemod:ragefalog_2",
-    "ragemod:ragefalogb_1",
-    "ragemod:ragefalogb_2"
+    "ragemod:stripped_ragewood_log",
+    "ragemod:better_stripped_ragewood_log",
+    "ragemod:stripped_ragewood_block",
+    "ragemod:better_stripped_ragewood_block"
   ]
 }

@@ -93,7 +93,7 @@ public class MarokriksaalienstrStructure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:totally_not_alien").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_hills").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

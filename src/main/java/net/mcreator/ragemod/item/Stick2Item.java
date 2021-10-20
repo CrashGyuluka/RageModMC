@@ -20,10 +20,10 @@ import com.google.common.collect.ImmutableMultimap;
 
 @RagemodModElements.ModElement.Tag
 public class Stick2Item extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:stick_2")
+	@ObjectHolder("ragemod:robtai_stick")
 	public static final Item block = null;
 	public Stick2Item(RagemodModElements instance) {
-		super(instance, 231);
+		super(instance, 250);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class Stick2Item extends RagemodModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("stick_2");
+			setRegistryName("robtai_stick");
 		}
 
 		@Override

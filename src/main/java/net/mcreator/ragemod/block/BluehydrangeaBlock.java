@@ -55,7 +55,7 @@ public class BluehydrangeaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bluehydrangea")
 	public static final Block block = null;
 	public BluehydrangeaBlock(RagemodModElements instance) {
-		super(instance, 62);
+		super(instance, 95);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -106,13 +106,13 @@ public class BluehydrangeaBlock extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:bukkbiome").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:bukkmeadow").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_meadow").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:bukkmountain").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_hill").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:totally_not_alien").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_hills").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("beach").equals(event.getName()))
 			biomeCriteria = true;

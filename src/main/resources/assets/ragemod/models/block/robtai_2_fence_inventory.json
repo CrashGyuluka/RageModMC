@@ -1,7 +1,0 @@
-{
-  "parent": "block/fence_inventory",
-  "textures": {
-    "texture": "ragemod:blocks/rob2",
-    "particle": "ragemod:blocks/rob2"
-  }
-}

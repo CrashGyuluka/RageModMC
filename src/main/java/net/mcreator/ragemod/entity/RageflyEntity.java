@@ -17,9 +17,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Hand;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.crafting.Ingredient;
@@ -27,7 +25,6 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -40,12 +37,10 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.ragemod.procedures.RageflyRightClickedOnEntityProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.item.RageiumItem;
 import net.mcreator.ragemod.entity.renderer.RageflyRenderer;
@@ -53,8 +48,6 @@ import net.mcreator.ragemod.block.AlienlampBlock;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
 public class RageflyEntity extends RagemodModElements.ModElement {
@@ -62,7 +55,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.5f, 0.5f)).build("ragefly").setRegistryName("ragefly");
 	public RageflyEntity(RagemodModElements instance) {
-		super(instance, 75);
+		super(instance, 109);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflyRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -82,7 +75,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 9, 1, 2));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 9, 3, 5));
 	}
 
 	@Override
@@ -181,26 +174,6 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			if (source == DamageSource.ANVIL)
 				return false;
 			return super.attackEntityFrom(source, amount);
-		}
-
-		@Override
-		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
-			ItemStack itemstack = sourceentity.getHeldItem(hand);
-			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
-			super.func_230254_b_(sourceentity, hand);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				RageflyRightClickedOnEntityProcedure.executeProcedure($_dependencies);
-			}
-			return retval;
 		}
 
 		@Override

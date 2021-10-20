@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate_open",
   "textures": {
-    "texture": "ragemod:blocks/------wrr"
+    "texture": "ragemod:blocks/rob2"
   }
 }

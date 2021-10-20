@@ -34,19 +34,24 @@ import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.ragemod.procedures.MarokriksaLeavesBlockDestroyedByPlayerProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Map;
+import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
 public class MarokriksaLeavesBlock extends RagemodModElements.ModElement {
@@ -55,7 +60,7 @@ public class MarokriksaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public MarokriksaLeavesBlock(RagemodModElements instance) {
-		super(instance, 258);
+		super(instance, 262);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -88,6 +93,24 @@ public class MarokriksaLeavesBlock extends RagemodModElements.ModElement {
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 150;
+		}
+
+		@Override
+		public boolean removedByPlayer(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				MarokriksaLeavesBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 
 		@Override

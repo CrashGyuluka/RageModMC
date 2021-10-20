@@ -33,7 +33,7 @@ public class AnapitblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:anapitblock")
 	public static final Block block = null;
 	public AnapitblockBlock(RagemodModElements instance) {
-		super(instance, 370);
+		super(instance, 362);
 	}
 
 	@Override

@@ -33,7 +33,7 @@ public class AchatblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:achatblock")
 	public static final Block block = null;
 	public AchatblockBlock(RagemodModElements instance) {
-		super(instance, 367);
+		super(instance, 359);
 	}
 
 	@Override

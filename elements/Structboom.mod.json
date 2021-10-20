@@ -5,7 +5,7 @@
     "structure": "struct_boom",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 30,
+    "spawnProbability": 40,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Air",

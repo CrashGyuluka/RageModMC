@@ -93,7 +93,7 @@ public class MarokriksaplainsalienStructure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:alienplains").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_plains").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

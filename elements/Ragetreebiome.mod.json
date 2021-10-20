@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "biome",
   "definition": {
-    "name": "Ragetree_biome",
+    "name": "RageForest",
     "groundBlock": {
       "value": "Blocks.GRASS"
     },
@@ -45,15 +45,15 @@
     "heightVariation": 0.6,
     "biomeType": "WARM",
     "spawnBiome": true,
-    "biomeWeight": 2,
+    "biomeWeight": 3,
     "biomeDictionaryTypes": [
       "FOREST"
     ],
-    "grassPerChunk": 7,
+    "grassPerChunk": 8,
     "seagrassPerChunk": 0,
-    "flowersPerChunk": 8,
-    "mushroomsPerChunk": 0,
-    "bigMushroomsChunk": 0,
+    "flowersPerChunk": 5,
+    "mushroomsPerChunk": 1,
+    "bigMushroomsChunk": 1,
     "sandPatchesPerChunk": 0,
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,

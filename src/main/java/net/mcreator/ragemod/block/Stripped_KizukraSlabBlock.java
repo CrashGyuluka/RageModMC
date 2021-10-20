@@ -29,7 +29,7 @@ public class Stripped_KizukraSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_kizukra_slab")
 	public static final Block block = null;
 	public Stripped_KizukraSlabBlock(RagemodModElements instance) {
-		super(instance, 193);
+		super(instance, 171);
 	}
 
 	@Override

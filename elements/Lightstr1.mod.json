@@ -5,7 +5,7 @@
     "structure": "light_str1",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 40000,
+    "spawnProbability": 50000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
@@ -29,6 +29,9 @@
       },
       {
         "value": "CUSTOM:TotallyNotAlien"
+      },
+      {
+        "value": "CUSTOM:Alienplains"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"

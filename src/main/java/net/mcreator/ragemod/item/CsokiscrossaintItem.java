@@ -17,7 +17,7 @@ public class CsokiscrossaintItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:csokiscrossaint")
 	public static final Item block = null;
 	public CsokiscrossaintItem(RagemodModElements instance) {
-		super(instance, 57);
+		super(instance, 90);
 	}
 
 	@Override

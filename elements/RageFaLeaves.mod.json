@@ -8,8 +8,8 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 11,
+    "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -42,7 +42,7 @@
     "creativeTab": {
       "value": "CUSTOM:Termeszettab"
     },
-    "destroyTool": "hoe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": "CUSTOM:RageFaLeaves"
     },
@@ -122,6 +122,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "RageFaLeavesBlockDestroyedByPlayer"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

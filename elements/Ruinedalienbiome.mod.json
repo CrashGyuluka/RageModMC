@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "biome",
   "definition": {
-    "name": "Aline_plains",
+    "name": "Ruined_alien_biome",
     "groundBlock": {
       "value": "CUSTOM:Destroyablealiensoildev"
     },

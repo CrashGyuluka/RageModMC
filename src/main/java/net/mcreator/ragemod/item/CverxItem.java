@@ -16,7 +16,7 @@ public class CverxItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cverx")
 	public static final Item block = null;
 	public CverxItem(RagemodModElements instance) {
-		super(instance, 400);
+		super(instance, 392);
 	}
 
 	@Override

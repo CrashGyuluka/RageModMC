@@ -13,10 +13,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class RagefastickItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:ragefastick")
+	@ObjectHolder("ragemod:ragewood_stick")
 	public static final Item block = null;
 	public RagefastickItem(RagemodModElements instance) {
-		super(instance, 156);
+		super(instance, 247);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class RagefastickItem extends RagemodModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("ragefastick");
+			setRegistryName("ragewood_stick");
 		}
 
 		@Override

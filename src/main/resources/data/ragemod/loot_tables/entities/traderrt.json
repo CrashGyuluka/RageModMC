@@ -44,7 +44,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ragemod:robtai_2_slab",
+          "name": "ragemod:robtai_block_slab",
           "weight": 2,
           "functions": [
             {

@@ -26,10 +26,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Bukk_BlockFenceBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bukk_block_fence")
+	@ObjectHolder("ragemod:beech_block_fence")
 	public static final Block block = null;
 	public Bukk_BlockFenceBlock(RagemodModElements instance) {
-		super(instance, 170);
+		super(instance, 185);
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class Bukk_BlockFenceBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("bukk_block_fence");
+			setRegistryName("beech_block_fence");
 		}
 
 		@Override

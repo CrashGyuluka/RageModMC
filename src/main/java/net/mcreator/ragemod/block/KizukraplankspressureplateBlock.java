@@ -25,10 +25,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class KizukraplankspressureplateBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:kizukraplankspressureplate")
+	@ObjectHolder("ragemod:kizukra_pressure_plate")
 	public static final Block block = null;
 	public KizukraplankspressureplateBlock(RagemodModElements instance) {
-		super(instance, 205);
+		super(instance, 239);
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class KizukraplankspressureplateBlock extends RagemodModElements.ModEleme
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f)
 					.setLightLevel(s -> 0).harvestLevel(2).harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("kizukraplankspressureplate");
+			setRegistryName("kizukra_pressure_plate");
 		}
 
 		@Override

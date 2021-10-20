@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ragemod:block/better_stripped_ragewood_block_pressure_plate"
+    },
+    "powered=true": {
+      "model": "ragemod:block/better_stripped_ragewood_block_pressure_plate_down"
+    }
+  }
+}

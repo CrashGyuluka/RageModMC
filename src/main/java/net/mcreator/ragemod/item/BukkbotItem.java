@@ -13,10 +13,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class BukkbotItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bukkbot")
+	@ObjectHolder("ragemod:beech_stick")
 	public static final Item block = null;
 	public BukkbotItem(RagemodModElements instance) {
-		super(instance, 181);
+		super(instance, 248);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class BukkbotItem extends RagemodModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("bukkbot");
+			setRegistryName("beech_stick");
 		}
 
 		@Override

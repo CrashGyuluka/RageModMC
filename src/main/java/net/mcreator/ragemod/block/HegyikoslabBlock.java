@@ -15,7 +15,7 @@ import net.minecraft.block.SlabBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.List;
@@ -26,14 +26,13 @@ public class HegyikoslabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikoslab")
 	public static final Block block = null;
 	public HegyikoslabBlock(RagemodModElements instance) {
-		super(instance, 90);
+		super(instance, 57);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MoretabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {

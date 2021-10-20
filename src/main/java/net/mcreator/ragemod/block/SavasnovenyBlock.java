@@ -56,7 +56,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnoveny")
 	public static final Block block = null;
 	public SavasnovenyBlock(RagemodModElements instance) {
-		super(instance, 284);
+		super(instance, 276);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -101,7 +101,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
+		if (new ResourceLocation("ragemod:toxic_waste").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("swamp").equals(event.getName()))
 			biomeCriteria = true;

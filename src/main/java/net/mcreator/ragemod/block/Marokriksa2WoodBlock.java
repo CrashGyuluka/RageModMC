@@ -28,7 +28,7 @@ public class Marokriksa2WoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_2_wood")
 	public static final Block block = null;
 	public Marokriksa2WoodBlock(RagemodModElements instance) {
-		super(instance, 235);
+		super(instance, 130);
 	}
 
 	@Override

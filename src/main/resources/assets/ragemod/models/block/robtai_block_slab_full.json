@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
-    "bottom": "ragemod:blocks/------wrr",
-    "top": "ragemod:blocks/------wrr",
-    "side": "ragemod:blocks/------wrr"
+    "bottom": "ragemod:blocks/rob2",
+    "top": "ragemod:blocks/rob2",
+    "side": "ragemod:blocks/rob2"
   }
 }

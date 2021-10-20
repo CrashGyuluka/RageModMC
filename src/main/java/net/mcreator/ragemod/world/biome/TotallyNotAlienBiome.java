@@ -49,7 +49,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public TotallyNotAlienBiome(RagemodModElements instance) {
-		super(instance, 1259);
+		super(instance, 1248);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -114,7 +114,7 @@ public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(1.3f).scale(1.2f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("ragemod:totally_not_alien"));
+				event.getRegistry().register(biome.setRegistryName("ragemod:alien_hills"));
 			}
 		}
 	}

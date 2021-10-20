@@ -92,7 +92,7 @@ public class Bukkfastruct1Structure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:bukkbiome").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_forest").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

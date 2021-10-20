@@ -22,10 +22,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class RagefastairsredBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:ragefastairsred")
+	@ObjectHolder("ragemod:red_ragewood_stairs")
 	public static final Block block = null;
 	public RagefastairsredBlock(RagemodModElements instance) {
-		super(instance, 121);
+		super(instance, 148);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class RagefastairsredBlock extends RagemodModElements.ModElement {
 					.harvestLevel(1).harvestTool(ToolType.AXE).setRequiresTool()).getDefaultState(),
 					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(1)
 							.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("ragefastairsred");
+			setRegistryName("red_ragewood_stairs");
 		}
 
 		@Override

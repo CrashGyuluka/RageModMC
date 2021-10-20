@@ -20,8 +20,11 @@ import net.minecraft.world.gen.feature.TwoLayerFeature;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.FeatureSpread;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.feature.BigMushroomFeatureConfig;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.biome.ParticleEffectAmbience;
 import net.minecraft.world.biome.MobSpawnInfo;
@@ -34,6 +37,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.block.HugeMushroomBlock;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.ragemod.particle.RagefallingtreeParticle;
@@ -45,7 +49,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RagetreebiomeBiome(RagemodModElements instance) {
-		super(instance, 1320);
+		super(instance, 1309);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -69,11 +73,32 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
-								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 7))));
+								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 8))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.FLOWER.withConfiguration(Features.Configs.NORMAL_FLOWER_CONFIG)
 								.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-								.func_242731_b(8));
+								.func_242731_b(5));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(
+								(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.BROWN_MUSHROOM.getDefaultState()),
+										SimpleBlockPlacer.PLACER)).tries(1).func_227317_b_().build()));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(
+								(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.RED_MUSHROOM.getDefaultState()),
+										SimpleBlockPlacer.PLACER)).tries(1).func_227317_b_().build()));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.HUGE_BROWN_MUSHROOM.withConfiguration(new BigMushroomFeatureConfig(
+								new SimpleBlockStateProvider(Blocks.BROWN_MUSHROOM_BLOCK.getDefaultState().with(HugeMushroomBlock.UP, Boolean.TRUE)
+										.with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								new SimpleBlockStateProvider(Blocks.MUSHROOM_STEM.getDefaultState().with(HugeMushroomBlock.UP, Boolean.FALSE)
+										.with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								1)));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.HUGE_RED_MUSHROOM.withConfiguration(new BigMushroomFeatureConfig(
+								new SimpleBlockStateProvider(Blocks.RED_MUSHROOM_BLOCK.getDefaultState().with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								new SimpleBlockStateProvider(Blocks.MUSHROOM_STEM.getDefaultState().with(HugeMushroomBlock.UP, Boolean.FALSE)
+										.with(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+								1)));
 				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
 				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
 				DefaultBiomeFeatures.withFossils(biomeGenerationSettings);
@@ -94,6 +119,6 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public void init(FMLCommonSetupEvent event) {
 		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.FOREST);
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,
-				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 2));
+				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 3));
 	}
 }

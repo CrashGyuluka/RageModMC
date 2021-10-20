@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/blue_ragewood_slab"
+    },
+    "type=top": {
+      "model": "ragemod:block/blue_ragewood_slab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/blue_ragewood_slab_full"
+    }
+  }
+}

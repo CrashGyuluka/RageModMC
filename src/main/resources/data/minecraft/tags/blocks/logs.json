@@ -12,6 +12,11 @@
     "ragemod:marokriksa_wood",
     "ragemod:marokriksa_log",
     "ragemod:sequoia_wood",
-    "ragemod:sequoia_log"
+    "ragemod:sequoia_log",
+    "ragemod:savaslog",
+    "ragemod:savasakac",
+    "ragemod:savasjungle",
+    "ragemod:savasdarkoak",
+    "ragemod:savasfenyo"
   ]
 }

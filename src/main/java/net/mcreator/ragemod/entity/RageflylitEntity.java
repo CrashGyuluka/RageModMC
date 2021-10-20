@@ -61,7 +61,7 @@ public class RageflylitEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.5f, 0.5f)).build("rageflylit").setRegistryName("rageflylit");
 	public RageflylitEntity(RagemodModElements instance) {
-		super(instance, 1363);
+		super(instance, 1343);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflylitRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -81,7 +81,7 @@ public class RageflylitEntity extends RagemodModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 4, 1, 2));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 8, 2, 3));
 	}
 
 	@Override

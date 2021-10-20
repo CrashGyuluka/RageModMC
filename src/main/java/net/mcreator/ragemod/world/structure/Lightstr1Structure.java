@@ -53,7 +53,7 @@ public class Lightstr1Structure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 40000) {
+					if ((random.nextInt(1000000) + 1) <= 50000) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -96,9 +96,11 @@ public class Lightstr1Structure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:alienforest").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:totally_not_alien").equals(event.getName()))
+		if (new ResourceLocation("ragemod:alien_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("ragemod:alien_plains").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

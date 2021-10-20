@@ -53,7 +53,7 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 2.8f)).build("savragerobi").setRegistryName("savragerobi");
 	public SavragerobiEntity(RagemodModElements instance) {
-		super(instance, 376);
+		super(instance, 368);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SavragerobiRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -69,7 +69,7 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:savasbiom").equals(event.getName()))
+		if (new ResourceLocation("ragemod:toxic_waste").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("badlands").equals(event.getName()))
 			biomeCriteria = true;

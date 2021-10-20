@@ -29,10 +29,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Ragefalogb2Block extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:ragefalogb_2")
+	@ObjectHolder("ragemod:better_stripped_ragewood_block")
 	public static final Block block = null;
 	public Ragefalogb2Block(RagemodModElements instance) {
-		super(instance, 110);
+		super(instance, 113);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class Ragefalogb2Block extends RagemodModElements.ModElement {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(AXIS, Direction.Axis.Y));
-			setRegistryName("ragefalogb_2");
+			setRegistryName("better_stripped_ragewood_block");
 		}
 
 		@Override

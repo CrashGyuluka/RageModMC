@@ -27,10 +27,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class BukkstrprplBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bukkstrprpl")
+	@ObjectHolder("ragemod:stripped_beech_block_pressure_plate")
 	public static final Block block = null;
 	public BukkstrprplBlock(RagemodModElements instance) {
-		super(instance, 179);
+		super(instance, 235);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class BukkstrprplBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f)
 					.setLightLevel(s -> 0).harvestLevel(2).harvestTool(ToolType.AXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
-			setRegistryName("bukkstrprpl");
+			setRegistryName("stripped_beech_block_pressure_plate");
 		}
 
 		@Override

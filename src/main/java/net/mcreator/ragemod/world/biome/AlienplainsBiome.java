@@ -44,7 +44,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AlienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public AlienplainsBiome(RagemodModElements instance) {
-		super(instance, 1269);
+		super(instance, 1258);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -109,7 +109,7 @@ public class AlienplainsBiome extends RagemodModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.3f).scale(0.2f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("ragemod:alienplains"));
+				event.getRegistry().register(biome.setRegistryName("ragemod:alien_plains"));
 			}
 		}
 	}

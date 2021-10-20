@@ -26,7 +26,7 @@ public class ParkettaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parketta")
 	public static final Block block = null;
 	public ParkettaBlock(RagemodModElements instance) {
-		super(instance, 40);
+		super(instance, 39);
 	}
 
 	@Override

@@ -66,12 +66,12 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Fa4sapBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:fa_4sap")
+	@ObjectHolder("ragemod:robtai_sapling")
 	public static final Block block = null;
-	@ObjectHolder("ragemod:fa_4sap")
+	@ObjectHolder("ragemod:robtai_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public Fa4sapBlock(RagemodModElements instance) {
-		super(instance, 232);
+		super(instance, 256);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
@@ -86,7 +86,7 @@ public class Fa4sapBlock extends RagemodModElements.ModElement {
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("fa_4sap"));
+			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("robtai_sapling"));
 		}
 	}
 	@Override
@@ -121,8 +121,8 @@ public class Fa4sapBlock extends RagemodModElements.ModElement {
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
 									.tries(64).build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(0);
-			event.getRegistry().register(feature.setRegistryName("fa_4sap"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:fa_4sap"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("robtai_sapling"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:robtai_sapling"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
@@ -133,7 +133,7 @@ public class Fa4sapBlock extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Effects.SATURATION, 0, Block.Properties.create(Material.PLANTS).tickRandomly().doesNotBlockMovement().sound(SoundType.PLANT)
 					.hardnessAndResistance(0f, 0f).setLightLevel(s -> 0));
-			setRegistryName("fa_4sap");
+			setRegistryName("robtai_sapling");
 		}
 
 		@Override

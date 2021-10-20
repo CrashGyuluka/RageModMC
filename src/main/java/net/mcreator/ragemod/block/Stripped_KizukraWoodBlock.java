@@ -25,10 +25,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Stripped_KizukraWoodBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:stripped_kizukra_wood")
+	@ObjectHolder("ragemod:stripped_kizukra_block")
 	public static final Block block = null;
 	public Stripped_KizukraWoodBlock(RagemodModElements instance) {
-		super(instance, 185);
+		super(instance, 122);
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class Stripped_KizukraWoodBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("stripped_kizukra_wood");
+			setRegistryName("stripped_kizukra_block");
 		}
 
 		@Override

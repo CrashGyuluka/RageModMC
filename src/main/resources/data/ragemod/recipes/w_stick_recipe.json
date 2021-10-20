@@ -7,14 +7,14 @@
   ],
   "key": {
     "0": {
-      "item": "ragemod:bukk_planks"
+      "item": "ragemod:beech_planks"
     },
     "1": {
-      "item": "ragemod:bukk_planks"
+      "item": "ragemod:beech_planks"
     }
   },
   "result": {
-    "item": "ragemod:bukkbot",
+    "item": "ragemod:beech_stick",
     "count": 4
   }
 }

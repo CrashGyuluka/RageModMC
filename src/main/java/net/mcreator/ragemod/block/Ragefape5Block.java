@@ -27,10 +27,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Ragefape5Block extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:ragefape_5")
+	@ObjectHolder("ragemod:stripped_ragewood_block_pressure_plate")
 	public static final Block block = null;
 	public Ragefape5Block(RagemodModElements instance) {
-		super(instance, 151);
+		super(instance, 229);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class Ragefape5Block extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 5f)
 					.setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.AXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
-			setRegistryName("ragefape_5");
+			setRegistryName("stripped_ragewood_block_pressure_plate");
 		}
 
 		@Override

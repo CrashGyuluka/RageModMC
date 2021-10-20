@@ -92,7 +92,7 @@ public class Bukkfastr3Structure {
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:bukkmeadow").equals(event.getName()))
+		if (new ResourceLocation("ragemod:beech_meadow").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:bukkmeadowfordimension").equals(event.getName()))
 			biomeCriteria = true;

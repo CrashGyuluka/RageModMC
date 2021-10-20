@@ -13,7 +13,7 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "mamut_door_item",
+    "itemTexture": "mamut_door_item3",
     "particleTexture": "",
     "blockBase": "Door",
     "tintType": "No tint",

@@ -25,10 +25,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class Robtai_BlockStairsBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:robtai_block_stairs")
+	@ObjectHolder("ragemod:stripped_robtai_stairs")
 	public static final Block block = null;
 	public Robtai_BlockStairsBlock(RagemodModElements instance) {
-		super(instance, 215);
+		super(instance, 156);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class Robtai_BlockStairsBlock extends RagemodModElements.ModElement {
 					.harvestLevel(3).harvestTool(ToolType.AXE).setRequiresTool()).getDefaultState(),
 					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f).setLightLevel(s -> 0).harvestLevel(3)
 							.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("robtai_block_stairs");
+			setRegistryName("stripped_robtai_stairs");
 		}
 
 		@Override
