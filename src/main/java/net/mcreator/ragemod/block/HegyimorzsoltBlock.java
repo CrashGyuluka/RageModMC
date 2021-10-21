@@ -31,7 +31,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -87,8 +86,6 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Hegyiko1Block.block)
 				blockCriteria = true;
-			if (blockAt.getBlock() == Blocks.STONE)
-				blockCriteria = true;
 			return blockCriteria;
 		}
 
@@ -106,8 +103,6 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == World.OVERWORLD)
-						dimensionCriteria = true;
 					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
@@ -115,8 +110,8 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(256)
-					.square().func_242731_b(2);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 20)).range(256)
+					.square().func_242731_b(32);
 			event.getRegistry().register(feature.setRegistryName("hegyimorzsolt"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hegyimorzsolt"), configuredFeature);
 		}

@@ -6,7 +6,7 @@
     "texture": "tall_alien_growth1",
     "textureBottom": "tall_alien_growth2",
     "customModelName": "Cross model",
-    "itemTexture": "",
+    "itemTexture": "tall_alien_growth3",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -37,7 +37,7 @@
     },
     "hardness": 0.0,
     "resistance": 0.0,
-    "luminance": 5,
+    "luminance": 6,
     "unbreakable": false,
     "isCustomSoundType": false,
     "soundOnStep": {

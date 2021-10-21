@@ -23,7 +23,7 @@ public class SavkardItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savkard")
 	public static final Item block = null;
 	public SavkardItem(RagemodModElements instance) {
-		super(instance, 269);
+		super(instance, 272);
 	}
 
 	@Override

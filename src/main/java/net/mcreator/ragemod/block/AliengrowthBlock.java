@@ -55,7 +55,7 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aliengrowth")
 	public static final Block block = null;
 	public AliengrowthBlock(RagemodModElements instance) {
-		super(instance, 103);
+		super(instance, 102);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

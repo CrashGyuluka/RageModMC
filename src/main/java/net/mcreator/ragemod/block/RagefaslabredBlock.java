@@ -26,7 +26,7 @@ public class RagefaslabredBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragefaslabred")
 	public static final Block block = null;
 	public RagefaslabredBlock(RagemodModElements instance) {
-		super(instance, 166);
+		super(instance, 169);
 	}
 
 	@Override

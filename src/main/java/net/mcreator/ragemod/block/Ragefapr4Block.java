@@ -30,7 +30,7 @@ public class Ragefapr4Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragewood_block_pressure_plate")
 	public static final Block block = null;
 	public Ragefapr4Block(RagemodModElements instance) {
-		super(instance, 228);
+		super(instance, 231);
 	}
 
 	@Override

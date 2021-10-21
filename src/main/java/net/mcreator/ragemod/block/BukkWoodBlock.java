@@ -28,7 +28,7 @@ public class BukkWoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_wood")
 	public static final Block block = null;
 	public BukkWoodBlock(RagemodModElements instance) {
-		super(instance, 116);
+		super(instance, 119);
 	}
 
 	@Override

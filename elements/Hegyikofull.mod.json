@@ -130,8 +130,8 @@
         "value": "CUSTOM:Hegyiko1"
       }
     ],
-    "frequencyPerChunks": 30,
-    "frequencyOnChunk": 2,
+    "frequencyPerChunks": 32,
+    "frequencyOnChunk": 20,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 256
   }

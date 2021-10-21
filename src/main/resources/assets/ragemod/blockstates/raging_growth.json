@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=north": {
+    "": {
       "model": "ragemod:block/raging_growth"
-    },
-    "facing=east": {
-      "model": "ragemod:block/raging_growth",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "ragemod:block/raging_growth",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "ragemod:block/raging_growth",
-      "y": 270
     }
   }
 }

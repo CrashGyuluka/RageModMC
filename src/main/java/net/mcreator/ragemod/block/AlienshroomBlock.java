@@ -62,7 +62,7 @@ public class AlienshroomBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienshroom")
 	public static final Block block = null;
 	public AlienshroomBlock(RagemodModElements instance) {
-		super(instance, 104);
+		super(instance, 103);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -104,7 +104,7 @@ public class AlienshroomBlock extends RagemodModElements.ModElement {
 			configuredFeature = feature
 					.withConfiguration(
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
-									.tries(36).build())
+									.tries(40).build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(32);
 			event.getRegistry().register(feature.setRegistryName("alienshroom"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alienshroom"), configuredFeature);

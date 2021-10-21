@@ -16,7 +16,7 @@ public class ObsontiumItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:obsontium")
 	public static final Item block = null;
 	public ObsontiumItem(RagemodModElements instance) {
-		super(instance, 387);
+		super(instance, 390);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class BukkFenceGateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_fence_gate")
 	public static final Block block = null;
 	public BukkFenceGateBlock(RagemodModElements instance) {
-		super(instance, 205);
+		super(instance, 208);
 	}
 
 	@Override

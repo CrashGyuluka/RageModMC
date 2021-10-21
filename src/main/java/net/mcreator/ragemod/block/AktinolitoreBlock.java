@@ -43,7 +43,7 @@ public class AktinolitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aktinolitore")
 	public static final Block block = null;
 	public AktinolitoreBlock(RagemodModElements instance) {
-		super(instance, 349);
+		super(instance, 352);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

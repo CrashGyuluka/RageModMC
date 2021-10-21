@@ -33,7 +33,7 @@ public class CerusszitblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cerusszitblock")
 	public static final Block block = null;
 	public CerusszitblockBlock(RagemodModElements instance) {
-		super(instance, 363);
+		super(instance, 366);
 	}
 
 	@Override

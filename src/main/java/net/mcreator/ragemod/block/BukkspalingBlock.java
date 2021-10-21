@@ -66,7 +66,7 @@ public class BukkspalingBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BukkspalingBlock(RagemodModElements instance) {
-		super(instance, 254);
+		super(instance, 257);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

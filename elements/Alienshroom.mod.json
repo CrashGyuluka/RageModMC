@@ -83,7 +83,7 @@
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
-    "patchSize": 36,
+    "patchSize": 40,
     "onRightClicked": {
       "name": "AlienshroomPlantRightClicked"
     }

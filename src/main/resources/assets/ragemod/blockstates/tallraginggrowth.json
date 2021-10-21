@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "ragemod:block/tallraginggrowth"
+    },
+    "half=lower": {
+      "model": "ragemod:block/tallraginggrowth_bottom"
+    }
+  }
+}

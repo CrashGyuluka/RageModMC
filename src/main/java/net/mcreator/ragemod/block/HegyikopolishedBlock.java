@@ -87,7 +87,7 @@ public class HegyikopolishedBlock extends RagemodModElements.ModElement {
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
-			if (blockAt.getBlock() == HegyikopolishedBlock.block)
+			if (blockAt.getBlock() == Hegyiko1Block.block)
 				blockCriteria = true;
 			return blockCriteria;
 		}
@@ -106,7 +106,7 @@ public class HegyikopolishedBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == World.OVERWORLD)
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -118,8 +118,8 @@ public class HegyikopolishedBlock extends RagemodModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 1)).range(256)
-					.square().func_242731_b(1);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 20)).range(256)
+					.square().func_242731_b(32);
 			event.getRegistry().register(feature.setRegistryName("hegyikopolished"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hegyikopolished"), configuredFeature);
 		}

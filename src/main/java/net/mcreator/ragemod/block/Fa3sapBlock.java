@@ -71,7 +71,7 @@ public class Fa3sapBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public Fa3sapBlock(RagemodModElements instance) {
-		super(instance, 255);
+		super(instance, 258);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

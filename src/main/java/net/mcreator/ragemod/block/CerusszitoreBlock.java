@@ -43,7 +43,7 @@ public class CerusszitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cerusszitore")
 	public static final Block block = null;
 	public CerusszitoreBlock(RagemodModElements instance) {
-		super(instance, 353);
+		super(instance, 356);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

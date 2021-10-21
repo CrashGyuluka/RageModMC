@@ -58,7 +58,7 @@ public class AlienmushroomBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienmushroom")
 	public static final Block block = null;
 	public AlienmushroomBlock(RagemodModElements instance) {
-		super(instance, 107);
+		super(instance, 106);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

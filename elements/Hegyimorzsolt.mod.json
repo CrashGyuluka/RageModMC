@@ -122,21 +122,17 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "Surface",
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:Hegyiko1"
-      },
-      {
-        "value": "Blocks.STONE#0"
       }
     ],
-    "frequencyPerChunks": 2,
-    "frequencyOnChunk": 4,
-    "minGenerateHeight": 80,
+    "frequencyPerChunks": 32,
+    "frequencyOnChunk": 20,
+    "minGenerateHeight": 0,
     "maxGenerateHeight": 256
   }
 }

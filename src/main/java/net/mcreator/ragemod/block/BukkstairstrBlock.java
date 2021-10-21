@@ -25,7 +25,7 @@ public class BukkstairstrBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_block_stairs")
 	public static final Block block = null;
 	public BukkstairstrBlock(RagemodModElements instance) {
-		super(instance, 150);
+		super(instance, 153);
 	}
 
 	@Override

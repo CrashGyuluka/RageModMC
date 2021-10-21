@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "alien_growth",
+    "texture": "alien_growth2",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",

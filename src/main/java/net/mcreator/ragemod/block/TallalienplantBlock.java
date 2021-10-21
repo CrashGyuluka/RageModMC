@@ -56,7 +56,7 @@ public class TallalienplantBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:tallalienplant")
 	public static final Block block = null;
 	public TallalienplantBlock(RagemodModElements instance) {
-		super(instance, 105);
+		super(instance, 104);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -106,7 +106,7 @@ public class TallalienplantBlock extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f)
-					.jumpFactor(1.2000000000000002f).setLightLevel(s -> 5));
+					.jumpFactor(1.2000000000000002f).setLightLevel(s -> 6));
 			setRegistryName("tallalienplant");
 		}
 

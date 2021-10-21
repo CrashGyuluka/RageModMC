@@ -110,8 +110,8 @@ public class HegyikofullBlock extends RagemodModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 2)).range(256)
-					.square().func_242731_b(30);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 20)).range(256)
+					.square().func_242731_b(32);
 			event.getRegistry().register(feature.setRegistryName("hegyikofull"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hegyikofull"), configuredFeature);
 		}

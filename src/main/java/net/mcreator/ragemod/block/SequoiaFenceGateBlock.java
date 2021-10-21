@@ -27,7 +27,7 @@ public class SequoiaFenceGateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_fence_gate")
 	public static final Block block = null;
 	public SequoiaFenceGateBlock(RagemodModElements instance) {
-		super(instance, 215);
+		super(instance, 218);
 	}
 
 	@Override
