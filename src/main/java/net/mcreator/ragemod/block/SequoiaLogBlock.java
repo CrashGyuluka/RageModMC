@@ -32,7 +32,7 @@ public class SequoiaLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_log")
 	public static final Block block = null;
 	public SequoiaLogBlock(RagemodModElements instance) {
-		super(instance, 136);
+		super(instance, 138);
 	}
 
 	@Override

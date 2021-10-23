@@ -56,7 +56,7 @@ public class SavasgranitBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasgranit")
 	public static final Block block = null;
 	public SavasgranitBlock(RagemodModElements instance) {
-		super(instance, 304);
+		super(instance, 306);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

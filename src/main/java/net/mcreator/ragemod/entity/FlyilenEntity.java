@@ -49,10 +49,10 @@ import java.util.Random;
 @RagemodModElements.ModElement.Tag
 public class FlyilenEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(1.5f, 1.5f)).build("flyilen").setRegistryName("flyilen");
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1f, 1f))
+					.build("flyilen").setRegistryName("flyilen");
 	public FlyilenEntity(RagemodModElements instance) {
-		super(instance, 112);
+		super(instance, 113);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FlyilenRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -74,15 +74,13 @@ public class FlyilenEntity extends RagemodModElements.ModElement {
 			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:alien_plains").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:floweryalienplains").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:ruined_alien_biome").equals(event.getName()))
+		if (new ResourceLocation("ragemod:flowery_alien_plains").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:alien_hills").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 10, 1, 2));
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 1, 6));
 	}
 
 	@Override

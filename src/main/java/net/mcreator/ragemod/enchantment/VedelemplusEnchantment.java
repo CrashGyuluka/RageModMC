@@ -14,7 +14,7 @@ public class VedelemplusEnchantment extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:vedelemplus")
 	public static final Enchantment enchantment = null;
 	public VedelemplusEnchantment(RagemodModElements instance) {
-		super(instance, 797);
+		super(instance, 799);
 	}
 
 	@Override

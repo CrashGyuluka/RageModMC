@@ -37,7 +37,7 @@ import com.google.common.collect.ImmutableList;
 public class BukkmeadowfordimensionBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public BukkmeadowfordimensionBiome(RagemodModElements instance) {
-		super(instance, 1234);
+		super(instance, 1236);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

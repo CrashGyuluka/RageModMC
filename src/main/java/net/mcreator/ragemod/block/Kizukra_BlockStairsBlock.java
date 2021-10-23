@@ -28,7 +28,7 @@ public class Kizukra_BlockStairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_block_stairs")
 	public static final Block block = null;
 	public Kizukra_BlockStairsBlock(RagemodModElements instance) {
-		super(instance, 155);
+		super(instance, 157);
 	}
 
 	@Override

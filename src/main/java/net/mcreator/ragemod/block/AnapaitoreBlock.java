@@ -43,7 +43,7 @@ public class AnapaitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:anapaitore")
 	public static final Block block = null;
 	public AnapaitoreBlock(RagemodModElements instance) {
-		super(instance, 354);
+		super(instance, 356);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

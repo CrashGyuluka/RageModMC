@@ -32,7 +32,7 @@ public class BukkdoorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_door")
 	public static final Block block = null;
 	public BukkdoorBlock(RagemodModElements instance) {
-		super(instance, 220);
+		super(instance, 222);
 	}
 
 	@Override

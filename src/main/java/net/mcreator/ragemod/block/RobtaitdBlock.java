@@ -30,7 +30,7 @@ public class RobtaitdBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_trapdoor")
 	public static final Block block = null;
 	public RobtaitdBlock(RagemodModElements instance) {
-		super(instance, 229);
+		super(instance, 231);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class Robtai_2StairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_block_stairs")
 	public static final Block block = null;
 	public Robtai_2StairsBlock(RagemodModElements instance) {
-		super(instance, 158);
+		super(instance, 160);
 	}
 
 	@Override

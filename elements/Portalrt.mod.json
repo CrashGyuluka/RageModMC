@@ -37,7 +37,7 @@
     "hardness": 5.0,
     "resistance": 200.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:Ragetab"
     },

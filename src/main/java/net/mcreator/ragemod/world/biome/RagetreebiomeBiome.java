@@ -41,6 +41,7 @@ import net.minecraft.block.HugeMushroomBlock;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.ragemod.particle.RagefallingtreeParticle;
+import net.mcreator.ragemod.entity.RageflyEntity;
 import net.mcreator.ragemod.block.RageFaLogBlock;
 import net.mcreator.ragemod.block.RageFaLeavesBlock;
 import net.mcreator.ragemod.RagemodModElements;
@@ -49,7 +50,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RagetreebiomeBiome(RagemodModElements instance) {
-		super(instance, 1309);
+		super(instance, 1310);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -106,8 +107,9 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 				DefaultBiomeFeatures.withOceanCavesAndCanyons(biomeGenerationSettings);
 				DefaultBiomeFeatures.withMonsterRoom(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
-				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 20, 2, 2));
+				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 15, 2, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 5, 1, 3));
+				mobSpawnInfo.withSpawner(EntityClassification.AMBIENT, new MobSpawnInfo.Spawners(RageflyEntity.entity, 20, 2, 6));
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(0.7999999999999999f).scale(0.6f)
 						.temperature(0.6f).downfall(0.4f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

@@ -26,7 +26,7 @@ public class StrippedbukkwoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_block")
 	public static final Block block = null;
 	public StrippedbukkwoodBlock(RagemodModElements instance) {
-		super(instance, 121);
+		super(instance, 123);
 	}
 
 	@Override

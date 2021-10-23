@@ -45,7 +45,7 @@ public class AlienWalltorchBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_walltorch")
 	public static final Block block = null;
 	public AlienWalltorchBlock(RagemodModElements instance) {
-		super(instance, 1337);
+		super(instance, 1338);
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class AlienWalltorchBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 0f).setLightLevel(s -> 6)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 0f).setLightLevel(s -> 10)
 					.doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("alien_walltorch");

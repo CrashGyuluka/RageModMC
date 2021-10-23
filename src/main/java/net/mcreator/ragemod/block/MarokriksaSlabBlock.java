@@ -29,7 +29,7 @@ public class MarokriksaSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_slab")
 	public static final Block block = null;
 	public MarokriksaSlabBlock(RagemodModElements instance) {
-		super(instance, 181);
+		super(instance, 183);
 	}
 
 	@Override

@@ -94,7 +94,7 @@
     "fallSound": {
       "value": ""
     },
-    "luminance": 2,
+    "luminance": 5,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "spawnParticles": false,

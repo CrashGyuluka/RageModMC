@@ -35,7 +35,7 @@ public class FlyilenRenderer {
 						}
 						@Override
 						public ResourceLocation getEntityTexture(Entity entity) {
-							return new ResourceLocation("ragemod:textures/flylien.png");
+							return new ResourceLocation("ragemod:textures/flylien_2.png");
 						}
 					});
 		}

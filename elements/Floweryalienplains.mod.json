@@ -57,7 +57,7 @@
     "heightVariation": 0.2,
     "biomeType": "COOL",
     "spawnBiome": false,
-    "biomeWeight": 4,
+    "biomeWeight": 5,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
@@ -123,6 +123,24 @@
         "minGroup": 1,
         "maxGroup": 4,
         "weight": 20,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Flyilen"
+        },
+        "minGroup": 2,
+        "maxGroup": 6,
+        "weight": 10,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Alienslime"
+        },
+        "minGroup": 1,
+        "maxGroup": 4,
+        "weight": 8,
         "spawnType": "monster"
       }
     ]

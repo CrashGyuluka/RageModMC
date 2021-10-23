@@ -1,0 +1,44 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Hegyiko1"
+      },
+      {
+        "value": "CUSTOM:Hegyikopolished"
+      },
+      {
+        "value": "CUSTOM:Hegyikofull"
+      },
+      {
+        "value": "CUSTOM:Chiseledhegyiko"
+      },
+      {
+        "value": "CUSTOM:Hegyikotegla"
+      },
+      {
+        "value": "CUSTOM:Hegyimorzsolt"
+      },
+      {
+        "value": "CUSTOM:Hegyikogreen"
+      },
+      {
+        "value": "CUSTOM:Hegyikomossyplus"
+      },
+      {
+        "value": "CUSTOM:Alientrapblock"
+      },
+      {
+        "value": "CUSTOM:Alientrapblocklit"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "mountain_stones",
+    "namespace": "minecraft"
+  }
+}

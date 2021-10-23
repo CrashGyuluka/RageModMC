@@ -30,7 +30,7 @@ public class BukkfgstrBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_block_fence_gate")
 	public static final Block block = null;
 	public BukkfgstrBlock(RagemodModElements instance) {
-		super(instance, 207);
+		super(instance, 209);
 	}
 
 	@Override

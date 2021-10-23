@@ -35,6 +35,8 @@ import net.minecraft.block.Blocks;
 import net.mcreator.ragemod.particle.AlienparticleParticle;
 import net.mcreator.ragemod.entity.Mob1Entity;
 import net.mcreator.ragemod.entity.MinerEntity;
+import net.mcreator.ragemod.entity.FlyilenEntity;
+import net.mcreator.ragemod.entity.AlienslimeEntity;
 import net.mcreator.ragemod.block.Hegyiko1Block;
 import net.mcreator.ragemod.block.AliensoilBlock;
 import net.mcreator.ragemod.RagemodModElements;
@@ -43,7 +45,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AlienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public AlienplainsBiome(RagemodModElements instance) {
-		super(instance, 1258);
+		super(instance, 1260);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -102,6 +104,8 @@ public class AlienplainsBiome extends RagemodModElements.ModElement {
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(MinerEntity.entity, 4, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(Mob1Entity.entity, 2, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ENDERMAN, 20, 4, 4));
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(FlyilenEntity.entity, 10, 1, 5));
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(AlienslimeEntity.entity, 7, 1, 3));
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.3f).scale(0.2f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

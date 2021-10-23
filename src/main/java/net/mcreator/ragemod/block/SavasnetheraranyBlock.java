@@ -52,7 +52,7 @@ public class SavasnetheraranyBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnetherarany")
 	public static final Block block = null;
 	public SavasnetheraranyBlock(RagemodModElements instance) {
-		super(instance, 330);
+		super(instance, 332);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -57,7 +57,7 @@ public class Bigalienmushroomdev1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bigalienmushroomdev_1")
 	public static final Block block = null;
 	public Bigalienmushroomdev1Block(RagemodModElements instance) {
-		super(instance, 1385);
+		super(instance, 1386);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -103,8 +103,6 @@ public class Bigalienmushroomdev1Block extends RagemodModElements.ModElement {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:alien_plains").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:ruined_alien_biome").equals(event.getName()))
-			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:alien_hills").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
@@ -115,7 +113,7 @@ public class Bigalienmushroomdev1Block extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.1f).jumpFactor(1.1f)
-					.setLightLevel(s -> 8));
+					.setLightLevel(s -> 6));
 			setRegistryName("bigalienmushroomdev_1");
 		}
 

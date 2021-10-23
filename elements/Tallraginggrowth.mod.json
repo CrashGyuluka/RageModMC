@@ -6,7 +6,7 @@
     "texture": "rageing_vines2",
     "textureBottom": "rageing_vines_down",
     "customModelName": "Cross model",
-    "itemTexture": "",
+    "itemTexture": "rageing_vines_down",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

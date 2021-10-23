@@ -6,7 +6,6 @@ import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.IBooleanFunction;
@@ -194,11 +193,6 @@ public class PolishedalpivwallBlock extends RagemodModElements.ModElement {
 
 		private static boolean compareShapes(VoxelShape shape1, VoxelShape shape2) {
 			return !VoxelShapes.compare(shape2, shape1, IBooleanFunction.ONLY_FIRST);
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
 		}
 
 		@Override

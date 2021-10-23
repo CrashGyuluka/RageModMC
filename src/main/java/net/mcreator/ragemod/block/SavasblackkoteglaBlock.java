@@ -56,7 +56,7 @@ public class SavasblackkoteglaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasblackkotegla")
 	public static final Block block = null;
 	public SavasblackkoteglaBlock(RagemodModElements instance) {
-		super(instance, 315);
+		super(instance, 317);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

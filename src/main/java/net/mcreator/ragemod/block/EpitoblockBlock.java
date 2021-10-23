@@ -25,7 +25,7 @@ public class EpitoblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:epitoblock")
 	public static final Block block = null;
 	public EpitoblockBlock(RagemodModElements instance) {
-		super(instance, 658);
+		super(instance, 660);
 	}
 
 	@Override

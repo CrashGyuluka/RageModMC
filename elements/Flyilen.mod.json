@@ -5,10 +5,10 @@
     "mobName": "Flyilen",
     "mobLabel": "",
     "mobModelName": "Ghast",
-    "mobModelTexture": "flylien.png",
+    "mobModelTexture": "flylien_2.png",
     "mobModelGlowTexture": "flylien_light.png",
-    "modelWidth": 1.5,
-    "modelHeight": 1.5,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -111,10 +111,10 @@
     "rangedItemType": "Default item",
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 10,
+    "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 6,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Alienforest"

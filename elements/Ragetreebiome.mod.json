@@ -101,7 +101,7 @@
         },
         "minGroup": 2,
         "maxGroup": 2,
-        "weight": 20,
+        "weight": 15,
         "spawnType": "creature"
       },
       {
@@ -112,6 +112,15 @@
         "maxGroup": 3,
         "weight": 5,
         "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Ragefly"
+        },
+        "minGroup": 2,
+        "maxGroup": 6,
+        "weight": 20,
+        "spawnType": "ambient"
       }
     ]
   }

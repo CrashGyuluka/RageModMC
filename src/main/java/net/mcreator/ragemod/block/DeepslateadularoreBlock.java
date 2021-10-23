@@ -21,7 +21,7 @@ public class DeepslateadularoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateadularore")
 	public static final Block block = null;
 	public DeepslateadularoreBlock(RagemodModElements instance) {
-		super(instance, 351);
+		super(instance, 353);
 	}
 
 	@Override

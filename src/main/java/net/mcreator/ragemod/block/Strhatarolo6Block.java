@@ -21,7 +21,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.procedures.Structurehatarolo1BlockAddedProcedure;
+import net.mcreator.ragemod.procedures.Strhatarolo6UpdateTickProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -35,7 +35,7 @@ public class Strhatarolo6Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:strhatarolo_6")
 	public static final Block block = null;
 	public Strhatarolo6Block(RagemodModElements instance) {
-		super(instance, 1329);
+		super(instance, 1330);
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class Strhatarolo6Block extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				Structurehatarolo1BlockAddedProcedure.executeProcedure($_dependencies);
+				Strhatarolo6UpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}

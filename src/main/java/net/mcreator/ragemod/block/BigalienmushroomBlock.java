@@ -92,7 +92,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(
 					(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new DoublePlantBlockPlacer()))
-							.tries(64).func_227317_b_().build())
+							.tries(80).func_227317_b_().build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(40);
 			event.getRegistry().register(feature.setRegistryName("bigalienmushroom"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:bigalienmushroom"), configuredFeature);
@@ -103,7 +103,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:alien_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:floweryalienplains").equals(event.getName()))
+		if (new ResourceLocation("ragemod:flowery_alien_plains").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -113,7 +113,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.1f).jumpFactor(1.1f)
-					.setLightLevel(s -> 8));
+					.setLightLevel(s -> 6));
 			setRegistryName("bigalienmushroom");
 		}
 

@@ -29,7 +29,7 @@ public class Strplacer5Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:strplacer_5")
 	public static final Block block = null;
 	public Strplacer5Block(RagemodModElements instance) {
-		super(instance, 1325);
+		super(instance, 1326);
 	}
 
 	@Override

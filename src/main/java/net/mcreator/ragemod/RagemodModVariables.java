@@ -68,6 +68,7 @@ public class RagemodModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putBoolean("PlayerGotKaribMedal", instance.PlayerGotKaribMedal);
+			nbt.putDouble("ModidShieldTimer", instance.ModidShieldTimer);
 			return nbt;
 		}
 
@@ -75,11 +76,13 @@ public class RagemodModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.PlayerGotKaribMedal = nbt.getBoolean("PlayerGotKaribMedal");
+			instance.ModidShieldTimer = nbt.getDouble("ModidShieldTimer");
 		}
 	}
 
 	public static class PlayerVariables {
 		public boolean PlayerGotKaribMedal = false;
+		public double ModidShieldTimer = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				RagemodMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -114,6 +117,7 @@ public class RagemodModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.PlayerGotKaribMedal = original.PlayerGotKaribMedal;
 		if (!event.isWasDeath()) {
+			clone.ModidShieldTimer = original.ModidShieldTimer;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -138,6 +142,7 @@ public class RagemodModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.PlayerGotKaribMedal = message.data.PlayerGotKaribMedal;
+					variables.ModidShieldTimer = message.data.ModidShieldTimer;
 				}
 			});
 			context.setPacketHandled(true);

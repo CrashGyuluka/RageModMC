@@ -13,7 +13,7 @@ public class ToxicGivesYouBadEffectsGameRule extends RagemodModElements.ModEleme
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("toxicGivesYouBadEffects", GameRules.Category.PLAYER,
 			create(true));
 	public ToxicGivesYouBadEffectsGameRule(RagemodModElements instance) {
-		super(instance, 854);
+		super(instance, 856);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

@@ -61,7 +61,7 @@ public class RageflylitEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.5f, 0.5f)).build("rageflylit").setRegistryName("rageflylit");
 	public RageflylitEntity(RagemodModElements instance) {
-		super(instance, 1343);
+		super(instance, 1344);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflylitRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

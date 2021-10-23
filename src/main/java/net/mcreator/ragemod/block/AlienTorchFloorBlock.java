@@ -38,7 +38,7 @@ public class AlienTorchFloorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_torch_floor")
 	public static final Block block = null;
 	public AlienTorchFloorBlock(RagemodModElements instance) {
-		super(instance, 1335);
+		super(instance, 1336);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class AlienTorchFloorBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 0f).setLightLevel(s -> 6)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 0f).setLightLevel(s -> 10)
 					.doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("alien_torch_floor");
 		}

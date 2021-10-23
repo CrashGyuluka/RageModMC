@@ -14,7 +14,7 @@ import net.mcreator.ragemod.item.AktionitItem;
 @RagemodModElements.ModElement.Tag
 public class PatcraftBrewingRecipe extends RagemodModElements.ModElement {
 	public PatcraftBrewingRecipe(RagemodModElements instance) {
-		super(instance, 853);
+		super(instance, 855);
 	}
 
 	@Override

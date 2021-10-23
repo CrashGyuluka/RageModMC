@@ -1,0 +1,7 @@
+{
+  "parent": "ragemod:custom/golden_shield",
+  "textures": {
+    "texture": "ragemod:blocks/alienite_shield",
+    "particle": "ragemod:items/alienite_shield"
+  }
+}

@@ -23,7 +23,7 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cursedalienite")
 	public static final Item block = null;
 	public CursedalieniteItem(RagemodModElements instance) {
-		super(instance, 400);
+		super(instance, 402);
 	}
 
 	@Override

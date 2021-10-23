@@ -39,6 +39,8 @@ import net.minecraft.block.Blocks;
 import net.mcreator.ragemod.particle.AlienparticleParticle;
 import net.mcreator.ragemod.entity.Mob1Entity;
 import net.mcreator.ragemod.entity.MinerEntity;
+import net.mcreator.ragemod.entity.FlyilenEntity;
+import net.mcreator.ragemod.entity.AlienslimeEntity;
 import net.mcreator.ragemod.block.MarokriksaLogBlock;
 import net.mcreator.ragemod.block.MarokriksaLeavesBlock;
 import net.mcreator.ragemod.block.Hegyiko1Block;
@@ -49,7 +51,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public TotallyNotAlienBiome(RagemodModElements instance) {
-		super(instance, 1248);
+		super(instance, 1250);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -109,6 +111,8 @@ public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(Mob1Entity.entity, 2, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 5, 1, 2));
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ENDERMAN, 20, 4, 4));
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(FlyilenEntity.entity, 10, 2, 5));
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(AlienslimeEntity.entity, 7, 1, 3));
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(1.3f).scale(1.2f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
