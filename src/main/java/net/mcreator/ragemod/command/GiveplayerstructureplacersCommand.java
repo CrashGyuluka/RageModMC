@@ -11,7 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.Commands;
 import net.minecraft.command.CommandSource;
 
-import net.mcreator.ragemod.procedures.GivestrdevblockCommandExecutedProcedure;
+import net.mcreator.ragemod.procedures.GivedevblockstrplacercommandProcedure;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -22,13 +22,13 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
 @Mod.EventBusSubscriber
-public class GivestrdevblockCommand {
+public class GiveplayerstructureplacersCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("RandomBlocks(DON'T)").requires(s -> s.hasPermissionLevel(4))
-						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(GivestrdevblockCommand::execute))
-						.executes(GivestrdevblockCommand::execute));
+				.register(LiteralArgumentBuilder.<CommandSource>literal("StructurePlacer(DON'T)").requires(s -> s.hasPermissionLevel(4))
+						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(GiveplayerstructureplacersCommand::execute))
+						.executes(GiveplayerstructureplacersCommand::execute));
 	}
 
 	private static int execute(CommandContext<CommandSource> ctx) {
@@ -49,7 +49,7 @@ public class GivestrdevblockCommand {
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
 			$_dependencies.put("entity", entity);
-			GivestrdevblockCommandExecutedProcedure.executeProcedure($_dependencies);
+			GivedevblockstrplacercommandProcedure.executeProcedure($_dependencies);
 		}
 		return 0;
 	}

@@ -125,7 +125,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onTickUpdate": {
-      "name": "Sturtureplacer1UpdateTick"
+      "name": "Structurehatarolo1BlockAdded"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

@@ -13136,7 +13136,24 @@
       "ids": {},
       "registry_name": "structurehatarolo_1_block_added",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/extrastructures/proc"
     },
@@ -14836,19 +14853,6 @@
       "path": "~/extrastructures"
     },
     {
-      "name": "Strhatarolo2UpdateTick",
-      "type": "procedure",
-      "sortid": 1331,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strhatarolo_2_update_tick",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/extrastructures/proc"
-    },
-    {
       "name": "Alpivfloor",
       "type": "block",
       "sortid": 36,
@@ -14857,32 +14861,6 @@
       "ids": {},
       "registry_name": "alpivfloor",
       "path": "~/dimensions/alpiv"
-    },
-    {
-      "name": "Strhatarolo3UpdateTick",
-      "type": "procedure",
-      "sortid": 1332,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strhatarolo_3_update_tick",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/extrastructures/proc"
-    },
-    {
-      "name": "Strhatarolo4UpdateTick",
-      "type": "procedure",
-      "sortid": 1333,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strhatarolo_4_update_tick",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/extrastructures/proc"
     },
     {
       "name": "Alpivblockstairs",
@@ -16327,32 +16305,6 @@
       "path": "~/dimensions/novenyzet"
     },
     {
-      "name": "Strhatarolo5UpdateTick",
-      "type": "procedure",
-      "sortid": 1403,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strhatarolo_5_update_tick",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/extrastructures/proc"
-    },
-    {
-      "name": "Strhatarolo6UpdateTick",
-      "type": "procedure",
-      "sortid": 1404,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "strhatarolo_6_update_tick",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/extrastructures/proc"
-    },
-    {
       "name": "Alienstrfloor1",
       "type": "structure",
       "sortid": 1405,
@@ -16361,19 +16313,6 @@
       "ids": {},
       "registry_name": "alienstrfloor_1",
       "path": "~/extrastructures"
-    },
-    {
-      "name": "Sturtureplacer1UpdateTick",
-      "type": "procedure",
-      "sortid": 1406,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sturtureplacer_1_update_tick",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/extrastructures/proc"
     },
     {
       "name": "Alienstrc3",
@@ -16494,6 +16433,67 @@
         ]
       },
       "path": "~/dimensions/alienite_tools/proc"
+    },
+    {
+      "name": "Givedevblockstrplacercommand",
+      "type": "procedure",
+      "sortid": 1414,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "givedevblockstrplacercommand",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/extrastructures/proc"
+    },
+    {
+      "name": "Giveplayerstructureplacers",
+      "type": "command",
+      "sortid": 1415,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "giveplayerstructureplacers",
+      "path": "~/extrastructures/egyeb"
+    },
+    {
+      "name": "Structureplacerblocks",
+      "type": "tag",
+      "sortid": 1416,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "structureplacerblocks",
+      "path": "~/extrastructures"
+    },
+    {
+      "name": "RandomChangerBlocks",
+      "type": "tag",
+      "sortid": 1417,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "random_changer_blocks",
+      "path": "~/extrastructures"
+    },
+    {
+      "name": "RageModDevMode",
+      "type": "gamerule",
+      "sortid": 1418,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rageModDevMode",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/extrastructures"
     }
   ],
   "variable_elements": [
@@ -16742,6 +16742,7 @@
       "block.ragemod.strplacer_5": "DEVBLOCK:STRUCTUREBLOCK1",
       "advancements.adv_5.descr": ":O",
       "block.ragemod.svaskekgomba": "Toxic Warped Wart Block",
+      "gamerule.rageModDevMode": "RageModDevMode",
       "block.ragemod.marokriksapressureplate": "Marokriksa Planks Pressure Plate",
       "block.ragemod.rageiumalloyblock": "Block Of Rageium Alloy",
       "block.ragemod.beech_block_stairs": "Beech Block Stair",
@@ -17121,6 +17122,7 @@
       "item.ragemod.mega_minepotion": "MegaMine Potion",
       "block.ragemod.better_stripped_ragewood_block_pressure_plate": "Better Stripped RageWood Pressure Plate",
       "item.ragemod.ragegyuru": "Rage Ring",
+      "gamerule.rageModDevMode.description": "Stops some dev blocks from working - May ruin your world",
       "item.ragemod.rageiumaromr_leggings": "Rageium Leggings",
       "block.ragemod.savassoder": "Toxic Gravel",
       "block.ragemod.robtai_door": "Robtai Door",
@@ -17330,6 +17332,7 @@
       "block.ragemod.strplacer_5": "DEVBLOCK:STRUCTUREBLOCK1",
       "advancements.adv_5.descr": ":O",
       "block.ragemod.svaskekgomba": "Toxic Warped Wart Block",
+      "gamerule.rageModDevMode": "RageModDevMode",
       "block.ragemod.marokriksapressureplate": "Marokriksa Planks Pressure Plate",
       "block.ragemod.rageiumalloyblock": "Block Of Rageium Alloy",
       "block.ragemod.beech_block_stairs": "Beech Block Stair",
@@ -17709,6 +17712,7 @@
       "item.ragemod.mega_minepotion": "MegaMine Potion",
       "block.ragemod.better_stripped_ragewood_block_pressure_plate": "Better Stripped RageWood Pressure Plate",
       "item.ragemod.ragegyuru": "Rage Ring",
+      "gamerule.rageModDevMode.description": "Stops some dev blocks from working - May ruin your world",
       "item.ragemod.rageiumaromr_leggings": "Rageium Leggings",
       "block.ragemod.savassoder": "Toxic Gravel",
       "block.ragemod.robtai_door": "Robtai Door",
@@ -17915,6 +17919,7 @@
       "block.ragemod.strplacer_5": "DEVBLOCK:STRUCTUREBLOCK1",
       "advancements.adv_5.descr": ":O",
       "block.ragemod.svaskekgomba": "Savas Torz Bibircs?kblokk",
+      "gamerule.rageModDevMode": "RageModDevMode",
       "block.ragemod.marokriksapressureplate": "Marokriksa Nyom?lap",
       "block.ragemod.rageiumalloyblock": "Rageium ?tv?zet Blokk",
       "block.ragemod.beech_block_stairs": "Beech Block Stair",
@@ -18278,6 +18283,7 @@
       "item.ragemod.mega_minepotion": "MegaMine Potion",
       "block.ragemod.better_stripped_ragewood_block_pressure_plate": "Better Stripped RageWood Pressure Plate",
       "item.ragemod.ragegyuru": "Rageium Gy?r?",
+      "gamerule.rageModDevMode.description": "Stops some dev blocks from working - May ruin your world",
       "item.ragemod.rageiumaromr_leggings": "Rageium L?bsz?rv?d?",
       "block.ragemod.savassoder": "Savas S?der",
       "block.ragemod.robtai_door": "Robtai Door",

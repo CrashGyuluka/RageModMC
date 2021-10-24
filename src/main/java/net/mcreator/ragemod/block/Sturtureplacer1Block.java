@@ -21,7 +21,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.procedures.Sturtureplacer1UpdateTickProcedure;
+import net.mcreator.ragemod.procedures.Structurehatarolo1BlockAddedProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -91,7 +91,7 @@ public class Sturtureplacer1Block extends RagemodModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				Sturtureplacer1UpdateTickProcedure.executeProcedure($_dependencies);
+				Structurehatarolo1BlockAddedProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}

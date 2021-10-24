@@ -21,7 +21,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.procedures.Strhatarolo4UpdateTickProcedure;
+import net.mcreator.ragemod.procedures.Structurehatarolo1BlockAddedProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -87,7 +87,11 @@ public class Strhatarolo4Block extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				Strhatarolo4UpdateTickProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				Structurehatarolo1BlockAddedProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}

@@ -1,0 +1,32 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Sturtureplacer1"
+      },
+      {
+        "value": "CUSTOM:Structureplacer2"
+      },
+      {
+        "value": "CUSTOM:Strplacer3"
+      },
+      {
+        "value": "CUSTOM:Strplacer4"
+      },
+      {
+        "value": "CUSTOM:Strplacer5"
+      },
+      {
+        "value": "CUSTOM:Strplacer6"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "structure_placer_blocks",
+    "namespace": "minecraft"
+  }
+}

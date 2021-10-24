@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "command",
   "definition": {
-    "commandName": "RandomBlocks(DON'T)",
+    "commandName": "StructurePlacer(DON'T)",
     "permissionLevel": "4",
     "onCommandExecuted": {
-      "name": "GivestrdevblockCommandExecuted"
+      "name": "Givedevblockstrplacercommand"
     }
   }
 }

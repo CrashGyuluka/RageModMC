@@ -1,0 +1,32 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Structurehatarolo1"
+      },
+      {
+        "value": "CUSTOM:Strhatarolo2"
+      },
+      {
+        "value": "CUSTOM:Strhatarolo3"
+      },
+      {
+        "value": "CUSTOM:Strhatarolo4"
+      },
+      {
+        "value": "CUSTOM:Strhatarolo5"
+      },
+      {
+        "value": "CUSTOM:Strhatarolo6"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "random_changer_blocks",
+    "namespace": "minecraft"
+  }
+}
