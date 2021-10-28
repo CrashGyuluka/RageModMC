@@ -67,7 +67,7 @@ public class Hangingalienoff1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hangingalienoff_1")
 	public static final Block block = null;
 	public Hangingalienoff1Block(RagemodModElements instance) {
-		super(instance, 1284);
+		super(instance, 1287);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -223,7 +223,8 @@ public class Hangingalienoff1Block extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

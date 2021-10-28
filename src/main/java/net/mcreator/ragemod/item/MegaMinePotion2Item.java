@@ -24,10 +24,10 @@ import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
 public class MegaMinePotion2Item extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:mega_mine_potion_2")
+	@ObjectHolder("ragemod:longer_megamine_potion")
 	public static final Item block = null;
 	public MegaMinePotion2Item(RagemodModElements instance) {
-		super(instance, 410);
+		super(instance, 412);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class MegaMinePotion2Item extends RagemodModElements.ModElement {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(16).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
-			setRegistryName("mega_mine_potion_2");
+			setRegistryName("longer_megamine_potion");
 		}
 
 		@Override

@@ -51,7 +51,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AlienlamplitBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alienlamplit")
+	@ObjectHolder("ragemod:lit_alien_lamp")
 	public static final Block block = null;
 	public AlienlamplitBlock(RagemodModElements instance) {
 		super(instance, 1341);
@@ -68,7 +68,7 @@ public class AlienlamplitBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.REDSTONE_LIGHT).sound(SoundType.LANTERN).hardnessAndResistance(2f, 10f).setLightLevel(s -> 10)
 					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("alienlamplit");
+			setRegistryName("lit_alien_lamp");
 		}
 
 		@Override
@@ -134,13 +134,14 @@ public class AlienlamplitBlock extends RagemodModElements.ModElement {
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
-			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:alienlamplit_match"), () -> CustomRuleTest.codec);
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:lit_alien_lamp_match"), () -> CustomRuleTest.codec);
 			feature = new OreFeature(OreFeatureConfig.CODEC) {
 				@Override
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -149,8 +150,8 @@ public class AlienlamplitBlock extends RagemodModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 1)).range(64)
 					.square().func_242731_b(1);
-			event.getRegistry().register(feature.setRegistryName("alienlamplit"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alienlamplit"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("lit_alien_lamp"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:lit_alien_lamp"), configuredFeature);
 		}
 	}
 	@SubscribeEvent

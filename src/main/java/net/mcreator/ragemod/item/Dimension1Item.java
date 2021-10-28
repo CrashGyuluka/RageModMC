@@ -15,7 +15,7 @@ import net.mcreator.ragemod.world.dimension.Dimension1Dimension;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 
 public class Dimension1Item extends Item {
-	@ObjectHolder("ragemod:dimension_1")
+	@ObjectHolder("ragemod:cave_dimension_portal_igniter")
 	public static final Item block = null;
 	public Dimension1Item() {
 		super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(64));

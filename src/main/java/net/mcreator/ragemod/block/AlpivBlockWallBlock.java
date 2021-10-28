@@ -36,7 +36,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AlpivBlockWallBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alpiv_block_wall")
+	@ObjectHolder("ragemod:alpiv_wall")
 	public static final Block block = null;
 	public AlpivBlockWallBlock(RagemodModElements instance) {
 		super(instance, 29);
@@ -51,7 +51,7 @@ public class AlpivBlockWallBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("alpiv_block_wall");
+			setRegistryName("alpiv_wall");
 		}
 		private static final VoxelShape CENTER_POLE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_NORTH_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 0.0D, 9.0D, 16.0D, 9.0D);

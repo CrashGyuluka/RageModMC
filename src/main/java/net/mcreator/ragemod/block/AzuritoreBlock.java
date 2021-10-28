@@ -47,7 +47,7 @@ public class AzuritoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:azuritore")
 	public static final Block block = null;
 	public AzuritoreBlock(RagemodModElements instance) {
-		super(instance, 348);
+		super(instance, 350);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -106,7 +106,8 @@ public class AzuritoreBlock extends RagemodModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:cave_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

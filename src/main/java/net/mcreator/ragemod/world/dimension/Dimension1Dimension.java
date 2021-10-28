@@ -73,10 +73,10 @@ import com.google.common.collect.ImmutableSet;
 
 @RagemodModElements.ModElement.Tag
 public class Dimension1Dimension extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:dimension_1_portal")
+	@ObjectHolder("ragemod:cave_dimension_portal_igniter_portal")
 	public static final CustomPortalBlock portal = null;
 	public Dimension1Dimension(RagemodModElements instance) {
-		super(instance, 394);
+		super(instance, 396);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 
@@ -114,7 +114,7 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("ragemod:dimension_1"), customEffect);
+				effectsRegistry.put(new ResourceLocation("ragemod:cave_dimension_portal_igniter"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -122,25 +122,26 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(portal, RenderType.getTranslucent());
 	}
 	private static PointOfInterestType poi = null;
-	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("dimension_1_portal", Vector3i::compareTo, 300);
+	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("cave_dimension_portal_igniter_portal", Vector3i::compareTo, 300);
 	public static class POIRegisterHandler {
 		@SubscribeEvent
 		public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
-			poi = new PointOfInterestType("dimension_1_portal", Sets.newHashSet(ImmutableSet.copyOf(portal.getStateContainer().getValidStates())), 0,
-					1).setRegistryName("dimension_1_portal");
+			poi = new PointOfInterestType("cave_dimension_portal_igniter_portal",
+					Sets.newHashSet(ImmutableSet.copyOf(portal.getStateContainer().getValidStates())), 0, 1)
+							.setRegistryName("cave_dimension_portal_igniter_portal");
 			ForgeRegistries.POI_TYPES.register(poi);
 		}
 	}
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomPortalBlock());
-		elements.items.add(() -> new Dimension1Item().setRegistryName("dimension_1"));
+		elements.items.add(() -> new Dimension1Item().setRegistryName("cave_dimension_portal_igniter"));
 	}
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
 					.setLightLevel(s -> 1).noDrops());
-			setRegistryName("dimension_1_portal");
+			setRegistryName("cave_dimension_portal_igniter_portal");
 		}
 
 		@Override
@@ -207,9 +208,10 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 				if (entity.func_242280_ah()) {
 					entity.func_242279_ag();
 				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-						new ResourceLocation("ragemod:dimension_1"))) {
+						new ResourceLocation("ragemod:cave_dimension_portal_igniter"))) {
 					entity.func_242279_ag();
-					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")));
+					teleportToDimension(entity, pos,
+							RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:cave_dimension_portal_igniter")));
 				} else {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos, World.OVERWORLD);

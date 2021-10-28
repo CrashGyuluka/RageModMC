@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ragemod:obsontiumblock"
+      "item": "ragemod:obsontium_block"
     }
   ],
   "result": {

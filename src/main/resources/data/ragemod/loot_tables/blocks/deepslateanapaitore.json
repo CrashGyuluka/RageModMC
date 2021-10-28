@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:deepslateanapaitore",
+          "name": "ragemod:deepslate_anapait_ore",
           "weight": 1,
           "conditions": [
             {

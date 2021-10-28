@@ -32,7 +32,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AlienlampBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alienlamp")
+	@ObjectHolder("ragemod:alien_lamp")
 	public static final Block block = null;
 	public AlienlampBlock(RagemodModElements instance) {
 		super(instance, 37);
@@ -47,7 +47,7 @@ public class AlienlampBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.REDSTONE_LIGHT).sound(SoundType.LANTERN).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)
 					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("alienlamp");
+			setRegistryName("alien_lamp");
 		}
 
 		@Override

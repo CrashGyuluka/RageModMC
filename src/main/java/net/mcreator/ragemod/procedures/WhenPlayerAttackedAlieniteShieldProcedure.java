@@ -7,12 +7,12 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.World;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.ragemod.item.AlieniteshieldblockingdevItem;
+import net.mcreator.ragemod.entity.AlienslimeEntity;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.Random;
@@ -54,8 +54,8 @@ public class WhenPlayerAttackedAlieniteShieldProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((((entity instanceof PlayerEntity) == (true)) || ((entity instanceof ServerPlayerEntity) == (true)))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+		if (((((entity instanceof PlayerEntity) == (true)) || ((entity instanceof AlienslimeEntity.CustomEntity) == (true)))
+				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 						.getItem() == AlieniteshieldblockingdevItem.block))) {
 			if (dependencies.get("event") != null) {
 				Object _obj = dependencies.get("event");
@@ -66,7 +66,7 @@ public class WhenPlayerAttackedAlieniteShieldProcedure {
 				}
 			}
 			{
-				ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY);
+				ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
 				if (_ist.attemptDamageItem((int) 6, new Random(), null)) {
 					_ist.shrink(1);
 					_ist.setDamage(0);

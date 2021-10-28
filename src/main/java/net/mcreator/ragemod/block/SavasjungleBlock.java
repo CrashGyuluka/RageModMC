@@ -62,7 +62,7 @@ public class SavasjungleBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasjungle")
 	public static final Block block = null;
 	public SavasjungleBlock(RagemodModElements instance) {
-		super(instance, 292);
+		super(instance, 294);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

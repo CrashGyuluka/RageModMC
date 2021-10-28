@@ -23,7 +23,6 @@ import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.biome.ParticleEffectAmbience;
-import net.minecraft.world.biome.MoodSoundAmbience;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.BiomeGenerationSettings;
@@ -51,7 +50,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public TotallyNotAlienBiome(RagemodModElements instance) {
-		super(instance, 1250);
+		super(instance, 1253);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -60,11 +59,8 @@ public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-6750055).setWaterColor(-10092493).setWaterFogColor(-10092493)
 						.withSkyColor(-6750055).withFoliageColor(-10079233).withGrassColor(-13434778)
-						.setMoodSound(new MoodSoundAmbience(
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d7")),
-								30000, 8, 2))
 						.setMusic(new BackgroundMusicSelector(
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_d5")),
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient2")),
 								12000, 24000, true))
 						.setParticle(new ParticleEffectAmbience(AlienparticleParticle.particle, 0.005f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()

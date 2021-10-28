@@ -36,10 +36,10 @@
       "value": ""
     },
     "music": {
-      "value": "CUSTOM:alien_d5"
+      "value": "CUSTOM:alien_ambient"
     },
     "moodSound": {
-      "value": "CUSTOM:alien_d7"
+      "value": ""
     },
     "moodSoundDelay": 30000,
     "spawnParticles": true,

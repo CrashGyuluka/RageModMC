@@ -66,10 +66,10 @@ import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class HangingalienplantBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:hangingalienplant")
+	@ObjectHolder("ragemod:hanging_alien_shroom")
 	public static final Block block = null;
 	public HangingalienplantBlock(RagemodModElements instance) {
-		super(instance, 105);
+		super(instance, 106);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -91,7 +91,7 @@ public class HangingalienplantBlock extends RagemodModElements.ModElement {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).setLightLevel(s -> 3)
 					.doesNotBlockMovement().speedFactor(1.1f).jumpFactor(1.1f).notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
 					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
-			setRegistryName("hangingalienplant");
+			setRegistryName("hanging_alien_shroom");
 		}
 
 		@Override
@@ -237,13 +237,15 @@ public class HangingalienplantBlock extends RagemodModElements.ModElement {
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
-			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:hangingalienplant_match"), () -> CustomRuleTest.codec);
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:hanging_alien_shroom_match"),
+					() -> CustomRuleTest.codec);
 			feature = new OreFeature(OreFeatureConfig.CODEC) {
 				@Override
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -258,8 +260,8 @@ public class HangingalienplantBlock extends RagemodModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 17)).range(75)
 					.square().func_242731_b(30);
-			event.getRegistry().register(feature.setRegistryName("hangingalienplant"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hangingalienplant"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("hanging_alien_shroom"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hanging_alien_shroom"), configuredFeature);
 		}
 	}
 	@SubscribeEvent

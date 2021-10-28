@@ -62,7 +62,7 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienshroomdev")
 	public static final Block block = null;
 	public AlienshroomdevBlock(RagemodModElements instance) {
-		super(instance, 1299);
+		super(instance, 1302);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -93,7 +93,8 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

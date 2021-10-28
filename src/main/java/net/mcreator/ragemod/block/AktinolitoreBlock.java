@@ -43,7 +43,7 @@ public class AktinolitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aktinolitore")
 	public static final Block block = null;
 	public AktinolitoreBlock(RagemodModElements instance) {
-		super(instance, 354);
+		super(instance, 356);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -94,7 +94,8 @@ public class AktinolitoreBlock extends RagemodModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:cave_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

@@ -13,7 +13,7 @@ import net.minecraft.potion.Effect;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MegaMineeffectPotionEffect {
-	@ObjectHolder("ragemod:mega_mineeffect")
+	@ObjectHolder("ragemod:megamine_effect")
 	public static final Effect potion = null;
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
@@ -23,13 +23,13 @@ public class MegaMineeffectPotionEffect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {
 			super(EffectType.NEUTRAL, -13434829);
-			setRegistryName("mega_mineeffect");
+			setRegistryName("megamine_effect");
 			potionIcon = new ResourceLocation("ragemod:textures/megamine_effect2.png");
 		}
 
 		@Override
 		public String getName() {
-			return "effect.mega_mineeffect";
+			return "effect.megamine_effect";
 		}
 
 		@Override

@@ -56,7 +56,7 @@ public class SavashomokkoBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savashomokko")
 	public static final Block block = null;
 	public SavashomokkoBlock(RagemodModElements instance) {
-		super(instance, 323);
+		super(instance, 325);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

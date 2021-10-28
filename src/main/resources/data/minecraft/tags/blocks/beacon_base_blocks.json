@@ -3,10 +3,10 @@
   "values": [
     "ragemod:rageiumalloyblock",
     "ragemod:savblockok",
-    "ragemod:obsontiumblock",
-    "ragemod:cvexblock",
-    "ragemod:cvexportalblock",
-    "ragemod:cvexblock",
-    "ragemod:cvexportalblock"
+    "ragemod:obsontium_block",
+    "ragemod:cvex_block",
+    "ragemod:cvex_portal_block",
+    "ragemod:cvex_block",
+    "ragemod:cvex_portal_block"
   ]
 }

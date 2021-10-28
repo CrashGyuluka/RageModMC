@@ -23,7 +23,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AlpivfloorBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alpivfloor")
+	@ObjectHolder("ragemod:alpiv_floor")
 	public static final Block block = null;
 	public AlpivfloorBlock(RagemodModElements instance) {
 		super(instance, 36);
@@ -38,7 +38,7 @@ public class AlpivfloorBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 100f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("alpivfloor");
+			setRegistryName("alpiv_floor");
 		}
 
 		@Override

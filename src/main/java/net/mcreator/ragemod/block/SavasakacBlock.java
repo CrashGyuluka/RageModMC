@@ -62,7 +62,7 @@ public class SavasakacBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasakac")
 	public static final Block block = null;
 	public SavasakacBlock(RagemodModElements instance) {
-		super(instance, 290);
+		super(instance, 292);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

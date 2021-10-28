@@ -35,7 +35,7 @@ public class AlieniteshieldItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alieniteshield")
 	public static final Item block = null;
 	public AlieniteshieldItem(RagemodModElements instance) {
-		super(instance, 1409);
+		super(instance, 413);
 	}
 
 	@Override

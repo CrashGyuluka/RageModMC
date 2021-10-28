@@ -20,10 +20,10 @@ import java.util.HashMap;
 
 @RagemodModElements.ModElement.Tag
 public class CursedalieniteItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:cursedalienite")
+	@ObjectHolder("ragemod:cursed_alienite")
 	public static final Item block = null;
 	public CursedalieniteItem(RagemodModElements instance) {
-		super(instance, 402);
+		super(instance, 404);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(3).saturation(0.2f).setAlwaysEdible().build()));
-			setRegistryName("cursedalienite");
+			setRegistryName("cursed_alienite");
 		}
 
 		@Override

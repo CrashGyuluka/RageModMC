@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:cverx",
+          "name": "ragemod:cvex",
           "weight": 1,
           "conditions": [
             {
@@ -48,7 +48,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:cvexore",
+          "name": "ragemod:cvex_ore",
           "weight": 1,
           "conditions": [
             {

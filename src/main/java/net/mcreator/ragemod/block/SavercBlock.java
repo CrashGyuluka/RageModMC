@@ -57,7 +57,7 @@ public class SavercBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:saverc")
 	public static final Block block = null;
 	public SavercBlock(RagemodModElements instance) {
-		super(instance, 269);
+		super(instance, 271);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

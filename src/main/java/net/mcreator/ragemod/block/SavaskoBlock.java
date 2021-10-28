@@ -56,7 +56,7 @@ public class SavaskoBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasko")
 	public static final Block block = null;
 	public SavaskoBlock(RagemodModElements instance) {
-		super(instance, 285);
+		super(instance, 287);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -70,7 +70,7 @@ public class SavaskoBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHERRACK).hardnessAndResistance(1f, 5f).setLightLevel(s -> 0)
-					.harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.8f));
+					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.8f));
 			setRegistryName("savasko");
 		}
 

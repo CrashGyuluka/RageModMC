@@ -14,10 +14,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class AlienfoodItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alienfood")
+	@ObjectHolder("ragemod:alien_food")
 	public static final Item block = null;
 	public AlienfoodItem(RagemodModElements instance) {
-		super(instance, 403);
+		super(instance, 405);
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class AlienfoodItem extends RagemodModElements.ModElement {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(4).saturation(0.3f).build()));
-			setRegistryName("alienfood");
+			setRegistryName("alien_food");
 		}
 
 		@Override

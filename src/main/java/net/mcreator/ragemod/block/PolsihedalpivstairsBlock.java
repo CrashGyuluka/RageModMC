@@ -22,7 +22,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class PolsihedalpivstairsBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:polsihedalpivstairs")
+	@ObjectHolder("ragemod:polished_alpiv_stairs")
 	public static final Block block = null;
 	public PolsihedalpivstairsBlock(RagemodModElements instance) {
 		super(instance, 31);
@@ -39,7 +39,7 @@ public class PolsihedalpivstairsBlock extends RagemodModElements.ModElement {
 					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool()).getDefaultState(),
 					Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 							.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("polsihedalpivstairs");
+			setRegistryName("polished_alpiv_stairs");
 		}
 
 		@Override

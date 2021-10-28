@@ -33,7 +33,7 @@ public class RageFaWoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_wood")
 	public static final Block block = null;
 	public RageFaWoodBlock(RagemodModElements instance) {
-		super(instance, 115);
+		super(instance, 117);
 	}
 
 	@Override

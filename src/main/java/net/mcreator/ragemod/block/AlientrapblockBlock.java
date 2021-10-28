@@ -8,6 +8,8 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.IRuleTestType;
@@ -35,6 +37,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -42,6 +45,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.procedures.AlientrapblockOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.procedures.AlientrapblockEntityCollidesInTheBlockProcedure;
+import net.mcreator.ragemod.particle.AlienplantparticleParticle;
 import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -53,7 +57,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AlientrapblockBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alientrapblock")
+	@ObjectHolder("ragemod:alien_trap")
 	public static final Block block = null;
 	public AlientrapblockBlock(RagemodModElements instance) {
 		super(instance, 42);
@@ -70,7 +74,7 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(4f, 3f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().doesNotBlockMovement());
-			setRegistryName("alientrapblock");
+			setRegistryName("alien_trap");
 		}
 
 		@Override
@@ -84,6 +88,27 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public void animateTick(BlockState blockstate, World world, BlockPos pos, Random random) {
+			super.animateTick(blockstate, world, pos, random);
+			PlayerEntity entity = Minecraft.getInstance().player;
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (true)
+				for (int l = 0; l < 1; ++l) {
+					double d0 = (x + random.nextFloat());
+					double d1 = (y + random.nextFloat());
+					double d2 = (z + random.nextFloat());
+					int i1 = random.nextInt(2) * 2 - 1;
+					double d3 = (random.nextFloat() - 0.5D) * 0.2999999985098839D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.2999999985098839D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.2999999985098839D;
+					world.addParticle(AlienplantparticleParticle.particle, d0, d1, d2, d3, d4, d5);
+				}
 		}
 
 		@Override
@@ -142,13 +167,14 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
-			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:alientrapblock_match"), () -> CustomRuleTest.codec);
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:alien_trap_match"), () -> CustomRuleTest.codec);
 			feature = new OreFeature(OreFeatureConfig.CODEC) {
 				@Override
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -157,8 +183,8 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 9)).range(70)
 					.square().func_242731_b(60);
-			event.getRegistry().register(feature.setRegistryName("alientrapblock"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alientrapblock"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("alien_trap"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alien_trap"), configuredFeature);
 		}
 	}
 	@SubscribeEvent

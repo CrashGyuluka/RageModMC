@@ -20,7 +20,7 @@
       "item": "ragemod:hegyiko_1"
     },
     "4": {
-      "item": "ragemod:cvexblock"
+      "item": "ragemod:cvex_block"
     },
     "5": {
       "item": "ragemod:hegyiko_1"
@@ -36,7 +36,7 @@
     }
   },
   "result": {
-    "item": "ragemod:cvexportalblock",
+    "item": "ragemod:cvex_portal_block",
     "count": 2
   }
 }

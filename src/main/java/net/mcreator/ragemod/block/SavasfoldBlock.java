@@ -56,7 +56,7 @@ public class SavasfoldBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasfold")
 	public static final Block block = null;
 	public SavasfoldBlock(RagemodModElements instance) {
-		super(instance, 284);
+		super(instance, 286);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -70,7 +70,7 @@ public class SavasfoldBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.5f, 5f).setLightLevel(s -> 0)
-					.harvestLevel(3).harvestTool(ToolType.SHOVEL).setRequiresTool().slipperiness(0.7999999999999999f));
+					.harvestLevel(2).harvestTool(ToolType.SHOVEL).setRequiresTool().slipperiness(0.7999999999999999f));
 			setRegistryName("savasfold");
 		}
 

@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "inspiration_disc",
+    "name": "Inspiration - by CrashGyuluka",
+    "description": "CrashGyuluka - Inspiration",
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "music": {
+      "value": "CUSTOM:crashgyuluka_inspiration"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

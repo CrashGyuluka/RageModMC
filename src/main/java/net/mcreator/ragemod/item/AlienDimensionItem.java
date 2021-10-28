@@ -15,7 +15,7 @@ import net.mcreator.ragemod.world.dimension.AlienDimensionDimension;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 
 public class AlienDimensionItem extends Item {
-	@ObjectHolder("ragemod:alien_dimension")
+	@ObjectHolder("ragemod:alien_dimension_portal_igniter")
 	public static final Item block = null;
 	public AlienDimensionItem() {
 		super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(64));

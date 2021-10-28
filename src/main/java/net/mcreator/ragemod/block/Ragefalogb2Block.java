@@ -32,7 +32,7 @@ public class Ragefalogb2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:better_stripped_ragewood_block")
 	public static final Block block = null;
 	public Ragefalogb2Block(RagemodModElements instance) {
-		super(instance, 118);
+		super(instance, 120);
 	}
 
 	@Override

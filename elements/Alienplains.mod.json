@@ -36,10 +36,10 @@
       "value": ""
     },
     "music": {
-      "value": "CUSTOM:alien_d5"
+      "value": "CUSTOM:alien_ambient_3"
     },
     "moodSound": {
-      "value": "CUSTOM:alien_d7"
+      "value": ""
     },
     "moodSoundDelay": 30000,
     "spawnParticles": true,
@@ -53,8 +53,8 @@
     },
     "rainingPossibility": 0.0,
     "temperature": 0.0,
-    "baseHeight": 0.30000000000000004,
-    "heightVariation": 0.2,
+    "baseHeight": 0.4,
+    "heightVariation": 0.30000000000000004,
     "biomeType": "COOL",
     "spawnBiome": false,
     "biomeWeight": 4,

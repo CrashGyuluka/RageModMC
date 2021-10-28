@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "elderflower_juice",
+    "customModelName": "Normal",
+    "name": "Elderflower Juice",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Termeszettab"
+    },
+    "stackSize": 16,
+    "nutritionalValue": 7,
+    "saturation": 0.7,
+    "eatingSpeed": 30,
+    "resultItem": {
+      "value": "Items.GLASS_BOTTLE"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "AlderflowerJuiceFoodEaten"
+    }
+  }
+}

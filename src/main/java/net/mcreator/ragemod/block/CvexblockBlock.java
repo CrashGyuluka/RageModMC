@@ -31,10 +31,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class CvexblockBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:cvexblock")
+	@ObjectHolder("ragemod:cvex_block")
 	public static final Block block = null;
 	public CvexblockBlock(RagemodModElements instance) {
-		super(instance, 398);
+		super(instance, 400);
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class CvexblockBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.NETHERITE).hardnessAndResistance(6f, 60f).setLightLevel(s -> 0)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool().jumpFactor(1.1f));
-			setRegistryName("cvexblock");
+			setRegistryName("cvex_block");
 		}
 
 		@Override

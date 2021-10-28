@@ -59,10 +59,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AlienshroomBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alienshroom")
+	@ObjectHolder("ragemod:alien_shroom")
 	public static final Block block = null;
 	public AlienshroomBlock(RagemodModElements instance) {
-		super(instance, 103);
+		super(instance, 104);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -94,7 +94,8 @@ public class AlienshroomBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -106,8 +107,8 @@ public class AlienshroomBlock extends RagemodModElements.ModElement {
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
 									.tries(60).build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(32);
-			event.getRegistry().register(feature.setRegistryName("alienshroom"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alienshroom"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("alien_shroom"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alien_shroom"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
@@ -120,7 +121,7 @@ public class AlienshroomBlock extends RagemodModElements.ModElement {
 					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
 							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f)
 							.jumpFactor(1.2000000000000002f).setLightLevel(s -> 4));
-			setRegistryName("alienshroom");
+			setRegistryName("alien_shroom");
 		}
 
 		@Override

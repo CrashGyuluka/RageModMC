@@ -27,7 +27,7 @@ public class SequoiaPlanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_planks")
 	public static final Block block = null;
 	public SequoiaPlanksBlock(RagemodModElements instance) {
-		super(instance, 148);
+		super(instance, 150);
 	}
 
 	@Override

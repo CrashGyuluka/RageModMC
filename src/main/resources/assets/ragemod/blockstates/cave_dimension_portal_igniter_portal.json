@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "ragemod:block/cave_dimension_portal_igniter_portal_ew"
+    },
+    "axis=x": {
+      "model": "ragemod:block/cave_dimension_portal_igniter_portal_ns"
+    }
+  }
+}

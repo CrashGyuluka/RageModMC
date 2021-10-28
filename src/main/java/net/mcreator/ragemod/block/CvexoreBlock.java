@@ -40,10 +40,10 @@ import java.util.Random;
 
 @RagemodModElements.ModElement.Tag
 public class CvexoreBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:cvexore")
+	@ObjectHolder("ragemod:cvex_ore")
 	public static final Block block = null;
 	public CvexoreBlock(RagemodModElements instance) {
-		super(instance, 396);
+		super(instance, 398);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -57,7 +57,7 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(10f, 1f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("cvexore");
+			setRegistryName("cvex_ore");
 		}
 
 		@Override
@@ -86,13 +86,14 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
-			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:cvexore_match"), () -> CustomRuleTest.codec);
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("ragemod:cvex_ore_match"), () -> CustomRuleTest.codec);
 			feature = new OreFeature(OreFeatureConfig.CODEC) {
 				@Override
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:cave_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -101,8 +102,8 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(200)
 					.square().func_242731_b(5);
-			event.getRegistry().register(feature.setRegistryName("cvexore"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:cvexore"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("cvex_ore"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:cvex_ore"), configuredFeature);
 		}
 	}
 	@SubscribeEvent

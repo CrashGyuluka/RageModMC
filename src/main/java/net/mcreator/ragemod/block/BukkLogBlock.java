@@ -33,7 +33,7 @@ public class BukkLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_log")
 	public static final Block block = null;
 	public BukkLogBlock(RagemodModElements instance) {
-		super(instance, 122);
+		super(instance, 124);
 	}
 
 	@Override

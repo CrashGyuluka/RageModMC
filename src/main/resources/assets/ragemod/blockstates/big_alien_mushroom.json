@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "ragemod:block/big_alien_mushroom"
+    },
+    "half=lower": {
+      "model": "ragemod:block/big_alien_mushroom_bottom"
+    }
+  }
+}

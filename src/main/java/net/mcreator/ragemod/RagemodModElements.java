@@ -61,6 +61,16 @@ public class RagemodModElements {
 		sounds.put(new ResourceLocation("ragemod", "alien_d5"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d5")));
 		sounds.put(new ResourceLocation("ragemod", "alien_d7"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d7")));
 		sounds.put(new ResourceLocation("ragemod", "alien_d8"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d8")));
+		sounds.put(new ResourceLocation("ragemod", "alien_ambient"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient")));
+		sounds.put(new ResourceLocation("ragemod", "alien_ambient2"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient2")));
+		sounds.put(new ResourceLocation("ragemod", "alien_ambient_3"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient_3")));
+		sounds.put(new ResourceLocation("ragemod", "alien_ambient4"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient4")));
+		sounds.put(new ResourceLocation("ragemod", "crashgyuluka_inspiration"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "crashgyuluka_inspiration")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("ragemod").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

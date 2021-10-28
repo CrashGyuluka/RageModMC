@@ -16,7 +16,7 @@ public class SequoiastickItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoiastick")
 	public static final Item block = null;
 	public SequoiastickItem(RagemodModElements instance) {
-		super(instance, 257);
+		super(instance, 259);
 	}
 
 	@Override

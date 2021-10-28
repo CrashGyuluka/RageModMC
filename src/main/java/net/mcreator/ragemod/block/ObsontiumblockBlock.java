@@ -31,10 +31,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class ObsontiumblockBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:obsontiumblock")
+	@ObjectHolder("ragemod:obsontium_block")
 	public static final Block block = null;
 	public ObsontiumblockBlock(RagemodModElements instance) {
-		super(instance, 393);
+		super(instance, 395);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class ObsontiumblockBlock extends RagemodModElements.ModElement {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.NETHERITE).hardnessAndResistance(6f, 60f).setLightLevel(s -> 0)
 					.harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool().setNeedsPostProcessing((bs, br, bp) -> true)
 					.setEmmisiveRendering((bs, br, bp) -> true));
-			setRegistryName("obsontiumblock");
+			setRegistryName("obsontium_block");
 		}
 
 		@Override

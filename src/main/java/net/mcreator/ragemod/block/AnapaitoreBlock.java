@@ -43,7 +43,7 @@ public class AnapaitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:anapaitore")
 	public static final Block block = null;
 	public AnapaitoreBlock(RagemodModElements instance) {
-		super(instance, 356);
+		super(instance, 358);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -94,7 +94,8 @@ public class AnapaitoreBlock extends RagemodModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:dimension_1")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:cave_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

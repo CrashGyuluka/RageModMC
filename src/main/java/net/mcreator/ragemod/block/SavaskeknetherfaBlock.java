@@ -56,7 +56,7 @@ public class SavaskeknetherfaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaskeknetherfa")
 	public static final Block block = null;
 	public SavaskeknetherfaBlock(RagemodModElements instance) {
-		super(instance, 303);
+		super(instance, 305);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -3,11 +3,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ragemod:cvexblock"
+      "item": "ragemod:cvex_block"
     }
   ],
   "result": {
-    "item": "ragemod:cverx",
+    "item": "ragemod:cvex",
     "count": 4
   }
 }

@@ -61,12 +61,12 @@ import io.netty.buffer.Unpooled;
 
 @RagemodModElements.ModElement.Tag
 public class KonvertaloBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:konvertalo")
+	@ObjectHolder("ragemod:converter")
 	public static final Block block = null;
-	@ObjectHolder("ragemod:konvertalo")
+	@ObjectHolder("ragemod:converter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public KonvertaloBlock(RagemodModElements instance) {
-		super(instance, 391);
+		super(instance, 393);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -78,7 +78,7 @@ public class KonvertaloBlock extends RagemodModElements.ModElement {
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("konvertalo"));
+			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("converter"));
 		}
 	}
 
@@ -86,7 +86,7 @@ public class KonvertaloBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(7f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("konvertalo");
+			setRegistryName("converter");
 		}
 
 		@Override
@@ -230,7 +230,7 @@ public class KonvertaloBlock extends RagemodModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("konvertalo");
+			return new StringTextComponent("converter");
 		}
 
 		@Override

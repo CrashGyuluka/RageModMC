@@ -97,13 +97,13 @@
     "luminance": 7,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:Alienplantparticle"
     },
     "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.2999999985098839,
-    "particleAmount": 1,
+    "particleSpawningRadious": 0.3999999985098839,
+    "particleAmount": 2,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

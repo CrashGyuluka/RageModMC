@@ -18,10 +18,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class DeepslateanapaitoreBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:deepslateanapaitore")
+	@ObjectHolder("ragemod:deepslate_anapait_ore")
 	public static final Block block = null;
 	public DeepslateanapaitoreBlock(RagemodModElements instance) {
-		super(instance, 357);
+		super(instance, 359);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class DeepslateanapaitoreBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(6f, 11f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("deepslateanapaitore");
+			setRegistryName("deepslate_anapait_ore");
 		}
 
 		@Override

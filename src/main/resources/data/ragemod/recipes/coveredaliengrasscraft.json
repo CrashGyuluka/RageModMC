@@ -8,35 +8,35 @@
   ],
   "key": {
     "0": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "1": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "2": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "3": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "4": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "5": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "6": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "7": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     },
     "8": {
-      "item": "ragemod:aliensoil"
+      "item": "ragemod:alien_soil"
     }
   },
   "result": {
-    "item": "ragemod:coveredaliengrass",
+    "item": "ragemod:covered_alien_soil",
     "count": 7
   }
 }

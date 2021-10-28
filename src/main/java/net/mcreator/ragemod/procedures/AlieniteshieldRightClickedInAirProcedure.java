@@ -27,21 +27,21 @@ public class AlieniteshieldRightClickedInAirProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double sheildDamage = 0;
-		if (((itemstack).getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+		if (((itemstack).getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem())) {
 			sheildDamage = (double) (((itemstack)).getDamage());
 			if (entity instanceof LivingEntity) {
 				ItemStack _setstack = new ItemStack(AlieniteshieldblockingdevItem.block);
 				_setstack.setCount((int) 1);
-				((LivingEntity) entity).setHeldItem(Hand.OFF_HAND, _setstack);
+				((LivingEntity) entity).setHeldItem(Hand.MAIN_HAND, _setstack);
 				if (entity instanceof ServerPlayerEntity)
 					((ServerPlayerEntity) entity).inventory.markDirty();
 			}
-			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).setDamage((int) sheildDamage);
+			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).setDamage((int) sheildDamage);
 			{
 				double _setval = (double) 40;
 				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ModidShieldTimer = _setval;
+					capability.RageModShieldTimer = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

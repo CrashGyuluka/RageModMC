@@ -17,6 +17,9 @@
       },
       {
         "value": "CUSTOM:Floweryalienplains"
+      },
+      {
+        "value": "CUSTOM:Spikyalienplains"
       }
     ],
     "worldGenType": "Normal world gen",

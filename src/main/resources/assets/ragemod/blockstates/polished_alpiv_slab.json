@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ragemod:block/polished_alpiv_slab"
+    },
+    "type=top": {
+      "model": "ragemod:block/polished_alpiv_slab_top"
+    },
+    "type=double": {
+      "model": "ragemod:block/polished_alpiv_slab_full"
+    }
+  }
+}

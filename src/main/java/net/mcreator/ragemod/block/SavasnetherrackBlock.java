@@ -56,7 +56,7 @@ public class SavasnetherrackBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnetherrack")
 	public static final Block block = null;
 	public SavasnetherrackBlock(RagemodModElements instance) {
-		super(instance, 286);
+		super(instance, 288);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -70,7 +70,7 @@ public class SavasnetherrackBlock extends RagemodModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHERRACK).hardnessAndResistance(0.5f, 3f).setLightLevel(s -> 0)
-					.harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7999999999999999f));
+					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7999999999999999f));
 			setRegistryName("savasnetherrack");
 		}
 

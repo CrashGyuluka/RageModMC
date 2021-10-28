@@ -19,10 +19,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class AliendirtBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:aliendirt")
+	@ObjectHolder("ragemod:alien_dirt")
 	public static final Block block = null;
 	public AliendirtBlock(RagemodModElements instance) {
-		super(instance, 100);
+		super(instance, 101);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class AliendirtBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)
 					.harvestLevel(2).harvestTool(ToolType.SHOVEL).setRequiresTool());
-			setRegistryName("aliendirt");
+			setRegistryName("alien_dirt");
 		}
 
 		@Override

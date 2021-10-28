@@ -4,7 +4,7 @@
   "experience": 1,
   "cookingtime": 250,
   "ingredient": {
-    "item": "ragemod:deepslateanapaitore"
+    "item": "ragemod:deepslate_anapait_ore"
   },
   "result": {
     "item": "ragemod:anapait"

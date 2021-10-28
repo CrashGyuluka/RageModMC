@@ -89,7 +89,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:mega_mine_potion_2",
+          "name": "ragemod:longer_megamine_potion",
           "weight": 2,
           "functions": [
             {
@@ -108,7 +108,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ragemod:mega_minepotion",
+          "name": "ragemod:megamine_potion",
           "weight": 3,
           "functions": [
             {
@@ -132,7 +132,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:alientrapblock",
+          "name": "ragemod:alien_trap",
           "weight": 4,
           "functions": [
             {
@@ -151,7 +151,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ragemod:alienfood",
+          "name": "ragemod:alien_food",
           "weight": 4,
           "functions": [
             {
@@ -199,7 +199,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:cursedalienite",
+          "name": "ragemod:cursed_alienite",
           "weight": 3,
           "functions": [
             {

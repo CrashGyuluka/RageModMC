@@ -16,7 +16,7 @@ public class AktionitItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aktionit")
 	public static final Item block = null;
 	public AktionitItem(RagemodModElements instance) {
-		super(instance, 341);
+		super(instance, 343);
 	}
 
 	@Override

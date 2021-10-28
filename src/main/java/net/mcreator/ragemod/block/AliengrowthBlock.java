@@ -52,10 +52,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class AliengrowthBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:aliengrowth")
+	@ObjectHolder("ragemod:alien_growth")
 	public static final Block block = null;
 	public AliengrowthBlock(RagemodModElements instance) {
-		super(instance, 102);
+		super(instance, 103);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -87,7 +87,8 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -99,8 +100,8 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
 									.tries(37).build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(32);
-			event.getRegistry().register(feature.setRegistryName("aliengrowth"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:aliengrowth"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("alien_growth"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alien_growth"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
@@ -113,7 +114,7 @@ public class AliengrowthBlock extends RagemodModElements.ModElement {
 					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)
 							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).jumpFactor(1.1f)
 							.setLightLevel(s -> 2));
-			setRegistryName("aliengrowth");
+			setRegistryName("alien_growth");
 		}
 
 		@Override

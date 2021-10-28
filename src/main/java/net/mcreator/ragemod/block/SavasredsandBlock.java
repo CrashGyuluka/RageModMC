@@ -57,7 +57,7 @@ public class SavasredsandBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasredsand")
 	public static final Block block = null;
 	public SavasredsandBlock(RagemodModElements instance) {
-		super(instance, 324);
+		super(instance, 326);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

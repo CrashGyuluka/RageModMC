@@ -3,29 +3,29 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     },
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     },
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     },
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     },
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     },
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     },
     {
-      "item": "ragemod:coveredaliengrass"
+      "item": "ragemod:covered_alien_soil"
     }
   ],
   "result": {
-    "item": "ragemod:aliensoil",
+    "item": "ragemod:alien_soil",
     "count": 9
   }
 }

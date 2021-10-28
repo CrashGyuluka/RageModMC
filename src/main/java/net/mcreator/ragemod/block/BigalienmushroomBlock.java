@@ -53,10 +53,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class BigalienmushroomBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:bigalienmushroom")
+	@ObjectHolder("ragemod:big_alien_mushroom")
 	public static final Block block = null;
 	public BigalienmushroomBlock(RagemodModElements instance) {
-		super(instance, 107);
+		super(instance, 108);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -83,7 +83,8 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -94,8 +95,8 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 					(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new DoublePlantBlockPlacer()))
 							.tries(80).func_227317_b_().build())
 					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(40);
-			event.getRegistry().register(feature.setRegistryName("bigalienmushroom"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:bigalienmushroom"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("big_alien_mushroom"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:big_alien_mushroom"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
@@ -114,7 +115,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.1f).jumpFactor(1.1f)
 					.setLightLevel(s -> 6));
-			setRegistryName("bigalienmushroom");
+			setRegistryName("big_alien_mushroom");
 		}
 
 		@Override

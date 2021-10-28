@@ -56,7 +56,7 @@ public class SavasendkoBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasendko")
 	public static final Block block = null;
 	public SavasendkoBlock(RagemodModElements instance) {
-		super(instance, 287);
+		super(instance, 289);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -69,7 +69,7 @@ public class SavasendkoBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7999999999999999f));
 			setRegistryName("savasendko");
 		}

@@ -26,7 +26,7 @@ public class RagefaslabblueBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:blue_ragewood_slab")
 	public static final Block block = null;
 	public RagefaslabblueBlock(RagemodModElements instance) {
-		super(instance, 170);
+		super(instance, 172);
 	}
 
 	@Override

@@ -7,6 +7,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.IRuleTestType;
@@ -35,6 +37,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -42,6 +45,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.procedures.AlientrapblocklitOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.procedures.AlientrapblockEntityCollidesInTheBlockProcedure;
+import net.mcreator.ragemod.particle.AlienplantparticleParticle;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -55,7 +59,7 @@ public class AlientrapblocklitBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alientrapblocklit")
 	public static final Block block = null;
 	public AlientrapblocklitBlock(RagemodModElements instance) {
-		super(instance, 1293);
+		super(instance, 1296);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -88,6 +92,27 @@ public class AlientrapblocklitBlock extends RagemodModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(AlientrapblockBlock.block));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public void animateTick(BlockState blockstate, World world, BlockPos pos, Random random) {
+			super.animateTick(blockstate, world, pos, random);
+			PlayerEntity entity = Minecraft.getInstance().player;
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (true)
+				for (int l = 0; l < 1; ++l) {
+					double d0 = (x + random.nextFloat());
+					double d1 = (y + random.nextFloat());
+					double d2 = (z + random.nextFloat());
+					int i1 = random.nextInt(2) * 2 - 1;
+					double d3 = (random.nextFloat() - 0.5D) * 0.2999999985098839D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.2999999985098839D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.2999999985098839D;
+					world.addParticle(AlienplantparticleParticle.particle, d0, d1, d2, d3, d4, d5);
+				}
 		}
 
 		@Override
@@ -152,7 +177,8 @@ public class AlientrapblocklitBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")))
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("ragemod:alien_dimension_portal_igniter")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

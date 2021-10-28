@@ -13,7 +13,7 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class RagetabItemGroup extends RagemodModElements.ModElement {
 	public RagetabItemGroup(RagemodModElements instance) {
-		super(instance, 411);
+		super(instance, 414);
 	}
 
 	@Override

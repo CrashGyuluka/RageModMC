@@ -23,10 +23,10 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class ObszontiumvarazsloBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:obszontiumvarazslo")
+	@ObjectHolder("ragemod:magicis_obsontium")
 	public static final Block block = null;
 	public ObszontiumvarazsloBlock(RagemodModElements instance) {
-		super(instance, 395);
+		super(instance, 397);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class ObszontiumvarazsloBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(4f, 20f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7f).jumpFactor(1.1f));
-			setRegistryName("obszontiumvarazslo");
+			setRegistryName("magicis_obsontium");
 		}
 
 		@Override

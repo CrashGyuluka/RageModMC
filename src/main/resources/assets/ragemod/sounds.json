@@ -97,5 +97,51 @@
         "stream": false
       }
     ]
+  },
+  "alien_ambient": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:am3",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient2": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:am7",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient_3": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:at4",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient4": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:at6",
+        "stream": false
+      }
+    ]
+  },
+  "crashgyuluka_inspiration": {
+    "category": "record",
+    "subtitle": "subtitles.crashgyuluka_inspiration",
+    "sounds": [
+      {
+        "name": "ragemod:b6",
+        "stream": true
+      }
+    ]
   }
 }

@@ -19,10 +19,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class CoveredaliengrassBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:coveredaliengrass")
+	@ObjectHolder("ragemod:covered_alien_soil")
 	public static final Block block = null;
 	public CoveredaliengrassBlock(RagemodModElements instance) {
-		super(instance, 101);
+		super(instance, 102);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class CoveredaliengrassBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.WET_GRASS).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)
 					.harvestLevel(2).harvestTool(ToolType.SHOVEL).setRequiresTool());
-			setRegistryName("coveredaliengrass");
+			setRegistryName("covered_alien_soil");
 		}
 
 		@Override

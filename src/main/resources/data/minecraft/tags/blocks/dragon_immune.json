@@ -33,8 +33,8 @@
     "ragemod:mossyplushegyikostairs",
     "ragemod:mossyplushegyikowall",
     "ragemod:mossyplushegyikopr",
-    "ragemod:cvexore",
-    "ragemod:cvexblock",
-    "ragemod:cvexportalblock"
+    "ragemod:cvex_ore",
+    "ragemod:cvex_block",
+    "ragemod:cvex_portal_block"
   ]
 }

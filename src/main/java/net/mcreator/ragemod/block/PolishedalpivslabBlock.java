@@ -23,7 +23,7 @@ import java.util.Collections;
 
 @RagemodModElements.ModElement.Tag
 public class PolishedalpivslabBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:polishedalpivslab")
+	@ObjectHolder("ragemod:polished_alpiv_slab")
 	public static final Block block = null;
 	public PolishedalpivslabBlock(RagemodModElements instance) {
 		super(instance, 32);
@@ -38,7 +38,7 @@ public class PolishedalpivslabBlock extends RagemodModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("polishedalpivslab");
+			setRegistryName("polished_alpiv_slab");
 		}
 
 		@Override

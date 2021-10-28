@@ -74,10 +74,10 @@ import com.google.common.collect.ImmutableSet;
 
 @RagemodModElements.ModElement.Tag
 public class AlienDimensionDimension extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alien_dimension_portal")
+	@ObjectHolder("ragemod:alien_dimension_portal_igniter_portal")
 	public static final CustomPortalBlock portal = null;
 	public AlienDimensionDimension(RagemodModElements instance) {
-		super(instance, 400);
+		super(instance, 402);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 
@@ -115,7 +115,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("ragemod:alien_dimension"), customEffect);
+				effectsRegistry.put(new ResourceLocation("ragemod:alien_dimension_portal_igniter"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -123,25 +123,26 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(portal, RenderType.getTranslucent());
 	}
 	private static PointOfInterestType poi = null;
-	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("alien_dimension_portal", Vector3i::compareTo, 300);
+	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("alien_dimension_portal_igniter_portal", Vector3i::compareTo, 300);
 	public static class POIRegisterHandler {
 		@SubscribeEvent
 		public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
-			poi = new PointOfInterestType("alien_dimension_portal", Sets.newHashSet(ImmutableSet.copyOf(portal.getStateContainer().getValidStates())),
-					0, 1).setRegistryName("alien_dimension_portal");
+			poi = new PointOfInterestType("alien_dimension_portal_igniter_portal",
+					Sets.newHashSet(ImmutableSet.copyOf(portal.getStateContainer().getValidStates())), 0, 1)
+							.setRegistryName("alien_dimension_portal_igniter_portal");
 			ForgeRegistries.POI_TYPES.register(poi);
 		}
 	}
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomPortalBlock());
-		elements.items.add(() -> new AlienDimensionItem().setRegistryName("alien_dimension"));
+		elements.items.add(() -> new AlienDimensionItem().setRegistryName("alien_dimension_portal_igniter"));
 	}
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
 					.setLightLevel(s -> 1).noDrops());
-			setRegistryName("alien_dimension_portal");
+			setRegistryName("alien_dimension_portal_igniter_portal");
 		}
 
 		@Override
@@ -208,9 +209,10 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 				if (entity.func_242280_ah()) {
 					entity.func_242279_ag();
 				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-						new ResourceLocation("ragemod:alien_dimension"))) {
+						new ResourceLocation("ragemod:alien_dimension_portal_igniter"))) {
 					entity.func_242279_ag();
-					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension")));
+					teleportToDimension(entity, pos,
+							RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("ragemod:alien_dimension_portal_igniter")));
 				} else {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos, World.OVERWORLD);
