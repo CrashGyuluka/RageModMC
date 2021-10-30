@@ -22,7 +22,7 @@ public class AliendirtBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_dirt")
 	public static final Block block = null;
 	public AliendirtBlock(RagemodModElements instance) {
-		super(instance, 101);
+		super(instance, 190);
 	}
 
 	@Override

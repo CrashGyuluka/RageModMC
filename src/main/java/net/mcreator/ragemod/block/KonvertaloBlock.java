@@ -66,7 +66,7 @@ public class KonvertaloBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:converter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public KonvertaloBlock(RagemodModElements instance) {
-		super(instance, 393);
+		super(instance, 90);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

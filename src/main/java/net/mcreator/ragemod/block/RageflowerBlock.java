@@ -43,7 +43,7 @@ import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -55,7 +55,7 @@ public class RageflowerBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rageflower")
 	public static final Block block = null;
 	public RageflowerBlock(RagemodModElements instance) {
-		super(instance, 23);
+		super(instance, 187);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -63,7 +63,8 @@ public class RageflowerBlock extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new BlockCustomFlower());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(RagetabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

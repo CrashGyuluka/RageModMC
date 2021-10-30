@@ -53,7 +53,7 @@ public class ReceptbookItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:receptbook")
 	public static final Item block = null;
 	public ReceptbookItem(RagemodModElements instance) {
-		super(instance, 676);
+		super(instance, 677);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

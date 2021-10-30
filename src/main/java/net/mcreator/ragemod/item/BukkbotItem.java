@@ -16,7 +16,7 @@ public class BukkbotItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_stick")
 	public static final Item block = null;
 	public BukkbotItem(RagemodModElements instance) {
-		super(instance, 255);
+		super(instance, 391);
 	}
 
 	@Override

@@ -6,9 +6,9 @@
     "texture": "water1",
     "customModelName": "Normal",
     "name": "Water Relic",
-    "rarity": "UNCOMMON",
+    "rarity": "RARE",
     "creativeTab": {
-      "value": "CUSTOM:Ragetab"
+      "value": "CUSTOM:Ercek"
     },
     "stackSize": 4,
     "enchantability": 0,

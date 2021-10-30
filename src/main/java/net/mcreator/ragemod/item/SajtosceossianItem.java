@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
-import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class SajtosceossianItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sajtosceossian")
 	public static final Item block = null;
 	public SajtosceossianItem(RagemodModElements instance) {
-		super(instance, 91);
+		super(instance, 414);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class SajtosceossianItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(MoretabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(8).saturation(8f).build()));
 			setRegistryName("sajtosceossian");
 		}

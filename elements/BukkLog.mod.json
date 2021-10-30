@@ -4,10 +4,10 @@
   "definition": {
     "texture": "0000000000000",
     "textureTop": "0000000000000",
-    "textureLeft": "bukk_log_side",
-    "textureFront": "bukkk1",
-    "textureRight": "bukkk1",
-    "textureBack": "bukkk1",
+    "textureLeft": "bleach_log_side",
+    "textureFront": "bleach_log_side",
+    "textureRight": "bleach_log_side",
+    "textureBack": "bleach_log_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 5,
@@ -58,6 +58,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -75,6 +78,21 @@
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,

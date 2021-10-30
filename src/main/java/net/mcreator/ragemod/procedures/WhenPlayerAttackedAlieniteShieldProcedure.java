@@ -67,7 +67,7 @@ public class WhenPlayerAttackedAlieniteShieldProcedure {
 			}
 			{
 				ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-				if (_ist.attemptDamageItem((int) 6, new Random(), null)) {
+				if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
 					_ist.shrink(1);
 					_ist.setDamage(0);
 				}

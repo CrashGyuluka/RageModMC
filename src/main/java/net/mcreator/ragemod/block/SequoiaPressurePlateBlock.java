@@ -27,7 +27,7 @@ public class SequoiaPressurePlateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_pressure_plate")
 	public static final Block block = null;
 	public SequoiaPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 253);
+		super(instance, 389);
 	}
 
 	@Override

@@ -8,7 +8,7 @@
     "name": "Alien Torch",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Moretab"
+      "value": "CUSTOM:Termeszettab"
     },
     "stackSize": 64,
     "enchantability": 0,

@@ -48,7 +48,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.procedures.SavaskoEntityWalksOnTheBlockProcedure;
 import net.mcreator.ragemod.particle.SavaspartParticle;
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -62,7 +62,7 @@ public class SavasakacBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasakac")
 	public static final Block block = null;
 	public SavasakacBlock(RagemodModElements instance) {
-		super(instance, 292);
+		super(instance, 134);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -70,8 +70,7 @@ public class SavasakacBlock extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(SvasblocktabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;

@@ -34,7 +34,7 @@ public class RageFaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_fa_leaves")
 	public static final Block block = null;
 	public RageFaLeavesBlock(RagemodModElements instance) {
-		super(instance, 265);
+		super(instance, 401);
 	}
 
 	@Override

@@ -30,7 +30,7 @@ public class RobtaiLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_leaves")
 	public static final Block block = null;
 	public RobtaiLeavesBlock(RagemodModElements instance) {
-		super(instance, 268);
+		super(instance, 404);
 	}
 
 	@Override

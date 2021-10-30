@@ -26,7 +26,7 @@ public class CvexportalblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cvex_portal_block")
 	public static final Block block = null;
 	public CvexportalblockBlock(RagemodModElements instance) {
-		super(instance, 401);
+		super(instance, 98);
 	}
 
 	@Override

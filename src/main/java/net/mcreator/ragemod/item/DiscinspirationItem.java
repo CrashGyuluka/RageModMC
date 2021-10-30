@@ -8,15 +8,14 @@ import net.minecraft.item.Rarity;
 import net.minecraft.item.MusicDiscItem;
 import net.minecraft.item.Item;
 
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
 public class DiscinspirationItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:discinspiration")
+	@ObjectHolder("ragemod:disc_inspiration")
 	public static final Item block = null;
 	public DiscinspirationItem(RagemodModElements instance) {
-		super(instance, 1442);
+		super(instance, 1434);
 	}
 
 	@Override
@@ -26,8 +25,8 @@ public class DiscinspirationItem extends RagemodModElements.ModElement {
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
 			super(0, RagemodModElements.sounds.get(new ResourceLocation("ragemod:crashgyuluka_inspiration")),
-					new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(1).rarity(Rarity.RARE));
-			setRegistryName("discinspiration");
+					new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.RARE));
+			setRegistryName("disc_inspiration");
 		}
 	}
 }

@@ -30,7 +30,7 @@ public class BukktdBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_trapdoor")
 	public static final Block block = null;
 	public BukktdBlock(RagemodModElements instance) {
-		super(instance, 231);
+		super(instance, 367);
 	}
 
 	@Override

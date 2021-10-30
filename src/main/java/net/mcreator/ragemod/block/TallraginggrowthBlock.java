@@ -56,7 +56,7 @@ public class TallraginggrowthBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:tallraginggrowth")
 	public static final Block block = null;
 	public TallraginggrowthBlock(RagemodModElements instance) {
-		super(instance, 112);
+		super(instance, 203);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -101,7 +101,7 @@ public class TallraginggrowthBlock extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:ragetreebiome").equals(event.getName()))
+		if (new ResourceLocation("ragemod:ragetree_forest").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

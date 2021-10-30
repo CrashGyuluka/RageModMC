@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -16,7 +16,7 @@ public class SavercrItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savercr")
 	public static final Item block = null;
 	public SavercrItem(RagemodModElements instance) {
-		super(instance, 274);
+		super(instance, 26);
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class SavercrItem extends RagemodModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(SvasblocktabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("savercr");
 		}
 

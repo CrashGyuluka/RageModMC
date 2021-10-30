@@ -33,7 +33,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.particle.SavaspartParticle;
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -46,7 +46,7 @@ public class SavBucketBlock extends RagemodModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public SavBucketBlock(RagemodModElements instance) {
-		super(instance, 284);
+		super(instance, 35);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
 	private static class FluidRegisterHandler {
@@ -80,7 +80,7 @@ public class SavBucketBlock extends RagemodModElements.ModElement {
 			}
 		}.setRegistryName("sav_bucket"));
 		elements.items.add(() -> new BucketItem(still,
-				new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(SvasblocktabItemGroup.tab).rarity(Rarity.COMMON))
+				new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ErcekItemGroup.tab).rarity(Rarity.COMMON))
 						.setRegistryName("sav_bucket_bucket"));
 	}
 	public static abstract class CustomFlowingFluid extends ForgeFlowingFluid {

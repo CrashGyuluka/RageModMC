@@ -22,7 +22,7 @@ public class AliensoilBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_soil")
 	public static final Block block = null;
 	public AliensoilBlock(RagemodModElements instance) {
-		super(instance, 100);
+		super(instance, 189);
 	}
 
 	@Override

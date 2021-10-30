@@ -39,7 +39,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.ragemod.particle.RageparticleParticle;
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.entity.renderer.AtomRageRRenderer;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -60,7 +60,7 @@ public class AtomRageREntity extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16777063, -6736897, new Item.Properties().group(RagetabItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16777063, -3927929, new Item.Properties().group(ErcekItemGroup.tab))
 				.setRegistryName("atom_rage_r_spawn_egg"));
 	}
 

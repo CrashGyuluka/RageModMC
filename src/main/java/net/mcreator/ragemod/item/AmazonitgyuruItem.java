@@ -22,7 +22,7 @@ public class AmazonitgyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitgyuru")
 	public static final Item block = null;
 	public AmazonitgyuruItem(RagemodModElements instance) {
-		super(instance, 385);
+		super(instance, 82);
 	}
 
 	@Override

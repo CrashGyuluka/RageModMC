@@ -55,7 +55,7 @@ public class BluehydrangeaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bluehydrangea")
 	public static final Block block = null;
 	public BluehydrangeaBlock(RagemodModElements instance) {
-		super(instance, 95);
+		super(instance, 182);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

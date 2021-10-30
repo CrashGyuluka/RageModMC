@@ -71,7 +71,7 @@ public class Fa4sapBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public Fa4sapBlock(RagemodModElements instance) {
-		super(instance, 263);
+		super(instance, 399);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

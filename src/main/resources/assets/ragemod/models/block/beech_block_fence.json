@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_side",
   "textures": {
-    "texture": "ragemod:blocks/bukkk1",
-    "particle": "ragemod:blocks/bukkk1"
+    "texture": "ragemod:blocks/bleach_log_side",
+    "particle": "ragemod:blocks/bleach_log_side"
   }
 }

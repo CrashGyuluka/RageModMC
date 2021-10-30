@@ -44,7 +44,7 @@ import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -56,7 +56,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasnoveny")
 	public static final Block block = null;
 	public SavasnovenyBlock(RagemodModElements instance) {
-		super(instance, 283);
+		super(instance, 407);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -65,7 +65,7 @@ public class SavasnovenyBlock extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.blocks.add(() -> new BlockCustomFlower());
 		elements.items
-				.add(() -> new TallBlockItem(block, new Item.Properties().group(SvasblocktabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+				.add(() -> new TallBlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

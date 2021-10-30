@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "biome",
   "definition": {
-    "name": "Alien_hills",
+    "name": "Alien Hills",
     "groundBlock": {
       "value": "CUSTOM:Aliensoil"
     },

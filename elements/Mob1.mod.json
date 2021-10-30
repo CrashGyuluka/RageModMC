@@ -21,7 +21,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:Svasblocktab"
+      "value": "CUSTOM:Ercek"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -116,21 +116,6 @@
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
-      {
-        "value": "CUSTOM:B1"
-      },
-      {
-        "value": "CUSTOM:B2"
-      },
-      {
-        "value": "CUSTOM:B3"
-      },
-      {
-        "value": "CUSTOM:B4"
-      },
-      {
-        "value": "CUSTOM:B5"
-      },
       {
         "value": "CUSTOM:Savasbiom"
       },

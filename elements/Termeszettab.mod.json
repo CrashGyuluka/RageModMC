@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "tab",
   "definition": {
-    "name": "RageMod:Nature",
+    "name": "RageMod:Enviroment",
     "icon": {
       "value": "CUSTOM:RageFaLog"
     },
-    "showSearch": true
+    "showSearch": false
   }
 }

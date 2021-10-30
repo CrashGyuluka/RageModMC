@@ -6,9 +6,9 @@
     "texture": "earth1",
     "customModelName": "Normal",
     "name": "Earth Relic",
-    "rarity": "UNCOMMON",
+    "rarity": "RARE",
     "creativeTab": {
-      "value": "CUSTOM:Ragetab"
+      "value": "CUSTOM:Ercek"
     },
     "stackSize": 4,
     "enchantability": 0,

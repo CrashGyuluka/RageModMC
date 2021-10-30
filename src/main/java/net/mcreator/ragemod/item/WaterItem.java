@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -25,7 +25,7 @@ public class WaterItem extends RagemodModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(4).rarity(Rarity.UNCOMMON));
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(4).rarity(Rarity.RARE));
 			setRegistryName("water");
 		}
 

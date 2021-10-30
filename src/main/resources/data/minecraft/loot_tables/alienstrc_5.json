@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:discinspiration",
+          "name": "ragemod:disc_inspiration",
           "weight": 2,
           "functions": [
             {

@@ -25,7 +25,7 @@
     "generateBucket": true,
     "textureBucket": "--savb",
     "creativeTab": {
-      "value": "CUSTOM:Svasblocktab"
+      "value": "CUSTOM:Ercek"
     },
     "emptySound": {
       "value": "item.bucket.empty_lava"

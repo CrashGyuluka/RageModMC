@@ -30,7 +30,7 @@ public class Ragefape5Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_ragewood_block_pressure_plate")
 	public static final Block block = null;
 	public Ragefape5Block(RagemodModElements instance) {
-		super(instance, 236);
+		super(instance, 372);
 	}
 
 	@Override

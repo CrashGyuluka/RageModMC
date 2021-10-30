@@ -50,7 +50,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AlienlakeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public AlienlakeBiome(RagemodModElements instance) {
-		super(instance, 1266);
+		super(instance, 1267);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

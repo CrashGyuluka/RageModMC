@@ -53,7 +53,7 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_spike")
 	public static final Block block = null;
 	public AlienspiketopdevBlock(RagemodModElements instance) {
-		super(instance, 1432);
+		super(instance, 198);
 	}
 
 	@Override

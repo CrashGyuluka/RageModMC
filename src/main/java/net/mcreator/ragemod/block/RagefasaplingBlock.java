@@ -66,7 +66,7 @@ public class RagefasaplingBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragetree_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public RagefasaplingBlock(RagemodModElements instance) {
-		super(instance, 260);
+		super(instance, 396);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

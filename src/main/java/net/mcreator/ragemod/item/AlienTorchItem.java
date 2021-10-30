@@ -15,7 +15,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.procedures.AlienTorchRightClickedOnBlockProcedure;
-import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -26,7 +26,7 @@ public class AlienTorchItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_torch")
 	public static final Item block = null;
 	public AlienTorchItem(RagemodModElements instance) {
-		super(instance, 38);
+		super(instance, 220);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class AlienTorchItem extends RagemodModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(MoretabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("alien_torch");
 		}
 

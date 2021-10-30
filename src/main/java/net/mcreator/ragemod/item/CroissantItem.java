@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
-import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -17,7 +17,7 @@ public class CroissantItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:croissant")
 	public static final Item block = null;
 	public CroissantItem(RagemodModElements instance) {
-		super(instance, 87);
+		super(instance, 410);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class CroissantItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(MoretabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(7).saturation(7f).build()));
 			setRegistryName("croissant");
 		}

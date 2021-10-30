@@ -30,7 +30,7 @@ public class BukkplanksprplBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_pressure_plate")
 	public static final Block block = null;
 	public BukkplanksprplBlock(RagemodModElements instance) {
-		super(instance, 243);
+		super(instance, 379);
 	}
 
 	@Override

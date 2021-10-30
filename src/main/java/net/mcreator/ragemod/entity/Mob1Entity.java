@@ -40,7 +40,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.ragemod.particle.SavaspartParticle;
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.entity.renderer.Mob1Renderer;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -52,7 +52,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("toxic_mob").setRegistryName("toxic_mob");
 	public Mob1Entity(RagemodModElements instance) {
-		super(instance, 285);
+		super(instance, 36);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Mob1Renderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -61,7 +61,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16724941, -13395712, new Item.Properties().group(SvasblocktabItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16724941, -13395712, new Item.Properties().group(ErcekItemGroup.tab))
 				.setRegistryName("toxic_mob_spawn_egg"));
 	}
 

@@ -47,7 +47,7 @@ import net.minecraft.block.Block;
 import net.mcreator.ragemod.procedures.SavasrageiumoreOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.procedures.SavaskoEntityWalksOnTheBlockProcedure;
 import net.mcreator.ragemod.particle.Particle2Particle;
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -61,7 +61,7 @@ public class SavasrageiumalloyblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasrageiumalloyblock")
 	public static final Block block = null;
 	public SavasrageiumalloyblockBlock(RagemodModElements instance) {
-		super(instance, 338);
+		super(instance, 179);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -69,8 +69,7 @@ public class SavasrageiumalloyblockBlock extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(SvasblocktabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

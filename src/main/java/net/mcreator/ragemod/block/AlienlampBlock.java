@@ -22,7 +22,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.ragemod.procedures.AlienlampOnBlockRightClickedProcedure;
-import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -35,13 +35,14 @@ public class AlienlampBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_lamp")
 	public static final Block block = null;
 	public AlienlampBlock(RagemodModElements instance) {
-		super(instance, 37);
+		super(instance, 219);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MoretabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

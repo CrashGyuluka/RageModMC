@@ -13,7 +13,7 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class ErcekItemGroup extends RagemodModElements.ModElement {
 	public ErcekItemGroup(RagemodModElements instance) {
-		super(instance, 700);
+		super(instance, 701);
 	}
 
 	@Override

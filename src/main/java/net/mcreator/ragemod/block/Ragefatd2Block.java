@@ -30,7 +30,7 @@ public class Ragefatd2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:red_ragewood_trapdoor")
 	public static final Block block = null;
 	public Ragefatd2Block(RagemodModElements instance) {
-		super(instance, 230);
+		super(instance, 366);
 	}
 
 	@Override

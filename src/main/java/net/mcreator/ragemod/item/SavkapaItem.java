@@ -17,7 +17,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.procedures.SavkapaRightClickedOnBlockProcedure;
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -28,7 +28,7 @@ public class SavkapaItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savkapa")
 	public static final Item block = null;
 	public SavkapaItem(RagemodModElements instance) {
-		super(instance, 280);
+		super(instance, 32);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class SavkapaItem extends RagemodModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(Savkristalyp2Item.block));
 			}
-		}, 0, -2.7999999999999998f, new Item.Properties().group(SvasblocktabItemGroup.tab)) {
+		}, 0, -2.7999999999999998f, new Item.Properties().group(ErcekItemGroup.tab)) {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);

@@ -17,11 +17,11 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -6736897,
+      "value": -3927929,
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:Ragetab"
+      "value": "CUSTOM:Ercek"
     },
     "isBoss": false,
     "bossBarColor": "RED",
@@ -116,24 +116,6 @@
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
-      {
-        "value": "CUSTOM:B4"
-      },
-      {
-        "value": "CUSTOM:B1"
-      },
-      {
-        "value": "CUSTOM:B2"
-      },
-      {
-        "value": "CUSTOM:B3"
-      },
-      {
-        "value": "CUSTOM:B4"
-      },
-      {
-        "value": "CUSTOM:B5"
-      },
       {
         "value": "CUSTOM:Savasbiom"
       }

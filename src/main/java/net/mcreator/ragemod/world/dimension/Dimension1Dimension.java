@@ -76,7 +76,7 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cave_dimension_portal_igniter_portal")
 	public static final CustomPortalBlock portal = null;
 	public Dimension1Dimension(RagemodModElements instance) {
-		super(instance, 396);
+		super(instance, 93);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

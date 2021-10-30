@@ -56,7 +56,7 @@ public class TallalienplantBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:tallalienplant")
 	public static final Block block = null;
 	public TallalienplantBlock(RagemodModElements instance) {
-		super(instance, 105);
+		super(instance, 194);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

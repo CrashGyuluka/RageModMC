@@ -55,7 +55,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.5f, 0.5f)).build("ragefly").setRegistryName("ragefly");
 	public RageflyEntity(RagemodModElements instance) {
-		super(instance, 114);
+		super(instance, 205);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflyRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -71,7 +71,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:ragetreebiome").equals(event.getName()))
+		if (new ResourceLocation("ragemod:ragetree_forest").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

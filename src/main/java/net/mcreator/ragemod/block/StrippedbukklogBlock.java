@@ -32,7 +32,7 @@ public class StrippedbukklogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_log")
 	public static final Block block = null;
 	public StrippedbukklogBlock(RagemodModElements instance) {
-		super(instance, 126);
+		super(instance, 262);
 	}
 
 	@Override

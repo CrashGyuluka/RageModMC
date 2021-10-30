@@ -39,7 +39,7 @@
     "hasGravity": false,
     "isWaterloggable": true,
     "creativeTab": {
-      "value": "CUSTOM:Ragetab"
+      "value": "CUSTOM:Ercek"
     },
     "destroyTool": "pickaxe",
     "customDrop": {

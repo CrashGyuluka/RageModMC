@@ -17,7 +17,7 @@ public class AlienfoodItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_food")
 	public static final Item block = null;
 	public AlienfoodItem(RagemodModElements instance) {
-		super(instance, 405);
+		super(instance, 102);
 	}
 
 	@Override

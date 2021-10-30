@@ -25,7 +25,7 @@ public class AdulargyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:adulargyuru")
 	public static final Item block = null;
 	public AdulargyuruItem(RagemodModElements instance) {
-		super(instance, 390);
+		super(instance, 87);
 	}
 
 	@Override

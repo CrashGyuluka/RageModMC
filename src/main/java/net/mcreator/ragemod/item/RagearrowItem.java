@@ -34,7 +34,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.entity.renderer.RagearrowRenderer;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -62,7 +62,7 @@ public class RagearrowItem extends RagemodModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxDamage(6969));
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(6969));
 			setRegistryName("ragearrow");
 		}
 

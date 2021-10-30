@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -16,7 +16,7 @@ public class DiamondnugetItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:diamondnuget")
 	public static final Item block = null;
 	public DiamondnugetItem(RagemodModElements instance) {
-		super(instance, 25);
+		super(instance, 127);
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class DiamondnugetItem extends RagemodModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("diamondnuget");
 		}
 

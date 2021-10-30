@@ -14,7 +14,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.procedures.SavasoBlockDestroyedWithToolProcedure;
-import net.mcreator.ragemod.itemgroup.SvasblocktabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Map;
@@ -25,7 +25,7 @@ public class SavasoItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaso")
 	public static final Item block = null;
 	public SavasoItem(RagemodModElements instance) {
-		super(instance, 279);
+		super(instance, 31);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class SavasoItem extends RagemodModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(Savkristalyp2Item.block));
 			}
-		}, 1, -3f, new Item.Properties().group(SvasblocktabItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(ErcekItemGroup.tab)) {
 			@Override
 			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 				boolean retval = super.onBlockDestroyed(itemstack, world, blockstate, pos, entity);

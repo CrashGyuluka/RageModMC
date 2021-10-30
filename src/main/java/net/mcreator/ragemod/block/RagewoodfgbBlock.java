@@ -30,7 +30,7 @@ public class RagewoodfgbBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:blue_ragewood_fence_gate")
 	public static final Block block = null;
 	public RagewoodfgbBlock(RagemodModElements instance) {
-		super(instance, 208);
+		super(instance, 344);
 	}
 
 	@Override

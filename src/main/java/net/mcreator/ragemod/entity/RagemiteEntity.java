@@ -39,7 +39,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.ragemod.particle.RageparticleParticle;
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.item.RageiumItem;
 import net.mcreator.ragemod.entity.renderer.RagemiteRenderer;
 import net.mcreator.ragemod.RagemodModElements;
@@ -61,7 +61,7 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -16777114, -10092442, new Item.Properties().group(RagetabItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16777114, -10092442, new Item.Properties().group(ErcekItemGroup.tab))
 				.setRegistryName("ragemite_spawn_egg"));
 	}
 

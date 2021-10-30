@@ -113,7 +113,7 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(0.7999999999999999f).scale(0.6f)
 						.temperature(0.6f).downfall(0.4f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("ragemod:ragetreebiome"));
+				event.getRegistry().register(biome.setRegistryName("ragemod:ragetree_forest"));
 			}
 		}
 	}

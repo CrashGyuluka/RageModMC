@@ -12,7 +12,7 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
-import net.mcreator.ragemod.itemgroup.RagetabItemGroup;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -29,7 +29,7 @@ public class TrofeaItem extends RagemodModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(RagetabItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC)
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC)
 					.food((new Food.Builder()).hunger(30).saturation(0f).setAlwaysEdible().build()));
 			setRegistryName("trofea");
 		}

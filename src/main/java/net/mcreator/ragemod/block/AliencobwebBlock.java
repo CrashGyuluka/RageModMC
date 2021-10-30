@@ -56,7 +56,7 @@ public class AliencobwebBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_cobweb")
 	public static final Block block = null;
 	public AliencobwebBlock(RagemodModElements instance) {
-		super(instance, 110);
+		super(instance, 201);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

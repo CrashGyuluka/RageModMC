@@ -46,7 +46,7 @@ import net.minecraft.block.Block;
 import net.mcreator.ragemod.procedures.AlientrapblockOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.procedures.AlientrapblockEntityCollidesInTheBlockProcedure;
 import net.mcreator.ragemod.particle.AlienplantparticleParticle;
-import net.mcreator.ragemod.itemgroup.MoretabItemGroup;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -60,7 +60,7 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_trap")
 	public static final Block block = null;
 	public AlientrapblockBlock(RagemodModElements instance) {
-		super(instance, 42);
+		super(instance, 199);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -68,7 +68,8 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(MoretabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
