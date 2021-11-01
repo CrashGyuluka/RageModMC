@@ -33,7 +33,7 @@ import net.minecraft.block.BlockState;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class Seqtree1Structure {
+public class Seqfol2Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -51,8 +51,8 @@ public class Seqtree1Structure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 1000000) {
-						int count = random.nextInt(7) + 1;
+					if ((random.nextInt(1000000) + 1) <= 300000) {
+						int count = random.nextInt(7) + 3;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
@@ -66,12 +66,12 @@ public class Seqtree1Structure {
 								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 1, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("ragemod", "seq_tree1"));
+									.getTemplateDefaulted(new ResourceLocation("ragemod", "seq_fol2"));
 							if (template == null)
 								return false;
 							template.func_237144_a_(world, spawnTo,
@@ -85,8 +85,8 @@ public class Seqtree1Structure {
 			};
 			configuredFeature = feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
 					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG));
-			event.getRegistry().register(feature.setRegistryName("seqtree_1"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:seqtree_1"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("seqfol_2"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:seqfol_2"), configuredFeature);
 		}
 	}
 	@SubscribeEvent
