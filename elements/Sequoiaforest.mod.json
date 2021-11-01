@@ -1,0 +1,102 @@
+{
+  "_fv": 24,
+  "_type": "biome",
+  "definition": {
+    "name": "Sequoia Forest",
+    "groundBlock": {
+      "value": "Blocks.DIRT#2"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:Rageparticle"
+    },
+    "particlesProbability": 0.5,
+    "biomeCategory": "FOREST",
+    "parent": {
+      "value": "No parent"
+    },
+    "rainingPossibility": 0.4,
+    "temperature": 0.5,
+    "baseHeight": 0.30000000000000004,
+    "heightVariation": 0.19999999999999998,
+    "biomeType": "WARM",
+    "spawnBiome": true,
+    "biomeWeight": 3,
+    "biomeDictionaryTypes": [
+      "FOREST"
+    ],
+    "grassPerChunk": 6,
+    "seagrassPerChunk": 0,
+    "flowersPerChunk": 2,
+    "mushroomsPerChunk": 2,
+    "bigMushroomsChunk": 1,
+    "sandPatchesPerChunk": 1,
+    "gravelPatchesPerChunk": 1,
+    "reedsPerChunk": 1,
+    "cactiPerChunk": 0,
+    "treesPerChunk": 0,
+    "vanillaTreeType": "Default",
+    "treeType": 0,
+    "minHeight": 7,
+    "maxWaterDepth": 0,
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "oceanRuinType": "NONE",
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "Fossils",
+      "Lakes",
+      "MonsterRooms",
+      "OceanCaves",
+      "TaigaRocks"
+    ],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityAnimal"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 15,
+        "spawnType": "creature"
+      }
+    ]
+  }
+}
