@@ -64,7 +64,7 @@ public class PingvinhunenchprodProcedure {
 						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
 						: ItemStack.EMPTY)));
 		if ((enchantLevel > 0)) {
-			sourceentity.setMotion(0, (4 + enchantLevel), 0);
+			sourceentity.setMotion(0, (2 + enchantLevel), 0);
 		}
 	}
 }

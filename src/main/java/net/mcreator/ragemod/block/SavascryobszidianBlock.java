@@ -56,7 +56,7 @@ public class SavascryobszidianBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savascryobszidian")
 	public static final Block block = null;
 	public SavascryobszidianBlock(RagemodModElements instance) {
-		super(instance, 158);
+		super(instance, 156);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

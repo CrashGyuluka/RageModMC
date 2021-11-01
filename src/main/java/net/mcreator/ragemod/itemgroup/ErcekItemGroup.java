@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
-import net.mcreator.ragemod.item.AdularItem;
+import net.mcreator.ragemod.item.RageiumalloyItem;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -22,7 +22,7 @@ public class ErcekItemGroup extends RagemodModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(AdularItem.block);
+				return new ItemStack(RageiumalloyItem.block);
 			}
 
 			@OnlyIn(Dist.CLIENT)

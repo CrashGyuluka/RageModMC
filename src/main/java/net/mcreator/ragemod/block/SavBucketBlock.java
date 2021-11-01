@@ -66,7 +66,7 @@ public class SavBucketBlock extends RagemodModElements.ModElement {
 	@Override
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing,
-				FluidAttributes.builder(new ResourceLocation("ragemod:blocks/--sav1"), new ResourceLocation("ragemod:blocks/--sav")).luminosity(0)
+				FluidAttributes.builder(new ResourceLocation("ragemod:blocks/--sav"), new ResourceLocation("ragemod:blocks/--sav")).luminosity(0)
 						.density(800).viscosity(1000).temperature(300).rarity(Rarity.COMMON)
 						.sound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.bucket.empty_lava")))).explosionResistance(100f)
 								.canMultiply().tickRate(5).levelDecreasePerBlock(1).slopeFindDistance(5).bucket(() -> bucket).block(() -> block);

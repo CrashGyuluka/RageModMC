@@ -6,7 +6,7 @@
     "texture": "tall_alien_growth1",
     "textureBottom": "tall_alien_growth2",
     "customModelName": "Cross model",
-    "itemTexture": "tall_alien_growth3",
+    "itemTexture": "tall_alien_growth2",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

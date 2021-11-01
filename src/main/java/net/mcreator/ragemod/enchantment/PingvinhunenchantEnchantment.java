@@ -25,7 +25,7 @@ public class PingvinhunenchantEnchantment extends RagemodModElements.ModElement 
 	}
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
-			super(Enchantment.Rarity.RARE, EnchantmentType.ARMOR_CHEST, slots);
+			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST, slots);
 		}
 
 		@Override

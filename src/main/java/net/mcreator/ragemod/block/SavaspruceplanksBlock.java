@@ -57,7 +57,7 @@ public class SavaspruceplanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaspruceplanks")
 	public static final Block block = null;
 	public SavaspruceplanksBlock(RagemodModElements instance) {
-		super(instance, 141);
+		super(instance, 139);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

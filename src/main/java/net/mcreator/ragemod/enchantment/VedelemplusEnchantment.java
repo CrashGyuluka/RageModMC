@@ -23,7 +23,7 @@ public class VedelemplusEnchantment extends RagemodModElements.ModElement {
 	}
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
-			super(Enchantment.Rarity.RARE, EnchantmentType.ARMOR_HEAD, slots);
+			super(Enchantment.Rarity.UNCOMMON, EnchantmentType.ARMOR_HEAD, slots);
 		}
 
 		@Override

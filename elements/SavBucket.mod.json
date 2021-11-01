@@ -4,7 +4,7 @@
   "definition": {
     "name": "Toxic Fluid",
     "bucketName": "Toxic Fluid Bucket",
-    "textureStill": "--sav1",
+    "textureStill": "--sav",
     "textureFlowing": "--sav",
     "tintType": "No tint",
     "canMultiply": true,
