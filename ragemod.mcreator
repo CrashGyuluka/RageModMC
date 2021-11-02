@@ -16685,7 +16685,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "alien_spike_mid_dev",
+      "registry_name": "alien_crystal_mid",
       "path": "~/dimensions/novenyzet"
     },
     {
@@ -16893,6 +16893,26 @@
       "ids": {},
       "registry_name": "seqfol_4",
       "path": "~/fa_fajtak/mamutfenyo/str"
+    },
+    {
+      "name": "AlienCrystalBlock",
+      "type": "block",
+      "sortid": 1443,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_crystal_block",
+      "path": "~/dimensions/novenyzet"
+    },
+    {
+      "name": "Aliencrystalcraft",
+      "type": "recipe",
+      "sortid": 1444,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aliencrystalcraft",
+      "path": "~/dimensions/novenyzet/craft"
     }
   ],
   "variable_elements": [
@@ -17384,7 +17404,6 @@
       "advancements.adv_9.descr": ":)",
       "block.ragemod.savasbuzablock": "Toxic Hay Bale",
       "subtitles.asmr_whyyyy": "",
-      "block.ragemod.alien_spike_mid_dev": "AlienSpike",
       "block.ragemod.hegyikopolishedpressureplate": "Polished Mountain Stone Pressure Plate",
       "block.ragemod.alien_growth": "Alien Lawn",
       "block.ragemod.alientrapblocklit": "Alien Trap",
@@ -17544,6 +17563,7 @@
       "block.ragemod.red_ragewood_pressure_plate": "Red RageWood Planks Pressure Plate",
       "block.ragemod.aktinolitblock": "Actinolite Block",
       "entity.ragemod.atom_rage_r": "AtomRageR",
+      "block.ragemod.alien_crystal_mid": "AlienSpike",
       "block.ragemod.deepslateazuritore": "Deepslate Azurite Ore",
       "block.ragemod.alien_shroom": "Alien Plant",
       "block.ragemod.stripped_robtai_slab": "Stripped Robtai Slab",
@@ -17621,6 +17641,7 @@
       "block.ragemod.savasjungle": "Toxic Jungle Log",
       "block.ragemod.deepslateaktinolitore": "Deepslate Actinolite Ore",
       "block.ragemod.mossyhegyikopressureplate": "Mossy Mountain Stone Pressure Plate",
+      "block.ragemod.alien_crystal_block": "Alien Crystal Block",
       "item.ragemod.alienitesword": "Alienite Sword",
       "item.ragemod.diamondnuget": "Diamond Nugget",
       "block.ragemod.cvex_portal_block": "Cvex Portal Block",
@@ -17986,7 +18007,6 @@
       "advancements.adv_9.descr": ":)",
       "block.ragemod.savasbuzablock": "Toxic Hay Bale",
       "subtitles.asmr_whyyyy": "",
-      "block.ragemod.alien_spike_mid_dev": "AlienSpike",
       "block.ragemod.hegyikopolishedpressureplate": "Polished Mountain Stone Pressure Plate",
       "block.ragemod.alien_growth": "Alien Lawn",
       "block.ragemod.alientrapblocklit": "Alien Trap lit (DEV)",
@@ -18146,6 +18166,7 @@
       "block.ragemod.red_ragewood_pressure_plate": "Red RageWood Planks Pressure Plate",
       "block.ragemod.aktinolitblock": "Actinolite Block",
       "entity.ragemod.atom_rage_r": "AtomRageR",
+      "block.ragemod.alien_crystal_mid": "AlienSpike",
       "block.ragemod.deepslateazuritore": "Deepslate Azurite Ore",
       "block.ragemod.alien_shroom": "Alien Plant",
       "block.ragemod.stripped_robtai_slab": "Stripped Robtai Slab",
@@ -18223,6 +18244,7 @@
       "block.ragemod.savasjungle": "Toxic Jungle Log",
       "block.ragemod.deepslateaktinolitore": "Deepslate Actinolite Ore",
       "block.ragemod.mossyhegyikopressureplate": "Mossy Mountain Stone Pressure Plate",
+      "block.ragemod.alien_crystal_block": "Alien Crystal Block",
       "item.ragemod.alienitesword": "Alienite Sword",
       "item.ragemod.diamondnuget": "Diamond Nugget",
       "block.ragemod.cvex_portal_block": "Cvex Portal Block",
@@ -18588,7 +18610,6 @@
       "advancements.adv_9.descr": ":)",
       "block.ragemod.savasbuzablock": "Toxic Hay Bale",
       "subtitles.asmr_whyyyy": "",
-      "block.ragemod.alien_spike_mid_dev": "AlienSpike",
       "block.ragemod.hegyikopolishedpressureplate": "Polished Mountain Stone Pressure Plate",
       "block.ragemod.alien_growth": "Alien Lawn",
       "block.ragemod.alientrapblocklit": "Alien Trap lit (DEV)",
@@ -18748,6 +18769,7 @@
       "block.ragemod.red_ragewood_pressure_plate": "Red RageWood Planks Pressure Plate",
       "block.ragemod.aktinolitblock": "Actinolite Block",
       "entity.ragemod.atom_rage_r": "AtomRageR",
+      "block.ragemod.alien_crystal_mid": "AlienSpike",
       "block.ragemod.deepslateazuritore": "Deepslate Azurite Ore",
       "block.ragemod.alien_shroom": "Alien Plant",
       "block.ragemod.stripped_robtai_slab": "Stripped Robtai Slab",
@@ -18825,6 +18847,7 @@
       "block.ragemod.savasjungle": "Toxic Jungle Log",
       "block.ragemod.deepslateaktinolitore": "Deepslate Actinolite Ore",
       "block.ragemod.mossyhegyikopressureplate": "Mossy Mountain Stone Pressure Plate",
+      "block.ragemod.alien_crystal_block": "Alien Crystal Block",
       "item.ragemod.alienitesword": "Alienite Sword",
       "item.ragemod.diamondnuget": "Diamond Nugget",
       "block.ragemod.cvex_portal_block": "Cvex Portal Block",
@@ -19175,7 +19198,6 @@
       "block.ragemod.better_stripped_ragewood_fence_gate": "Better Stripped RageWood Fence Gate",
       "advancements.adv_9.descr": ":)",
       "block.ragemod.savasbuzablock": "Savas Szalmab?la",
-      "block.ragemod.alien_spike_mid_dev": "AlienSpike",
       "block.ragemod.hegyikopolishedpressureplate": "Csiszolt Hegyik? Nyom?lap",
       "block.ragemod.alien_growth": "Alien Lawn",
       "block.ragemod.alientrapblocklit": "Alien Trap",
@@ -19332,6 +19354,7 @@
       "block.ragemod.red_ragewood_pressure_plate": "Red RageWood Planks Pressure Plate",
       "block.ragemod.aktinolitblock": "Aktinolit Blokk",
       "entity.ragemod.atom_rage_r": "AtomRageR",
+      "block.ragemod.alien_crystal_mid": "AlienSpike",
       "block.ragemod.deepslateazuritore": "M?lypala Azurit ?rc",
       "block.ragemod.alien_shroom": "Alien Plant",
       "block.ragemod.stripped_robtai_slab": "Stripped Robtai Slab",
@@ -19407,6 +19430,7 @@
       "block.ragemod.savasjungle": "Savas Dzsungel R?nk",
       "block.ragemod.deepslateaktinolitore": "M?lypala Aktinolit ?rc",
       "block.ragemod.mossyhegyikopressureplate": "Moh?s Hegyik? Nyom?lap",
+      "block.ragemod.alien_crystal_block": "Alien Crystal Block",
       "item.ragemod.alienitesword": "Alienite Sword",
       "item.ragemod.diamondnuget": "Gy?m?nt R?g",
       "block.ragemod.cvex_portal_block": "Cvex Portal Block",
@@ -19786,6 +19810,10 @@
             "children": [
               {
                 "name": "proc",
+                "children": []
+              },
+              {
+                "name": "craft",
                 "children": []
               }
             ]

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/alien_spike_block",
+    "particle": "ragemod:blocks/alien_spike_block"
+  }
+}
