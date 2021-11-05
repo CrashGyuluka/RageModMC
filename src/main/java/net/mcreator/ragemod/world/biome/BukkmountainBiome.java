@@ -119,8 +119,8 @@ public class BukkmountainBiome extends RagemodModElements.ModElement {
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(TraderrtEntity.entity, 1, 1, 1));
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.BEE, 1, 1, 1));
 				mobSpawnInfo.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityType.SHEEP, 1, 1, 1));
-				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(1.9000000000000001f)
-						.scale(0.7000000000000001f).temperature(0.5f).downfall(0.6f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
+				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(2.2f).scale(0.7999999999999999f)
+						.temperature(0.5f).downfall(0.6f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("ragemod:beech_hill"));
 			}

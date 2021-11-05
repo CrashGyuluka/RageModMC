@@ -49,7 +49,7 @@ import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienspikeBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alien_crystal_mid")
+	@ObjectHolder("ragemod:alien_spike_mid_dev")
 	public static final Block block = null;
 	public AlienspikeBlock(RagemodModElements instance) {
 		super(instance, 1425);
@@ -73,7 +73,7 @@ public class AlienspikeBlock extends RagemodModElements.ModElement {
 					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().speedFactor(1.1f).jumpFactor(1.1f).notSolid()
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false));
-			setRegistryName("alien_crystal_mid");
+			setRegistryName("alien_spike_mid_dev");
 		}
 
 		@Override

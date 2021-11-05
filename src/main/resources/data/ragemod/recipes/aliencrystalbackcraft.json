@@ -1,0 +1,13 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:alien_crystal_block"
+    }
+  ],
+  "result": {
+    "item": "ragemod:alien_spike",
+    "count": 4
+  }
+}

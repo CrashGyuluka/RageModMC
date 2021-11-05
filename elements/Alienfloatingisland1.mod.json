@@ -2,24 +2,20 @@
   "_fv": 24,
   "_type": "structure",
   "definition": {
-    "structure": "alien_spike2",
+    "structure": "alien_floating_island",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 750000,
-    "minCountPerChunk": 3,
-    "maxCountPerChunk": 8,
-    "spawnLocation": "Ground",
+    "spawnProbability": 12000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Air",
     "spawnHeightOffset": 1,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],
-    "restrictionBlocks": [
-      {
-        "value": "CUSTOM:Aliensoil"
-      }
-    ],
+    "restrictionBlocks": [],
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Spikyalienplains"
