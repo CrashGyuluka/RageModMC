@@ -54,23 +54,8 @@ public class RagemodModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "toxicmob_death1")));
 		sounds.put(new ResourceLocation("ragemod", "toxic_mob_sendhelp1"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "toxic_mob_sendhelp1")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d1"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d1")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d2"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d2")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d3"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d3")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d4"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d4")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d5"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d5")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d7"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d7")));
-		sounds.put(new ResourceLocation("ragemod", "alien_d8"), new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_d8")));
-		sounds.put(new ResourceLocation("ragemod", "alien_ambient"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient")));
-		sounds.put(new ResourceLocation("ragemod", "alien_ambient_3"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient_3")));
-		sounds.put(new ResourceLocation("ragemod", "alien_ambient4"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient4")));
 		sounds.put(new ResourceLocation("ragemod", "crashgyuluka_inspiration"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "crashgyuluka_inspiration")));
-		sounds.put(new ResourceLocation("ragemod", "alien_ambient2"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient2")));
 		sounds.put(new ResourceLocation("ragemod", "alien_ambient1"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient1")));
 		sounds.put(new ResourceLocation("ragemod", "alien_ambient2_1"),

@@ -50,7 +50,7 @@ import java.util.Random;
 public class FlyilenEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1f, 1f))
-					.build("flyilen").setRegistryName("flyilen");
+					.build("flylien").setRegistryName("flylien");
 	public FlyilenEntity(RagemodModElements instance) {
 		super(instance, 207);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FlyilenRenderer.ModelRegisterHandler());
@@ -62,7 +62,7 @@ public class FlyilenEntity extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -5227856, -16737997, new Item.Properties().group(TermeszettabItemGroup.tab))
-				.setRegistryName("flyilen_spawn_egg"));
+				.setRegistryName("flylien_spawn_egg"));
 	}
 
 	@SubscribeEvent

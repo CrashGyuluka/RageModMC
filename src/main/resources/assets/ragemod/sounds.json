@@ -35,96 +35,6 @@
       }
     ]
   },
-  "alien_d1": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersongb",
-        "stream": false
-      }
-    ]
-  },
-  "alien_d2": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersonga",
-        "stream": false
-      }
-    ]
-  },
-  "alien_d3": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersongc",
-        "stream": false
-      }
-    ]
-  },
-  "alien_d4": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersonge",
-        "stream": false
-      }
-    ]
-  },
-  "alien_d5": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersongf",
-        "stream": false
-      }
-    ]
-  },
-  "alien_d7": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersongg",
-        "stream": false
-      }
-    ]
-  },
-  "alien_d8": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:usersongh",
-        "stream": false
-      }
-    ]
-  },
-  "alien_ambient": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:am3",
-        "stream": false
-      }
-    ]
-  },
-  "alien_ambient_3": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:at4",
-        "stream": false
-      }
-    ]
-  },
-  "alien_ambient4": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:at6",
-        "stream": false
-      }
-    ]
-  },
   "crashgyuluka_inspiration": {
     "category": "record",
     "subtitle": "subtitles.crashgyuluka_inspiration",
@@ -132,15 +42,6 @@
       {
         "name": "ragemod:b6",
         "stream": true
-      }
-    ]
-  },
-  "alien_ambient2": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:am7",
-        "stream": false
       }
     ]
   },
