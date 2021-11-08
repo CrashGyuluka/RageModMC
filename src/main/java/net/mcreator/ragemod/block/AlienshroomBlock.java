@@ -120,7 +120,7 @@ public class AlienshroomBlock extends RagemodModElements.ModElement {
 			super(Effects.SPEED, 5,
 					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
 							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f)
-							.jumpFactor(1.2000000000000002f).setLightLevel(s -> 4));
+							.jumpFactor(1.2000000000000002f).setLightLevel(s -> 3));
 			setRegistryName("alien_shroom");
 		}
 

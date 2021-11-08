@@ -107,7 +107,7 @@ public class TallalienplantBlock extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f)
-					.jumpFactor(1.2000000000000002f).setLightLevel(s -> 6));
+					.jumpFactor(1.2000000000000002f).setLightLevel(s -> 5));
 			setRegistryName("tallalienplant");
 		}
 

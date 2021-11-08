@@ -114,7 +114,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).speedFactor(1.1f).jumpFactor(1.1f)
-					.setLightLevel(s -> 6));
+					.setLightLevel(s -> 4));
 			setRegistryName("big_alien_mushroom");
 		}
 

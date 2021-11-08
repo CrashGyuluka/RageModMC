@@ -125,7 +125,7 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.BAD_OMEN, 5, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.STONE)
-					.hardnessAndResistance(3f, 1f).setLightLevel(s -> 9));
+					.hardnessAndResistance(3f, 1f).setLightLevel(s -> 6));
 			setRegistryName("aliendripstonebottom");
 		}
 
