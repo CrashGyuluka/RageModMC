@@ -39,7 +39,7 @@ public class PolishedalpivwallBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:polished_alpiv_wall")
 	public static final Block block = null;
 	public PolishedalpivwallBlock(RagemodModElements instance) {
-		super(instance, 215);
+		super(instance, 216);
 	}
 
 	@Override

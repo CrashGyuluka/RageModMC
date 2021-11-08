@@ -36,12 +36,12 @@
       "value": ""
     },
     "music": {
-      "value": "CUSTOM:alien_ambient"
-    },
-    "moodSound": {
       "value": ""
     },
-    "moodSoundDelay": 30000,
+    "moodSound": {
+      "value": "CUSTOM:alien_ambient2_1"
+    },
+    "moodSoundDelay": 3200,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:Alienparticle"

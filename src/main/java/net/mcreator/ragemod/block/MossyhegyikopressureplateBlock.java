@@ -25,7 +25,7 @@ public class MossyhegyikopressureplateBlock extends RagemodModElements.ModElemen
 	@ObjectHolder("ragemod:mossyhegyikopressureplate")
 	public static final Block block = null;
 	public MossyhegyikopressureplateBlock(RagemodModElements instance) {
-		super(instance, 248);
+		super(instance, 249);
 	}
 
 	@Override

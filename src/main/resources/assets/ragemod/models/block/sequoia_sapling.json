@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/sequia_sapling",
+    "particle": "ragemod:blocks/sequia_sapling"
+  }
+}

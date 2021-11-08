@@ -17,7 +17,7 @@ public class SajtostallerItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sajtostaller")
 	public static final Item block = null;
 	public SajtostallerItem(RagemodModElements instance) {
-		super(instance, 416);
+		super(instance, 418);
 	}
 
 	@Override

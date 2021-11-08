@@ -3,15 +3,15 @@
   "_type": "structure",
   "definition": {
     "structure": "seq_tree1",
-    "randomlyRotateStructure": true,
+    "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 1000000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 7,
     "spawnLocation": "Ground",
     "spawnHeightOffset": 0,
-    "spawnXOffset": 0,
-    "spawnZOffset": 0,
+    "spawnXOffset": -6,
+    "spawnZOffset": -6,
     "spawnWorldTypes": [
       "Surface"
     ],

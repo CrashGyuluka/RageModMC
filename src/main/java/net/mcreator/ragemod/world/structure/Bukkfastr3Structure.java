@@ -94,7 +94,7 @@ public class Bukkfastr3Structure {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:beech_meadow").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:bukkmeadowfordimension").equals(event.getName()))
+		if (new ResourceLocation("ragemod:cave_dimension_biome1").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

@@ -33,7 +33,7 @@ public class KizukraLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_log")
 	public static final Block block = null;
 	public KizukraLogBlock(RagemodModElements instance) {
-		super(instance, 264);
+		super(instance, 265);
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public class Ragefaslab7Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_ragewood_stairs")
 	public static final Block block = null;
 	public Ragefaslab7Block(RagemodModElements instance) {
-		super(instance, 288);
+		super(instance, 289);
 	}
 
 	@Override

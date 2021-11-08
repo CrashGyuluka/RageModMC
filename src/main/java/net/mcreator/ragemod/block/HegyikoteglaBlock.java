@@ -46,7 +46,7 @@ public class HegyikoteglaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikotegla")
 	public static final Block block = null;
 	public HegyikoteglaBlock(RagemodModElements instance) {
-		super(instance, 227);
+		super(instance, 228);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

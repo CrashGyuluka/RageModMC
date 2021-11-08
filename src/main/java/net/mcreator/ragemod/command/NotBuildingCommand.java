@@ -26,7 +26,7 @@ public class NotBuildingCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("notbuilding").requires(s -> s.hasPermissionLevel(2))
+				.register(LiteralArgumentBuilder.<CommandSource>literal("unset-gamerule").requires(s -> s.hasPermissionLevel(2))
 						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(NotBuildingCommand::execute))
 						.executes(NotBuildingCommand::execute));
 	}

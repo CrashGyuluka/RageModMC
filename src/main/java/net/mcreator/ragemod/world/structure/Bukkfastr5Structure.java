@@ -100,7 +100,7 @@ public class Bukkfastr5Structure {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:waterbukkbiome").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:waterbukkbiomefordimension").equals(event.getName()))
+		if (new ResourceLocation("ragemod:cave_dimension_biome2").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

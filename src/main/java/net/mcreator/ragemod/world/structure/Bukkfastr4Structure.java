@@ -96,8 +96,6 @@ public class Bukkfastr4Structure {
 			biomeCriteria = true;
 		if (new ResourceLocation("ragemod:beech_amplified_mountain").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:bukkhighmountainvariatedfordimension").equals(event.getName()))
-			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);

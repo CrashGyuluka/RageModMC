@@ -46,7 +46,7 @@ public class HegyikomossyplusBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikomossyplus")
 	public static final Block block = null;
 	public HegyikomossyplusBlock(RagemodModElements instance) {
-		super(instance, 223);
+		super(instance, 224);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

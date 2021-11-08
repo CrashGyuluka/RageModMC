@@ -25,7 +25,7 @@ public class RagefastairsblueBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:blue_ragewood_stairs")
 	public static final Block block = null;
 	public RagefastairsblueBlock(RagemodModElements instance) {
-		super(instance, 290);
+		super(instance, 291);
 	}
 
 	@Override

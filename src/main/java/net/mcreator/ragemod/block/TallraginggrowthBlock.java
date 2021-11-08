@@ -56,7 +56,7 @@ public class TallraginggrowthBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:tallraginggrowth")
 	public static final Block block = null;
 	public TallraginggrowthBlock(RagemodModElements instance) {
-		super(instance, 203);
+		super(instance, 204);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

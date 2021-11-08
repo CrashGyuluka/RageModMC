@@ -35,7 +35,7 @@ public class Strhatarolo3Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:strhatarolo_3")
 	public static final Block block = null;
 	public Strhatarolo3Block(RagemodModElements instance) {
-		super(instance, 1326);
+		super(instance, 1328);
 	}
 
 	@Override

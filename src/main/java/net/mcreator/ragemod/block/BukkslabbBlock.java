@@ -26,7 +26,7 @@ public class BukkslabbBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_block_slab")
 	public static final Block block = null;
 	public BukkslabbBlock(RagemodModElements instance) {
-		super(instance, 310);
+		super(instance, 311);
 	}
 
 	@Override

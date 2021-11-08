@@ -28,7 +28,7 @@ public class SequoiaSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_slab")
 	public static final Block block = null;
 	public SequoiaSlabBlock(RagemodModElements instance) {
-		super(instance, 322);
+		super(instance, 323);
 	}
 
 	@Override

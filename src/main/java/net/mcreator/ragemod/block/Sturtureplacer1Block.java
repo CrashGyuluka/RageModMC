@@ -35,7 +35,7 @@ public class Sturtureplacer1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sturtureplacer_1")
 	public static final Block block = null;
 	public Sturtureplacer1Block(RagemodModElements instance) {
-		super(instance, 1235);
+		super(instance, 1237);
 	}
 
 	@Override

@@ -3,7 +3,7 @@
   "_type": "command",
   "definition": {
     "commandName": "fighthelp",
-    "permissionLevel": "2",
+    "permissionLevel": "4",
     "onCommandExecuted": {
       "name": "HarchelpcommCommandExecuted"
     }

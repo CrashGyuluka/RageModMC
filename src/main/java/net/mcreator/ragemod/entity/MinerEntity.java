@@ -79,11 +79,9 @@ public class MinerEntity extends RagemodModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("ragemod:bukkhighmountainvariatedfordimension").equals(event.getName()))
+		if (new ResourceLocation("ragemod:cave_dimension_biome1").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:bukkmeadowfordimension").equals(event.getName()))
-			biomeCriteria = true;
-		if (new ResourceLocation("ragemod:waterbukkbiomefordimension").equals(event.getName()))
+		if (new ResourceLocation("ragemod:cave_dimension_biome2").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

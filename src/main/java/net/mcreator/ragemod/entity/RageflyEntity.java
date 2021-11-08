@@ -55,7 +55,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.5f, 0.5f)).build("ragefly").setRegistryName("ragefly");
 	public RageflyEntity(RagemodModElements instance) {
-		super(instance, 205);
+		super(instance, 206);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflyRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

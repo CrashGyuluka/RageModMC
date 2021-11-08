@@ -49,7 +49,7 @@ import com.google.common.collect.ImmutableList;
 public class BukkhighmountainvariatedBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public BukkhighmountainvariatedBiome(RagemodModElements instance) {
-		super(instance, 1226);
+		super(instance, 1228);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

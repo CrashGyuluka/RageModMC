@@ -42,7 +42,7 @@ import com.google.common.collect.ImmutableList;
 public class SequoiaforestBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public SequoiaforestBiome(RagemodModElements instance) {
-		super(instance, 1437);
+		super(instance, 1439);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

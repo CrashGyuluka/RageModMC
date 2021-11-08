@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "command",
   "definition": {
-    "commandName": "notbuilding",
+    "commandName": "unset-gamerule",
     "permissionLevel": "2",
     "onCommandExecuted": {
       "name": "NotBuildingCommand"

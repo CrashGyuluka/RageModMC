@@ -40,7 +40,7 @@ public class AlienitepickaxeItem extends RagemodModElements.ModElement {
 			}
 
 			public float getEfficiency() {
-				return 13f;
+				return 14f;
 			}
 
 			public float getAttackDamage() {
@@ -48,11 +48,11 @@ public class AlienitepickaxeItem extends RagemodModElements.ModElement {
 			}
 
 			public int getHarvestLevel() {
-				return 5;
+				return 6;
 			}
 
 			public int getEnchantability() {
-				return 23;
+				return 24;
 			}
 
 			public Ingredient getRepairMaterial() {

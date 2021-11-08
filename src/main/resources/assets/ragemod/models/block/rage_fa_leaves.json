@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/ragefa2level1",
-    "particle": "ragemod:blocks/ragefa2level1"
+    "all": "ragemod:blocks/ragefa2level2",
+    "particle": "ragemod:blocks/ragefa2level2"
   }
 }

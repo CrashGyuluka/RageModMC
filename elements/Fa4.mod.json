@@ -3,15 +3,15 @@
   "_type": "structure",
   "definition": {
     "structure": "robtai1",
-    "randomlyRotateStructure": true,
+    "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 1510,
+    "spawnProbability": 2000,
     "minCountPerChunk": 6,
     "maxCountPerChunk": 9,
     "spawnLocation": "Ground",
     "spawnHeightOffset": 1,
-    "spawnXOffset": 0,
-    "spawnZOffset": 0,
+    "spawnXOffset": -3,
+    "spawnZOffset": -3,
     "spawnWorldTypes": [
       "Surface"
     ],

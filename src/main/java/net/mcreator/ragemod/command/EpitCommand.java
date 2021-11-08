@@ -26,7 +26,7 @@ public class EpitCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("building").requires(s -> s.hasPermissionLevel(2))
+				.register(LiteralArgumentBuilder.<CommandSource>literal("set-gamerules").requires(s -> s.hasPermissionLevel(2))
 						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(EpitCommand::execute))
 						.executes(EpitCommand::execute));
 	}

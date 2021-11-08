@@ -35,7 +35,7 @@ public class Structureplacer2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:structureplacer_2")
 	public static final Block block = null;
 	public Structureplacer2Block(RagemodModElements instance) {
-		super(instance, 1236);
+		super(instance, 1238);
 	}
 
 	@Override

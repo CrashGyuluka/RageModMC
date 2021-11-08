@@ -46,7 +46,7 @@ import com.google.common.collect.ImmutableList;
 public class WaterbukkbiomefordimensionBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public WaterbukkbiomefordimensionBiome(RagemodModElements instance) {
-		super(instance, 1242);
+		super(instance, 1244);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -105,7 +105,7 @@ public class WaterbukkbiomefordimensionBiome extends RagemodModElements.ModEleme
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(-1.7f).scale(0.1f)
 						.temperature(0.4f).downfall(0.7000000000000001f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("ragemod:waterbukkbiomefordimension"));
+				event.getRegistry().register(biome.setRegistryName("ragemod:cave_dimension_biome2"));
 			}
 		}
 	}

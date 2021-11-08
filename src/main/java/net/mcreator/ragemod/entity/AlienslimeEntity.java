@@ -46,7 +46,7 @@ public class AlienslimeEntity extends RagemodModElements.ModElement {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.5f, 0.5f)).build("alienslime").setRegistryName("alienslime");
 	public AlienslimeEntity(RagemodModElements instance) {
-		super(instance, 207);
+		super(instance, 208);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AlienslimeRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

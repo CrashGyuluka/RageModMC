@@ -15,7 +15,7 @@ public class DiscinspirationItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:disc_inspiration")
 	public static final Item block = null;
 	public DiscinspirationItem(RagemodModElements instance) {
-		super(instance, 1434);
+		super(instance, 1436);
 	}
 
 	@Override

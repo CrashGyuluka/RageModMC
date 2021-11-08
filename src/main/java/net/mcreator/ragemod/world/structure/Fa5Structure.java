@@ -51,7 +51,7 @@ public class Fa5Structure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 1300) {
+					if ((random.nextInt(1000000) + 1) <= 1500) {
 						int count = random.nextInt(11) + 5;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -64,9 +64,9 @@ public class Fa5Structure {
 								blockCriteria = true;
 							if (!blockCriteria)
 								continue;
-							Rotation rotation = Rotation.values()[random.nextInt(3)];
-							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+							Rotation rotation = Rotation.NONE;
+							Mirror mirror = Mirror.NONE;
+							BlockPos spawnTo = new BlockPos(i + -3, j + 1, k + -3);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();

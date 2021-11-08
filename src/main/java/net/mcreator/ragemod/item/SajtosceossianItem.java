@@ -17,7 +17,7 @@ public class SajtosceossianItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sajtosceossian")
 	public static final Item block = null;
 	public SajtosceossianItem(RagemodModElements instance) {
-		super(instance, 414);
+		super(instance, 416);
 	}
 
 	@Override

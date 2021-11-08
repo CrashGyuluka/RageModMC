@@ -26,7 +26,7 @@ public class HarchelpcommCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("fighthelp").requires(s -> s.hasPermissionLevel(2))
+				.register(LiteralArgumentBuilder.<CommandSource>literal("fighthelp").requires(s -> s.hasPermissionLevel(4))
 						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(HarchelpcommCommand::execute))
 						.executes(HarchelpcommCommand::execute));
 	}

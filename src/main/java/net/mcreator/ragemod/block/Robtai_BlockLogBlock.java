@@ -28,7 +28,7 @@ public class Robtai_BlockLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_robtai_log")
 	public static final Block block = null;
 	public Robtai_BlockLogBlock(RagemodModElements instance) {
-		super(instance, 270);
+		super(instance, 271);
 	}
 
 	@Override

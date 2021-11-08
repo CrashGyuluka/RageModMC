@@ -36,7 +36,7 @@
       },
       "biomes": [
         {
-          "biome": "ragemod:bukkhighmountainvariatedfordimension",
+          "biome": "ragemod:deleted_mod_element",
           "parameters": {
             "temperature": 1,
             "humidity": -1,
@@ -46,7 +46,7 @@
           }
         },
         {
-          "biome": "ragemod:bukkmeadowfordimension",
+          "biome": "ragemod:cave_dimension_biome1",
           "parameters": {
             "temperature": 0,
             "humidity": 0,
@@ -56,7 +56,7 @@
           }
         },
         {
-          "biome": "ragemod:waterbukkbiomefordimension",
+          "biome": "ragemod:cave_dimension_biome2",
           "parameters": {
             "temperature": -1,
             "humidity": 1,

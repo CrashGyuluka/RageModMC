@@ -14,7 +14,7 @@ import net.mcreator.ragemod.item.MegaMinePotion2Item;
 @RagemodModElements.ModElement.Tag
 public class MegaMinepotion2craftBrewingRecipe extends RagemodModElements.ModElement {
 	public MegaMinepotion2craftBrewingRecipe(RagemodModElements instance) {
-		super(instance, 1281);
+		super(instance, 1283);
 	}
 
 	@Override

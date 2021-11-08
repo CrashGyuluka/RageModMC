@@ -107,15 +107,6 @@
       }
     ]
   },
-  "alien_ambient2": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:am7",
-        "stream": false
-      }
-    ]
-  },
   "alien_ambient_3": {
     "category": "ambient",
     "sounds": [
@@ -141,6 +132,42 @@
       {
         "name": "ragemod:b6",
         "stream": true
+      }
+    ]
+  },
+  "alien_ambient2": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:am7",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient1": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:am3_mono",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient2_1": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:am7_mono",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient_3_1": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:at6_mono",
+        "stream": false
       }
     ]
   }

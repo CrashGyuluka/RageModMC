@@ -37,7 +37,7 @@ public class BukkLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_leaves")
 	public static final Block block = null;
 	public BukkLeavesBlock(RagemodModElements instance) {
-		super(instance, 402);
+		super(instance, 404);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlockColorRegisterHandler());
 	}
 
