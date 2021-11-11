@@ -2,6 +2,7 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
@@ -47,8 +48,10 @@ public class RobtaiLeavesBlockDestroyedByPlayerProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
-				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)) != 0))) {
+		if ((((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
+				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)) != 0))
+				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == Items.SHEARS))) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(RobtaiLeavesBlock.block));
 				entityToSpawn.setPickupDelay((int) 10);

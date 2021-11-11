@@ -22,6 +22,18 @@
       },
       {
         "value": "CUSTOM:SequoiaLeaves"
+      },
+      {
+        "value": "CUSTOM:YellowOakLeaves"
+      },
+      {
+        "value": "CUSTOM:BrownGlowingOakLeaves"
+      },
+      {
+        "value": "CUSTOM:GreenGlowingOakLeaves"
+      },
+      {
+        "value": "CUSTOM:RedGlowingOakLeaves"
       }
     ],
     "functions": [],

@@ -2,6 +2,7 @@
 package net.mcreator.ragemod.block;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
@@ -37,8 +38,9 @@ public class YellowOakLeavesBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.5f, 1f).setLightLevel(s -> 0).notSolid()
-					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true));
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 1f).setLightLevel(s -> 1)
+					.harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true));
 			setRegistryName("yellow_glowing_oak_leaves");
 		}
 
@@ -52,7 +54,7 @@ public class YellowOakLeavesBlock extends RagemodModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(this, 0));
 		}
 	}
 }
