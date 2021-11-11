@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "elderflower_juice",
+    "texture": "elderflower_juice2",
     "customModelName": "Normal",
     "name": "Elderflower Juice",
     "rarity": "COMMON",

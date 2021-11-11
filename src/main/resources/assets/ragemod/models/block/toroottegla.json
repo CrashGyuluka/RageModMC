@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/55324445e3h51",
-    "up": "ragemod:blocks/55324445e3h51",
-    "north": "ragemod:blocks/55324445e3h51",
-    "east": "ragemod:blocks/55324445e3h51",
-    "south": "ragemod:blocks/55324445e3h51",
-    "west": "ragemod:blocks/55324445e3h51",
-    "particle": "ragemod:blocks/55324445e3h51"
+    "down": "ragemod:blocks/cracked_bricks2",
+    "up": "ragemod:blocks/cracked_bricks2",
+    "north": "ragemod:blocks/cracked_bricks2",
+    "east": "ragemod:blocks/cracked_bricks2",
+    "south": "ragemod:blocks/cracked_bricks2",
+    "west": "ragemod:blocks/cracked_bricks2",
+    "particle": "ragemod:blocks/cracked_bricks2"
   }
 }

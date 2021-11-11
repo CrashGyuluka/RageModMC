@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "ragemod:blocks/fa4",
-    "particle": "ragemod:blocks/fa4"
+    "cross": "ragemod:blocks/robtai_sapling2",
+    "particle": "ragemod:blocks/robtai_sapling2"
   }
 }

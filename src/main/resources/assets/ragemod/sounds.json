@@ -35,16 +35,6 @@
       }
     ]
   },
-  "crashgyuluka_inspiration": {
-    "category": "record",
-    "subtitle": "subtitles.crashgyuluka_inspiration",
-    "sounds": [
-      {
-        "name": "ragemod:b6",
-        "stream": true
-      }
-    ]
-  },
   "alien_ambient1": {
     "category": "ambient",
     "sounds": [

@@ -50,7 +50,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public RagetreebiomeBiome(RagemodModElements instance) {
-		super(instance, 1315);
+		super(instance, 1314);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -121,6 +121,6 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public void init(FMLCommonSetupEvent event) {
 		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.FOREST);
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,
-				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 3));
+				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 4));
 	}
 }

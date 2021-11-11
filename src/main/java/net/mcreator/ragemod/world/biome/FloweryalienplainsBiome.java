@@ -41,7 +41,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class FloweryalienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public FloweryalienplainsBiome(RagemodModElements instance) {
-		super(instance, 1387);
+		super(instance, 1386);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

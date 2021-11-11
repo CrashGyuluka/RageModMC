@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "fa4",
+    "texture": "robtai_sapling2",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",

@@ -54,8 +54,6 @@ public class RagemodModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "toxicmob_death1")));
 		sounds.put(new ResourceLocation("ragemod", "toxic_mob_sendhelp1"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "toxic_mob_sendhelp1")));
-		sounds.put(new ResourceLocation("ragemod", "crashgyuluka_inspiration"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "crashgyuluka_inspiration")));
 		sounds.put(new ResourceLocation("ragemod", "alien_ambient1"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("ragemod", "alien_ambient1")));
 		sounds.put(new ResourceLocation("ragemod", "alien_ambient2_1"),

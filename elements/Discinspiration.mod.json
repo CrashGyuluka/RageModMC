@@ -3,13 +3,13 @@
   "_type": "musicdisc",
   "definition": {
     "texture": "inspiration_disc",
-    "name": "Inspiration - by CrashGyuluka",
-    "description": "CrashGyuluka - Inspiration",
+    "name": "Inspiration - by CrashGyuluka (NO SOUND YET)",
+    "description": "CrashGyuluka - Inspiration (NO SOUND YET)",
     "creativeTab": {
       "value": "No creative tab entry"
     },
     "music": {
-      "value": "CUSTOM:crashgyuluka_inspiration"
+      "value": "ambient.cave"
     },
     "specialInfo": [],
     "hasGlow": false

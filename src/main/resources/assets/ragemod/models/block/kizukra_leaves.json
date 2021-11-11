@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/---kizukr_leave",
-    "particle": "ragemod:blocks/---kizukr_leave"
+    "all": "ragemod:blocks/kizukra_leaves",
+    "particle": "ragemod:blocks/kizukra_leaves"
   }
 }

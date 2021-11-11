@@ -37,7 +37,7 @@
     "heightVariation": 0.1,
     "biomeType": "WARM",
     "spawnBiome": true,
-    "biomeWeight": 3,
+    "biomeWeight": 6,
     "biomeDictionaryTypes": [
       "FOREST"
     ],

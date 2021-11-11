@@ -13,7 +13,7 @@ public class PortalSendsFeedbackGameRule extends RagemodModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("portalSendsFeedback", GameRules.Category.PLAYER,
 			create(true));
 	public PortalSendsFeedbackGameRule(RagemodModElements instance) {
-		super(instance, 940);
+		super(instance, 941);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

@@ -13,7 +13,7 @@ public class RageModDevModeGameRule extends RagemodModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("rageModDevMode", GameRules.Category.UPDATES,
 			create(false));
 	public RageModDevModeGameRule(RagemodModElements instance) {
-		super(instance, 1417);
+		super(instance, 1416);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

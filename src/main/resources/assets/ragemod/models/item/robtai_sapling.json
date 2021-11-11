@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:blocks/fa4"
+    "layer0": "ragemod:blocks/robtai_sapling2"
   }
 }

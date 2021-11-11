@@ -42,7 +42,7 @@ import com.google.common.collect.ImmutableList;
 public class SequoiaforestBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 	public SequoiaforestBiome(RagemodModElements instance) {
-		super(instance, 1439);
+		super(instance, 1438);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -115,6 +115,6 @@ public class SequoiaforestBiome extends RagemodModElements.ModElement {
 	public void init(FMLCommonSetupEvent event) {
 		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.FOREST);
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,
-				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 3));
+				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 6));
 	}
 }
