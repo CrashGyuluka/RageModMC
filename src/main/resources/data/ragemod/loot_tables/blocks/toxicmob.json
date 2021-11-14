@@ -30,7 +30,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:sav_bucket",
+          "name": "ragemod:deleted_mod_element",
           "weight": 1,
           "functions": [
             {
