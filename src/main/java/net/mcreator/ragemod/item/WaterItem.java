@@ -15,6 +15,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class WaterItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:water")
 	public static final Item block = null;
+
 	public WaterItem(RagemodModElements instance) {
 		super(instance, 11);
 	}
@@ -23,6 +24,7 @@ public class WaterItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(4).rarity(Rarity.RARE));

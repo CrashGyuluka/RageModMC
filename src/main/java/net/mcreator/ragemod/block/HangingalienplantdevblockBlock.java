@@ -55,9 +55,7 @@ import net.mcreator.ragemod.procedures.HangingalienplantOnBlockRightClickedProce
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 import com.google.common.collect.ImmutableMap;
@@ -66,8 +64,9 @@ import com.google.common.collect.ImmutableMap;
 public class HangingalienplantdevblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hangingalienplantdevblock")
 	public static final Block block = null;
+
 	public HangingalienplantdevblockBlock(RagemodModElements instance) {
-		super(instance, 1286);
+		super(instance, 1285);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -83,6 +82,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).setLightLevel(s -> 2)
@@ -109,7 +109,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 				int y = pos.getY();
 				int z = pos.getZ();
 				return HangingalienshroomAdditionalPlacinggrowthConditionProcedure
-						.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+						.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			}
 			return super.isValidPosition(blockstate, worldIn, pos);
 		}
@@ -160,14 +160,9 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				HangingalienplantUpdateTickProcedure.executeProcedure($_dependencies);
-			}
+
+			HangingalienplantUpdateTickProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
 
@@ -182,23 +177,21 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 			double hitY = hit.getHitVec().y;
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				HangingalienplantOnBlockRightClickedProcedure.executeProcedure($_dependencies);
-			}
+
+			HangingalienplantOnBlockRightClickedProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return ActionResultType.SUCCESS;
 		}
 	}
+
 	private static Feature<OreFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
 	private static class CustomRuleTest extends RuleTest {
 		static final CustomRuleTest INSTANCE = new CustomRuleTest();
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.AIR)
@@ -234,7 +227,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 					int y = pos.getY();
 					int z = pos.getZ();
 					if (!HangingalienshroomAdditionalPlacinggrowthConditionProcedure
-							.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}
@@ -245,6 +238,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hangingalienplantdevblock"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);

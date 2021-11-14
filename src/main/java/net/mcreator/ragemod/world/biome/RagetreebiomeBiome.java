@@ -49,10 +49,12 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public RagetreebiomeBiome(RagemodModElements instance) {
-		super(instance, 1314);
+		super(instance, 1313);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -69,7 +71,7 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(RageFaLogBlock.block.getDefaultState()),
 								new SimpleBlockStateProvider(RageFaLeavesBlock.block.getDefaultState()),
 								new AcaciaFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0)),
-								new ForkyTrunkPlacer(6, 2, 2), new TwoLayerFeature(1, 0, 2))).setIgnoreVines().setMaxWaterDepth(0).build())
+								new ForkyTrunkPlacer(6, 2, 2), new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build())
 						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
 						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
@@ -117,6 +119,7 @@ public class RagetreebiomeBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.FOREST);

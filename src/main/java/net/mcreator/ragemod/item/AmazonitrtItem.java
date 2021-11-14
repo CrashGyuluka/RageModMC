@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AmazonitrtItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitrt")
 	public static final Item block = null;
+
 	public AmazonitrtItem(RagemodModElements instance) {
-		super(instance, 43);
+		super(instance, 42);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

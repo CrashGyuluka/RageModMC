@@ -10,6 +10,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AliendripstonetopdevAdditionalGenerationConditionProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -35,10 +36,10 @@ public class AliendripstonetopdevAdditionalGenerationConditionProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((BlockTags.getCollection().getTagByID(new ResourceLocation(("minecraft:mountain_stones").toLowerCase(java.util.Locale.ENGLISH)))
-				.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) == (true))) {
-			return (true);
+		if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:mountain_stones"))
+				.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()) == true) {
+			return true;
 		}
-		return (false);
+		return false;
 	}
 }

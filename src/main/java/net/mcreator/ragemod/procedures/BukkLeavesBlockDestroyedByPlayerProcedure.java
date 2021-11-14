@@ -17,6 +17,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class BukkLeavesBlockDestroyedByPlayerProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -48,17 +49,16 @@ public class BukkLeavesBlockDestroyedByPlayerProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
-				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)) != 0))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.SHEARS))) {
+		if ((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
+				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)) != 0)
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(BukkLeavesBlock.block));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		} else {
-			if ((Math.random() < 0.1)) {
+			if (Math.random() < 0.1) {
 				if (world instanceof World && !world.isRemote()) {
 					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(BukkspalingBlock.block));
 					entityToSpawn.setPickupDelay((int) 10);

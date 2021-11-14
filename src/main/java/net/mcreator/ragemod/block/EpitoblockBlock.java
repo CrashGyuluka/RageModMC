@@ -24,8 +24,9 @@ import java.util.Collections;
 public class EpitoblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:epitoblock")
 	public static final Block block = null;
+
 	public EpitoblockBlock(RagemodModElements instance) {
-		super(instance, 670);
+		super(instance, 669);
 	}
 
 	@Override
@@ -33,6 +34,7 @@ public class EpitoblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(2)

@@ -16,18 +16,22 @@ import net.mcreator.ragemod.RagemodModElements;
 public class SajtItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sajt")
 	public static final Item block = null;
+
 	public SajtItem(RagemodModElements instance) {
-		super(instance, 418);
+		super(instance, 417);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(6).saturation(6f).build()));
+					.food((new Food.Builder()).hunger(6).saturation(6f)
+
+							.build()));
 			setRegistryName("sajt");
 		}
 

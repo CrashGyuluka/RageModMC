@@ -18,24 +18,24 @@ import net.mcreator.ragemod.procedures.RagegyuruprocProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
-
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class RagegyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragegyuru")
 	public static final Item block = null;
+
 	public RagegyuruItem(RagemodModElements instance) {
-		super(instance, 81);
+		super(instance, 80);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(300).isImmuneToFire().rarity(Rarity.COMMON));
@@ -76,11 +76,8 @@ public class RagegyuruItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				RagegyuruprocProcedure.executeProcedure($_dependencies);
-			}
+
+			RagegyuruprocProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 }

@@ -25,6 +25,7 @@ public class SavragerobiRenderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(SavragerobiEntity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelcustom_model(), 0.5f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("ragemod:textures/savrob_texture1.png");
@@ -45,6 +46,7 @@ public class SavragerobiRenderer {
 		private final ModelRenderer cube_r4;
 		private final ModelRenderer cube_r5;
 		private final ModelRenderer cube_r6;
+
 		public Modelcustom_model() {
 			textureWidth = 128;
 			textureHeight = 128;
@@ -117,6 +119,8 @@ public class SavragerobiRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 		}
 	}
+
 }

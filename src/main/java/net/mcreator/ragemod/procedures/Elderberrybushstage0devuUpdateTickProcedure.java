@@ -51,6 +51,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -83,8 +84,8 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double Growth = 0;
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL)) {
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -103,7 +104,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 				if (entity instanceof PlayerEntity)
 					((PlayerEntity) entity).getCooldownTracker().setCooldown(
 							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 40);
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -124,7 +125,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 40);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -145,7 +146,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 40);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -166,7 +167,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 40);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -187,7 +188,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -208,7 +209,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -229,7 +230,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -250,7 +251,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -271,7 +272,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -292,7 +293,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -313,7 +314,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -334,7 +335,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -355,7 +356,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -376,7 +377,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -397,7 +398,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -418,7 +419,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -439,7 +440,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -460,7 +461,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -481,7 +482,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -502,7 +503,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -523,7 +524,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -544,7 +545,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -565,7 +566,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) (z - 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -586,7 +587,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
@@ -607,7 +608,7 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
 								(int) 50);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) (z + 1));
 						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();

@@ -20,8 +20,9 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DeepslateanapaitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslate_anapait_ore")
 	public static final Block block = null;
+
 	public DeepslateanapaitoreBlock(RagemodModElements instance) {
-		super(instance, 56);
+		super(instance, 55);
 	}
 
 	@Override
@@ -29,6 +30,7 @@ public class DeepslateanapaitoreBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(6f, 11f).setLightLevel(s -> 0).harvestLevel(2)

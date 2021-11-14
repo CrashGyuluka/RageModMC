@@ -32,8 +32,9 @@ import java.util.Collections;
 public class BizmutblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bizmutblock")
 	public static final Block block = null;
+
 	public BizmutblockBlock(RagemodModElements instance) {
-		super(instance, 70);
+		super(instance, 69);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class BizmutblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(4f, 20f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

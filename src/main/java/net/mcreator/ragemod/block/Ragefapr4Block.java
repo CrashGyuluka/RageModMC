@@ -29,8 +29,9 @@ import java.util.Collections;
 public class Ragefapr4Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragewood_block_pressure_plate")
 	public static final Block block = null;
+
 	public Ragefapr4Block(RagemodModElements instance) {
-		super(instance, 372);
+		super(instance, 371);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class Ragefapr4Block extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 5f)

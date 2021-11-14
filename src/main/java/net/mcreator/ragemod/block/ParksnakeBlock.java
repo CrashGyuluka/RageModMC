@@ -32,8 +32,9 @@ import java.util.Collections;
 public class ParksnakeBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parksnake")
 	public static final Block block = null;
+
 	public ParksnakeBlock(RagemodModElements instance) {
-		super(instance, 112);
+		super(instance, 111);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class ParksnakeBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

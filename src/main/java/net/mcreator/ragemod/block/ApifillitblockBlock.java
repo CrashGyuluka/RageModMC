@@ -32,8 +32,9 @@ import java.util.Collections;
 public class ApifillitblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:apifillitblock")
 	public static final Block block = null;
+
 	public ApifillitblockBlock(RagemodModElements instance) {
-		super(instance, 69);
+		super(instance, 68);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class ApifillitblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

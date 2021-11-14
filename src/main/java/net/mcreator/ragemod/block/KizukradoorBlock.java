@@ -31,8 +31,9 @@ import java.util.Collections;
 public class KizukradoorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_door")
 	public static final Block block = null;
+
 	public KizukradoorBlock(RagemodModElements instance) {
-		super(instance, 362);
+		super(instance, 361);
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class KizukradoorBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends DoorBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)

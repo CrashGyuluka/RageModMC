@@ -62,8 +62,9 @@ public class MinerEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("miner").setRegistryName("miner");
+
 	public MinerEntity(RagemodModElements instance) {
-		super(instance, 73);
+		super(instance, 72);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new MinerRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -93,6 +94,7 @@ public class MinerEntity extends RagemodModElements.ModElement {
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 				MonsterEntity::canMonsterSpawn);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {

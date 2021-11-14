@@ -25,8 +25,9 @@ import java.util.Collections;
 public class RagefaslabredBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragefaslabred")
 	public static final Block block = null;
+
 	public RagefaslabredBlock(RagemodModElements instance) {
-		super(instance, 310);
+		super(instance, 309);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class RagefaslabredBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)

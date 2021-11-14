@@ -44,6 +44,7 @@ public class LifestealerprcProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
@@ -51,14 +52,14 @@ public class LifestealerprcProcedure {
 			return;
 		}
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (((EnchantmentHelper.getEnchantmentLevel(LifeStealerEnchantment.enchantment,
-				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) > 0)) {
+		if (EnchantmentHelper.getEnchantmentLevel(LifeStealerEnchantment.enchantment,
+				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)) > 0) {
 			if (sourceentity instanceof LivingEntity)
 				((LivingEntity) sourceentity).setHealth((float) (((sourceentity instanceof LivingEntity)
 						? ((LivingEntity) sourceentity).getHealth()
 						: -1)
-						+ (EnchantmentHelper.getEnchantmentLevel(LifeStealerEnchantment.enchantment,
-								((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)))));
+						+ EnchantmentHelper.getEnchantmentLevel(LifeStealerEnchantment.enchantment,
+								((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))));
 		}
 	}
 }

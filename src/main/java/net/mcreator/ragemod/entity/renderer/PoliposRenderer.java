@@ -25,6 +25,7 @@ public class PoliposRenderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(PoliposEntity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelpolipos(), 0.5f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("ragemod:textures/polipos.png");
@@ -61,6 +62,7 @@ public class PoliposRenderer {
 		private final ModelRenderer bb_main;
 		private final ModelRenderer cube_r13;
 		private final ModelRenderer cube_r14;
+
 		public Modelpolipos() {
 			textureWidth = 256;
 			textureHeight = 256;
@@ -185,6 +187,8 @@ public class PoliposRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 		}
 	}
+
 }

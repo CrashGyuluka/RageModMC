@@ -16,14 +16,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class LifeStealerEnchantment extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:life_stealer")
 	public static final Enchantment enchantment = null;
+
 	public LifeStealerEnchantment(RagemodModElements instance) {
-		super(instance, 1453);
+		super(instance, 1452);
 	}
 
 	@Override
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("life_stealer"));
 	}
+
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.RARE, EnchantmentType.WEAPON, slots);

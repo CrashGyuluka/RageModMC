@@ -55,8 +55,9 @@ import java.util.Collections;
 public class Ragingvinesdev2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragingvinesdev_2")
 	public static final Block block = null;
+
 	public Ragingvinesdev2Block(RagemodModElements instance) {
-		super(instance, 1389);
+		super(instance, 1388);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -72,8 +73,10 @@ public class Ragingvinesdev2Block extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -103,6 +106,7 @@ public class Ragingvinesdev2Block extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:ragingvinesdev_2"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
@@ -112,6 +116,7 @@ public class Ragingvinesdev2Block extends RagemodModElements.ModElement {
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.HASTE, 10, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)

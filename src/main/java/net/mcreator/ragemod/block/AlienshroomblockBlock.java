@@ -53,8 +53,9 @@ import com.google.common.collect.ImmutableMap;
 public class AlienshroomblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienshroomblock")
 	public static final Block block = null;
+
 	public AlienshroomblockBlock(RagemodModElements instance) {
-		super(instance, 201);
+		super(instance, 200);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -65,6 +66,7 @@ public class AlienshroomblockBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.CORAL).hardnessAndResistance(0.7f, 2f).setLightLevel(s -> 7)
@@ -107,12 +109,15 @@ public class AlienshroomblockBlock extends RagemodModElements.ModElement {
 				}
 		}
 	}
+
 	private static Feature<OreFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
 	private static class CustomRuleTest extends RuleTest {
 		static final CustomRuleTest INSTANCE = new CustomRuleTest();
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.AIR)
@@ -145,7 +150,7 @@ public class AlienshroomblockBlock extends RagemodModElements.ModElement {
 					int y = pos.getY();
 					int z = pos.getZ();
 					if (!AlienshroomblockAdditionalGenerationConditionProcedure
-							.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}
@@ -156,6 +161,7 @@ public class AlienshroomblockBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alienshroomblock"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);

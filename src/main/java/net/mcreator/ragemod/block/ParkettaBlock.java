@@ -25,8 +25,9 @@ import java.util.Collections;
 public class ParkettaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parketta")
 	public static final Block block = null;
+
 	public ParkettaBlock(RagemodModElements instance) {
-		super(instance, 111);
+		super(instance, 110);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class ParkettaBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 100f).setLightLevel(s -> 0).harvestLevel(1)

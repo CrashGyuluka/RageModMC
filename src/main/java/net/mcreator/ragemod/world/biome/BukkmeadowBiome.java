@@ -39,10 +39,12 @@ import com.google.common.collect.ImmutableList;
 @RagemodModElements.ModElement.Tag
 public class BukkmeadowBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public BukkmeadowBiome(RagemodModElements instance) {
-		super(instance, 1223);
+		super(instance, 1222);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -98,6 +100,7 @@ public class BukkmeadowBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,

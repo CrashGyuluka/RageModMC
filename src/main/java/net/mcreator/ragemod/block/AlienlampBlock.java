@@ -25,17 +25,18 @@ import net.mcreator.ragemod.procedures.AlienlampOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienlampBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_lamp")
 	public static final Block block = null;
+
 	public AlienlampBlock(RagemodModElements instance) {
-		super(instance, 220);
+		super(instance, 219);
 	}
 
 	@Override
@@ -44,6 +45,7 @@ public class AlienlampBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.REDSTONE_LIGHT).sound(SoundType.LANTERN).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)
@@ -75,14 +77,9 @@ public class AlienlampBlock extends RagemodModElements.ModElement {
 			double hitY = hit.getHitVec().y;
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AlienlampOnBlockRightClickedProcedure.executeProcedure($_dependencies);
-			}
+
+			AlienlampOnBlockRightClickedProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return ActionResultType.SUCCESS;
 		}
 	}

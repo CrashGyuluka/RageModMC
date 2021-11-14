@@ -24,8 +24,9 @@ import java.util.Collections;
 public class BukkstairstrBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_block_stairs")
 	public static final Block block = null;
+
 	public BukkstairstrBlock(RagemodModElements instance) {
-		super(instance, 294);
+		super(instance, 293);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class BukkstairstrBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0)

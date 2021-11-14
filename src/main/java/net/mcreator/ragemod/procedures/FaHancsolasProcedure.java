@@ -73,6 +73,7 @@ public class FaHancsolasProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -104,8 +105,8 @@ public class FaHancsolasProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (Ragefalogb1Block.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& Ragefalogb1Block.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Ragefalogb2Block.block.getDefaultState();
@@ -136,8 +137,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (RageFaWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& RageFaWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Ragefalogb1Block.block.getDefaultState();
@@ -168,8 +169,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (Ragefalogs1Block.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& Ragefalogs1Block.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Ragefalog2Block.block.getDefaultState();
@@ -200,8 +201,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (RageFaLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& RageFaLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Ragefalogs1Block.block.getDefaultState();
@@ -232,8 +233,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (BukkWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& BukkWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = StrippedbukkwoodBlock.block.getDefaultState();
@@ -264,8 +265,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (BukkLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& BukkLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = StrippedbukklogBlock.block.getDefaultState();
@@ -296,8 +297,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (RobtaiWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& RobtaiWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Robtai_BlockWoodBlock.block.getDefaultState();
@@ -328,8 +329,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (RobtaiLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& RobtaiLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Robtai_BlockLogBlock.block.getDefaultState();
@@ -360,8 +361,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (MarokriksaWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& MarokriksaWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Marokriksa2WoodBlock.block.getDefaultState();
@@ -392,8 +393,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (MarokriksaLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& MarokriksaLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Marokriksa2LogBlock.block.getDefaultState();
@@ -424,8 +425,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (KizukraWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& KizukraWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Stripped_KizukraWoodBlock.block.getDefaultState();
@@ -456,8 +457,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (KizukraLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& KizukraLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Stripped_KizukraLogBlock.block.getDefaultState();
@@ -488,8 +489,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (SequoiaWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& SequoiaWoodBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Stripped_SequoiaWoodBlock.block.getDefaultState();
@@ -520,8 +521,8 @@ public class FaHancsolasProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem)
-				&& (SequoiaLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& SequoiaLogBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Stripped_SequoiaLogBlock.block.getDefaultState();

@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
+    "ragemod:alien_dirt",
     "ragemod:alien_soil",
     "ragemod:destroyablealiensoildev",
-    "ragemod:covered_alien_soil",
-    "ragemod:alien_dirt",
-    "ragemod:savasfold"
+    "ragemod:savasfold",
+    "ragemod:covered_alien_soil"
   ]
 }

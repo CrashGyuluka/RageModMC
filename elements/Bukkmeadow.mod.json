@@ -60,7 +60,6 @@
     "vanillaTreeType": "Default",
     "treeType": 0,
     "minHeight": 7,
-    "maxWaterDepth": 0,
     "treeStem": {
       "value": ""
     },

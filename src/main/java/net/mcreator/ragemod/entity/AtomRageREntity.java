@@ -50,6 +50,7 @@ public class AtomRageREntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(84).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.7f)).build("atom_rage_r").setRegistryName("atom_rage_r");
+
 	public AtomRageREntity(RagemodModElements instance) {
 		super(instance, 7);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AtomRageRRenderer.ModelRegisterHandler());
@@ -80,6 +81,7 @@ public class AtomRageREntity extends RagemodModElements.ModElement {
 				MonsterEntity::canMonsterSpawn);
 		DungeonHooks.addDungeonMob(entity, 180);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {

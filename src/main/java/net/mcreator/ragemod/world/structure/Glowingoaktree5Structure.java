@@ -36,6 +36,7 @@ import java.util.Random;
 public class Glowingoaktree5Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -89,6 +90,7 @@ public class Glowingoaktree5Structure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:glowingoaktree_5"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;

@@ -27,8 +27,9 @@ import java.util.Collections;
 public class Robtai_BlockStairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_robtai_stairs")
 	public static final Block block = null;
+
 	public Robtai_BlockStairsBlock(RagemodModElements instance) {
-		super(instance, 300);
+		super(instance, 299);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class Robtai_BlockStairsBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f).setLightLevel(s -> 0)

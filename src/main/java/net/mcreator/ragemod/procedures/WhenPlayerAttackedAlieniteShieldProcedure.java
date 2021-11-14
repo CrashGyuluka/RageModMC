@@ -47,6 +47,7 @@ public class WhenPlayerAttackedAlieniteShieldProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -54,9 +55,9 @@ public class WhenPlayerAttackedAlieniteShieldProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((((entity instanceof PlayerEntity) == (true)) || ((entity instanceof AlienslimeEntity.CustomEntity) == (true)))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == AlieniteshieldblockingdevItem.block))) {
+		if ((entity instanceof PlayerEntity == true || entity instanceof AlienslimeEntity.CustomEntity == true)
+				&& ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == AlieniteshieldblockingdevItem.block) {
 			if (dependencies.get("event") != null) {
 				Object _obj = dependencies.get("event");
 				if (_obj instanceof Event) {

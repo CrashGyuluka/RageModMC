@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DiamondnugetItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:diamondnuget")
 	public static final Item block = null;
+
 	public DiamondnugetItem(RagemodModElements instance) {
-		super(instance, 180);
+		super(instance, 179);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

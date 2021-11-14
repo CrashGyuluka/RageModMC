@@ -26,8 +26,9 @@ import java.util.Collections;
 public class SequoiaStairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_stairs")
 	public static final Block block = null;
+
 	public SequoiaStairsBlock(RagemodModElements instance) {
-		super(instance, 305);
+		super(instance, 304);
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class SequoiaStairsBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD)

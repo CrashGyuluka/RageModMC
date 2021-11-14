@@ -18,21 +18,22 @@ import net.mcreator.ragemod.procedures.AlienTorchRightClickedOnBlockProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienTorchItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_torch")
 	public static final Item block = null;
+
 	public AlienTorchItem(RagemodModElements instance) {
-		super(instance, 221);
+		super(instance, 220);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
@@ -66,15 +67,9 @@ public class AlienTorchItem extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("direction", direction);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AlienTorchRightClickedOnBlockProcedure.executeProcedure($_dependencies);
-			}
+
+			AlienTorchRightClickedOnBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("direction", direction).put("x", x)
+					.put("y", y).put("z", z).put("world", world).build());
 			return retval;
 		}
 	}

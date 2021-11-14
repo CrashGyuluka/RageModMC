@@ -29,6 +29,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class Fa4sapPlantRightClickedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -60,8 +61,8 @@ public class Fa4sapPlantRightClickedProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL)
-				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Fa4sapBlock.block))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL
+				&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Fa4sapBlock.block) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Blocks.AIR.getDefaultState();
@@ -85,7 +86,7 @@ public class Fa4sapPlantRightClickedProcedure {
 							((World) world).rand);
 				}
 			}
-			if (((new Object() {
+			if (new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
@@ -96,7 +97,7 @@ public class Fa4sapPlantRightClickedProcedure {
 					}
 					return false;
 				}
-			}.checkGamemode(entity)) || (new Object() {
+			}.checkGamemode(entity) || new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
@@ -107,7 +108,7 @@ public class Fa4sapPlantRightClickedProcedure {
 					}
 					return false;
 				}
-			}.checkGamemode(entity)))) {
+			}.checkGamemode(entity)) {
 				if (entity instanceof PlayerEntity) {
 					ItemStack _stktoremove = new ItemStack(Items.BONE_MEAL);
 					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,

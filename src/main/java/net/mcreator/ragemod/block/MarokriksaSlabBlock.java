@@ -28,8 +28,9 @@ import java.util.Collections;
 public class MarokriksaSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_slab")
 	public static final Block block = null;
+
 	public MarokriksaSlabBlock(RagemodModElements instance) {
-		super(instance, 322);
+		super(instance, 321);
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class MarokriksaSlabBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 15f).setLightLevel(s -> 0).harvestLevel(2)

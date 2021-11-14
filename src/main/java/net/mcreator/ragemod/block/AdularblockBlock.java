@@ -32,8 +32,9 @@ import java.util.Collections;
 public class AdularblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:adularblock")
 	public static final Block block = null;
+
 	public AdularblockBlock(RagemodModElements instance) {
-		super(instance, 64);
+		super(instance, 63);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class AdularblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(4f, 30f).setLightLevel(s -> 0).harvestLevel(4)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

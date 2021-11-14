@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
+    "ragemod:stripped_beech_log",
     "ragemod:bukk_wood",
     "ragemod:bukk_log",
-    "ragemod:stripped_beech_block",
-    "ragemod:stripped_beech_log"
+    "ragemod:stripped_beech_block"
   ]
 }

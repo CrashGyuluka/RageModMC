@@ -26,8 +26,9 @@ import java.util.Collections;
 public class YellowOakLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:yellow_glowing_oak_leaves")
 	public static final Block block = null;
+
 	public YellowOakLeavesBlock(RagemodModElements instance) {
-		super(instance, 411);
+		super(instance, 410);
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class YellowOakLeavesBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 1f).setLightLevel(s -> 6)

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ragemod:atom_rage_r",
-    "ragemod:ragemite"
+    "ragemod:ragemite",
+    "ragemod:atom_rage_r"
   ]
 }

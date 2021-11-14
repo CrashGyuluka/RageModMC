@@ -29,8 +29,9 @@ import java.util.Collections;
 public class MarokriksatdBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksatd")
 	public static final Block block = null;
+
 	public MarokriksatdBlock(RagemodModElements instance) {
-		super(instance, 371);
+		super(instance, 370);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class MarokriksatdBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends TrapDoorBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)

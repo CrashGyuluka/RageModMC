@@ -55,8 +55,9 @@ import java.util.Collections;
 public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:big_alien_mushroom")
 	public static final Block block = null;
+
 	public BigalienmushroomBlock(RagemodModElements instance) {
-		super(instance, 197);
+		super(instance, 196);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -73,8 +74,10 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -99,6 +102,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:big_alien_mushroom"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
@@ -110,6 +114,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends DoublePlantBlock {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0.5f, 0f)

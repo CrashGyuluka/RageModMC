@@ -26,8 +26,9 @@ import java.util.Collections;
 public class KizukraStairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_stairs")
 	public static final Block block = null;
+
 	public KizukraStairsBlock(RagemodModElements instance) {
-		super(instance, 298);
+		super(instance, 297);
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class KizukraStairsBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(9f, 6f).setLightLevel(s -> 0))

@@ -31,8 +31,9 @@ import java.util.Collections;
 public class BukkfencestrBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_block_fence")
 	public static final Block block = null;
+
 	public BukkfencestrBlock(RagemodModElements instance) {
-		super(instance, 330);
+		super(instance, 329);
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class BukkfencestrBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)

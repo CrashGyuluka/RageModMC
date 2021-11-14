@@ -13,13 +13,14 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.ragemod.procedures.GivestrdevblockCommandExecutedProcedure;
 
-import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
+
+import com.google.common.collect.ImmutableMap;
 
 @Mod.EventBusSubscriber
 public class GivestrdevblockCommand {
@@ -46,11 +47,8 @@ public class GivestrdevblockCommand {
 				cmdparams.put(Integer.toString(index[0]), param);
 			index[0]++;
 		});
-		{
-			Map<String, Object> $_dependencies = new HashMap<>();
-			$_dependencies.put("entity", entity);
-			GivestrdevblockCommandExecutedProcedure.executeProcedure($_dependencies);
-		}
+
+		GivestrdevblockCommandExecutedProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		return 0;
 	}
 }

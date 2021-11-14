@@ -44,8 +44,9 @@ public class SequoiaSaplingBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 	@ObjectHolder("ragemod:sequoia_sapling")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public SequoiaSaplingBlock(RagemodModElements instance) {
-		super(instance, 402);
+		super(instance, 401);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -55,17 +56,20 @@ public class SequoiaSaplingBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
 			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("sequoia_sapling"));
 		}
 	}
+
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.SPEED, 5, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)

@@ -36,6 +36,7 @@ import java.util.Random;
 public class Fa4Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -90,6 +91,7 @@ public class Fa4Structure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:fa_4"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);

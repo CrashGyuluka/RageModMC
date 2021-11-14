@@ -18,13 +18,13 @@ import net.mcreator.ragemod.procedures.RageBoosSpawnerRightClickedOnBlockProcedu
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class RageBoosSpawnerItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rage_boos_spawner")
 	public static final Item block = null;
+
 	public RageBoosSpawnerItem(RagemodModElements instance) {
 		super(instance, 9);
 	}
@@ -33,6 +33,7 @@ public class RageBoosSpawnerItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.RARE));
@@ -66,12 +67,9 @@ public class RageBoosSpawnerItem extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RageBoosSpawnerRightClickedOnBlockProcedure.executeProcedure($_dependencies);
-			}
+
+			RageBoosSpawnerRightClickedOnBlockProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build());
 			return retval;
 		}
 	}

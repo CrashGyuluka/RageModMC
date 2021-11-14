@@ -54,8 +54,9 @@ import java.util.Collections;
 public class RageflowerBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rageflower")
 	public static final Block block = null;
+
 	public RageflowerBlock(RagemodModElements instance) {
-		super(instance, 187);
+		super(instance, 186);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -72,8 +73,10 @@ public class RageflowerBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -103,10 +106,12 @@ public class RageflowerBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:rageflower"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.SATURATION, 0, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)

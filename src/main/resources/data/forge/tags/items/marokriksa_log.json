@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ragemod:marokriksa_wood",
     "ragemod:marokriksa_log",
-    "ragemod:marokriksa_2_wood",
-    "ragemod:marokriksa_2_log"
+    "ragemod:marokriksa_2_log",
+    "ragemod:marokriksa_wood",
+    "ragemod:marokriksa_2_wood"
   ]
 }

@@ -45,6 +45,7 @@ import com.google.common.collect.ImmutableMap;
 public class Hangingalienplant2Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -100,8 +101,8 @@ public class Hangingalienplant2Structure {
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
-							if (!Hangingalienplant2AdditionalGenerationConditionProcedure
-									.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							if (!Hangingalienplant2AdditionalGenerationConditionProcedure.executeProcedure(
+									ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("ragemod", "hanging_alien_plant"));
@@ -122,6 +123,7 @@ public class Hangingalienplant2Structure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:hangingalienplant_2"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);

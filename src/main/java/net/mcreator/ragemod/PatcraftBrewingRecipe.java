@@ -14,13 +14,14 @@ import net.mcreator.ragemod.item.AktionitItem;
 @RagemodModElements.ModElement.Tag
 public class PatcraftBrewingRecipe extends RagemodModElements.ModElement {
 	public PatcraftBrewingRecipe(RagemodModElements instance) {
-		super(instance, 862);
+		super(instance, 861);
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BrewingRecipeRegistry.addRecipe(new CustomBrewingRecipe());
 	}
+
 	public static class CustomBrewingRecipe implements IBrewingRecipe {
 		@Override
 		public boolean isInput(ItemStack input) {

@@ -10,6 +10,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlieniteswordLivingEntityIsHitWithToolProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -17,7 +18,7 @@ public class AlieniteswordLivingEntityIsHitWithToolProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((Math.random() <= 0.3)) {
+		if (Math.random() <= 0.3) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WITHER, (int) 30, (int) 1));
 			if (entity instanceof LivingEntity)

@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class ObsontiumItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:obsontium")
 	public static final Item block = null;
+
 	public ObsontiumItem(RagemodModElements instance) {
-		super(instance, 91);
+		super(instance, 90);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

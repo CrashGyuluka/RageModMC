@@ -23,16 +23,17 @@ import net.mcreator.ragemod.procedures.AlieniteshovelRightClickedOnBlockProcedur
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlieniteshovelItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alieniteshovel")
 	public static final Item block = null;
+
 	public AlieniteshovelItem(RagemodModElements instance) {
-		super(instance, 106);
+		super(instance, 105);
 	}
 
 	@Override
@@ -80,15 +81,9 @@ public class AlieniteshovelItem extends RagemodModElements.ModElement {
 				int y = pos.getY();
 				int z = pos.getZ();
 				ItemStack itemstack = context.getItem();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					AlieniteshovelRightClickedOnBlockProcedure.executeProcedure($_dependencies);
-				}
+
+				AlieniteshovelRightClickedOnBlockProcedure.executeProcedure(
+						ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 				return retval;
 			}
 		}.setRegistryName("alieniteshovel"));

@@ -41,6 +41,7 @@ public class PlaymusicinbiomesslaineprocProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -74,12 +75,12 @@ public class PlaymusicinbiomesslaineprocProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		double AmbientTimer = 0;
 		double AmbientSelector = 0;
-		if (((entity.world.getDimensionKey()) == (RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-				new ResourceLocation("ragemod:alien_dimension_portal_igniter"))))) {
+		if ((entity.world.getDimensionKey()) == (RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+				new ResourceLocation("ragemod:alien_dimension_portal_igniter")))) {
 			AmbientTimer = (double) (AmbientTimer + 1);
-			if ((AmbientTimer == 2359)) {
+			if (AmbientTimer == 2359) {
 				AmbientSelector = (double) Math.random();
-				if (((AmbientSelector <= 1) && (AmbientSelector > 0.75))) {
+				if (AmbientSelector <= 1 && AmbientSelector > 0.75) {
 					if (world instanceof World && !world.isRemote()) {
 						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient1")),
@@ -90,7 +91,7 @@ public class PlaymusicinbiomesslaineprocProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-				if (((AmbientSelector <= 0.75) && (AmbientSelector > 0.5))) {
+				if (AmbientSelector <= 0.75 && AmbientSelector > 0.5) {
 					if (world instanceof World && !world.isRemote()) {
 						((World) world)
 								.playSound(null, new BlockPos((int) x, (int) y, (int) z),
@@ -104,7 +105,7 @@ public class PlaymusicinbiomesslaineprocProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-				if (((AmbientSelector <= 0.5) && (AmbientSelector > 0.25))) {
+				if (AmbientSelector <= 0.5 && AmbientSelector > 0.25) {
 					if (world instanceof World && !world.isRemote()) {
 						((World) world)
 								.playSound(null, new BlockPos((int) x, (int) y, (int) z),
@@ -118,7 +119,7 @@ public class PlaymusicinbiomesslaineprocProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-				if (((AmbientSelector <= 0.25) && (AmbientSelector >= 0))) {
+				if (AmbientSelector <= 0.25 && AmbientSelector >= 0) {
 					if (world instanceof World && !world.isRemote()) {
 						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),

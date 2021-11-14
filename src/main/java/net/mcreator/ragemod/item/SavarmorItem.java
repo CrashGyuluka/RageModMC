@@ -28,6 +28,7 @@ public class SavarmorItem extends RagemodModElements.ModElement {
 	public static final Item legs = null;
 	@ObjectHolder("ragemod:savarmor_boots")
 	public static final Item boots = null;
+
 	public SavarmorItem(RagemodModElements instance) {
 		super(instance, 33);
 	}
@@ -101,4 +102,5 @@ public class SavarmorItem extends RagemodModElements.ModElement {
 			}
 		}.setRegistryName("savarmor_boots"));
 	}
+
 }

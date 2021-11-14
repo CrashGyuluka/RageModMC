@@ -51,6 +51,7 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.4f, 0.3f)).build("ragemite").setRegistryName("ragemite");
+
 	public RagemiteEntity(RagemodModElements instance) {
 		super(instance, 6);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RagemiteRenderer.ModelRegisterHandler());
@@ -83,6 +84,7 @@ public class RagemiteEntity extends RagemodModElements.ModElement {
 				MonsterEntity::canMonsterSpawn);
 		DungeonHooks.addDungeonMob(entity, 180);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {

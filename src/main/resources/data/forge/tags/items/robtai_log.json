@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "ragemod:robtai_wood",
-    "ragemod:robtai_log",
+    "ragemod:stripped_robtai_log",
     "ragemod:robtai_block_block",
-    "ragemod:stripped_robtai_log"
+    "ragemod:robtai_log",
+    "ragemod:robtai_wood"
   ]
 }

@@ -12,6 +12,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlieniteshovelRightClickedOnBlockProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -43,8 +44,8 @@ public class AlieniteshovelRightClickedOnBlockProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((entity.isSneaking()) == (true))) {
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DIRT)) {
+		if (entity.isSneaking() == true) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DIRT) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = Blocks.GRASS_PATH.getDefaultState();
@@ -60,7 +61,7 @@ public class AlieniteshovelRightClickedOnBlockProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS_BLOCK)) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS_BLOCK) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = Blocks.DIRT.getDefaultState();
@@ -76,7 +77,7 @@ public class AlieniteshovelRightClickedOnBlockProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS_PATH)) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS_PATH) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = Blocks.GRASS_BLOCK.getDefaultState();

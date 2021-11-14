@@ -44,6 +44,7 @@ public class GlowingleavesdropprocProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -75,29 +76,29 @@ public class GlowingleavesdropprocProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.SHEARS)) {
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == YellowOakLeavesBlock.block)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == YellowOakLeavesBlock.block) {
 				if (world instanceof World && !world.isRemote()) {
 					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(YellowOakLeavesBlock.block));
 					entityToSpawn.setPickupDelay((int) 5);
 					world.addEntity(entityToSpawn);
 				}
 			} else {
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BrownGlowingOakLeavesBlock.block)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BrownGlowingOakLeavesBlock.block) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(BrownGlowingOakLeavesBlock.block));
 						entityToSpawn.setPickupDelay((int) 5);
 						world.addEntity(entityToSpawn);
 					}
 				} else {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == GreenGlowingOakLeavesBlock.block)) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == GreenGlowingOakLeavesBlock.block) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(GreenGlowingOakLeavesBlock.block));
 							entityToSpawn.setPickupDelay((int) 5);
 							world.addEntity(entityToSpawn);
 						}
 					} else {
-						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RedGlowingOakLeavesBlock.block)) {
+						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RedGlowingOakLeavesBlock.block) {
 							if (world instanceof World && !world.isRemote()) {
 								ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(RedGlowingOakLeavesBlock.block));
 								entityToSpawn.setPickupDelay((int) 5);

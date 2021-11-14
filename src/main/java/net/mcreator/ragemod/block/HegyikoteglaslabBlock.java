@@ -25,8 +25,9 @@ import java.util.Collections;
 public class HegyikoteglaslabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikoteglaslab")
 	public static final Block block = null;
+
 	public HegyikoteglaslabBlock(RagemodModElements instance) {
-		super(instance, 241);
+		super(instance, 240);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class HegyikoteglaslabBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 5f).setLightLevel(s -> 0).harvestLevel(1)

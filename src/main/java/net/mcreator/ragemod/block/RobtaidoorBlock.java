@@ -31,8 +31,9 @@ import java.util.Collections;
 public class RobtaidoorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_door")
 	public static final Block block = null;
+
 	public RobtaidoorBlock(RagemodModElements instance) {
-		super(instance, 363);
+		super(instance, 362);
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class RobtaidoorBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends DoorBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)

@@ -17,13 +17,13 @@ import net.mcreator.ragemod.procedures.RagepotionFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class RagepotionItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragepotion")
 	public static final Item block = null;
+
 	public RagepotionItem(RagemodModElements instance) {
 		super(instance, 15);
 	}
@@ -32,10 +32,13 @@ public class RagepotionItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(4).saturation(1f).build()));
+					.food((new Food.Builder()).hunger(4).saturation(1f)
+
+							.build()));
 			setRegistryName("ragepotion");
 		}
 
@@ -66,15 +69,9 @@ public class RagepotionItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				RagepotionFoodEatenProcedure.executeProcedure($_dependencies);
-			}
+
+			RagepotionFoodEatenProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return retval;
 		}
 	}

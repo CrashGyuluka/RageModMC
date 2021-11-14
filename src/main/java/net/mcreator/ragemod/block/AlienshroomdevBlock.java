@@ -52,17 +52,18 @@ import net.mcreator.ragemod.procedures.AlienshroomdevPlantRightClickedProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienshroomdev")
 	public static final Block block = null;
+
 	public AlienshroomdevBlock(RagemodModElements instance) {
-		super(instance, 1303);
+		super(instance, 1302);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -78,8 +79,10 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -110,10 +113,12 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:alienshroomdev"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.SPEED, 5, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)
@@ -160,14 +165,9 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 			double hitY = hit.getHitVec().y;
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AlienshroomdevPlantRightClickedProcedure.executeProcedure($_dependencies);
-			}
+
+			AlienshroomdevPlantRightClickedProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return ActionResultType.SUCCESS;
 		}
 	}

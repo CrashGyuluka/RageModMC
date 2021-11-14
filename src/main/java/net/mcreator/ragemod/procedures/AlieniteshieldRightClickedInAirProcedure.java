@@ -13,6 +13,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlieniteshieldRightClickedInAirProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -27,9 +28,8 @@ public class AlieniteshieldRightClickedInAirProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double sheildDamage = 0;
-		if (((itemstack).getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem())) {
-			sheildDamage = (double) (((itemstack)).getDamage());
+		if (itemstack.getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()) {
+			sheildDamage = (double) ((itemstack).getDamage());
 			if (entity instanceof LivingEntity) {
 				ItemStack _setstack = new ItemStack(AlieniteshieldblockingdevItem.block);
 				_setstack.setCount((int) 1);

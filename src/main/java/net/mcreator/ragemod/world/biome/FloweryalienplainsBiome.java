@@ -40,10 +40,12 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class FloweryalienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public FloweryalienplainsBiome(RagemodModElements instance) {
-		super(instance, 1386);
+		super(instance, 1385);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -101,6 +103,7 @@ public class FloweryalienplainsBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}

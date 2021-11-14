@@ -48,10 +48,12 @@ import com.google.common.collect.ImmutableList;
 @RagemodModElements.ModElement.Tag
 public class WaterbukkbiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public WaterbukkbiomeBiome(RagemodModElements instance) {
-		super(instance, 1234);
+		super(instance, 1233);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -70,7 +72,7 @@ public class WaterbukkbiomeBiome extends RagemodModElements.ModElement {
 								new MegaJungleTrunkPlacer(6, 2, 19), new TwoLayerFeature(1, 1, 2)))
 										.setDecorators(
 												ImmutableList.of(TrunkVineTreeDecorator.field_236879_b_, LeaveVineTreeDecorator.field_236871_b_))
-										.setMaxWaterDepth(14).build())
+										.build())
 						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
 						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.SEAGRASS
@@ -114,6 +116,7 @@ public class WaterbukkbiomeBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,

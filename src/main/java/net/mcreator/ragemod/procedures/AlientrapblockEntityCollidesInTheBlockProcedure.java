@@ -12,6 +12,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlientrapblockEntityCollidesInTheBlockProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -19,9 +20,8 @@ public class AlientrapblockEntityCollidesInTheBlockProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-				: ItemStack.EMPTY).getItem() == Items.IRON_CHESTPLATE) == (false))) {
+		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+				.getItem() == Items.IRON_CHESTPLATE) == false) {
 			entity.attackEntityFrom(DamageSource.STARVE, (float) 1);
 		}
 	}

@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.Collections;
 
 public class PortalrtOnBlockRightClickedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -55,20 +56,20 @@ public class PortalrtOnBlockRightClickedProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.ENDER_EYE)) {
-			if (((new Object() {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.ENDER_EYE) {
+			if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "isBlockLinked")) == (false))) {
-				if (((entity.getPersistentData().getBoolean("playerHasStoredTeleporter")) == (true))) {
-					if (((x == (entity.getPersistentData().getDouble("playerTeleporterPosX")))
-							&& ((y == (entity.getPersistentData().getDouble("playerTeleporterPosY")))
-									&& (z == (entity.getPersistentData().getDouble("playerTeleporterPosZ")))))) {
-						if (((world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule)) == (true))) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "isBlockLinked")) == false) {
+				if (entity.getPersistentData().getBoolean("playerHasStoredTeleporter") == true) {
+					if (x == entity.getPersistentData().getDouble("playerTeleporterPosX")
+							&& y == entity.getPersistentData().getDouble("playerTeleporterPosY")
+							&& z == entity.getPersistentData().getDouble("playerTeleporterPosZ")) {
+						if (world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule) == true) {
 							if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 								((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You can't connect it to itself!"), (false));
 							}
@@ -234,7 +235,7 @@ public class PortalrtOnBlockRightClickedProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						entity.getPersistentData().putBoolean("playerHasStoredTeleporter", (false));
-						if (((world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule)) == (true))) {
+						if (world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule) == true) {
 							if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 								((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("The teleporters got connected."), (false));
 							}
@@ -245,74 +246,75 @@ public class PortalrtOnBlockRightClickedProcedure {
 					entity.getPersistentData().putDouble("playerTeleporterPosY", y);
 					entity.getPersistentData().putDouble("playerTeleporterPosZ", z);
 					entity.getPersistentData().putBoolean("playerHasStoredTeleporter", (true));
-					if (((world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule)) == (true))) {
+					if (world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule) == true) {
 						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("Teleporter's coordinate=") + "" + ("X: ") + ""
-									+ ((entity.getPersistentData().getDouble("playerTeleporterPosX"))) + "" + (" Y: ") + ""
-									+ ((entity.getPersistentData().getDouble("playerTeleporterPosY"))) + "" + (" Z: ") + ""
-									+ ((entity.getPersistentData().getDouble("playerTeleporterPosZ"))) + "" + (" Stored=") + ""
-									+ ((entity.getPersistentData().getBoolean("playerHasStoredTeleporter"))))), (false));
+							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
+									("Teleporter's coordinate=" + "X: " + entity.getPersistentData().getDouble("playerTeleporterPosX") + " Y: "
+											+ entity.getPersistentData().getDouble("playerTeleporterPosY") + " Z: "
+											+ entity.getPersistentData().getDouble("playerTeleporterPosZ") + " Stored="
+											+ entity.getPersistentData().getBoolean("playerHasStoredTeleporter"))),
+									(false));
 						}
 					}
 				}
 			}
 		} else {
-			if (((new Object() {
+			if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "isBlockLinked")) == (true))) {
-				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.GOLD_NUGGET)) : false)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "isBlockLinked")) == true) {
+				if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.GOLD_NUGGET)) : false) {
 					{
 						Entity _ent = entity;
-						_ent.setPositionAndUpdate(((new Object() {
+						_ent.setPositionAndUpdate((new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosX")) + 0.5), (new Object() {
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosX") + 0.5), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosY")), ((new Object() {
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosY")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosZ")) + 0.5));
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosZ") + 0.5));
 						if (_ent instanceof ServerPlayerEntity) {
-							((ServerPlayerEntity) _ent).connection.setPlayerLocation(((new Object() {
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosX")) + 0.5), (new Object() {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosX") + 0.5), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosY")), ((new Object() {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosY")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosZ")) + 0.5), _ent.rotationYaw,
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "blockTeleporterPosZ") + 0.5), _ent.rotationYaw,
 									_ent.rotationPitch, Collections.emptySet());
 						}
 					}
@@ -325,7 +327,7 @@ public class PortalrtOnBlockRightClickedProcedure {
 						((LivingEntity) entity).prevRotationYawHead = entity.rotationYaw;
 					}
 					entity.rotationPitch = (float) ((entity.rotationPitch));
-					if (((new Object() {
+					if (new Object() {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayerEntity) {
 								return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
@@ -336,7 +338,7 @@ public class PortalrtOnBlockRightClickedProcedure {
 							}
 							return false;
 						}
-					}.checkGamemode(entity)) || (new Object() {
+					}.checkGamemode(entity) || new Object() {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayerEntity) {
 								return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
@@ -347,8 +349,8 @@ public class PortalrtOnBlockRightClickedProcedure {
 							}
 							return false;
 						}
-					}.checkGamemode(entity)))) {
-						if ((Math.random() < 0.5)) {
+					}.checkGamemode(entity)) {
+						if (Math.random() < 0.5) {
 							if (entity instanceof PlayerEntity) {
 								ItemStack _stktoremove = new ItemStack(Items.GOLD_NUGGET);
 								((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
@@ -356,7 +358,7 @@ public class PortalrtOnBlockRightClickedProcedure {
 							}
 						}
 					}
-					if (((world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule)) == (true))) {
+					if (world.getWorldInfo().getGameRulesInstance().getBoolean(PortalSendsFeedbackGameRule.gamerule) == true) {
 						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You got teleported :)"), (false));
 						}

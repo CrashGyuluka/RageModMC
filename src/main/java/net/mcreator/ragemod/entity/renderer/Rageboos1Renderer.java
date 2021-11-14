@@ -33,6 +33,7 @@ public class Rageboos1Renderer {
 						{
 							this.addLayer(new GlowingLayer<>(this));
 						}
+
 						@Override
 						public ResourceLocation getEntityTexture(Entity entity) {
 							return new ResourceLocation("ragemod:textures/boss1.png");

@@ -32,8 +32,9 @@ import java.util.Collections;
 public class MarokriksaLogBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_log")
 	public static final Block block = null;
+
 	public MarokriksaLogBlock(RagemodModElements instance) {
-		super(instance, 273);
+		super(instance, 272);
 	}
 
 	@Override
@@ -42,8 +43,10 @@ public class MarokriksaLogBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 7f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.AXE).setRequiresTool());

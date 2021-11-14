@@ -25,17 +25,18 @@ import net.mcreator.ragemod.procedures.Structurehatarolo1BlockAddedProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class Strplacer3Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:strplacer_3")
 	public static final Block block = null;
+
 	public Strplacer3Block(RagemodModElements instance) {
-		super(instance, 1328);
+		super(instance, 1327);
 	}
 
 	@Override
@@ -43,6 +44,7 @@ public class Strplacer3Block extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 40f).setLightLevel(s -> 0));
@@ -85,14 +87,9 @@ public class Strplacer3Block extends RagemodModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				Structurehatarolo1BlockAddedProcedure.executeProcedure($_dependencies);
-			}
+
+			Structurehatarolo1BlockAddedProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
 	}

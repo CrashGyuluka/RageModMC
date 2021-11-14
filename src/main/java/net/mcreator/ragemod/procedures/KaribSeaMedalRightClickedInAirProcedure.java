@@ -45,6 +45,7 @@ public class KaribSeaMedalRightClickedInAirProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -76,14 +77,14 @@ public class KaribSeaMedalRightClickedInAirProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new RagemodModVariables.PlayerVariables())).PlayerGotKaribMedal) == (false))
+		if ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new RagemodModVariables.PlayerVariables())).PlayerGotKaribMedal == false
 				&& (((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
 						? ((ServerPlayerEntity) entity).getAdvancements()
 								.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 										.getAdvancement(new ResourceLocation("minecraft:adventure/adventuring_time")))
 								.isDone()
-						: false))) {
+						: false)) {
 			{
 				boolean _setval = (boolean) (true);
 				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

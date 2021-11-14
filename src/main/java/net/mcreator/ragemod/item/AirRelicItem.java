@@ -12,21 +12,23 @@ import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
-public class AirItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:air")
+public class AirRelicItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:air_relic")
 	public static final Item block = null;
-	public AirItem(RagemodModElements instance) {
-		super(instance, 13);
+
+	public AirRelicItem(RagemodModElements instance) {
+		super(instance, 12);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(4).rarity(Rarity.RARE));
-			setRegistryName("air");
+			setRegistryName("air_relic");
 		}
 
 		@Override

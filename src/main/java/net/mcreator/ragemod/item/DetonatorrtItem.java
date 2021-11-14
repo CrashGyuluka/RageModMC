@@ -22,14 +22,16 @@ import com.google.common.collect.ImmutableMultimap;
 public class DetonatorrtItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:detonatorrt")
 	public static final Item block = null;
+
 	public DetonatorrtItem(RagemodModElements instance) {
-		super(instance, 79);
+		super(instance, 78);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(10).rarity(Rarity.COMMON));

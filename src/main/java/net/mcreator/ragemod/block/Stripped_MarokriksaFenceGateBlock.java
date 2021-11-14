@@ -27,8 +27,9 @@ import java.util.Collections;
 public class Stripped_MarokriksaFenceGateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_marokriksa_fence_gate")
 	public static final Block block = null;
+
 	public Stripped_MarokriksaFenceGateBlock(RagemodModElements instance) {
-		super(instance, 357);
+		super(instance, 356);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class Stripped_MarokriksaFenceGateBlock extends RagemodModElements.ModEle
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FenceGateBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f).setLightLevel(s -> 0).harvestLevel(2)

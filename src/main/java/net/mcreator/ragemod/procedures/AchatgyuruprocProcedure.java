@@ -42,6 +42,7 @@ public class AchatgyuruprocProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -49,8 +50,8 @@ public class AchatgyuruprocProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((AchatgyuruItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem())
-				&& (entity.isSneaking()))) {
+		if (AchatgyuruItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()
+				&& entity.isSneaking()) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).getCooldownTracker().setCooldown(
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 195);

@@ -53,16 +53,17 @@ import net.mcreator.ragemod.block.AlienlampBlock;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class RageflyEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.5f, 0.5f)).build("ragefly").setRegistryName("ragefly");
+
 	public RageflyEntity(RagemodModElements instance) {
-		super(instance, 206);
+		super(instance, 205);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflyRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -90,6 +91,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
 				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -192,15 +194,9 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				RageflyRightClickedOnEntityProcedure.executeProcedure($_dependencies);
-			}
+
+			RageflyRightClickedOnEntityProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return retval;
 		}
 

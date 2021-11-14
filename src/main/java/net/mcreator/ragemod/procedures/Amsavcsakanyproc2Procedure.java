@@ -46,6 +46,7 @@ public class Amsavcsakanyproc2Procedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -77,9 +78,9 @@ public class Amsavcsakanyproc2Procedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == MegasavcsakaknyItem.block)
-				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SMOOTH_STONE))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == MegasavcsakaknyItem.block
+				&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SMOOTH_STONE) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Blocks.STONE_BRICKS.getDefaultState();
@@ -95,9 +96,9 @@ public class Amsavcsakanyproc2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 		} else {
-			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == MegasavcsakaknyItem.block)
-					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE))) {
+			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == MegasavcsakaknyItem.block
+					&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICKS.getDefaultState();
@@ -113,9 +114,9 @@ public class Amsavcsakanyproc2Procedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			} else {
-				if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == MegasavcsakaknyItem.block)
-						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.END_STONE))) {
+				if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == MegasavcsakaknyItem.block
+						&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.END_STONE) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						BlockState _bs = Blocks.END_STONE_BRICKS.getDefaultState();
@@ -131,9 +132,9 @@ public class Amsavcsakanyproc2Procedure {
 						world.setBlockState(_bp, _bs, 3);
 					}
 				} else {
-					if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == MegasavcsakaknyItem.block)
-							&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SANDSTONE))) {
+					if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == MegasavcsakaknyItem.block
+							&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SANDSTONE) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							BlockState _bs = Blocks.SMOOTH_SANDSTONE.getDefaultState();
@@ -149,9 +150,9 @@ public class Amsavcsakanyproc2Procedure {
 							world.setBlockState(_bp, _bs, 3);
 						}
 					} else {
-						if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == MegasavcsakaknyItem.block)
-								&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.RED_SANDSTONE))) {
+						if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == MegasavcsakaknyItem.block
+								&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.RED_SANDSTONE) {
 							{
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								BlockState _bs = Blocks.SMOOTH_RED_SANDSTONE.getDefaultState();
@@ -167,9 +168,9 @@ public class Amsavcsakanyproc2Procedure {
 								world.setBlockState(_bp, _bs, 3);
 							}
 						} else {
-							if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-									.getItem() == MegasavcsakaknyItem.block)
-									&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CHISELED_SANDSTONE))) {
+							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+									.getItem() == MegasavcsakaknyItem.block
+									&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CHISELED_SANDSTONE) {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									BlockState _bs = Blocks.SMOOTH_SANDSTONE.getDefaultState();
@@ -185,9 +186,9 @@ public class Amsavcsakanyproc2Procedure {
 									world.setBlockState(_bp, _bs, 3);
 								}
 							} else {
-								if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-										.getItem() == MegasavcsakaknyItem.block)
-										&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CUT_SANDSTONE))) {
+								if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+										.getItem() == MegasavcsakaknyItem.block
+										&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CUT_SANDSTONE) {
 									{
 										BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 										BlockState _bs = Blocks.SMOOTH_SANDSTONE.getDefaultState();
@@ -203,10 +204,9 @@ public class Amsavcsakanyproc2Procedure {
 										world.setBlockState(_bp, _bs, 3);
 									}
 								} else {
-									if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-											.getItem() == MegasavcsakaknyItem.block)
-											&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-													.getBlock() == Blocks.SANDSTONE_STAIRS))) {
+									if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+											.getItem() == MegasavcsakaknyItem.block
+											&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SANDSTONE_STAIRS) {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 											BlockState _bs = Blocks.SMOOTH_SANDSTONE_STAIRS.getDefaultState();
@@ -222,10 +222,10 @@ public class Amsavcsakanyproc2Procedure {
 											world.setBlockState(_bp, _bs, 3);
 										}
 									} else {
-										if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-												.getItem() == MegasavcsakaknyItem.block)
-												&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-														.getBlock() == Blocks.CUT_SANDSTONE_SLAB))) {
+										if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+												.getItem() == MegasavcsakaknyItem.block
+												&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+														.getBlock() == Blocks.CUT_SANDSTONE_SLAB) {
 											{
 												BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 												BlockState _bs = Blocks.SMOOTH_SANDSTONE_SLAB.getDefaultState();
@@ -241,10 +241,10 @@ public class Amsavcsakanyproc2Procedure {
 												world.setBlockState(_bp, _bs, 3);
 											}
 										} else {
-											if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-													.getItem() == MegasavcsakaknyItem.block)
-													&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-															.getBlock() == Blocks.SANDSTONE_SLAB))) {
+											if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+													.getItem() == MegasavcsakaknyItem.block
+													&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+															.getBlock() == Blocks.SANDSTONE_SLAB) {
 												{
 													BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 													BlockState _bs = Blocks.CUT_SANDSTONE_SLAB.getDefaultState();
@@ -260,11 +260,11 @@ public class Amsavcsakanyproc2Procedure {
 													world.setBlockState(_bp, _bs, 3);
 												}
 											} else {
-												if (((((entity instanceof LivingEntity)
+												if (((entity instanceof LivingEntity)
 														? ((LivingEntity) entity).getHeldItemMainhand()
-														: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-														&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																.getBlock() == Blocks.CHISELED_RED_SANDSTONE))) {
+														: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+														&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																.getBlock() == Blocks.CHISELED_RED_SANDSTONE) {
 													{
 														BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 														BlockState _bs = Blocks.SMOOTH_RED_SANDSTONE.getDefaultState();
@@ -281,11 +281,11 @@ public class Amsavcsakanyproc2Procedure {
 														world.setBlockState(_bp, _bs, 3);
 													}
 												} else {
-													if (((((entity instanceof LivingEntity)
+													if (((entity instanceof LivingEntity)
 															? ((LivingEntity) entity).getHeldItemMainhand()
-															: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-															&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																	.getBlock() == Blocks.CUT_RED_SANDSTONE))) {
+															: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+															&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																	.getBlock() == Blocks.CUT_RED_SANDSTONE) {
 														{
 															BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 															BlockState _bs = Blocks.SMOOTH_RED_SANDSTONE.getDefaultState();
@@ -302,11 +302,11 @@ public class Amsavcsakanyproc2Procedure {
 															world.setBlockState(_bp, _bs, 3);
 														}
 													} else {
-														if (((((entity instanceof LivingEntity)
+														if (((entity instanceof LivingEntity)
 																? ((LivingEntity) entity).getHeldItemMainhand()
-																: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																		.getBlock() == Blocks.RED_SANDSTONE_STAIRS))) {
+																: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																		.getBlock() == Blocks.RED_SANDSTONE_STAIRS) {
 															{
 																BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																BlockState _bs = Blocks.SMOOTH_RED_SANDSTONE_STAIRS.getDefaultState();
@@ -323,11 +323,11 @@ public class Amsavcsakanyproc2Procedure {
 																world.setBlockState(_bp, _bs, 3);
 															}
 														} else {
-															if (((((entity instanceof LivingEntity)
+															if (((entity instanceof LivingEntity)
 																	? ((LivingEntity) entity).getHeldItemMainhand()
-																	: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																	&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																			.getBlock() == Blocks.CUT_RED_SANDSTONE_SLAB))) {
+																	: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																	&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																			.getBlock() == Blocks.CUT_RED_SANDSTONE_SLAB) {
 																{
 																	BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																	BlockState _bs = Blocks.SMOOTH_RED_SANDSTONE_SLAB.getDefaultState();
@@ -344,11 +344,11 @@ public class Amsavcsakanyproc2Procedure {
 																	world.setBlockState(_bp, _bs, 3);
 																}
 															} else {
-																if (((((entity instanceof LivingEntity)
+																if (((entity instanceof LivingEntity)
 																		? ((LivingEntity) entity).getHeldItemMainhand()
-																		: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																		&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																				.getBlock() == Blocks.RED_SANDSTONE_SLAB))) {
+																		: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																		&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																				.getBlock() == Blocks.RED_SANDSTONE_SLAB) {
 																	{
 																		BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																		BlockState _bs = Blocks.CUT_RED_SANDSTONE_SLAB.getDefaultState();
@@ -366,11 +366,11 @@ public class Amsavcsakanyproc2Procedure {
 																		world.setBlockState(_bp, _bs, 3);
 																	}
 																} else {
-																	if (((((entity instanceof LivingEntity)
+																	if (((entity instanceof LivingEntity)
 																			? ((LivingEntity) entity).getHeldItemMainhand()
-																			: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																			&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																					.getBlock() == Blocks.MOSSY_COBBLESTONE))) {
+																			: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																			&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																					.getBlock() == Blocks.MOSSY_COBBLESTONE) {
 																		{
 																			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																			BlockState _bs = Blocks.COBBLESTONE.getDefaultState();
@@ -388,11 +388,11 @@ public class Amsavcsakanyproc2Procedure {
 																			world.setBlockState(_bp, _bs, 3);
 																		}
 																	} else {
-																		if (((((entity instanceof LivingEntity)
+																		if (((entity instanceof LivingEntity)
 																				? ((LivingEntity) entity).getHeldItemMainhand()
-																				: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																						.getBlock() == Blocks.MOSSY_COBBLESTONE_STAIRS))) {
+																				: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																				&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																						.getBlock() == Blocks.MOSSY_COBBLESTONE_STAIRS) {
 																			{
 																				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																				BlockState _bs = Blocks.COBBLESTONE_STAIRS.getDefaultState();
@@ -410,11 +410,11 @@ public class Amsavcsakanyproc2Procedure {
 																				world.setBlockState(_bp, _bs, 3);
 																			}
 																		} else {
-																			if (((((entity instanceof LivingEntity)
+																			if (((entity instanceof LivingEntity)
 																					? ((LivingEntity) entity).getHeldItemMainhand()
-																					: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																							.getBlock() == Blocks.MOSSY_COBBLESTONE_SLAB))) {
+																					: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																					&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+																							.getBlock() == Blocks.MOSSY_COBBLESTONE_SLAB) {
 																				{
 																					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																					BlockState _bs = Blocks.COBBLESTONE_SLAB.getDefaultState();
@@ -433,12 +433,12 @@ public class Amsavcsakanyproc2Procedure {
 																					world.setBlockState(_bp, _bs, 3);
 																				}
 																			} else {
-																				if (((((entity instanceof LivingEntity)
+																				if (((entity instanceof LivingEntity)
 																						? ((LivingEntity) entity).getHeldItemMainhand()
-																						: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																						&& ((world.getBlockState(
+																						: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																						&& (world.getBlockState(
 																								new BlockPos((int) x, (int) y, (int) z)))
-																										.getBlock() == Blocks.MOSSY_COBBLESTONE_WALL))) {
+																										.getBlock() == Blocks.MOSSY_COBBLESTONE_WALL) {
 																					{
 																						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																						BlockState _bs = Blocks.COBBLESTONE_WALL.getDefaultState();
@@ -457,12 +457,12 @@ public class Amsavcsakanyproc2Procedure {
 																						world.setBlockState(_bp, _bs, 3);
 																					}
 																				} else {
-																					if (((((entity instanceof LivingEntity)
+																					if (((entity instanceof LivingEntity)
 																							? ((LivingEntity) entity).getHeldItemMainhand()
-																							: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block)
-																							&& ((world.getBlockState(
+																							: ItemStack.EMPTY).getItem() == MegasavcsakaknyItem.block
+																							&& (world.getBlockState(
 																									new BlockPos((int) x, (int) y, (int) z)))
-																											.getBlock() == Blocks.CRACKED_STONE_BRICKS))) {
+																											.getBlock() == Blocks.CRACKED_STONE_BRICKS) {
 																						{
 																							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 																							BlockState _bs = Blocks.STONE_BRICKS.getDefaultState();
@@ -482,13 +482,13 @@ public class Amsavcsakanyproc2Procedure {
 																							world.setBlockState(_bp, _bs, 3);
 																						}
 																					} else {
-																						if (((((entity instanceof LivingEntity)
+																						if (((entity instanceof LivingEntity)
 																								? ((LivingEntity) entity).getHeldItemMainhand()
 																								: ItemStack.EMPTY)
-																										.getItem() == MegasavcsakaknyItem.block)
-																								&& ((world.getBlockState(
+																										.getItem() == MegasavcsakaknyItem.block
+																								&& (world.getBlockState(
 																										new BlockPos((int) x, (int) y, (int) z)))
-																												.getBlock() == Blocks.MOSSY_STONE_BRICKS))) {
+																												.getBlock() == Blocks.MOSSY_STONE_BRICKS) {
 																							{
 																								BlockPos _bp = new BlockPos((int) x, (int) y,
 																										(int) z);
@@ -511,13 +511,13 @@ public class Amsavcsakanyproc2Procedure {
 																								world.setBlockState(_bp, _bs, 3);
 																							}
 																						} else {
-																							if (((((entity instanceof LivingEntity)
+																							if (((entity instanceof LivingEntity)
 																									? ((LivingEntity) entity).getHeldItemMainhand()
 																									: ItemStack.EMPTY)
-																											.getItem() == MegasavcsakaknyItem.block)
-																									&& ((world.getBlockState(
+																											.getItem() == MegasavcsakaknyItem.block
+																									&& (world.getBlockState(
 																											new BlockPos((int) x, (int) y, (int) z)))
-																													.getBlock() == Blocks.NETHER_BRICKS))) {
+																													.getBlock() == Blocks.NETHER_BRICKS) {
 																								{
 																									BlockPos _bp = new BlockPos((int) x, (int) y,
 																											(int) z);
@@ -541,14 +541,14 @@ public class Amsavcsakanyproc2Procedure {
 																									world.setBlockState(_bp, _bs, 3);
 																								}
 																							} else {
-																								if (((((entity instanceof LivingEntity)
+																								if (((entity instanceof LivingEntity)
 																										? ((LivingEntity) entity)
 																												.getHeldItemMainhand()
 																										: ItemStack.EMPTY)
-																												.getItem() == MegasavcsakaknyItem.block)
-																										&& ((world.getBlockState(new BlockPos((int) x,
+																												.getItem() == MegasavcsakaknyItem.block
+																										&& (world.getBlockState(new BlockPos((int) x,
 																												(int) y, (int) z)))
-																														.getBlock() == Blocks.NETHERRACK))) {
+																														.getBlock() == Blocks.NETHERRACK) {
 																									{
 																										BlockPos _bp = new BlockPos((int) x, (int) y,
 																												(int) z);
@@ -572,14 +572,14 @@ public class Amsavcsakanyproc2Procedure {
 																										world.setBlockState(_bp, _bs, 3);
 																									}
 																								} else {
-																									if (((((entity instanceof LivingEntity)
+																									if (((entity instanceof LivingEntity)
 																											? ((LivingEntity) entity)
 																													.getHeldItemMainhand()
 																											: ItemStack.EMPTY)
-																													.getItem() == MegasavcsakaknyItem.block)
-																											&& ((world.getBlockState(new BlockPos(
+																													.getItem() == MegasavcsakaknyItem.block
+																											&& (world.getBlockState(new BlockPos(
 																													(int) x, (int) y, (int) z)))
-																															.getBlock() == Blocks.CRACKED_NETHER_BRICKS))) {
+																															.getBlock() == Blocks.CRACKED_NETHER_BRICKS) {
 																										{
 																											BlockPos _bp = new BlockPos((int) x,
 																													(int) y, (int) z);
@@ -605,14 +605,14 @@ public class Amsavcsakanyproc2Procedure {
 																											world.setBlockState(_bp, _bs, 3);
 																										}
 																									} else {
-																										if (((((entity instanceof LivingEntity)
+																										if (((entity instanceof LivingEntity)
 																												? ((LivingEntity) entity)
 																														.getHeldItemMainhand()
 																												: ItemStack.EMPTY)
-																														.getItem() == MegasavcsakaknyItem.block)
-																												&& ((world.getBlockState(new BlockPos(
+																														.getItem() == MegasavcsakaknyItem.block
+																												&& (world.getBlockState(new BlockPos(
 																														(int) x, (int) y, (int) z)))
-																																.getBlock() == Blocks.BASALT))) {
+																																.getBlock() == Blocks.BASALT) {
 																											{
 																												BlockPos _bp = new BlockPos((int) x,
 																														(int) y, (int) z);
@@ -640,16 +640,16 @@ public class Amsavcsakanyproc2Procedure {
 																												world.setBlockState(_bp, _bs, 3);
 																											}
 																										} else {
-																											if (((((entity instanceof LivingEntity)
+																											if (((entity instanceof LivingEntity)
 																													? ((LivingEntity) entity)
 																															.getHeldItemMainhand()
 																													: ItemStack.EMPTY)
-																															.getItem() == MegasavcsakaknyItem.block)
-																													&& ((world.getBlockState(
+																															.getItem() == MegasavcsakaknyItem.block
+																													&& (world.getBlockState(
 																															new BlockPos((int) x,
 																																	(int) y,
 																																	(int) z)))
-																																			.getBlock() == Blocks.SMOOTH_STONE_SLAB))) {
+																																			.getBlock() == Blocks.SMOOTH_STONE_SLAB) {
 																												{
 																													BlockPos _bp = new BlockPos(
 																															(int) x, (int) y,
@@ -679,16 +679,16 @@ public class Amsavcsakanyproc2Procedure {
 																													world.setBlockState(_bp, _bs, 3);
 																												}
 																											} else {
-																												if (((((entity instanceof LivingEntity)
+																												if (((entity instanceof LivingEntity)
 																														? ((LivingEntity) entity)
 																																.getHeldItemMainhand()
 																														: ItemStack.EMPTY)
-																																.getItem() == MegasavcsakaknyItem.block)
-																														&& ((world.getBlockState(
+																																.getItem() == MegasavcsakaknyItem.block
+																														&& (world.getBlockState(
 																																new BlockPos((int) x,
 																																		(int) y,
 																																		(int) z)))
-																																				.getBlock() == Blocks.STONE_SLAB))) {
+																																				.getBlock() == Blocks.STONE_SLAB) {
 																													{
 																														BlockPos _bp = new BlockPos(
 																																(int) x, (int) y,
@@ -721,17 +721,17 @@ public class Amsavcsakanyproc2Procedure {
 																																3);
 																													}
 																												} else {
-																													if (((((entity instanceof LivingEntity)
+																													if (((entity instanceof LivingEntity)
 																															? ((LivingEntity) entity)
 																																	.getHeldItemMainhand()
 																															: ItemStack.EMPTY)
-																																	.getItem() == MegasavcsakaknyItem.block)
-																															&& ((world.getBlockState(
+																																	.getItem() == MegasavcsakaknyItem.block
+																															&& (world.getBlockState(
 																																	new BlockPos(
 																																			(int) x,
 																																			(int) y,
 																																			(int) z)))
-																																					.getBlock() == Blocks.COBBLESTONE_SLAB))) {
+																																					.getBlock() == Blocks.COBBLESTONE_SLAB) {
 																														{
 																															BlockPos _bp = new BlockPos(
 																																	(int) x, (int) y,
@@ -765,18 +765,18 @@ public class Amsavcsakanyproc2Procedure {
 																																	_bs, 3);
 																														}
 																													} else {
-																														if (((((entity instanceof LivingEntity)
+																														if (((entity instanceof LivingEntity)
 																																? ((LivingEntity) entity)
 																																		.getHeldItemMainhand()
 																																: ItemStack.EMPTY)
-																																		.getItem() == MegasavcsakaknyItem.block)
-																																&& ((world
+																																		.getItem() == MegasavcsakaknyItem.block
+																																&& (world
 																																		.getBlockState(
 																																				new BlockPos(
 																																						(int) x,
 																																						(int) y,
 																																						(int) z)))
-																																								.getBlock() == Blocks.QUARTZ_SLAB))) {
+																																								.getBlock() == Blocks.QUARTZ_SLAB) {
 																															{
 																																BlockPos _bp = new BlockPos(
 																																		(int) x,
@@ -811,18 +811,18 @@ public class Amsavcsakanyproc2Procedure {
 																																		_bp, _bs, 3);
 																															}
 																														} else {
-																															if (((((entity instanceof LivingEntity)
+																															if (((entity instanceof LivingEntity)
 																																	? ((LivingEntity) entity)
 																																			.getHeldItemMainhand()
 																																	: ItemStack.EMPTY)
-																																			.getItem() == MegasavcsakaknyItem.block)
-																																	&& ((world
+																																			.getItem() == MegasavcsakaknyItem.block
+																																	&& (world
 																																			.getBlockState(
 																																					new BlockPos(
 																																							(int) x,
 																																							(int) y,
 																																							(int) z)))
-																																									.getBlock() == Blocks.PRISMARINE))) {
+																																									.getBlock() == Blocks.PRISMARINE) {
 																																{
 																																	BlockPos _bp = new BlockPos(
 																																			(int) x,
@@ -858,18 +858,18 @@ public class Amsavcsakanyproc2Procedure {
 																																			3);
 																																}
 																															} else {
-																																if (((((entity instanceof LivingEntity)
+																																if (((entity instanceof LivingEntity)
 																																		? ((LivingEntity) entity)
 																																				.getHeldItemMainhand()
 																																		: ItemStack.EMPTY)
-																																				.getItem() == MegasavcsakaknyItem.block)
-																																		&& ((world
+																																				.getItem() == MegasavcsakaknyItem.block
+																																		&& (world
 																																				.getBlockState(
 																																						new BlockPos(
 																																								(int) x,
 																																								(int) y,
 																																								(int) z)))
-																																										.getBlock() == Blocks.PRISMARINE_STAIRS))) {
+																																										.getBlock() == Blocks.PRISMARINE_STAIRS) {
 																																	{
 																																		BlockPos _bp = new BlockPos(
 																																				(int) x,
@@ -906,18 +906,18 @@ public class Amsavcsakanyproc2Procedure {
 																																				3);
 																																	}
 																																} else {
-																																	if (((((entity instanceof LivingEntity)
+																																	if (((entity instanceof LivingEntity)
 																																			? ((LivingEntity) entity)
 																																					.getHeldItemMainhand()
 																																			: ItemStack.EMPTY)
-																																					.getItem() == MegasavcsakaknyItem.block)
-																																			&& ((world
+																																					.getItem() == MegasavcsakaknyItem.block
+																																			&& (world
 																																					.getBlockState(
 																																							new BlockPos(
 																																									(int) x,
 																																									(int) y,
 																																									(int) z)))
-																																											.getBlock() == Blocks.PRISMARINE_SLAB))) {
+																																											.getBlock() == Blocks.PRISMARINE_SLAB) {
 																																		{
 																																			BlockPos _bp = new BlockPos(
 																																					(int) x,
@@ -954,18 +954,18 @@ public class Amsavcsakanyproc2Procedure {
 																																					3);
 																																		}
 																																	} else {
-																																		if (((((entity instanceof LivingEntity)
+																																		if (((entity instanceof LivingEntity)
 																																				? ((LivingEntity) entity)
 																																						.getHeldItemMainhand()
 																																				: ItemStack.EMPTY)
-																																						.getItem() == MegasavcsakaknyItem.block)
-																																				&& ((world
+																																						.getItem() == MegasavcsakaknyItem.block
+																																				&& (world
 																																						.getBlockState(
 																																								new BlockPos(
 																																										(int) x,
 																																										(int) y,
 																																										(int) z)))
-																																												.getBlock() == Blocks.GRANITE_SLAB))) {
+																																												.getBlock() == Blocks.GRANITE_SLAB) {
 																																			{
 																																				BlockPos _bp = new BlockPos(
 																																						(int) x,
@@ -1002,18 +1002,18 @@ public class Amsavcsakanyproc2Procedure {
 																																						3);
 																																			}
 																																		} else {
-																																			if (((((entity instanceof LivingEntity)
+																																			if (((entity instanceof LivingEntity)
 																																					? ((LivingEntity) entity)
 																																							.getHeldItemMainhand()
 																																					: ItemStack.EMPTY)
-																																							.getItem() == MegasavcsakaknyItem.block)
-																																					&& ((world
+																																							.getItem() == MegasavcsakaknyItem.block
+																																					&& (world
 																																							.getBlockState(
 																																									new BlockPos(
 																																											(int) x,
 																																											(int) y,
 																																											(int) z)))
-																																													.getBlock() == Blocks.DIORITE_SLAB))) {
+																																													.getBlock() == Blocks.DIORITE_SLAB) {
 																																				{
 																																					BlockPos _bp = new BlockPos(
 																																							(int) x,
@@ -1050,18 +1050,18 @@ public class Amsavcsakanyproc2Procedure {
 																																							3);
 																																				}
 																																			} else {
-																																				if (((((entity instanceof LivingEntity)
+																																				if (((entity instanceof LivingEntity)
 																																						? ((LivingEntity) entity)
 																																								.getHeldItemMainhand()
 																																						: ItemStack.EMPTY)
-																																								.getItem() == MegasavcsakaknyItem.block)
-																																						&& ((world
+																																								.getItem() == MegasavcsakaknyItem.block
+																																						&& (world
 																																								.getBlockState(
 																																										new BlockPos(
 																																												(int) x,
 																																												(int) y,
 																																												(int) z)))
-																																														.getBlock() == Blocks.ANDESITE_SLAB))) {
+																																														.getBlock() == Blocks.ANDESITE_SLAB) {
 																																					{
 																																						BlockPos _bp = new BlockPos(
 																																								(int) x,
@@ -1098,18 +1098,18 @@ public class Amsavcsakanyproc2Procedure {
 																																								3);
 																																					}
 																																				} else {
-																																					if (((((entity instanceof LivingEntity)
+																																					if (((entity instanceof LivingEntity)
 																																							? ((LivingEntity) entity)
 																																									.getHeldItemMainhand()
 																																							: ItemStack.EMPTY)
-																																									.getItem() == MegasavcsakaknyItem.block)
-																																							&& ((world
+																																									.getItem() == MegasavcsakaknyItem.block
+																																							&& (world
 																																									.getBlockState(
 																																											new BlockPos(
 																																													(int) x,
 																																													(int) y,
 																																													(int) z)))
-																																															.getBlock() == Blocks.GRANITE_STAIRS))) {
+																																															.getBlock() == Blocks.GRANITE_STAIRS) {
 																																						{
 																																							BlockPos _bp = new BlockPos(
 																																									(int) x,
@@ -1146,18 +1146,18 @@ public class Amsavcsakanyproc2Procedure {
 																																									3);
 																																						}
 																																					} else {
-																																						if (((((entity instanceof LivingEntity)
+																																						if (((entity instanceof LivingEntity)
 																																								? ((LivingEntity) entity)
 																																										.getHeldItemMainhand()
 																																								: ItemStack.EMPTY)
-																																										.getItem() == MegasavcsakaknyItem.block)
-																																								&& ((world
+																																										.getItem() == MegasavcsakaknyItem.block
+																																								&& (world
 																																										.getBlockState(
 																																												new BlockPos(
 																																														(int) x,
 																																														(int) y,
 																																														(int) z)))
-																																																.getBlock() == Blocks.ANDESITE_STAIRS))) {
+																																																.getBlock() == Blocks.ANDESITE_STAIRS) {
 																																							{
 																																								BlockPos _bp = new BlockPos(
 																																										(int) x,
@@ -1194,18 +1194,18 @@ public class Amsavcsakanyproc2Procedure {
 																																										3);
 																																							}
 																																						} else {
-																																							if (((((entity instanceof LivingEntity)
+																																							if (((entity instanceof LivingEntity)
 																																									? ((LivingEntity) entity)
 																																											.getHeldItemMainhand()
 																																									: ItemStack.EMPTY)
-																																											.getItem() == MegasavcsakaknyItem.block)
-																																									&& ((world
+																																											.getItem() == MegasavcsakaknyItem.block
+																																									&& (world
 																																											.getBlockState(
 																																													new BlockPos(
 																																															(int) x,
 																																															(int) y,
 																																															(int) z)))
-																																																	.getBlock() == Blocks.DIORITE_STAIRS))) {
+																																																	.getBlock() == Blocks.DIORITE_STAIRS) {
 																																								{
 																																									BlockPos _bp = new BlockPos(
 																																											(int) x,
@@ -1242,18 +1242,18 @@ public class Amsavcsakanyproc2Procedure {
 																																											3);
 																																								}
 																																							} else {
-																																								if (((((entity instanceof LivingEntity)
+																																								if (((entity instanceof LivingEntity)
 																																										? ((LivingEntity) entity)
 																																												.getHeldItemMainhand()
 																																										: ItemStack.EMPTY)
-																																												.getItem() == MegasavcsakaknyItem.block)
-																																										&& ((world
+																																												.getItem() == MegasavcsakaknyItem.block
+																																										&& (world
 																																												.getBlockState(
 																																														new BlockPos(
 																																																(int) x,
 																																																(int) y,
 																																																(int) z)))
-																																																		.getBlock() == Blocks.RED_NETHER_BRICKS))) {
+																																																		.getBlock() == Blocks.RED_NETHER_BRICKS) {
 																																									{
 																																										BlockPos _bp = new BlockPos(
 																																												(int) x,
@@ -1290,18 +1290,18 @@ public class Amsavcsakanyproc2Procedure {
 																																												3);
 																																									}
 																																								} else {
-																																									if (((((entity instanceof LivingEntity)
+																																									if (((entity instanceof LivingEntity)
 																																											? ((LivingEntity) entity)
 																																													.getHeldItemMainhand()
 																																											: ItemStack.EMPTY)
-																																													.getItem() == MegasavcsakaknyItem.block)
-																																											&& ((world
+																																													.getItem() == MegasavcsakaknyItem.block
+																																											&& (world
 																																													.getBlockState(
 																																															new BlockPos(
 																																																	(int) x,
 																																																	(int) y,
 																																																	(int) z)))
-																																																			.getBlock() == Blocks.RED_NETHER_BRICK_STAIRS))) {
+																																																			.getBlock() == Blocks.RED_NETHER_BRICK_STAIRS) {
 																																										{
 																																											BlockPos _bp = new BlockPos(
 																																													(int) x,
@@ -1338,18 +1338,18 @@ public class Amsavcsakanyproc2Procedure {
 																																													3);
 																																										}
 																																									} else {
-																																										if (((((entity instanceof LivingEntity)
+																																										if (((entity instanceof LivingEntity)
 																																												? ((LivingEntity) entity)
 																																														.getHeldItemMainhand()
 																																												: ItemStack.EMPTY)
-																																														.getItem() == MegasavcsakaknyItem.block)
-																																												&& ((world
+																																														.getItem() == MegasavcsakaknyItem.block
+																																												&& (world
 																																														.getBlockState(
 																																																new BlockPos(
 																																																		(int) x,
 																																																		(int) y,
 																																																		(int) z)))
-																																																				.getBlock() == Blocks.RED_NETHER_BRICK_SLAB))) {
+																																																				.getBlock() == Blocks.RED_NETHER_BRICK_SLAB) {
 																																											{
 																																												BlockPos _bp = new BlockPos(
 																																														(int) x,
@@ -1386,18 +1386,18 @@ public class Amsavcsakanyproc2Procedure {
 																																														3);
 																																											}
 																																										} else {
-																																											if (((((entity instanceof LivingEntity)
+																																											if (((entity instanceof LivingEntity)
 																																													? ((LivingEntity) entity)
 																																															.getHeldItemMainhand()
 																																													: ItemStack.EMPTY)
-																																															.getItem() == MegasavcsakaknyItem.block)
-																																													&& ((world
+																																															.getItem() == MegasavcsakaknyItem.block
+																																													&& (world
 																																															.getBlockState(
 																																																	new BlockPos(
 																																																			(int) x,
 																																																			(int) y,
 																																																			(int) z)))
-																																																					.getBlock() == Blocks.RED_NETHER_BRICK_WALL))) {
+																																																					.getBlock() == Blocks.RED_NETHER_BRICK_WALL) {
 																																												{
 																																													BlockPos _bp = new BlockPos(
 																																															(int) x,
@@ -1434,18 +1434,18 @@ public class Amsavcsakanyproc2Procedure {
 																																															3);
 																																												}
 																																											} else {
-																																												if (((((entity instanceof LivingEntity)
+																																												if (((entity instanceof LivingEntity)
 																																														? ((LivingEntity) entity)
 																																																.getHeldItemMainhand()
 																																														: ItemStack.EMPTY)
-																																																.getItem() == MegasavcsakaknyItem.block)
-																																														&& ((world
+																																																.getItem() == MegasavcsakaknyItem.block
+																																														&& (world
 																																																.getBlockState(
 																																																		new BlockPos(
 																																																				(int) x,
 																																																				(int) y,
 																																																				(int) z)))
-																																																						.getBlock() == Blocks.RED_NETHER_BRICK_WALL))) {
+																																																						.getBlock() == Blocks.RED_NETHER_BRICK_WALL) {
 																																													{
 																																														BlockPos _bp = new BlockPos(
 																																																(int) x,

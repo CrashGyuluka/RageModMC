@@ -42,8 +42,9 @@ import java.util.Random;
 public class ApofillitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:apofillitore")
 	public static final Block block = null;
+
 	public ApofillitoreBlock(RagemodModElements instance) {
-		super(instance, 59);
+		super(instance, 58);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -53,6 +54,7 @@ public class ApofillitoreBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
@@ -65,12 +67,15 @@ public class ApofillitoreBlock extends RagemodModElements.ModElement {
 			return 15;
 		}
 	}
+
 	private static Feature<OreFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
 	private static class CustomRuleTest extends RuleTest {
 		static final CustomRuleTest INSTANCE = new CustomRuleTest();
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.END_STONE)
@@ -105,6 +110,7 @@ public class ApofillitoreBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:apofillitore"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);

@@ -21,6 +21,7 @@ import net.minecraft.client.Minecraft;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ObsontiumparticleParticle {
 	public static final BasicParticleType particle = new BasicParticleType(false);
+
 	@SubscribeEvent
 	public static void registerParticleType(RegistryEvent.Register<ParticleType<?>> event) {
 		event.getRegistry().register(particle.setRegistryName("obsontiumparticle"));
@@ -31,11 +32,13 @@ public class ObsontiumparticleParticle {
 	public static void registerParticle(ParticleFactoryRegisterEvent event) {
 		Minecraft.getInstance().particles.registerFactory(particle, CustomParticleFactory::new);
 	}
+
 	@OnlyIn(Dist.CLIENT)
 	private static class CustomParticle extends SpriteTexturedParticle {
 		private final IAnimatedSprite spriteSet;
 		private float angularVelocity;
 		private float angularAcceleration;
+
 		protected CustomParticle(ClientWorld world, double x, double y, double z, double vx, double vy, double vz, IAnimatedSprite spriteSet) {
 			super(world, x, y, z);
 			this.spriteSet = spriteSet;
@@ -69,6 +72,7 @@ public class ObsontiumparticleParticle {
 	@OnlyIn(Dist.CLIENT)
 	private static class CustomParticleFactory implements IParticleFactory<BasicParticleType> {
 		private final IAnimatedSprite spriteSet;
+
 		public CustomParticleFactory(IAnimatedSprite spriteSet) {
 			this.spriteSet = spriteSet;
 		}

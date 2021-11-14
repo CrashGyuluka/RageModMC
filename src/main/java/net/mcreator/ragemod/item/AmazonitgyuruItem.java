@@ -14,21 +14,22 @@ import net.mcreator.ragemod.procedures.AmazonitgyuruItemInInventoryTickProcedure
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AmazonitgyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitgyuru")
 	public static final Item block = null;
+
 	public AmazonitgyuruItem(RagemodModElements instance) {
-		super(instance, 82);
+		super(instance, 81);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(300).rarity(Rarity.COMMON));
@@ -56,11 +57,8 @@ public class AmazonitgyuruItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				AmazonitgyuruItemInInventoryTickProcedure.executeProcedure($_dependencies);
-			}
+
+			AmazonitgyuruItemInInventoryTickProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 }

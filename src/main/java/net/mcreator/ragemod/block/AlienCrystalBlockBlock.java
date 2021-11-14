@@ -25,8 +25,9 @@ import java.util.Collections;
 public class AlienCrystalBlockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_crystal_block")
 	public static final Block block = null;
+
 	public AlienCrystalBlockBlock(RagemodModElements instance) {
-		super(instance, 199);
+		super(instance, 198);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class AlienCrystalBlockBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.BASALT).hardnessAndResistance(1.5f, 10f).setLightLevel(s -> 3)

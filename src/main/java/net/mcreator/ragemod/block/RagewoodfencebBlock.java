@@ -31,8 +31,9 @@ import java.util.Collections;
 public class RagewoodfencebBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:blue_ragewood_fence")
 	public static final Block block = null;
+
 	public RagewoodfencebBlock(RagemodModElements instance) {
-		super(instance, 327);
+		super(instance, 326);
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class RagewoodfencebBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(1)

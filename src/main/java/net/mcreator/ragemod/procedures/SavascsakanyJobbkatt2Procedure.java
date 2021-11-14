@@ -48,6 +48,7 @@ public class SavascsakanyJobbkatt2Procedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -79,13 +80,12 @@ public class SavascsakanyJobbkatt2Procedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == SavascsakanyItem.block)
-				|| ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == MegasavcsakaknyItem.block)
-						|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == AlienitepickaxeItem.block)))) {
-			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SMOOTH_STONE)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavascsakanyItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == MegasavcsakaknyItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == AlienitepickaxeItem.block) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SMOOTH_STONE) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = Blocks.STONE_BRICKS.getDefaultState();
@@ -101,7 +101,7 @@ public class SavascsakanyJobbkatt2Procedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			} else {
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE)) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICKS.getDefaultState();
@@ -117,7 +117,7 @@ public class SavascsakanyJobbkatt2Procedure {
 						world.setBlockState(_bp, _bs, 3);
 					}
 				} else {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.END_STONE)) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.END_STONE) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							BlockState _bs = Blocks.END_STONE_BRICKS.getDefaultState();
@@ -133,7 +133,7 @@ public class SavascsakanyJobbkatt2Procedure {
 							world.setBlockState(_bp, _bs, 3);
 						}
 					} else {
-						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SANDSTONE)) {
+						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.SANDSTONE) {
 							{
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								BlockState _bs = Blocks.SMOOTH_SANDSTONE.getDefaultState();
@@ -149,7 +149,7 @@ public class SavascsakanyJobbkatt2Procedure {
 								world.setBlockState(_bp, _bs, 3);
 							}
 						} else {
-							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.RED_SANDSTONE)) {
+							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.RED_SANDSTONE) {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									BlockState _bs = Blocks.SMOOTH_RED_SANDSTONE.getDefaultState();

@@ -40,12 +40,15 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.google.common.collect.ImmutableMap;
+
 @RagemodModElements.ModElement.Tag
 public class KonvertaloguiGui extends RagemodModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
+
 	public KonvertaloguiGui(RagemodModElements instance) {
-		super(instance, 1244);
+		super(instance, 1243);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -53,16 +56,19 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 		containerType = new ContainerType<>(new GuiContainerModFactory());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
+
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
 			event.getRegistry().register(containerType.setRegistryName("konvertalogui"));
 		}
 	}
+
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, KonvertaloguiGuiWindow::new));
 	}
+
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
 			return new GuiContainerMod(id, inv, extraData);
@@ -76,6 +82,7 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 		private IItemHandler internal;
 		private Map<Integer, Slot> customSlots = new HashMap<>();
 		private boolean bound = false;
+
 		public GuiContainerMod(int id, PlayerInventory inv, PacketBuffer extraData) {
 			super(containerType, id);
 			this.entity = inv.player;
@@ -221,12 +228,9 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 			return itemstack;
 		}
 
-		@Override /**
-					 * Merges provided ItemStack with the first avaliable one in the
-					 * container/player inventor between minIndex (included) and maxIndex
-					 * (excluded). Args : stack, minIndex, maxIndex, negativDirection. /!\ the
-					 * Container implementation do not check if the item is valid for the slot
-					 */
+		@Override /** 
+					* Merges provided ItemStack with the first avaliable one in the container/player inventor between minIndex (included) and maxIndex (excluded). Args : stack, minIndex, maxIndex, negativDirection. /!\ the Container implementation do not check if the item is valid for the slot
+					*/
 		protected boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean reverseDirection) {
 			boolean flag = false;
 			int i = startIndex;
@@ -329,6 +333,7 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 
 	public static class ButtonPressedMessage {
 		int buttonID, x, y, z;
+
 		public ButtonPressedMessage(PacketBuffer buffer) {
 			this.buttonID = buffer.readInt();
 			this.x = buffer.readInt();
@@ -366,6 +371,7 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 
 	public static class GUISlotChangedMessage {
 		int slotID, x, y, z, changeType, meta;
+
 		public GUISlotChangedMessage(int slotID, int x, int y, int z, int changeType, int meta) {
 			this.slotID = slotID;
 			this.x = x;
@@ -408,17 +414,15 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
+
 	static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ConvertercheckguifullProcedure.executeProcedure($_dependencies);
-			}
+
+			ConvertercheckguifullProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 
@@ -428,11 +432,8 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
 		if (slotID == 6 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ConverterSlotChangesProcedure.executeProcedure($_dependencies);
-			}
+
+			ConverterSlotChangesProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 }

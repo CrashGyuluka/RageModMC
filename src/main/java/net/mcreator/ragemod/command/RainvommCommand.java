@@ -13,13 +13,14 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.ragemod.procedures.RainvommCommandExecutedProcedure;
 
-import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
+
+import com.google.common.collect.ImmutableMap;
 
 @Mod.EventBusSubscriber
 public class RainvommCommand {
@@ -46,14 +47,9 @@ public class RainvommCommand {
 				cmdparams.put(Integer.toString(index[0]), param);
 			index[0]++;
 		});
-		{
-			Map<String, Object> $_dependencies = new HashMap<>();
-			$_dependencies.put("x", x);
-			$_dependencies.put("y", y);
-			$_dependencies.put("z", z);
-			$_dependencies.put("world", world);
-			RainvommCommandExecutedProcedure.executeProcedure($_dependencies);
-		}
+
+		RainvommCommandExecutedProcedure
+				.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 		return 0;
 	}
 }

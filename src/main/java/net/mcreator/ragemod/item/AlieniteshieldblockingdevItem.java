@@ -18,18 +18,17 @@ import net.minecraft.block.BlockState;
 import net.mcreator.ragemod.procedures.AlieniteshieldblockingdevToolInInventoryTickProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
-
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlieniteshieldblockingdevItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alieniteshieldblockingdev")
 	public static final Item block = null;
+
 	public AlieniteshieldblockingdevItem(RagemodModElements instance) {
-		super(instance, 1408);
+		super(instance, 1407);
 	}
 
 	@Override
@@ -41,15 +40,13 @@ public class AlieniteshieldblockingdevItem extends RagemodModElements.ModElement
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("itemstack", itemstack);
-					AlieniteshieldblockingdevToolInInventoryTickProcedure.executeProcedure($_dependencies);
-				}
+
+				AlieniteshieldblockingdevToolInInventoryTickProcedure
+						.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("itemstack", itemstack).build());
 			}
 		}.setRegistryName("alieniteshieldblockingdev"));
 	}
+
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
 			super(new Item.Properties().group(null).maxDamage(6942).isImmuneToFire());

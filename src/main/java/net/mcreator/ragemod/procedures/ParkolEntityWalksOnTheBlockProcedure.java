@@ -14,6 +14,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class ParkolEntityWalksOnTheBlockProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -21,7 +22,7 @@ public class ParkolEntityWalksOnTheBlockProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((new Object() {
+		if (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
@@ -32,7 +33,7 @@ public class ParkolEntityWalksOnTheBlockProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)) || (new Object() {
+		}.checkGamemode(entity) || new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
@@ -43,7 +44,7 @@ public class ParkolEntityWalksOnTheBlockProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)))) {
+		}.checkGamemode(entity)) {
 			entity.attackEntityFrom(DamageSource.GENERIC, (float) 69420);
 		}
 	}

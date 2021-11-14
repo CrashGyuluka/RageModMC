@@ -10,6 +10,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class TrofeaFoodEatenProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -17,8 +18,7 @@ public class TrofeaFoodEatenProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((EntityTypeTags.getCollection().getTagByID(new ResourceLocation(("forge:rage_mod_rageium_mobs").toLowerCase(java.util.Locale.ENGLISH)))
-				.contains(entity.getType()))) {
+		if (EntityTypeTags.getCollection().getTagByID(new ResourceLocation("forge:rage_mod_rageium_mobs")).contains(entity.getType())) {
 			entity.attackEntityFrom(DamageSource.GENERIC, (float) 40);
 		}
 	}

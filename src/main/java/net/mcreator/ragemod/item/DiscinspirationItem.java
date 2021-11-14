@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DiscinspirationItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:disc_inspiration")
 	public static final Item block = null;
+
 	public DiscinspirationItem(RagemodModElements instance) {
-		super(instance, 1435);
+		super(instance, 1434);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new MusicDiscItemCustom());
 	}
+
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
 			super(0, (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),

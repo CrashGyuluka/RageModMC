@@ -20,8 +20,9 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DeepslateadularoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateadularore")
 	public static final Block block = null;
+
 	public DeepslateadularoreBlock(RagemodModElements instance) {
-		super(instance, 52);
+		super(instance, 51);
 	}
 
 	@Override
@@ -29,6 +30,7 @@ public class DeepslateadularoreBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(7f, 1f).setLightLevel(s -> 0).harvestLevel(2)

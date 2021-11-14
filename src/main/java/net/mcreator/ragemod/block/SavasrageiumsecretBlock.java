@@ -29,17 +29,18 @@ import net.mcreator.ragemod.particle.Particle2Particle;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class SavasrageiumsecretBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savasrageiumsecret")
 	public static final Block block = null;
+
 	public SavasrageiumsecretBlock(RagemodModElements instance) {
-		super(instance, 643);
+		super(instance, 642);
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class SavasrageiumsecretBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.TNT).sound(SoundType.LODESTONE).hardnessAndResistance(10f, 100f).setLightLevel(s -> 0)
@@ -99,11 +101,8 @@ public class SavasrageiumsecretBlock extends RagemodModElements.ModElement {
 			double hitY = hit.getHitVec().y;
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SavasrageiumsecretOnBlockRightClickedProcedure.executeProcedure($_dependencies);
-			}
+
+			SavasrageiumsecretOnBlockRightClickedProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 			return ActionResultType.SUCCESS;
 		}
 	}

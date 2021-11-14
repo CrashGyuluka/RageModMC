@@ -27,8 +27,9 @@ import java.util.Collections;
 public class BukkWoodBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:bukk_wood")
 	public static final Block block = null;
+
 	public BukkWoodBlock(RagemodModElements instance) {
-		super(instance, 260);
+		super(instance, 259);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class BukkWoodBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)

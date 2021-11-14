@@ -24,18 +24,17 @@ import net.mcreator.ragemod.procedures.AlieniteshieldRightClickedInAirProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
-
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlieniteshieldItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alieniteshield")
 	public static final Item block = null;
+
 	public AlieniteshieldItem(RagemodModElements instance) {
-		super(instance, 110);
+		super(instance, 109);
 	}
 
 	@Override
@@ -48,12 +47,9 @@ public class AlieniteshieldItem extends RagemodModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("itemstack", itemstack);
-					AlieniteshieldRightClickedInAirProcedure.executeProcedure($_dependencies);
-				}
+
+				AlieniteshieldRightClickedInAirProcedure
+						.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("itemstack", itemstack).build());
 				return retval;
 			}
 
@@ -69,16 +65,14 @@ public class AlieniteshieldItem extends RagemodModElements.ModElement {
 				int y = pos.getY();
 				int z = pos.getZ();
 				ItemStack itemstack = context.getItem();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("itemstack", itemstack);
-					AlieniteshieldRightClickedInAirProcedure.executeProcedure($_dependencies);
-				}
+
+				AlieniteshieldRightClickedInAirProcedure
+						.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("itemstack", itemstack).build());
 				return retval;
 			}
 		}.setRegistryName("alieniteshield"));
 	}
+
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(6942).isImmuneToFire());

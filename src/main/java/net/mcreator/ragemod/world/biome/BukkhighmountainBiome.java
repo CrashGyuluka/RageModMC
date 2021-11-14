@@ -49,10 +49,12 @@ import com.google.common.collect.ImmutableList;
 @RagemodModElements.ModElement.Tag
 public class BukkhighmountainBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public BukkhighmountainBiome(RagemodModElements instance) {
-		super(instance, 1226);
+		super(instance, 1225);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -72,7 +74,7 @@ public class BukkhighmountainBiome extends RagemodModElements.ModElement {
 								new MegaJungleTrunkPlacer(5, 2, 19), new TwoLayerFeature(1, 1, 2)))
 										.setDecorators(
 												ImmutableList.of(TrunkVineTreeDecorator.field_236879_b_, LeaveVineTreeDecorator.field_236871_b_))
-										.setMaxWaterDepth(2).build())
+										.build())
 						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
 						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
@@ -126,6 +128,7 @@ public class BukkhighmountainBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,

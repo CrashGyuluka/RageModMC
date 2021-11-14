@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class SequoiastickItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoiastick")
 	public static final Item block = null;
+
 	public SequoiastickItem(RagemodModElements instance) {
-		super(instance, 396);
+		super(instance, 395);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

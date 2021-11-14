@@ -28,8 +28,9 @@ import java.util.Collections;
 public class Kizukra_BlockFenceBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_block_fence")
 	public static final Block block = null;
+
 	public Kizukra_BlockFenceBlock(RagemodModElements instance) {
-		super(instance, 332);
+		super(instance, 331);
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class Kizukra_BlockFenceBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(2)

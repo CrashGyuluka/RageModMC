@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.Collection;
 
 public class SavaskoEntityWalksOnTheBlockProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -33,7 +34,7 @@ public class SavaskoEntityWalksOnTheBlockProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((true) == (world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule))) && ((!(new Object() {
+		if (true == world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule) && !(new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -44,7 +45,7 @@ public class SavaskoEntityWalksOnTheBlockProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) && ((new Object() {
+		}.check(entity)) && (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
@@ -55,7 +56,7 @@ public class SavaskoEntityWalksOnTheBlockProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)) || (new Object() {
+		}.checkGamemode(entity) || new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
@@ -66,7 +67,7 @@ public class SavaskoEntityWalksOnTheBlockProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)))))) {
+		}.checkGamemode(entity))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) 100, (int) 3, (false), (false)));
 			if (entity instanceof LivingEntity)

@@ -27,6 +27,7 @@ public class Book1GuiWindow extends ContainerScreen<Book1Gui.GuiContainerMod> {
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = Book1Gui.guistate;
+
 	public Book1GuiWindow(Book1Gui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class Book1GuiWindow extends ContainerScreen<Book1Gui.GuiContainerMod> {
 		this.xSize = 216;
 		this.ySize = 63;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("ragemod:textures/book_1.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,28 +57,40 @@ public class Book1GuiWindow extends ContainerScreen<Book1Gui.GuiContainerMod> {
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.guiLeft + 4, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.guiLeft + 21, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.guiLeft + 38, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.guiLeft + 4, this.guiTop + 5, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.guiLeft + 21, this.guiTop + 5, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.guiLeft + 38, this.guiTop + 5, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/dia_nugget.png"));
 		this.blit(ms, this.guiLeft + 4, this.guiTop + 24, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/dia_nugget.png"));
 		this.blit(ms, this.guiLeft + 38, this.guiTop + 24, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/netherite_scrap.png"));
 		this.blit(ms, this.guiLeft + 21, this.guiTop + 24, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/zdfhsx.png"));
 		this.blit(ms, this.guiLeft + 46, this.guiTop + 24, 0, 0, 64, 32, 64, 32);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rageium_alloy.png"));
 		this.blit(ms, this.guiLeft + 102, this.guiTop + 23, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

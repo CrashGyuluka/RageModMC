@@ -20,15 +20,15 @@ import net.mcreator.ragemod.procedures.SavkapaprocProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienitehoeItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienitehoe")
 	public static final Item block = null;
+
 	public AlienitehoeItem(RagemodModElements instance) {
-		super(instance, 107);
+		super(instance, 106);
 	}
 
 	@Override
@@ -70,15 +70,9 @@ public class AlienitehoeItem extends RagemodModElements.ModElement {
 				int y = pos.getY();
 				int z = pos.getZ();
 				ItemStack itemstack = context.getItem();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					SavkapaprocProcedure.executeProcedure($_dependencies);
-				}
+
+				SavkapaprocProcedure.executeProcedure(
+						ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 				return retval;
 			}
 		}.setRegistryName("alienitehoe"));

@@ -17,6 +17,7 @@ import java.util.Map;
 import java.util.Collection;
 
 public class AlieniteaxeBlockDestroyedWithToolProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -48,8 +49,8 @@ public class AlieniteaxeBlockDestroyedWithToolProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((entity.isSneaking()) == (false))) {
-			if ((new Object() {
+		if (entity.isSneaking() == false) {
+			if (new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -60,18 +61,17 @@ public class AlieniteaxeBlockDestroyedWithToolProcedure {
 					}
 					return false;
 				}
-			}.check(entity))) {
-				if ((BlockTags.getCollection().getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
-					if ((BlockTags.getCollection().getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-							.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()))) {
-						if ((BlockTags.getCollection().getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-								.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 2), (int) z))).getBlock()))) {
-							if ((BlockTags.getCollection().getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-									.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 3), (int) z))).getBlock()))) {
-								if ((BlockTags.getCollection()
-										.getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-										.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 4), (int) z))).getBlock()))) {
+			}.check(entity)) {
+				if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
+					if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+							.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())) {
+						if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+								.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 2), (int) z))).getBlock())) {
+							if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+									.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 3), (int) z))).getBlock())) {
+								if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+										.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 4), (int) z))).getBlock())) {
 									if (world instanceof World) {
 										Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)), (World) world,
 												new BlockPos((int) x, (int) y, (int) z));
@@ -92,33 +92,29 @@ public class AlieniteaxeBlockDestroyedWithToolProcedure {
 												new BlockPos((int) x, (int) y, (int) z));
 										world.destroyBlock(new BlockPos((int) x, (int) (y + 4), (int) z), false);
 									}
-									if ((BlockTags.getCollection()
-											.getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-											.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 5), (int) z))).getBlock()))) {
+									if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+											.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 5), (int) z))).getBlock())) {
 										if (world instanceof World) {
 											Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) (y + 5), (int) z)), (World) world,
 													new BlockPos((int) x, (int) y, (int) z));
 											world.destroyBlock(new BlockPos((int) x, (int) (y + 5), (int) z), false);
 										}
-										if ((BlockTags.getCollection()
-												.getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-												.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 6), (int) z))).getBlock()))) {
+										if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+												.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 6), (int) z))).getBlock())) {
 											if (world instanceof World) {
 												Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) (y + 6), (int) z)), (World) world,
 														new BlockPos((int) x, (int) y, (int) z));
 												world.destroyBlock(new BlockPos((int) x, (int) (y + 6), (int) z), false);
 											}
-											if ((BlockTags.getCollection()
-													.getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-													.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 7), (int) z))).getBlock()))) {
+											if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+													.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 7), (int) z))).getBlock())) {
 												if (world instanceof World) {
 													Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) (y + 7), (int) z)),
 															(World) world, new BlockPos((int) x, (int) y, (int) z));
 													world.destroyBlock(new BlockPos((int) x, (int) (y + 7), (int) z), false);
 												}
-												if ((BlockTags.getCollection()
-														.getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))
-														.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 8), (int) z))).getBlock()))) {
+												if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:logs"))
+														.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 8), (int) z))).getBlock())) {
 													if (world instanceof World) {
 														Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) (y + 8), (int) z)),
 																(World) world, new BlockPos((int) x, (int) y, (int) z));

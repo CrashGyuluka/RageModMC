@@ -42,6 +42,7 @@ public class AnapaitgyurupProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -49,8 +50,8 @@ public class AnapaitgyurupProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((AnapaitgyuruItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem()) && (entity.isSneaking()))) {
+		if (AnapaitgyuruItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()
+				&& entity.isSneaking()) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).getCooldownTracker().setCooldown(
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 195);

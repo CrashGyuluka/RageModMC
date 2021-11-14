@@ -38,10 +38,12 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class GlowingOakForestBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public GlowingOakForestBiome(RagemodModElements instance) {
-		super(instance, 1456);
+		super(instance, 1455);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -95,6 +97,7 @@ public class GlowingOakForestBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.FOREST);

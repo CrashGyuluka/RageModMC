@@ -27,8 +27,9 @@ import java.util.Collections;
 public class RobtaipressureplateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_pressure_plate")
 	public static final Block block = null;
+
 	public RobtaipressureplateBlock(RagemodModElements instance) {
-		super(instance, 386);
+		super(instance, 385);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class RobtaipressureplateBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f)

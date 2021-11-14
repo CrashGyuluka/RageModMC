@@ -29,8 +29,9 @@ import java.util.Collections;
 public class BukktdBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_trapdoor")
 	public static final Block block = null;
+
 	public BukktdBlock(RagemodModElements instance) {
-		super(instance, 368);
+		super(instance, 367);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class BukktdBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends TrapDoorBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)

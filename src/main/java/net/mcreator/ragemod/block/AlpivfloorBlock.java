@@ -25,8 +25,9 @@ import java.util.Collections;
 public class AlpivfloorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alpiv_floor")
 	public static final Block block = null;
+
 	public AlpivfloorBlock(RagemodModElements instance) {
-		super(instance, 219);
+		super(instance, 218);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class AlpivfloorBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 100f).setLightLevel(s -> 0).harvestLevel(1)

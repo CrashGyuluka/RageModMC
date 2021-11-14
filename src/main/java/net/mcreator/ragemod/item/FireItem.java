@@ -15,6 +15,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class FireItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:fire")
 	public static final Item block = null;
+
 	public FireItem(RagemodModElements instance) {
 		super(instance, 10);
 	}
@@ -23,6 +24,7 @@ public class FireItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(4).rarity(Rarity.RARE));

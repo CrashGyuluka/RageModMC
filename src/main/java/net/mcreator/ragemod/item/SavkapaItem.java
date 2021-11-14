@@ -20,13 +20,13 @@ import net.mcreator.ragemod.procedures.SavkapaRightClickedOnBlockProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class SavkapaItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savkapa")
 	public static final Item block = null;
+
 	public SavkapaItem(RagemodModElements instance) {
 		super(instance, 32);
 	}
@@ -70,11 +70,8 @@ public class SavkapaItem extends RagemodModElements.ModElement {
 				int y = pos.getY();
 				int z = pos.getZ();
 				ItemStack itemstack = context.getItem();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					SavkapaRightClickedOnBlockProcedure.executeProcedure($_dependencies);
-				}
+
+				SavkapaRightClickedOnBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 				return retval;
 			}
 		}.setRegistryName("savkapa"));

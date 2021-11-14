@@ -32,6 +32,7 @@ import java.util.Collections;
 public class RageiumalloyblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:rageiumalloyblock")
 	public static final Block block = null;
+
 	public RageiumalloyblockBlock(RagemodModElements instance) {
 		super(instance, 5);
 	}
@@ -41,6 +42,7 @@ public class RageiumalloyblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.NETHERITE).hardnessAndResistance(4f, 100f).setLightLevel(s -> 0)

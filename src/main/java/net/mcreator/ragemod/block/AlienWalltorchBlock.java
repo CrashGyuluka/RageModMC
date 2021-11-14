@@ -35,17 +35,18 @@ import net.mcreator.ragemod.procedures.AlienTorchFloorNeighbourBlockChangesProce
 import net.mcreator.ragemod.item.AlienTorchItem;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienWalltorchBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_walltorch")
 	public static final Block block = null;
+
 	public AlienWalltorchBlock(RagemodModElements instance) {
-		super(instance, 1339);
+		super(instance, 1338);
 	}
 
 	@Override
@@ -59,8 +60,10 @@ public class AlienWalltorchBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 0f).setLightLevel(s -> 10)
 					.doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false));
@@ -129,14 +132,9 @@ public class AlienWalltorchBlock extends RagemodModElements.ModElement {
 			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
 			} else {
 			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AlienTorchFloorNeighbourBlockChangesProcedure.executeProcedure($_dependencies);
-			}
+
+			AlienTorchFloorNeighbourBlockChangesProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 		}
 	}
 }

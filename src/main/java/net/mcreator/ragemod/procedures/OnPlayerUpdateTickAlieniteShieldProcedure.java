@@ -39,6 +39,7 @@ public class OnPlayerUpdateTickAlieniteShieldProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -46,8 +47,8 @@ public class OnPlayerUpdateTickAlieniteShieldProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == AlieniteshieldblockingdevItem.block)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == AlieniteshieldblockingdevItem.block) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 1, (int) 2, (false), (false)));
 		}

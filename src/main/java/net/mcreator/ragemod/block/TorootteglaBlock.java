@@ -24,8 +24,9 @@ import java.util.Collections;
 public class TorootteglaBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:toroottegla")
 	public static final Block block = null;
+
 	public TorootteglaBlock(RagemodModElements instance) {
-		super(instance, 113);
+		super(instance, 112);
 	}
 
 	@Override
@@ -33,6 +34,7 @@ public class TorootteglaBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 20f).setLightLevel(s -> 0));

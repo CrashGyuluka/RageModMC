@@ -11,6 +11,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlienshroomblockAdditionalGenerationConditionProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -36,11 +37,11 @@ public class AlienshroomblockAdditionalGenerationConditionProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Hegyiko1Block.block)
-				|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == MarokriksaLeavesBlock.block)
-						|| ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AliensoilBlock.block)))) {
-			return (true);
+		if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Hegyiko1Block.block
+				|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == MarokriksaLeavesBlock.block
+				|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AliensoilBlock.block) {
+			return true;
 		}
-		return (false);
+		return false;
 	}
 }

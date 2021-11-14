@@ -26,17 +26,18 @@ import net.mcreator.ragemod.procedures.ParkolEntityWalksOnTheBlockProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class ParkolBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:parkol")
 	public static final Block block = null;
+
 	public ParkolBlock(RagemodModElements instance) {
-		super(instance, 125);
+		super(instance, 124);
 	}
 
 	@Override
@@ -44,6 +45,7 @@ public class ParkolBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(2)
@@ -79,11 +81,8 @@ public class ParkolBlock extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			BlockState blockstate = world.getBlockState(pos);
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ParkolEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
-			}
+
+			ParkolEntityWalksOnTheBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 }

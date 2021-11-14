@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Comparator;
 
 public class RageoverlayDisplayOverlayIngameProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -27,7 +28,7 @@ public class RageoverlayDisplayOverlayIngameProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((((Entity) world
+		if (((Entity) world
 				.getEntitiesWithinAABB(AtomRageREntity.CustomEntity.class,
 						new AxisAlignedBB((entity.getPosX()) - (7 / 2d), (entity.getPosY()) - (7 / 2d), (entity.getPosZ()) - (7 / 2d),
 								(entity.getPosX()) + (7 / 2d), (entity.getPosY()) + (7 / 2d), (entity.getPosZ()) + (7 / 2d)),
@@ -36,7 +37,7 @@ public class RageoverlayDisplayOverlayIngameProcedure {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 					}
-				}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null) || (((Entity) world
+				}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null || ((Entity) world
 						.getEntitiesWithinAABB(RagemiteEntity.CustomEntity.class,
 								new AxisAlignedBB((entity.getPosX()) - (7 / 2d), (entity.getPosY()) - (7 / 2d), (entity.getPosZ()) - (7 / 2d),
 										(entity.getPosX()) + (7 / 2d), (entity.getPosY()) + (7 / 2d), (entity.getPosZ()) + (7 / 2d)),
@@ -45,8 +46,8 @@ public class RageoverlayDisplayOverlayIngameProcedure {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null))
-				|| (((Entity) world
+						}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null
+				|| ((Entity) world
 						.getEntitiesWithinAABB(Rageboos1Entity.CustomEntity.class,
 								new AxisAlignedBB((entity.getPosX()) - (7 / 2d), (entity.getPosY()) - (7 / 2d), (entity.getPosZ()) - (7 / 2d),
 										(entity.getPosX()) + (7 / 2d), (entity.getPosY()) + (7 / 2d), (entity.getPosZ()) + (7 / 2d)),
@@ -55,9 +56,9 @@ public class RageoverlayDisplayOverlayIngameProcedure {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null))) {
-			return (true);
+						}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null) {
+			return true;
 		}
-		return (false);
+		return false;
 	}
 }

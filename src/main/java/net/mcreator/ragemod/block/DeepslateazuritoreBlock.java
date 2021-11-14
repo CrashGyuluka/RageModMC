@@ -25,8 +25,9 @@ import java.util.Collections;
 public class DeepslateazuritoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateazuritore")
 	public static final Block block = null;
+
 	public DeepslateazuritoreBlock(RagemodModElements instance) {
-		super(instance, 48);
+		super(instance, 47);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class DeepslateazuritoreBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 3f).setLightLevel(s -> 0).harvestLevel(2)

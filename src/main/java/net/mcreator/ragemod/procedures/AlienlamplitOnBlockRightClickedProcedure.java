@@ -11,6 +11,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlienlamplitOnBlockRightClickedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

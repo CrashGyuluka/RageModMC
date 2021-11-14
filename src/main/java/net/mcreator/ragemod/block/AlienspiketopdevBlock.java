@@ -41,9 +41,7 @@ import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 import com.google.common.collect.ImmutableMap;
@@ -52,8 +50,9 @@ import com.google.common.collect.ImmutableMap;
 public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_spike")
 	public static final Block block = null;
+
 	public AlienspiketopdevBlock(RagemodModElements instance) {
-		super(instance, 198);
+		super(instance, 197);
 	}
 
 	@Override
@@ -68,8 +67,10 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends Block implements IWaterLoggable {
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.BASALT).hardnessAndResistance(3f, 30f).setLightLevel(s -> 3)
 					.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().speedFactor(1.1f).jumpFactor(1.1f).notSolid()
@@ -95,7 +96,8 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
-				return AlienspikeBlockValidPlacementConditionProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+				return AlienspikeBlockValidPlacementConditionProcedure
+						.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			}
 			return super.isValidPosition(blockstate, worldIn, pos);
 		}
@@ -150,14 +152,9 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AlienspikeUpdateTickProcedure.executeProcedure($_dependencies);
-			}
+
+			AlienspikeUpdateTickProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
 
@@ -168,11 +165,8 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			BlockState blockstate = world.getBlockState(pos);
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				AlienspiketopdevEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
-			}
+
+			AlienspiketopdevEntityWalksOnTheBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 }

@@ -47,17 +47,18 @@ import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class SavaspruceplanksBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaspruceplanks")
 	public static final Block block = null;
+
 	public SavaspruceplanksBlock(RagemodModElements instance) {
-		super(instance, 139);
+		super(instance, 138);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -67,6 +68,7 @@ public class SavaspruceplanksBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 5f).setLightLevel(s -> 0).harvestLevel(3)
@@ -120,20 +122,20 @@ public class SavaspruceplanksBlock extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			BlockState blockstate = world.getBlockState(pos);
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				SavaskoEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
-			}
+
+			SavaskoEntityWalksOnTheBlockProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build());
 		}
 	}
+
 	private static Feature<OreFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
 	private static class CustomRuleTest extends RuleTest {
 		static final CustomRuleTest INSTANCE = new CustomRuleTest();
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.SPRUCE_PLANKS)
@@ -168,6 +170,7 @@ public class SavaspruceplanksBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:savaspruceplanks"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);

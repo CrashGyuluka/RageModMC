@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class OpalItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:opal")
 	public static final Item block = null;
+
 	public OpalItem(RagemodModElements instance) {
-		super(instance, 46);
+		super(instance, 45);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

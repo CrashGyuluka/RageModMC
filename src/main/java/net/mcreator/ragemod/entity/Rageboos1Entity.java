@@ -49,6 +49,7 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(1.4f, 0.9f)).build("rageboos_1").setRegistryName("rageboos_1");
+
 	public Rageboos1Entity(RagemodModElements instance) {
 		super(instance, 8);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Rageboos1Renderer.ModelRegisterHandler());
@@ -65,6 +66,7 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -156,7 +158,9 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 		public boolean isNonBoss() {
 			return false;
 		}
+
 		private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.RED, BossInfo.Overlay.PROGRESS);
+
 		@Override
 		public void addTrackingPlayer(ServerPlayerEntity player) {
 			super.addTrackingPlayer(player);

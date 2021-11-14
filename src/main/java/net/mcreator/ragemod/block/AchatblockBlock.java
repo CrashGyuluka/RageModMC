@@ -32,8 +32,9 @@ import java.util.Collections;
 public class AchatblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:achatblock")
 	public static final Block block = null;
+
 	public AchatblockBlock(RagemodModElements instance) {
-		super(instance, 63);
+		super(instance, 62);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class AchatblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f, 20f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

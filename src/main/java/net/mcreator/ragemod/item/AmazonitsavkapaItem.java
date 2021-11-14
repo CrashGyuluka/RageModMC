@@ -16,8 +16,9 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AmazonitsavkapaItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitsavkapa")
 	public static final Item block = null;
+
 	public AmazonitsavkapaItem(RagemodModElements instance) {
-		super(instance, 78);
+		super(instance, 77);
 	}
 
 	@Override

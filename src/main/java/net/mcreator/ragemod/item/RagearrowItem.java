@@ -50,6 +50,7 @@ public class RagearrowItem extends RagemodModElements.ModElement {
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletragearrow").setRegistryName("entitybulletragearrow");
+
 	public RagearrowItem(RagemodModElements instance) {
 		super(instance, 17);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RagearrowRenderer.ModelRegisterHandler());
@@ -60,6 +61,7 @@ public class RagearrowItem extends RagemodModElements.ModElement {
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> arrow);
 	}
+
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(6969));
@@ -193,6 +195,7 @@ public class RagearrowItem extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);

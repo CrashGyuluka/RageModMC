@@ -50,6 +50,7 @@ public class Elderberrxstage3OnBlockRightClickedProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -76,10 +77,10 @@ public class Elderberrxstage3OnBlockRightClickedProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double randomNumber = 0;
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == FloweryElderberryLeavesBlock.block)) {
-			if ((!(world.isRemote()))) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == FloweryElderberryLeavesBlock.block) {
+			if (!world.isRemote()) {
 				randomNumber = (double) Math.random();
-				if ((randomNumber >= 0.5)) {
+				if (randomNumber >= 0.5) {
 					for (int index0 = 0; index0 < (int) (3); index0++) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.05), (y + 0.05), (z + 0.05),
@@ -88,7 +89,7 @@ public class Elderberrxstage3OnBlockRightClickedProcedure {
 							world.addEntity(entityToSpawn);
 						}
 					}
-				} else if ((randomNumber >= 0.3)) {
+				} else if (randomNumber >= 0.3) {
 					for (int index1 = 0; index1 < (int) (2); index1++) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.05), (y + 0.05), (z + 0.05),

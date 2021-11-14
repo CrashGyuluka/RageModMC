@@ -47,6 +47,7 @@ public class Enchant2procProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -54,10 +55,8 @@ public class Enchant2procProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((EnchantmentHelper.getEnchantmentLevel(VedelemplusEnchantment.enchantment,
-				((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-						: ItemStack.EMPTY)) != 0))) {
+		if ((EnchantmentHelper.getEnchantmentLevel(VedelemplusEnchantment.enchantment,
+				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)) != 0)) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 20, (int) 1, (false), (false)));
 		}

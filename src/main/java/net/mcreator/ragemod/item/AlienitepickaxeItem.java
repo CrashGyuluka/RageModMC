@@ -20,16 +20,17 @@ import net.mcreator.ragemod.procedures.AlienitepickaxeBlockDestroyedWithToolProc
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienitepickaxeItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alienitepickaxe")
 	public static final Item block = null;
+
 	public AlienitepickaxeItem(RagemodModElements instance) {
-		super(instance, 104);
+		super(instance, 103);
 	}
 
 	@Override
@@ -71,15 +72,9 @@ public class AlienitepickaxeItem extends RagemodModElements.ModElement {
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					AlienitepickaxeBlockDestroyedWithToolProcedure.executeProcedure($_dependencies);
-				}
+
+				AlienitepickaxeBlockDestroyedWithToolProcedure.executeProcedure(
+						ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 				return retval;
 			}
 		}.setRegistryName("alienitepickaxe"));

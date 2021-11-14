@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class BukkbotItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_stick")
 	public static final Item block = null;
+
 	public BukkbotItem(RagemodModElements instance) {
-		super(instance, 392);
+		super(instance, 391);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
