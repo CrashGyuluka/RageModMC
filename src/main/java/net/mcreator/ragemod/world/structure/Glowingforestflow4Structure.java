@@ -66,7 +66,7 @@ public class Glowingforestflow4Structure {
 								continue;
 							Rotation rotation = Rotation.NONE;
 							Mirror mirror = Mirror.NONE;
-							BlockPos spawnTo = new BlockPos(i + 0, j + -3, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 1, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
@@ -93,6 +93,8 @@ public class Glowingforestflow4Structure {
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:glowing_oak_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("ragemod:glowing_oak_forest_mountain").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

@@ -51,8 +51,8 @@ public class Glowingforestfol1Structure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 700000) {
-						int count = random.nextInt(5) + 1;
+					if ((random.nextInt(1000000) + 1) <= 1000000) {
+						int count = random.nextInt(10) + 3;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
@@ -66,7 +66,7 @@ public class Glowingforestfol1Structure {
 								continue;
 							Rotation rotation = Rotation.NONE;
 							Mirror mirror = Mirror.NONE;
-							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 1, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
@@ -93,6 +93,8 @@ public class Glowingforestfol1Structure {
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:glowing_oak_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("ragemod:glowing_oak_forest_mountain").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;

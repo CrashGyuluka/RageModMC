@@ -9,7 +9,7 @@
     "minCountPerChunk": 1,
     "maxCountPerChunk": 10,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 2,
+    "spawnHeightOffset": 1,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
@@ -23,6 +23,9 @@
     "restrictionBiomes": [
       {
         "value": "CUSTOM:GlowingOakForest"
+      },
+      {
+        "value": "CUSTOM:GlowingOakForestMountain"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"

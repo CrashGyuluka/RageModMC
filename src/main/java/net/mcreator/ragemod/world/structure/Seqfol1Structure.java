@@ -52,7 +52,7 @@ public class Seqfol1Structure {
 					if (!dimensionCriteria)
 						return false;
 					if ((random.nextInt(1000000) + 1) <= 1000000) {
-						int count = random.nextInt(10) + 7;
+						int count = random.nextInt(6) + 11;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);

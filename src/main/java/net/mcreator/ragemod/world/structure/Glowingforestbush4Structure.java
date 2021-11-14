@@ -94,6 +94,8 @@ public class Glowingforestbush4Structure {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("ragemod:glowing_oak_forest").equals(event.getName()))
 			biomeCriteria = true;
+		if (new ResourceLocation("ragemod:glowing_oak_forest_mountain").equals(event.getName()))
+			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);

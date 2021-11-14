@@ -10,7 +10,7 @@
       "value": "Blocks.STONE#0"
     },
     "grassColor": {
-      "value": -7580647,
+      "value": -6332386,
       "falpha": 0.0
     },
     "foliageColor": {
@@ -41,8 +41,8 @@
     },
     "rainingPossibility": 0.4,
     "temperature": 0.4,
-    "baseHeight": 0.7999999999999999,
-    "heightVariation": 0.6,
+    "baseHeight": 2.9,
+    "heightVariation": 0.7,
     "biomeType": "WARM",
     "spawnBiome": true,
     "biomeWeight": 5,
@@ -78,7 +78,7 @@
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnPillagerOutpost": false,
-    "villageType": "none",
+    "villageType": "plains",
     "spawnWoodlandMansion": false,
     "spawnJungleTemple": false,
     "spawnDesertPyramid": false,
@@ -102,6 +102,15 @@
         "maxGroup": 3,
         "weight": 10,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityFox"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 10,
+        "spawnType": "ambient"
       }
     ]
   }

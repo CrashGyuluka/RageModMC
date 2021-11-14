@@ -10,7 +10,7 @@
       "value": "Blocks.STONE#0"
     },
     "grassColor": {
-      "value": -7580647,
+      "value": -6332645,
       "falpha": 0.0
     },
     "foliageColor": {
@@ -78,7 +78,7 @@
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnPillagerOutpost": false,
-    "villageType": "none",
+    "villageType": "plains",
     "spawnWoodlandMansion": false,
     "spawnJungleTemple": false,
     "spawnDesertPyramid": false,
@@ -102,6 +102,15 @@
         "maxGroup": 3,
         "weight": 10,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntityFox"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 10,
+        "spawnType": "ambient"
       }
     ]
   }

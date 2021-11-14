@@ -38,9 +38,8 @@ public class YellowOakLeavesBlock extends RagemodModElements.ModElement {
 	}
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 1f).setLightLevel(s -> 1)
-					.harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
-					.setEmmisiveRendering((bs, br, bp) -> true));
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 1f).setLightLevel(s -> 6)
+					.harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid());
 			setRegistryName("yellow_glowing_oak_leaves");
 		}
 

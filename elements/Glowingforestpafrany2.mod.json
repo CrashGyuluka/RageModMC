@@ -5,11 +5,11 @@
     "structure": "glowing_paf2",
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 500000,
-    "minCountPerChunk": 1,
-    "maxCountPerChunk": 3,
+    "spawnProbability": 800000,
+    "minCountPerChunk": 2,
+    "maxCountPerChunk": 9,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 0,
+    "spawnHeightOffset": 1,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
@@ -23,6 +23,12 @@
     "restrictionBiomes": [
       {
         "value": "CUSTOM:GlowingOakForest"
+      },
+      {
+        "value": "CUSTOM:GlowingOakForestMountain"
+      },
+      {
+        "value": "CUSTOM:Sequoiaforest"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"

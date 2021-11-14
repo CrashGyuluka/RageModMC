@@ -23,6 +23,9 @@
     "restrictionBiomes": [
       {
         "value": "CUSTOM:GlowingOakForest"
+      },
+      {
+        "value": "CUSTOM:GlowingOakForestMountain"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"
