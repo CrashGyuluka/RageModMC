@@ -27,6 +27,7 @@ public class RttraderguiGuiWindow extends ContainerScreen<RttraderguiGui.GuiCont
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = RttraderguiGui.guistate;
+
 	public RttraderguiGuiWindow(RttraderguiGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class RttraderguiGuiWindow extends ContainerScreen<RttraderguiGui.GuiCont
 		this.xSize = 176;
 		this.ySize = 166;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("ragemod:textures/rttradergui.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

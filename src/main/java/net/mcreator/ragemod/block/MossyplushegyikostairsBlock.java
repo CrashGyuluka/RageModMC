@@ -24,8 +24,9 @@ import java.util.Collections;
 public class MossyplushegyikostairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:mossyplushegyikostairs")
 	public static final Block block = null;
+
 	public MossyplushegyikostairsBlock(RagemodModElements instance) {
-		super(instance, 232);
+		super(instance, 238);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class MossyplushegyikostairsBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2.7f, 5f).setLightLevel(s -> 0)

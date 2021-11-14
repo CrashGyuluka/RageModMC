@@ -27,8 +27,9 @@ import java.util.Collections;
 public class Marokriksa2StairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:marokriksa_2_stairs")
 	public static final Block block = null;
+
 	public Marokriksa2StairsBlock(RagemodModElements instance) {
-		super(instance, 302);
+		super(instance, 308);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class Marokriksa2StairsBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 8f).setLightLevel(s -> 0)

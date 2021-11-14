@@ -31,8 +31,9 @@ import java.util.Collections;
 public class Ragefalogb1Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_ragewood_block")
 	public static final Block block = null;
+
 	public Ragefalogb1Block(RagemodModElements instance) {
-		super(instance, 256);
+		super(instance, 262);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class Ragefalogb1Block extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.AXE).setRequiresTool());

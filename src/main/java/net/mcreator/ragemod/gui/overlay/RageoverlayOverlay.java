@@ -51,9 +51,11 @@ public class RageoverlayOverlay {
 					GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 			RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.disableAlphaTest();
-			if (RageoverlayDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world))) {
+			if (RageoverlayDisplayOverlayIngameProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build())) {
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rage_hatter.png"));
 				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -382, posY + -179, 0, 0, 1920, 1080, 1920, 1080);
+
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.enableDepthTest();

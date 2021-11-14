@@ -31,8 +31,9 @@ import java.util.Collections;
 public class RagedoorBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:ragewood_door")
 	public static final Block block = null;
+
 	public RagedoorBlock(RagemodModElements instance) {
-		super(instance, 360);
+		super(instance, 366);
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class RagedoorBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends DoorBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0).harvestLevel(1)

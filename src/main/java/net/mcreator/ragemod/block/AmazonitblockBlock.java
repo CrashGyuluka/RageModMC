@@ -32,6 +32,7 @@ import java.util.Collections;
 public class AmazonitblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazonitblock")
 	public static final Block block = null;
+
 	public AmazonitblockBlock(RagemodModElements instance) {
 		super(instance, 68);
 	}
@@ -41,8 +42,10 @@ public class AmazonitblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 20f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

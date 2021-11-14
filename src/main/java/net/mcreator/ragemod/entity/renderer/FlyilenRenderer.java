@@ -33,6 +33,7 @@ public class FlyilenRenderer {
 						{
 							this.addLayer(new GlowingLayer<>(this));
 						}
+
 						@Override
 						public ResourceLocation getEntityTexture(Entity entity) {
 							return new ResourceLocation("ragemod:textures/flylien_2.png");

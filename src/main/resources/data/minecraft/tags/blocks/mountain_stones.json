@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "ragemod:hegyiko_1",
-    "ragemod:hegyikopolished",
-    "ragemod:hegyikofull",
-    "ragemod:chiseledhegyiko",
-    "ragemod:hegyikotegla",
     "ragemod:hegyimorzsolt",
-    "ragemod:hegyikogreen",
     "ragemod:hegyikomossyplus",
+    "ragemod:hegyiko_1",
+    "ragemod:chiseledhegyiko",
+    "ragemod:hegyikopolished",
+    "ragemod:hegyikogreen",
+    "ragemod:hegyikofull",
+    "ragemod:alientrapblocklit",
     "ragemod:alien_trap",
-    "ragemod:alientrapblocklit"
+    "ragemod:hegyikotegla"
   ]
 }

@@ -17,25 +17,28 @@ import net.mcreator.ragemod.procedures.AlderflowerJuiceFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlderflowerJuiceItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:elderflower_syrup")
 	public static final Item block = null;
+
 	public AlderflowerJuiceItem(RagemodModElements instance) {
-		super(instance, 188);
+		super(instance, 194);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(16).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(7).saturation(0.7f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(7).saturation(0.7f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("elderflower_syrup");
 		}
 
@@ -61,11 +64,8 @@ public class AlderflowerJuiceItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				AlderflowerJuiceFoodEatenProcedure.executeProcedure($_dependencies);
-			}
+
+			AlderflowerJuiceFoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

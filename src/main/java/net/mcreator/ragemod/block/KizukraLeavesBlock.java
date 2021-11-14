@@ -22,15 +22,15 @@ import net.mcreator.ragemod.procedures.KizukraLeavesBlockDestroyedByPlayerProced
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_leaves")
 	public static final Block block = null;
+
 	public KizukraLeavesBlock(RagemodModElements instance) {
-		super(instance, 405);
+		super(instance, 411);
 	}
 
 	@Override
@@ -39,6 +39,7 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.6000000000000001f, 0.6000000000000001f)
@@ -62,15 +63,9 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				KizukraLeavesBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
-			}
+
+			KizukraLeavesBlockDestroyedByPlayerProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return retval;
 		}
 	}

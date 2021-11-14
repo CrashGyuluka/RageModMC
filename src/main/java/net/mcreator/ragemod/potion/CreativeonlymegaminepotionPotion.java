@@ -13,10 +13,12 @@ import net.minecraft.potion.EffectInstance;
 public class CreativeonlymegaminepotionPotion {
 	@ObjectHolder("ragemod:creativeonlymegaminepotion")
 	public static final Potion potionType = null;
+
 	@SubscribeEvent
 	public static void registerPotion(RegistryEvent.Register<Potion> event) {
 		event.getRegistry().register(new PotionCustom());
 	}
+
 	public static class PotionCustom extends Potion {
 		public PotionCustom() {
 			super(new EffectInstance(MegaMineeffectPotionEffect.potion, 6000, 1, false, false));

@@ -52,9 +52,7 @@ import net.mcreator.ragemod.procedures.AliendripstonebottomAdditionalGenerationC
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 import com.google.common.collect.ImmutableMap;
@@ -63,8 +61,9 @@ import com.google.common.collect.ImmutableMap;
 public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:aliendripstonebottom")
 	public static final Block block = null;
+
 	public AliendripstonebottomBlock(RagemodModElements instance) {
-		super(instance, 1392);
+		super(instance, 1398);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -80,8 +79,10 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	private static Feature<BlockClusterFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
@@ -104,7 +105,7 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 					int y = pos.getY();
 					int z = pos.getZ();
 					if (!AliendripstonebottomAdditionalGenerationConditionProcedure
-							.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
 						return false;
 					return super.generate(world, generator, random, pos, config);
 				}
@@ -118,10 +119,12 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:aliendripstonebottom"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
+
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
 			super(Effects.BAD_OMEN, 5, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.STONE)
@@ -157,10 +160,12 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 				int z = pos.getZ();
 				BlockState blockstate = world.getBlockState(pos.up());
 				additionalCondition = RagingvinesAdditionalPlacinggrowthConditionProcedure
-						.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+						.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			}
 			Block ground = state.getBlock();
-			return additionalCondition;
+			return
+
+			additionalCondition;
 		}
 
 		@Override
@@ -181,14 +186,9 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AliendripstonebottomUpdateTickProcedure.executeProcedure($_dependencies);
-			}
+
+			AliendripstonebottomUpdateTickProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 		}
 	}
 }

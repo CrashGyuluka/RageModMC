@@ -19,6 +19,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class Fa5sapUpdateTickProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -53,14 +54,14 @@ public class Fa5sapUpdateTickProcedure {
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (((new Object() {
+		if (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Random")) >= 0.875)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Random") >= 0.875) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Blocks.AIR.getDefaultState();

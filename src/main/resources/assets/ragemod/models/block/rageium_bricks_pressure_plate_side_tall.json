@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "ragemod:blocks/rageium_bricks",
+    "particle": "ragemod:blocks/rageium_bricks"
+  }
+}

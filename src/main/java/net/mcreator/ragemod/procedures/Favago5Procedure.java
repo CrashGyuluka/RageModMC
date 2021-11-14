@@ -42,6 +42,7 @@ public class Favago5Procedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -49,8 +50,8 @@ public class Favago5Procedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity.getPersistentData().getDouble("playerTradePage")) == 1)) {
-			if (((new Object() {
+		if (entity.getPersistentData().getDouble("playerTradePage") == 1) {
+			if ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -64,8 +65,8 @@ public class Favago5Procedure {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (0))).getItem() == Items.EMERALD)) {
-				if (((entity.getPersistentData().getDouble("playerTradeItem1")) == 1)) {
+			}.getItemStack((int) (0))).getItem() == Items.EMERALD) {
+				if (entity.getPersistentData().getDouble("playerTradeItem1") == 1) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -78,7 +79,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem1")) == 2)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem1") == 2) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -91,7 +92,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem1")) == 3)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem1") == 3) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -104,7 +105,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem1")) == 4)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem1") == 4) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -117,7 +118,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem1")) == 5)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem1") == 5) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -130,7 +131,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem1")) == 6)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem1") == 6) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -160,8 +161,8 @@ public class Favago5Procedure {
 					}
 				}
 			}
-		} else if (((entity.getPersistentData().getDouble("playerTradePage")) == 2)) {
-			if (((new Object() {
+		} else if (entity.getPersistentData().getDouble("playerTradePage") == 2) {
+			if ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -175,8 +176,8 @@ public class Favago5Procedure {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (0))).getItem() == Items.EMERALD)) {
-				if (((entity.getPersistentData().getDouble("playerTradeItem2")) == 1)) {
+			}.getItemStack((int) (0))).getItem() == Items.EMERALD) {
+				if (entity.getPersistentData().getDouble("playerTradeItem2") == 1) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -189,7 +190,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem2")) == 2)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem2") == 2) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -202,7 +203,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem2")) == 3)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem2") == 3) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -215,7 +216,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem2")) == 4)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem2") == 4) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -228,7 +229,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem2")) == 5)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem2") == 5) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -241,7 +242,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem2")) == 6)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem2") == 6) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -271,8 +272,8 @@ public class Favago5Procedure {
 					}
 				}
 			}
-		} else if (((entity.getPersistentData().getDouble("playerTradePage")) == 3)) {
-			if (((new Object() {
+		} else if (entity.getPersistentData().getDouble("playerTradePage") == 3) {
+			if ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -286,8 +287,8 @@ public class Favago5Procedure {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (0))).getItem() == Items.EMERALD)) {
-				if (((entity.getPersistentData().getDouble("playerTradeItem3")) == 1)) {
+			}.getItemStack((int) (0))).getItem() == Items.EMERALD) {
+				if (entity.getPersistentData().getDouble("playerTradeItem3") == 1) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -300,7 +301,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem3")) == 2)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem3") == 2) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -313,7 +314,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem3")) == 3)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem3") == 3) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -326,7 +327,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem3")) == 4)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem3") == 4) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -339,7 +340,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem3")) == 5)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem3") == 5) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -352,7 +353,7 @@ public class Favago5Procedure {
 							}
 						}
 					}
-				} else if (((entity.getPersistentData().getDouble("playerTradeItem3")) == 6)) {
+				} else if (entity.getPersistentData().getDouble("playerTradeItem3") == 6) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {

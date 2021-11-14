@@ -32,6 +32,7 @@ import java.util.Collections;
 public class OpalblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:opalblock")
 	public static final Block block = null;
+
 	public OpalblockBlock(RagemodModElements instance) {
 		super(instance, 71);
 	}
@@ -41,8 +42,10 @@ public class OpalblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 40f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().slipperiness(0.7f));

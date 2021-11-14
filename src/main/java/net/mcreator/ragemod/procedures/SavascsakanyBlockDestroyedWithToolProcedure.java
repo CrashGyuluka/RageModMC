@@ -12,6 +12,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class SavascsakanyBlockDestroyedWithToolProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -19,7 +20,7 @@ public class SavascsakanyBlockDestroyedWithToolProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((Math.random() < 0.01)) {
+		if (Math.random() < 0.01) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(SavercrItem.block);
 				_setstack.setCount((int) 1);

@@ -68,6 +68,7 @@ public class Structurehatarolo1BlockAddedProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -93,11 +94,11 @@ public class Structurehatarolo1BlockAddedProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(RageModDevModeGameRule.gamerule)) == (false))) {
-			if ((BlockTags.getCollection().getTagByID(new ResourceLocation(("minecraft:random_changer_blocks").toLowerCase(java.util.Locale.ENGLISH)))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Structurehatarolo1Block.block)) {
-					if ((Math.random() > 0.67)) {
+		if (world.getWorldInfo().getGameRulesInstance().getBoolean(RageModDevModeGameRule.gamerule) == false) {
+			if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:random_changer_blocks"))
+					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Structurehatarolo1Block.block) {
+					if (Math.random() > 0.67) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							BlockState _bs = Blocks.STONE.getDefaultState();
@@ -111,8 +112,8 @@ public class Structurehatarolo1BlockAddedProcedure {
 						}
 					}
 				} else {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo2Block.block)) {
-						if ((Math.random() < 0.69)) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo2Block.block) {
+						if (Math.random() < 0.69) {
 							{
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								BlockState _bs = AlpivblockBlock.block.getDefaultState();
@@ -126,8 +127,8 @@ public class Structurehatarolo1BlockAddedProcedure {
 							}
 						}
 					} else {
-						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo3Block.block)) {
-							if ((Math.random() < 0.67)) {
+						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo3Block.block) {
+							if (Math.random() < 0.67) {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									BlockState _bs = RageiumblockBlock.block.getDefaultState();
@@ -141,8 +142,8 @@ public class Structurehatarolo1BlockAddedProcedure {
 								}
 							}
 						} else {
-							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo4Block.block)) {
-								if ((Math.random() < 0.67)) {
+							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo4Block.block) {
+								if (Math.random() < 0.67) {
 									{
 										BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 										BlockState _bs = AlpivfloorBlock.block.getDefaultState();
@@ -156,8 +157,8 @@ public class Structurehatarolo1BlockAddedProcedure {
 									}
 								}
 							} else {
-								if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo5Block.block)) {
-									if ((Math.random() < 0.51)) {
+								if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo5Block.block) {
+									if (Math.random() < 0.51) {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 											BlockState _bs = AlientrapblockBlock.block.getDefaultState();
@@ -171,8 +172,8 @@ public class Structurehatarolo1BlockAddedProcedure {
 										}
 									}
 								} else {
-									if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo6Block.block)) {
-										if ((Math.random() < 0.6)) {
+									if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strhatarolo6Block.block) {
+										if (Math.random() < 0.6) {
 											{
 												BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 												BlockState _bs = AlienshroomblockBlock.block.getDefaultState();
@@ -192,10 +193,9 @@ public class Structurehatarolo1BlockAddedProcedure {
 					}
 				}
 			} else {
-				if ((BlockTags.getCollection()
-						.getTagByID(new ResourceLocation(("minecraft:structure_placer_blocks").toLowerCase(java.util.Locale.ENGLISH)))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Sturtureplacer1Block.block)) {
+				if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:structure_placer_blocks"))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Sturtureplacer1Block.block) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							BlockState _bs = Blocks.AIR.getDefaultState();
@@ -221,7 +221,7 @@ public class Structurehatarolo1BlockAddedProcedure {
 							}
 						}
 					} else {
-						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Structureplacer2Block.block)) {
+						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Structureplacer2Block.block) {
 							{
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								BlockState _bs = Blocks.AIR.getDefaultState();
@@ -247,7 +247,7 @@ public class Structurehatarolo1BlockAddedProcedure {
 								}
 							}
 						} else {
-							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer3Block.block)) {
+							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer3Block.block) {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									BlockState _bs = Blocks.AIR.getDefaultState();
@@ -273,7 +273,7 @@ public class Structurehatarolo1BlockAddedProcedure {
 									}
 								}
 							} else {
-								if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer4Block.block)) {
+								if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer4Block.block) {
 									{
 										BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 										BlockState _bs = Blocks.AIR.getDefaultState();
@@ -299,7 +299,7 @@ public class Structurehatarolo1BlockAddedProcedure {
 										}
 									}
 								} else {
-									if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer5Block.block)) {
+									if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer5Block.block) {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 											BlockState _bs = Blocks.AIR.getDefaultState();
@@ -325,7 +325,7 @@ public class Structurehatarolo1BlockAddedProcedure {
 											}
 										}
 									} else {
-										if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer6Block.block)) {
+										if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Strplacer6Block.block) {
 											{
 												BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 												BlockState _bs = Blocks.AIR.getDefaultState();

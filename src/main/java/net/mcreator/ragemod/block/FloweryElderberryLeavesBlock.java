@@ -56,10 +56,10 @@ import net.mcreator.ragemod.RagemodModElements;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement {
@@ -67,8 +67,9 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 	public static final Block block = null;
 	@ObjectHolder("ragemod:flowery_elderberry_leaves")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public FloweryElderberryLeavesBlock(RagemodModElements instance) {
-		super(instance, 410);
+		super(instance, 416);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -78,6 +79,7 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
@@ -85,11 +87,13 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 					.register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("flowery_elderberry_leaves"));
 		}
 	}
+
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(1.1f, 1.2f).setLightLevel(s -> 0).notSolid()
@@ -121,14 +125,9 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 			double hitY = hit.getHitVec().y;
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				Elderberrxstage3OnBlockRightClickedProcedure.executeProcedure($_dependencies);
-			}
+
+			Elderberrxstage3OnBlockRightClickedProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return ActionResultType.SUCCESS;
 		}
 
@@ -163,6 +162,7 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
 					world.updateComparatorOutputLevel(pos, this);
 				}
+
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
 		}
@@ -184,6 +184,7 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
+
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -283,7 +284,9 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
+
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)

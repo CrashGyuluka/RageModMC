@@ -7,6 +7,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class ClearallcommCommandExecutedProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -35,6 +36,6 @@ public class ClearallcommCommandExecutedProcedure {
 						"stopsound @s");
 			}
 		}
-		return (true);
+		return true;
 	}
 }

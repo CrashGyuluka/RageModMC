@@ -15,6 +15,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class CverxItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cvex")
 	public static final Item block = null;
+
 	public CverxItem(RagemodModElements instance) {
 		super(instance, 96);
 	}
@@ -23,6 +24,7 @@ public class CverxItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).isImmuneToFire().rarity(Rarity.COMMON));

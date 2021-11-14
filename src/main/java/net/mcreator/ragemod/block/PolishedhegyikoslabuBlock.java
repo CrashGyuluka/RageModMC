@@ -25,8 +25,9 @@ import java.util.Collections;
 public class PolishedhegyikoslabuBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:polishedhegyikoslab")
 	public static final Block block = null;
+
 	public PolishedhegyikoslabuBlock(RagemodModElements instance) {
-		super(instance, 240);
+		super(instance, 246);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class PolishedhegyikoslabuBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 5f).setLightLevel(s -> 0).harvestLevel(1)

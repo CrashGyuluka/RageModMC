@@ -49,6 +49,7 @@ public class SavasrageiumoreOnBlockRightClickedProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -80,11 +81,11 @@ public class SavasrageiumoreOnBlockRightClickedProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((SavasrageiumoreBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())
-				|| ((SavasrageiumblockBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())
-						|| (SavasrageiumalloyblockBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())))
-				&& (DetonatorrtItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem()))) {
+		if ((SavasrageiumoreBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()
+				|| SavasrageiumblockBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()
+				|| SavasrageiumalloyblockBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())
+				&& DetonatorrtItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Blocks.AIR.getDefaultState();

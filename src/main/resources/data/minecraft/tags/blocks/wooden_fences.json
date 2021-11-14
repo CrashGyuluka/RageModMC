@@ -1,23 +1,22 @@
 {
   "replace": false,
   "values": [
-    "ragemod:red_ragewood_fence",
     "ragemod:beech_fence",
-    "ragemod:kizukra_fence",
-    "ragemod:robtai_fence",
-    "ragemod:marokriksa_fence",
+    "ragemod:stripped_kizukra_fence",
+    "ragemod:stripped_robtai_fence",
     "ragemod:ragewood_block_fence",
-    "ragemod:beech_block_fence",
+    "ragemod:kizukra_block_fence",
     "ragemod:blue_ragewood_fence",
     "ragemod:stripped_ragewood_block_fence",
+    "ragemod:robtai_fence",
+    "ragemod:red_ragewood_fence",
+    "ragemod:marokriksa_fence",
     "ragemod:ragewoodstr_2f",
-    "ragemod:stripped_kizukra_fence",
-    "ragemod:kizukra_block_fence",
-    "ragemod:stripped_robtai_fence",
-    "ragemod:robtai_block_fence",
-    "ragemod:marokriksa_2_fence",
     "ragemod:stripped_marokriksa_fence",
+    "ragemod:beech_block_fence",
+    "ragemod:kizukra_fence",
+    "ragemod:marokriksa_2_fence",
     "ragemod:sequoia_fence",
-    "ragemod:sequoia_fence"
+    "ragemod:robtai_block_fence"
   ]
 }

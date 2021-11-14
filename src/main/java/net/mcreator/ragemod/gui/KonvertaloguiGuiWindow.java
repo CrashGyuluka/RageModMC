@@ -27,6 +27,7 @@ public class KonvertaloguiGuiWindow extends ContainerScreen<KonvertaloguiGui.Gui
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = KonvertaloguiGui.guistate;
+
 	public KonvertaloguiGuiWindow(KonvertaloguiGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class KonvertaloguiGuiWindow extends ContainerScreen<KonvertaloguiGui.Gui
 		this.xSize = 176;
 		this.ySize = 170;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("ragemod:textures/konvertalogui.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

@@ -15,6 +15,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class CerusszitItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cerusszit")
 	public static final Item block = null;
+
 	public CerusszitItem(RagemodModElements instance) {
 		super(instance, 42);
 	}
@@ -23,6 +24,7 @@ public class CerusszitItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

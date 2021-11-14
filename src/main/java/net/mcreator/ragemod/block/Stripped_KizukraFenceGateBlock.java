@@ -27,8 +27,9 @@ import java.util.Collections;
 public class Stripped_KizukraFenceGateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_kizukra_fence_gate")
 	public static final Block block = null;
+
 	public Stripped_KizukraFenceGateBlock(RagemodModElements instance) {
-		super(instance, 351);
+		super(instance, 357);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class Stripped_KizukraFenceGateBlock extends RagemodModElements.ModElemen
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FenceGateBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f).setLightLevel(s -> 0).harvestLevel(2)

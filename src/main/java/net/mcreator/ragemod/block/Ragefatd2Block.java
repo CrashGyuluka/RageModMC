@@ -29,8 +29,9 @@ import java.util.Collections;
 public class Ragefatd2Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:red_ragewood_trapdoor")
 	public static final Block block = null;
+
 	public Ragefatd2Block(RagemodModElements instance) {
-		super(instance, 367);
+		super(instance, 373);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class Ragefatd2Block extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends TrapDoorBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(1)

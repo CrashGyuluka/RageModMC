@@ -60,7 +60,6 @@
     "vanillaTreeType": "Big trees",
     "treeType": 1,
     "minHeight": 5,
-    "maxWaterDepth": 2,
     "treeStem": {
       "value": "CUSTOM:BukkLog"
     },

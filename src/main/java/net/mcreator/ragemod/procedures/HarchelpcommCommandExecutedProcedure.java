@@ -16,6 +16,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class HarchelpcommCommandExecutedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -37,8 +38,7 @@ public class HarchelpcommCommandExecutedProcedure {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory.armorInventory.set((int) 3, new ItemStack(RageiumaromrItem.helmet));
 			else
-				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3),
-						new ItemStack(RageiumaromrItem.helmet));
+				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(RageiumaromrItem.helmet));
 			if (entity instanceof ServerPlayerEntity)
 				((ServerPlayerEntity) entity).inventory.markDirty();
 		}
@@ -46,8 +46,7 @@ public class HarchelpcommCommandExecutedProcedure {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory.armorInventory.set((int) 2, new ItemStack(RageiumaromrItem.body));
 			else
-				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2),
-						new ItemStack(RageiumaromrItem.body));
+				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.CHEST, new ItemStack(RageiumaromrItem.body));
 			if (entity instanceof ServerPlayerEntity)
 				((ServerPlayerEntity) entity).inventory.markDirty();
 		}
@@ -55,8 +54,7 @@ public class HarchelpcommCommandExecutedProcedure {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory.armorInventory.set((int) 1, new ItemStack(RageiumaromrItem.legs));
 			else
-				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1),
-						new ItemStack(RageiumaromrItem.legs));
+				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.LEGS, new ItemStack(RageiumaromrItem.legs));
 			if (entity instanceof ServerPlayerEntity)
 				((ServerPlayerEntity) entity).inventory.markDirty();
 		}
@@ -64,8 +62,7 @@ public class HarchelpcommCommandExecutedProcedure {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory.armorInventory.set((int) 0, new ItemStack(RageiumaromrItem.boots));
 			else
-				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0),
-						new ItemStack(RageiumaromrItem.boots));
+				((LivingEntity) entity).setItemStackToSlot(EquipmentSlotType.FEET, new ItemStack(RageiumaromrItem.boots));
 			if (entity instanceof ServerPlayerEntity)
 				((ServerPlayerEntity) entity).inventory.markDirty();
 		}

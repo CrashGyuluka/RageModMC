@@ -12,8 +12,9 @@ import java.lang.reflect.Method;
 public class ToxicGivesYouBadEffectsGameRule extends RagemodModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("toxicGivesYouBadEffects", GameRules.Category.PLAYER,
 			create(true));
+
 	public ToxicGivesYouBadEffectsGameRule(RagemodModElements instance) {
-		super(instance, 863);
+		super(instance, 869);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

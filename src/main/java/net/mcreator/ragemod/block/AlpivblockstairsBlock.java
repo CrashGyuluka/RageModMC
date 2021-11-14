@@ -24,8 +24,9 @@ import java.util.Collections;
 public class AlpivblockstairsBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alpiv_stairs")
 	public static final Block block = null;
+
 	public AlpivblockstairsBlock(RagemodModElements instance) {
-		super(instance, 210);
+		super(instance, 216);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class AlpivblockstairsBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0)

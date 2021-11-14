@@ -19,13 +19,13 @@ import net.mcreator.ragemod.procedures.MegaMinePotion2FoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class MegaMinePotion2Item extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:longer_megamine_potion")
 	public static final Item block = null;
+
 	public MegaMinePotion2Item(RagemodModElements instance) {
 		super(instance, 109);
 	}
@@ -34,10 +34,13 @@ public class MegaMinePotion2Item extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(16).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("longer_megamine_potion");
 		}
 
@@ -69,11 +72,8 @@ public class MegaMinePotion2Item extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				MegaMinePotion2FoodEatenProcedure.executeProcedure($_dependencies);
-			}
+
+			MegaMinePotion2FoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

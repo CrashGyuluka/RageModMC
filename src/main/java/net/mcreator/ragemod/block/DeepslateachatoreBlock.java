@@ -29,6 +29,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DeepslateachatoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateachatore")
 	public static final Block block = null;
+
 	public DeepslateachatoreBlock(RagemodModElements instance) {
 		super(instance, 50);
 	}
@@ -38,8 +39,10 @@ public class DeepslateachatoreBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block implements IWaterLoggable {
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

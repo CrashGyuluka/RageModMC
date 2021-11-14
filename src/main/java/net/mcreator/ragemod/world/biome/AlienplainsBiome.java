@@ -43,10 +43,12 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class AlienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
+
 	public AlienplainsBiome(RagemodModElements instance) {
-		super(instance, 1265);
+		super(instance, 1271);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -108,6 +110,7 @@ public class AlienplainsBiome extends RagemodModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}

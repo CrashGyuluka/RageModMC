@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "rageium_block3",
+    "texture": "rageium_block",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -33,7 +33,9 @@
       }
     ],
     "name": "Block Of Rageium Alloy",
-    "specialInfo": [],
+    "specialInfo": [
+      "Thank you Lyof! :D"
+    ],
     "hardness": 4.0,
     "resistance": 100.0,
     "hasGravity": false,
@@ -96,7 +98,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 3,
+    "breakHarvestLevel": 2,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:Particle2"

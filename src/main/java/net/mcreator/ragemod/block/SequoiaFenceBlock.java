@@ -27,8 +27,9 @@ import java.util.Collections;
 public class SequoiaFenceBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_fence")
 	public static final Block block = null;
+
 	public SequoiaFenceBlock(RagemodModElements instance) {
-		super(instance, 341);
+		super(instance, 347);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class SequoiaFenceBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2.4000000000000004f, 3.6000000000000005f)

@@ -3,14 +3,9 @@
   "values": [
     "ragemod:rageflower",
     "ragemod:genus_weigela",
-    "ragemod:bluehydrangea",
-    "ragemod:magentahydrangea",
-    "ragemod:purplehydrangea",
     "ragemod:yellowhydrangea",
-    "ragemod:genus_weigela",
-    "ragemod:bluehydrangea",
-    "ragemod:magentahydrangea",
     "ragemod:purplehydrangea",
-    "ragemod:yellowhydrangea"
+    "ragemod:bluehydrangea",
+    "ragemod:magentahydrangea"
   ]
 }

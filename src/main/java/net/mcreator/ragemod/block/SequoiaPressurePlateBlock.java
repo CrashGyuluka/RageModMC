@@ -26,8 +26,9 @@ import java.util.Collections;
 public class SequoiaPressurePlateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_pressure_plate")
 	public static final Block block = null;
+
 	public SequoiaPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 390);
+		super(instance, 396);
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class SequoiaPressurePlateBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD)

@@ -17,13 +17,13 @@ import net.mcreator.ragemod.procedures.AdularprocProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AdulargyuruItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:adulargyuru")
 	public static final Item block = null;
+
 	public AdulargyuruItem(RagemodModElements instance) {
 		super(instance, 87);
 	}
@@ -32,6 +32,7 @@ public class AdulargyuruItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(300).rarity(Rarity.COMMON));
@@ -60,11 +61,8 @@ public class AdulargyuruItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				AdularprocProcedure.executeProcedure($_dependencies);
-			}
+
+			AdularprocProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 			return ar;
 		}
 
@@ -74,11 +72,8 @@ public class AdulargyuruItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				AdularprocProcedure.executeProcedure($_dependencies);
-			}
+
+			AdularprocProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 		}
 	}
 }

@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "ragemod:sequoia_wood",
+    "ragemod:stripped_sequoia_log",
     "ragemod:sequoia_log",
-    "ragemod:stripped_sequoia_wood",
-    "ragemod:stripped_sequoia_log"
+    "ragemod:stripped_sequoia_wood"
   ]
 }

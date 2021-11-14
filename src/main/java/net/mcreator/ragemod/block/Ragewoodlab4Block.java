@@ -25,8 +25,9 @@ import java.util.Collections;
 public class Ragewoodlab4Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_ragewood_slab")
 	public static final Block block = null;
+
 	public Ragewoodlab4Block(RagemodModElements instance) {
-		super(instance, 307);
+		super(instance, 313);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class Ragewoodlab4Block extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(1)

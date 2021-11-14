@@ -20,6 +20,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DeepslateaktinolitoreBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:deepslateaktinolitore")
 	public static final Block block = null;
+
 	public DeepslateaktinolitoreBlock(RagemodModElements instance) {
 		super(instance, 54);
 	}
@@ -29,6 +30,7 @@ public class DeepslateaktinolitoreBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 20f).setLightLevel(s -> 0).harvestLevel(2)

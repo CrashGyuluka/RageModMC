@@ -24,8 +24,9 @@ import java.util.Collections;
 public class MossyhegyikopressureplateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:mossyhegyikopressureplate")
 	public static final Block block = null;
+
 	public MossyhegyikopressureplateBlock(RagemodModElements instance) {
-		super(instance, 249);
+		super(instance, 255);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class MossyhegyikopressureplateBlock extends RagemodModElements.ModElemen
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.MOBS, Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2.7f, 5f)

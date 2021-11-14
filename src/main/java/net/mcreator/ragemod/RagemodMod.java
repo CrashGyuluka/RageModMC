@@ -46,6 +46,7 @@ public class RagemodMod {
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation("ragemod", "ragemod"),
 			() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	public RagemodModElements elements;
+
 	public RagemodMod() {
 		elements = new RagemodModElements();
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -86,8 +87,10 @@ public class RagemodMod {
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
 		elements.registerSounds(event);
 	}
+
 	private static class RagemodModFMLBusEvents {
 		private final RagemodMod parent;
+
 		RagemodModFMLBusEvents(RagemodMod parent) {
 			this.parent = parent;
 		}

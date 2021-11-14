@@ -49,6 +49,7 @@ public class Savnovenyproc1Procedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -91,7 +92,7 @@ public class Savnovenyproc1Procedure {
 			for (int index1 = 0; index1 < (int) (6); index1++) {
 				sz = (double) (-3);
 				for (int index2 = 0; index2 < (int) (6); index2++) {
-					if (((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock() == SavasnovenyBlock.block)) {
+					if ((world.getBlockState(new BlockPos((int) (x + sx), (int) (y + sy), (int) (z + sz)))).getBlock() == SavasnovenyBlock.block) {
 						found = (boolean) (true);
 					}
 					sz = (double) (sz + 1);
@@ -100,8 +101,8 @@ public class Savnovenyproc1Procedure {
 			}
 			sx = (double) (sx + 1);
 		}
-		if ((found == (true))) {
-			if ((((true) == (world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule))) && ((!(new Object() {
+		if (found == true) {
+			if (true == world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule) && !(new Object() {
 				boolean check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -112,7 +113,7 @@ public class Savnovenyproc1Procedure {
 					}
 					return false;
 				}
-			}.check(entity))) && ((new Object() {
+			}.check(entity)) && (new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
@@ -123,7 +124,7 @@ public class Savnovenyproc1Procedure {
 					}
 					return false;
 				}
-			}.checkGamemode(entity)) || (new Object() {
+			}.checkGamemode(entity) || new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
@@ -134,7 +135,7 @@ public class Savnovenyproc1Procedure {
 					}
 					return false;
 				}
-			}.checkGamemode(entity)))))) {
+			}.checkGamemode(entity))) {
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 60, (int) 1, (false), (false)));
 				if (entity instanceof LivingEntity)

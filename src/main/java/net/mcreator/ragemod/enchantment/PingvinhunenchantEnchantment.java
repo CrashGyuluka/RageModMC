@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class PingvinhunenchantEnchantment extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:pingvinhunenchant")
 	public static final Enchantment enchantment = null;
+
 	public PingvinhunenchantEnchantment(RagemodModElements instance) {
-		super(instance, 425);
+		super(instance, 431);
 	}
 
 	@Override
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("pingvinhunenchant"));
 	}
+
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST, slots);

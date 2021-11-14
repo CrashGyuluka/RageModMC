@@ -32,8 +32,9 @@ import java.util.Collections;
 public class ChiseledhegyikoBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:chiseledhegyiko")
 	public static final Block block = null;
+
 	public ChiseledhegyikoBlock(RagemodModElements instance) {
-		super(instance, 229);
+		super(instance, 235);
 	}
 
 	@Override
@@ -42,8 +43,10 @@ public class ChiseledhegyikoBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 5f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

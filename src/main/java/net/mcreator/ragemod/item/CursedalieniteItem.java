@@ -15,13 +15,13 @@ import net.mcreator.ragemod.procedures.CursedalieniteFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class CursedalieniteItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cursed_alienite")
 	public static final Item block = null;
+
 	public CursedalieniteItem(RagemodModElements instance) {
 		super(instance, 101);
 	}
@@ -30,10 +30,13 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(3).saturation(0.2f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(3).saturation(0.2f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("cursed_alienite");
 		}
 
@@ -53,11 +56,8 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				CursedalieniteFoodEatenProcedure.executeProcedure($_dependencies);
-			}
+
+			CursedalieniteFoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 			return retval;
 		}
 	}

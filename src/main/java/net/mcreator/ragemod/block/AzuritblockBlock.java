@@ -32,6 +32,7 @@ import java.util.Collections;
 public class AzuritblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:azuritblock")
 	public static final Block block = null;
+
 	public AzuritblockBlock(RagemodModElements instance) {
 		super(instance, 62);
 	}
@@ -41,8 +42,10 @@ public class AzuritblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f, 15f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

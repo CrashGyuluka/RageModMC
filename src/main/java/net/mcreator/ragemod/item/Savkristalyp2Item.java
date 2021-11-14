@@ -15,6 +15,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class Savkristalyp2Item extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savkristalyp_2")
 	public static final Item block = null;
+
 	public Savkristalyp2Item(RagemodModElements instance) {
 		super(instance, 27);
 	}
@@ -23,6 +24,7 @@ public class Savkristalyp2Item extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

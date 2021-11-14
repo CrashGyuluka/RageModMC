@@ -40,6 +40,7 @@ import com.google.common.collect.ImmutableMap;
 public class Richdesertkak3Structure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
@@ -74,8 +75,8 @@ public class Richdesertkak3Structure {
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
-							if (!Richdesertkak1AdditionalGenerationConditionProcedure
-									.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+							if (!Richdesertkak1AdditionalGenerationConditionProcedure.executeProcedure(
+									ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("ragemod", "a_rich_desert_kak3"));
@@ -96,6 +97,7 @@ public class Richdesertkak3Structure {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:richdesertkak_3"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;

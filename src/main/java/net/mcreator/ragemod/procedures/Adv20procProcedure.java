@@ -53,6 +53,7 @@ public class Adv20procProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -60,31 +61,15 @@ public class Adv20procProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavasfejszeItem.block)) : false)
-				|| (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavkardItem.block)) : false)
-						|| (((entity instanceof PlayerEntity)
-								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavascsakanyItem.block))
-								: false)
-								|| (((entity instanceof PlayerEntity)
-										? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavasoItem.block))
-										: false)
-										|| (((entity instanceof PlayerEntity)
-												? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavkapaItem.block))
-												: false)
-												|| (((entity instanceof PlayerEntity)
-														? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavarmorItem.helmet))
-														: false)
-														|| (((entity instanceof PlayerEntity)
-																? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavarmorItem.body))
-																: false)
-																|| (((entity instanceof PlayerEntity)
-																		? ((PlayerEntity) entity).inventory
-																				.hasItemStack(new ItemStack(SavarmorItem.legs))
-																		: false)
-																		|| ((entity instanceof PlayerEntity)
-																				? ((PlayerEntity) entity).inventory
-																						.hasItemStack(new ItemStack(SavarmorItem.boots))
-																				: false)))))))))) {
+		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavasfejszeItem.block)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavkardItem.block)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavascsakanyItem.block)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavasoItem.block)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavkapaItem.block)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavarmorItem.helmet)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavarmorItem.body)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavarmorItem.legs)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SavarmorItem.boots)) : false)) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 						.getAdvancement(new ResourceLocation("ragemod:adv_20"));
@@ -98,19 +83,17 @@ public class Adv20procProcedure {
 				}
 			}
 		}
-		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MegasavcsakaknyItem.block)) : false)
-				|| (((entity instanceof PlayerEntity)
+		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MegasavcsakaknyItem.block)) : false)
+				|| ((entity instanceof PlayerEntity)
 						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazonitesavasoItem.block))
 						: false)
-						|| (((entity instanceof PlayerEntity)
-								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazsavkardItem.block))
-								: false)
-								|| (((entity instanceof PlayerEntity)
-										? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazonitsavasfejszeItem.block))
-										: false)
-										|| ((entity instanceof PlayerEntity)
-												? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazonitsavkapaItem.block))
-												: false)))))) {
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazsavkardItem.block)) : false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazonitsavasfejszeItem.block))
+						: false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(AmazonitsavkapaItem.block))
+						: false)) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 						.getAdvancement(new ResourceLocation("ragemod:adv_21"));

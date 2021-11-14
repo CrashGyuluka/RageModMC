@@ -9,6 +9,7 @@ import net.minecraft.entity.item.PaintingType;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PaintdragonPainting {
+
 	@SubscribeEvent
 	public static void registerPaintingType(RegistryEvent.Register<PaintingType> event) {
 		event.getRegistry().register(new PaintingType(80, 64).setRegistryName("paintdragon"));

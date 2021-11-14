@@ -23,6 +23,7 @@ public class CrashchestguiGuiWindow extends ContainerScreen<CrashchestguiGui.Gui
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = CrashchestguiGui.guistate;
+
 	public CrashchestguiGuiWindow(CrashchestguiGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -33,7 +34,9 @@ public class CrashchestguiGuiWindow extends ContainerScreen<CrashchestguiGui.Gui
 		this.xSize = 263;
 		this.ySize = 176;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("ragemod:textures/crashchestgui.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

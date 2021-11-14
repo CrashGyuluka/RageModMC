@@ -15,14 +15,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class ElderberryflowerItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:elderflower")
 	public static final Item block = null;
+
 	public ElderberryflowerItem(RagemodModElements instance) {
-		super(instance, 186);
+		super(instance, 192);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

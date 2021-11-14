@@ -16,6 +16,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AmazsavkardItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:amazsavkard")
 	public static final Item block = null;
+
 	public AmazsavkardItem(RagemodModElements instance) {
 		super(instance, 74);
 	}

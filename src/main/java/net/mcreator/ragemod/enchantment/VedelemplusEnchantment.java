@@ -13,14 +13,16 @@ import net.mcreator.ragemod.RagemodModElements;
 public class VedelemplusEnchantment extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:vedelemplus")
 	public static final Enchantment enchantment = null;
+
 	public VedelemplusEnchantment(RagemodModElements instance) {
-		super(instance, 809);
+		super(instance, 815);
 	}
 
 	@Override
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("vedelemplus"));
 	}
+
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.UNCOMMON, EnchantmentType.ARMOR_HEAD, slots);

@@ -22,14 +22,16 @@ import com.google.common.collect.ImmutableMultimap;
 public class Stick1Item extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:kizukra_stick")
 	public static final Item block = null;
+
 	public Stick1Item(RagemodModElements instance) {
-		super(instance, 393);
+		super(instance, 399);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

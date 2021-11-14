@@ -14,6 +14,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlienspikeUpdateTickProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -39,18 +40,17 @@ public class AlienspikeUpdateTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)).isSolid()) == (false))
-				&& ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AlienspiketopdevBlock.block) == (false))
-						&& (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)))
-								.getBlock() == AlienspikeBlock.block) == (false))))) {
+		if (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)).isSolid() == false
+				&& ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AlienspiketopdevBlock.block) == false
+				&& ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AlienspikeBlock.block) == false) {
 			if (world instanceof World) {
 				Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 						new BlockPos((int) x, (int) y, (int) z));
 				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			}
 		}
-		if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienspiketopdevBlock.block)
-				&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == AlienspiketopdevBlock.block))) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienspiketopdevBlock.block
+				&& (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == AlienspiketopdevBlock.block) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = AlienspikeBlock.block.getDefaultState();
@@ -66,9 +66,8 @@ public class AlienspikeUpdateTickProcedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 		}
-		if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienspikeBlock.block)
-				&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
-						.getMaterial() == net.minecraft.block.material.Material.AIR))) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienspikeBlock.block
+				&& (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = AlienspiketopdevBlock.block.getDefaultState();

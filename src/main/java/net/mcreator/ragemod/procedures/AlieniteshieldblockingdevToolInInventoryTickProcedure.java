@@ -13,6 +13,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlieniteshieldblockingdevToolInInventoryTickProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -28,11 +29,11 @@ public class AlieniteshieldblockingdevToolInInventoryTickProcedure {
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double sheildDamage = 0;
 		double localShieldTimer = 0;
-		if (((((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer) == 0)
-				&& ((itemstack).getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem()))) {
-			sheildDamage = (double) (((itemstack)).getDamage());
+		if ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer == 0
+				&& itemstack.getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem()) {
+			sheildDamage = (double) ((itemstack).getDamage());
 			if (entity instanceof LivingEntity) {
 				ItemStack _setstack = new ItemStack(AlieniteshieldItem.block);
 				_setstack.setCount((int) 1);
@@ -42,8 +43,8 @@ public class AlieniteshieldblockingdevToolInInventoryTickProcedure {
 			}
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).setDamage((int) sheildDamage);
 		} else {
-			localShieldTimer = (double) (((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer) - 1);
+			localShieldTimer = (double) ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer - 1);
 			{
 				double _setval = (double) localShieldTimer;
 				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

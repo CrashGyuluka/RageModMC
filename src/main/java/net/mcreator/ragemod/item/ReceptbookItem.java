@@ -43,17 +43,17 @@ import net.mcreator.ragemod.RagemodModElements;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-import java.util.Map;
-import java.util.HashMap;
-
 import io.netty.buffer.Unpooled;
+
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class ReceptbookItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:receptbook")
 	public static final Item block = null;
+
 	public ReceptbookItem(RagemodModElements instance) {
-		super(instance, 683);
+		super(instance, 689);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -71,6 +71,7 @@ public class ReceptbookItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.COMMON));
@@ -118,15 +119,9 @@ public class ReceptbookItem extends RagemodModElements.ModElement {
 					buf.writeByte(hand == Hand.MAIN_HAND ? 0 : 1);
 				});
 			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ReceptbookRightClickedInAirProcedure.executeProcedure($_dependencies);
-			}
+
+			ReceptbookRightClickedInAirProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return ar;
 		}
 
@@ -155,6 +150,7 @@ public class ReceptbookItem extends RagemodModElements.ModElement {
 
 	private static class InventoryCapability implements ICapabilitySerializable<CompoundNBT> {
 		private final LazyOptional<ItemStackHandler> inventory = LazyOptional.of(this::createItemHandler);
+
 		@Override
 		public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @Nullable Direction side) {
 			return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY ? this.inventory.cast() : LazyOptional.empty();

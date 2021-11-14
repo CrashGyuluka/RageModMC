@@ -25,6 +25,7 @@ public class Mob1Renderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(Mob1Entity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelmob1(), 0.5f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("ragemod:textures/mob1texture2.png");
@@ -45,6 +46,7 @@ public class Mob1Renderer {
 		private final ModelRenderer arm;
 		private final ModelRenderer cube_r2;
 		private final ModelRenderer leg;
+
 		public Modelmob1() {
 			textureWidth = 128;
 			textureHeight = 128;
@@ -95,6 +97,8 @@ public class Mob1Renderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 		}
 	}
+
 }

@@ -28,8 +28,9 @@ import java.util.Collections;
 public class Robtai_2SlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:robtai_block_slab")
 	public static final Block block = null;
+
 	public Robtai_2SlabBlock(RagemodModElements instance) {
-		super(instance, 317);
+		super(instance, 323);
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class Robtai_2SlabBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 2f).setLightLevel(s -> 0).harvestLevel(3)

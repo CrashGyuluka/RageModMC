@@ -14,13 +14,14 @@ import net.mcreator.ragemod.item.RageiumalloyItem;
 @RagemodModElements.ModElement.Tag
 public class RagepotioncraftBrewingRecipe extends RagemodModElements.ModElement {
 	public RagepotioncraftBrewingRecipe(RagemodModElements instance) {
-		super(instance, 754);
+		super(instance, 760);
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BrewingRecipeRegistry.addRecipe(new CustomBrewingRecipe());
 	}
+
 	public static class CustomBrewingRecipe implements IBrewingRecipe {
 		@Override
 		public boolean isInput(ItemStack input) {

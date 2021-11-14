@@ -15,13 +15,13 @@ import net.mcreator.ragemod.procedures.SavkardLivingEntityIsHitWithToolProcedure
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class SavkardItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savkard")
 	public static final Item block = null;
+
 	public SavkardItem(RagemodModElements instance) {
 		super(instance, 28);
 	}
@@ -60,11 +60,8 @@ public class SavkardItem extends RagemodModElements.ModElement {
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				World world = entity.world;
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					SavkardLivingEntityIsHitWithToolProcedure.executeProcedure($_dependencies);
-				}
+
+				SavkardLivingEntityIsHitWithToolProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 				return retval;
 			}
 		}.setRegistryName("savkard"));

@@ -21,6 +21,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class RageflyRightClickedOnEntityProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -52,7 +53,7 @@ public class RageflyRightClickedOnEntityProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((new Object() {
+		if (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
@@ -63,7 +64,7 @@ public class RageflyRightClickedOnEntityProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity))) {
+		}.checkGamemode(entity)) {
 			if (world instanceof ServerWorld) {
 				Entity entityToSpawn = new RageflylitEntity.CustomEntity(RageflylitEntity.entity, (World) world);
 				entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);

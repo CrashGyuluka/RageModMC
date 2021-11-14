@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "ragemod:hegyikowall",
-    "ragemod:polishedhegyikowall",
-    "ragemod:fullhegyikowall",
+    "ragemod:mossyplushegyikowall",
     "ragemod:hegyikoteglawall",
-    "ragemod:mossyplushegyikowall"
+    "ragemod:fullhegyikowall",
+    "ragemod:hegyikowall",
+    "ragemod:polishedhegyikowall"
   ]
 }

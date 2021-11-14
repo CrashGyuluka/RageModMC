@@ -31,8 +31,9 @@ import java.util.Collections;
 public class AlpivpillarBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alpivpillar")
 	public static final Block block = null;
+
 	public AlpivpillarBlock(RagemodModElements instance) {
-		super(instance, 218);
+		super(instance, 224);
 	}
 
 	@Override
@@ -41,8 +42,10 @@ public class AlpivpillarBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 1).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

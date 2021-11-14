@@ -75,6 +75,7 @@ import com.google.common.collect.ImmutableSet;
 public class Dimension1Dimension extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cave_dimension_portal_igniter_portal")
 	public static final CustomPortalBlock portal = null;
+
 	public Dimension1Dimension(RagemodModElements instance) {
 		super(instance, 93);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
@@ -121,8 +122,10 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 		});
 		RenderTypeLookup.setRenderLayer(portal, RenderType.getTranslucent());
 	}
+
 	private static PointOfInterestType poi = null;
 	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("cave_dimension_portal_igniter_portal", Vector3i::compareTo, 300);
+
 	public static class POIRegisterHandler {
 		@SubscribeEvent
 		public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
@@ -132,11 +135,13 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 			ForgeRegistries.POI_TYPES.register(poi);
 		}
 	}
+
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomPortalBlock());
 		elements.items.add(() -> new Dimension1Item().setRegistryName("cave_dimension_portal_igniter"));
 	}
+
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
@@ -159,13 +164,9 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 			}
 		}
 
-		@Override /**
-					 * Update the provided state given the provided neighbor facing and neighbor
-					 * state, returning a new state. For example, fences make their connections to
-					 * the passed in state if possible, and wet concrete powder immediately returns
-					 * its solidified counterpart. Note that this method should ideally consider
-					 * only the specific face passed in.
-					 */
+		@Override /** 
+					* Update the provided state given the provided neighbor facing and neighbor state, returning a new state. For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately returns its solidified counterpart. Note that this method should ideally consider only the specific face passed in.
+					*/
 		public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos,
 				BlockPos facingPos) {
 			Direction.Axis direction$axis = facing.getAxis();
@@ -237,6 +238,7 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 		private BlockPos bottomLeft;
 		private int height;
 		private int width;
+
 		public static Optional<CustomPortalSize> func_242964_a(IWorld world, BlockPos pos, Direction.Axis axis) {
 			return func_242965_a(world, pos, (size) -> {
 				return size.isValid() && size.portalBlockCount == 0;
@@ -412,6 +414,7 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 	public static class TeleporterDimensionMod implements ITeleporter {
 		private final ServerWorld world;
 		private final BlockPos entityEnterPos;
+
 		public TeleporterDimensionMod(ServerWorld worldServer, BlockPos entityEnterPos) {
 			this.world = worldServer;
 			this.entityEnterPos = entityEnterPos;

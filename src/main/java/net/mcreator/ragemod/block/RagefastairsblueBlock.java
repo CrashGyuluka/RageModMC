@@ -24,8 +24,9 @@ import java.util.Collections;
 public class RagefastairsblueBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:blue_ragewood_stairs")
 	public static final Block block = null;
+
 	public RagefastairsblueBlock(RagemodModElements instance) {
-		super(instance, 291);
+		super(instance, 297);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class RagefastairsblueBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0)

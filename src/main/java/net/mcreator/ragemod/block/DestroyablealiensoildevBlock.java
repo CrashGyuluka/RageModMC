@@ -23,8 +23,9 @@ import net.mcreator.ragemod.RagemodModElements;
 public class DestroyablealiensoildevBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:destroyablealiensoildev")
 	public static final Block block = null;
+
 	public DestroyablealiensoildevBlock(RagemodModElements instance) {
-		super(instance, 1266);
+		super(instance, 1272);
 	}
 
 	@Override
@@ -32,6 +33,7 @@ public class DestroyablealiensoildevBlock extends RagemodModElements.ModElement 
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.WET_GRASS).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)

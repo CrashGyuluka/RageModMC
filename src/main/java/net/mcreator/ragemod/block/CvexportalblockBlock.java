@@ -25,6 +25,7 @@ import java.util.Collections;
 public class CvexportalblockBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:cvex_portal_block")
 	public static final Block block = null;
+
 	public CvexportalblockBlock(RagemodModElements instance) {
 		super(instance, 98);
 	}
@@ -34,6 +35,7 @@ public class CvexportalblockBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(7f, 10f).setLightLevel(s -> 0).harvestLevel(2)

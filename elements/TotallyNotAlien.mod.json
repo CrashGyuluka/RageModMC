@@ -72,7 +72,6 @@
     "vanillaTreeType": "Default",
     "treeType": 1,
     "minHeight": 4,
-    "maxWaterDepth": 2,
     "treeStem": {
       "value": "CUSTOM:MarokriksaLog"
     },

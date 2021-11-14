@@ -28,6 +28,7 @@ public class RageiumaromrItem extends RagemodModElements.ModElement {
 	public static final Item legs = null;
 	@ObjectHolder("ragemod:rageiumaromr_boots")
 	public static final Item boots = null;
+
 	public RageiumaromrItem(RagemodModElements instance) {
 		super(instance, 19);
 	}
@@ -101,4 +102,5 @@ public class RageiumaromrItem extends RagemodModElements.ModElement {
 			}
 		}.setRegistryName("rageiumaromr_boots"));
 	}
+
 }

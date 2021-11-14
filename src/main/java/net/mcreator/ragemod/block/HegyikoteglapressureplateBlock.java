@@ -24,8 +24,9 @@ import java.util.Collections;
 public class HegyikoteglapressureplateBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:hegyikoteglapressureplate")
 	public static final Block block = null;
+
 	public HegyikoteglapressureplateBlock(RagemodModElements instance) {
-		super(instance, 253);
+		super(instance, 259);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class HegyikoteglapressureplateBlock extends RagemodModElements.ModElemen
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.MOBS, Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 5f).setLightLevel(s -> 0)

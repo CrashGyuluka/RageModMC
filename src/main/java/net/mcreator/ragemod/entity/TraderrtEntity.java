@@ -59,16 +59,16 @@ import net.mcreator.ragemod.RagemodModElements;
 
 import javax.annotation.Nullable;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class TraderrtEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("traderrt").setRegistryName("traderrt");
+
 	public TraderrtEntity(RagemodModElements instance) {
-		super(instance, 205);
+		super(instance, 211);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TraderrtRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -92,6 +92,7 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 				(entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.down()).getMaterial() == Material.ORGANIC && world.getLightSubtracted(pos, 0) > 8));
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -158,12 +159,9 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				TraderrtOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
-			}
+
+			TraderrtOnInitialEntitySpawnProcedure
+					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build());
 			return retval;
 		}
 
@@ -176,16 +174,9 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("sourceentity", sourceentity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				TraderrtRightClickedOnEntityProcedure.executeProcedure($_dependencies);
-			}
+
+			TraderrtRightClickedOnEntityProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity)
+					.put("sourceentity", sourceentity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return retval;
 		}
 	}

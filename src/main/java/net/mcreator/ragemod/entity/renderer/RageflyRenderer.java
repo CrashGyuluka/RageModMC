@@ -25,6 +25,7 @@ public class RageflyRenderer {
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(RageflyEntity.entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modelragefly_model(), 0.5f) {
+
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("ragemod:textures/ragefly_texture.png");
@@ -41,6 +42,7 @@ public class RageflyRenderer {
 		private final ModelRenderer bb_main;
 		private final ModelRenderer cube_r1;
 		private final ModelRenderer cube_r2;
+
 		public Modelragefly_model() {
 			textureWidth = 16;
 			textureHeight = 16;
@@ -72,8 +74,10 @@ public class RageflyRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.cube_r1.rotateAngleZ = f3 / (180F / (float) Math.PI);
 			this.cube_r2.rotateAngleZ = f3 / (180F / (float) Math.PI);
 		}
 	}
+
 }

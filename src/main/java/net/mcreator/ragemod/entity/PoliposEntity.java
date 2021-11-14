@@ -42,8 +42,9 @@ public class PoliposEntity extends RagemodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(1.6f, 6.5f)).build("polipos").setRegistryName("polipos");
+
 	public PoliposEntity(RagemodModElements instance) {
-		super(instance, 685);
+		super(instance, 691);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PoliposRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
@@ -58,6 +59,7 @@ public class PoliposEntity extends RagemodModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {

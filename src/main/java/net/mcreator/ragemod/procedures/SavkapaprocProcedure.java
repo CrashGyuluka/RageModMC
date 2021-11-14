@@ -47,6 +47,7 @@ public class SavkapaprocProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -78,13 +79,13 @@ public class SavkapaprocProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavkapaItem.block)
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == AlienitehoeItem.block))) {
-			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavkapaItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == AlienitehoeItem.block) {
+			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 0));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -100,10 +101,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 0))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 0))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 0))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 0))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 0));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -119,10 +120,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z + 1))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z + 1))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z + 1))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z + 1))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x + 0), (int) (y + 0), (int) (z + 1));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -138,10 +139,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z - 1))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z - 1))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z - 1))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 0), (int) (z - 1))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x + 0), (int) (y + 0), (int) (z - 1));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -157,10 +158,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 1))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 1))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 1))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 1))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 0), (int) (z + 1));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -176,10 +177,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z - 1))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z - 1))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z - 1))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 0), (int) (z - 1))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 0), (int) (z - 1));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -195,10 +196,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 1))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 1))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 1))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 1))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 0), (int) (z + 1));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();
@@ -214,10 +215,10 @@ public class SavkapaprocProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z - 1))))
-					.getMaterial() == net.minecraft.block.material.Material.EARTH)
-					|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z - 1))))
-							.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z - 1))))
+					.getMaterial() == net.minecraft.block.material.Material.EARTH
+					|| (world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 0), (int) (z - 1))))
+							.getMaterial() == net.minecraft.block.material.Material.ORGANIC) {
 				{
 					BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 0), (int) (z - 1));
 					BlockState _bs = Blocks.FARMLAND.getDefaultState();

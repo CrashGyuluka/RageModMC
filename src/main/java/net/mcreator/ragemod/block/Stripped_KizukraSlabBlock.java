@@ -28,8 +28,9 @@ import java.util.Collections;
 public class Stripped_KizukraSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_kizukra_slab")
 	public static final Block block = null;
+
 	public Stripped_KizukraSlabBlock(RagemodModElements instance) {
-		super(instance, 315);
+		super(instance, 321);
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class Stripped_KizukraSlabBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(4f, 6f).setLightLevel(s -> 0).harvestLevel(2)

@@ -17,13 +17,13 @@ import net.mcreator.ragemod.procedures.SavasoBlockDestroyedWithToolProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class SavasoItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:savaso")
 	public static final Item block = null;
+
 	public SavasoItem(RagemodModElements instance) {
 		super(instance, 31);
 	}
@@ -61,11 +61,8 @@ public class SavasoItem extends RagemodModElements.ModElement {
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					SavasoBlockDestroyedWithToolProcedure.executeProcedure($_dependencies);
-				}
+
+				SavasoBlockDestroyedWithToolProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 				return retval;
 			}
 		}.setRegistryName("savaso"));

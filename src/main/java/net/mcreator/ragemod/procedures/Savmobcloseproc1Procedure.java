@@ -25,6 +25,7 @@ import java.util.Comparator;
 import java.util.Collection;
 
 public class Savmobcloseproc1Procedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -38,7 +39,7 @@ public class Savmobcloseproc1Procedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((true) == (world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule))) && ((!(new Object() {
+		if (true == world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule) && !(new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -49,7 +50,7 @@ public class Savmobcloseproc1Procedure {
 				}
 				return false;
 			}
-		}.check(entity))) && ((new Object() {
+		}.check(entity)) && (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
@@ -60,7 +61,7 @@ public class Savmobcloseproc1Procedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)) || (new Object() {
+		}.checkGamemode(entity) || new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
@@ -71,8 +72,8 @@ public class Savmobcloseproc1Procedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity)))))) {
-			if (((((Entity) world
+		}.checkGamemode(entity))) {
+			if (((Entity) world
 					.getEntitiesWithinAABB(Mob1Entity.CustomEntity.class,
 							new AxisAlignedBB((entity.getPosX()) - (2 / 2d), (entity.getPosY()) - (2 / 2d), (entity.getPosZ()) - (2 / 2d),
 									(entity.getPosX()) + (2 / 2d), (entity.getPosY()) + (2 / 2d), (entity.getPosZ()) + (2 / 2d)),
@@ -81,8 +82,7 @@ public class Savmobcloseproc1Procedure {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 						}
-					}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null)
-					|| (((Entity) world
+					}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null || ((Entity) world
 							.getEntitiesWithinAABB(SavragerobiEntity.CustomEntity.class,
 									new AxisAlignedBB((entity.getPosX()) - (2 / 2d), (entity.getPosY()) - (2 / 2d), (entity.getPosZ()) - (2 / 2d),
 											(entity.getPosX()) + (2 / 2d), (entity.getPosY()) + (2 / 2d), (entity.getPosZ()) + (2 / 2d)),
@@ -91,7 +91,7 @@ public class Savmobcloseproc1Procedure {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 								}
-							}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null))) {
+							}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null) {
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 1, (false), (false)));
 				if (entity instanceof LivingEntity)

@@ -26,8 +26,9 @@ import java.util.Collections;
 public class SequoiaLeavesBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:sequoia_leaves")
 	public static final Block block = null;
+
 	public SequoiaLeavesBlock(RagemodModElements instance) {
-		super(instance, 408);
+		super(instance, 414);
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class SequoiaLeavesBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.2f).setLightLevel(s -> 0).notSolid());

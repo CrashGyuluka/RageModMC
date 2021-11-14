@@ -19,6 +19,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class TrofeaItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:trofea")
 	public static final Item block = null;
+
 	public TrofeaItem(RagemodModElements instance) {
 		super(instance, 14);
 	}
@@ -27,10 +28,13 @@ public class TrofeaItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC)
-					.food((new Food.Builder()).hunger(30).saturation(0f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(30).saturation(0f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("trofea");
 		}
 

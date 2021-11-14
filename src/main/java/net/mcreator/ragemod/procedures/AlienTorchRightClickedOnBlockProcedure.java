@@ -20,6 +20,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlienTorchRightClickedOnBlockProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("direction") == null) {
 			if (!dependencies.containsKey("direction"))
@@ -51,9 +52,9 @@ public class AlienTorchRightClickedOnBlockProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((direction == Direction.UP)) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR)
-					|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR))) {
+		if (direction == Direction.UP) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR
+					|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR) {
 				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), AlienTorchFloorBlock.block.getDefaultState(), 3);
 				if (world instanceof World && !world.isRemote()) {
 					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
@@ -65,9 +66,9 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
-		} else if ((direction == Direction.NORTH)) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR)
-					|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CAVE_AIR))) {
+		} else if (direction == Direction.NORTH) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR
+					|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CAVE_AIR) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), AlienWalltorchBlock.block.getDefaultState(), 3);
 				try {
 					BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)));
@@ -90,9 +91,9 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
-		} else if ((direction == Direction.SOUTH)) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR)
-					|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CAVE_AIR))) {
+		} else if (direction == Direction.SOUTH) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR
+					|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CAVE_AIR) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), AlienWalltorchBlock.block.getDefaultState(), 3);
 				try {
 					BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)));
@@ -115,9 +116,9 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
-		} else if ((direction == Direction.WEST)) {
-			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR)
-					|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR))) {
+		} else if (direction == Direction.WEST) {
+			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR
+					|| (world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR) {
 				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), AlienWalltorchBlock.block.getDefaultState(), 3);
 				try {
 					BlockState _bs = world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z));
@@ -140,9 +141,9 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
-		} else if ((direction == Direction.EAST)) {
-			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR)
-					|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR))) {
+		} else if (direction == Direction.EAST) {
+			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR
+					|| (world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR) {
 				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), AlienWalltorchBlock.block.getDefaultState(), 3);
 				try {
 					BlockState _bs = world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z));

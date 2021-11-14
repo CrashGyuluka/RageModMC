@@ -28,8 +28,9 @@ import java.util.Collections;
 public class BukkSlabBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_slab")
 	public static final Block block = null;
+
 	public BukkSlabBlock(RagemodModElements instance) {
-		super(instance, 313);
+		super(instance, 319);
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class BukkSlabBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(2)

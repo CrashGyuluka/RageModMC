@@ -29,8 +29,9 @@ import java.util.Collections;
 public class BukkplanksprplBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:beech_pressure_plate")
 	public static final Block block = null;
+
 	public BukkplanksprplBlock(RagemodModElements instance) {
-		super(instance, 380);
+		super(instance, 386);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class BukkplanksprplBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f)

@@ -25,8 +25,9 @@ import java.util.Collections;
 public class ChiseledalpivBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:chiseled_alpiv")
 	public static final Block block = null;
+
 	public ChiseledalpivBlock(RagemodModElements instance) {
-		super(instance, 217);
+		super(instance, 223);
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class ChiseledalpivBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).setLightLevel(s -> 5).harvestLevel(2)

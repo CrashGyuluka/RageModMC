@@ -14,6 +14,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class SavasrageiumalloyblockOnBlockRightClickedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))

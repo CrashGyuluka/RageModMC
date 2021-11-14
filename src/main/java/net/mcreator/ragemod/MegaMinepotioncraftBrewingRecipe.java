@@ -14,13 +14,14 @@ import net.mcreator.ragemod.item.CursedalieniteItem;
 @RagemodModElements.ModElement.Tag
 public class MegaMinepotioncraftBrewingRecipe extends RagemodModElements.ModElement {
 	public MegaMinepotioncraftBrewingRecipe(RagemodModElements instance) {
-		super(instance, 1281);
+		super(instance, 1287);
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BrewingRecipeRegistry.addRecipe(new CustomBrewingRecipe());
 	}
+
 	public static class CustomBrewingRecipe implements IBrewingRecipe {
 		@Override
 		public boolean isInput(ItemStack input) {

@@ -25,6 +25,7 @@ import java.util.Collections;
 public class ObszontiumvarazsloBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:magicis_obsontium")
 	public static final Block block = null;
+
 	public ObszontiumvarazsloBlock(RagemodModElements instance) {
 		super(instance, 94);
 	}
@@ -34,6 +35,7 @@ public class ObszontiumvarazsloBlock extends RagemodModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(4f, 20f).setLightLevel(s -> 0).harvestLevel(1)

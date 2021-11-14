@@ -24,8 +24,9 @@ import java.util.Collections;
 public class Ragefaslab8Block extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:better_stripped_ragewood_stairs")
 	public static final Block block = null;
+
 	public Ragefaslab8Block(RagemodModElements instance) {
-		super(instance, 290);
+		super(instance, 296);
 	}
 
 	@Override
@@ -34,6 +35,7 @@ public class Ragefaslab8Block extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0)

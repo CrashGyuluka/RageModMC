@@ -29,8 +29,9 @@ import java.util.Collections;
 public class BukkstrprplBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:stripped_beech_block_pressure_plate")
 	public static final Block block = null;
+
 	public BukkstrprplBlock(RagemodModElements instance) {
-		super(instance, 379);
+		super(instance, 385);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class BukkstrprplBlock extends RagemodModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(3f, 4f)

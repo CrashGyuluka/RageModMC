@@ -21,8 +21,9 @@ import net.mcreator.ragemod.RagemodModElements;
 public class CoveredaliengrassBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:covered_alien_soil")
 	public static final Block block = null;
+
 	public CoveredaliengrassBlock(RagemodModElements instance) {
-		super(instance, 191);
+		super(instance, 197);
 	}
 
 	@Override
@@ -31,6 +32,7 @@ public class CoveredaliengrassBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.WET_GRASS).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)

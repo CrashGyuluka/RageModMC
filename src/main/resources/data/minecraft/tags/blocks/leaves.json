@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "ragemod:rage_fa_leaves",
-    "ragemod:bukk_leaves",
-    "ragemod:kizukra_leaves",
-    "ragemod:robtai_leaves",
-    "ragemod:marokriksa_leaves",
-    "ragemod:sequoia_leaves",
     "ragemod:yellow_glowing_oak_leaves",
+    "ragemod:marokriksa_leaves",
     "ragemod:brown_glowing_oak_leaves",
+    "ragemod:rage_fa_leaves",
+    "ragemod:kizukra_leaves",
+    "ragemod:red_glowing_oak_leaves",
+    "ragemod:sequoia_leaves",
     "ragemod:green_glowing_oak_leaves",
-    "ragemod:red_glowing_oak_leaves"
+    "ragemod:robtai_leaves",
+    "ragemod:bukk_leaves"
   ]
 }

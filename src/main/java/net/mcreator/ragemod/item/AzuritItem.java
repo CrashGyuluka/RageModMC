@@ -15,6 +15,7 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AzuritItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:azurit")
 	public static final Item block = null;
+
 	public AzuritItem(RagemodModElements instance) {
 		super(instance, 37);
 	}
@@ -23,6 +24,7 @@ public class AzuritItem extends RagemodModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

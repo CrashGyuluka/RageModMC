@@ -21,8 +21,9 @@ import net.mcreator.ragemod.RagemodModElements;
 public class AliendirtBlock extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:alien_dirt")
 	public static final Block block = null;
+
 	public AliendirtBlock(RagemodModElements instance) {
-		super(instance, 190);
+		super(instance, 196);
 	}
 
 	@Override
@@ -31,6 +32,7 @@ public class AliendirtBlock extends RagemodModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)

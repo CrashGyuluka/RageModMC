@@ -17,6 +17,7 @@ import net.mcreator.ragemod.RagemodMod;
 import java.util.Map;
 
 public class AlienTorchFloorNeighbourBlockChangesProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -42,8 +43,8 @@ public class AlienTorchFloorNeighbourBlockChangesProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienWalltorchBlock.block)) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR) && ((new Object() {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienWalltorchBlock.block) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
 					try {
 						BlockState _bs = world.getBlockState(pos);
@@ -57,13 +58,13 @@ public class AlienTorchFloorNeighbourBlockChangesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH))) {
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH) {
 				if (world instanceof World) {
 					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR) && ((new Object() {
+			} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
 					try {
 						BlockState _bs = world.getBlockState(pos);
@@ -77,13 +78,13 @@ public class AlienTorchFloorNeighbourBlockChangesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH))) {
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH) {
 				if (world instanceof World) {
 					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR) && ((new Object() {
+			} else if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
 					try {
 						BlockState _bs = world.getBlockState(pos);
@@ -97,13 +98,13 @@ public class AlienTorchFloorNeighbourBlockChangesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST))) {
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST) {
 				if (world instanceof World) {
 					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR) && ((new Object() {
+			} else if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
 					try {
 						BlockState _bs = world.getBlockState(pos);
@@ -117,15 +118,15 @@ public class AlienTorchFloorNeighbourBlockChangesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST))) {
+			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST) {
 				if (world instanceof World) {
 					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
 			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienTorchFloorBlock.block)) {
-			if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR)) {
+		} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienTorchFloorBlock.block) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR) {
 				if (world instanceof World) {
 					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));

@@ -17,13 +17,13 @@ import net.mcreator.ragemod.procedures.MegasavcsakaknyBlockDestroyedWithToolProc
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class MegasavcsakaknyItem extends RagemodModElements.ModElement {
 	@ObjectHolder("ragemod:megasavcsakakny")
 	public static final Item block = null;
+
 	public MegasavcsakaknyItem(RagemodModElements instance) {
 		super(instance, 75);
 	}
@@ -61,15 +61,9 @@ public class MegasavcsakaknyItem extends RagemodModElements.ModElement {
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					MegasavcsakaknyBlockDestroyedWithToolProcedure.executeProcedure($_dependencies);
-				}
+
+				MegasavcsakaknyBlockDestroyedWithToolProcedure.executeProcedure(
+						ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 				return retval;
 			}
 		}.setRegistryName("megasavcsakakny"));

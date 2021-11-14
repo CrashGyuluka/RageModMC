@@ -72,7 +72,6 @@
     "vanillaTreeType": "Birch trees",
     "treeType": 1,
     "minHeight": 6,
-    "maxWaterDepth": 0,
     "treeStem": {
       "value": "CUSTOM:Savaslog"
     },

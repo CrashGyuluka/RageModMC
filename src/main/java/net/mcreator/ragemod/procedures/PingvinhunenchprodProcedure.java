@@ -45,6 +45,7 @@ public class PingvinhunenchprodProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -60,10 +61,8 @@ public class PingvinhunenchprodProcedure {
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		double enchantLevel = 0;
 		enchantLevel = (double) (EnchantmentHelper.getEnchantmentLevel(PingvinhunenchantEnchantment.enchantment,
-				((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-						: ItemStack.EMPTY)));
-		if ((enchantLevel > 0)) {
+				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)));
+		if (enchantLevel > 0) {
 			sourceentity.setMotion(0, (2 + enchantLevel), 0);
 		}
 	}
