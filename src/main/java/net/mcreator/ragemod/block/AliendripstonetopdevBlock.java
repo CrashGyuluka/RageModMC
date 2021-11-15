@@ -63,7 +63,7 @@ public class AliendripstonetopdevBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AliendripstonetopdevBlock(RagemodModElements instance) {
-		super(instance, 1401);
+		super(instance, 1400);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

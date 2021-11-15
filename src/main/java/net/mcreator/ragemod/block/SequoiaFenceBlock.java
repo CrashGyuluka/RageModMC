@@ -29,7 +29,7 @@ public class SequoiaFenceBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SequoiaFenceBlock(RagemodModElements instance) {
-		super(instance, 347);
+		super(instance, 346);
 	}
 
 	@Override

@@ -30,7 +30,7 @@ public class Kizukra_BlockFenceBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Kizukra_BlockFenceBlock(RagemodModElements instance) {
-		super(instance, 338);
+		super(instance, 337);
 	}
 
 	@Override

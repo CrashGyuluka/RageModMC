@@ -44,7 +44,7 @@ public class AmazonitoreBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AmazonitoreBlock(RagemodModElements instance) {
-		super(instance, 58);
+		super(instance, 57);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

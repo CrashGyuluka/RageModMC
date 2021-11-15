@@ -38,7 +38,7 @@ public class BukkmeadowfordimensionBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public BukkmeadowfordimensionBiome(RagemodModElements instance) {
-		super(instance, 1248);
+		super(instance, 1247);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

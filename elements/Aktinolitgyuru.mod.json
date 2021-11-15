@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "aktinolit_gyuru",
+    "texture": "aktinolit_ring",
     "customModelName": "Normal",
     "name": "Aktinolite Ring",
     "rarity": "COMMON",

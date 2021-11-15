@@ -64,7 +64,7 @@ public class Str7Structure {
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("ragemod", "str7"));
+									.getTemplateDefaulted(new ResourceLocation("ragemod", "a_air_relic_structure"));
 							if (template == null)
 								return false;
 							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

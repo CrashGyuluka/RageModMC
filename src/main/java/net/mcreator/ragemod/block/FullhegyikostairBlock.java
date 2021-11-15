@@ -26,7 +26,7 @@ public class FullhegyikostairBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public FullhegyikostairBlock(RagemodModElements instance) {
-		super(instance, 239);
+		super(instance, 238);
 	}
 
 	@Override

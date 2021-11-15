@@ -46,7 +46,7 @@ public class SequoiaSaplingBlock extends RagemodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public SequoiaSaplingBlock(RagemodModElements instance) {
-		super(instance, 408);
+		super(instance, 407);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

@@ -27,7 +27,7 @@ public class MegaMinePotion2Item extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public MegaMinePotion2Item(RagemodModElements instance) {
-		super(instance, 109);
+		super(instance, 108);
 	}
 
 	@Override

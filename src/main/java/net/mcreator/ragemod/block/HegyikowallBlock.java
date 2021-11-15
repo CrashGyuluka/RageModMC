@@ -61,7 +61,7 @@ public class HegyikowallBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public HegyikowallBlock(RagemodModElements instance) {
-		super(instance, 248);
+		super(instance, 247);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

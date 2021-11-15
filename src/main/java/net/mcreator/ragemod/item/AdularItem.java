@@ -17,7 +17,7 @@ public class AdularItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AdularItem(RagemodModElements instance) {
-		super(instance, 39);
+		super(instance, 38);
 	}
 
 	@Override

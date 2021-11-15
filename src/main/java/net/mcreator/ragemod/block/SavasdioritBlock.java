@@ -57,7 +57,7 @@ public class SavasdioritBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SavasdioritBlock(RagemodModElements instance) {
-		super(instance, 154);
+		super(instance, 153);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

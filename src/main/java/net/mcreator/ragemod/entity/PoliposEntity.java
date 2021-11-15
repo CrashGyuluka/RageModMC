@@ -44,7 +44,7 @@ public class PoliposEntity extends RagemodModElements.ModElement {
 			.size(1.6f, 6.5f)).build("polipos").setRegistryName("polipos");
 
 	public PoliposEntity(RagemodModElements instance) {
-		super(instance, 691);
+		super(instance, 690);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PoliposRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

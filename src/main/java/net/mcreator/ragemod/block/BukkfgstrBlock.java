@@ -31,7 +31,7 @@ public class BukkfgstrBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BukkfgstrBlock(RagemodModElements instance) {
-		super(instance, 354);
+		super(instance, 353);
 	}
 
 	@Override

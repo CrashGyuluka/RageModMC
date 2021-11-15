@@ -27,7 +27,7 @@ public class HegyikoslabBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public HegyikoslabBlock(RagemodModElements instance) {
-		super(instance, 242);
+		super(instance, 241);
 	}
 
 	@Override

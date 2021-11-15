@@ -14,7 +14,7 @@ import net.mcreator.ragemod.item.CursedalieniteItem;
 @RagemodModElements.ModElement.Tag
 public class MegaMinepotioncraftBrewingRecipe extends RagemodModElements.ModElement {
 	public MegaMinepotioncraftBrewingRecipe(RagemodModElements instance) {
-		super(instance, 1287);
+		super(instance, 1286);
 	}
 
 	@Override

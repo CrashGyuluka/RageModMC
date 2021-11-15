@@ -36,7 +36,7 @@ public class AlienlampBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlienlampBlock(RagemodModElements instance) {
-		super(instance, 226);
+		super(instance, 225);
 	}
 
 	@Override

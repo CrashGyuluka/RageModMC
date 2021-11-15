@@ -28,7 +28,7 @@ public class YellowOakLeavesBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public YellowOakLeavesBlock(RagemodModElements instance) {
-		super(instance, 417);
+		super(instance, 416);
 	}
 
 	@Override

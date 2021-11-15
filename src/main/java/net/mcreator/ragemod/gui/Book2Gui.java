@@ -38,7 +38,7 @@ public class Book2Gui extends RagemodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public Book2Gui(RagemodModElements instance) {
-		super(instance, 683);
+		super(instance, 682);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

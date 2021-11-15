@@ -23,7 +23,7 @@ public class AliendirtBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AliendirtBlock(RagemodModElements instance) {
-		super(instance, 196);
+		super(instance, 195);
 	}
 
 	@Override

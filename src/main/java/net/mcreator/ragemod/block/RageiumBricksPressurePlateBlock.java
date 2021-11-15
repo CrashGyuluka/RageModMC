@@ -38,7 +38,7 @@ public class RageiumBricksPressurePlateBlock extends RagemodModElements.ModEleme
 	public static final Block block = null;
 
 	public RageiumBricksPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 118);
+		super(instance, 117);
 	}
 
 	@Override
@@ -59,11 +59,6 @@ public class RageiumBricksPressurePlateBlock extends RagemodModElements.ModEleme
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Thank you Lyof! :D"));
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
 		}
 
 		@Override

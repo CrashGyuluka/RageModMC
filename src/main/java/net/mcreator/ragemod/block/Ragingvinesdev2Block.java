@@ -57,7 +57,7 @@ public class Ragingvinesdev2Block extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Ragingvinesdev2Block(RagemodModElements instance) {
-		super(instance, 1395);
+		super(instance, 1394);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -51,7 +51,7 @@ public class RageiumBrickWallBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RageiumBrickWallBlock(RagemodModElements instance) {
-		super(instance, 117);
+		super(instance, 116);
 	}
 
 	@Override
@@ -211,11 +211,6 @@ public class RageiumBrickWallBlock extends RagemodModElements.ModElement {
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Thank you Lyof! :D"));
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
 		}
 
 		@Override

@@ -27,7 +27,7 @@ public class BukkslabstrBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BukkslabstrBlock(RagemodModElements instance) {
-		super(instance, 318);
+		super(instance, 317);
 	}
 
 	@Override

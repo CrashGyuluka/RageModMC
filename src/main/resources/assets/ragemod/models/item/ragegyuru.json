@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/b_rage_gyuru"
+    "layer0": "ragemod:items/rageium_ring"
   }
 }

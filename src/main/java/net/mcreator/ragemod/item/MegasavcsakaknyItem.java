@@ -25,7 +25,7 @@ public class MegasavcsakaknyItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public MegasavcsakaknyItem(RagemodModElements instance) {
-		super(instance, 75);
+		super(instance, 74);
 	}
 
 	@Override

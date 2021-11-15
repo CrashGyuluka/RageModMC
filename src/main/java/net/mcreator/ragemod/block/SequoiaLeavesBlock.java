@@ -28,7 +28,7 @@ public class SequoiaLeavesBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SequoiaLeavesBlock(RagemodModElements instance) {
-		super(instance, 414);
+		super(instance, 413);
 	}
 
 	@Override

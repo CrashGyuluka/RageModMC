@@ -28,7 +28,7 @@ public class KizukraPlanksBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public KizukraPlanksBlock(RagemodModElements instance) {
-		super(instance, 290);
+		super(instance, 289);
 	}
 
 	@Override

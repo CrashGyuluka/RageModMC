@@ -40,7 +40,7 @@ public class GlowingOakForestBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public GlowingOakForestBiome(RagemodModElements instance) {
-		super(instance, 1462);
+		super(instance, 1461);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

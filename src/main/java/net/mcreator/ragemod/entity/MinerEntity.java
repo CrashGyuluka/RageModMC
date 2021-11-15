@@ -64,7 +64,7 @@ public class MinerEntity extends RagemodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("miner").setRegistryName("miner");
 
 	public MinerEntity(RagemodModElements instance) {
-		super(instance, 73);
+		super(instance, 72);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new MinerRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

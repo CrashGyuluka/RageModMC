@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "detonator",
+    "texture": "detonator_new",
     "customModelName": "Normal",
     "name": "Detonator",
     "rarity": "COMMON",

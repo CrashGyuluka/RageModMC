@@ -32,7 +32,7 @@ public class ParkfelplusBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public ParkfelplusBlock(RagemodModElements instance) {
-		super(instance, 121);
+		super(instance, 120);
 	}
 
 	@Override

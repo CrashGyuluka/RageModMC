@@ -54,7 +54,7 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 			.size(0.6f, 2.8f)).build("savragerobi").setRegistryName("savragerobi");
 
 	public SavragerobiEntity(RagemodModElements instance) {
-		super(instance, 72);
+		super(instance, 71);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SavragerobiRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

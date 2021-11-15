@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "b_adular_gyuru",
+    "texture": "adular_ring",
     "customModelName": "Normal",
     "name": "Adular Ring",
     "rarity": "COMMON",

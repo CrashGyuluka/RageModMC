@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "b_anapait_gyuru",
+    "texture": "anapait_ring",
     "customModelName": "Normal",
     "name": "Anapaite Ring",
     "rarity": "COMMON",

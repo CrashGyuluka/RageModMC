@@ -17,7 +17,7 @@ public class AmazonitrtItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AmazonitrtItem(RagemodModElements instance) {
-		super(instance, 43);
+		super(instance, 42);
 	}
 
 	@Override

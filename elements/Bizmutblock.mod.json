@@ -33,7 +33,9 @@
       }
     ],
     "name": "Bizmuth Block",
-    "specialInfo": [],
+    "specialInfo": [
+      "IT IS NOT LGBT BLOCK!"
+    ],
     "hardness": 4.0,
     "resistance": 20.0,
     "hasGravity": false,
@@ -58,6 +60,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -75,6 +80,21 @@
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "METAL"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,

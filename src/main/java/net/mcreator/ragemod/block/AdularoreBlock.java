@@ -44,7 +44,7 @@ public class AdularoreBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AdularoreBlock(RagemodModElements instance) {
-		super(instance, 51);
+		super(instance, 50);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

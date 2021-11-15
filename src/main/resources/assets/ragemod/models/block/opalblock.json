@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/opal_block4",
-    "up": "ragemod:blocks/opal_block4",
-    "north": "ragemod:blocks/opal_block4",
-    "east": "ragemod:blocks/opal_block4",
-    "south": "ragemod:blocks/opal_block4",
-    "west": "ragemod:blocks/opal_block4",
-    "particle": "ragemod:blocks/opal_block4"
+    "down": "ragemod:blocks/opal_block5",
+    "up": "ragemod:blocks/opal_block5",
+    "north": "ragemod:blocks/opal_block5",
+    "east": "ragemod:blocks/opal_block5",
+    "south": "ragemod:blocks/opal_block5",
+    "west": "ragemod:blocks/opal_block5",
+    "particle": "ragemod:blocks/opal_block5"
   }
 }

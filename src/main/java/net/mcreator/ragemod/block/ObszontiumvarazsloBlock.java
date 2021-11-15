@@ -27,7 +27,7 @@ public class ObszontiumvarazsloBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public ObszontiumvarazsloBlock(RagemodModElements instance) {
-		super(instance, 94);
+		super(instance, 93);
 	}
 
 	@Override

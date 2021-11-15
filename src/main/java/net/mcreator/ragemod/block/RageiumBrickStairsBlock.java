@@ -38,7 +38,7 @@ public class RageiumBrickStairsBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RageiumBrickStairsBlock(RagemodModElements instance) {
-		super(instance, 115);
+		super(instance, 114);
 	}
 
 	@Override
@@ -61,11 +61,6 @@ public class RageiumBrickStairsBlock extends RagemodModElements.ModElement {
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Thank you Lyof! :D"));
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
 		}
 
 		@Override

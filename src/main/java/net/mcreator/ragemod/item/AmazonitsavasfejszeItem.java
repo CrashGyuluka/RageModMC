@@ -18,7 +18,7 @@ public class AmazonitsavasfejszeItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AmazonitsavasfejszeItem(RagemodModElements instance) {
-		super(instance, 76);
+		super(instance, 75);
 	}
 
 	@Override

@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 5,
+    "recipeRetstackSize": 3,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -22,7 +22,7 @@
         "value": "CUSTOM:Diamondnuget"
       },
       {
-        "value": "Items.NETHERITE_SCRAP"
+        "value": "Items.COAL#0"
       },
       {
         "value": "CUSTOM:Diamondnuget"

@@ -44,7 +44,7 @@ public class BizmutoreBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BizmutoreBlock(RagemodModElements instance) {
-		super(instance, 60);
+		super(instance, 59);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

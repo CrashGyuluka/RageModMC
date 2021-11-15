@@ -18,7 +18,7 @@ public class LifeStealerEnchantment extends RagemodModElements.ModElement {
 	public static final Enchantment enchantment = null;
 
 	public LifeStealerEnchantment(RagemodModElements instance) {
-		super(instance, 1459);
+		super(instance, 1458);
 	}
 
 	@Override

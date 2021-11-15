@@ -46,7 +46,7 @@ public class AlienWalltorchBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlienWalltorchBlock(RagemodModElements instance) {
-		super(instance, 1345);
+		super(instance, 1344);
 	}
 
 	@Override

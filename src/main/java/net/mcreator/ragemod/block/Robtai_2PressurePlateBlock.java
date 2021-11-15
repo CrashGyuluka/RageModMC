@@ -29,7 +29,7 @@ public class Robtai_2PressurePlateBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Robtai_2PressurePlateBlock(RagemodModElements instance) {
-		super(instance, 390);
+		super(instance, 389);
 	}
 
 	@Override

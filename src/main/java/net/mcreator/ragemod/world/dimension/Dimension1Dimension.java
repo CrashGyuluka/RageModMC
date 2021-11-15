@@ -77,7 +77,7 @@ public class Dimension1Dimension extends RagemodModElements.ModElement {
 	public static final CustomPortalBlock portal = null;
 
 	public Dimension1Dimension(RagemodModElements instance) {
-		super(instance, 93);
+		super(instance, 92);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

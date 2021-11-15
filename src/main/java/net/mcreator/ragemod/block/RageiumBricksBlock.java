@@ -37,7 +37,7 @@ public class RageiumBricksBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RageiumBricksBlock(RagemodModElements instance) {
-		super(instance, 114);
+		super(instance, 113);
 	}
 
 	@Override

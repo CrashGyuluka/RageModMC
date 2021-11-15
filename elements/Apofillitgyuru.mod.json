@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "b_apofillit_gyuru",
+    "texture": "apofillit_ring",
     "customModelName": "Normal",
     "name": "Apophyllite Ring",
     "rarity": "COMMON",

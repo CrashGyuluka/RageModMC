@@ -17,7 +17,7 @@ public class EarthItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public EarthItem(RagemodModElements instance) {
-		super(instance, 12);
+		super(instance, 13);
 	}
 
 	@Override

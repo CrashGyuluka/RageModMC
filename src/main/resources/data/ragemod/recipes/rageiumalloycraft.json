@@ -20,7 +20,7 @@
       "item": "ragemod:diamondnuget"
     },
     "4": {
-      "item": "minecraft:netherite_scrap"
+      "item": "minecraft:coal"
     },
     "5": {
       "item": "ragemod:diamondnuget"
@@ -37,6 +37,6 @@
   },
   "result": {
     "item": "ragemod:rageiumalloy",
-    "count": 5
+    "count": 3
   }
 }

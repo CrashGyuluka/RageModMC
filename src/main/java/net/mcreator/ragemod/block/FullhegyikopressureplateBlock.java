@@ -26,7 +26,7 @@ public class FullhegyikopressureplateBlock extends RagemodModElements.ModElement
 	public static final Block block = null;
 
 	public FullhegyikopressureplateBlock(RagemodModElements instance) {
-		super(instance, 257);
+		super(instance, 256);
 	}
 
 	@Override

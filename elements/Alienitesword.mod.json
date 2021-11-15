@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "alienite_sword1",
+    "texture": "alienite_sword_2_",
     "customModelName": "Normal",
     "name": "Alienite Sword",
     "specialInfo": [],

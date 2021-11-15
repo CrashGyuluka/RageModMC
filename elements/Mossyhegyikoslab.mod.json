@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "hegyiko_2",
-    "textureTop": "hegyiko_2",
+    "texture": "mountain_stone_mossy",
+    "textureTop": "mountain_stone_mossy",
     "textureLeft": "",
-    "textureFront": "hegyiko_2",
+    "textureFront": "mountain_stone_mossy",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,

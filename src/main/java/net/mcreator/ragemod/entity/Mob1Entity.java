@@ -53,7 +53,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("toxic_mob").setRegistryName("toxic_mob");
 
 	public Mob1Entity(RagemodModElements instance) {
-		super(instance, 36);
+		super(instance, 35);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Mob1Renderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

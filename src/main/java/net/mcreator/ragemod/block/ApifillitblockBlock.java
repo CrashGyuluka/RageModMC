@@ -34,7 +34,7 @@ public class ApifillitblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public ApifillitblockBlock(RagemodModElements instance) {
-		super(instance, 69);
+		super(instance, 68);
 	}
 
 	@Override

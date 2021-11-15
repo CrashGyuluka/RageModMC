@@ -18,7 +18,7 @@ public class AmazsavkardItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AmazsavkardItem(RagemodModElements instance) {
-		super(instance, 74);
+		super(instance, 73);
 	}
 
 	@Override

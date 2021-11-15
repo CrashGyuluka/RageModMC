@@ -65,7 +65,7 @@ public class Alienfloatingisland1Structure {
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("ragemod", "alien_floating_island"));
+									.getTemplateDefaulted(new ResourceLocation("ragemod", "flying_island_alien_2"));
 							if (template == null)
 								return false;
 							template.func_237144_a_(world, spawnTo,

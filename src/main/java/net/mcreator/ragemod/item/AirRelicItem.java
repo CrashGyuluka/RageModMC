@@ -17,7 +17,7 @@ public class AirRelicItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AirRelicItem(RagemodModElements instance) {
-		super(instance, 1513);
+		super(instance, 12);
 	}
 
 	@Override

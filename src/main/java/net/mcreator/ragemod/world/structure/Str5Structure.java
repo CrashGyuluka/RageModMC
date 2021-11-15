@@ -59,7 +59,7 @@ public class Str5Structure {
 							j -= 1;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + -2, j + -4, k + -2);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
@@ -84,6 +84,31 @@ public class Str5Structure {
 
 	@SubscribeEvent
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("ice_spikes").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("cold_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("deep_cold_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("deep_frozen_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("deep_lukewarm_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("deep_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("deep_warm_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("frozen_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("lukewarm_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("warm_ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
 	}
 }

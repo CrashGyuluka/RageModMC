@@ -29,7 +29,7 @@ public class Stripped_KizukraStairsBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Stripped_KizukraStairsBlock(RagemodModElements instance) {
-		super(instance, 303);
+		super(instance, 302);
 	}
 
 	@Override

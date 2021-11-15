@@ -44,7 +44,7 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public CvexoreBlock(RagemodModElements instance) {
-		super(instance, 95);
+		super(instance, 94);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -80,6 +80,10 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.STONE)
 				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.NETHERRACK)
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.END_STONE)
+				blockCriteria = true;
 			return blockCriteria;
 		}
 
@@ -97,16 +101,19 @@ public class CvexoreBlock extends RagemodModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-							new ResourceLocation("ragemod:cave_dimension_portal_igniter")))
+					if (dimensionType == World.OVERWORLD)
+						dimensionCriteria = true;
+					if (dimensionType == World.THE_NETHER)
+						dimensionCriteria = true;
+					if (dimensionType == World.THE_END)
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(200)
-					.square().func_242731_b(5);
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 2)).range(200)
+					.square().func_242731_b(3);
 			event.getRegistry().register(feature.setRegistryName("cvex_ore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("ragemod:cvex_ore"), configuredFeature);
 		}

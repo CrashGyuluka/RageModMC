@@ -44,7 +44,7 @@ public class OpaloreBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public OpaloreBlock(RagemodModElements instance) {
-		super(instance, 61);
+		super(instance, 60);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

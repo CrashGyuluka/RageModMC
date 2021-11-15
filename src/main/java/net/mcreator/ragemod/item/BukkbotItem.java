@@ -17,7 +17,7 @@ public class BukkbotItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public BukkbotItem(RagemodModElements instance) {
-		super(instance, 398);
+		super(instance, 397);
 	}
 
 	@Override

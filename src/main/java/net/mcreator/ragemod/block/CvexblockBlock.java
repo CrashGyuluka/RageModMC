@@ -35,7 +35,7 @@ public class CvexblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public CvexblockBlock(RagemodModElements instance) {
-		super(instance, 97);
+		super(instance, 96);
 	}
 
 	@Override

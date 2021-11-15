@@ -9,9 +9,9 @@
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": -2,
-    "spawnXOffset": -2,
-    "spawnZOffset": -2,
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
     "spawnWorldTypes": [
       "Surface"
     ],

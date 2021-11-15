@@ -17,7 +17,7 @@ public class ElderberryflowerItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public ElderberryflowerItem(RagemodModElements instance) {
-		super(instance, 192);
+		super(instance, 191);
 	}
 
 	@Override

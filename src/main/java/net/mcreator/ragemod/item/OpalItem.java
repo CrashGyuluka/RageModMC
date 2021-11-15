@@ -17,7 +17,7 @@ public class OpalItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public OpalItem(RagemodModElements instance) {
-		super(instance, 46);
+		super(instance, 45);
 	}
 
 	@Override
