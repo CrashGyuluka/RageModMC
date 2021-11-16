@@ -13,10 +13,25 @@
     },
     {
       "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
+    },
+    {
+      "item": "ragemod:marokriksa_leaves"
     }
   ],
   "result": {
     "item": "ragemod:fa_5sap",
-    "count": 2
+    "count": 1
   }
 }

@@ -47,7 +47,7 @@ public class HegyimorzsoltBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public HegyimorzsoltBlock(RagemodModElements instance) {
-		super(instance, 230);
+		super(instance, 202);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -27,7 +27,7 @@ public class PolishedalpivBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public PolishedalpivBlock(RagemodModElements instance) {
-		super(instance, 218);
+		super(instance, 191);
 	}
 
 	@Override

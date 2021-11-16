@@ -55,7 +55,7 @@ import net.minecraft.block.AbstractBlock;
 import net.mcreator.ragemod.particle.AlienparticleParticle;
 import net.mcreator.ragemod.item.AlienDimensionItem;
 import net.mcreator.ragemod.block.Hegyiko1Block;
-import net.mcreator.ragemod.block.CvexportalblockBlock;
+import net.mcreator.ragemod.block.CvexblockBlock;
 import net.mcreator.ragemod.RagemodModElements;
 
 import javax.annotation.Nullable;
@@ -78,7 +78,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 	public static final CustomPortalBlock portal = null;
 
 	public AlienDimensionDimension(RagemodModElements instance) {
-		super(instance, 98);
+		super(instance, 93);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 
@@ -146,7 +146,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
-					.setLightLevel(s -> 1).noDrops());
+					.setLightLevel(s -> 2).noDrops());
 			setRegistryName("alien_dimension_portal_igniter_portal");
 		}
 
@@ -229,7 +229,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 
 	public static class CustomPortalSize {
 		private static final AbstractBlock.IPositionPredicate POSITION_PREDICATE = (state, blockReader, pos) -> {
-			return state.getBlock() == CvexportalblockBlock.block;
+			return state.getBlock() == CvexblockBlock.block;
 		};
 		private final IWorld world;
 		private final Direction.Axis axis;
@@ -501,7 +501,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 				for (int l1 = -1; l1 < 2; ++l1) {
 					for (int k2 = 0; k2 < 2; ++k2) {
 						for (int i3 = -1; i3 < 3; ++i3) {
-							BlockState blockstate1 = i3 < 0 ? CvexportalblockBlock.block.getDefaultState() : Blocks.AIR.getDefaultState();
+							BlockState blockstate1 = i3 < 0 ? CvexblockBlock.block.getDefaultState() : Blocks.AIR.getDefaultState();
 							blockpos$mutable.setAndOffset(blockpos, k2 * direction.getXOffset() + l1 * direction1.getXOffset(), i3,
 									k2 * direction.getZOffset() + l1 * direction1.getZOffset());
 							this.world.setBlockState(blockpos$mutable, blockstate1);
@@ -513,7 +513,7 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 				for (int i2 = -1; i2 < 4; ++i2) {
 					if (k1 == -1 || k1 == 2 || i2 == -1 || i2 == 3) {
 						blockpos$mutable.setAndOffset(blockpos, k1 * direction.getXOffset(), i2, k1 * direction.getZOffset());
-						this.world.setBlockState(blockpos$mutable, CvexportalblockBlock.block.getDefaultState(), 3);
+						this.world.setBlockState(blockpos$mutable, CvexblockBlock.block.getDefaultState(), 3);
 					}
 				}
 			}

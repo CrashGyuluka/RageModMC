@@ -5,21 +5,15 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 2,
+    "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:RobtaiLeaves"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:RobtaiLeaves"
       },
       {
         "value": "CUSTOM:RobtaiLeaves"
@@ -28,7 +22,13 @@
         "value": "CUSTOM:RobtaiLeaves"
       },
       {
-        "value": ""
+        "value": "CUSTOM:RobtaiLeaves"
+      },
+      {
+        "value": "CUSTOM:RobtaiLeaves"
+      },
+      {
+        "value": "CUSTOM:RobtaiLeaves"
       },
       {
         "value": "CUSTOM:RobtaiLeaves"

@@ -4,7 +4,7 @@
   "experience": 1,
   "cookingtime": 100,
   "ingredient": {
-    "item": "ragemod:savasvaserc"
+    "item": "ragemod:deleted_mod_element"
   },
   "result": {
     "item": "minecraft:iron_ingot"

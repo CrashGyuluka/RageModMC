@@ -41,12 +41,12 @@
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
     "portalFrame": {
-      "value": "CUSTOM:Cvexportalblock"
+      "value": "CUSTOM:Cvexblock"
     },
     "portalParticles": {
       "value": "CUSTOM:Alienparticle"
     },
-    "portalLuminance": 1,
+    "portalLuminance": 2,
     "portalSound": {
       "value": "block.portal.ambient"
     },

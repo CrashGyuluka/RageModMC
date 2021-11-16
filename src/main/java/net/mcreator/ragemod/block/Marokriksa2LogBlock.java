@@ -29,7 +29,7 @@ public class Marokriksa2LogBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Marokriksa2LogBlock(RagemodModElements instance) {
-		super(instance, 280);
+		super(instance, 248);
 	}
 
 	@Override

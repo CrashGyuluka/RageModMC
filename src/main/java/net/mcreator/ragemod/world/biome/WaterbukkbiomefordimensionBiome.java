@@ -47,7 +47,7 @@ public class WaterbukkbiomefordimensionBiome extends RagemodModElements.ModEleme
 	public static Biome biome;
 
 	public WaterbukkbiomefordimensionBiome(RagemodModElements instance) {
-		super(instance, 1248);
+		super(instance, 1206);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

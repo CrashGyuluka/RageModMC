@@ -13,10 +13,25 @@
     },
     {
       "item": "ragemod:robtai_leaves"
+    },
+    {
+      "item": "ragemod:robtai_leaves"
+    },
+    {
+      "item": "ragemod:robtai_leaves"
+    },
+    {
+      "item": "ragemod:robtai_leaves"
+    },
+    {
+      "item": "ragemod:robtai_leaves"
+    },
+    {
+      "item": "ragemod:robtai_leaves"
     }
   ],
   "result": {
     "item": "ragemod:robtai_sapling",
-    "count": 2
+    "count": 1
   }
 }

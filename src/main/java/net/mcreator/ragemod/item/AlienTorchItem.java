@@ -26,7 +26,7 @@ public class AlienTorchItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlienTorchItem(RagemodModElements instance) {
-		super(instance, 226);
+		super(instance, 199);
 	}
 
 	@Override

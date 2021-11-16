@@ -77,7 +77,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "CUSTOM:Dimension1"
+      "value": "CUSTOM:AlienDimension"
     },
     "livingSound": {
       "value": ""

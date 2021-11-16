@@ -31,7 +31,7 @@ public class RobtaitdBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RobtaitdBlock(RagemodModElements instance) {
-		super(instance, 375);
+		super(instance, 343);
 	}
 
 	@Override

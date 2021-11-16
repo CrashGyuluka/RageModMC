@@ -27,7 +27,7 @@ public class AlienCrystalBlockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlienCrystalBlockBlock(RagemodModElements instance) {
-		super(instance, 204);
+		super(instance, 176);
 	}
 
 	@Override

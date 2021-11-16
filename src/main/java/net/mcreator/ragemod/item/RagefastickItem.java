@@ -17,7 +17,7 @@ public class RagefastickItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public RagefastickItem(RagemodModElements instance) {
-		super(instance, 396);
+		super(instance, 364);
 	}
 
 	@Override

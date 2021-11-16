@@ -27,7 +27,7 @@ public class PolishedhegyikoslabuBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public PolishedhegyikoslabuBlock(RagemodModElements instance) {
-		super(instance, 245);
+		super(instance, 215);
 	}
 
 	@Override

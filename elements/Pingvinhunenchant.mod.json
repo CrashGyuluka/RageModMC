@@ -6,15 +6,18 @@
     "type": "ARMOR_CHEST",
     "rarity": "VERY_RARE",
     "minLevel": 1,
-    "maxLevel": 6,
+    "maxLevel": 5,
     "damageModifier": 0,
     "compatibleEnchantments": [],
     "compatibleItems": [
       {
         "value": "CUSTOM:Rageiumaromr.body"
+      },
+      {
+        "value": "CUSTOM:AlieniteArmor.body"
       }
     ],
-    "isTreasureEnchantment": true,
+    "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,

@@ -43,7 +43,7 @@ public class SequoiaforestBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public SequoiaforestBiome(RagemodModElements instance) {
-		super(instance, 1443);
+		super(instance, 1398);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

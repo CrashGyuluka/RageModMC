@@ -9,6 +9,7 @@ import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
 import net.mcreator.ragemod.item.RageiumaromrItem;
+import net.mcreator.ragemod.item.AlieniteArmorItem;
 import net.mcreator.ragemod.RagemodModElements;
 
 @RagemodModElements.ModElement.Tag
@@ -17,7 +18,7 @@ public class PingvinhunenchantEnchantment extends RagemodModElements.ModElement 
 	public static final Enchantment enchantment = null;
 
 	public PingvinhunenchantEnchantment(RagemodModElements instance) {
-		super(instance, 430);
+		super(instance, 398);
 	}
 
 	@Override
@@ -37,19 +38,21 @@ public class PingvinhunenchantEnchantment extends RagemodModElements.ModElement 
 
 		@Override
 		public int getMaxLevel() {
-			return 6;
+			return 5;
 		}
 
 		@Override
 		public boolean canApplyAtEnchantingTable(ItemStack stack) {
 			if (stack.getItem() == RageiumaromrItem.body)
 				return true;
+			if (stack.getItem() == AlieniteArmorItem.body)
+				return true;
 			return false;
 		}
 
 		@Override
 		public boolean isTreasureEnchantment() {
-			return true;
+			return false;
 		}
 
 		@Override

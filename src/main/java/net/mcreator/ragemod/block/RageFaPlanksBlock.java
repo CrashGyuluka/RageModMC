@@ -28,7 +28,7 @@ public class RageFaPlanksBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RageFaPlanksBlock(RagemodModElements instance) {
-		super(instance, 285);
+		super(instance, 253);
 	}
 
 	@Override

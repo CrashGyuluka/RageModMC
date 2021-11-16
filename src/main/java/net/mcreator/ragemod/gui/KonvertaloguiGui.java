@@ -48,7 +48,7 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public KonvertaloguiGui(RagemodModElements instance) {
-		super(instance, 1249);
+		super(instance, 1207);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

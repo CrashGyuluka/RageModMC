@@ -30,7 +30,7 @@ public class MarokriksaSlabBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public MarokriksaSlabBlock(RagemodModElements instance) {
-		super(instance, 327);
+		super(instance, 295);
 	}
 
 	@Override

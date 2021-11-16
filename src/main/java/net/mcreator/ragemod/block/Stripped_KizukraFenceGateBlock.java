@@ -29,7 +29,7 @@ public class Stripped_KizukraFenceGateBlock extends RagemodModElements.ModElemen
 	public static final Block block = null;
 
 	public Stripped_KizukraFenceGateBlock(RagemodModElements instance) {
-		super(instance, 356);
+		super(instance, 324);
 	}
 
 	@Override

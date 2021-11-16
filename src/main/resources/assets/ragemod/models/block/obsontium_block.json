@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ragemod:blocks/obsontium_2",
-    "particle": "ragemod:blocks/obsontium_2"
-  }
-}

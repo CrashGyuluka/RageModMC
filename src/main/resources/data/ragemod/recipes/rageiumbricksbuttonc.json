@@ -1,0 +1,9 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:stonecutting",
+  "count": 6,
+  "ingredient": {
+    "item": "ragemod:rageium_bricks"
+  },
+  "result": "ragemod:rageium_bricks_button"
+}

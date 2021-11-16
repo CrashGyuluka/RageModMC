@@ -18,7 +18,7 @@ public class AlienfoodItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlienfoodItem(RagemodModElements instance) {
-		super(instance, 101);
+		super(instance, 96);
 	}
 
 	@Override

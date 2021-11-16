@@ -66,7 +66,7 @@ public class Hangingalienoff1Block extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Hangingalienoff1Block(RagemodModElements instance) {
-		super(instance, 1294);
+		super(instance, 1250);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

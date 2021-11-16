@@ -1,0 +1,42 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ragemod:alienite"
+    },
+    "1": {
+      "item": "ragemod:alienite"
+    },
+    "2": {
+      "item": "ragemod:alienite"
+    },
+    "3": {
+      "item": "ragemod:alienite"
+    },
+    "4": {
+      "item": "ragemod:alien_stone"
+    },
+    "5": {
+      "item": "ragemod:alienite"
+    },
+    "6": {
+      "item": "ragemod:alien_stone"
+    },
+    "7": {
+      "item": "ragemod:alien_stone"
+    },
+    "8": {
+      "item": "ragemod:alien_stone"
+    }
+  },
+  "result": {
+    "item": "ragemod:alienite_armor_helmet",
+    "count": 1
+  }
+}

@@ -31,7 +31,7 @@ public class Ragefapr4Block extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Ragefapr4Block(RagemodModElements instance) {
-		super(instance, 377);
+		super(instance, 345);
 	}
 
 	@Override

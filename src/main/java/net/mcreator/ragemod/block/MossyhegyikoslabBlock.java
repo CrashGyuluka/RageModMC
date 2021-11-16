@@ -27,7 +27,7 @@ public class MossyhegyikoslabBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public MossyhegyikoslabBlock(RagemodModElements instance) {
-		super(instance, 242);
+		super(instance, 213);
 	}
 
 	@Override

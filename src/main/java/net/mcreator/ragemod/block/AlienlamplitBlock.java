@@ -55,7 +55,7 @@ public class AlienlamplitBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlienlamplitBlock(RagemodModElements instance) {
-		super(instance, 1347);
+		super(instance, 1303);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

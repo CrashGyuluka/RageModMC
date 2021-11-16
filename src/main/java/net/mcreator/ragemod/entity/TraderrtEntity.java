@@ -68,7 +68,7 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("traderrt").setRegistryName("traderrt");
 
 	public TraderrtEntity(RagemodModElements instance) {
-		super(instance, 210);
+		super(instance, 183);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TraderrtRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

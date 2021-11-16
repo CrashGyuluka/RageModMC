@@ -51,7 +51,7 @@ public class AlienforestBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public AlienforestBiome(RagemodModElements instance) {
-		super(instance, 1292);
+		super(instance, 1248);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

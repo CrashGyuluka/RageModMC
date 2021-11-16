@@ -87,19 +87,13 @@
         "value": "CUSTOM:Mossyhegyikopressureplate"
       },
       {
-        "value": "CUSTOM:Hegyikomossyplus"
+        "value": "CUSTOM:Cvexore"
       },
       {
-        "value": "CUSTOM:Mossyplushegyikoslab"
+        "value": "CUSTOM:Cvexblock"
       },
       {
-        "value": "CUSTOM:Mossyplushegyikostairs"
-      },
-      {
-        "value": "CUSTOM:Mossyplushegyikowall"
-      },
-      {
-        "value": "CUSTOM:Mossyplushegyikopr"
+        "value": "CUSTOM:Cvexportalblock"
       }
     ],
     "functions": [],

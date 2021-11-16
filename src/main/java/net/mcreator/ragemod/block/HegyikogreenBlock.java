@@ -48,7 +48,7 @@ public class HegyikogreenBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public HegyikogreenBlock(RagemodModElements instance) {
-		super(instance, 228);
+		super(instance, 201);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

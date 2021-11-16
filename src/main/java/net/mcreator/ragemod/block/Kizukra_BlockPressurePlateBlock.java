@@ -29,7 +29,7 @@ public class Kizukra_BlockPressurePlateBlock extends RagemodModElements.ModEleme
 	public static final Block block = null;
 
 	public Kizukra_BlockPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 386);
+		super(instance, 354);
 	}
 
 	@Override

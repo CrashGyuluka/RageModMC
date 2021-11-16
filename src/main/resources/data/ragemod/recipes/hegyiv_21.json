@@ -3,7 +3,7 @@
   "type": "minecraft:stonecutting",
   "count": 2,
   "ingredient": {
-    "item": "ragemod:hegyikomossyplus"
+    "item": "ragemod:deleted_mod_element"
   },
-  "result": "ragemod:mossyplushegyikoslab"
+  "result": "ragemod:deleted_mod_element"
 }

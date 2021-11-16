@@ -47,7 +47,7 @@ public class SavasbiomBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public SavasbiomBiome(RagemodModElements instance) {
-		super(instance, 510);
+		super(instance, 473);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

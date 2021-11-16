@@ -38,7 +38,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.ragemod.particle.RageparticleParticle;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.item.Dimension1Item;
+import net.mcreator.ragemod.item.AlienDimensionItem;
 import net.mcreator.ragemod.entity.renderer.Rageboos1Renderer;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -126,7 +126,7 @@ public class Rageboos1Entity extends RagemodModElements.ModElement {
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
 			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(Dimension1Item.block));
+			this.entityDropItem(new ItemStack(AlienDimensionItem.block));
 		}
 
 		@Override

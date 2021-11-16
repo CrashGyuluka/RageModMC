@@ -28,7 +28,7 @@ public class RobtaiPlanksBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RobtaiPlanksBlock(RagemodModElements instance) {
-		super(instance, 290);
+		super(instance, 258);
 	}
 
 	@Override

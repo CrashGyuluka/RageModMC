@@ -48,7 +48,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:cvex_ore",
+          "name": "ragemod:deleted_mod_element",
           "weight": 1,
           "conditions": [
             {

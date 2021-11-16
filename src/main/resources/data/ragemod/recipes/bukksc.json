@@ -13,10 +13,25 @@
     },
     {
       "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
+    },
+    {
+      "item": "ragemod:bukk_leaves"
     }
   ],
   "result": {
     "item": "ragemod:beech_sapling",
-    "count": 2
+    "count": 1
   }
 }

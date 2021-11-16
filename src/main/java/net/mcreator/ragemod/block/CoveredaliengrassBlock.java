@@ -23,7 +23,7 @@ public class CoveredaliengrassBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public CoveredaliengrassBlock(RagemodModElements instance) {
-		super(instance, 196);
+		super(instance, 168);
 	}
 
 	@Override

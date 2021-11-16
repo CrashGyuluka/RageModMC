@@ -42,7 +42,7 @@ public class SpikyalienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public SpikyalienplainsBiome(RagemodModElements instance) {
-		super(instance, 1433);
+		super(instance, 1388);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

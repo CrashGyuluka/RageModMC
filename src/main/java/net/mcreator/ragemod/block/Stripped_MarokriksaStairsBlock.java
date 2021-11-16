@@ -29,7 +29,7 @@ public class Stripped_MarokriksaStairsBlock extends RagemodModElements.ModElemen
 	public static final Block block = null;
 
 	public Stripped_MarokriksaStairsBlock(RagemodModElements instance) {
-		super(instance, 308);
+		super(instance, 276);
 	}
 
 	@Override

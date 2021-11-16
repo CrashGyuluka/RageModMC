@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "command",
   "definition": {
-    "commandName": "rageteam",
+    "commandName": "ragemod",
     "permissionLevel": "1",
     "onCommandExecuted": {
       "name": "RageteamCommandExecuted"

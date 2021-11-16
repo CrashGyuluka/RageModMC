@@ -38,7 +38,7 @@ public class RichDesertBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public RichDesertBiome(RagemodModElements instance) {
-		super(instance, 1483);
+		super(instance, 1438);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

@@ -27,7 +27,7 @@ public class RageteamCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("rageteam").requires(s -> s.hasPermissionLevel(1))
+				.register(LiteralArgumentBuilder.<CommandSource>literal("ragemod").requires(s -> s.hasPermissionLevel(1))
 						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(RageteamCommand::execute))
 						.executes(RageteamCommand::execute));
 	}

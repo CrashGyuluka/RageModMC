@@ -17,7 +17,7 @@ public class DiamondnugetItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public DiamondnugetItem(RagemodModElements instance) {
-		super(instance, 185);
+		super(instance, 157);
 	}
 
 	@Override

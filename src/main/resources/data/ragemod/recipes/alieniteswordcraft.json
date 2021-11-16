@@ -2,19 +2,37 @@
   "group": "ragemod",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0",
-    "1",
-    "2"
+    "012",
+    "345",
+    "678"
   ],
   "key": {
     "0": {
-      "item": "ragemod:alienite"
+      "item": "ragemod:alien_stone"
     },
     "1": {
       "item": "ragemod:alienite"
     },
     "2": {
+      "item": "ragemod:alien_stone"
+    },
+    "3": {
+      "item": "ragemod:alien_stone"
+    },
+    "4": {
+      "item": "ragemod:alienite"
+    },
+    "5": {
+      "item": "ragemod:alien_stone"
+    },
+    "6": {
+      "item": "ragemod:alien_stone"
+    },
+    "7": {
       "item": "ragemod:stick_3"
+    },
+    "8": {
+      "item": "ragemod:alien_stone"
     }
   },
   "result": {

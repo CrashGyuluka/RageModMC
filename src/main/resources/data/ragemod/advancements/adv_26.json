@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "ragemod:obsontium"
+      "item": "ragemod:deleted_mod_element"
     },
     "title": {
       "translate": "advancements.adv_26.title"
@@ -19,7 +19,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "ragemod:obsontium"
+          "item": "ragemod:deleted_mod_element"
         }
       }
     }

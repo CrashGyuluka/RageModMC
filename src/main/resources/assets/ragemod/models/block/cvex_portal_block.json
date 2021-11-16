@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ragemod:blocks/cverx_block_portal",
-    "particle": "ragemod:blocks/cverx_block_portal"
-  }
-}

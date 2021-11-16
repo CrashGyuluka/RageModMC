@@ -33,7 +33,7 @@ public class Ragefalogb2Block extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Ragefalogb2Block(RagemodModElements instance) {
-		super(instance, 262);
+		super(instance, 230);
 	}
 
 	@Override

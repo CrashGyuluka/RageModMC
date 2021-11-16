@@ -30,7 +30,7 @@ public class AlieniteaxeItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlieniteaxeItem(RagemodModElements instance) {
-		super(instance, 104);
+		super(instance, 99);
 	}
 
 	@Override

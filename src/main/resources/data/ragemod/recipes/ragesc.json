@@ -13,10 +13,25 @@
     },
     {
       "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
+    },
+    {
+      "item": "ragemod:rage_fa_leaves"
     }
   ],
   "result": {
     "item": "ragemod:ragetree_sapling",
-    "count": 2
+    "count": 1
   }
 }

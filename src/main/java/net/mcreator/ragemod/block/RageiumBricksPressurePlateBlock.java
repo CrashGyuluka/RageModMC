@@ -38,7 +38,7 @@ public class RageiumBricksPressurePlateBlock extends RagemodModElements.ModEleme
 	public static final Block block = null;
 
 	public RageiumBricksPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 117);
+		super(instance, 113);
 	}
 
 	@Override

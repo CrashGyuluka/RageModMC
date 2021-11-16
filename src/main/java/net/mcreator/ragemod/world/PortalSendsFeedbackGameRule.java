@@ -14,7 +14,7 @@ public class PortalSendsFeedbackGameRule extends RagemodModElements.ModElement {
 			create(true));
 
 	public PortalSendsFeedbackGameRule(RagemodModElements instance) {
-		super(instance, 946);
+		super(instance, 906);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

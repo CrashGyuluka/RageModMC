@@ -10,7 +10,7 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:AlienStone"
       },
       {
         "value": "CUSTOM:Alienite"
@@ -19,7 +19,7 @@
         "value": "CUSTOM:Alienite"
       },
       {
-        "value": ""
+        "value": "CUSTOM:AlienStone"
       },
       {
         "value": "CUSTOM:Stick3"
@@ -28,13 +28,13 @@
         "value": "CUSTOM:Alienite"
       },
       {
-        "value": ""
+        "value": "CUSTOM:AlienStone"
       },
       {
         "value": "CUSTOM:Stick3"
       },
       {
-        "value": ""
+        "value": "CUSTOM:AlienStone"
       }
     ],
     "recipeReturnStack": {

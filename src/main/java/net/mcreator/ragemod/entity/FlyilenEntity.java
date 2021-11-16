@@ -53,7 +53,7 @@ public class FlyilenEntity extends RagemodModElements.ModElement {
 					.build("flylien").setRegistryName("flylien");
 
 	public FlyilenEntity(RagemodModElements instance) {
-		super(instance, 212);
+		super(instance, 185);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FlyilenRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

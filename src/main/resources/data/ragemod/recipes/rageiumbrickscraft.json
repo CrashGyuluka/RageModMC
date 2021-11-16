@@ -1,0 +1,22 @@
+{
+  "group": "ragemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ragemod:rageium"
+    },
+    {
+      "item": "ragemod:rageium"
+    },
+    {
+      "item": "ragemod:rageium"
+    },
+    {
+      "item": "ragemod:rageium"
+    }
+  ],
+  "result": {
+    "item": "ragemod:rageium_bricks",
+    "count": 4
+  }
+}

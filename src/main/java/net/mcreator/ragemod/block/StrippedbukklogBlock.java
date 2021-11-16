@@ -33,7 +33,7 @@ public class StrippedbukklogBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public StrippedbukklogBlock(RagemodModElements instance) {
-		super(instance, 268);
+		super(instance, 236);
 	}
 
 	@Override

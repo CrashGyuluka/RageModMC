@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:elderflower_syrup"
+    },
+    "title": {
+      "translate": "advancements.adv_30.title"
+    },
+    "description": {
+      "translate": "advancements.adv_30.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_30": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "ragemod:elderflower_syrup"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_1"
+}

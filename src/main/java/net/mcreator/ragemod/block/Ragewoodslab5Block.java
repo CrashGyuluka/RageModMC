@@ -27,7 +27,7 @@ public class Ragewoodslab5Block extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Ragewoodslab5Block(RagemodModElements instance) {
-		super(instance, 313);
+		super(instance, 281);
 	}
 
 	@Override

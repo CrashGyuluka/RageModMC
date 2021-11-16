@@ -78,7 +78,7 @@ public class PlaymusicinbiomesslaineprocProcedure {
 		if ((entity.world.getDimensionKey()) == (RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
 				new ResourceLocation("ragemod:alien_dimension_portal_igniter")))) {
 			AmbientTimer = (double) (AmbientTimer + 1);
-			if (AmbientTimer == 2359) {
+			if (AmbientTimer == 2000) {
 				AmbientSelector = (double) Math.random();
 				if (AmbientSelector <= 1 && AmbientSelector > 0.75) {
 					if (world instanceof World && !world.isRemote()) {
