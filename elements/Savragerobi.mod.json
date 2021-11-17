@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Protector of Toxic",
     "mobLabel": "",
-    "mobModelName": "Modelcustom_model",
+    "mobModelName": "Modeltoxic_helper_1_17",
     "mobModelTexture": "savrob_texture1.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
@@ -116,21 +116,6 @@
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
-      {
-        "value": "CUSTOM:B1"
-      },
-      {
-        "value": "CUSTOM:B2"
-      },
-      {
-        "value": "CUSTOM:B3"
-      },
-      {
-        "value": "CUSTOM:B4"
-      },
-      {
-        "value": "CUSTOM:B5"
-      },
       {
         "value": "CUSTOM:Savasbiom"
       },

@@ -1,74 +1,58 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.AxeItem;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.ragemod.procedures.SavasfejszeBlockDestroyedWithToolProcedure;
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
+import net.mcreator.ragemod.init.RagemodModTabs;
+import net.mcreator.ragemod.init.RagemodModItems;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
-@RagemodModElements.ModElement.Tag
-public class SavasfejszeItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:savasfejsze")
-	public static final Item block = null;
-
-	public SavasfejszeItem(RagemodModElements instance) {
-		super(instance, 30);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new AxeItem(new IItemTier() {
-			public int getMaxUses() {
+public class SavasfejszeItem extends AxeItem {
+	public SavasfejszeItem() {
+		super(new Tier() {
+			public int getUses() {
 				return 2000;
 			}
 
-			public float getEfficiency() {
+			public float getSpeed() {
 				return 13f;
 			}
 
-			public float getAttackDamage() {
+			public float getAttackDamageBonus() {
 				return 2f;
 			}
 
-			public int getHarvestLevel() {
+			public int getLevel() {
 				return 3;
 			}
 
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 12;
 			}
 
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Savkristalyp2Item.block));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(RagemodModItems.SAVKRISTALYP_2));
 			}
-		}, 1, -2.7999999999999998f, new Item.Properties().group(ErcekItemGroup.tab)) {
-			@Override
-			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
-				boolean retval = super.onBlockDestroyed(itemstack, world, blockstate, pos, entity);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
+		}, 1, -2.7999999999999998f, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
+		setRegistryName("savasfejsze");
+	}
 
-				SavasfejszeBlockDestroyedWithToolProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
-						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
-				return retval;
-			}
-		}.setRegistryName("savasfejsze"));
+	@Override
+	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		SavasfejszeBlockDestroyedWithToolProcedure.execute(entity);
+		return retval;
 	}
 }

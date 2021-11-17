@@ -6,21 +6,17 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.common.util.FakePlayerFactory;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.entity.Entity;
-import net.minecraft.command.Commands;
-import net.minecraft.command.CommandSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.CommandSourceStack;
 
 import net.mcreator.ragemod.procedures.RageteamCommandExecutedProcedure;
 
-import java.util.stream.Stream;
-import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
-import java.util.AbstractMap;
 
 import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
 @Mod.EventBusSubscriber
@@ -28,16 +24,16 @@ public class RageteamCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("ragemod").requires(s -> s.hasPermissionLevel(1))
+				.register(Commands.literal("ragemod").requires(s -> s.hasPermission(1))
 						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(RageteamCommand::execute))
 						.executes(RageteamCommand::execute));
 	}
 
-	private static int execute(CommandContext<CommandSource> ctx) {
-		ServerWorld world = ctx.getSource().getWorld();
-		double x = ctx.getSource().getPos().getX();
-		double y = ctx.getSource().getPos().getY();
-		double z = ctx.getSource().getPos().getZ();
+	private static int execute(CommandContext<CommandSourceStack> ctx) {
+		ServerLevel world = ctx.getSource().getLevel();
+		double x = ctx.getSource().getPosition().x();
+		double y = ctx.getSource().getPosition().y();
+		double z = ctx.getSource().getPosition().z();
 		Entity entity = ctx.getSource().getEntity();
 		if (entity == null)
 			entity = FakePlayerFactory.getMinecraft(world);
@@ -49,8 +45,7 @@ public class RageteamCommand {
 			index[0]++;
 		});
 
-		RageteamCommandExecutedProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-				(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+		RageteamCommandExecutedProcedure.execute(entity);
 		return 0;
 	}
 }

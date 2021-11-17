@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "RageFly",
     "mobLabel": "",
-    "mobModelName": "Modelragefly_model",
+    "mobModelName": "Modelragefly_new",
     "mobModelTexture": "ragefly_texture.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.5,

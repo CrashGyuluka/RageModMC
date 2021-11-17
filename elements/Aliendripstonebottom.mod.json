@@ -86,12 +86,6 @@
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
-    "generateCondition": {
-      "name": "AliendripstonebottomAdditionalGenerationCondition"
-    },
-    "patchSize": 100,
-    "onTickUpdate": {
-      "name": "AliendripstonebottomUpdateTick"
-    }
+    "patchSize": 100
   }
 }

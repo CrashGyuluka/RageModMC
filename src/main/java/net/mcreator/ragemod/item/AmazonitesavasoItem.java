@@ -1,53 +1,42 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
+import net.mcreator.ragemod.init.RagemodModTabs;
+import net.mcreator.ragemod.init.RagemodModItems;
 
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
-
-@RagemodModElements.ModElement.Tag
-public class AmazonitesavasoItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:amazonitesavaso")
-	public static final Item block = null;
-
-	public AmazonitesavasoItem(RagemodModElements instance) {
-		super(instance, 76);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new ShovelItem(new IItemTier() {
-			public int getMaxUses() {
+public class AmazonitesavasoItem extends ShovelItem {
+	public AmazonitesavasoItem() {
+		super(new Tier() {
+			public int getUses() {
 				return 4000;
 			}
 
-			public float getEfficiency() {
+			public float getSpeed() {
 				return 14f;
 			}
 
-			public float getAttackDamage() {
+			public float getAttackDamageBonus() {
 				return 0f;
 			}
 
-			public int getHarvestLevel() {
+			public int getLevel() {
 				return 4;
 			}
 
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 14;
 			}
 
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(AmazonitrtItem.block), new ItemStack(Savkristalyp2Item.block));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(RagemodModItems.AMAZONITRT), new ItemStack(RagemodModItems.SAVKRISTALYP_2));
 			}
-		}, 1, -2.7999999999999998f, new Item.Properties().group(ErcekItemGroup.tab).isImmuneToFire()) {
-		}.setRegistryName("amazonitesavaso"));
+		}, 1, -2.7999999999999998f, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).fireResistant());
+		setRegistryName("amazonitesavaso");
 	}
 }

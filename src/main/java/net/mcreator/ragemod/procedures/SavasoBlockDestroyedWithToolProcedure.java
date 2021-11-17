@@ -2,29 +2,21 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
-import net.mcreator.ragemod.item.SavercrItem;
-import net.mcreator.ragemod.RagemodMod;
-
-import java.util.Map;
+import net.mcreator.ragemod.init.RagemodModItems;
 
 public class SavasoBlockDestroyedWithToolProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure SavasoBlockDestroyedWithTool!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
 		if (Math.random() < 0.02) {
-			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(SavercrItem.block);
-				_setstack.setCount((int) 1);
-				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(RagemodModItems.SAVERCR);
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		}
 	}

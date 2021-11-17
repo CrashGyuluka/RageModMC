@@ -2,112 +2,71 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Explosion;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.state.Property;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.ragemod.item.DetonatorrtItem;
-import net.mcreator.ragemod.block.SavasrageiumoreBlock;
-import net.mcreator.ragemod.block.SavasrageiumblockBlock;
-import net.mcreator.ragemod.block.SavasrageiumalloyblockBlock;
-import net.mcreator.ragemod.RagemodMod;
+import net.mcreator.ragemod.init.RagemodModItems;
+import net.mcreator.ragemod.init.RagemodModBlocks;
+
+import javax.annotation.Nullable;
 
 import java.util.Random;
 import java.util.Map;
-import java.util.HashMap;
 
+@Mod.EventBusSubscriber
 public class SavasrageiumoreOnBlockRightClickedProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
-			PlayerEntity entity = event.getPlayer();
-			if (event.getHand() != entity.getActiveHand()) {
-				return;
-			}
-			double i = event.getPos().getX();
-			double j = event.getPos().getY();
-			double k = event.getPos().getZ();
-			IWorld world = event.getWorld();
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
+	@SubscribeEvent
+	public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
+		Player entity = event.getPlayer();
+		if (event.getHand() != entity.getUsedItemHand())
+			return;
+		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), entity);
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure SavasrageiumoreOnBlockRightClicked!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure SavasrageiumoreOnBlockRightClicked!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure SavasrageiumoreOnBlockRightClicked!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure SavasrageiumoreOnBlockRightClicked!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure SavasrageiumoreOnBlockRightClicked!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
-		if ((SavasrageiumoreBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()
-				|| SavasrageiumblockBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()
-				|| SavasrageiumalloyblockBlock.block == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())
-				&& DetonatorrtItem.block == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem()) {
+		if ((RagemodModBlocks.SAVASRAGEIUMORE == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()
+				|| RagemodModBlocks.SAVASRAGEIUMBLOCK == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()
+				|| RagemodModBlocks.SAVASRAGEIUMALLOYBLOCK == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())
+				&& RagemodModItems.DETONATORRT == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = Blocks.AIR.getDefaultState();
+				BlockState _bs = Blocks.AIR.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.get(_property) != null)
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
 						try {
-							_bs = _bs.with(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 						} catch (Exception e) {
 						}
 				}
-				world.setBlockState(_bp, _bs, 3);
+				world.setBlock(_bp, _bs, 3);
 			}
-			if (world instanceof World && !((World) world).isRemote) {
-				((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 5, Explosion.Mode.BREAK);
-			}
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.explode(null, x, y, z, 5, Explosion.BlockInteraction.BREAK);
 			{
-				ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
-				if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
+				ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+				if (_ist.hurt(1, new Random(), null)) {
 					_ist.shrink(1);
-					_ist.setDamage(0);
+					_ist.setDamageValue(0);
 				}
 			}
 		}

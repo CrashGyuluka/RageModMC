@@ -83,9 +83,6 @@
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
-    "generateCondition": {
-      "name": "Alienmushroom2AdditionalGenerationCondition"
-    },
     "patchSize": 35
   }
 }

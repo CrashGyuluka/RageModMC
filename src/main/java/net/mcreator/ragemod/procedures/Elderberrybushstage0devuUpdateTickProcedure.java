@@ -3,631 +3,416 @@ package net.mcreator.ragemod.procedures;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
-import net.mcreator.ragemod.block.FloweryElderberryLeavesBlock;
-import net.mcreator.ragemod.block.ElderberryleavesBlock;
-import net.mcreator.ragemod.RagemodMod;
+import net.mcreator.ragemod.init.RagemodModBlocks;
 
-import java.util.Map;
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
+@Mod.EventBusSubscriber
 public class Elderberrybushstage0devuUpdateTickProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-			PlayerEntity entity = event.getPlayer();
-			if (event.getHand() != entity.getActiveHand()) {
-				return;
-			}
-			double i = event.getPos().getX();
-			double j = event.getPos().getY();
-			double k = event.getPos().getZ();
-			IWorld world = event.getWorld();
-			BlockState state = world.getBlockState(event.getPos());
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("direction", event.getFace());
-			dependencies.put("blockstate", state);
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
+	@SubscribeEvent
+	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		Player entity = event.getPlayer();
+		if (event.getHand() != entity.getUsedItemHand())
+			return;
+		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), entity);
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure Elderberrybushstage0devuUpdateTick!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure Elderberrybushstage0devuUpdateTick!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure Elderberrybushstage0devuUpdateTick!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure Elderberrybushstage0devuUpdateTick!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Elderberrybushstage0devuUpdateTick!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		double Growth = 0;
-		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
 				world.addParticle(ParticleTypes.COMPOSTER, x, y, z, 0, 1, 0);
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-				}
-				if (entity instanceof PlayerEntity)
-					((PlayerEntity) entity).getCooldownTracker().setCooldown(
-							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 40);
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+				if (entity instanceof Player _player)
+					_player.getCooldowns()
+							.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y + 1), z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) (y + 1), (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, (y + 1), z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 40);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y + 1), z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 				}
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y + 1), (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) (y + 1), (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, (y + 1), (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 40);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y + 1), (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 				}
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y + 1), (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) (y + 1), (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, (y + 1), (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 40);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y + 1), (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
 				}
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y - 1), (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) (y - 1), (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, (y - 1), (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y - 1), (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y - 1), (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), (y - 1), (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y - 1), (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y + 1), (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), (y + 1), (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y + 1), (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y + 1), (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), (y + 1), (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y + 1), (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y - 1), (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), (y - 1), (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y - 1), (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y - 1), (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), (y - 1), (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y - 1), (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y - 1), (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), (y - 1), (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y - 1), (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y + 1), (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), (y + 1), (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y + 1), (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1))))
+						.getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y + 1), (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), (y + 1), (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y + 1), (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y + 1), z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) (y + 1), (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), (y + 1), z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y + 1), z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y + 1), z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) (y + 1), (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), (y + 1), z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y + 1), z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y - 1), (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) (y - 1), (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, (y - 1), (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y - 1), (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, y, (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, y, (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, z, 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) y, (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), y, (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) (z - 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, (z - 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) y, (int) (z - 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), y, (z - 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, (z - 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x + 1), (int) y, (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x + 1), y, (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
-				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ElderberryleavesBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == RagemodModBlocks.ELDERBERRY_LEAVES) {
 					{
 						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) (z + 1));
-						BlockState _bs = FloweryElderberryLeavesBlock.block.getDefaultState();
-						world.setBlockState(_bp, _bs, 3);
+						BlockState _bs = RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES.defaultBlockState();
+						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, (z + 1), 0, 1, 0);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) (x - 1), (int) y, (int) (z + 1)),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound((x - 1), y, (z + 1),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).getCooldownTracker().setCooldown(
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(),
-								(int) 50);
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, (z + 1),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (entity instanceof Player _player)
+						_player.getCooldowns()
+								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
 				}
 			}
 		}
