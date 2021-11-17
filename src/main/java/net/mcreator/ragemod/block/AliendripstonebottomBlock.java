@@ -51,11 +51,13 @@ import net.mcreator.ragemod.procedures.AliendripstonebottomUpdateTickProcedure;
 import net.mcreator.ragemod.procedures.AliendripstonebottomAdditionalGenerationConditionProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
@@ -104,8 +106,10 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 					int x = pos.getX();
 					int y = pos.getY();
 					int z = pos.getZ();
-					if (!AliendripstonebottomAdditionalGenerationConditionProcedure
-							.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
+					if (!AliendripstonebottomAdditionalGenerationConditionProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll)))
 						return false;
 					return super.generate(world, generator, random, pos, config);
 				}
@@ -130,6 +134,11 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 			super(Effects.BAD_OMEN, 5, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.STONE)
 					.hardnessAndResistance(3f, 1f).setLightLevel(s -> 6));
 			setRegistryName("aliendripstonebottom");
+		}
+
+		@Override
+		public int getStewEffectDuration() {
+			return 5;
 		}
 
 		@Override
@@ -159,8 +168,10 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 				int y = pos.getY() + 1;
 				int z = pos.getZ();
 				BlockState blockstate = world.getBlockState(pos.up());
-				additionalCondition = RagingvinesAdditionalPlacinggrowthConditionProcedure
-						.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+				additionalCondition = RagingvinesAdditionalPlacinggrowthConditionProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			}
 			Block ground = state.getBlock();
 			return
@@ -188,7 +199,10 @@ public class AliendripstonebottomBlock extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 
 			AliendripstonebottomUpdateTickProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+					.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

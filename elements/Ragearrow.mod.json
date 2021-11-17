@@ -3,10 +3,13 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "ragenyil_2",
+    "texture": "rageium_bow_newest",
     "customModelName": "Normal",
     "name": "Rageium Bow",
-    "specialInfo": [],
+    "specialInfo": [
+      "Of course",
+      "texture by Lyof! ^^"
+    ],
     "creativeTab": {
       "value": "CUSTOM:Ercek"
     },
@@ -23,7 +26,7 @@
     "animation": "bow",
     "enableMeleeDamage": true,
     "damageVsEntity": 1.0,
-    "bulletPower": 1.0,
+    "bulletPower": 1.4000000000000001,
     "bulletDamage": 4.0,
     "bulletKnockback": 2,
     "bulletParticles": true,

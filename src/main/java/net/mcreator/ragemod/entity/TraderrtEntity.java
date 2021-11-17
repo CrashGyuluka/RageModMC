@@ -59,7 +59,10 @@ import net.mcreator.ragemod.RagemodModElements;
 
 import javax.annotation.Nullable;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class TraderrtEntity extends RagemodModElements.ModElement {
@@ -161,7 +164,8 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 			Entity entity = this;
 
 			TraderrtOnInitialEntitySpawnProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build());
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			return retval;
 		}
 
@@ -175,8 +179,11 @@ public class TraderrtEntity extends RagemodModElements.ModElement {
 			double z = this.getPosZ();
 			Entity entity = this;
 
-			TraderrtRightClickedOnEntityProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity)
-					.put("sourceentity", sourceentity).put("x", x).put("y", y).put("z", z).put("world", world).build());
+			TraderrtRightClickedOnEntityProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("sourceentity", sourceentity))
+					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			return retval;
 		}
 	}

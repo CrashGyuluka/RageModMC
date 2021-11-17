@@ -1,8 +1,8 @@
 {
   "parent": "block/stairs",
   "textures": {
-    "bottom": "ragemod:blocks/rageium_bricks",
-    "top": "ragemod:blocks/rageium_bricks",
-    "side": "ragemod:blocks/rageium_bricks"
+    "bottom": "ragemod:blocks/rageium_bricks_new",
+    "top": "ragemod:blocks/rageium_bricks_new",
+    "side": "ragemod:blocks/rageium_bricks_new"
   }
 }

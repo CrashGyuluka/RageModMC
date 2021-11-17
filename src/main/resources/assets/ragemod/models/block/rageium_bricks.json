@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-    "down": "ragemod:blocks/rageium_bricks",
-    "up": "ragemod:blocks/rageium_bricks",
-    "north": "ragemod:blocks/rageium_bricks",
-    "east": "ragemod:blocks/rageium_bricks",
-    "south": "ragemod:blocks/rageium_bricks",
-    "west": "ragemod:blocks/rageium_bricks",
-    "particle": "ragemod:blocks/rageium_bricks"
+    "all": "ragemod:blocks/rageium_bricks_new",
+    "particle": "ragemod:blocks/rageium_bricks_new"
   }
 }

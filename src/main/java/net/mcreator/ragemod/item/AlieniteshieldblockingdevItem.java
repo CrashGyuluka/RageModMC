@@ -18,9 +18,13 @@ import net.minecraft.block.BlockState;
 import net.mcreator.ragemod.procedures.AlieniteshieldblockingdevToolInInventoryTickProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.ImmutableMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlieniteshieldblockingdevItem extends RagemodModElements.ModElement {
@@ -41,8 +45,9 @@ public class AlieniteshieldblockingdevItem extends RagemodModElements.ModElement
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 
-				AlieniteshieldblockingdevToolInInventoryTickProcedure
-						.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("itemstack", itemstack).build());
+				AlieniteshieldblockingdevToolInInventoryTickProcedure.executeProcedure(
+						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+								.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			}
 		}.setRegistryName("alieniteshieldblockingdev"));
 	}

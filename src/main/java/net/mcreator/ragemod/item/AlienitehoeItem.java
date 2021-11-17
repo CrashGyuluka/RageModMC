@@ -20,7 +20,10 @@ import net.mcreator.ragemod.procedures.SavkapaprocProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienitehoeItem extends RagemodModElements.ModElement {
@@ -71,8 +74,9 @@ public class AlienitehoeItem extends RagemodModElements.ModElement {
 				int z = pos.getZ();
 				ItemStack itemstack = context.getItem();
 
-				SavkapaprocProcedure.executeProcedure(
-						ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
+				SavkapaprocProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+						new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 				return retval;
 			}
 		}.setRegistryName("alienitehoe"));

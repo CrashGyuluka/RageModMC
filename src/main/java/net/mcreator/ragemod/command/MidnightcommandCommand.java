@@ -13,14 +13,15 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.ragemod.procedures.MidnightcommandCommandExecutedProcedure;
 
+import java.util.stream.Stream;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
+import java.util.AbstractMap;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
-
-import com.google.common.collect.ImmutableMap;
 
 @Mod.EventBusSubscriber
 public class MidnightcommandCommand {
@@ -49,7 +50,10 @@ public class MidnightcommandCommand {
 		});
 
 		MidnightcommandCommandExecutedProcedure
-				.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+				.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		return 0;
 	}
 }

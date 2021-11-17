@@ -49,11 +49,13 @@ import net.mcreator.ragemod.particle.AlienplantparticleParticle;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlientrapblockBlock extends RagemodModElements.ModElement {
@@ -121,7 +123,8 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 
-			AlientrapblockEntityCollidesInTheBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			AlientrapblockEntityCollidesInTheBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -137,7 +140,10 @@ public class AlientrapblockBlock extends RagemodModElements.ModElement {
 			Direction direction = hit.getFace();
 
 			AlientrapblockOnBlockRightClickedProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+					.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			return ActionResultType.SUCCESS;
 		}
 	}

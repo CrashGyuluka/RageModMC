@@ -22,18 +22,18 @@ import java.util.Map;
 public class RageBoosSpawnerRightClickedOnBlockProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure RageBoosSpawnerRightClickedOnBlock!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure RageBoosSpawnerRightClickedOnBlock!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure RageBoosSpawnerRightClickedOnBlock!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new Rageboos1Entity.CustomEntity(Rageboos1Entity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), world.getRandom().nextFloat() * 360F, 0);

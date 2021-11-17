@@ -17,7 +17,10 @@ import net.mcreator.ragemod.procedures.AlderflowerJuiceFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlderflowerJuiceItem extends RagemodModElements.ModElement {
@@ -65,7 +68,8 @@ public class AlderflowerJuiceItem extends RagemodModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			AlderflowerJuiceFoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			AlderflowerJuiceFoodEatenProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

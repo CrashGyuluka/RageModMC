@@ -21,10 +21,12 @@ import net.mcreator.ragemod.procedures.ParklassplusEntityWalksOnTheBlockProcedur
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class ParklassplusBlock extends RagemodModElements.ModElement {
@@ -69,7 +71,8 @@ public class ParklassplusBlock extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			BlockState blockstate = world.getBlockState(pos);
 
-			ParklassplusEntityWalksOnTheBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			ParklassplusEntityWalksOnTheBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

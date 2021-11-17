@@ -14,7 +14,10 @@ import net.mcreator.ragemod.procedures.AktinolitgyurupProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AktinolitgyuruItem extends RagemodModElements.ModElement {
@@ -58,7 +61,8 @@ public class AktinolitgyuruItem extends RagemodModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			AktinolitgyurupProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			AktinolitgyurupProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

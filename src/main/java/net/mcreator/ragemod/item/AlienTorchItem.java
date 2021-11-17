@@ -18,7 +18,10 @@ import net.mcreator.ragemod.procedures.AlienTorchRightClickedOnBlockProcedure;
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienTorchItem extends RagemodModElements.ModElement {
@@ -68,8 +71,10 @@ public class AlienTorchItem extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
 
-			AlienTorchRightClickedOnBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("direction", direction).put("x", x)
-					.put("y", y).put("z", z).put("world", world).build());
+			AlienTorchRightClickedOnBlockProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("direction", direction))
+					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			return retval;
 		}
 	}

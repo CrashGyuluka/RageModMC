@@ -31,9 +31,9 @@ import java.util.Map;
 public class Fa4sapPlantRightClickedProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Fa4sapPlantRightClicked!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure Fa4sapPlantRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -51,16 +51,16 @@ public class Fa4sapPlantRightClickedProcedure {
 				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure Fa4sapPlantRightClicked!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure Fa4sapPlantRightClicked!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Fa4sapPlantRightClicked!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL
 				&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Fa4sapBlock.block) {
 			{

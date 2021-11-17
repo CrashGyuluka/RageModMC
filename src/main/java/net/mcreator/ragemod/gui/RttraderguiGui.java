@@ -35,11 +35,11 @@ import net.mcreator.ragemod.procedures.Favago3Procedure;
 import net.mcreator.ragemod.RagemodModElements;
 import net.mcreator.ragemod.RagemodMod;
 
+import java.util.stream.Stream;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class RttraderguiGui extends RagemodModElements.ModElement {
@@ -403,11 +403,13 @@ public class RttraderguiGui extends RagemodModElements.ModElement {
 			return;
 		if (buttonID == 0) {
 
-			Favago4Procedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			Favago4Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 		if (buttonID == 1) {
 
-			Favago3Procedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			Favago3Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 
@@ -418,16 +420,19 @@ public class RttraderguiGui extends RagemodModElements.ModElement {
 			return;
 		if (slotID == 0 && changeType == 0) {
 
-			Favago5Procedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			Favago5Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 		if (slotID == 1 && changeType == 1) {
 
-			Favago6Procedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			Favago6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 		if (slotID == 1 && changeType == 2) {
 			int amount = meta;
 
-			Favago6Procedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			Favago6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

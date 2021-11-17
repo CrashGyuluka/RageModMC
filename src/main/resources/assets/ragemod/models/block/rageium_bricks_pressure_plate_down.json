@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_down",
   "textures": {
-    "texture": "ragemod:blocks/rageium_bricks"
+    "texture": "ragemod:blocks/rageium_bricks_new"
   }
 }

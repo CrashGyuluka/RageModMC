@@ -16,18 +16,18 @@ import java.util.Comparator;
 public class RageoverlayDisplayOverlayIngameProcedure {
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure RageoverlayDisplayOverlayIngame!");
-			return false;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure RageoverlayDisplayOverlayIngame!");
 			return false;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure RageoverlayDisplayOverlayIngame!");
+			return false;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		if (((Entity) world
 				.getEntitiesWithinAABB(AtomRageREntity.CustomEntity.class,
 						new AxisAlignedBB((entity.getPosX()) - (7 / 2d), (entity.getPosY()) - (7 / 2d), (entity.getPosZ()) - (7 / 2d),

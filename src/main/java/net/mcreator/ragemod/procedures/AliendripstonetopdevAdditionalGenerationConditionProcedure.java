@@ -12,6 +12,11 @@ import java.util.Map;
 public class AliendripstonetopdevAdditionalGenerationConditionProcedure {
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure AliendripstonetopdevAdditionalGenerationCondition!");
+			return false;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure AliendripstonetopdevAdditionalGenerationCondition!");
@@ -27,15 +32,10 @@ public class AliendripstonetopdevAdditionalGenerationConditionProcedure {
 				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure AliendripstonetopdevAdditionalGenerationCondition!");
 			return false;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure AliendripstonetopdevAdditionalGenerationCondition!");
-			return false;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
 		if (BlockTags.getCollection().getTagByID(new ResourceLocation("minecraft:mountain_stones"))
 				.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()) == true) {
 			return true;

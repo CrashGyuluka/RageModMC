@@ -9,9 +9,9 @@ displayName="RageMod (forge)"
 credits="Made by: RageTeam: CrashGyuluka"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/ragemod-by-rageteam"
 logoFile="logo.png"
-authors="RageTeam: CrashGyuluka"
+authors="CrashGyuluka, Lyof"
 description='''
-I hope you will enjoy this mod.
+I hope you will enjoy this mod! Main dev: CrashGyuluka, some textures: Lyof
 '''
 
 [[dependencies.ragemod]]

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "anapait",
+    "texture": "anapait_new",
     "customModelName": "Normal",
     "name": "Anapait",
     "rarity": "COMMON",

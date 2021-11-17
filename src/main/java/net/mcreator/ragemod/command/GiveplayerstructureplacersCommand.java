@@ -13,14 +13,15 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.ragemod.procedures.GivedevblockstrplacercommandProcedure;
 
+import java.util.stream.Stream;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
+import java.util.AbstractMap;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
-
-import com.google.common.collect.ImmutableMap;
 
 @Mod.EventBusSubscriber
 public class GiveplayerstructureplacersCommand {
@@ -48,7 +49,8 @@ public class GiveplayerstructureplacersCommand {
 			index[0]++;
 		});
 
-		GivedevblockstrplacercommandProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		GivedevblockstrplacercommandProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		return 0;
 	}
 }

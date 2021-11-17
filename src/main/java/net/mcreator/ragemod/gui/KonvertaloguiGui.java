@@ -36,11 +36,11 @@ import net.mcreator.ragemod.item.OpalItem;
 import net.mcreator.ragemod.RagemodModElements;
 import net.mcreator.ragemod.RagemodMod;
 
+import java.util.stream.Stream;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class KonvertaloguiGui extends RagemodModElements.ModElement {
@@ -422,7 +422,8 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 			return;
 		if (buttonID == 0) {
 
-			ConvertercheckguifullProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			ConvertercheckguifullProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 
@@ -433,7 +434,8 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 			return;
 		if (slotID == 6 && changeType == 0) {
 
-			ConverterSlotChangesProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			ConverterSlotChangesProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

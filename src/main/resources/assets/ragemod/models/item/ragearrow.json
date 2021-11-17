@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/ragenyil_2"
+    "layer0": "ragemod:items/rageium_bow_newest"
   },
   "display": {
     "thirdperson_righthand": {

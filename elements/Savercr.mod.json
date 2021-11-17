@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "saverc",
+    "texture": "war_toxic_ore",
     "customModelName": "Normal",
     "name": "Raw Toxic Crystal",
     "rarity": "COMMON",

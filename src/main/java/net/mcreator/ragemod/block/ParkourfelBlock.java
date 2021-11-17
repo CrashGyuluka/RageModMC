@@ -21,10 +21,12 @@ import net.mcreator.ragemod.procedures.ParkourfelEntityWalksOnTheBlockProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class ParkourfelBlock extends RagemodModElements.ModElement {
@@ -69,8 +71,10 @@ public class ParkourfelBlock extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			BlockState blockstate = world.getBlockState(pos);
 
-			ParkourfelEntityWalksOnTheBlockProcedure.executeProcedure(
-					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
+			ParkourfelEntityWalksOnTheBlockProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

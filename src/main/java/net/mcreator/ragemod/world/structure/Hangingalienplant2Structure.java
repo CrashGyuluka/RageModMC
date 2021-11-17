@@ -37,9 +37,11 @@ import net.mcreator.ragemod.block.CoveredaliengrassBlock;
 import net.mcreator.ragemod.block.AliensoilBlock;
 import net.mcreator.ragemod.block.AliendirtBlock;
 
+import java.util.stream.Stream;
 import java.util.Random;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber
 public class Hangingalienplant2Structure {
@@ -101,8 +103,10 @@ public class Hangingalienplant2Structure {
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
-							if (!Hangingalienplant2AdditionalGenerationConditionProcedure.executeProcedure(
-									ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
+							if (!Hangingalienplant2AdditionalGenerationConditionProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll)))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("ragemod", "hanging_alien_plant"));

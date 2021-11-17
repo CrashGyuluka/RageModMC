@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/opal_new"
+    "layer0": "ragemod:items/opal_newest"
   }
 }

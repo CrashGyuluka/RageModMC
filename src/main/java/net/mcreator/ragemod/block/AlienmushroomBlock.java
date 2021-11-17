@@ -47,11 +47,13 @@ import net.mcreator.ragemod.procedures.Alienmushroom2AdditionalGenerationConditi
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienmushroomBlock extends RagemodModElements.ModElement {
@@ -101,8 +103,10 @@ public class AlienmushroomBlock extends RagemodModElements.ModElement {
 					int x = pos.getX();
 					int y = pos.getY();
 					int z = pos.getZ();
-					if (!Alienmushroom2AdditionalGenerationConditionProcedure
-							.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build()))
+					if (!Alienmushroom2AdditionalGenerationConditionProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll)))
 						return false;
 					return super.generate(world, generator, random, pos, config);
 				}
@@ -128,6 +132,11 @@ public class AlienmushroomBlock extends RagemodModElements.ModElement {
 					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
 							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setLightLevel(s -> 3));
 			setRegistryName("alien_mushroom");
+		}
+
+		@Override
+		public int getStewEffectDuration() {
+			return 5;
 		}
 
 		@Override

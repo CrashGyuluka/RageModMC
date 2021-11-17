@@ -1,6 +1,6 @@
 {
   "parent": "block/button",
   "textures": {
-    "texture": "ragemod:blocks/rageium_bricks"
+    "texture": "ragemod:blocks/rageium_bricks_new"
   }
 }

@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "rageium_bricks",
-    "textureTop": "rageium_bricks",
+    "texture": "rageium_bricks_new",
+    "textureTop": "rageium_bricks_new",
     "textureLeft": "",
-    "textureFront": "rageium_bricks",
+    "textureFront": "rageium_bricks_new",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,

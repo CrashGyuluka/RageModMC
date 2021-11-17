@@ -15,7 +15,10 @@ import net.mcreator.ragemod.procedures.FakitoFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class FakitoItem extends RagemodModElements.ModElement {
@@ -62,7 +65,8 @@ public class FakitoItem extends RagemodModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			FakitoFoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			FakitoFoodEatenProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			return retval;
 		}
 	}

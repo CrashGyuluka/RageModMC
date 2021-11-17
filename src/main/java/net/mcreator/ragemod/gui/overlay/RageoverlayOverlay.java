@@ -15,10 +15,13 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.procedures.RageoverlayDisplayOverlayIngameProcedure;
 
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
-
-import com.google.common.collect.ImmutableMap;
 
 @Mod.EventBusSubscriber
 public class RageoverlayOverlay {
@@ -52,7 +55,8 @@ public class RageoverlayOverlay {
 			RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.disableAlphaTest();
 			if (RageoverlayDisplayOverlayIngameProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build())) {
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll))) {
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rage_hatter.png"));
 				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -382, posY + -179, 0, 0, 1920, 1080, 1920, 1080);
 

@@ -17,7 +17,10 @@ import net.mcreator.ragemod.procedures.MegaMinepotionFoodEatenProcedure;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class MegaMinepotionItem extends RagemodModElements.ModElement {
@@ -65,7 +68,8 @@ public class MegaMinepotionItem extends RagemodModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			MegaMinepotionFoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			MegaMinepotionFoodEatenProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

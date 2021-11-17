@@ -149,6 +149,11 @@ public class YellowhydrangeaBlock extends RagemodModElements.ModElement {
 		}
 
 		@Override
+		public int getStewEffectDuration() {
+			return 5;
+		}
+
+		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 100;
 		}

@@ -51,11 +51,13 @@ import net.minecraft.block.Block;
 import net.mcreator.ragemod.procedures.AlienshroomdevPlantRightClickedProcedure;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienshroomdevBlock extends RagemodModElements.ModElement {
@@ -127,6 +129,11 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 		}
 
 		@Override
+		public int getStewEffectDuration() {
+			return 5;
+		}
+
+		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 100;
 		}
@@ -167,7 +174,10 @@ public class AlienshroomdevBlock extends RagemodModElements.ModElement {
 			Direction direction = hit.getFace();
 
 			AlienshroomdevPlantRightClickedProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+					.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			return ActionResultType.SUCCESS;
 		}
 	}

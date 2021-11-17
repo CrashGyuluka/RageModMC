@@ -40,11 +40,13 @@ import net.mcreator.ragemod.procedures.AlienspikeBlockValidPlacementConditionPro
 import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
@@ -96,8 +98,10 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
-				return AlienspikeBlockValidPlacementConditionProcedure
-						.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+				return AlienspikeBlockValidPlacementConditionProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			}
 			return super.isValidPosition(blockstate, worldIn, pos);
 		}
@@ -154,7 +158,10 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 
 			AlienspikeUpdateTickProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("x", x).put("y", y).put("z", z).put("world", world).build());
+					.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
 
@@ -166,7 +173,8 @@ public class AlienspiketopdevBlock extends RagemodModElements.ModElement {
 			int z = pos.getZ();
 			BlockState blockstate = world.getBlockState(pos);
 
-			AlienspiketopdevEntityWalksOnTheBlockProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+			AlienspiketopdevEntityWalksOnTheBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 }

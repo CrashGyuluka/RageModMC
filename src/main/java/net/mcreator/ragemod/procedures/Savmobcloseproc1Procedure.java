@@ -27,18 +27,18 @@ import java.util.Collection;
 public class Savmobcloseproc1Procedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Savmobcloseproc1!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure Savmobcloseproc1!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Savmobcloseproc1!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		if (true == world.getWorldInfo().getGameRulesInstance().getBoolean(ToxicGivesYouBadEffectsGameRule.gamerule) && !(new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {

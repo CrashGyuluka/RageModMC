@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/aktinolit_block",
-    "up": "ragemod:blocks/aktinolit_block",
-    "north": "ragemod:blocks/aktinolit_block",
-    "east": "ragemod:blocks/aktinolit_block",
-    "south": "ragemod:blocks/aktinolit_block",
-    "west": "ragemod:blocks/aktinolit_block",
-    "particle": "ragemod:blocks/aktinolit_block"
+    "down": "ragemod:blocks/aktinolit_block_new",
+    "up": "ragemod:blocks/aktinolit_block_new",
+    "north": "ragemod:blocks/aktinolit_block_new",
+    "east": "ragemod:blocks/aktinolit_block_new",
+    "south": "ragemod:blocks/aktinolit_block_new",
+    "west": "ragemod:blocks/aktinolit_block_new",
+    "particle": "ragemod:blocks/aktinolit_block_new"
   }
 }

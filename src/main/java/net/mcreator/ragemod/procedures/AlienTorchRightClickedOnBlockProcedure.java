@@ -22,9 +22,9 @@ import java.util.Map;
 public class AlienTorchRightClickedOnBlockProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("direction") == null) {
-			if (!dependencies.containsKey("direction"))
-				RagemodMod.LOGGER.warn("Failed to load dependency direction for procedure AlienTorchRightClickedOnBlock!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure AlienTorchRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -42,16 +42,16 @@ public class AlienTorchRightClickedOnBlockProcedure {
 				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure AlienTorchRightClickedOnBlock!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure AlienTorchRightClickedOnBlock!");
+		if (dependencies.get("direction") == null) {
+			if (!dependencies.containsKey("direction"))
+				RagemodMod.LOGGER.warn("Failed to load dependency direction for procedure AlienTorchRightClickedOnBlock!");
 			return;
 		}
-		Direction direction = (Direction) dependencies.get("direction");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		Direction direction = (Direction) dependencies.get("direction");
 		if (direction == Direction.UP) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR) {

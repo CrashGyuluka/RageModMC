@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "rageium_animateed1",
+    "texture": "rageium_new_anim",
     "customModelName": "Normal",
     "name": "Rageium",
     "rarity": "COMMON",

@@ -51,11 +51,13 @@ import net.mcreator.ragemod.particle.SavaspartParticle;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class SavaslogBlock extends RagemodModElements.ModElement {
@@ -150,7 +152,8 @@ public class SavaslogBlock extends RagemodModElements.ModElement {
 			BlockState blockstate = world.getBlockState(pos);
 
 			SavaskoEntityWalksOnTheBlockProcedure
-					.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).put("world", world).build());
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 		}
 	}
 

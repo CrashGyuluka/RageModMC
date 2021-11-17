@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "aktinolit",
+    "texture": "aktinolit_new",
     "customModelName": "Normal",
     "name": "Actinolite",
     "rarity": "COMMON",

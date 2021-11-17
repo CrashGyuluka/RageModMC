@@ -15,7 +15,10 @@ import net.mcreator.ragemod.procedures.AlieniteswordLivingEntityIsHitWithToolPro
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.RagemodModElements;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @RagemodModElements.ModElement.Tag
 public class AlieniteswordItem extends RagemodModElements.ModElement {
@@ -61,8 +64,8 @@ public class AlieniteswordItem extends RagemodModElements.ModElement {
 				double z = entity.getPosZ();
 				World world = entity.world;
 
-				AlieniteswordLivingEntityIsHitWithToolProcedure
-						.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
+				AlieniteswordLivingEntityIsHitWithToolProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
 				return retval;
 			}
 		}.setRegistryName("alienitesword"));
