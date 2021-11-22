@@ -19,6 +19,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,6 +42,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.ragemod.particle.SavaspartParticle;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.item.SavercrItem;
 import net.mcreator.ragemod.entity.renderer.Mob1Renderer;
 import net.mcreator.ragemod.RagemodModElements;
 
@@ -53,7 +55,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("toxic_mob").setRegistryName("toxic_mob");
 
 	public Mob1Entity(RagemodModElements instance) {
-		super(instance, 35);
+		super(instance, 34);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Mob1Renderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -134,6 +136,11 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+			super.dropSpecialItems(source, looting, recentlyHitIn);
+			this.entityDropItem(new ItemStack(SavercrItem.block));
 		}
 
 		@Override

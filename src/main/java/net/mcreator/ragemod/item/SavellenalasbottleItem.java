@@ -28,7 +28,7 @@ public class SavellenalasbottleItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public SavellenalasbottleItem(RagemodModElements instance) {
-		super(instance, 34);
+		super(instance, 33);
 	}
 
 	@Override

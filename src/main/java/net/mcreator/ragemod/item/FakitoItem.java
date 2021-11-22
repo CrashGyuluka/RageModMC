@@ -26,7 +26,7 @@ public class FakitoItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public FakitoItem(RagemodModElements instance) {
-		super(instance, 156);
+		super(instance, 154);
 	}
 
 	@Override

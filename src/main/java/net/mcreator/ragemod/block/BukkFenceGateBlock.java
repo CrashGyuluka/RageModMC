@@ -29,7 +29,7 @@ public class BukkFenceGateBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BukkFenceGateBlock(RagemodModElements instance) {
-		super(instance, 322);
+		super(instance, 320);
 	}
 
 	@Override

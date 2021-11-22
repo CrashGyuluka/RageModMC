@@ -28,7 +28,7 @@ public class AlderflowerJuiceItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlderflowerJuiceItem(RagemodModElements instance) {
-		super(instance, 165);
+		super(instance, 163);
 	}
 
 	@Override

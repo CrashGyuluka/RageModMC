@@ -26,7 +26,7 @@ public class RagefastairsredBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RagefastairsredBlock(RagemodModElements instance) {
-		super(instance, 265);
+		super(instance, 263);
 	}
 
 	@Override

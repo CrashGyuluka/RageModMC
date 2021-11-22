@@ -32,7 +32,7 @@ public class AlienitepickaxeItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlienitepickaxeItem(RagemodModElements instance) {
-		super(instance, 98);
+		super(instance, 94);
 	}
 
 	@Override

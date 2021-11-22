@@ -29,7 +29,7 @@ public class Stripped_KizukraPressurePlateBlock extends RagemodModElements.ModEl
 	public static final Block block = null;
 
 	public Stripped_KizukraPressurePlateBlock(RagemodModElements instance) {
-		super(instance, 355);
+		super(instance, 353);
 	}
 
 	@Override

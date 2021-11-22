@@ -30,7 +30,7 @@ public class AlieniteArmorItem extends RagemodModElements.ModElement {
 	public static final Item boots = null;
 
 	public AlieniteArmorItem(RagemodModElements instance) {
-		super(instance, 102);
+		super(instance, 98);
 	}
 
 	@Override

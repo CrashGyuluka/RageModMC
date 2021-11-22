@@ -67,7 +67,7 @@ public class CrashchestBlock extends RagemodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public CrashchestBlock(RagemodModElements instance) {
-		super(instance, 20);
+		super(instance, 19);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

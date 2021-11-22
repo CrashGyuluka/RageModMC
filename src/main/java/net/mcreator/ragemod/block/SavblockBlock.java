@@ -40,7 +40,7 @@ public class SavblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SavblockBlock(RagemodModElements instance) {
-		super(instance, 24);
+		super(instance, 23);
 	}
 
 	@Override

@@ -18,7 +18,7 @@ public class SajtItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public SajtItem(RagemodModElements instance) {
-		super(instance, 391);
+		super(instance, 389);
 	}
 
 	@Override

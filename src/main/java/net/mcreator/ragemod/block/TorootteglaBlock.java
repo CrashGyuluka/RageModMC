@@ -26,7 +26,7 @@ public class TorootteglaBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public TorootteglaBlock(RagemodModElements instance) {
-		super(instance, 108);
+		super(instance, 104);
 	}
 
 	@Override

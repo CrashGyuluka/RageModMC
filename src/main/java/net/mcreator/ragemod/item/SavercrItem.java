@@ -17,7 +17,7 @@ public class SavercrItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public SavercrItem(RagemodModElements instance) {
-		super(instance, 26);
+		super(instance, 25);
 	}
 
 	@Override

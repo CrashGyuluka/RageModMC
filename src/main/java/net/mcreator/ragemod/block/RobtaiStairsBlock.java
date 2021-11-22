@@ -29,7 +29,7 @@ public class RobtaiStairsBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RobtaiStairsBlock(RagemodModElements instance) {
-		super(instance, 274);
+		super(instance, 272);
 	}
 
 	@Override

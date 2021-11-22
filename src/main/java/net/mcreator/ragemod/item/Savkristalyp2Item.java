@@ -17,7 +17,7 @@ public class Savkristalyp2Item extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public Savkristalyp2Item(RagemodModElements instance) {
-		super(instance, 27);
+		super(instance, 26);
 	}
 
 	@Override

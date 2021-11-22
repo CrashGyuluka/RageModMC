@@ -31,7 +31,7 @@ public class SavkapaItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public SavkapaItem(RagemodModElements instance) {
-		super(instance, 32);
+		super(instance, 31);
 	}
 
 	@Override

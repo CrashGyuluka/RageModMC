@@ -31,7 +31,7 @@ public class KizukratdBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public KizukratdBlock(RagemodModElements instance) {
-		super(instance, 342);
+		super(instance, 340);
 	}
 
 	@Override

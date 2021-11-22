@@ -34,7 +34,7 @@ public class MarokriksaWoodBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public MarokriksaWoodBlock(RagemodModElements instance) {
-		super(instance, 245);
+		super(instance, 243);
 	}
 
 	@Override

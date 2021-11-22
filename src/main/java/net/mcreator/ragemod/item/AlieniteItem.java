@@ -17,7 +17,7 @@ public class AlieniteItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlieniteItem(RagemodModElements instance) {
-		super(instance, 94);
+		super(instance, 90);
 	}
 
 	@Override

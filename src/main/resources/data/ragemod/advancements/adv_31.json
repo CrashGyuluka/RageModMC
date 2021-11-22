@@ -16,7 +16,7 @@
   },
   "criteria": {
     "adv_31": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:placed_block",
       "conditions": {
         "item": {
           "item": "ragemod:rageium_bricks"

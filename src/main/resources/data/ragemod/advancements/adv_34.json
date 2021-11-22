@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:alien_stone"
+    },
+    "title": {
+      "translate": "advancements.adv_34.title"
+    },
+    "description": {
+      "translate": "advancements.adv_34.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_34": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "item": "ragemod:alien_stone"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_32"
+}

@@ -10,31 +10,31 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Rageiumalloyblock"
+      },
+      {
+        "value": "CUSTOM:Rageium"
+      },
+      {
+        "value": "CUSTOM:Rageiumalloyblock"
       },
       {
         "value": "Items.BOW"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Rageiumalloyblock"
       },
       {
-        "value": "CUSTOM:Ragearrowscrap"
+        "value": "CUSTOM:Rageium"
       },
       {
-        "value": "CUSTOM:Ragearrowscrap"
+        "value": "CUSTOM:Rageiumalloyblock"
       },
       {
-        "value": "CUSTOM:Ragearrowscrap"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:Rageium"
       }
     ],
     "recipeReturnStack": {

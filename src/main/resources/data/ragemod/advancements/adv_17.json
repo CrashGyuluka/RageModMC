@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "ragemod:textures/savas_zuzott.png",
     "icon": {
       "item": "ragemod:savercr"
     },
@@ -17,21 +16,16 @@
   },
   "criteria": {
     "adv_17": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:consume_item",
       "conditions": {
-        "items": [
-          {
-            "item": "ragemod:savercr",
-            "count": {
-              "min": 1,
-              "max": 64
-            }
-          }
-        ]
+        "item": {
+          "item": "ragemod:savercr"
+        }
       }
     }
   },
   "rewards": {
     "experience": 1
-  }
+  },
+  "parent": "ragemod:adv_1"
 }

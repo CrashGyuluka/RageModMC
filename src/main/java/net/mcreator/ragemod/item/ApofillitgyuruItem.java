@@ -25,7 +25,7 @@ public class ApofillitgyuruItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public ApofillitgyuruItem(RagemodModElements instance) {
-		super(instance, 82);
+		super(instance, 79);
 	}
 
 	@Override

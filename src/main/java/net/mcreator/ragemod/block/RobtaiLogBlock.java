@@ -34,7 +34,7 @@ public class RobtaiLogBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RobtaiLogBlock(RagemodModElements instance) {
-		super(instance, 242);
+		super(instance, 240);
 	}
 
 	@Override

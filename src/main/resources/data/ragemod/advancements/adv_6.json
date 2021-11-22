@@ -16,17 +16,11 @@
   },
   "criteria": {
     "adv_6": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "items": [
-          {
-            "item": "ragemod:rageflower",
-            "count": {
-              "min": 1,
-              "max": 64
-            }
-          }
-        ]
+        "item": {
+          "item": "ragemod:rageflower"
+        }
       }
     }
   },

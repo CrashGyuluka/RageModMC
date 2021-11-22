@@ -28,7 +28,7 @@ public class MarokriksaPlanksBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public MarokriksaPlanksBlock(RagemodModElements instance) {
-		super(instance, 259);
+		super(instance, 257);
 	}
 
 	@Override

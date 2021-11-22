@@ -17,17 +17,11 @@
   },
   "criteria": {
     "adv_1": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:consume_item",
       "conditions": {
-        "items": [
-          {
-            "item": "ragemod:rageium",
-            "count": {
-              "min": 1,
-              "max": 64
-            }
-          }
-        ]
+        "item": {
+          "item": "ragemod:rageium"
+        }
       }
     }
   },

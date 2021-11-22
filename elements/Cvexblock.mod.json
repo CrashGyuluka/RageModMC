@@ -101,9 +101,9 @@
     "particleToSpawn": {
       "value": "CUSTOM:Cvexparticle"
     },
-    "particleSpawningShape": "Tube",
-    "particleSpawningRadious": 0.5999999985098838,
-    "particleAmount": 12,
+    "particleSpawningShape": "Top",
+    "particleSpawningRadious": 0.19999999850988387,
+    "particleAmount": 1,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

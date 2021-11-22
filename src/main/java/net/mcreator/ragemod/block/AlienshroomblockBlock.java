@@ -57,7 +57,7 @@ public class AlienshroomblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlienshroomblockBlock(RagemodModElements instance) {
-		super(instance, 179);
+		super(instance, 177);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

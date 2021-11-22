@@ -39,7 +39,7 @@ public class BizmutblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BizmutblockBlock(RagemodModElements instance) {
-		super(instance, 69);
+		super(instance, 68);
 	}
 
 	@Override

@@ -22,8 +22,8 @@
           {
             "item": "ragemod:ragepotion",
             "count": {
-              "min": 1,
-              "max": 64
+              "min": 6,
+              "max": 69
             }
           }
         ]
@@ -33,5 +33,5 @@
   "rewards": {
     "experience": 1
   },
-  "parent": "ragemod:adv_1"
+  "parent": "ragemod:adv_16"
 }

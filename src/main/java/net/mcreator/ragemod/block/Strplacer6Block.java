@@ -38,7 +38,7 @@ public class Strplacer6Block extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Strplacer6Block(RagemodModElements instance) {
-		super(instance, 1292);
+		super(instance, 1288);
 	}
 
 	@Override

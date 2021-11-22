@@ -55,7 +55,7 @@ public class SecretboomkoBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SecretboomkoBlock(RagemodModElements instance) {
-		super(instance, 22);
+		super(instance, 21);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

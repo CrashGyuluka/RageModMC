@@ -16,17 +16,11 @@
   },
   "criteria": {
     "adv_7": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:consume_item",
       "conditions": {
-        "items": [
-          {
-            "item": "ragemod:trofea",
-            "count": {
-              "min": 1,
-              "max": 64
-            }
-          }
-        ]
+        "item": {
+          "item": "ragemod:trofea"
+        }
       }
     }
   },

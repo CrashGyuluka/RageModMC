@@ -24,7 +24,7 @@ public class Stick1Item extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public Stick1Item(RagemodModElements instance) {
-		super(instance, 366);
+		super(instance, 364);
 	}
 
 	@Override

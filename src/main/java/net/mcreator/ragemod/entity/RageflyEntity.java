@@ -65,7 +65,7 @@ public class RageflyEntity extends RagemodModElements.ModElement {
 			.size(0.5f, 0.5f)).build("ragefly").setRegistryName("ragefly");
 
 	public RageflyEntity(RagemodModElements instance) {
-		super(instance, 184);
+		super(instance, 182);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflyRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

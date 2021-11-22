@@ -52,7 +52,7 @@ public class HegyikopolishedBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public HegyikopolishedBlock(RagemodModElements instance) {
-		super(instance, 204);
+		super(instance, 202);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

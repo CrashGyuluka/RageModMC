@@ -26,7 +26,7 @@ public class MossyhegyikopressureplateBlock extends RagemodModElements.ModElemen
 	public static final Block block = null;
 
 	public MossyhegyikopressureplateBlock(RagemodModElements instance) {
-		super(instance, 223);
+		super(instance, 221);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class DetonatorrtItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public DetonatorrtItem(RagemodModElements instance) {
-		super(instance, 78);
+		super(instance, 152);
 	}
 
 	@Override

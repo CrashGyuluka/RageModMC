@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "ragemod:deleted_mod_element"
+      "item": "ragemod:alienitesword"
     },
     "title": {
-      "translate": "advancements.adv_26.title"
+      "translate": "advancements.adv_35.title"
     },
     "description": {
-      "translate": "advancements.adv_26.descr"
+      "translate": "advancements.adv_35.descr"
     },
     "frame": "task",
     "show_toast": true,
@@ -15,11 +15,11 @@
     "hidden": false
   },
   "criteria": {
-    "adv_26": {
+    "adv_35": {
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "ragemod:deleted_mod_element"
+          "item": "ragemod:alienitesword"
         }
       }
     }
@@ -27,5 +27,5 @@
   "rewards": {
     "experience": 1
   },
-  "parent": "ragemod:adv_26"
+  "parent": "ragemod:adv_34"
 }

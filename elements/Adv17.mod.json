@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Toxic things",
-    "achievementDescription": "The start of a long journey..",
+    "achievementName": "The start of bad things",
+    "achievementDescription": "Consume a Raw Toxic Crystal",
     "achievementIcon": {
       "value": "CUSTOM:Savercr"
     },
-    "background": "savas_zuzott.png",
+    "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,
@@ -18,8 +18,8 @@
     "rewardXP": 1,
     "achievementType": "task",
     "parent": {
-      "value": "No parent: root"
+      "value": "CUSTOM:Adv1"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"77\" y=\"129\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">64</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Savercr</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_consumed\" x=\"61\" y=\"145\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Savercr</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

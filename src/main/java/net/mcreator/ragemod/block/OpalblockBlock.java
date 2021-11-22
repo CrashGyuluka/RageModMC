@@ -34,7 +34,7 @@ public class OpalblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public OpalblockBlock(RagemodModElements instance) {
-		super(instance, 70);
+		super(instance, 69);
 	}
 
 	@Override

@@ -16,11 +16,17 @@
   },
   "criteria": {
     "adv_9": {
-      "trigger": "minecraft:placed_block",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:crashchest"
-        }
+        "items": [
+          {
+            "item": "ragemod:crashchest",
+            "count": {
+              "min": 4,
+              "max": 256
+            }
+          }
+        ]
       }
     }
   },

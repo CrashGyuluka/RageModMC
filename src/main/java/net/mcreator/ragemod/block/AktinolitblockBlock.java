@@ -34,7 +34,7 @@ public class AktinolitblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AktinolitblockBlock(RagemodModElements instance) {
-		super(instance, 64);
+		super(instance, 63);
 	}
 
 	@Override

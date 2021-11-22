@@ -3,16 +3,31 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "ragemod:rageium"
+    },
+    {
+      "item": "ragemod:rageiumalloyblock"
+    },
+    {
+      "item": "ragemod:rageium"
+    },
+    {
+      "item": "ragemod:rageiumalloyblock"
+    },
+    {
       "item": "minecraft:bow"
     },
     {
-      "item": "ragemod:ragearrowscrap"
+      "item": "ragemod:rageiumalloyblock"
     },
     {
-      "item": "ragemod:ragearrowscrap"
+      "item": "ragemod:rageium"
     },
     {
-      "item": "ragemod:ragearrowscrap"
+      "item": "ragemod:rageiumalloyblock"
+    },
+    {
+      "item": "ragemod:rageium"
     }
   ],
   "result": {

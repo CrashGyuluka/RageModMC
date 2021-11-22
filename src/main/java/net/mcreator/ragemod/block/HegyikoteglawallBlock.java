@@ -40,7 +40,7 @@ public class HegyikoteglawallBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public HegyikoteglawallBlock(RagemodModElements instance) {
-		super(instance, 221);
+		super(instance, 219);
 	}
 
 	@Override

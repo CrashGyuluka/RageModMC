@@ -33,7 +33,7 @@
     },
     "rainingPossibility": 0.1,
     "temperature": 1.4,
-    "baseHeight": 0.4,
+    "baseHeight": 0.30000000000000004,
     "heightVariation": 0.19999999999999998,
     "biomeType": "DESERT",
     "spawnBiome": true,

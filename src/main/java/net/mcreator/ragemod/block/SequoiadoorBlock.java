@@ -33,7 +33,7 @@ public class SequoiadoorBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SequoiadoorBlock(RagemodModElements instance) {
-		super(instance, 338);
+		super(instance, 336);
 	}
 
 	@Override

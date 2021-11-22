@@ -62,7 +62,7 @@ public class ElderberryleavesBlock extends RagemodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public ElderberryleavesBlock(RagemodModElements instance) {
-		super(instance, 382);
+		super(instance, 380);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

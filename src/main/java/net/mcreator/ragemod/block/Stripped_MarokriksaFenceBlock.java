@@ -30,7 +30,7 @@ public class Stripped_MarokriksaFenceBlock extends RagemodModElements.ModElement
 	public static final Block block = null;
 
 	public Stripped_MarokriksaFenceBlock(RagemodModElements instance) {
-		super(instance, 312);
+		super(instance, 310);
 	}
 
 	@Override

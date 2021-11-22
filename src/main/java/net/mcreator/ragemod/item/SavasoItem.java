@@ -28,7 +28,7 @@ public class SavasoItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public SavasoItem(RagemodModElements instance) {
-		super(instance, 31);
+		super(instance, 30);
 	}
 
 	@Override

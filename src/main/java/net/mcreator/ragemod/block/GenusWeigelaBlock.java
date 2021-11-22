@@ -56,7 +56,7 @@ public class GenusWeigelaBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public GenusWeigelaBlock(RagemodModElements instance) {
-		super(instance, 158);
+		super(instance, 156);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

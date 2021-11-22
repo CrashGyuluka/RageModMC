@@ -33,7 +33,7 @@ public class MarokriksaLeavesBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public MarokriksaLeavesBlock(RagemodModElements instance) {
-		super(instance, 380);
+		super(instance, 378);
 	}
 
 	@Override

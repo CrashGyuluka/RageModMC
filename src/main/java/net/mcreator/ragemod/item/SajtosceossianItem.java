@@ -18,7 +18,7 @@ public class SajtosceossianItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public SajtosceossianItem(RagemodModElements instance) {
-		super(instance, 393);
+		super(instance, 391);
 	}
 
 	@Override

@@ -19,7 +19,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
@@ -42,7 +41,6 @@ import net.minecraft.entity.CreatureAttribute;
 import net.mcreator.ragemod.particle.Particle2Particle;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
 import net.mcreator.ragemod.entity.renderer.SavragerobiRenderer;
-import net.mcreator.ragemod.block.PortalrtBlock;
 import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
@@ -54,7 +52,7 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 			.size(0.6f, 2.8f)).build("savragerobi").setRegistryName("savragerobi");
 
 	public SavragerobiEntity(RagemodModElements instance) {
-		super(instance, 71);
+		super(instance, 70);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SavragerobiRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -137,11 +135,6 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 			return CreatureAttribute.UNDEFINED;
 		}
 
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(PortalrtBlock.block));
-		}
-
 		@Override
 		public net.minecraft.util.SoundEvent getAmbientSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_idle2"));
@@ -174,11 +167,15 @@ public class SavragerobiEntity extends RagemodModElements.ModElement {
 			Random random = this.rand;
 			Entity entity = this;
 			if (true)
-				for (int l = 0; l < 2; ++l) {
-					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 0.2999999985098839D * 20;
-					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 0.2999999985098839D) + 0.5;
-					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 0.2999999985098839D * 20;
-					world.addParticle(Particle2Particle.particle, d0, d1, d2, 0, 0, 0);
+				for (int l = 0; l < 1; ++l) {
+					double d0 = (x + random.nextFloat());
+					double d1 = (y + random.nextFloat());
+					double d2 = (z + random.nextFloat());
+					int i1 = random.nextInt(2) * 2 - 1;
+					double d3 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					world.addParticle(Particle2Particle.particle, d0, d1, d2, d3, d4, d5);
 				}
 		}
 	}

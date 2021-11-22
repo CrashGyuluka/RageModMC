@@ -33,7 +33,7 @@ public class Stripped_SequoiaWoodBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public Stripped_SequoiaWoodBlock(RagemodModElements instance) {
-		super(instance, 251);
+		super(instance, 249);
 	}
 
 	@Override

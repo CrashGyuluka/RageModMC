@@ -33,10 +33,7 @@
       }
     ],
     "name": "Alien Stone",
-    "specialInfo": [
-      "Amating texture by Lyof",
-      "as always..."
-    ],
+    "specialInfo": [],
     "hardness": 2.0,
     "resistance": 10.0,
     "hasGravity": false,
@@ -133,8 +130,8 @@
         "value": "CUSTOM:Hegyiko1"
       }
     ],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
+    "frequencyPerChunks": 30,
+    "frequencyOnChunk": 20,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 256
   }

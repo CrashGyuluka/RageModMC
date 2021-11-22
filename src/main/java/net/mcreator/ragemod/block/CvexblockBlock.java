@@ -35,7 +35,7 @@ public class CvexblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public CvexblockBlock(RagemodModElements instance) {
-		super(instance, 91);
+		super(instance, 88);
 	}
 
 	@Override
@@ -78,10 +78,10 @@ public class CvexblockBlock extends RagemodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			if (true)
-				for (int l = 0; l < 12; ++l) {
-					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 0.5999999985098838D;
-					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 0.5999999985098838D * 100) + 0.5;
-					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 0.5999999985098838D;
+				for (int l = 0; l < 1; ++l) {
+					double d0 = (double) ((float) x + 0.5) + (double) (random.nextFloat() - 0.5) * 0.1999999985098839D;
+					double d1 = ((double) ((float) y + 0.7) + (double) (random.nextFloat() - 0.5) * 0.1999999985098839D) + 0.5;
+					double d2 = (double) ((float) z + 0.5) + (double) (random.nextFloat() - 0.5) * 0.1999999985098839D;
 					world.addParticle(CvexparticleParticle.particle, d0, d1, d2, 0, 0, 0);
 				}
 		}

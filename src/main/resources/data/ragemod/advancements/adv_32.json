@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:destroyablealiensoildev"
+    },
+    "title": {
+      "translate": "advancements.adv_32.title"
+    },
+    "description": {
+      "translate": "advancements.adv_32.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_32": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "ragemod:alien_dimension_portal_igniter"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:adv_27"
+}

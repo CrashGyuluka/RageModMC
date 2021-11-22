@@ -57,7 +57,7 @@ public class BigalienmushroomBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BigalienmushroomBlock(RagemodModElements instance) {
-		super(instance, 174);
+		super(instance, 172);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

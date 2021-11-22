@@ -26,7 +26,7 @@ public class CursedalieniteItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public CursedalieniteItem(RagemodModElements instance) {
-		super(instance, 95);
+		super(instance, 91);
 	}
 
 	@Override

@@ -22,7 +22,7 @@ public class DeepslateanapaitoreBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public DeepslateanapaitoreBlock(RagemodModElements instance) {
-		super(instance, 55);
+		super(instance, 54);
 	}
 
 	@Override

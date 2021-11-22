@@ -17,7 +17,7 @@ public class AchatItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AchatItem(RagemodModElements instance) {
-		super(instance, 37);
+		super(instance, 36);
 	}
 
 	@Override

@@ -27,7 +27,7 @@ public class AlpivblockBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlpivblockBlock(RagemodModElements instance) {
-		super(instance, 187);
+		super(instance, 185);
 	}
 
 	@Override

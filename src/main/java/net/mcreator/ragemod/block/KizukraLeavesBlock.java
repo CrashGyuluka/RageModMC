@@ -33,7 +33,7 @@ public class KizukraLeavesBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public KizukraLeavesBlock(RagemodModElements instance) {
-		super(instance, 378);
+		super(instance, 376);
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class AlieniteswordItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public AlieniteswordItem(RagemodModElements instance) {
-		super(instance, 97);
+		super(instance, 93);
 	}
 
 	@Override

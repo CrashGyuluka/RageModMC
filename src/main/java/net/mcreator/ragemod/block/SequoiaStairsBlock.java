@@ -28,7 +28,7 @@ public class SequoiaStairsBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SequoiaStairsBlock(RagemodModElements instance) {
-		super(instance, 278);
+		super(instance, 276);
 	}
 
 	@Override
