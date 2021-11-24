@@ -47,7 +47,7 @@ public class RttraderguiGui extends RagemodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public RttraderguiGui(RagemodModElements instance) {
-		super(instance, 650);
+		super(instance, 666);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

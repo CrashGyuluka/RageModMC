@@ -14,7 +14,7 @@ public class RageModDevModeGameRule extends RagemodModElements.ModElement {
 			create(false));
 
 	public RageModDevModeGameRule(RagemodModElements instance) {
-		super(instance, 1371);
+		super(instance, 1387);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

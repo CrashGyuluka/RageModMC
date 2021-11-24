@@ -27,7 +27,7 @@ public class StrippedbukkwoodBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public StrippedbukkwoodBlock(RagemodModElements instance) {
-		super(instance, 233);
+		super(instance, 249);
 	}
 
 	@Override

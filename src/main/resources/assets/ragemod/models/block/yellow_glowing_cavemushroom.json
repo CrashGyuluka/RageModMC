@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/yellow_cavestone_tmushroom_fixed",
+    "particle": "ragemod:blocks/yellow_cavestone_tmushroom_fixed"
+  }
+}

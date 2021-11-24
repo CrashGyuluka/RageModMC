@@ -64,7 +64,7 @@ public class Rageflylit2Entity extends RagemodModElements.ModElement {
 			.size(0.5f, 0.5f)).build("rageflylit_2").setRegistryName("rageflylit_2");
 
 	public Rageflylit2Entity(RagemodModElements instance) {
-		super(instance, 1305);
+		super(instance, 1321);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new Rageflylit2Renderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

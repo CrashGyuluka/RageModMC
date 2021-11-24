@@ -34,7 +34,7 @@ public class RobtaiWoodBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RobtaiWoodBlock(RagemodModElements instance) {
-		super(instance, 239);
+		super(instance, 255);
 	}
 
 	@Override

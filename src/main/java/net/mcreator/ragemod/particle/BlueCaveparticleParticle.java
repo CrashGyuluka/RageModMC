@@ -43,7 +43,7 @@ public class BlueCaveparticleParticle {
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
 			this.maxAge = (int) Math.max(1, 7 + (this.rand.nextInt(8) - 4));
-			this.particleGravity = (float) 0.1;
+			this.particleGravity = (float) -0.2;
 			this.canCollide = true;
 			this.motionX = vx * 1;
 			this.motionY = vy * 1;

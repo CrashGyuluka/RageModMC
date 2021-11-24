@@ -101,9 +101,9 @@
     "particleToSpawn": {
       "value": "CUSTOM:BlueCaveparticle"
     },
-    "particleSpawningShape": "Top",
-    "particleSpawningRadious": 0.3999999985098839,
-    "particleAmount": 3,
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 1.000000001490116,
+    "particleAmount": 4,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

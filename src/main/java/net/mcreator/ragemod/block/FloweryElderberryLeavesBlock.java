@@ -71,7 +71,7 @@ public class FloweryElderberryLeavesBlock extends RagemodModElements.ModElement 
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public FloweryElderberryLeavesBlock(RagemodModElements instance) {
-		super(instance, 381);
+		super(instance, 397);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

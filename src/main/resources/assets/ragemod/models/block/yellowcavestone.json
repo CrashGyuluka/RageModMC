@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "ragemod:blocks/stone",
+    "up": "ragemod:blocks/yellow_cavestone_top1",
+    "north": "ragemod:blocks/yellow_cavestone",
+    "east": "ragemod:blocks/yellow_cavestone",
+    "south": "ragemod:blocks/yellow_cavestone",
+    "west": "ragemod:blocks/yellow_cavestone",
+    "particle": "ragemod:blocks/stone"
+  }
+}

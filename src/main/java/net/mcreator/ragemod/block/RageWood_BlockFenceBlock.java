@@ -30,7 +30,7 @@ public class RageWood_BlockFenceBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RageWood_BlockFenceBlock(RagemodModElements instance) {
-		super(instance, 295);
+		super(instance, 311);
 	}
 
 	@Override

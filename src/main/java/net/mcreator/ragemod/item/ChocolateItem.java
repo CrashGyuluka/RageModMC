@@ -18,7 +18,7 @@ public class ChocolateItem extends RagemodModElements.ModElement {
 	public static final Item block = null;
 
 	public ChocolateItem(RagemodModElements instance) {
-		super(instance, 388);
+		super(instance, 404);
 	}
 
 	@Override

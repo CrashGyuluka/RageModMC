@@ -1,9 +1,8 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 
 import net.mcreator.ragemod.block.Haningalienplant5Block;
 import net.mcreator.ragemod.block.Hangingalienplantexluse1Block;
@@ -58,11 +57,7 @@ public class HangingalienplantUpdateTickProcedure {
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Hangingalienplant5Block.block
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Hangingalienplantexluse1Block.block
 					|| world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)).isSolid() == false) {
-				if (world instanceof World) {
-					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
-							new BlockPos((int) x, (int) y, (int) z));
-					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-				}
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 			}
 		}
 	}

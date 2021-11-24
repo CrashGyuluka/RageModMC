@@ -39,7 +39,7 @@ public class BlueCaveairBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BlueCaveairBlock(RagemodModElements instance) {
-		super(instance, 1486);
+		super(instance, 1502);
 	}
 
 	@Override

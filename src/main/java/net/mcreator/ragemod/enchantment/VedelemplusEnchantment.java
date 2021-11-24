@@ -15,7 +15,7 @@ public class VedelemplusEnchantment extends RagemodModElements.ModElement {
 	public static final Enchantment enchantment = null;
 
 	public VedelemplusEnchantment(RagemodModElements instance) {
-		super(instance, 771);
+		super(instance, 787);
 	}
 
 	@Override

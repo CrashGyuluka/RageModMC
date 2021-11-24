@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/yellow_cavestone_air",
+    "particle": "ragemod:blocks/yellow_cavestone_air"
+  }
+}

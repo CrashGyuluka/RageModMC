@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/magenta_cavestone_mushroom",
+    "particle": "ragemod:blocks/magenta_cavestone_mushroom"
+  }
+}

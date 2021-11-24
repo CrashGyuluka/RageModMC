@@ -4,7 +4,10 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.Blocks;
 
+import net.mcreator.ragemod.block.HangingGlowingCaveplantBlock;
 import net.mcreator.ragemod.block.HangingBlueCaveplantBlock;
+import net.mcreator.ragemod.block.BlueglowingcavemushroomBlock;
+import net.mcreator.ragemod.block.BlueGlowingCaveplantBlock;
 import net.mcreator.ragemod.block.BlueCavestoneBlock;
 import net.mcreator.ragemod.block.BlueCaveplantBlock;
 import net.mcreator.ragemod.block.BlueCavemushroomBlock;
@@ -43,14 +46,26 @@ public class BluecaveairupdatetickProcedure {
 			if (Blocks.STONE == (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()) {
 				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), BlueCavestoneBlock.block.getDefaultState(), 3);
 				if (0.05 >= Math.random()) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlueCavemushroomBlock.block.getDefaultState(), 3);
+					if (0.69 >= Math.random()) {
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlueCavemushroomBlock.block.getDefaultState(), 3);
+					} else {
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlueglowingcavemushroomBlock.block.getDefaultState(), 3);
+					}
 				} else if (0.2 >= Math.random()) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlueCaveplantBlock.block.getDefaultState(), 3);
+					if (0.75 >= Math.random()) {
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlueCaveplantBlock.block.getDefaultState(), 3);
+					} else {
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlueGlowingCaveplantBlock.block.getDefaultState(), 3);
+					}
 				} else {
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAVE_AIR.getDefaultState(), 3);
 				}
 			} else if (0.15 >= Math.random() && Blocks.STONE == (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), HangingBlueCaveplantBlock.block.getDefaultState(), 3);
+				if (0.66 >= Math.random()) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), HangingBlueCaveplantBlock.block.getDefaultState(), 3);
+				} else {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), HangingGlowingCaveplantBlock.block.getDefaultState(), 3);
+				}
 			} else {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAVE_AIR.getDefaultState(), 3);
 			}

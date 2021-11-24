@@ -42,7 +42,7 @@ public class FloweryalienplainsBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public FloweryalienplainsBiome(RagemodModElements instance) {
-		super(instance, 1341);
+		super(instance, 1357);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

@@ -51,7 +51,7 @@ public class TotallyNotAlienBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public TotallyNotAlienBiome(RagemodModElements instance) {
-		super(instance, 1212);
+		super(instance, 1228);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

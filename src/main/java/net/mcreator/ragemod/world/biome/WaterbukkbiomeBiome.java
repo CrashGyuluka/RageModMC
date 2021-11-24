@@ -50,7 +50,7 @@ public class WaterbukkbiomeBiome extends RagemodModElements.ModElement {
 	public static Biome biome;
 
 	public WaterbukkbiomeBiome(RagemodModElements instance) {
-		super(instance, 1194);
+		super(instance, 1210);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 

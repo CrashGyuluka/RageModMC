@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ragemod:blocks/red_cavestone_plant_hanging",
+    "particle": "ragemod:blocks/red_cavestone_plant_hanging"
+  }
+}

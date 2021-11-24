@@ -30,7 +30,7 @@ public class RobtaiFenceBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public RobtaiFenceBlock(RagemodModElements instance) {
-		super(instance, 308);
+		super(instance, 324);
 	}
 
 	@Override

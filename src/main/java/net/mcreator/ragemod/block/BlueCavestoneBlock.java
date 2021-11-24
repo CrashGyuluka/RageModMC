@@ -30,7 +30,7 @@ public class BlueCavestoneBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public BlueCavestoneBlock(RagemodModElements instance) {
-		super(instance, 1485);
+		super(instance, 225);
 	}
 
 	@Override

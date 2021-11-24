@@ -13,7 +13,7 @@ import net.mcreator.ragemod.RagemodModElements;
 @RagemodModElements.ModElement.Tag
 public class TermeszettabItemGroup extends RagemodModElements.ModElement {
 	public TermeszettabItemGroup(RagemodModElements instance) {
-		super(instance, 758);
+		super(instance, 774);
 	}
 
 	@Override

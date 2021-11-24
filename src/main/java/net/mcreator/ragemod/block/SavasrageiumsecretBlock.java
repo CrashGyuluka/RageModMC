@@ -42,7 +42,7 @@ public class SavasrageiumsecretBlock extends RagemodModElements.ModElement {
 	public static final Block block = null;
 
 	public SavasrageiumsecretBlock(RagemodModElements instance) {
-		super(instance, 607);
+		super(instance, 623);
 	}
 
 	@Override
