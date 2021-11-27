@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-    "down": "ragemod:blocks/a_adular_ore",
-    "up": "ragemod:blocks/a_adular_ore",
-    "north": "ragemod:blocks/a_adular_ore",
-    "east": "ragemod:blocks/a_adular_ore",
-    "south": "ragemod:blocks/a_adular_ore",
-    "west": "ragemod:blocks/a_adular_ore",
-    "particle": "ragemod:blocks/a_adular_ore"
+    "all": "ragemod:blocks/adular_ore_newes",
+    "particle": "ragemod:blocks/adular_ore_newes"
   }
 }

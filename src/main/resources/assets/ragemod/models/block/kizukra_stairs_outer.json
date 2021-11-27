@@ -1,8 +1,8 @@
 {
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "ragemod:blocks/kizukra_plank",
-    "top": "ragemod:blocks/---kizukra_planks2.png",
-    "side": "ragemod:blocks/---kizukra_planks2.png"
+    "bottom": "ragemod:blocks/kizukra_planks",
+    "top": "ragemod:blocks/kizukra_planks",
+    "side": "ragemod:blocks/kizukra_planks"
   }
 }

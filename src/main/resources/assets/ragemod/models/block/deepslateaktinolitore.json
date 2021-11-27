@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/-d_aktinolit_ore",
-    "up": "ragemod:blocks/-d_aktinolit_ore",
-    "north": "ragemod:blocks/-d_aktinolit_ore",
-    "east": "ragemod:blocks/-d_aktinolit_ore",
-    "south": "ragemod:blocks/-d_aktinolit_ore",
-    "west": "ragemod:blocks/-d_aktinolit_ore",
-    "particle": "ragemod:blocks/-d_aktinolit_ore"
+    "down": "ragemod:blocks/deepslate_aktinolit_ore_newest",
+    "up": "ragemod:blocks/deepslate_aktinolit_ore_newest",
+    "north": "ragemod:blocks/deepslate_aktinolit_ore_newest",
+    "east": "ragemod:blocks/deepslate_aktinolit_ore_newest",
+    "south": "ragemod:blocks/deepslate_aktinolit_ore_newest",
+    "west": "ragemod:blocks/deepslate_aktinolit_ore_newest",
+    "particle": "ragemod:blocks/deepslate_aktinolit_ore_newest"
   }
 }

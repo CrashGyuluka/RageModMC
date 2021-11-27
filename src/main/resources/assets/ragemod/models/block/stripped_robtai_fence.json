@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_side",
   "textures": {
-    "texture": "ragemod:blocks/------wrr",
-    "particle": "ragemod:blocks/------wrr"
+    "texture": "ragemod:blocks/stripped_robtai_log_side",
+    "particle": "ragemod:blocks/stripped_robtai_log_side"
   }
 }

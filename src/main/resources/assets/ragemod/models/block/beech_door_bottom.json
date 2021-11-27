@@ -1,7 +1,7 @@
 {
   "parent": "block/door_bottom",
   "textures": {
-    "bottom": "ragemod:blocks/bukk_al",
-    "top": "ragemod:blocks/bukk_fel"
+    "bottom": "ragemod:blocks/beech_door_bottom",
+    "top": "ragemod:blocks/beech_door_top"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate_open",
   "textures": {
-    "texture": "ragemod:blocks/-str2"
+    "texture": "ragemod:blocks/stripped_beech_log_side"
   }
 }

@@ -2,8 +2,8 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "azukra_al",
-    "textureTop": "azukra_fel",
+    "texture": "kizukra_door_bottom",
+    "textureTop": "kizukra_door_top",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
@@ -59,6 +59,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -76,6 +79,21 @@
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,

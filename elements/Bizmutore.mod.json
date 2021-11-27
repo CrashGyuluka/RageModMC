@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "----bizmut",
+    "texture": "bismuth_ore_newest",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 11,
+    "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -33,7 +33,9 @@
       }
     ],
     "name": "Bizmuth Ore",
-    "specialInfo": [],
+    "specialInfo": [
+      "It is not lgbt ore!"
+    ],
     "hardness": 7.0,
     "resistance": 20.0,
     "hasGravity": false,

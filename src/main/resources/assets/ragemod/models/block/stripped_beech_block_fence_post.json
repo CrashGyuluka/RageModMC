@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_post",
   "textures": {
-    "texture": "ragemod:blocks/-str2",
-    "particle": "ragemod:blocks/-str2"
+    "texture": "ragemod:blocks/stripped_beech_log_side",
+    "particle": "ragemod:blocks/stripped_beech_log_side"
   }
 }

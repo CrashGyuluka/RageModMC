@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/rob6",
-    "up": "ragemod:blocks/rob6",
-    "north": "ragemod:blocks/------wrr",
-    "east": "ragemod:blocks/------wrr",
-    "south": "ragemod:blocks/------wrr",
-    "west": "ragemod:blocks/------wrr",
-    "particle": "ragemod:blocks/rob6"
+    "down": "ragemod:blocks/stripped_robtai_log_top",
+    "up": "ragemod:blocks/stripped_robtai_log_top",
+    "north": "ragemod:blocks/stripped_robtai_log_side",
+    "east": "ragemod:blocks/stripped_robtai_log_side",
+    "south": "ragemod:blocks/stripped_robtai_log_side",
+    "west": "ragemod:blocks/stripped_robtai_log_side",
+    "particle": "ragemod:blocks/stripped_robtai_log_top"
   }
 }

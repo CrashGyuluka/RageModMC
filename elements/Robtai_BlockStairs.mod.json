@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "------wrr",
-    "textureTop": "------wrr",
+    "texture": "stripped_robtai_log_side",
+    "textureTop": "stripped_robtai_log_side",
     "textureLeft": "",
-    "textureFront": "------wrr",
+    "textureFront": "stripped_robtai_log_side",
     "textureRight": "",
     "textureBack": "",
     "renderType": 10,

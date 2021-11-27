@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/stone",
     "up": "ragemod:blocks/magenta_cavestone_top",
-    "north": "ragemod:blocks/magenta_cavestone",
-    "east": "ragemod:blocks/magenta_cavestone",
-    "south": "ragemod:blocks/magenta_cavestone",
-    "west": "ragemod:blocks/magenta_cavestone",
+    "north": "ragemod:blocks/magenta_cavestone_1",
+    "east": "ragemod:blocks/magenta_cavestone_1",
+    "south": "ragemod:blocks/magenta_cavestone_1",
+    "west": "ragemod:blocks/magenta_cavestone_1",
     "particle": "ragemod:blocks/stone"
   }
 }

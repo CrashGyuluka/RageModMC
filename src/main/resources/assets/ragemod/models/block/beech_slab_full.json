@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
-    "bottom": "ragemod:blocks/000000",
-    "top": "ragemod:blocks/000000",
-    "side": "ragemod:blocks/000000"
+    "bottom": "ragemod:blocks/beech_planks",
+    "top": "ragemod:blocks/beech_planks",
+    "side": "ragemod:blocks/beech_planks"
   }
 }

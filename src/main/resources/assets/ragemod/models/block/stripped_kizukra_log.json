@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/--324--------",
-    "up": "ragemod:blocks/--324--------",
-    "north": "ragemod:blocks/-213-21",
-    "east": "ragemod:blocks/-213-21",
-    "south": "ragemod:blocks/-213-21",
-    "west": "ragemod:blocks/-213-21",
-    "particle": "ragemod:blocks/--324--------"
+    "down": "ragemod:blocks/stripped_kizukra_log_top",
+    "up": "ragemod:blocks/stripped_kizukra_log_top",
+    "north": "ragemod:blocks/stripped_kizukra_log_side",
+    "east": "ragemod:blocks/stripped_kizukra_log_side",
+    "south": "ragemod:blocks/stripped_kizukra_log_side",
+    "west": "ragemod:blocks/stripped_kizukra_log_side",
+    "particle": "ragemod:blocks/stripped_kizukra_log_top"
   }
 }

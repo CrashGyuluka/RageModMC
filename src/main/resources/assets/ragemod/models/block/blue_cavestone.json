@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/stone",
     "up": "ragemod:blocks/blue_cavestone_top",
-    "north": "ragemod:blocks/blue_cavestone",
-    "east": "ragemod:blocks/blue_cavestone",
-    "south": "ragemod:blocks/blue_cavestone",
-    "west": "ragemod:blocks/blue_cavestone",
+    "north": "ragemod:blocks/blue_cavestone1",
+    "east": "ragemod:blocks/blue_cavestone1",
+    "south": "ragemod:blocks/blue_cavestone1",
+    "west": "ragemod:blocks/blue_cavestone1",
     "particle": "ragemod:blocks/stone"
   }
 }
