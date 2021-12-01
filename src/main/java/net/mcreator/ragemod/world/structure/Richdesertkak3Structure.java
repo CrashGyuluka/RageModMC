@@ -80,7 +80,7 @@ public class Richdesertkak3Structure {
 							if (!Richdesertkak1AdditionalGenerationConditionProcedure.executeProcedure(Stream
 									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
 											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll)))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
 								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("ragemod", "a_rich_desert_kak3"));

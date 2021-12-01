@@ -56,7 +56,7 @@ public class RageoverlayOverlay {
 			RenderSystem.disableAlphaTest();
 			if (RageoverlayDisplayOverlayIngameProcedure
 					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll))) {
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("ragemod:textures/rage_hatter.png"));
 				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -382, posY + -179, 0, 0, 1920, 1080, 1920, 1080);
 

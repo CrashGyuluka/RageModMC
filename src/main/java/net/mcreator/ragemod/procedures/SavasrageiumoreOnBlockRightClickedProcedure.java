@@ -4,17 +4,23 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.state.Property;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.ragemod.item.DetonatorrtItem;
 import net.mcreator.ragemod.block.SavasrageiumoreBlock;
@@ -24,6 +30,7 @@ import net.mcreator.ragemod.RagemodMod;
 
 import java.util.Random;
 import java.util.Map;
+import java.util.Iterator;
 import java.util.HashMap;
 
 public class SavasrageiumoreOnBlockRightClickedProcedure {
@@ -108,6 +115,25 @@ public class SavasrageiumoreOnBlockRightClickedProcedure {
 				if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
 					_ist.shrink(1);
 					_ist.setDamage(0);
+				}
+			}
+			if ((((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
+					? ((ServerPlayerEntity) entity).getAdvancements()
+							.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+									.getAdvancement(new ResourceLocation("ragemod:adv_14")))
+							.isDone()
+					: false) == false) {
+				if (entity instanceof ServerPlayerEntity) {
+					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+							.getAdvancement(new ResourceLocation("ragemod:adv_14"));
+					AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemaningCriteria().iterator();
+						while (_iterator.hasNext()) {
+							String _criterion = (String) _iterator.next();
+							((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+						}
+					}
 				}
 			}
 		}

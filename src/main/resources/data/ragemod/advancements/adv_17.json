@@ -25,7 +25,7 @@
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 2
   },
-  "parent": "ragemod:adv_1"
+  "parent": "ragemod:advstart"
 }

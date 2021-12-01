@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:red_cavestone"
+    },
+    "title": {
+      "translate": "advancements.adv_36.title"
+    },
+    "description": {
+      "translate": "advancements.adv_36.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_36": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "ragemod:advstart"
+}

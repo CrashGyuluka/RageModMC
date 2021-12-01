@@ -1,0 +1,110 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:BlueCavestone"
+      },
+      {
+        "value": "CUSTOM:BlueCaveair"
+      },
+      {
+        "value": "CUSTOM:BlueCavemushroom"
+      },
+      {
+        "value": "CUSTOM:BlueCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingBlueCaveplant"
+      },
+      {
+        "value": "CUSTOM:RedCavestone"
+      },
+      {
+        "value": "CUSTOM:RedCavemushroom"
+      },
+      {
+        "value": "CUSTOM:RedCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingRedcaveplant"
+      },
+      {
+        "value": "CUSTOM:Redcaveair"
+      },
+      {
+        "value": "CUSTOM:Yellowcavestone"
+      },
+      {
+        "value": "CUSTOM:Yellowcavemushroom"
+      },
+      {
+        "value": "CUSTOM:YellowCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingYellowCaveplant"
+      },
+      {
+        "value": "CUSTOM:Yellowcaveair"
+      },
+      {
+        "value": "CUSTOM:MagentaCavestone"
+      },
+      {
+        "value": "CUSTOM:MagentaCavemushroom"
+      },
+      {
+        "value": "CUSTOM:Magentacaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingMagentaCaveplant"
+      },
+      {
+        "value": "CUSTOM:MagentaCaveair"
+      },
+      {
+        "value": "CUSTOM:Blueglowingcavemushroom"
+      },
+      {
+        "value": "CUSTOM:RedGlowingcavemushroom"
+      },
+      {
+        "value": "CUSTOM:YellowGlowingCavemushroom"
+      },
+      {
+        "value": "CUSTOM:MagentaGlowingCavemushroom"
+      },
+      {
+        "value": "CUSTOM:BlueGlowingCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingGlowingCaveplant"
+      },
+      {
+        "value": "CUSTOM:RedGlowingCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingGlowingRedCavestone"
+      },
+      {
+        "value": "CUSTOM:YellowGlowingCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingYellowGlowingCaveplant"
+      },
+      {
+        "value": "CUSTOM:MagentaGlowongCaveplant"
+      },
+      {
+        "value": "CUSTOM:HangingGlowingMagentaCaveplant"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "cavebiome_blocks_rt",
+    "namespace": "forge"
+  }
+}

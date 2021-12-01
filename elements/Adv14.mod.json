@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "achievement",
   "definition": {
-    "achievementName": "The combnation of 2 evils...",
-    "achievementDescription": "One word: NO!",
+    "achievementName": "The combnation of 2 evils",
+    "achievementDescription": "Blow up a Rageium Block covered with Toxic Crystal with a detonator",
     "achievementIcon": {
       "value": "CUSTOM:Savasrageiumalloyblock"
     },
-    "background": "rageium_ore2.png",
+    "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,
@@ -20,6 +20,6 @@
     "parent": {
       "value": "CUSTOM:Adv17"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"69\" y=\"83\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"104\" y=\"123\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

@@ -404,12 +404,12 @@ public class RttraderguiGui extends RagemodModElements.ModElement {
 		if (buttonID == 0) {
 
 			Favago4Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (buttonID == 1) {
 
 			Favago3Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 
@@ -421,18 +421,18 @@ public class RttraderguiGui extends RagemodModElements.ModElement {
 		if (slotID == 0 && changeType == 0) {
 
 			Favago5Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (slotID == 1 && changeType == 1) {
 
 			Favago6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (slotID == 1 && changeType == 2) {
 			int amount = meta;
 
 			Favago6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

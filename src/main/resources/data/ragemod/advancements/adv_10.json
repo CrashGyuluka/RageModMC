@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.adv_10.descr"
     },
-    "frame": "task",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
@@ -22,8 +22,8 @@
           {
             "item": "ragemod:rageiumblock",
             "count": {
-              "min": 1,
-              "max": 64
+              "min": 69,
+              "max": 69
             }
           }
         ]
@@ -31,7 +31,7 @@
     }
   },
   "rewards": {
-    "experience": 2
+    "experience": 10
   },
   "parent": "ragemod:adv_1"
 }

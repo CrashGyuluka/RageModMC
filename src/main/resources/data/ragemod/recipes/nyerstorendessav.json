@@ -1,5 +1,4 @@
 {
-  "group": "ragemod",
   "type": "minecraft:smelting",
   "experience": 3,
   "cookingtime": 300,

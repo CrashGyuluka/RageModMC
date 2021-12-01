@@ -113,7 +113,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 				return HangingalienshroomAdditionalPlacinggrowthConditionProcedure.executeProcedure(Stream
 						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
 								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			}
 			return super.isValidPosition(blockstate, worldIn, pos);
 		}
@@ -155,7 +155,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+			world.getPendingBlockTicks().scheduleTick(pos, this, 10);
 		}
 
 		@Override
@@ -165,12 +165,11 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 			int y = pos.getY();
 			int z = pos.getZ();
 
-			HangingalienplantUpdateTickProcedure
-					.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+			HangingalienplantUpdateTickProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			world.getPendingBlockTicks().scheduleTick(pos, this, 10);
 		}
 
 		@Override
@@ -185,11 +184,10 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
 
-			HangingalienplantOnBlockRightClickedProcedure
-					.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+			HangingalienplantOnBlockRightClickedProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ActionResultType.SUCCESS;
 		}
 	}
@@ -239,7 +237,7 @@ public class HangingalienplantdevblockBlock extends RagemodModElements.ModElemen
 					if (!HangingalienshroomAdditionalPlacinggrowthConditionProcedure.executeProcedure(Stream
 							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
 									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-							.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll)))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}

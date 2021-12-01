@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "The start of bad things",
-    "achievementDescription": "Consume a Raw Toxic Crystal",
+    "achievementDescription": "Have a Raw Toxic Crystal in your inventory",
     "achievementIcon": {
       "value": "CUSTOM:Savercr"
     },
@@ -15,10 +15,10 @@
     "rewardLoot": [],
     "rewardRecipes": [],
     "rewardFunction": "No function",
-    "rewardXP": 1,
+    "rewardXP": 2,
     "achievementType": "task",
     "parent": {
-      "value": "CUSTOM:Adv1"
+      "value": "CUSTOM:Advstart"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_consumed\" x=\"61\" y=\"145\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Savercr</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }

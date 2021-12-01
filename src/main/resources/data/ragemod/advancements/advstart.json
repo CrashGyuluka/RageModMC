@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "ragemod:textures/rageium_bricks_new.png",
+    "icon": {
+      "item": "ragemod:receptbook"
+    },
+    "title": {
+      "translate": "advancements.advstart.title"
+    },
+    "description": {
+      "translate": "advancements.advstart.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "advstart": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

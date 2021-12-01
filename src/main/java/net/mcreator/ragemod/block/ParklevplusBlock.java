@@ -72,7 +72,7 @@ public class ParklevplusBlock extends RagemodModElements.ModElement {
 			BlockState blockstate = world.getBlockState(pos);
 
 			ParklevplusEntityWalksOnTheBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

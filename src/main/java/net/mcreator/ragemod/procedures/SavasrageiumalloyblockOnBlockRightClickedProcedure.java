@@ -5,7 +5,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.state.Property;
-import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
@@ -36,16 +35,10 @@ public class SavasrageiumalloyblockOnBlockRightClickedProcedure {
 				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure SavasrageiumalloyblockOnBlockRightClicked!");
 			return;
 		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure SavasrageiumalloyblockOnBlockRightClicked!");
-			return;
-		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			BlockState _bs = Blocks.AIR.getDefaultState();
@@ -61,8 +54,7 @@ public class SavasrageiumalloyblockOnBlockRightClickedProcedure {
 			world.setBlockState(_bp, _bs, 3);
 		}
 		if (world instanceof World && !((World) world).isRemote) {
-			((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 4,
-					Explosion.Mode.BREAK);
+			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 4, Explosion.Mode.BREAK);
 		}
 	}
 }

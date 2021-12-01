@@ -1,26 +1,26 @@
 {
   "display": {
     "icon": {
-      "item": "ragemod:amazonitsavasfejsze"
+      "item": "ragemod:savaszuzott"
     },
     "title": {
-      "translate": "advancements.adv_21.title"
+      "translate": "advancements.adv_37.title"
     },
     "description": {
-      "translate": "advancements.adv_21.descr"
+      "translate": "advancements.adv_37.descr"
     },
-    "frame": "task",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "adv_21": {
+    "adv_37": {
       "trigger": "minecraft:impossible"
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 20
   },
-  "parent": "ragemod:adv_20"
+  "parent": "ragemod:adv_17"
 }

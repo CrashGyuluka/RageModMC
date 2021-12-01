@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "I don't want to lose you.... :'(",
-    "achievementDescription": "Consume a RageBoss spawn egg!",
+    "achievementDescription": "Have a RageBoss spawn egg in your inventory",
     "achievementIcon": {
       "value": "CUSTOM:RageBoosSpawner"
     },

@@ -423,7 +423,7 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 		if (buttonID == 0) {
 
 			ConvertercheckguifullProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 
@@ -435,7 +435,7 @@ public class KonvertaloguiGui extends RagemodModElements.ModElement {
 		if (slotID == 6 && changeType == 0) {
 
 			ConverterSlotChangesProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

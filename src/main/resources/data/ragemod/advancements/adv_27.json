@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "ragemod:textures/adv_b1.png",
     "icon": {
       "item": "ragemod:alien_dimension_portal_igniter"
     },
@@ -27,5 +26,6 @@
   },
   "rewards": {
     "experience": 1
-  }
+  },
+  "parent": "ragemod:advstart"
 }

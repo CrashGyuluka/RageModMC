@@ -22,7 +22,7 @@
           {
             "item": "ragemod:portalrt",
             "count": {
-              "min": 1,
+              "min": 4,
               "max": 64
             }
           }

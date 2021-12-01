@@ -66,7 +66,7 @@ public class SavasfejszeItem extends RagemodModElements.ModElement {
 				int z = pos.getZ();
 
 				SavasfejszeBlockDestroyedWithToolProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
-						.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				return retval;
 			}
 		}.setRegistryName("savasfejsze"));

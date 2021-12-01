@@ -52,7 +52,7 @@ public class BlueCaveairBlockAddedProcedure {
 						BluecaveairupdatetickProcedure.executeProcedure(Stream
 								.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", (x + xs)),
 										new AbstractMap.SimpleEntry<>("y", (y + ys)), new AbstractMap.SimpleEntry<>("z", (z + zs)))
-								.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					}
 					xs = (double) (xs + 1);
 				}

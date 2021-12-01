@@ -23,7 +23,7 @@
             "item": "ragemod:crashchest",
             "count": {
               "min": 4,
-              "max": 256
+              "max": 1000
             }
           }
         ]

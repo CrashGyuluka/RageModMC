@@ -54,7 +54,7 @@ public class AlieniteshieldItem extends RagemodModElements.ModElement {
 
 				AlieniteshieldRightClickedInAirProcedure.executeProcedure(
 						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
-								.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				return retval;
 			}
 
@@ -73,7 +73,7 @@ public class AlieniteshieldItem extends RagemodModElements.ModElement {
 
 				AlieniteshieldRightClickedInAirProcedure.executeProcedure(
 						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
-								.collect(HashMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				return retval;
 			}
 		}.setRegistryName("alieniteshield"));

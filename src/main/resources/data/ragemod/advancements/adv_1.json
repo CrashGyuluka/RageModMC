@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "ragemod:textures/rageium_ore2.png",
     "icon": {
       "item": "ragemod:rageium"
     },
@@ -27,5 +26,6 @@
   },
   "rewards": {
     "experience": 1
-  }
+  },
+  "parent": "ragemod:advstart"
 }

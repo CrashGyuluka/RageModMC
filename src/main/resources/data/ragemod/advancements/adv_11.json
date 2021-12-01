@@ -9,21 +9,21 @@
     "description": {
       "translate": "advancements.adv_11.descr"
     },
-    "frame": "task",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
     "adv_11": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:item_durability_changed",
       "conditions": {
         "items": [
           {
             "item": "ragemod:ragearrow",
-            "count": {
-              "min": 1,
-              "max": 64
+            "durability": {
+              "min": 6968,
+              "max": 16000
             }
           }
         ]
@@ -31,7 +31,7 @@
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 10
   },
   "parent": "ragemod:adv_16"
 }

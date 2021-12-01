@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "So much power!",
-    "achievementDescription": "Defeate the RageBoss and consume the Trophy!",
+    "achievementDescription": "Defeate the RageBoss and get the Trophy!",
     "achievementIcon": {
       "value": "CUSTOM:Trofea"
     },
@@ -16,7 +16,7 @@
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 1,
-    "achievementType": "task",
+    "achievementType": "goal",
     "parent": {
       "value": "CUSTOM:Adv4"
     },

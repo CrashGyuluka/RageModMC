@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/mamut11",
-    "up": "ragemod:blocks/mamut11",
-    "north": "ragemod:blocks/mamut12",
-    "east": "ragemod:blocks/mamut12",
-    "south": "ragemod:blocks/mamut12",
-    "west": "ragemod:blocks/mamut12",
-    "particle": "ragemod:blocks/mamut11"
+    "down": "ragemod:blocks/stripped_sequoia_log_top",
+    "up": "ragemod:blocks/stripped_sequoia_log_top",
+    "north": "ragemod:blocks/stripped_sequoia_log_side",
+    "east": "ragemod:blocks/stripped_sequoia_log_side",
+    "south": "ragemod:blocks/stripped_sequoia_log_side",
+    "west": "ragemod:blocks/stripped_sequoia_log_side",
+    "particle": "ragemod:blocks/stripped_sequoia_log_top"
   }
 }

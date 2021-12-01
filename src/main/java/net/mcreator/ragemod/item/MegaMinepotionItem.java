@@ -69,7 +69,7 @@ public class MegaMinepotionItem extends RagemodModElements.ModElement {
 			double z = entity.getPosZ();
 
 			MegaMinepotionFoodEatenProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

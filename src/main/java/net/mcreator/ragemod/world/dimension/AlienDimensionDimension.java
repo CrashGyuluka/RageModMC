@@ -65,6 +65,7 @@ import java.util.function.Function;
 import java.util.Set;
 import java.util.Random;
 import java.util.Optional;
+import java.util.HashSet;
 import java.util.Comparator;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
@@ -84,14 +85,40 @@ public class AlienDimensionDimension extends RagemodModElements.ModElement {
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
+		Set<Block> replaceableBlocks = new HashSet<>();
+		replaceableBlocks.add(Hegyiko1Block.block);
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:spiky_alien_plains")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:spiky_alien_plains")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_lake")).getGenerationSettings().getSurfaceBuilder()
+				.get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_lake")).getGenerationSettings().getSurfaceBuilder()
+				.get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_hills")).getGenerationSettings().getSurfaceBuilder()
+				.get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_hills")).getGenerationSettings().getSurfaceBuilder()
+				.get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_plains")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_plains")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_forest")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:alien_forest")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:flowery_alien_plains")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("ragemod:flowery_alien_plains")).getGenerationSettings()
+				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
 		DeferredWorkQueue.runLater(() -> {
 			try {
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CAVE, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CAVE, "field_222718_j"))
-						.add(Hegyiko1Block.block).build(), "field_222718_j");
+						.addAll(replaceableBlocks).build(), "field_222718_j");
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CANYON, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CANYON, "field_222718_j"))
-						.add(Hegyiko1Block.block).build(), "field_222718_j");
+						.addAll(replaceableBlocks).build(), "field_222718_j");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

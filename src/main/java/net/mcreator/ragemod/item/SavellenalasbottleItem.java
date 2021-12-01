@@ -74,7 +74,7 @@ public class SavellenalasbottleItem extends RagemodModElements.ModElement {
 			double z = entity.getPosZ();
 
 			SavellenalasbottleFoodEatenProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll));
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 	}
