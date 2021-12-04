@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "ragemod:deleted_mod_element"
-  },
-  "result": "ragemod:deleted_mod_element"
-}

@@ -1,40 +1,27 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.entity.Entity;
-
-import net.mcreator.ragemod.RagemodMod;
-
-import java.util.Map;
+import net.minecraft.world.entity.Entity;
 
 public class ClearallcommCommandExecutedProcedure {
-
-	public static boolean executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure ClearallcommCommandExecuted!");
+	public static boolean execute(Entity entity) {
+		if (entity == null)
 			return false;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
 		{
 			Entity _ent = entity;
-			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"clear");
-			}
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "clear");
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"effect @s clear ");
-			}
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"stopsound @s");
-			}
 		}
 		return true;
 	}

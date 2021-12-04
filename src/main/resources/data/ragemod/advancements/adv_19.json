@@ -22,8 +22,8 @@
           {
             "item": "ragemod:secretboomko",
             "count": {
-              "min": 1,
-              "max": 64
+              "min": 16,
+              "max": 1069
             }
           }
         ]

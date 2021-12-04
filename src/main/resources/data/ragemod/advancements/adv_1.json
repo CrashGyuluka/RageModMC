@@ -16,16 +16,36 @@
   },
   "criteria": {
     "adv_1": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:rageium"
-        }
+        "items": [
+          {
+            "item": "ragemod:rageium",
+            "count": {
+              "min": 1,
+              "max": 1069
+            }
+          }
+        ]
       }
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 1,
+    "recipes": [
+      "ragemod:rageiumalloycraft",
+      "ragemod:rageiumblockcraft",
+      "ragemod:portalrtcraft",
+      "ragemod:boomkocraft",
+      "ragemod:detonatorcraft",
+      "ragemod:rageiumbrickscraft",
+      "ragemod:rageiumbricksstairsc",
+      "ragemod:rageiumbricksslabc",
+      "ragemod:rageiumbrickswallc",
+      "ragemod:rageiumbrickspressureplatec",
+      "ragemod:rageiumbricksbuttonc",
+      "ragemod:fakitocraft"
+    ]
   },
   "parent": "ragemod:advstart"
 }

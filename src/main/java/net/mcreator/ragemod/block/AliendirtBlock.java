@@ -1,48 +1,31 @@
 
 package net.mcreator.ragemod.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.BlockPos;
 
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.FallingBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
-
-@RagemodModElements.ModElement.Tag
-public class AliendirtBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alien_dirt")
-	public static final Block block = null;
-
-	public AliendirtBlock(RagemodModElements instance) {
-		super(instance, 165);
+public class AliendirtBlock extends FallingBlock {
+	public AliendirtBlock() {
+		super(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.GRAVEL).strength(2f, 10f).requiresCorrectToolForDrops());
+		setRegistryName("alien_dirt");
 	}
 
 	@Override
-	public void initElements() {
-		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
+	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		return 15;
 	}
 
-	public static class CustomBlock extends FallingBlock {
-		public CustomBlock() {
-			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(2).harvestTool(ToolType.SHOVEL).setRequiresTool());
-			setRegistryName("alien_dirt");
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
-		}
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 2;
+		return false;
 	}
 }

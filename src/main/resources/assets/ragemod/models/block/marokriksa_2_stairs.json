@@ -1,8 +1,8 @@
 {
   "parent": "block/stairs",
   "textures": {
-    "bottom": "ragemod:blocks/marokriksa_log2",
-    "top": "ragemod:blocks/marokriksa_log2",
-    "side": "ragemod:blocks/marokriksa_log2"
+    "bottom": "ragemod:blocks/marokriksa_log_side",
+    "top": "ragemod:blocks/marokriksa_log_side",
+    "side": "ragemod:blocks/marokriksa_log_side"
   }
 }

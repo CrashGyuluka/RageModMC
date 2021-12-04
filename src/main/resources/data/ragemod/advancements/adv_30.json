@@ -16,16 +16,22 @@
   },
   "criteria": {
     "adv_30": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:elderflower_syrup"
-        }
+        "items": [
+          {
+            "item": "ragemod:elderflower_syrup",
+            "count": {
+              "min": 16,
+              "max": 1069
+            }
+          }
+        ]
       }
     }
   },
   "rewards": {
     "experience": 1
   },
-  "parent": "ragemod:adv_1"
+  "parent": "ragemod:advstart"
 }

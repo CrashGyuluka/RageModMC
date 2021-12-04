@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "How powerful!",
-    "achievementDescription": "Consume an Alienite Sword",
+    "achievementDescription": "Have an Alienite Sword",
     "achievementIcon": {
       "value": "CUSTOM:Alienitesword"
     },

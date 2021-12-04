@@ -78,7 +78,7 @@
     "jumpFactor": 1.1,
     "speedFactor": 1.1,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 15,
+    "frequencyOnChunks": 17,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],
@@ -87,12 +87,9 @@
         "value": "CUSTOM:Alienplains"
       },
       {
-        "value": "CUSTOM:Ruinedalienbiome"
-      },
-      {
         "value": "CUSTOM:TotallyNotAlien"
       }
     ],
-    "patchSize": 6
+    "patchSize": 20
   }
 }

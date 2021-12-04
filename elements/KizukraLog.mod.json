@@ -2,8 +2,8 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "kizukra_top",
-    "textureTop": "kizukra_top",
+    "texture": "kizukra_log_side",
+    "textureTop": "kizukra_log_side",
     "textureLeft": "kizukralog",
     "textureFront": "kizukralog",
     "textureRight": "kizukralog",

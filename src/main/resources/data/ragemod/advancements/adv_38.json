@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:yellow_glowing_oak_leaves"
+    },
+    "title": {
+      "translate": "advancements.adv_38.title"
+    },
+    "description": {
+      "translate": "advancements.adv_38.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_38": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ragemod:advstart"
+}

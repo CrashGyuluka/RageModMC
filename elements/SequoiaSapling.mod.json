@@ -63,7 +63,7 @@
       "value": ""
     },
     "dropAmount": 1,
-    "forceTicking": false,
+    "forceTicking": true,
     "emissiveRendering": false,
     "hasTileEntity": true,
     "isReplaceable": false,
@@ -81,6 +81,9 @@
     "frequencyOnChunks": 0,
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "patchSize": 64
+    "patchSize": 64,
+    "onTickUpdate": {
+      "name": "SequoiaSaplingUpdateTick"
+    }
   }
 }

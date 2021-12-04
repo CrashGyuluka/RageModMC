@@ -1,21 +1,12 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.util.DamageSource;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.ragemod.RagemodMod;
-
-import java.util.Map;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 
 public class AlienspiketopdevEntityWalksOnTheBlockProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure AlienspiketopdevEntityWalksOnTheBlock!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
+		entity.hurt(DamageSource.GENERIC, 1);
 	}
 }

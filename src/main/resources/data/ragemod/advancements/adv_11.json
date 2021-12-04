@@ -16,18 +16,7 @@
   },
   "criteria": {
     "adv_11": {
-      "trigger": "minecraft:item_durability_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "ragemod:ragearrow",
-            "durability": {
-              "min": 6968,
-              "max": 16000
-            }
-          }
-        ]
-      }
+      "trigger": "minecraft:impossible"
     }
   },
   "rewards": {

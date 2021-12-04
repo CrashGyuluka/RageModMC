@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[36,)"
+loaderVersion="[37,)"
 license="MIT License"
 
 [[mods]]
 modId="ragemod"
-version="1.1_21w46a"
+version="1.1_21w48a"
 displayName="RageMod (forge)"
 credits="Made by: RageTeam: CrashGyuluka"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/ragemod-by-rageteam"
@@ -17,7 +17,7 @@ I hope you will enjoy this mod! Main dev: CrashGyuluka, some textures: Lyof
 [[dependencies.ragemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.17.1]"
     ordering="NONE"
     side="BOTH"
 

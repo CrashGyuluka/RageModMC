@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_down",
   "textures": {
-    "texture": "ragemod:blocks/marokriksa_slog3"
+    "texture": "ragemod:blocks/stripped_marokriksa_log_side"
   }
 }

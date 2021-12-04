@@ -13,7 +13,11 @@
     "announceToChat": true,
     "hideIfNotCompleted": false,
     "rewardLoot": [],
-    "rewardRecipes": [],
+    "rewardRecipes": [
+      "Rageiumbackcraft2",
+      "KonvertercrAFT",
+      "Convertercraft"
+    ],
     "rewardFunction": "No function",
     "rewardXP": 10,
     "achievementType": "challenge",

@@ -25,7 +25,16 @@
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 1,
+    "recipes": [
+      "ragemod:alienitepickaxecraft",
+      "ragemod:alieniteaxecraft",
+      "ragemod:alieniteaxecraft_2",
+      "ragemod:alieniteshovelcraft",
+      "ragemod:alienitehoecraft",
+      "ragemod:alienitehoecraft_2",
+      "ragemod:alieniteswordcraft"
+    ]
   },
   "parent": "ragemod:adv_32"
 }

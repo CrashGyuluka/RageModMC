@@ -1,68 +1,29 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
 
 import net.mcreator.ragemod.procedures.AktinolitgyurupProcedure;
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
+import net.mcreator.ragemod.init.RagemodModTabs;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
-@RagemodModElements.ModElement.Tag
-public class AktinolitgyuruItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:aktinolitgyuru")
-	public static final Item block = null;
-
-	public AktinolitgyuruItem(RagemodModElements instance) {
-		super(instance, 84);
+public class AktinolitgyuruItem extends Item {
+	public AktinolitgyuruItem() {
+		super(new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).durability(300).rarity(Rarity.COMMON));
+		setRegistryName("aktinolitgyuru");
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new ItemCustom());
+	public int getUseDuration(ItemStack itemstack) {
+		return 0;
 	}
 
-	public static class ItemCustom extends Item {
-		public ItemCustom() {
-			super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(300).rarity(Rarity.COMMON));
-			setRegistryName("aktinolitgyuru");
-		}
-
-		@Override
-		public int getItemEnchantability() {
-			return 0;
-		}
-
-		@Override
-		public int getUseDuration(ItemStack itemstack) {
-			return 0;
-		}
-
-		@Override
-		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 1F;
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			double x = entity.getPosX();
-			double y = entity.getPosY();
-			double z = entity.getPosZ();
-
-			AktinolitgyurupProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		AktinolitgyurupProcedure.execute(entity);
 	}
 }

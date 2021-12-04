@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_inventory",
   "textures": {
-    "texture": "ragemod:blocks/robtai_log_side3",
-    "particle": "ragemod:blocks/robtai_log_side3"
+    "texture": "ragemod:blocks/robtai_log_side_new",
+    "particle": "ragemod:blocks/robtai_log_side_new"
   }
 }

@@ -1,47 +1,32 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.util.Hand;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerPlayer;
 
-import net.mcreator.ragemod.item.AlieniteshieldItem;
-import net.mcreator.ragemod.RagemodModVariables;
-import net.mcreator.ragemod.RagemodMod;
-
-import java.util.Map;
+import net.mcreator.ragemod.network.RagemodModVariables;
+import net.mcreator.ragemod.init.RagemodModItems;
 
 public class AlieniteshieldblockingdevToolInInventoryTickProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure AlieniteshieldblockingdevToolInInventoryTick!");
+	public static void execute(Entity entity, ItemStack itemstack) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("itemstack") == null) {
-			if (!dependencies.containsKey("itemstack"))
-				RagemodMod.LOGGER.warn("Failed to load dependency itemstack for procedure AlieniteshieldblockingdevToolInInventoryTick!");
-			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double sheildDamage = 0;
 		double localShieldTimer = 0;
 		if ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer == 0
-				&& itemstack.getItem() == ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem()) {
-			sheildDamage = (double) ((itemstack).getDamage());
-			if (entity instanceof LivingEntity) {
-				ItemStack _setstack = new ItemStack(AlieniteshieldItem.block);
-				_setstack.setCount((int) 1);
-				((LivingEntity) entity).setHeldItem(Hand.MAIN_HAND, _setstack);
-				if (entity instanceof ServerPlayerEntity)
-					((ServerPlayerEntity) entity).inventory.markDirty();
+				&& itemstack.getItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+			sheildDamage = (double) ((itemstack).getDamageValue());
+			if (entity instanceof LivingEntity _entity) {
+				ItemStack _setstack = new ItemStack(RagemodModItems.ALIENITESHIELD);
+				_setstack.setCount(1);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				if (_entity instanceof ServerPlayer _serverPlayer)
+					_serverPlayer.getInventory().setChanged();
 			}
-			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).setDamage((int) sheildDamage);
+			((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).setDamageValue((int) sheildDamage);
 		} else {
 			localShieldTimer = (double) ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer - 1);

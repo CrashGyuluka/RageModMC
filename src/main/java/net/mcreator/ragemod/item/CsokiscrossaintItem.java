@@ -1,48 +1,24 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
 
-import net.minecraft.item.UseAction;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
+import net.mcreator.ragemod.init.RagemodModTabs;
 
-import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
+public class CsokiscrossaintItem extends Item {
+	public CsokiscrossaintItem() {
+		super(new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB).stacksTo(64).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(8).saturationMod(8f)
 
-@RagemodModElements.ModElement.Tag
-public class CsokiscrossaintItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:csokiscrossaint")
-	public static final Item block = null;
-
-	public CsokiscrossaintItem(RagemodModElements instance) {
-		super(instance, 406);
+						.build()));
+		setRegistryName("csokiscrossaint");
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
-	}
-
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
-			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(8).saturation(8f)
-
-							.build()));
-			setRegistryName("csokiscrossaint");
-		}
-
-		@Override
-		public int getUseDuration(ItemStack stack) {
-			return 30;
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
-		}
+	public int getUseDuration(ItemStack stack) {
+		return 30;
 	}
 }

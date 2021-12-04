@@ -2,64 +2,41 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
-import net.minecraft.world.World;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
-import net.mcreator.ragemod.enchantment.LifeStealerEnchantment;
-import net.mcreator.ragemod.RagemodMod;
+import net.mcreator.ragemod.init.RagemodModEnchantments;
 
-import java.util.Map;
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
+@Mod.EventBusSubscriber
 public class LifestealerprcProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onEntityAttacked(LivingAttackEvent event) {
-			if (event != null && event.getEntity() != null) {
-				Entity entity = event.getEntity();
-				Entity sourceentity = event.getSource().getTrueSource();
-				Entity imediatesourceentity = event.getSource().getImmediateSource();
-				double i = entity.getPosX();
-				double j = entity.getPosY();
-				double k = entity.getPosZ();
-				double amount = event.getAmount();
-				World world = entity.world;
-				Map<String, Object> dependencies = new HashMap<>();
-				dependencies.put("x", i);
-				dependencies.put("y", j);
-				dependencies.put("z", k);
-				dependencies.put("amount", amount);
-				dependencies.put("world", world);
-				dependencies.put("entity", entity);
-				dependencies.put("sourceentity", sourceentity);
-				dependencies.put("imediatesourceentity", imediatesourceentity);
-				dependencies.put("event", event);
-				executeProcedure(dependencies);
-			}
+	@SubscribeEvent
+	public static void onEntityAttacked(LivingAttackEvent event) {
+		if (event != null && event.getEntity() != null) {
+			Entity entity = event.getEntity();
+			execute(event, event.getSource().getEntity());
 		}
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				RagemodMod.LOGGER.warn("Failed to load dependency sourceentity for procedure Lifestealerprc!");
+	public static void execute(Entity sourceentity) {
+		execute(null, sourceentity);
+	}
+
+	private static void execute(@Nullable Event event, Entity sourceentity) {
+		if (sourceentity == null)
 			return;
-		}
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (EnchantmentHelper.getEnchantmentLevel(LifeStealerEnchantment.enchantment,
-				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)) > 0) {
-			if (sourceentity instanceof LivingEntity)
-				((LivingEntity) sourceentity).setHealth((float) (((sourceentity instanceof LivingEntity)
-						? ((LivingEntity) sourceentity).getHealth()
-						: -1)
-						+ EnchantmentHelper.getEnchantmentLevel(LifeStealerEnchantment.enchantment,
-								((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))));
+		if (EnchantmentHelper.getItemEnchantmentLevel(RagemodModEnchantments.LIFE_STEALER,
+				(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) > 0) {
+			if (sourceentity instanceof LivingEntity _entity)
+				_entity.setHealth((float) ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)
+						+ EnchantmentHelper.getItemEnchantmentLevel(RagemodModEnchantments.LIFE_STEALER,
+								(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))));
 		}
 	}
 }

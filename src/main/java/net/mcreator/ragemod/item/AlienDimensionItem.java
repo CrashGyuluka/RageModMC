@@ -1,46 +1,42 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.core.BlockPos;
 
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.entity.player.PlayerEntity;
-
-import net.mcreator.ragemod.world.dimension.AlienDimensionDimension;
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.init.RagemodModTabs;
+import net.mcreator.ragemod.block.AlienDimensionPortalBlock;
 
 public class AlienDimensionItem extends Item {
-	@ObjectHolder("ragemod:alien_dimension_portal_igniter")
-	public static final Item block = null;
-
 	public AlienDimensionItem() {
-		super(new Item.Properties().group(ErcekItemGroup.tab).maxDamage(64));
+		super(new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).durability(64));
+		setRegistryName("alien_dimension_portal_igniter");
 	}
 
 	@Override
-	public ActionResultType onItemUse(ItemUseContext context) {
-		PlayerEntity entity = context.getPlayer();
-		BlockPos pos = context.getPos().offset(context.getFace());
-		ItemStack itemstack = context.getItem();
-		World world = context.getWorld();
-		if (!entity.canPlayerEdit(pos, context.getFace(), itemstack)) {
-			return ActionResultType.FAIL;
+	public InteractionResult useOn(UseOnContext context) {
+		Player entity = context.getPlayer();
+		BlockPos pos = context.getClickedPos().relative(context.getClickedFace());
+		ItemStack itemstack = context.getItemInHand();
+		Level world = context.getLevel();
+		if (!entity.mayUseItemAt(pos, context.getClickedFace(), itemstack)) {
+			return InteractionResult.FAIL;
 		} else {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			boolean success = false;
-			if (world.isAirBlock(pos) && true) {
-				AlienDimensionDimension.portal.portalSpawn(world, pos);
-				itemstack.damageItem(1, entity, c -> c.sendBreakAnimation(context.getHand()));
+			if (world.isEmptyBlock(pos) && true) {
+				AlienDimensionPortalBlock.portalSpawn(world, pos);
+				itemstack.hurtAndBreak(1, entity, c -> c.broadcastBreakEvent(context.getHand()));
 				success = true;
 			}
-			return success ? ActionResultType.SUCCESS : ActionResultType.FAIL;
+			return success ? InteractionResult.SUCCESS : InteractionResult.FAIL;
 		}
 	}
 }

@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "ragemod:block/marokriksa_2_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "ragemod:block/marokriksa_2_wood"
+    },
+    "axis=z": {
+      "model": "ragemod:block/marokriksa_2_wood",
+      "x": 90
     }
   }
 }

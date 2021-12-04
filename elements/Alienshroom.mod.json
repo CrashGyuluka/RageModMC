@@ -78,12 +78,12 @@
     "jumpFactor": 1.2000000000000002,
     "speedFactor": 1.2000000000000002,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 32,
+    "frequencyOnChunks": 40,
     "spawnWorldTypes": [
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
-    "patchSize": 60,
+    "patchSize": 100,
     "onRightClicked": {
       "name": "AlienshroomPlantRightClicked"
     }

@@ -1,144 +1,99 @@
 
 package net.mcreator.ragemod.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Direction;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.block.material.PushReaction;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.ragemod.procedures.AlienTorchFloorNeighbourBlockChangesProcedure;
-import net.mcreator.ragemod.item.AlienTorchItem;
-import net.mcreator.ragemod.RagemodModElements;
+import net.mcreator.ragemod.init.RagemodModItems;
+import net.mcreator.ragemod.init.RagemodModBlocks;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Collections;
-import java.util.AbstractMap;
+public class AlienWalltorchBlock extends Block {
+	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-@RagemodModElements.ModElement.Tag
-public class AlienWalltorchBlock extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alien_walltorch")
-	public static final Block block = null;
-
-	public AlienWalltorchBlock(RagemodModElements instance) {
-		super(instance, 1312);
+	public AlienWalltorchBlock() {
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).instabreak().lightLevel(s -> 10).noCollission().noOcclusion()
+				.isRedstoneConductor((bs, br, bp) -> false).noDrops());
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+		setRegistryName("alien_walltorch");
 	}
 
 	@Override
-	public void initElements() {
-		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
+	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+		return true;
 	}
 
 	@Override
+	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		return 0;
+	}
+
+	@Override
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		builder.add(FACING);
+	}
+
+	public BlockState rotate(BlockState state, Rotation rot) {
+		return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+	}
+
+	public BlockState mirror(BlockState state, Mirror mirrorIn) {
+		return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
+	}
+
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		;
+		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+	}
+
+	@Override
+	public ItemStack getPickBlock(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+		return new ItemStack(RagemodModItems.ALIEN_TORCH);
+	}
+
+	@Override
+	public MaterialColor defaultMaterialColor() {
+		return MaterialColor.COLOR_PURPLE;
+	}
+
+	@Override
+	public PushReaction getPistonPushReaction(BlockState state) {
+		return PushReaction.DESTROY;
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		AlienTorchFloorNeighbourBlockChangesProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
 	@OnlyIn(Dist.CLIENT)
-	public void clientLoad(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+	public static void registerRenderLayer() {
+		ItemBlockRenderTypes.setRenderLayer(RagemodModBlocks.ALIEN_WALLTORCH, renderType -> renderType == RenderType.cutout());
 	}
 
-	public static class CustomBlock extends Block {
-		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
-
-		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 0f).setLightLevel(s -> 10)
-					.doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false));
-			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
-			setRegistryName("alien_walltorch");
-		}
-
-		@Override
-		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
-			return true;
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 0;
-		}
-
-		@Override
-		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-			builder.add(FACING);
-		}
-
-		public BlockState rotate(BlockState state, Rotation rot) {
-			return state.with(FACING, rot.rotate(state.get(FACING)));
-		}
-
-		public BlockState mirror(BlockState state, Mirror mirrorIn) {
-			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
-		}
-
-		@Override
-		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			;
-			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
-		}
-
-		@Override
-		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(AlienTorchItem.block);
-		}
-
-		@Override
-		public MaterialColor getMaterialColor() {
-			return MaterialColor.PURPLE;
-		}
-
-		@Override
-		public PushReaction getPushReaction(BlockState state) {
-			return PushReaction.DESTROY;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 0));
-		}
-
-		@Override
-		public void neighborChanged(BlockState blockstate, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-			super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
-			} else {
-			}
-
-			AlienTorchFloorNeighbourBlockChangesProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-	}
 }

@@ -1,39 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "012",
-    "345",
-    "678"
-  ],
-  "key": {
-    "0": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "ragemod:savkristalyp_2"
     },
-    "1": {
+    {
       "item": "ragemod:savkristalyp_2"
     },
-    "2": {
+    {
       "item": "ragemod:savkristalyp_2"
     },
-    "3": {
-      "item": "ragemod:savkristalyp_2"
-    },
-    "4": {
-      "item": "ragemod:savkristalyp_2"
-    },
-    "5": {
-      "item": "ragemod:savkristalyp_2"
-    },
-    "6": {
-      "item": "ragemod:savkristalyp_2"
-    },
-    "7": {
-      "item": "ragemod:savkristalyp_2"
-    },
-    "8": {
+    {
       "item": "ragemod:savkristalyp_2"
     }
-  },
+  ],
   "result": {
     "item": "ragemod:savblockok",
     "count": 1

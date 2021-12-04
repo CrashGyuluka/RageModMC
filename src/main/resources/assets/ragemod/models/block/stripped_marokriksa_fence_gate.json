@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate",
   "textures": {
-    "texture": "ragemod:blocks/marokriksa_slog3"
+    "texture": "ragemod:blocks/stripped_marokriksa_log_side"
   }
 }

@@ -13,7 +13,9 @@
     "announceToChat": true,
     "hideIfNotCompleted": false,
     "rewardLoot": [],
-    "rewardRecipes": [],
+    "rewardRecipes": [
+      "Patcraft"
+    ],
     "rewardFunction": "No function",
     "rewardXP": 1,
     "achievementType": "task",

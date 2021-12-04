@@ -31,7 +31,10 @@
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 1,
+    "recipes": [
+      "ragemod:patcraft"
+    ]
   },
   "parent": "ragemod:adv_16"
 }

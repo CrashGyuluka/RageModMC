@@ -1,83 +1,52 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.HoeItem;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.InteractionResult;
 
 import net.mcreator.ragemod.procedures.SavkapaRightClickedOnBlockProcedure;
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
+import net.mcreator.ragemod.init.RagemodModTabs;
+import net.mcreator.ragemod.init.RagemodModItems;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
-@RagemodModElements.ModElement.Tag
-public class SavkapaItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:savkapa")
-	public static final Item block = null;
-
-	public SavkapaItem(RagemodModElements instance) {
-		super(instance, 31);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new HoeItem(new IItemTier() {
-			public int getMaxUses() {
+public class SavkapaItem extends HoeItem {
+	public SavkapaItem() {
+		super(new Tier() {
+			public int getUses() {
 				return 2000;
 			}
 
-			public float getEfficiency() {
+			public float getSpeed() {
 				return 4f;
 			}
 
-			public float getAttackDamage() {
+			public float getAttackDamageBonus() {
 				return 0f;
 			}
 
-			public int getHarvestLevel() {
+			public int getLevel() {
 				return 1;
 			}
 
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 17;
 			}
 
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Savkristalyp2Item.block));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(RagemodModItems.SAVKRISTALYP_2));
 			}
-		}, 0, -2.7999999999999998f, new Item.Properties().group(ErcekItemGroup.tab)) {
-			@Override
-			public ActionResultType onItemUse(ItemUseContext context) {
-				ActionResultType retval = super.onItemUse(context);
-				World world = context.getWorld();
-				BlockPos pos = context.getPos();
-				PlayerEntity entity = context.getPlayer();
-				Direction direction = context.getFace();
-				BlockState blockstate = world.getBlockState(pos);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				ItemStack itemstack = context.getItem();
+		}, 0, -2.7999999999999998f, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
+		setRegistryName("savkapa");
+	}
 
-				SavkapaRightClickedOnBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-				return retval;
-			}
-		}.setRegistryName("savkapa"));
+	@Override
+	public InteractionResult useOn(UseOnContext context) {
+		InteractionResult retval = super.useOn(context);
+		SavkapaRightClickedOnBlockProcedure.execute(context.getPlayer());
+		return retval;
 	}
 }

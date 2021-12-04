@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_inventory",
   "textures": {
-    "texture": "ragemod:blocks/marokriksa_slog3",
-    "particle": "ragemod:blocks/marokriksa_slog3"
+    "texture": "ragemod:blocks/stripped_marokriksa_log_side",
+    "particle": "ragemod:blocks/stripped_marokriksa_log_side"
   }
 }

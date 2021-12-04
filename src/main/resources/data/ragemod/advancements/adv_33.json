@@ -16,7 +16,7 @@
   },
   "criteria": {
     "adv_33": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:placed_block",
       "conditions": {
         "item": {
           "item": "ragemod:alpivblock"
@@ -25,7 +25,22 @@
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 1,
+    "recipes": [
+      "ragemod:alpivcraft_1",
+      "ragemod:alpivcraft_3",
+      "ragemod:alpivcraft_4",
+      "ragemod:alpivcraft_5",
+      "ragemod:alpivcraft_6",
+      "ragemod:alpivcraft_7",
+      "ragemod:alpivcraft_8",
+      "ragemod:alpivcraft_9",
+      "ragemod:alpivcraft_10",
+      "ragemod:alpivcraft_11",
+      "ragemod:alpivcraft_12",
+      "ragemod:alpivcraft_13",
+      "ragemod:alipvcraft_2"
+    ]
   },
   "parent": "ragemod:adv_32"
 }

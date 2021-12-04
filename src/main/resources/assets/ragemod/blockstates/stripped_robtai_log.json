@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "ragemod:block/stripped_robtai_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "ragemod:block/stripped_robtai_log"
+    },
+    "axis=z": {
+      "model": "ragemod:block/stripped_robtai_log",
+      "x": 90
     }
   }
 }

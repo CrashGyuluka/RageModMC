@@ -10,7 +10,7 @@
       "value": "Blocks.STONE#0"
     },
     "grassColor": {
-      "value": -6332645,
+      "value": -7580905,
       "falpha": 0.0
     },
     "foliageColor": {
@@ -99,7 +99,9 @@
       "Ores",
       "Lakes",
       "MonsterRooms",
-      "TaigaRocks"
+      "TaigaRocks",
+      "PlainsTallGrass",
+      "TaigaLargeFerns"
     ],
     "spawnEntries": [
       {

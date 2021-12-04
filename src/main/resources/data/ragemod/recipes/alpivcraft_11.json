@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ragemod:polishedalpiv"
+  },
+  "result": "ragemod:polished_alpiv_stairs"
+}

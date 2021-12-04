@@ -1,8 +1,8 @@
 {
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "ragemod:blocks/robtai_log_side3",
-    "top": "ragemod:blocks/robtai_log_side3",
-    "side": "ragemod:blocks/robtai_log_side3"
+    "bottom": "ragemod:blocks/robtai_log_side_new",
+    "top": "ragemod:blocks/robtai_log_side_new",
+    "side": "ragemod:blocks/robtai_log_side_new"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate",
   "textures": {
-    "texture": "ragemod:blocks/robtai_log_side3"
+    "texture": "ragemod:blocks/robtai_log_side_new"
   }
 }

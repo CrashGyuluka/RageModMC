@@ -1,49 +1,20 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.block.BlockState;
+import net.mcreator.ragemod.init.RagemodModTabs;
 
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
-
-@RagemodModElements.ModElement.Tag
-public class DiamondnugetItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:diamondnuget")
-	public static final Item block = null;
-
-	public DiamondnugetItem(RagemodModElements instance) {
-		super(instance, 155);
+public class DiamondnugetItem extends Item {
+	public DiamondnugetItem() {
+		super(new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).stacksTo(64).rarity(Rarity.COMMON));
+		setRegistryName("diamondnuget");
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new ItemCustom());
-	}
-
-	public static class ItemCustom extends Item {
-		public ItemCustom() {
-			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("diamondnuget");
-		}
-
-		@Override
-		public int getItemEnchantability() {
-			return 0;
-		}
-
-		@Override
-		public int getUseDuration(ItemStack itemstack) {
-			return 0;
-		}
-
-		@Override
-		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 1F;
-		}
+	public int getUseDuration(ItemStack itemstack) {
+		return 0;
 	}
 }

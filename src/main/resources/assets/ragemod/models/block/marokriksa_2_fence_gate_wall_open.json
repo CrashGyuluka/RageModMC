@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate_wall_open",
   "textures": {
-    "texture": "ragemod:blocks/marokriksa_log2"
+    "texture": "ragemod:blocks/marokriksa_log_side"
   }
 }

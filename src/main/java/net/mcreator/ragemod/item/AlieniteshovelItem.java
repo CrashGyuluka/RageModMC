@@ -1,96 +1,65 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.ragemod.procedures.AlieniteshovelRightClickedOnBlockProcedure;
-import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
-import net.mcreator.ragemod.RagemodModElements;
+import net.mcreator.ragemod.init.RagemodModTabs;
+import net.mcreator.ragemod.init.RagemodModItems;
 
-import java.util.stream.Stream;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
-import java.util.AbstractMap;
 
-@RagemodModElements.ModElement.Tag
-public class AlieniteshovelItem extends RagemodModElements.ModElement {
-	@ObjectHolder("ragemod:alieniteshovel")
-	public static final Item block = null;
-
-	public AlieniteshovelItem(RagemodModElements instance) {
-		super(instance, 96);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new ShovelItem(new IItemTier() {
-			public int getMaxUses() {
+public class AlieniteshovelItem extends ShovelItem {
+	public AlieniteshovelItem() {
+		super(new Tier() {
+			public int getUses() {
 				return 4690;
 			}
 
-			public float getEfficiency() {
+			public float getSpeed() {
 				return 16f;
 			}
 
-			public float getAttackDamage() {
+			public float getAttackDamageBonus() {
 				return -1f;
 			}
 
-			public int getHarvestLevel() {
+			public int getLevel() {
 				return 5;
 			}
 
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 24;
 			}
 
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(AlieniteItem.block), new ItemStack(CursedalieniteItem.block));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(RagemodModItems.ALIENITE), new ItemStack(RagemodModItems.CURSED_ALIENITE));
 			}
-		}, 1, -3f, new Item.Properties().group(ErcekItemGroup.tab).isImmuneToFire()) {
-			@Override
-			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
-				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("Rightclick on path or dirt block while shifting!"));
-			}
+		}, 1, -3f, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).fireResistant());
+		setRegistryName("alieniteshovel");
+	}
 
-			@Override
-			public ActionResultType onItemUse(ItemUseContext context) {
-				ActionResultType retval = super.onItemUse(context);
-				World world = context.getWorld();
-				BlockPos pos = context.getPos();
-				PlayerEntity entity = context.getPlayer();
-				Direction direction = context.getFace();
-				BlockState blockstate = world.getBlockState(pos);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				ItemStack itemstack = context.getItem();
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(new TextComponent("Rightclick on path or dirt block while shifting!"));
+	}
 
-				AlieniteshovelRightClickedOnBlockProcedure.executeProcedure(Stream
-						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-								new AbstractMap.SimpleEntry<>("entity", entity))
-						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-				return retval;
-			}
-		}.setRegistryName("alieniteshovel"));
+	@Override
+	public InteractionResult useOn(UseOnContext context) {
+		InteractionResult retval = super.useOn(context);
+		AlieniteshovelRightClickedOnBlockProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
+				context.getClickedPos().getZ(), context.getPlayer());
+		return retval;
 	}
 }

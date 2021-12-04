@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "How beautiful",
-    "achievementDescription": "Consume the music disc made by CrashGyuluka",
+    "achievementDescription": "Have the music disc made by CrashGyuluka",
     "achievementIcon": {
       "value": "CUSTOM:Discinspiration"
     },

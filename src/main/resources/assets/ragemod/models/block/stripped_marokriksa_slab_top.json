@@ -1,8 +1,8 @@
 {
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "ragemod:blocks/marokriksa_slog3",
-    "top": "ragemod:blocks/marokriksa_slog3",
-    "side": "ragemod:blocks/marokriksa_slog3"
+    "bottom": "ragemod:blocks/stripped_marokriksa_log_side",
+    "top": "ragemod:blocks/stripped_marokriksa_log_side",
+    "side": "ragemod:blocks/stripped_marokriksa_log_side"
   }
 }

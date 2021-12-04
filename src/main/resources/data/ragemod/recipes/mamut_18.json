@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "ragemod:sequoia_wood"
+  },
+  "result": "ragemod:sequoia_trapdoor"
+}

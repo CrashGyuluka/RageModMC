@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "What a nice looking block",
-    "achievementDescription": "Consume a floor block",
+    "achievementDescription": "Have a floor block",
     "achievementIcon": {
       "value": "CUSTOM:Parketta"
     },

@@ -22,7 +22,7 @@
           {
             "item": "ragemod:rageiumalloy",
             "count": {
-              "min": 1,
+              "min": 5,
               "max": 1069
             }
           }
@@ -31,7 +31,21 @@
     }
   },
   "rewards": {
-    "experience": 1
+    "experience": 1,
+    "recipes": [
+      "ragemod:ragehelmetcraft",
+      "ragemod:ragecheastplatecraft",
+      "ragemod:rageleggingscraft",
+      "ragemod:ragebootscraft",
+      "ragemod:rageiumalloycraft",
+      "ragemod:rageiumalloycraftb_1",
+      "ragemod:ragearrowammocraft_1",
+      "ragemod:konvertercr_aft",
+      "ragemod:convertercraft",
+      "ragemod:ragegyurucraft",
+      "ragemod:portalrtcraft",
+      "ragemod:ragepotioncraft"
+    ]
   },
   "parent": "ragemod:adv_1"
 }

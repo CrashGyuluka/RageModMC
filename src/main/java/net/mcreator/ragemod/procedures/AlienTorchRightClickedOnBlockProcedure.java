@@ -2,169 +2,116 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
-import net.mcreator.ragemod.block.AlienWalltorchBlock;
-import net.mcreator.ragemod.block.AlienTorchFloorBlock;
-import net.mcreator.ragemod.RagemodMod;
-
-import java.util.Map;
+import net.mcreator.ragemod.init.RagemodModBlocks;
 
 public class AlienTorchRightClickedOnBlockProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure AlienTorchRightClickedOnBlock!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Direction direction) {
+		if (direction == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure AlienTorchRightClickedOnBlock!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure AlienTorchRightClickedOnBlock!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure AlienTorchRightClickedOnBlock!");
-			return;
-		}
-		if (dependencies.get("direction") == null) {
-			if (!dependencies.containsKey("direction"))
-				RagemodMod.LOGGER.warn("Failed to load dependency direction for procedure AlienTorchRightClickedOnBlock!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Direction direction = (Direction) dependencies.get("direction");
 		if (direction == Direction.UP) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), AlienTorchFloorBlock.block.getDefaultState(), 3);
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-				}
+				world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z), RagemodModBlocks.ALIEN_TORCH_FLOOR.defaultBlockState(), 3);
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
 			}
 		} else if (direction == Direction.NORTH) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CAVE_AIR) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), AlienWalltorchBlock.block.getDefaultState(), 3);
-				try {
-					BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)));
-					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-					if (_property != null) {
-						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(_property, Direction.NORTH), 3);
+				world.setBlock(new BlockPos((int) x, (int) y, (int) (z - 1)), RagemodModBlocks.ALIEN_WALLTORCH.defaultBlockState(), 3);
+				{
+					Direction _dir = Direction.NORTH;
+					BlockPos _pos = new BlockPos((int) x, (int) y, (int) (z - 1));
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
+					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
 					} else {
-						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(
-								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.NORTH.getAxis()), 3);
+						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
+						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
+							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
-				} catch (Exception e) {
 				}
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-				}
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
 			}
 		} else if (direction == Direction.SOUTH) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CAVE_AIR) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), AlienWalltorchBlock.block.getDefaultState(), 3);
-				try {
-					BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)));
-					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-					if (_property != null) {
-						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(_property, Direction.SOUTH), 3);
+				world.setBlock(new BlockPos((int) x, (int) y, (int) (z + 1)), RagemodModBlocks.ALIEN_WALLTORCH.defaultBlockState(), 3);
+				{
+					Direction _dir = Direction.SOUTH;
+					BlockPos _pos = new BlockPos((int) x, (int) y, (int) (z + 1));
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
+					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
 					} else {
-						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(
-								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.SOUTH.getAxis()), 3);
+						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
+						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
+							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
-				} catch (Exception e) {
 				}
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-				}
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
 			}
 		} else if (direction == Direction.WEST) {
 			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR) {
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), AlienWalltorchBlock.block.getDefaultState(), 3);
-				try {
-					BlockState _bs = world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z));
-					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-					if (_property != null) {
-						world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), _bs.with(_property, Direction.WEST), 3);
+				world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z), RagemodModBlocks.ALIEN_WALLTORCH.defaultBlockState(), 3);
+				{
+					Direction _dir = Direction.WEST;
+					BlockPos _pos = new BlockPos((int) (x - 1), (int) y, (int) z);
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
+					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
 					} else {
-						world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), _bs.with(
-								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.WEST.getAxis()), 3);
+						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
+						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
+							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
-				} catch (Exception e) {
 				}
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-				}
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
 			}
 		} else if (direction == Direction.EAST) {
 			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR) {
-				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), AlienWalltorchBlock.block.getDefaultState(), 3);
-				try {
-					BlockState _bs = world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z));
-					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-					if (_property != null) {
-						world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), _bs.with(_property, Direction.EAST), 3);
+				world.setBlock(new BlockPos((int) (x + 1), (int) y, (int) z), RagemodModBlocks.ALIEN_WALLTORCH.defaultBlockState(), 3);
+				{
+					Direction _dir = Direction.EAST;
+					BlockPos _pos = new BlockPos((int) (x + 1), (int) y, (int) z);
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
+					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
 					} else {
-						world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), _bs.with(
-								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.EAST.getAxis()), 3);
+						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
+						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
+							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
-				} catch (Exception e) {
 				}
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-				}
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
 			}
 		}
 	}

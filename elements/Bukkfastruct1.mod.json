@@ -6,12 +6,12 @@
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 1000000,
-    "minCountPerChunk": 15,
+    "minCountPerChunk": 9,
     "maxCountPerChunk": 16,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 0,
-    "spawnXOffset": 0,
-    "spawnZOffset": 0,
+    "spawnHeightOffset": 1,
+    "spawnXOffset": -2,
+    "spawnZOffset": -3,
     "spawnWorldTypes": [
       "Surface"
     ],

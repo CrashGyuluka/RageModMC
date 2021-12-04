@@ -3,15 +3,15 @@
   "_type": "structure",
   "definition": {
     "structure": "bukk2",
-    "randomlyRotateStructure": true,
+    "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 1000000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 3,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 0,
-    "spawnXOffset": 0,
-    "spawnZOffset": 0,
+    "spawnHeightOffset": 1,
+    "spawnXOffset": -2,
+    "spawnZOffset": -3,
     "spawnWorldTypes": [
       "Surface"
     ],
@@ -26,9 +26,6 @@
       },
       {
         "value": "CUSTOM:Bukkhighmountainvariated"
-      },
-      {
-        "value": "CUSTOM:Bukkhighmountainvariatedfordimension"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"

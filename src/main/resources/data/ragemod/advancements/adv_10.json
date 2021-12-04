@@ -31,7 +31,12 @@
     }
   },
   "rewards": {
-    "experience": 10
+    "experience": 10,
+    "recipes": [
+      "ragemod:rageiumbackcraft_2",
+      "ragemod:konvertercr_aft",
+      "ragemod:convertercraft"
+    ]
   },
   "parent": "ragemod:adv_1"
 }

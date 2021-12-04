@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/stripped_robtai_log_top",
-    "up": "ragemod:blocks/stripped_robtai_log_top",
+    "down": "ragemod:blocks/stripped_robtai_log_new",
+    "up": "ragemod:blocks/stripped_robtai_log_new",
     "north": "ragemod:blocks/stripped_robtai_log_side",
     "east": "ragemod:blocks/stripped_robtai_log_side",
     "south": "ragemod:blocks/stripped_robtai_log_side",
     "west": "ragemod:blocks/stripped_robtai_log_side",
-    "particle": "ragemod:blocks/stripped_robtai_log_top"
+    "particle": "ragemod:blocks/stripped_robtai_log_new"
   }
 }

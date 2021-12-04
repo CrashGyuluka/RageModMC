@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Protector of Toxic",
     "mobLabel": "",
-    "mobModelName": "Modelcustom_model",
+    "mobModelName": "Modeltoxic_helper_1_17",
     "mobModelTexture": "savrob_texture1.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,

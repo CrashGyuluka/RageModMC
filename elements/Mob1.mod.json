@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "ToxicMob",
     "mobLabel": "",
-    "mobModelName": "Modelmob1",
+    "mobModelName": "Modeltoxic_mob",
     "mobModelTexture": "mob1texture2.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,

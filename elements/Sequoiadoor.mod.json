@@ -2,8 +2,8 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "mamut_d_down",
-    "textureTop": "mamut_d_top",
+    "texture": "sequoia_door_bottom",
+    "textureTop": "sequoia_door_top",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
