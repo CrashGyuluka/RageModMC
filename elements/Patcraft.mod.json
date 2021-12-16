@@ -9,10 +9,10 @@
     "group": "",
     "recipeShapeless": false,
     "brewingInputStack": {
-      "value": "CUSTOM:Aktionit"
+      "value": "CUSTOM:Ragepotion"
     },
     "brewingIngredientStack": {
-      "value": "CUSTOM:Ragepotion"
+      "value": "CUSTOM:Aktionit"
     },
     "brewingReturnStack": {
       "value": "CUSTOM:Savellenalasbottle"

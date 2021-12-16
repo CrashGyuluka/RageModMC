@@ -40,7 +40,7 @@ public class ToxicBlockPlacedProcedure {
 				.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASKO) {
 				{
-					boolean _setval = (boolean) (true);
+					boolean _setval = true;
 					entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.ToxicBlockPlace1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -49,7 +49,7 @@ public class ToxicBlockPlacedProcedure {
 			} else {
 				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASNETHERRACK) {
 					{
-						boolean _setval = (boolean) (true);
+						boolean _setval = true;
 						entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.ToxicBlockPlace2 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -58,7 +58,7 @@ public class ToxicBlockPlacedProcedure {
 				} else {
 					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASENDKO) {
 						{
-							boolean _setval = (boolean) (true);
+							boolean _setval = true;
 							entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.ToxicBlockPlace3 = _setval;
 								capability.syncPlayerVariables(entity);
@@ -67,7 +67,7 @@ public class ToxicBlockPlacedProcedure {
 					} else {
 						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASFOLD) {
 							{
-								boolean _setval = (boolean) (true);
+								boolean _setval = true;
 								entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.ToxicBlockPlace4 = _setval;
 									capability.syncPlayerVariables(entity);
@@ -76,7 +76,7 @@ public class ToxicBlockPlacedProcedure {
 						} else {
 							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASLOG) {
 								{
-									boolean _setval = (boolean) (true);
+									boolean _setval = true;
 									entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.ToxicBlockPlace5 = _setval;
 										capability.syncPlayerVariables(entity);
@@ -85,7 +85,7 @@ public class ToxicBlockPlacedProcedure {
 							} else {
 								if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASPANKS) {
 									{
-										boolean _setval = (boolean) (true);
+										boolean _setval = true;
 										entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.ToxicBlockPlace6 = _setval;
 											capability.syncPlayerVariables(entity);
@@ -94,7 +94,7 @@ public class ToxicBlockPlacedProcedure {
 								} else {
 									if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASANDESITE) {
 										{
-											boolean _setval = (boolean) (true);
+											boolean _setval = true;
 											entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 												capability.ToxicBlockPlace7 = _setval;
 												capability.syncPlayerVariables(entity);
@@ -104,7 +104,7 @@ public class ToxicBlockPlacedProcedure {
 										if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 												.getBlock() == RagemodModBlocks.SAVASDIORIT) {
 											{
-												boolean _setval = (boolean) (true);
+												boolean _setval = true;
 												entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 													capability.ToxicBlockPlace8 = _setval;
 													capability.syncPlayerVariables(entity);
@@ -114,7 +114,7 @@ public class ToxicBlockPlacedProcedure {
 											if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 													.getBlock() == RagemodModBlocks.SAVASGRANIT) {
 												{
-													boolean _setval = (boolean) (true);
+													boolean _setval = true;
 													entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 															.ifPresent(capability -> {
 																capability.ToxicBlockPlace9 = _setval;
@@ -125,7 +125,7 @@ public class ToxicBlockPlacedProcedure {
 												if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 														.getBlock() == RagemodModBlocks.SAVASCSONT) {
 													{
-														boolean _setval = (boolean) (true);
+														boolean _setval = true;
 														entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																.ifPresent(capability -> {
 																	capability.ToxicBlockPlace10 = _setval;
@@ -136,7 +136,7 @@ public class ToxicBlockPlacedProcedure {
 													if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 															.getBlock() == RagemodModBlocks.SAVASTEGLA) {
 														{
-															boolean _setval = (boolean) (true);
+															boolean _setval = true;
 															entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																	.ifPresent(capability -> {
 																		capability.ToxicBlockPlace11 = _setval;
@@ -147,7 +147,7 @@ public class ToxicBlockPlacedProcedure {
 														if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																.getBlock() == RagemodModBlocks.SAVASKOTEGLA) {
 															{
-																boolean _setval = (boolean) (true);
+																boolean _setval = true;
 																entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																		.ifPresent(capability -> {
 																			capability.ToxicBlockPlace12 = _setval;
@@ -158,7 +158,7 @@ public class ToxicBlockPlacedProcedure {
 															if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																	.getBlock() == RagemodModBlocks.SAVASNETHERITETORMELEK) {
 																{
-																	boolean _setval = (boolean) (true);
+																	boolean _setval = true;
 																	entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																			.ifPresent(capability -> {
 																				capability.ToxicBlockPlace13 = _setval;
@@ -169,7 +169,7 @@ public class ToxicBlockPlacedProcedure {
 																if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																		.getBlock() == RagemodModBlocks.SAVASBAZALT) {
 																	{
-																		boolean _setval = (boolean) (true);
+																		boolean _setval = true;
 																		entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																				.ifPresent(capability -> {
 																					capability.ToxicBlockPlace14 = _setval;
@@ -180,7 +180,7 @@ public class ToxicBlockPlacedProcedure {
 																	if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																			.getBlock() == RagemodModBlocks.SAVASZUZOTT) {
 																		{
-																			boolean _setval = (boolean) (true);
+																			boolean _setval = true;
 																			entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																					null).ifPresent(capability -> {
 																						capability.ToxicBlockPlace15 = _setval;
@@ -191,7 +191,7 @@ public class ToxicBlockPlacedProcedure {
 																		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																				.getBlock() == RagemodModBlocks.SAVASSODER) {
 																			{
-																				boolean _setval = (boolean) (true);
+																				boolean _setval = true;
 																				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																						null).ifPresent(capability -> {
 																							capability.ToxicBlockPlace16 = _setval;
@@ -202,7 +202,7 @@ public class ToxicBlockPlacedProcedure {
 																			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																					.getBlock() == RagemodModBlocks.SAVASBUZABLOCK) {
 																				{
-																					boolean _setval = (boolean) (true);
+																					boolean _setval = true;
 																					entity.getCapability(
 																							RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																							.ifPresent(capability -> {
@@ -214,7 +214,7 @@ public class ToxicBlockPlacedProcedure {
 																				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																						.getBlock() == RagemodModBlocks.SAVASBLACKSTONE) {
 																					{
-																						boolean _setval = (boolean) (true);
+																						boolean _setval = true;
 																						entity.getCapability(
 																								RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																								.ifPresent(capability -> {
@@ -226,7 +226,7 @@ public class ToxicBlockPlacedProcedure {
 																					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																							.getBlock() == RagemodModBlocks.SAVASBLACKKOTEGLA) {
 																						{
-																							boolean _setval = (boolean) (true);
+																							boolean _setval = true;
 																							entity.getCapability(
 																									RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																									null).ifPresent(capability -> {
@@ -239,7 +239,7 @@ public class ToxicBlockPlacedProcedure {
 																								new BlockPos((int) x, (int) y, (int) z)))
 																										.getBlock() == RagemodModBlocks.SVASKEKGOMBA) {
 																							{
-																								boolean _setval = (boolean) (true);
+																								boolean _setval = true;
 																								entity.getCapability(
 																										RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																										null).ifPresent(capability -> {
@@ -252,7 +252,7 @@ public class ToxicBlockPlacedProcedure {
 																									new BlockPos((int) x, (int) y, (int) z)))
 																											.getBlock() == RagemodModBlocks.SAVASPIROSGOMBA) {
 																								{
-																									boolean _setval = (boolean) (true);
+																									boolean _setval = true;
 																									entity.getCapability(
 																											RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																											null).ifPresent(capability -> {
@@ -266,7 +266,7 @@ public class ToxicBlockPlacedProcedure {
 																										new BlockPos((int) x, (int) y, (int) z)))
 																												.getBlock() == RagemodModBlocks.SAVASSAND) {
 																									{
-																										boolean _setval = (boolean) (true);
+																										boolean _setval = true;
 																										entity.getCapability(
 																												RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																												null).ifPresent(capability -> {
@@ -280,7 +280,7 @@ public class ToxicBlockPlacedProcedure {
 																											new BlockPos((int) x, (int) y, (int) z)))
 																													.getBlock() == RagemodModBlocks.SAVASREDSAND) {
 																										{
-																											boolean _setval = (boolean) (true);
+																											boolean _setval = true;
 																											entity.getCapability(
 																													RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																													null).ifPresent(capability -> {
@@ -295,7 +295,7 @@ public class ToxicBlockPlacedProcedure {
 																												(int) y, (int) z)))
 																														.getBlock() == RagemodModBlocks.SAVASHOMOKKO) {
 																											{
-																												boolean _setval = (boolean) (true);
+																												boolean _setval = true;
 																												entity.getCapability(
 																														RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																														null)
@@ -311,7 +311,7 @@ public class ToxicBlockPlacedProcedure {
 																													(int) x, (int) y, (int) z)))
 																															.getBlock() == RagemodModBlocks.SAVASHOMOKKOPIROS) {
 																												{
-																													boolean _setval = (boolean) (true);
+																													boolean _setval = true;
 																													entity.getCapability(
 																															RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																															null)

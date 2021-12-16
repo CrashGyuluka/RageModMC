@@ -1,8 +1,8 @@
 {
   "parent": "block/stairs",
   "textures": {
-    "bottom": "ragemod:blocks/0101110102",
-    "top": "ragemod:blocks/0101110102",
-    "side": "ragemod:blocks/0101110102"
+    "bottom": "ragemod:blocks/ragewood_log_side_new",
+    "top": "ragemod:blocks/ragewood_log_side_new",
+    "side": "ragemod:blocks/ragewood_log_side_new"
   }
 }

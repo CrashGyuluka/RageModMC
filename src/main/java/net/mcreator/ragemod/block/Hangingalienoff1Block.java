@@ -132,4 +132,5 @@ public class Hangingalienoff1Block extends Block {
 	public static void registerRenderLayer() {
 		ItemBlockRenderTypes.setRenderLayer(RagemodModBlocks.HANGINGALIENOFF_1, renderType -> renderType == RenderType.cutout());
 	}
+
 }

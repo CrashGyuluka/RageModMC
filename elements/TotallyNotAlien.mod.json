@@ -117,7 +117,7 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "CUSTOM:Miner"
+          "value": "CUSTOM:Alienslime"
         },
         "minGroup": 1,
         "maxGroup": 2,

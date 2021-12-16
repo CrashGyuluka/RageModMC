@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ragemod:blocks/savas_nov_al",
-    "particle": "ragemod:blocks/savas_nov_al"
-  }
-}

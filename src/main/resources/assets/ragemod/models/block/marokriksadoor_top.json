@@ -1,7 +1,7 @@
 {
   "parent": "block/door_top",
   "textures": {
-    "bottom": "ragemod:blocks/mar_al",
-    "top": "ragemod:blocks/mar-fel_p"
+    "bottom": "ragemod:blocks/marokriksa_door_bottom",
+    "top": "ragemod:blocks/marokriksa_door_bottom_new"
   }
 }

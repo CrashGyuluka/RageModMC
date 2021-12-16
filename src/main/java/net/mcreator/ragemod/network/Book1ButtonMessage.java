@@ -11,8 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ragemod.world.inventory.Book1Menu;
 import net.mcreator.ragemod.procedures.Book1eprocProcedure;
-import net.mcreator.ragemod.client.gui.Book1Screen;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
@@ -58,7 +58,7 @@ public class Book1ButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = Book1Screen.guistate;
+		HashMap guistate = Book1Menu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

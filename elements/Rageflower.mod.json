@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "rageteamflower1",
+    "texture": "rageflower",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",

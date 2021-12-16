@@ -4,9 +4,9 @@ license="MIT License"
 
 [[mods]]
 modId="ragemod"
-version="1.1_21w48a"
+version="1.1_21w49b"
 displayName="RageMod (forge)"
-credits="Made by: RageTeam: CrashGyuluka"
+credits="Made by CrashGyuluka"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/ragemod-by-rageteam"
 logoFile="logo.png"
 authors="CrashGyuluka, Lyof"

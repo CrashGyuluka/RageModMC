@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "ragemod:blocks/alien_shroom_hanging",
-    "particle": "ragemod:blocks/alien_shroom_hanging"
-  }
-}

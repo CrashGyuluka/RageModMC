@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "biome",
   "definition": {
-    "name": "Aline Lake",
+    "name": "Alien Lake",
     "groundBlock": {
       "value": "CUSTOM:Aliensoil"
     },
@@ -117,7 +117,7 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "CUSTOM:Miner"
+          "value": "CUSTOM:Alienslime"
         },
         "minGroup": 1,
         "maxGroup": 2,

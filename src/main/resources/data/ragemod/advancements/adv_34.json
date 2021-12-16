@@ -16,11 +16,19 @@
   },
   "criteria": {
     "adv_34": {
-      "trigger": "minecraft:placed_block",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:alien_stone"
-        }
+        "items": [
+          {
+            "items": [
+              "ragemod:alien_stone"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1069
+            }
+          }
+        ]
       }
     }
   },

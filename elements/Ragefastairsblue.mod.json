@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "rage_blue",
-    "textureTop": "rage_blue",
+    "texture": "ragewood_planks_blue",
+    "textureTop": "ragewood_planks_blue",
     "textureLeft": "",
-    "textureFront": "rage_blue",
+    "textureFront": "ragewood_planks_blue",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,

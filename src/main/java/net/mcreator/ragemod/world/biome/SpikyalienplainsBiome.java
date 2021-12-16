@@ -83,7 +83,7 @@ public class SpikyalienplainsBiome {
 		BiomeDefaultFeatures.addOceanCarvers(biomeGenerationSettings);
 		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.MINER, 3, 1, 2));
+		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIENSLIME, 3, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 20, 1, 4));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.FLYLIEN, 10, 2, 6));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIENSLIME, 8, 1, 4));

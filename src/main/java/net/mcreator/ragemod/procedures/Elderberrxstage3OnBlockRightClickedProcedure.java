@@ -16,7 +16,6 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.init.RagemodModItems;
 import net.mcreator.ragemod.init.RagemodModBlocks;
@@ -43,7 +42,7 @@ public class Elderberrxstage3OnBlockRightClickedProcedure {
 		double randomNumber = 0;
 		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.FLOWERY_ELDERBERRY_LEAVES) {
 			if (!world.isClientSide()) {
-				randomNumber = (double) Math.random();
+				randomNumber = Math.random();
 				if (randomNumber >= 0.5) {
 					for (int index0 = 0; index0 < (int) (3); index0++) {
 						if (world instanceof Level _level && !_level.isClientSide()) {
@@ -70,10 +69,17 @@ public class Elderberrxstage3OnBlockRightClickedProcedure {
 						_level.addFreshEntity(entityToSpawn);
 					}
 				}
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.pick_berries")), SoundSource.BLOCKS, 1,
-							1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.pick_berries")),
+								SoundSource.BLOCKS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.pick_berries")),
+								SoundSource.BLOCKS, 1, 1, false);
+					}
+				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					BlockState _bs = RagemodModBlocks.ELDERBERRY_LEAVES.defaultBlockState();

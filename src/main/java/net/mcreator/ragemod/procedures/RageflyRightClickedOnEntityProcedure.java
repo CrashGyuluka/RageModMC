@@ -2,13 +2,12 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.client.player.AbstractClientPlayer;
-import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.init.RagemodModEntities;
@@ -22,9 +21,9 @@ public class RageflyRightClickedOnEntityProcedure {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-				} else if (_ent.level.isClientSide() && _ent instanceof AbstractClientPlayer _clientPlayer) {
-					PlayerInfo _pi = Minecraft.getInstance().getConnection().getPlayerInfo(_clientPlayer.getGameProfile().getId());
-					return _pi != null && _pi.getGameMode() == GameType.CREATIVE;
+				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance()
+							.getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 				}
 				return false;
 			}

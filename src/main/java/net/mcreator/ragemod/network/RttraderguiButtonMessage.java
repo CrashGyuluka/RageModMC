@@ -11,9 +11,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ragemod.world.inventory.RttraderguiMenu;
 import net.mcreator.ragemod.procedures.Favago4Procedure;
 import net.mcreator.ragemod.procedures.Favago3Procedure;
-import net.mcreator.ragemod.client.gui.RttraderguiScreen;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
@@ -59,7 +59,7 @@ public class RttraderguiButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = RttraderguiScreen.guistate;
+		HashMap guistate = RttraderguiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

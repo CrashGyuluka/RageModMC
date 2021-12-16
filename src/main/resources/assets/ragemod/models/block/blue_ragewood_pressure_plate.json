@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_up",
   "textures": {
-    "texture": "ragemod:blocks/rage_blue"
+    "texture": "ragemod:blocks/ragewood_planks_blue"
   }
 }

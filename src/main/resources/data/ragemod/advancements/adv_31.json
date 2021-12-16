@@ -16,12 +16,7 @@
   },
   "criteria": {
     "adv_31": {
-      "trigger": "minecraft:placed_block",
-      "conditions": {
-        "item": {
-          "item": "ragemod:rageium_bricks"
-        }
-      }
+      "trigger": "minecraft:impossible"
     }
   },
   "rewards": {

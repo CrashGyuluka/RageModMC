@@ -28,7 +28,7 @@ import java.util.Collections;
 
 public class AliencobwebBlock extends Block {
 	public AliencobwebBlock() {
-		super(BlockBehaviour.Properties.of(Material.WEB).sound(SoundType.STONE).strength(1f, 10f).lightLevel(s -> 4).requiresCorrectToolForDrops()
+		super(BlockBehaviour.Properties.of(Material.WEB).sound(SoundType.STONE).strength(1f, 10f).lightLevel(s -> 2).requiresCorrectToolForDrops()
 				.noCollission().speedFactor(0.1f).jumpFactor(0.2f).noOcclusion().hasPostProcess((bs, br, bp) -> true)
 				.emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("alien_cobweb");

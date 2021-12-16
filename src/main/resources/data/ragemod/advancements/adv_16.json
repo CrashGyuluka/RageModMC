@@ -20,9 +20,11 @@
       "conditions": {
         "items": [
           {
-            "item": "ragemod:rageiumalloy",
+            "items": [
+              "ragemod:rageiumalloy"
+            ],
             "count": {
-              "min": 5,
+              "min": 1,
               "max": 1069
             }
           }
@@ -40,7 +42,7 @@
       "ragemod:rageiumalloycraft",
       "ragemod:rageiumalloycraftb_1",
       "ragemod:ragearrowammocraft_1",
-      "ragemod:konvertercr_aft",
+      "ragemod:deleted_mod_element",
       "ragemod:convertercraft",
       "ragemod:ragegyurucraft",
       "ragemod:portalrtcraft",

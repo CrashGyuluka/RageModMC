@@ -18,7 +18,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.init.RagemodModBlocks;
 
@@ -50,9 +49,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 					world.setBlock(_bp, _bs, 3);
 				}
 				world.addParticle(ParticleTypes.COMPOSTER, x, y, z, 0, 1, 0);
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 				if (entity instanceof Player _player)
 					_player.getCooldowns()
 							.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
@@ -63,9 +68,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y + 1), z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y + 1), z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) (y + 1), (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, (y + 1), z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
@@ -77,9 +88,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y + 1), (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y + 1), (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) (y + 1), (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, (y + 1), (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
@@ -91,9 +109,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y + 1), (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y + 1), (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) (y + 1), (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, (y + 1), (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 40);
@@ -105,9 +130,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y - 1), (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y - 1), (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) (y - 1), (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, (y - 1), (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -120,9 +152,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y - 1), (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y - 1), (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) (y - 1), (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), (y - 1), (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -135,9 +174,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y + 1), (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y + 1), (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), (y + 1), (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -150,9 +196,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y + 1), (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y + 1), (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), (y + 1), (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -165,9 +218,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y - 1), (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y - 1), (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), (y - 1), (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -180,9 +240,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y - 1), (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y - 1), (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), (y - 1), (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -195,9 +262,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y - 1), (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y - 1), (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), (y - 1), (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -210,9 +284,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y + 1), (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y + 1), (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), (y + 1), (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -225,9 +306,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y + 1), (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y + 1), (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), (y + 1), (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -239,9 +327,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), (y + 1), z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), (y + 1), z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) (y + 1), (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), (y + 1), z,
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -253,9 +348,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), (y + 1), z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), (y + 1), z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) (y + 1), (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), (y + 1), z,
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -267,9 +369,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -281,9 +389,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -295,9 +409,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, (y - 1), (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, (y - 1), (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) (y - 1), (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, (y - 1), (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -309,9 +430,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, y, (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) y, (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, (z + 1), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -323,9 +450,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, x, y, (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) y, (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, (z - 1), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -337,9 +470,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -351,9 +490,15 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, z, 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -365,9 +510,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) y, (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), y, (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -379,9 +531,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, (z - 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, (z - 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) y, (int) (z - 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), y, (z - 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -393,9 +552,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x + 1), y, (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x + 1), y, (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x + 1), (int) y, (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x + 1), y, (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);
@@ -407,9 +573,16 @@ public class Elderberrybushstage0devuUpdateTickProcedure {
 						world.setBlock(_bp, _bs, 3);
 					}
 					world.addParticle(ParticleTypes.COMPOSTER, (x - 1), y, (z + 1), 0, 1, 0);
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, (x - 1), y, (z + 1),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) (x - 1), (int) y, (int) (z + 1)),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound((x - 1), y, (z + 1),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.composter.ready")), SoundSource.NEUTRAL, 1, 1,
+									false);
+						}
+					}
 					if (entity instanceof Player _player)
 						_player.getCooldowns()
 								.addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 50);

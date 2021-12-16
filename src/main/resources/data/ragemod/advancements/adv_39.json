@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "ragemod:alien_spike"
+    },
+    "title": {
+      "translate": "advancements.adv_39.title"
+    },
+    "description": {
+      "translate": "advancements.adv_39.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_39": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 2,
+    "recipes": [
+      "ragemod:aliencrystalcraft",
+      "ragemod:aliencrystalbackcraft"
+    ]
+  },
+  "parent": "ragemod:adv_32"
+}

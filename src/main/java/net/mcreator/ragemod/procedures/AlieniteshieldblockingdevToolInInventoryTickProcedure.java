@@ -18,7 +18,7 @@ public class AlieniteshieldblockingdevToolInInventoryTickProcedure {
 		if ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer == 0
 				&& itemstack.getItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
-			sheildDamage = (double) ((itemstack).getDamageValue());
+			sheildDamage = (itemstack).getDamageValue();
 			if (entity instanceof LivingEntity _entity) {
 				ItemStack _setstack = new ItemStack(RagemodModItems.ALIENITESHIELD);
 				_setstack.setCount(1);
@@ -28,10 +28,10 @@ public class AlieniteshieldblockingdevToolInInventoryTickProcedure {
 			}
 			((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).setDamageValue((int) sheildDamage);
 		} else {
-			localShieldTimer = (double) ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer - 1);
+			localShieldTimer = (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new RagemodModVariables.PlayerVariables())).RageModShieldTimer - 1;
 			{
-				double _setval = (double) localShieldTimer;
+				double _setval = localShieldTimer;
 				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RageModShieldTimer = _setval;
 					capability.syncPlayerVariables(entity);

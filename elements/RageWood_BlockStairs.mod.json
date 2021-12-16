@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "0101110102",
-    "textureTop": "0101110102",
+    "texture": "ragewood_log_side_new",
+    "textureTop": "ragewood_log_side_new",
     "textureLeft": "",
-    "textureFront": "0101110102",
+    "textureFront": "ragewood_log_side_new",
     "textureRight": "",
     "textureBack": "",
     "renderType": 10,

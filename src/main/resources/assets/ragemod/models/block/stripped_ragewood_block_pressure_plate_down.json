@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_down",
   "textures": {
-    "texture": "ragemod:blocks/rage_s_oldal"
+    "texture": "ragemod:blocks/stripped_ragewood_log_side1"
   }
 }

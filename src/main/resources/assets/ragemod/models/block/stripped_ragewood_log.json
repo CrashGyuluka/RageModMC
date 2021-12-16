@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/rage_s1",
-    "up": "ragemod:blocks/rage_s1",
-    "north": "ragemod:blocks/-0",
-    "east": "ragemod:blocks/-0",
-    "south": "ragemod:blocks/-0",
-    "west": "ragemod:blocks/-0",
-    "particle": "ragemod:blocks/rage_s1"
+    "down": "ragemod:blocks/stripped_ragewood_log_top",
+    "up": "ragemod:blocks/stripped_ragewood_log_top",
+    "north": "ragemod:blocks/stripped_ragewood_log_side1",
+    "east": "ragemod:blocks/stripped_ragewood_log_side1",
+    "south": "ragemod:blocks/stripped_ragewood_log_side1",
+    "west": "ragemod:blocks/stripped_ragewood_log_side1",
+    "particle": "ragemod:blocks/stripped_ragewood_log_top"
   }
 }

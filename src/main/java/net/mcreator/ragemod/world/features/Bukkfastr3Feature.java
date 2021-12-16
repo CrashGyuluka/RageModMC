@@ -25,8 +25,7 @@ import java.util.List;
 public class Bukkfastr3Feature extends Feature<NoneFeatureConfiguration> {
 	public static final Bukkfastr3Feature FEATURE = (Bukkfastr3Feature) new Bukkfastr3Feature().setRegistryName("ragemod:bukkfastr_3");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE.configured(FeatureConfiguration.NONE);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:cave_dimension_biome1"),
-			new ResourceLocation("ragemod:beech_meadow"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:beech_meadow"));
 	private final List<Block> base_blocks = List.of(Blocks.GRASS_BLOCK);
 	private StructureTemplate template = null;
 

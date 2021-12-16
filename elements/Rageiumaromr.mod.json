@@ -3,17 +3,17 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "ragium_helmet",
+    "textureHelmet": "rageium_helmet",
     "enableBody": true,
-    "textureBody": "chainmail_chestplate",
+    "textureBody": "rageium_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "chainmail_leggings",
+    "textureLeggings": "rageium_leggings",
     "enableBoots": true,
-    "textureBoots": "chainmail_boots",
+    "textureBoots": "rageium_boots",
     "creativeTab": {
       "value": "CUSTOM:Ercek"
     },
-    "armorTextureFile": "diamond_",
+    "armorTextureFile": "rageium_armor_",
     "helmetName": "Rageium Helmet",
     "bodyName": "Rageium Chestplate",
     "leggingsName": "Rageium Leggings",

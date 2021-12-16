@@ -34,7 +34,7 @@ import java.util.Collections;
 
 public class AlientrapblocklitBlock extends Block {
 	public AlientrapblocklitBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(4f, 10f).lightLevel(s -> 11).noCollission());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(4f, 10f).lightLevel(s -> 9).noCollission());
 		setRegistryName("alientrapblocklit");
 	}
 

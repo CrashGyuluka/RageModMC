@@ -16,11 +16,19 @@
   },
   "criteria": {
     "adv_17": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:savercr"
-        }
+        "items": [
+          {
+            "items": [
+              "ragemod:savercr"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1089
+            }
+          }
+        ]
       }
     }
   },
@@ -94,10 +102,10 @@
       "ragemod:savasdiamondorecraft",
       "ragemod:savassmaragderccraft",
       "ragemod:savasaranyerccraft",
-      "ragemod:savasaranyercegetes_1",
-      "ragemod:savasaranyercegetes_2",
-      "ragemod:savasvasercegetes_1",
-      "ragemod:savasvasercegetes_2",
+      "ragemod:deleted_mod_element",
+      "ragemod:deleted_mod_element",
+      "ragemod:deleted_mod_element",
+      "ragemod:deleted_mod_element",
       "ragemod:savasvaserccraft",
       "ragemod:savaslapiserccraft",
       "ragemod:savasnetheraranycraft",

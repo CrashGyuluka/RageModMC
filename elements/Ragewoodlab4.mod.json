@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "rage_s_oldal",
-    "textureTop": "rage_s_oldal",
+    "texture": "stripped_ragewood_log_side1",
+    "textureTop": "stripped_ragewood_log_side1",
     "textureLeft": "",
-    "textureFront": "rage_s_oldal",
+    "textureFront": "stripped_ragewood_log_side1",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,
@@ -59,6 +59,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -76,6 +79,21 @@
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,

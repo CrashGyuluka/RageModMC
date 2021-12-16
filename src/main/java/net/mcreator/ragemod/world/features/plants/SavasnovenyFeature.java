@@ -24,13 +24,12 @@ public class SavasnovenyFeature extends RandomPatchFeature {
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(
 					new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(RagemodModBlocks.SAVASNOVENY.defaultBlockState()),
-							DoublePlantPlacer.INSTANCE).tries(2)
+							DoublePlantPlacer.INSTANCE).tries(10)
 
 									.noProjection().build())
 			.decorated(FeatureDecorator.HEIGHTMAP.configured(new HeightmapConfiguration(Heightmap.Types.MOTION_BLOCKING))).squared().rarity(32)
-			.count(1);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:toxic_waste"), new ResourceLocation("swamp"),
-			new ResourceLocation("swamp_hills"));
+			.count(21);
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:toxic_waste"));
 
 	public SavasnovenyFeature() {
 		super(RandomPatchConfiguration.CODEC);

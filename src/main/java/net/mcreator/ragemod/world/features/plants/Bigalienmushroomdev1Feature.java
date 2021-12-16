@@ -31,7 +31,7 @@ public class Bigalienmushroomdev1Feature extends RandomPatchFeature {
 			.decorated(FeatureDecorator.HEIGHTMAP.configured(new HeightmapConfiguration(Heightmap.Types.MOTION_BLOCKING))).squared().rarity(32)
 			.count(17);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:alien_hills"),
-			new ResourceLocation("ragemod:alien_plains"));
+			new ResourceLocation("ragemod:alien_plains"), new ResourceLocation("ragemod:alien_forest"));
 
 	public Bigalienmushroomdev1Feature() {
 		super(RandomPatchConfiguration.CODEC);

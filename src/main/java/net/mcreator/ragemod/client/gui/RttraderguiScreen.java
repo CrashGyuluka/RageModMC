@@ -15,13 +15,10 @@ import net.mcreator.ragemod.world.inventory.RttraderguiMenu;
 import net.mcreator.ragemod.network.RttraderguiButtonMessage;
 import net.mcreator.ragemod.RagemodMod;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class RttraderguiScreen extends AbstractContainerScreen<RttraderguiMenu> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

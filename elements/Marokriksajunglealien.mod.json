@@ -6,7 +6,7 @@
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 1000000,
-    "minCountPerChunk": 14,
+    "minCountPerChunk": 15,
     "maxCountPerChunk": 16,
     "spawnLocation": "Ground",
     "spawnHeightOffset": -2,

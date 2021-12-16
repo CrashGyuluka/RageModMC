@@ -11,9 +11,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ragemod.world.inventory.RttraderguiMenu;
 import net.mcreator.ragemod.procedures.Favago6Procedure;
 import net.mcreator.ragemod.procedures.Favago5Procedure;
-import net.mcreator.ragemod.client.gui.RttraderguiScreen;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
@@ -67,7 +67,7 @@ public class RttraderguiSlotMessage {
 
 	public static void handleSlotAction(Player entity, int slotID, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = RttraderguiScreen.guistate;
+		HashMap guistate = RttraderguiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

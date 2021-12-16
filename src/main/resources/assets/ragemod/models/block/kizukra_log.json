@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/kizukra_log_side",
     "up": "ragemod:blocks/kizukra_log_side",
-    "north": "ragemod:blocks/kizukralog",
-    "east": "ragemod:blocks/kizukralog",
-    "south": "ragemod:blocks/kizukralog",
-    "west": "ragemod:blocks/kizukralog",
+    "north": "ragemod:blocks/kizukra_log_new",
+    "east": "ragemod:blocks/kizukra_log_new",
+    "south": "ragemod:blocks/kizukra_log_new",
+    "west": "ragemod:blocks/kizukra_log_new",
     "particle": "ragemod:blocks/kizukra_log_side"
   }
 }

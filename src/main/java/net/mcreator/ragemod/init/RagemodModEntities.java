@@ -24,7 +24,6 @@ import net.mcreator.ragemod.entity.Rageboos1Entity;
 import net.mcreator.ragemod.entity.RagearrowEntity;
 import net.mcreator.ragemod.entity.PoliposEntity;
 import net.mcreator.ragemod.entity.Mob1Entity;
-import net.mcreator.ragemod.entity.MinerEntity;
 import net.mcreator.ragemod.entity.FlyilenEntity;
 import net.mcreator.ragemod.entity.AtomRageREntity;
 import net.mcreator.ragemod.entity.AlienslimeEntity;
@@ -53,9 +52,6 @@ public class RagemodModEntities {
 	public static final EntityType<SavragerobiEntity> SAVRAGEROBI = register("savragerobi",
 			EntityType.Builder.<SavragerobiEntity>of(SavragerobiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SavragerobiEntity::new).sized(0.6f, 2.8f));
-	public static final EntityType<MinerEntity> MINER = register("miner",
-			EntityType.Builder.<MinerEntity>of(MinerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
-					.setUpdateInterval(3).setCustomClientFactory(MinerEntity::new).sized(0.6f, 1.8f));
 	public static final EntityType<TraderrtEntity> TRADERRT = register("traderrt",
 			EntityType.Builder.<TraderrtEntity>of(TraderrtEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TraderrtEntity::new).sized(0.6f, 1.8f));
@@ -97,7 +93,6 @@ public class RagemodModEntities {
 			Rageboos1Entity.init();
 			Mob1Entity.init();
 			SavragerobiEntity.init();
-			MinerEntity.init();
 			TraderrtEntity.init();
 			RageflyEntity.init();
 			FlyilenEntity.init();
@@ -115,7 +110,6 @@ public class RagemodModEntities {
 		event.put(RAGEBOOS_1, Rageboos1Entity.createAttributes().build());
 		event.put(TOXIC_MOB, Mob1Entity.createAttributes().build());
 		event.put(SAVRAGEROBI, SavragerobiEntity.createAttributes().build());
-		event.put(MINER, MinerEntity.createAttributes().build());
 		event.put(TRADERRT, TraderrtEntity.createAttributes().build());
 		event.put(RAGEFLY, RageflyEntity.createAttributes().build());
 		event.put(FLYLIEN, FlyilenEntity.createAttributes().build());

@@ -13,13 +13,13 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "alien_shroom_hanging",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -130,9 +130,7 @@
     "onTickUpdate": {
       "name": "HangingalienplantUpdateTick"
     },
-    "spawnWorldTypes": [
-      "CUSTOM:AlienDimension"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

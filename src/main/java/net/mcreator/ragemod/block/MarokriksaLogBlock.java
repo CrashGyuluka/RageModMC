@@ -28,7 +28,7 @@ public class MarokriksaLogBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
 	public MarokriksaLogBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(4f, 7f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 7f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		setRegistryName("marokriksa_log");
 	}
@@ -74,7 +74,7 @@ public class MarokriksaLogBlock extends Block {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= 1;
 		return false;
 	}
 

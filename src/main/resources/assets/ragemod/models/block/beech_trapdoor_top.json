@@ -1,7 +1,7 @@
 {
   "parent": "block/template_orientable_trapdoor_top",
   "textures": {
-    "texture": "ragemod:blocks/beech_trapdoor",
-    "particle": "ragemod:blocks/beech_trapdoor"
+    "texture": "ragemod:blocks/beech_trapdoor_new1",
+    "particle": "ragemod:blocks/beech_trapdoor_new1"
   }
 }

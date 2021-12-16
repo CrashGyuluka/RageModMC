@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "texture": "ragewood_log_side_new",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -58,6 +58,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -76,9 +79,24 @@
     "soundOnStep": {
       "value": "WOOD"
     },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": -1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

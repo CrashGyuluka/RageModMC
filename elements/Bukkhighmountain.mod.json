@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "biome",
   "definition": {
-    "name": "Bukk_high_mountain",
+    "name": "Beech Mountain",
     "groundBlock": {
       "value": "Blocks.GRASS"
     },

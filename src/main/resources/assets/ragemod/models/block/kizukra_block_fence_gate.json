@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate",
   "textures": {
-    "texture": "ragemod:blocks/---kizukra_log"
+    "texture": "ragemod:blocks/kizukra_log_new"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_post",
   "textures": {
-    "texture": "ragemod:blocks/rage_blue",
-    "particle": "ragemod:blocks/rage_blue"
+    "texture": "ragemod:blocks/ragewood_planks_blue",
+    "particle": "ragemod:blocks/ragewood_planks_blue"
   }
 }

@@ -20,12 +20,12 @@ public class PatcraftBrewingRecipe implements IBrewingRecipe {
 
 	@Override
 	public boolean isInput(ItemStack input) {
-		return input.getItem() == RagemodModItems.AKTIONIT;
+		return input.getItem() == RagemodModItems.RAGEPOTION;
 	}
 
 	@Override
 	public boolean isIngredient(ItemStack ingredient) {
-		return ingredient.getItem() == RagemodModItems.RAGEPOTION;
+		return ingredient.getItem() == RagemodModItems.AKTIONIT;
 	}
 
 	@Override

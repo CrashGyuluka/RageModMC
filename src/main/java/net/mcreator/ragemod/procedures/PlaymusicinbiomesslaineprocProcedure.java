@@ -13,7 +13,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
@@ -38,30 +38,56 @@ public class PlaymusicinbiomesslaineprocProcedure {
 		double AmbientSelector = 0;
 		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY,
 				new ResourceLocation("ragemod:alien_dimension_portal_igniter")))) {
-			AmbientTimer = (double) (AmbientTimer + 1);
+			AmbientTimer = AmbientTimer + 1;
 			if (AmbientTimer == 2000) {
-				AmbientSelector = (double) Math.random();
+				AmbientSelector = Math.random();
 				if (AmbientSelector <= 1 && AmbientSelector > 0.75) {
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient1")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient1")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient1")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 				}
 				if (AmbientSelector <= 0.75 && AmbientSelector > 0.5) {
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient2_1")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient2_1")), SoundSource.NEUTRAL, 1,
+									1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient2_1")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 				}
 				if (AmbientSelector <= 0.5 && AmbientSelector > 0.25) {
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient_3_1")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient_3_1")), SoundSource.NEUTRAL, 1,
+									1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:alien_ambient_3_1")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 				}
 				if (AmbientSelector <= 0.25 && AmbientSelector >= 0) {
-					if (world instanceof Level _level)
-						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")), SoundSource.NEUTRAL, 1, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")),
+									SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
 				}
-				AmbientTimer = (double) 0;
+				AmbientTimer = 0;
 			}
 		}
 	}

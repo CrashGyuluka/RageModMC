@@ -69,7 +69,7 @@ public abstract class RageiumaromrItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/diamond__layer_1.png";
+			return "ragemod:textures/models/armor/rageium_armor__layer_1.png";
 		}
 	}
 
@@ -81,7 +81,7 @@ public abstract class RageiumaromrItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/diamond__layer_1.png";
+			return "ragemod:textures/models/armor/rageium_armor__layer_1.png";
 		}
 	}
 
@@ -93,7 +93,7 @@ public abstract class RageiumaromrItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/diamond__layer_2.png";
+			return "ragemod:textures/models/armor/rageium_armor__layer_2.png";
 		}
 	}
 
@@ -105,7 +105,7 @@ public abstract class RageiumaromrItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/diamond__layer_1.png";
+			return "ragemod:textures/models/armor/rageium_armor__layer_1.png";
 		}
 	}
 }

@@ -37,7 +37,7 @@
     },
     "hardness": 0.5,
     "resistance": 0.0,
-    "luminance": 6,
+    "luminance": 2,
     "unbreakable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
@@ -64,7 +64,7 @@
     },
     "dropAmount": 1,
     "forceTicking": false,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -88,6 +88,9 @@
       },
       {
         "value": "CUSTOM:TotallyNotAlien"
+      },
+      {
+        "value": "CUSTOM:Alienforest"
       }
     ],
     "patchSize": 20

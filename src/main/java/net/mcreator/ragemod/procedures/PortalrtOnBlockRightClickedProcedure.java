@@ -13,8 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.player.AbstractClientPlayer;
-import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.init.RagemodModGameRules;
@@ -301,9 +299,10 @@ public class PortalrtOnBlockRightClickedProcedure {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayer _serverPlayer) {
 								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-							} else if (_ent.level.isClientSide() && _ent instanceof AbstractClientPlayer _clientPlayer) {
-								PlayerInfo _pi = Minecraft.getInstance().getConnection().getPlayerInfo(_clientPlayer.getGameProfile().getId());
-								return _pi != null && _pi.getGameMode() == GameType.SURVIVAL;
+							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())
+												.getGameMode() == GameType.SURVIVAL;
 							}
 							return false;
 						}
@@ -311,14 +310,15 @@ public class PortalrtOnBlockRightClickedProcedure {
 						public boolean checkGamemode(Entity _ent) {
 							if (_ent instanceof ServerPlayer _serverPlayer) {
 								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.ADVENTURE;
-							} else if (_ent.level.isClientSide() && _ent instanceof AbstractClientPlayer _clientPlayer) {
-								PlayerInfo _pi = Minecraft.getInstance().getConnection().getPlayerInfo(_clientPlayer.getGameProfile().getId());
-								return _pi != null && _pi.getGameMode() == GameType.ADVENTURE;
+							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())
+												.getGameMode() == GameType.ADVENTURE;
 							}
 							return false;
 						}
 					}.checkGamemode(entity)) {
-						if (Math.random() < 0.5) {
+						if (Math.random() < 0.2) {
 							if (entity instanceof Player _player) {
 								ItemStack _stktoremove = new ItemStack(Items.GOLD_NUGGET);
 								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,

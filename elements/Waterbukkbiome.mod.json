@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "biome",
   "definition": {
-    "name": "Water_bukk_biome",
+    "name": "Watery Beech Biome",
     "groundBlock": {
       "value": "Blocks.DIRT#1"
     },

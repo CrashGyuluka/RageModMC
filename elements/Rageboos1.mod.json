@@ -5,7 +5,7 @@
     "mobName": "RageBoss",
     "mobLabel": "",
     "mobModelName": "Spider",
-    "mobModelTexture": "boss1.png",
+    "mobModelTexture": "rageboss_new.png",
     "mobModelGlowTexture": "boss1.png",
     "modelWidth": 1.4,
     "modelHeight": 0.9,

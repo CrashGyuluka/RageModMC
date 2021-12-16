@@ -28,8 +28,8 @@ import java.util.Collections;
 
 public class Bigalienmushroomdev1Block extends DoublePlantBlock {
 	public Bigalienmushroomdev1Block() {
-		super(BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).strength(0.5f, 0f)
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).speedFactor(1.1f).jumpFactor(1.1f).lightLevel(s -> 6));
+		super(BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).strength(0.5f, 0f).speedFactor(1.1f).jumpFactor(1.1f)
+				.lightLevel(s -> 2));
 		setRegistryName("bigalienmushroomdev_1");
 	}
 

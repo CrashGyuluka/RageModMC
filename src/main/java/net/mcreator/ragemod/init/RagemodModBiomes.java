@@ -12,7 +12,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.resources.ResourceLocation;
 
-import net.mcreator.ragemod.world.biome.WaterbukkbiomefordimensionBiome;
 import net.mcreator.ragemod.world.biome.WaterbukkbiomeBiome;
 import net.mcreator.ragemod.world.biome.TotallyNotAlienBiome;
 import net.mcreator.ragemod.world.biome.SpikyalienplainsBiome;
@@ -24,7 +23,6 @@ import net.mcreator.ragemod.world.biome.GlowingOakForestMountainBiome;
 import net.mcreator.ragemod.world.biome.GlowingOakForestBiome;
 import net.mcreator.ragemod.world.biome.FloweryalienplainsBiome;
 import net.mcreator.ragemod.world.biome.BukkmountainBiome;
-import net.mcreator.ragemod.world.biome.BukkmeadowfordimensionBiome;
 import net.mcreator.ragemod.world.biome.BukkmeadowBiome;
 import net.mcreator.ragemod.world.biome.BukkhighmountainvariatedBiome;
 import net.mcreator.ragemod.world.biome.BukkhighmountainBiome;
@@ -47,8 +45,6 @@ public class RagemodModBiomes {
 	public static Biome BEECH_MOUNTAIN = register("beech_mountain", BukkhighmountainBiome.createBiome());
 	public static Biome BEECH_AMPLIFIED_MOUNTAIN = register("beech_amplified_mountain", BukkhighmountainvariatedBiome.createBiome());
 	public static Biome WATERBUKKBIOME = register("waterbukkbiome", WaterbukkbiomeBiome.createBiome());
-	public static Biome CAVE_DIMENSION_BIOME1 = register("cave_dimension_biome1", BukkmeadowfordimensionBiome.createBiome());
-	public static Biome CAVE_DIMENSION_BIOME2 = register("cave_dimension_biome2", WaterbukkbiomefordimensionBiome.createBiome());
 	public static Biome ALIEN_HILLS = register("alien_hills", TotallyNotAlienBiome.createBiome());
 	public static Biome ALIEN_PLAINS = register("alien_plains", AlienplainsBiome.createBiome());
 	public static Biome ALIEN_LAKE = register("alien_lake", AlienlakeBiome.createBiome());
@@ -81,8 +77,6 @@ public class RagemodModBiomes {
 			BukkhighmountainBiome.init();
 			BukkhighmountainvariatedBiome.init();
 			WaterbukkbiomeBiome.init();
-			BukkmeadowfordimensionBiome.init();
-			WaterbukkbiomefordimensionBiome.init();
 			TotallyNotAlienBiome.init();
 			AlienplainsBiome.init();
 			AlienlakeBiome.init();

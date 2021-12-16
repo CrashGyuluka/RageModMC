@@ -19,7 +19,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -94,7 +94,7 @@
     "fallSound": {
       "value": ""
     },
-    "luminance": 3,
+    "luminance": 2,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": true,
@@ -130,9 +130,7 @@
     "onTickUpdate": {
       "name": "HangingalienplantUpdateTick"
     },
-    "spawnWorldTypes": [
-      "CUSTOM:AlienDimension"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

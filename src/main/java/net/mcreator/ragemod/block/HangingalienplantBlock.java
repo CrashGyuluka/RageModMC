@@ -40,7 +40,7 @@ import java.util.Collections;
 
 public class HangingalienplantBlock extends Block {
 	public HangingalienplantBlock() {
-		super(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).instabreak().lightLevel(s -> 3).noCollission().speedFactor(1.1f)
+		super(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).instabreak().lightLevel(s -> 2).noCollission().speedFactor(1.1f)
 				.jumpFactor(1.1f).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
 				.isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("hanging_alien_shroom");
@@ -148,4 +148,5 @@ public class HangingalienplantBlock extends Block {
 	public static void registerRenderLayer() {
 		ItemBlockRenderTypes.setRenderLayer(RagemodModBlocks.HANGING_ALIEN_SHROOM, renderType -> renderType == RenderType.cutout());
 	}
+
 }

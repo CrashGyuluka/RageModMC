@@ -20,9 +20,11 @@
       "conditions": {
         "items": [
           {
-            "item": "ragemod:savellenalasbottle",
+            "items": [
+              "ragemod:savellenalasbottle"
+            ],
             "count": {
-              "min": 6,
+              "min": 7,
               "max": 1069
             }
           }

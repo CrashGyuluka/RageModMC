@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "rage_arrow_new2",
+    "texture": "rage_arrow_new",
     "customModelName": "Normal",
     "name": "Rageium Arrow",
     "rarity": "COMMON",

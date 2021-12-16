@@ -15,13 +15,10 @@ import net.mcreator.ragemod.world.inventory.KonvertaloguiMenu;
 import net.mcreator.ragemod.network.KonvertaloguiButtonMessage;
 import net.mcreator.ragemod.RagemodMod;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class KonvertaloguiScreen extends AbstractContainerScreen<KonvertaloguiMenu> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

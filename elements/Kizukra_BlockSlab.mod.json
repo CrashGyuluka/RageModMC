@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "---kizukra_log",
-    "textureTop": "---kizukra_log",
+    "texture": "kizukra_log_new",
+    "textureTop": "kizukra_log_new",
     "textureLeft": "",
-    "textureFront": "---kizukra_log",
+    "textureFront": "kizukra_log_new",
     "textureRight": "",
     "textureBack": "",
     "renderType": 10,

@@ -20,7 +20,9 @@
       "conditions": {
         "items": [
           {
-            "item": "ragemod:rageiumblock",
+            "items": [
+              "ragemod:rageiumblock"
+            ],
             "count": {
               "min": 69,
               "max": 69
@@ -34,7 +36,7 @@
     "experience": 10,
     "recipes": [
       "ragemod:rageiumbackcraft_2",
-      "ragemod:konvertercr_aft",
+      "ragemod:deleted_mod_element",
       "ragemod:convertercraft"
     ]
   },

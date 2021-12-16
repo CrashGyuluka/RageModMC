@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "ragefa3",
-    "textureTop": "ragefa3",
-    "textureLeft": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "textureFront": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "textureRight": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "textureBack": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "texture": "ragewood_planks_top",
+    "textureTop": "ragewood_planks_top",
+    "textureLeft": "ragewood_planks",
+    "textureFront": "ragewood_planks",
+    "textureRight": "ragewood_planks",
+    "textureBack": "ragewood_planks",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -58,6 +58,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -75,6 +78,21 @@
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
     },
     "luminance": 0,
     "unbreakable": false,

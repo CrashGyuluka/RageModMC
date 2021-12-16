@@ -20,7 +20,6 @@ import net.mcreator.ragemod.client.renderer.RageflyRenderer;
 import net.mcreator.ragemod.client.renderer.Rageboos1Renderer;
 import net.mcreator.ragemod.client.renderer.PoliposRenderer;
 import net.mcreator.ragemod.client.renderer.Mob1Renderer;
-import net.mcreator.ragemod.client.renderer.MinerRenderer;
 import net.mcreator.ragemod.client.renderer.FlyilenRenderer;
 import net.mcreator.ragemod.client.renderer.AtomRageRRenderer;
 import net.mcreator.ragemod.client.renderer.AlienslimeRenderer;
@@ -35,7 +34,6 @@ public class RagemodModEntityRenderers {
 		event.registerEntityRenderer(RagemodModEntities.RAGEARROW, ThrownItemRenderer::new);
 		event.registerEntityRenderer(RagemodModEntities.TOXIC_MOB, Mob1Renderer::new);
 		event.registerEntityRenderer(RagemodModEntities.SAVRAGEROBI, SavragerobiRenderer::new);
-		event.registerEntityRenderer(RagemodModEntities.MINER, MinerRenderer::new);
 		event.registerEntityRenderer(RagemodModEntities.TRADERRT, TraderrtRenderer::new);
 		event.registerEntityRenderer(RagemodModEntities.RAGEFLY, RageflyRenderer::new);
 		event.registerEntityRenderer(RagemodModEntities.FLYLIEN, FlyilenRenderer::new);

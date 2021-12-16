@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/rage_arrow_new2"
+    "layer0": "ragemod:items/rage_arrow_new"
   }
 }

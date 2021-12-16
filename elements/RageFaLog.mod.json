@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "aaaaaaaaaaaaaaa",
-    "textureTop": "aaaaaaaaaaaaaaa",
-    "textureLeft": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "textureFront": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "textureRight": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "textureBack": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "texture": "ragewood_log_top",
+    "textureTop": "ragewood_log_top",
+    "textureLeft": "ragewood_log_side_new",
+    "textureFront": "ragewood_log_side_new",
+    "textureRight": "ragewood_log_side_new",
+    "textureBack": "ragewood_log_side_new",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 5,
@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": -1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

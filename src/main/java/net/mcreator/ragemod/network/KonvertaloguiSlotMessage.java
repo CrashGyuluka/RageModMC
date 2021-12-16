@@ -11,8 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ragemod.world.inventory.KonvertaloguiMenu;
 import net.mcreator.ragemod.procedures.ConverterSlotChangesProcedure;
-import net.mcreator.ragemod.client.gui.KonvertaloguiScreen;
 import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
@@ -66,7 +66,7 @@ public class KonvertaloguiSlotMessage {
 
 	public static void handleSlotAction(Player entity, int slotID, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = KonvertaloguiScreen.guistate;
+		HashMap guistate = KonvertaloguiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

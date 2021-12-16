@@ -28,7 +28,7 @@ import java.util.Random;
 public class AliendripstonetopdevBlock extends FlowerBlock {
 	public AliendripstonetopdevBlock() {
 		super(MobEffects.BAD_OMEN, 5,
-				BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.STONE).strength(3f, 1f).lightLevel(s -> 5).noDrops());
+				BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.STONE).strength(3f, 1f).lightLevel(s -> 4).noDrops());
 		setRegistryName("aliendripstonetopdev");
 	}
 

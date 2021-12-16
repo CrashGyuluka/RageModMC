@@ -15,7 +15,7 @@ public class AlieniteshieldRightClickedInAirProcedure {
 			return;
 		double sheildDamage = 0;
 		if (itemstack.getItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
-			sheildDamage = (double) ((itemstack).getDamageValue());
+			sheildDamage = (itemstack).getDamageValue();
 			if (entity instanceof LivingEntity _entity) {
 				ItemStack _setstack = new ItemStack(RagemodModItems.ALIENITESHIELDBLOCKINGDEV);
 				_setstack.setCount(1);
@@ -25,7 +25,7 @@ public class AlieniteshieldRightClickedInAirProcedure {
 			}
 			((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).setDamageValue((int) sheildDamage);
 			{
-				double _setval = (double) 40;
+				double _setval = 40;
 				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RageModShieldTimer = _setval;
 					capability.syncPlayerVariables(entity);

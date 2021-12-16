@@ -13,7 +13,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.init.RagemodModBlocks;
 
@@ -25,9 +24,15 @@ public class AlienTorchRightClickedOnBlockProcedure {
 			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR) {
 				world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z), RagemodModBlocks.ALIEN_TORCH_FLOOR.defaultBlockState(), 3);
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 			}
 		} else if (direction == Direction.NORTH) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR
@@ -46,9 +51,15 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 			}
 		} else if (direction == Direction.SOUTH) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR
@@ -67,9 +78,15 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 			}
 		} else if (direction == Direction.WEST) {
 			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR
@@ -88,9 +105,15 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 			}
 		} else if (direction == Direction.EAST) {
 			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR
@@ -109,9 +132,15 @@ public class AlienTorchRightClickedOnBlockProcedure {
 							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 			}
 		}
 	}

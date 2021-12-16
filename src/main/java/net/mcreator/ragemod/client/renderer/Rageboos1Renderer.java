@@ -23,6 +23,6 @@ public class Rageboos1Renderer extends MobRenderer<Rageboos1Entity, SpiderModel<
 
 	@Override
 	public ResourceLocation getTextureLocation(Rageboos1Entity entity) {
-		return new ResourceLocation("ragemod:textures/boss1.png");
+		return new ResourceLocation("ragemod:textures/rageboss_new.png");
 	}
 }

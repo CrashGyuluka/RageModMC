@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Protection against toxics",
-    "icon": "notoxic.png",
+    "icon": "pat_effect_icon.png",
     "color": {
       "value": -16737946,
       "falpha": 0.0

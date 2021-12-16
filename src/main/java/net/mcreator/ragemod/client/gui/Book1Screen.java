@@ -15,13 +15,10 @@ import net.mcreator.ragemod.world.inventory.Book1Menu;
 import net.mcreator.ragemod.network.Book1ButtonMessage;
 import net.mcreator.ragemod.RagemodMod;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class Book1Screen extends AbstractContainerScreen<Book1Menu> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

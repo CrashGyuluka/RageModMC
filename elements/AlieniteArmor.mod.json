@@ -3,13 +3,13 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "alienite_helmet_2",
+    "textureHelmet": "alienite_helmet1",
     "enableBody": true,
-    "textureBody": "alienite_chestplate",
+    "textureBody": "alienite_chestplate1",
     "enableLeggings": true,
-    "textureLeggings": "alienite_leggings",
+    "textureLeggings": "alienite_leggings1",
     "enableBoots": true,
-    "textureBoots": "alienite_boots",
+    "textureBoots": "alienite_boots1",
     "creativeTab": {
       "value": "CUSTOM:Ercek"
     },

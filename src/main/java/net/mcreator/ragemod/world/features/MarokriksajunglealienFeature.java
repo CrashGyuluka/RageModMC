@@ -50,7 +50,7 @@ public class MarokriksajunglealienFeature extends Feature<NoneFeatureConfigurati
 			return false;
 		if ((context.random().nextInt(1000000) + 1) <= 1000000) {
 			boolean anyPlaced = false;
-			int count = context.random().nextInt(3) + 14;
+			int count = context.random().nextInt(2) + 15;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);

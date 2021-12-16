@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "ragemod:alien_dimension_portal_igniter"
+      "item": "ragemod:cvex_block"
     },
     "title": {
       "translate": "advancements.adv_27.title"
@@ -16,11 +16,19 @@
   },
   "criteria": {
     "adv_27": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:alien_dimension_portal_igniter"
-        }
+        "items": [
+          {
+            "items": [
+              "ragemod:cvex_block"
+            ],
+            "count": {
+              "min": 14,
+              "max": 1069
+            }
+          }
+        ]
       }
     }
   },

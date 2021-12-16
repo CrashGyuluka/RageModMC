@@ -22,8 +22,8 @@ import net.mcreator.ragemod.block.YellowGlowingCaveplantBlock;
 import net.mcreator.ragemod.block.YellowGlowingCavemushroomBlock;
 import net.mcreator.ragemod.block.YellowCaveplantBlock;
 import net.mcreator.ragemod.block.TorootteglaBlock;
-import net.mcreator.ragemod.block.TallraginggrowthBlock;
 import net.mcreator.ragemod.block.TallalienplantBlock;
+import net.mcreator.ragemod.block.TallRagingGrowthBlock;
 import net.mcreator.ragemod.block.SvaskekgombaBlock;
 import net.mcreator.ragemod.block.Sturtureplacer1Block;
 import net.mcreator.ragemod.block.Structureplacer2Block;
@@ -267,13 +267,7 @@ import net.mcreator.ragemod.block.HegyikopolishedBlock;
 import net.mcreator.ragemod.block.HegyikogreenBlock;
 import net.mcreator.ragemod.block.HegyikofullBlock;
 import net.mcreator.ragemod.block.Hegyiko1Block;
-import net.mcreator.ragemod.block.Haningalienplant5Block;
-import net.mcreator.ragemod.block.Hangingalienplantexluse1Block;
-import net.mcreator.ragemod.block.HangingalienplantdevblockBlock;
 import net.mcreator.ragemod.block.HangingalienplantBlock;
-import net.mcreator.ragemod.block.Hangingalienplant5Block;
-import net.mcreator.ragemod.block.Hangingalienplant4Block;
-import net.mcreator.ragemod.block.Hangingalienplant3Block;
 import net.mcreator.ragemod.block.Hangingalienoff1Block;
 import net.mcreator.ragemod.block.HangingYellowGlowingCaveplantBlock;
 import net.mcreator.ragemod.block.HangingYellowCaveplantBlock;
@@ -333,7 +327,6 @@ import net.mcreator.ragemod.block.BukkFenceBlock;
 import net.mcreator.ragemod.block.BrownGlowingOakLeavesBlock;
 import net.mcreator.ragemod.block.BluehydrangeaBlock;
 import net.mcreator.ragemod.block.BlueglowingcavemushroomBlock;
-import net.mcreator.ragemod.block.BlueInverterBlock;
 import net.mcreator.ragemod.block.BlueGlowingCaveplantBlock;
 import net.mcreator.ragemod.block.BlueCavestoneBlock;
 import net.mcreator.ragemod.block.BlueCaveplantBlock;
@@ -379,6 +372,7 @@ import net.mcreator.ragemod.block.AlienTorchFloorBlock;
 import net.mcreator.ragemod.block.AlienStoneBlock;
 import net.mcreator.ragemod.block.AlienDimensionPortalBlock;
 import net.mcreator.ragemod.block.AlienCrystalBlockBlock;
+import net.mcreator.ragemod.block.AlienAirBlock;
 import net.mcreator.ragemod.block.AktinolitoreBlock;
 import net.mcreator.ragemod.block.AktinolitblockBlock;
 import net.mcreator.ragemod.block.AdularoreBlock;
@@ -500,8 +494,6 @@ public class RagemodModBlocks {
 	public static final Block ALIEN_STONE = register(new AlienStoneBlock());
 	public static final Block ALIENSHROOMBLOCK = register(new AlienshroomblockBlock());
 	public static final Block ALIEN_COBWEB = register(new AliencobwebBlock());
-	public static final Block RAGING_GROWTH = register(new RaginggrowthBlock());
-	public static final Block TALLRAGINGGROWTH = register(new TallraginggrowthBlock());
 	public static final Block ALPIVBLOCK = register(new AlpivblockBlock());
 	public static final Block ALPIV_STAIRS = register(new AlpivblockstairsBlock());
 	public static final Block ALPIV_SLAB = register(new AlpivBlockSlabBlock());
@@ -514,6 +506,8 @@ public class RagemodModBlocks {
 	public static final Block ALPIVPILLAR = register(new AlpivpillarBlock());
 	public static final Block ALPIV_FLOOR = register(new AlpivfloorBlock());
 	public static final Block ALIEN_LAMP = register(new AlienlampBlock());
+	public static final Block RAGING_GROWTH = register(new RaginggrowthBlock());
+	public static final Block TALL_RAGING_GROWTH = register(new TallRagingGrowthBlock());
 	public static final Block HEGYIKO_1 = register(new Hegyiko1Block());
 	public static final Block HEGYIKOGREEN = register(new HegyikogreenBlock());
 	public static final Block HEGYIMORZSOLT = register(new HegyimorzsoltBlock());
@@ -720,14 +714,8 @@ public class RagemodModBlocks {
 	public static final Block STURTUREPLACER_1 = register(new Sturtureplacer1Block());
 	public static final Block STRUCTUREPLACER_2 = register(new Structureplacer2Block());
 	public static final Block DESTROYABLEALIENSOILDEV = register(new DestroyablealiensoildevBlock());
-	public static final Block HANGINGALIENPLANTDEVBLOCK = register(new HangingalienplantdevblockBlock());
 	public static final Block HANGINGALIENOFF_1 = register(new Hangingalienoff1Block());
-	public static final Block HANGINGALIENPLANT_3 = register(new Hangingalienplant3Block());
-	public static final Block HANGINGALIENPLANT_4 = register(new Hangingalienplant4Block());
-	public static final Block HANINGALIENPLANT_5 = register(new Haningalienplant5Block());
-	public static final Block HANGINGALIENPLANT_5 = register(new Hangingalienplant5Block());
 	public static final Block ALIENTRAPBLOCKLIT = register(new AlientrapblocklitBlock());
-	public static final Block HANGINGALIENPLANTEXLUSE_1 = register(new Hangingalienplantexluse1Block());
 	public static final Block ALIENSHROOMDEV = register(new AlienshroomdevBlock());
 	public static final Block STRHATAROLO_2 = register(new Strhatarolo2Block());
 	public static final Block STRHATAROLO_3 = register(new Strhatarolo3Block());
@@ -763,7 +751,7 @@ public class RagemodModBlocks {
 	public static final Block HANGING_YELLOW_GLOWING_CAVEPLANT = register(new HangingYellowGlowingCaveplantBlock());
 	public static final Block MAGENTA_GLOWONG_CAVEPLANT = register(new MagentaGlowongCaveplantBlock());
 	public static final Block HANGING_GLOWING_MAGENTA_CAVEPLANT = register(new HangingGlowingMagentaCaveplantBlock());
-	public static final Block BLUE_INVERTER = register(new BlueInverterBlock());
+	public static final Block ALIEN_AIR = register(new AlienAirBlock());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -795,7 +783,7 @@ public class RagemodModBlocks {
 			AlienspiketopdevBlock.registerRenderLayer();
 			AliencobwebBlock.registerRenderLayer();
 			RaginggrowthBlock.registerRenderLayer();
-			TallraginggrowthBlock.registerRenderLayer();
+			TallRagingGrowthBlock.registerRenderLayer();
 			BlueCavemushroomBlock.registerRenderLayer();
 			RedCavemushroomBlock.registerRenderLayer();
 			YellowcavemushroomBlock.registerRenderLayer();
@@ -847,13 +835,7 @@ public class RagemodModBlocks {
 			ElderberryleavesBlock.registerRenderLayer();
 			FloweryElderberryLeavesBlock.registerRenderLayer();
 			SavasnovenyBlock.registerRenderLayer();
-			HangingalienplantdevblockBlock.registerRenderLayer();
 			Hangingalienoff1Block.registerRenderLayer();
-			Hangingalienplant3Block.registerRenderLayer();
-			Hangingalienplant4Block.registerRenderLayer();
-			Haningalienplant5Block.registerRenderLayer();
-			Hangingalienplant5Block.registerRenderLayer();
-			Hangingalienplantexluse1Block.registerRenderLayer();
 			AlienshroomdevBlock.registerRenderLayer();
 			AlienTorchFloorBlock.registerRenderLayer();
 			AlienWalltorchBlock.registerRenderLayer();
@@ -879,6 +861,7 @@ public class RagemodModBlocks {
 			HangingYellowGlowingCaveplantBlock.registerRenderLayer();
 			MagentaGlowongCaveplantBlock.registerRenderLayer();
 			HangingGlowingMagentaCaveplantBlock.registerRenderLayer();
+			AlienAirBlock.registerRenderLayer();
 		}
 
 		@SubscribeEvent

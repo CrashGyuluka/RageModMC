@@ -89,7 +89,7 @@ public class AlienplainsBiome {
 		BiomeDefaultFeatures.addOceanCarvers(biomeGenerationSettings);
 		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.MINER, 4, 1, 2));
+		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIENSLIME, 4, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.TOXIC_MOB, 2, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 20, 4, 4));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.FLYLIEN, 10, 1, 5));

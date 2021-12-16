@@ -20,7 +20,9 @@
       "conditions": {
         "items": [
           {
-            "item": "ragemod:crashchest",
+            "items": [
+              "ragemod:crashchest"
+            ],
             "count": {
               "min": 4,
               "max": 1000

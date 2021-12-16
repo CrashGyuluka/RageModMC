@@ -33,7 +33,7 @@ public class AlienshroomBlock extends FlowerBlock {
 	public AlienshroomBlock() {
 		super(MobEffects.MOVEMENT_SPEED, 5,
 				BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).instabreak().hasPostProcess((bs, br, bp) -> true)
-						.emissiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f).jumpFactor(1.2000000000000002f).lightLevel(s -> 3));
+						.emissiveRendering((bs, br, bp) -> true).speedFactor(1.2000000000000002f).jumpFactor(1.2000000000000002f).lightLevel(s -> 2));
 		setRegistryName("alien_shroom");
 	}
 

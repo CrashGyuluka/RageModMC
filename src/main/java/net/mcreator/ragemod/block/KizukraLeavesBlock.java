@@ -18,8 +18,7 @@ import net.mcreator.ragemod.procedures.KizukraLeavesBlockDestroyedByPlayerProced
 
 public class KizukraLeavesBlock extends LeavesBlock {
 	public KizukraLeavesBlock() {
-		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.6000000000000001f).requiresCorrectToolForDrops()
-				.noOcclusion());
+		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.3f, 0.1f).requiresCorrectToolForDrops().noOcclusion());
 		setRegistryName("kizukra_leaves");
 	}
 

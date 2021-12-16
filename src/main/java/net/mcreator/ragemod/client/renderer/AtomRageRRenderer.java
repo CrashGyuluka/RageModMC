@@ -16,13 +16,13 @@ public class AtomRageRRenderer extends MobRenderer<AtomRageREntity, CreeperModel
 		this.addLayer(new EyesLayer<AtomRageREntity, CreeperModel<AtomRageREntity>>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("ragemod:textures/atomrager.png"));
+				return RenderType.eyes(new ResourceLocation("ragemod:textures/atomragernew.png"));
 			}
 		});
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(AtomRageREntity entity) {
-		return new ResourceLocation("ragemod:textures/atomrager.png");
+		return new ResourceLocation("ragemod:textures/atomragernew.png");
 	}
 }

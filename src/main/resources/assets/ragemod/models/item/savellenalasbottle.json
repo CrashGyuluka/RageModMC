@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/0101010101"
+    "layer0": "ragemod:items/pat_pot"
   }
 }

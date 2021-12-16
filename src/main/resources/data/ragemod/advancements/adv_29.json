@@ -19,7 +19,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "ragemod:disc_inspiration"
+          "items": [
+            "ragemod:disc_inspiration"
+          ]
         }
       }
     }

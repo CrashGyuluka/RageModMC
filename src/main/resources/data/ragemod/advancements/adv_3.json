@@ -20,7 +20,9 @@
       "conditions": {
         "items": [
           {
-            "item": "ragemod:ragepotion",
+            "items": [
+              "ragemod:ragepotion"
+            ],
             "count": {
               "min": 6,
               "max": 69

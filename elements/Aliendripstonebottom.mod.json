@@ -37,7 +37,7 @@
     },
     "hardness": 3.0,
     "resistance": 1.0,
-    "luminance": 6,
+    "luminance": 4,
     "unbreakable": false,
     "isCustomSoundType": false,
     "soundOnStep": {

@@ -87,6 +87,9 @@
         "value": "CUSTOM:Ragetreebiome"
       }
     ],
-    "patchSize": 64
+    "patchSize": 64,
+    "onRightClicked": {
+      "name": "Ragingvinesdev2PlantRightClicked"
+    }
   }
 }

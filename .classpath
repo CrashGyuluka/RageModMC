@@ -30,7 +30,7 @@
 	</classpathentry>
 	<classpathentry kind="output" path="bin/default"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16/"/>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.1.0_mapped_official_1.17.1/forge-1.17.1-37.1.0_mapped_official_1.17.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.1.0_mapped_official_1.17.1/forge-1.17.1-37.1.0_mapped_official_1.17.1.jar">
+	<classpathentry sourcepath="C:/MCreatorWorkspaces/ragemod/build/fg_cache/net/minecraftforge/forge/1.17.1-37.1.1_mapped_official_1.17.1/forge-1.17.1-37.1.1_mapped_official_1.17.1-sources.jar" kind="lib" path="C:/MCreatorWorkspaces/ragemod/build/fg_cache/net/minecraftforge/forge/1.17.1-37.1.1_mapped_official_1.17.1/forge-1.17.1-37.1.1_mapped_official_1.17.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -65,7 +65,7 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.1.0/9f881a6cec216b13bc97383e395672781c0c5ea6/fmlloader-1.17.1-37.1.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.1.0/7f0aff950b930140c28456067b617bb3d108f338/fmlloader-1.17.1-37.1.0.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.1.1/c58327590fc05b4470e2a5d6786580e01eac1a93/fmlloader-1.17.1-37.1.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.1.1/c60816266dffed18933396bc31e7019a5ca76e1c/fmlloader-1.17.1-37.1.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -120,7 +120,7 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.1.0/2fad523d1e5ee079947d82de3b34cc460a6b5d6e/fmlcore-1.17.1-37.1.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.1.0/2e09a5c34c7ca645bdf1f29d91a7048d587b20f0/fmlcore-1.17.1-37.1.0.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.1.1/a753578be3beca5541678a58fad14752ee258abf/fmlcore-1.17.1-37.1.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.1.1/7cb4a179d7404ca3846936742ae562f43f38db1a/fmlcore-1.17.1-37.1.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -175,17 +175,17 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.1/7f640e4855733d9532eed15af62c54956e7b8224/log4j-core-2.14.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.1/9141212b8507ab50a45525b545b39d224614528b/log4j-core-2.14.1.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.15.0/9f65403ec51628737d799ebf1a02d56e4cbcd81d/log4j-core-2.15.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.15.0/ba55c13d7ac2fd44df9cc8074455719a33f375b9/log4j-core-2.15.0.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.14.1/e4cebbad5a5cbe091090346bcc3618bff8f5e73d/log4j-slf4j18-impl-2.14.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.14.1/312b4d91b21160b9fab43600fa787f31e8cab930/log4j-slf4j18-impl-2.14.1.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.15.0/a97557c733710589929407ba23f0449547a47a60/log4j-slf4j18-impl-2.15.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.15.0/88f72ad364bfc3a7cf43186fc17212f2b4bb8d97/log4j-slf4j18-impl-2.15.0.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.1/b2327c47ca413c1ec183575b19598e281fcd74d8/log4j-api-2.14.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.1/cd8858fbbde69f46bce8db1152c18a43328aae78/log4j-api-2.14.1.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.15.0/b0b2c8ee48c4c57804056fe18494e61bb18404ab/log4j-api-2.15.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.15.0/4a5aa7e55a29391c6f66e0b259d5189aa11e45d0/log4j-api-2.15.0.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -225,12 +225,12 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.1.0/45f32e3578cf7026db4e8338b4caf0eea50b3a1/javafmllanguage-1.17.1-37.1.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.1.0/fa6058bfbf3e3ec9934e8316f9d2c775bbc25529/javafmllanguage-1.17.1-37.1.0.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.1.1/30cc2be23596b8857d9fa210c85ba9f2487e779a/javafmllanguage-1.17.1-37.1.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.1.1/f9646cd6a35efab2e595efef2858fcb325501be3/javafmllanguage-1.17.1-37.1.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.1.0/d121c957ae899cbd4e402f3823377cb2970ac487/mclanguage-1.17.1-37.1.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.1.0/53c75aa50a8b03a8b25493de960b1b897dc6a634/mclanguage-1.17.1-37.1.0.jar">
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.1.1/ff603f59010039fa48e3966bd2c0d44e907b15a8/mclanguage-1.17.1-37.1.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.1.1/5f79912fa14069175fd01a16fea8ee349433e9b6/mclanguage-1.17.1-37.1.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>

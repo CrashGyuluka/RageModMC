@@ -1,7 +1,7 @@
 {
   "parent": "block/door_top",
   "textures": {
-    "bottom": "ragemod:blocks/beech_door_bottom",
-    "top": "ragemod:blocks/beech_door_top"
+    "bottom": "ragemod:blocks/beech_door_bottom_new11",
+    "top": "ragemod:blocks/beech_door_top_new11"
   }
 }

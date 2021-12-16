@@ -32,12 +32,10 @@
         "subtract": false
       }
     ],
-    "name": "Block Of Rageium Alloy",
-    "specialInfo": [
-      "Thank you Lyof! :D"
-    ],
-    "hardness": 4.0,
-    "resistance": 100.0,
+    "name": "Block of Rageium Alloy",
+    "specialInfo": [],
+    "hardness": 5.0,
+    "resistance": 400.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -72,7 +70,7 @@
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
-    "slipperiness": 0.7,
+    "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
@@ -98,14 +96,14 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
-    "spawnParticles": true,
+    "breakHarvestLevel": 1,
+    "spawnParticles": false,
     "particleToSpawn": {
-      "value": "CUSTOM:Particle2"
+      "value": "CUSTOM:Rageparticle"
     },
     "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.2999999985098839,
-    "particleAmount": 1,
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 4,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

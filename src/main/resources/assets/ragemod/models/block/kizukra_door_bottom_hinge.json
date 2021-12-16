@@ -1,7 +1,7 @@
 {
   "parent": "block/door_bottom_rh",
   "textures": {
-    "bottom": "ragemod:blocks/kizukra_door_bottom",
-    "top": "ragemod:blocks/kizukra_door_top"
+    "bottom": "ragemod:blocks/kizukra_door_bottom_new13",
+    "top": "ragemod:blocks/kizukra_door_top_new14"
   }
 }

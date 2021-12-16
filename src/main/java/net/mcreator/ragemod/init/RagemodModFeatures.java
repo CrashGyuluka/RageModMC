@@ -21,8 +21,8 @@ import net.mcreator.ragemod.world.features.plants.YellowcavemushroomFeature;
 import net.mcreator.ragemod.world.features.plants.YellowGlowingCaveplantFeature;
 import net.mcreator.ragemod.world.features.plants.YellowGlowingCavemushroomFeature;
 import net.mcreator.ragemod.world.features.plants.YellowCaveplantFeature;
-import net.mcreator.ragemod.world.features.plants.TallraginggrowthFeature;
 import net.mcreator.ragemod.world.features.plants.TallalienplantFeature;
+import net.mcreator.ragemod.world.features.plants.TallRagingGrowthFeature;
 import net.mcreator.ragemod.world.features.plants.SavasnovenyFeature;
 import net.mcreator.ragemod.world.features.plants.RedGlowingcavemushroomFeature;
 import net.mcreator.ragemod.world.features.plants.RedGlowingCaveplantFeature;
@@ -97,16 +97,12 @@ import net.mcreator.ragemod.world.features.ores.HegyikopolishedFeature;
 import net.mcreator.ragemod.world.features.ores.HegyikogreenFeature;
 import net.mcreator.ragemod.world.features.ores.HegyikofullFeature;
 import net.mcreator.ragemod.world.features.ores.Hegyiko1Feature;
-import net.mcreator.ragemod.world.features.ores.Haningalienplant5Feature;
-import net.mcreator.ragemod.world.features.ores.Hangingalienplantexluse1Feature;
-import net.mcreator.ragemod.world.features.ores.HangingalienplantdevblockFeature;
-import net.mcreator.ragemod.world.features.ores.HangingalienplantFeature;
-import net.mcreator.ragemod.world.features.ores.Hangingalienplant5Feature;
-import net.mcreator.ragemod.world.features.ores.Hangingalienplant4Feature;
-import net.mcreator.ragemod.world.features.ores.Hangingalienplant3Feature;
-import net.mcreator.ragemod.world.features.ores.Hangingalienoff1Feature;
 import net.mcreator.ragemod.world.features.ores.FullhegyikowallFeature;
+import net.mcreator.ragemod.world.features.ores.DeepslateazuritoreFeature;
 import net.mcreator.ragemod.world.features.ores.DeepslateanapaitoreFeature;
+import net.mcreator.ragemod.world.features.ores.DeepslateaktinolitoreFeature;
+import net.mcreator.ragemod.world.features.ores.DeepslateadularoreFeature;
+import net.mcreator.ragemod.world.features.ores.DeepslateachatoreFeature;
 import net.mcreator.ragemod.world.features.ores.CerusszitoreFeature;
 import net.mcreator.ragemod.world.features.ores.BizmutoreFeature;
 import net.mcreator.ragemod.world.features.ores.AzuritoreFeature;
@@ -123,6 +119,8 @@ import net.mcreator.ragemod.world.features.ores.AktinolitoreFeature;
 import net.mcreator.ragemod.world.features.ores.AdularoreFeature;
 import net.mcreator.ragemod.world.features.ores.AchatoreFeature;
 import net.mcreator.ragemod.world.features.YellowcaveairstrFeature;
+import net.mcreator.ragemod.world.features.TallalienshrromstrFeature;
+import net.mcreator.ragemod.world.features.TallalienmushroomstrFeature;
 import net.mcreator.ragemod.world.features.StructportFeature;
 import net.mcreator.ragemod.world.features.StructlevFeature;
 import net.mcreator.ragemod.world.features.StructboomFeature;
@@ -241,6 +239,7 @@ import net.mcreator.ragemod.world.features.Alienfloatingisland1Feature;
 import net.mcreator.ragemod.world.features.Aliencloud3Feature;
 import net.mcreator.ragemod.world.features.Aliencloud2Feature;
 import net.mcreator.ragemod.world.features.Aliencloud1Feature;
+import net.mcreator.ragemod.world.features.AlienairstrFeature;
 
 import java.util.Set;
 import java.util.Map;
@@ -258,12 +257,20 @@ public class RagemodModFeatures {
 				new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, SavercFeature.GENERATE_BIOMES, SavercFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(AzuritoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, AzuritoreFeature.GENERATE_BIOMES,
 				AzuritoreFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(DeepslateazuritoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
+				DeepslateazuritoreFeature.GENERATE_BIOMES, DeepslateazuritoreFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(AchatoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, AchatoreFeature.GENERATE_BIOMES,
 				AchatoreFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(DeepslateachatoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
+				DeepslateachatoreFeature.GENERATE_BIOMES, DeepslateachatoreFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(AdularoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, AdularoreFeature.GENERATE_BIOMES,
 				AdularoreFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(DeepslateadularoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
+				DeepslateadularoreFeature.GENERATE_BIOMES, DeepslateadularoreFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(AktinolitoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
 				AktinolitoreFeature.GENERATE_BIOMES, AktinolitoreFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(DeepslateaktinolitoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
+				DeepslateaktinolitoreFeature.GENERATE_BIOMES, DeepslateaktinolitoreFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(AnapaitoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, AnapaitoreFeature.GENERATE_BIOMES,
 				AnapaitoreFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(DeepslateanapaitoreFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
@@ -354,8 +361,6 @@ public class RagemodModFeatures {
 				AlienshroomFeature.GENERATE_BIOMES, AlienshroomFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(TallalienplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				TallalienplantFeature.GENERATE_BIOMES, TallalienplantFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(HangingalienplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				HangingalienplantFeature.GENERATE_BIOMES, HangingalienplantFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(AlienmushroomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				AlienmushroomFeature.GENERATE_BIOMES, AlienmushroomFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(BigalienmushroomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
@@ -370,8 +375,8 @@ public class RagemodModFeatures {
 				AliencobwebFeature.GENERATE_BIOMES, AliencobwebFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(RaginggrowthFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				RaginggrowthFeature.GENERATE_BIOMES, RaginggrowthFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(TallraginggrowthFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
-				TallraginggrowthFeature.GENERATE_BIOMES, TallraginggrowthFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(TallRagingGrowthFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
+				TallRagingGrowthFeature.GENERATE_BIOMES, TallRagingGrowthFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(Hegyiko1Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, Hegyiko1Feature.GENERATE_BIOMES,
 				Hegyiko1Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(HegyikogreenFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
@@ -488,22 +493,8 @@ public class RagemodModFeatures {
 				Alienjungle2Feature.GENERATE_BIOMES, Alienjungle2Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(Alienjungle3Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
 				Alienjungle3Feature.GENERATE_BIOMES, Alienjungle3Feature.CONFIGURED_FEATURE));
-		REGISTRY.put(HangingalienplantdevblockFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				HangingalienplantdevblockFeature.GENERATE_BIOMES, HangingalienplantdevblockFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(Hangingalienoff1Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				Hangingalienoff1Feature.GENERATE_BIOMES, Hangingalienoff1Feature.CONFIGURED_FEATURE));
-		REGISTRY.put(Hangingalienplant3Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				Hangingalienplant3Feature.GENERATE_BIOMES, Hangingalienplant3Feature.CONFIGURED_FEATURE));
-		REGISTRY.put(Hangingalienplant4Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				Hangingalienplant4Feature.GENERATE_BIOMES, Hangingalienplant4Feature.CONFIGURED_FEATURE));
-		REGISTRY.put(Haningalienplant5Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				Haningalienplant5Feature.GENERATE_BIOMES, Haningalienplant5Feature.CONFIGURED_FEATURE));
-		REGISTRY.put(Hangingalienplant5Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				Hangingalienplant5Feature.GENERATE_BIOMES, Hangingalienplant5Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(AlientrapblocklitFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
 				AlientrapblocklitFeature.GENERATE_BIOMES, AlientrapblocklitFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(Hangingalienplantexluse1Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES,
-				Hangingalienplantexluse1Feature.GENERATE_BIOMES, Hangingalienplantexluse1Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(AlienshroomdevFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				AlienshroomdevFeature.GENERATE_BIOMES, AlienshroomdevFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(Ragefabiome1Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
@@ -700,6 +691,12 @@ public class RagemodModFeatures {
 				YellowGlowingCaveplantFeature.GENERATE_BIOMES, YellowGlowingCaveplantFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(MagentaGlowongCaveplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				MagentaGlowongCaveplantFeature.GENERATE_BIOMES, MagentaGlowongCaveplantFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(AlienairstrFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_STRUCTURES,
+				AlienairstrFeature.GENERATE_BIOMES, AlienairstrFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(TallalienmushroomstrFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
+				TallalienmushroomstrFeature.GENERATE_BIOMES, TallalienmushroomstrFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(TallalienshrromstrFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
+				TallalienshrromstrFeature.GENERATE_BIOMES, TallalienshrromstrFeature.CONFIGURED_FEATURE));
 	}
 
 	@SubscribeEvent

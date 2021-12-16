@@ -13,6 +13,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.mcreator.ragemod.enchantment.VedelemplusEnchantment;
 import net.mcreator.ragemod.enchantment.PingvinhunenchantEnchantment;
 import net.mcreator.ragemod.enchantment.LifeStealerEnchantment;
+import net.mcreator.ragemod.enchantment.ColliderEnchantment;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class RagemodModEnchantments {
 	public static final Enchantment PINGVINHUNENCHANT = register("ragemod:pingvinhunenchant", new PingvinhunenchantEnchantment());
 	public static final Enchantment VEDELEMPLUS = register("ragemod:vedelemplus", new VedelemplusEnchantment());
 	public static final Enchantment LIFE_STEALER = register("ragemod:life_stealer", new LifeStealerEnchantment());
+	public static final Enchantment COLLIDER = register("ragemod:collider", new ColliderEnchantment());
 
 	private static Enchantment register(String registryname, Enchantment enchantment) {
 		REGISTRY.add(enchantment.setRegistryName(registryname));

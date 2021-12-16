@@ -33,8 +33,8 @@ public class PingvinhunenchprodProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double enchantLevel = 0;
-		enchantLevel = (double) (EnchantmentHelper.getItemEnchantmentLevel(RagemodModEnchantments.PINGVINHUNENCHANT,
-				(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)));
+		enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(RagemodModEnchantments.PINGVINHUNENCHANT,
+				(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY));
 		if (enchantLevel > 0) {
 			sourceentity.setDeltaMovement(0, (2 + enchantLevel), 0);
 		}

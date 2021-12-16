@@ -68,21 +68,15 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 1,
+    "frequencyOnChunks": 21,
     "spawnWorldTypes": [
       "Surface"
     ],
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Savasbiom"
-      },
-      {
-        "value": "swamp"
-      },
-      {
-        "value": "mutated_swampland"
       }
     ],
-    "patchSize": 2
+    "patchSize": 10
   }
 }

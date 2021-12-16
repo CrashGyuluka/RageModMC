@@ -92,7 +92,7 @@ public class TotallyNotAlienBiome {
 		BiomeDefaultFeatures.addOceanCarvers(biomeGenerationSettings);
 		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.MINER, 4, 1, 2));
+		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIENSLIME, 4, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.TOXIC_MOB, 2, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 5, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 20, 4, 4));

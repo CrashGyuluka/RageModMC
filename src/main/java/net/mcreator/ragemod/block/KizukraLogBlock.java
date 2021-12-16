@@ -28,7 +28,7 @@ public class KizukraLogBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
 	public KizukraLogBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		setRegistryName("kizukra_log");
 	}

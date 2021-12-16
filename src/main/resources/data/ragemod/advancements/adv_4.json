@@ -16,11 +16,19 @@
   },
   "criteria": {
     "adv_4": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "ragemod:rage_boos_spawner"
-        }
+        "items": [
+          {
+            "items": [
+              "ragemod:rage_boos_spawner"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1069
+            }
+          }
+        ]
       }
     }
   },

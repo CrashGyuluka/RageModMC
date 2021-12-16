@@ -1,7 +1,7 @@
 {
   "parent": "block/door_top",
   "textures": {
-    "bottom": "ragemod:blocks/1010101",
-    "top": "ragemod:blocks/01011"
+    "bottom": "ragemod:blocks/ragewood_door_bottom",
+    "top": "ragemod:blocks/ragewood_door_top1"
   }
 }
