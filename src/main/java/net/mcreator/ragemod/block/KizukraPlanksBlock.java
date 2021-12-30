@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class KizukraPlanksBlock extends Block {
 	public KizukraPlanksBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 4f).requiresCorrectToolForDrops());
 		setRegistryName("kizukra_planks");
 	}
 

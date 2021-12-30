@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/robtai_log_top_new",
     "up": "ragemod:blocks/robtai_log_top_new",
-    "north": "ragemod:blocks/robtai_log_side_new",
-    "east": "ragemod:blocks/robtai_log_side_new",
-    "south": "ragemod:blocks/robtai_log_side_new",
-    "west": "ragemod:blocks/robtai_log_side_new",
+    "north": "ragemod:blocks/robtai_log_side5",
+    "east": "ragemod:blocks/robtai_log_side5",
+    "south": "ragemod:blocks/robtai_log_side5",
+    "west": "ragemod:blocks/robtai_log_side5",
     "particle": "ragemod:blocks/robtai_log_top_new"
   }
 }

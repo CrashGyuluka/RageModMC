@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ragemod:opalblock",
+          "name": "ragemod:deleted_mod_element",
           "weight": 4,
           "functions": [
             {

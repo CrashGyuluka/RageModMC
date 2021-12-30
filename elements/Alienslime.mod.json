@@ -13,11 +13,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10053376,
+      "value": -11303404,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -6750055,
+      "value": -7339879,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -120,16 +120,7 @@
         "value": "CUSTOM:Alienforest"
       },
       {
-        "value": "CUSTOM:Alienlake"
-      },
-      {
-        "value": "CUSTOM:Alienplains"
-      },
-      {
         "value": "CUSTOM:Floweryalienplains"
-      },
-      {
-        "value": "CUSTOM:TotallyNotAlien"
       }
     ],
     "spawnInDungeons": false

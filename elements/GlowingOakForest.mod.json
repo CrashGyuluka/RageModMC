@@ -7,10 +7,10 @@
       "value": "Blocks.GRASS"
     },
     "undergroundBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.DIRT#0"
     },
     "grassColor": {
-      "value": -7580905,
+      "value": -4491214,
       "falpha": 0.0
     },
     "foliageColor": {
@@ -119,8 +119,8 @@
         },
         "minGroup": 1,
         "maxGroup": 2,
-        "weight": 10,
-        "spawnType": "ambient"
+        "weight": 5,
+        "spawnType": "creature"
       }
     ]
   }

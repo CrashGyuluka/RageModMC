@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/----amazonite",
-    "up": "ragemod:blocks/----amazonite",
-    "north": "ragemod:blocks/----amazonite",
-    "east": "ragemod:blocks/----amazonite",
-    "south": "ragemod:blocks/----amazonite",
-    "west": "ragemod:blocks/----amazonite",
-    "particle": "ragemod:blocks/----amazonite"
+    "down": "ragemod:blocks/amazonite_ore",
+    "up": "ragemod:blocks/amazonite_ore",
+    "north": "ragemod:blocks/amazonite_ore",
+    "east": "ragemod:blocks/amazonite_ore",
+    "south": "ragemod:blocks/amazonite_ore",
+    "west": "ragemod:blocks/amazonite_ore",
+    "particle": "ragemod:blocks/amazonite_ore"
   }
 }

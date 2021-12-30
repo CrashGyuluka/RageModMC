@@ -21,7 +21,7 @@ import java.util.Collections;
 
 public class BukkWoodBlock extends Block {
 	public BukkWoodBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 4f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 4f).requiresCorrectToolForDrops());
 		setRegistryName("bukk_wood");
 	}
 

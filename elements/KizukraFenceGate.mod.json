@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "kizukra_planks",
+    "texture": "kizukra_planks_newest11",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -35,14 +35,14 @@
     ],
     "name": "Kizukra Fence Gate",
     "specialInfo": [],
-    "hardness": 6.0,
+    "hardness": 2.0,
     "resistance": 9.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:Termeszettab"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
@@ -97,7 +97,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

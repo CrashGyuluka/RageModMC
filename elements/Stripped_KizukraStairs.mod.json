@@ -35,7 +35,7 @@
     ],
     "name": "Stripped Kizukra Block Stairs",
     "specialInfo": [],
-    "hardness": 3.0,
+    "hardness": 2.0,
     "resistance": 4.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -97,7 +97,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

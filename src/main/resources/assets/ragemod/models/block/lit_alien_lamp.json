@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/alien_lamp_lit",
-    "particle": "ragemod:blocks/alien_lamp_lit"
+    "all": "ragemod:blocks/alien_lamp_new_on",
+    "particle": "ragemod:blocks/alien_lamp_new_on"
   }
 }

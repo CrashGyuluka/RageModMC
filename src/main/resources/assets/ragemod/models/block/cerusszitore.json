@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/----cerusszit",
-    "up": "ragemod:blocks/----cerusszit",
-    "north": "ragemod:blocks/----cerusszit",
-    "east": "ragemod:blocks/----cerusszit",
-    "south": "ragemod:blocks/----cerusszit",
-    "west": "ragemod:blocks/----cerusszit",
-    "particle": "ragemod:blocks/----cerusszit"
+    "down": "ragemod:blocks/cerussite_ore",
+    "up": "ragemod:blocks/cerussite_ore",
+    "north": "ragemod:blocks/cerussite_ore",
+    "east": "ragemod:blocks/cerussite_ore",
+    "south": "ragemod:blocks/cerussite_ore",
+    "west": "ragemod:blocks/cerussite_ore",
+    "particle": "ragemod:blocks/cerussite_ore"
   }
 }

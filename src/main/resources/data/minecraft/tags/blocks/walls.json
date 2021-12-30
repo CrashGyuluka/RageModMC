@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "ragemod:polished_alpiv_wall",
+    "ragemod:alpiv_bricks_wall",
+    "ragemod:alpiv_wall",
     "ragemod:hegyikoteglawall",
     "ragemod:fullhegyikowall",
     "ragemod:hegyikowall",

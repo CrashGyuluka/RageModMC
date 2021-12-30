@@ -33,8 +33,8 @@
     },
     "rainingPossibility": 0.4,
     "temperature": 0.5,
-    "baseHeight": 0.19999999999999998,
-    "heightVariation": 0.1,
+    "baseHeight": 0.2,
+    "heightVariation": 0.0,
     "biomeType": "WARM",
     "spawnBiome": true,
     "biomeWeight": 6,
@@ -67,7 +67,7 @@
       "value": ""
     },
     "spawnStronghold": false,
-    "spawnMineshaft": false,
+    "spawnMineshaft": true,
     "spawnMineshaftMesa": false,
     "spawnPillagerOutpost": false,
     "villageType": "none",
@@ -85,7 +85,7 @@
     "spawnNetherFossil": false,
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
-    "spawnRuinedPortal": "NONE",
+    "spawnRuinedPortal": "JUNGLE",
     "defaultFeatures": [
       "Caves",
       "Ores",
@@ -93,7 +93,9 @@
       "Lakes",
       "MonsterRooms",
       "OceanCaves",
-      "TaigaRocks"
+      "TaigaRocks",
+      "AmethystGeodes",
+      "TaigaLargeFerns"
     ],
     "spawnEntries": [
       {

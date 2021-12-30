@@ -4,10 +4,10 @@
   "definition": {
     "texture": "robtai_log_top_new",
     "textureTop": "robtai_log_top_new",
-    "textureLeft": "robtai_log_side_new",
-    "textureFront": "robtai_log_side_new",
-    "textureRight": "robtai_log_side_new",
-    "textureBack": "robtai_log_side_new",
+    "textureLeft": "robtai_log_side5",
+    "textureFront": "robtai_log_side5",
+    "textureRight": "robtai_log_side5",
+    "textureBack": "robtai_log_side5",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 5,
@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

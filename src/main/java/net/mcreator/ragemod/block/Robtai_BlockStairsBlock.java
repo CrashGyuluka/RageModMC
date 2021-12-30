@@ -20,10 +20,10 @@ import java.util.Collections;
 
 public class Robtai_BlockStairsBlock extends StairBlock {
 	public Robtai_BlockStairsBlock() {
-		super(() -> new Block(
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(4f, 2f).requiresCorrectToolForDrops().dynamicShape())
-						.defaultBlockState(),
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(4f, 2f).requiresCorrectToolForDrops().dynamicShape());
+		super(() -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.9999999999999998f, 2f)
+				.requiresCorrectToolForDrops().dynamicShape()).defaultBlockState(),
+				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.9999999999999998f, 2f).requiresCorrectToolForDrops()
+						.dynamicShape());
 		setRegistryName("stripped_robtai_stairs");
 	}
 
@@ -40,7 +40,7 @@ public class Robtai_BlockStairsBlock extends StairBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 3;
+			return tieredItem.getTier().getLevel() >= 0;
 		return false;
 	}
 

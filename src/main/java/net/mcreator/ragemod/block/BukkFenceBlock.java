@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class BukkFenceBlock extends FenceBlock {
 	public BukkFenceBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 4f).requiresCorrectToolForDrops());
 		setRegistryName("beech_fence");
 	}
 
@@ -36,7 +36,7 @@ public class BukkFenceBlock extends FenceBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= -1;
 		return false;
 	}
 

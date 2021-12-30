@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alpiv_pillar_bottom2",
-    "textureTop": "alpiv_pillar_bottom2",
-    "textureLeft": "alpiv_pillar",
-    "textureFront": "alpiv_pillar",
-    "textureRight": "alpiv_pillar",
-    "textureBack": "alpiv_pillar",
+    "texture": "alpiv_pillar_bottom_new",
+    "textureTop": "alpiv_pillar_bottom_new",
+    "textureLeft": "alpiv_pillar_new",
+    "textureFront": "alpiv_pillar_new",
+    "textureRight": "alpiv_pillar_new",
+    "textureBack": "alpiv_pillar_new",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 5,
@@ -96,7 +96,7 @@
     },
     "luminance": 1,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

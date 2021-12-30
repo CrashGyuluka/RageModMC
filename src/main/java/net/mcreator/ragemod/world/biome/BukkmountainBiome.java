@@ -40,7 +40,6 @@ import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.core.Registry;
 
-import net.mcreator.ragemod.init.RagemodModEntities;
 import net.mcreator.ragemod.init.RagemodModBlocks;
 import net.mcreator.ragemod.init.RagemodModBiomes;
 import net.mcreator.ragemod.RagemodMod;
@@ -61,6 +60,7 @@ public class BukkmountainBiome {
 		biomeGenerationSettings.addStructureStart(StructureFeatures.STRONGHOLD);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.MINESHAFT);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.JUNGLE_TEMPLE);
+		biomeGenerationSettings.addStructureStart(StructureFeatures.RUINED_PORTAL_STANDARD);
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, register("trees", Feature.TREE
 				.configured((new TreeConfiguration.TreeConfigurationBuilder(new SimpleStateProvider(RagemodModBlocks.BUKK_LOG.defaultBlockState()),
 						new MegaJungleTrunkPlacer(6, 2, 19), new SimpleStateProvider(RagemodModBlocks.BUKK_LEAVES.defaultBlockState()),
@@ -110,10 +110,7 @@ public class BukkmountainBiome {
 		BiomeDefaultFeatures.addDefaultExtraVegetation(biomeGenerationSettings);
 		BiomeDefaultFeatures.addFerns(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SPIDER, 2, 1, 2));
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(RagemodModEntities.TRADERRT, 1, 1, 1));
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.BEE, 1, 1, 1));
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 1, 1, 1));
+		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 6, 1, 3));
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.NONE).depth(2.2f)
 				.scale(0.7999999999999999f).temperature(0.5f).downfall(0.6f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();

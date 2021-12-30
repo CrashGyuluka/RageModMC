@@ -20,7 +20,7 @@ import java.util.Collections;
 public class Kizukra_BlockPressurePlateBlock extends PressurePlateBlock {
 	public Kizukra_BlockPressurePlateBlock() {
 		super(Sensitivity.EVERYTHING,
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops());
+				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 4f).requiresCorrectToolForDrops());
 		setRegistryName("kizukra_block_pressure_plate");
 	}
 
@@ -37,7 +37,7 @@ public class Kizukra_BlockPressurePlateBlock extends PressurePlateBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= 1;
 		return false;
 	}
 

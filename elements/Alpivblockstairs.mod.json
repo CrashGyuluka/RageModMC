@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alpiv_block_animated_interpol1",
-    "textureTop": "",
+    "texture": "alpiv_block1",
+    "textureTop": "alpiv_block1",
     "textureLeft": "",
-    "textureFront": "",
+    "textureFront": "alpiv_block1",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,
@@ -97,7 +97,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

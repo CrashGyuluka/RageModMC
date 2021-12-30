@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "kizukra_planks",
+    "texture": "kizukra_planks_newest11",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -34,7 +34,7 @@
     ],
     "name": "Kizukra Planks",
     "specialInfo": [],
-    "hardness": 3.0,
+    "hardness": 2.0,
     "resistance": 4.0,
     "hasGravity": false,
     "isWaterloggable": false,

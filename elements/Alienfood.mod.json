@@ -9,18 +9,21 @@
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:Ercek"
+      "value": "CUSTOM:Termeszettab"
     },
     "stackSize": 64,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
-    "eatingSpeed": 15,
+    "nutritionalValue": 3,
+    "saturation": 0.19999999999999998,
+    "eatingSpeed": 20,
     "resultItem": {
       "value": ""
     },
     "forDogs": false,
     "isAlwaysEdible": false,
     "animation": "eat",
-    "hasGlow": false
+    "hasGlow": false,
+    "onEaten": {
+      "name": "AlienfoodFoodEaten"
+    }
   }
 }

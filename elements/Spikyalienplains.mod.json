@@ -7,7 +7,7 @@
       "value": "CUSTOM:Aliensoil"
     },
     "undergroundBlock": {
-      "value": "CUSTOM:Hegyiko1"
+      "value": "CUSTOM:Aliendirt"
     },
     "airColor": {
       "value": -4114751,
@@ -149,6 +149,15 @@
         "minGroup": 1,
         "maxGroup": 4,
         "weight": 8,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:AlienMob"
+        },
+        "minGroup": 1,
+        "maxGroup": 4,
+        "weight": 7,
         "spawnType": "monster"
       }
     ]

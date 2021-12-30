@@ -13,7 +13,7 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "mar_kis",
+    "itemTexture": "marokriksa_door",
     "particleTexture": "",
     "blockBase": "Door",
     "tintType": "No tint",

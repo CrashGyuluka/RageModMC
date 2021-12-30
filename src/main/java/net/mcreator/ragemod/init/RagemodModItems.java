@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.ragemod.item.WaterItem;
 import net.mcreator.ragemod.item.TrofeaItem;
+import net.mcreator.ragemod.item.ToxicFluidItem;
 import net.mcreator.ragemod.item.Stick3Item;
 import net.mcreator.ragemod.item.Stick2Item;
 import net.mcreator.ragemod.item.Stick1Item;
@@ -97,54 +98,10 @@ import java.util.ArrayList;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RagemodModItems {
 	private static final List<Item> REGISTRY = new ArrayList<>();
-	public static final Item RAGEIUMORE = register(RagemodModBlocks.RAGEIUMORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM = register(new RageiumItem());
 	public static final Item RAGEIUMALLOY = register(new RageiumalloyItem());
-	public static final Item RAGEIUMBLOCK = register(RagemodModBlocks.RAGEIUMBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item RAGEIUMALLOYBLOCK = register(RagemodModBlocks.RAGEIUMALLOYBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item RAGEMITE = register(
-			new SpawnEggItem(RagemodModEntities.RAGEMITE, -16777114, -10092442, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
-					.setRegistryName("ragemite_spawn_egg"));
-	public static final Item ATOM_RAGE_R = register(
-			new SpawnEggItem(RagemodModEntities.ATOM_RAGE_R, -16777063, -3927929, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
-					.setRegistryName("atom_rage_r_spawn_egg"));
-	public static final Item RAGEBOOS_1 = register(
-			new SpawnEggItem(RagemodModEntities.RAGEBOOS_1, -6684673, -13434880, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
-					.setRegistryName("rageboos_1_spawn_egg"));
-	public static final Item RAGE_BOOS_SPAWNER = register(new RageBoosSpawnerItem());
-	public static final Item FIRE = register(new FireItem());
-	public static final Item WATER = register(new WaterItem());
-	public static final Item AIR_RELIC = register(new AirRelicItem());
-	public static final Item EARTH = register(new EarthItem());
-	public static final Item TROFEA = register(new TrofeaItem());
-	public static final Item RAGEPOTION = register(new RagepotionItem());
-	public static final Item RAGEARROW = register(new RagearrowItem());
-	public static final Item RAGEARROWAMMO = register(new RagearrowammoItem());
-	public static final Item RAGEIUMAROMR_HELMET = register(new RageiumaromrItem.Helmet());
-	public static final Item RAGEIUMAROMR_CHESTPLATE = register(new RageiumaromrItem.Chestplate());
-	public static final Item RAGEIUMAROMR_LEGGINGS = register(new RageiumaromrItem.Leggings());
-	public static final Item RAGEIUMAROMR_BOOTS = register(new RageiumaromrItem.Boots());
-	public static final Item CRASHCHEST = register(RagemodModBlocks.CRASHCHEST, RagemodModTabs.TAB_ERCEK);
-	public static final Item PORTALRT = register(RagemodModBlocks.PORTALRT, RagemodModTabs.TAB_ERCEK);
-	public static final Item SECRETBOOMKO = register(RagemodModBlocks.SECRETBOOMKO, RagemodModTabs.TAB_ERCEK);
-	public static final Item SAVERC = register(RagemodModBlocks.SAVERC, RagemodModTabs.TAB_ERCEK);
-	public static final Item SAVBLOCK = register(RagemodModBlocks.SAVBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item SAVBLOCKOK = register(RagemodModBlocks.SAVBLOCKOK, RagemodModTabs.TAB_ERCEK);
 	public static final Item SAVERCR = register(new SavercrItem());
 	public static final Item SAVKRISTALYP_2 = register(new Savkristalyp2Item());
-	public static final Item SAVKARD = register(new SavkardItem());
-	public static final Item SAVASCSAKANY = register(new SavascsakanyItem());
-	public static final Item SAVASFEJSZE = register(new SavasfejszeItem());
-	public static final Item SAVASO = register(new SavasoItem());
-	public static final Item SAVKAPA = register(new SavkapaItem());
-	public static final Item SAVARMOR_HELMET = register(new SavarmorItem.Helmet());
-	public static final Item SAVARMOR_CHESTPLATE = register(new SavarmorItem.Chestplate());
-	public static final Item SAVARMOR_LEGGINGS = register(new SavarmorItem.Leggings());
-	public static final Item SAVARMOR_BOOTS = register(new SavarmorItem.Boots());
-	public static final Item SAVELLENALASBOTTLE = register(new SavellenalasbottleItem());
-	public static final Item TOXIC_MOB = register(
-			new SpawnEggItem(RagemodModEntities.TOXIC_MOB, -16724941, -13395712, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
-					.setRegistryName("toxic_mob_spawn_egg"));
 	public static final Item AZURIT = register(new AzuritItem());
 	public static final Item ACHAT = register(new AchatItem());
 	public static final Item ADULAR = register(new AdularItem());
@@ -155,71 +112,98 @@ public class RagemodModItems {
 	public static final Item APOFILLIT = register(new ApofillitItem());
 	public static final Item BIZMUT = register(new BizmutItem());
 	public static final Item OPAL = register(new OpalItem());
+	public static final Item CVEX = register(new CverxItem());
+	public static final Item ALIENITE = register(new AlieniteItem());
+	public static final Item CURSED_ALIENITE = register(new CursedalieniteItem());
+	public static final Item RAGEIUMORE = register(RagemodModBlocks.RAGEIUMORE, RagemodModTabs.TAB_ERCEK);
+	public static final Item SAVERC = register(RagemodModBlocks.SAVERC, RagemodModTabs.TAB_ERCEK);
 	public static final Item AZURITORE = register(RagemodModBlocks.AZURITORE, RagemodModTabs.TAB_ERCEK);
-	public static final Item DEEPSLATEAZURITORE = register(RagemodModBlocks.DEEPSLATEAZURITORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item ACHATORE = register(RagemodModBlocks.ACHATORE, RagemodModTabs.TAB_ERCEK);
-	public static final Item DEEPSLATEACHATORE = register(RagemodModBlocks.DEEPSLATEACHATORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item ADULARORE = register(RagemodModBlocks.ADULARORE, RagemodModTabs.TAB_ERCEK);
-	public static final Item DEEPSLATEADULARORE = register(RagemodModBlocks.DEEPSLATEADULARORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item AKTINOLITORE = register(RagemodModBlocks.AKTINOLITORE, RagemodModTabs.TAB_ERCEK);
-	public static final Item DEEPSLATEAKTINOLITORE = register(RagemodModBlocks.DEEPSLATEAKTINOLITORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item ANAPAITORE = register(RagemodModBlocks.ANAPAITORE, RagemodModTabs.TAB_ERCEK);
+	public static final Item DEEPSLATEACHATORE = register(RagemodModBlocks.DEEPSLATEACHATORE, RagemodModTabs.TAB_ERCEK);
+	public static final Item DEEPSLATEADULARORE = register(RagemodModBlocks.DEEPSLATEADULARORE, RagemodModTabs.TAB_ERCEK);
+	public static final Item DEEPSLATEAZURITORE = register(RagemodModBlocks.DEEPSLATEAZURITORE, RagemodModTabs.TAB_ERCEK);
+	public static final Item DEEPSLATEAKTINOLITORE = register(RagemodModBlocks.DEEPSLATEAKTINOLITORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item DEEPSLATE_ANAPAIT_ORE = register(RagemodModBlocks.DEEPSLATE_ANAPAIT_ORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item CERUSSZITORE = register(RagemodModBlocks.CERUSSZITORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item AMAZONITORE = register(RagemodModBlocks.AMAZONITORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item APOFILLITORE = register(RagemodModBlocks.APOFILLITORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item BIZMUTORE = register(RagemodModBlocks.BIZMUTORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item OPALORE = register(RagemodModBlocks.OPALORE, RagemodModTabs.TAB_ERCEK);
-	public static final Item AZURITBLOCK = register(RagemodModBlocks.AZURITBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item ACHATBLOCK = register(RagemodModBlocks.ACHATBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item ADULARBLOCK = register(RagemodModBlocks.ADULARBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item AKTINOLITBLOCK = register(RagemodModBlocks.AKTINOLITBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item ANAPITBLOCK = register(RagemodModBlocks.ANAPITBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item CERUSSZITBLOCK = register(RagemodModBlocks.CERUSSZITBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item AMAZONITBLOCK = register(RagemodModBlocks.AMAZONITBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item APIFILLITBLOCK = register(RagemodModBlocks.APIFILLITBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item BIZMUTBLOCK = register(RagemodModBlocks.BIZMUTBLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item OPALBLOCK = register(RagemodModBlocks.OPALBLOCK, RagemodModTabs.TAB_ERCEK);
+	public static final Item RAGEIUMBLOCK = register(RagemodModBlocks.RAGEIUMBLOCK, RagemodModTabs.TAB_ERCEK);
+	public static final Item RAGEIUMALLOYBLOCK = register(RagemodModBlocks.RAGEIUMALLOYBLOCK, RagemodModTabs.TAB_ERCEK);
+	public static final Item SAVBLOCK = register(RagemodModBlocks.SAVBLOCK, RagemodModTabs.TAB_ERCEK);
+	public static final Item SAVBLOCKOK = register(RagemodModBlocks.SAVBLOCKOK, RagemodModTabs.TAB_ERCEK);
+	public static final Item CVEX_BLOCK = register(RagemodModBlocks.CVEX_BLOCK, RagemodModTabs.TAB_ERCEK);
+	public static final Item RAGEMITE = register(
+			new SpawnEggItem(RagemodModEntities.RAGEMITE, -16777114, -2096315, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
+					.setRegistryName("ragemite_spawn_egg"));
+	public static final Item ATOM_RAGE_R = register(
+			new SpawnEggItem(RagemodModEntities.ATOM_RAGE_R, -14927425, -5242880, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
+					.setRegistryName("atom_rage_r_spawn_egg"));
+	public static final Item RAGEBOOS_1 = register(
+			new SpawnEggItem(RagemodModEntities.RAGEBOOS_1, -8401716, -12844276, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
+					.setRegistryName("rageboos_1_spawn_egg"));
+	public static final Item TOXIC_MOB = register(
+			new SpawnEggItem(RagemodModEntities.TOXIC_MOB, -16724941, -14072293, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
+					.setRegistryName("toxic_mob_spawn_egg"));
 	public static final Item SAVRAGEROBI = register(
 			new SpawnEggItem(RagemodModEntities.SAVRAGEROBI, -14075068, -6750208, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
 					.setRegistryName("savragerobi_spawn_egg"));
-	public static final Item RAGEGYURU = register(new RagegyuruItem());
-	public static final Item AMAZONITGYURU = register(new AmazonitgyuruItem());
-	public static final Item APOFILLITGYURU = register(new ApofillitgyuruItem());
-	public static final Item AZURITGYURU = register(new AzuritgyuruItem());
-	public static final Item BUZMITGYURU = register(new BuzmitgyuruItem());
-	public static final Item ACHATGYURU = register(new AchatgyuruItem());
-	public static final Item ADULARGYURU = register(new AdulargyuruItem());
-	public static final Item AKTINOLITGYURU = register(new AktinolitgyuruItem());
-	public static final Item ANAPAITGYURU = register(new AnapaitgyuruItem());
-	public static final Item CONVERTER = register(RagemodModBlocks.CONVERTER, RagemodModTabs.TAB_ERCEK);
-	public static final Item CVEX = register(new CverxItem());
-	public static final Item CVEX_BLOCK = register(RagemodModBlocks.CVEX_BLOCK, RagemodModTabs.TAB_ERCEK);
-	public static final Item ALIEN_DIMENSION_PORTAL_IGNITER = register(new AlienDimensionItem());
-	public static final Item ALIENITE = register(new AlieniteItem());
-	public static final Item CURSED_ALIENITE = register(new CursedalieniteItem());
-	public static final Item ALIEN_FOOD = register(new AlienfoodItem());
+	public static final Item ALIEN_MOB = register(
+			new SpawnEggItem(RagemodModEntities.ALIEN_MOB, -10405981, -15333004, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
+					.setRegistryName("alien_mob_spawn_egg"));
+	public static final Item RAGEPOTION = register(new RagepotionItem());
+	public static final Item SAVELLENALASBOTTLE = register(new SavellenalasbottleItem());
+	public static final Item MEGAMINE_POTION = register(new MegaMinepotionItem());
+	public static final Item LONGER_MEGAMINE_POTION = register(new MegaMinePotion2Item());
+	public static final Item SAVKARD = register(new SavkardItem());
+	public static final Item SAVASCSAKANY = register(new SavascsakanyItem());
+	public static final Item SAVASFEJSZE = register(new SavasfejszeItem());
+	public static final Item SAVASO = register(new SavasoItem());
+	public static final Item SAVKAPA = register(new SavkapaItem());
 	public static final Item ALIENITESWORD = register(new AlieniteswordItem());
 	public static final Item ALIENITEPICKAXE = register(new AlienitepickaxeItem());
 	public static final Item ALIENITEAXE = register(new AlieniteaxeItem());
 	public static final Item ALIENITESHOVEL = register(new AlieniteshovelItem());
 	public static final Item ALIENITEHOE = register(new AlienitehoeItem());
+	public static final Item RAGEIUMAROMR_HELMET = register(new RageiumaromrItem.Helmet());
+	public static final Item RAGEIUMAROMR_CHESTPLATE = register(new RageiumaromrItem.Chestplate());
+	public static final Item RAGEIUMAROMR_LEGGINGS = register(new RageiumaromrItem.Leggings());
+	public static final Item RAGEIUMAROMR_BOOTS = register(new RageiumaromrItem.Boots());
+	public static final Item SAVARMOR_HELMET = register(new SavarmorItem.Helmet());
+	public static final Item SAVARMOR_CHESTPLATE = register(new SavarmorItem.Chestplate());
+	public static final Item SAVARMOR_LEGGINGS = register(new SavarmorItem.Leggings());
+	public static final Item SAVARMOR_BOOTS = register(new SavarmorItem.Boots());
 	public static final Item ALIENITE_ARMOR_HELMET = register(new AlieniteArmorItem.Helmet());
 	public static final Item ALIENITE_ARMOR_CHESTPLATE = register(new AlieniteArmorItem.Chestplate());
 	public static final Item ALIENITE_ARMOR_LEGGINGS = register(new AlieniteArmorItem.Leggings());
 	public static final Item ALIENITE_ARMOR_BOOTS = register(new AlieniteArmorItem.Boots());
-	public static final Item MEGAMINE_POTION = register(new MegaMinepotionItem());
-	public static final Item LONGER_MEGAMINE_POTION = register(new MegaMinePotion2Item());
+	public static final Item RAGEARROW = register(new RagearrowItem());
+	public static final Item RAGEARROWAMMO = register(new RagearrowammoItem());
 	public static final Item ALIENITESHIELD = register(new AlieniteshieldItem());
-	public static final Item PARKETTA = register(RagemodModBlocks.PARKETTA, RagemodModTabs.TAB_ERCEK);
-	public static final Item PARKSNAKE = register(RagemodModBlocks.PARKSNAKE, RagemodModTabs.TAB_ERCEK);
-	public static final Item TOROOTTEGLA = register(RagemodModBlocks.TOROOTTEGLA, RagemodModTabs.TAB_ERCEK);
+	public static final Item ALIEN_DIMENSION_PORTAL_IGNITER = register(new AlienDimensionItem());
+	public static final Item TOXIC_FLUID_BUCKET = register(new ToxicFluidItem());
+	public static final Item PORTALRT = register(RagemodModBlocks.PORTALRT, RagemodModTabs.TAB_ERCEK);
+	public static final Item CONVERTER = register(RagemodModBlocks.CONVERTER, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM_BRICKS = register(RagemodModBlocks.RAGEIUM_BRICKS, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM_BRICK_STAIRS = register(RagemodModBlocks.RAGEIUM_BRICK_STAIRS, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM_BRICK_SLAB = register(RagemodModBlocks.RAGEIUM_BRICK_SLAB, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM_BRICK_WALL = register(RagemodModBlocks.RAGEIUM_BRICK_WALL, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM_BRICKS_PRESSURE_PLATE = register(RagemodModBlocks.RAGEIUM_BRICKS_PRESSURE_PLATE, RagemodModTabs.TAB_ERCEK);
 	public static final Item RAGEIUM_BRICKS_BUTTON = register(RagemodModBlocks.RAGEIUM_BRICKS_BUTTON, RagemodModTabs.TAB_ERCEK);
+	public static final Item PARKETTA = register(RagemodModBlocks.PARKETTA, RagemodModTabs.TAB_ERCEK);
+	public static final Item SECRETBOOMKO = register(RagemodModBlocks.SECRETBOOMKO, RagemodModTabs.TAB_ERCEK);
+	public static final Item PARKSNAKE = register(RagemodModBlocks.PARKSNAKE, RagemodModTabs.TAB_ERCEK);
+	public static final Item TOROOTTEGLA = register(RagemodModBlocks.TOROOTTEGLA, RagemodModTabs.TAB_ERCEK);
+	public static final Item FIRE = register(new FireItem());
+	public static final Item WATER = register(new WaterItem());
+	public static final Item AIR_RELIC = register(new AirRelicItem());
+	public static final Item EARTH = register(new EarthItem());
+	public static final Item RAGE_BOOS_SPAWNER = register(new RageBoosSpawnerItem());
+	public static final Item TROFEA = register(new TrofeaItem());
 	public static final Item PARKOURFEL = register(RagemodModBlocks.PARKOURFEL, RagemodModTabs.TAB_ERCEK);
 	public static final Item PARKFELPLUS = register(RagemodModBlocks.PARKFELPLUS, RagemodModTabs.TAB_ERCEK);
 	public static final Item PARKOLD = register(RagemodModBlocks.PARKOLD, RagemodModTabs.TAB_ERCEK);
@@ -261,17 +245,18 @@ public class RagemodModItems {
 	public static final Item SAVASRAGEIUMORE = register(RagemodModBlocks.SAVASRAGEIUMORE, RagemodModTabs.TAB_ERCEK);
 	public static final Item SAVASRAGEIUMALLOYBLOCK = register(RagemodModBlocks.SAVASRAGEIUMALLOYBLOCK, RagemodModTabs.TAB_ERCEK);
 	public static final Item SAVASRAGEIUMBLOCK = register(RagemodModBlocks.SAVASRAGEIUMBLOCK, RagemodModTabs.TAB_ERCEK);
+	public static final Item RAGEGYURU = register(new RagegyuruItem());
+	public static final Item AMAZONITGYURU = register(new AmazonitgyuruItem());
+	public static final Item APOFILLITGYURU = register(new ApofillitgyuruItem());
+	public static final Item AZURITGYURU = register(new AzuritgyuruItem());
+	public static final Item BUZMITGYURU = register(new BuzmitgyuruItem());
+	public static final Item ACHATGYURU = register(new AchatgyuruItem());
+	public static final Item ADULARGYURU = register(new AdulargyuruItem());
+	public static final Item AKTINOLITGYURU = register(new AktinolitgyuruItem());
+	public static final Item ANAPAITGYURU = register(new AnapaitgyuruItem());
 	public static final Item DETONATORRT = register(new DetonatorrtItem());
 	public static final Item FAKITO = register(new FakitoItem());
 	public static final Item DIAMONDNUGET = register(new DiamondnugetItem());
-	public static final Item GENUS_WEIGELA = register(RagemodModBlocks.GENUS_WEIGELA, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item BLUEHYDRANGEA = register(RagemodModBlocks.BLUEHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item MAGENTAHYDRANGEA = register(RagemodModBlocks.MAGENTAHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item PURPLEHYDRANGEA = register(RagemodModBlocks.PURPLEHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item YELLOWHYDRANGEA = register(RagemodModBlocks.YELLOWHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item ELDERFLOWER = register(new ElderberryflowerItem());
-	public static final Item RAGEFLOWER = register(RagemodModBlocks.RAGEFLOWER, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item ELDERFLOWER_SYRUP = register(new AlderflowerJuiceItem());
 	public static final Item ALIEN_SOIL = register(RagemodModBlocks.ALIEN_SOIL, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIEN_DIRT = register(RagemodModBlocks.ALIEN_DIRT, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item COVERED_ALIEN_SOIL = register(RagemodModBlocks.COVERED_ALIEN_SOIL, RagemodModTabs.TAB_TERMESZETTAB);
@@ -283,21 +268,18 @@ public class RagemodModItems {
 	public static final Item BIG_ALIEN_MUSHROOM = register(RagemodModBlocks.BIG_ALIEN_MUSHROOM, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIEN_SPIKE = register(RagemodModBlocks.ALIEN_SPIKE, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIEN_CRYSTAL_BLOCK = register(RagemodModBlocks.ALIEN_CRYSTAL_BLOCK, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALIEN_COBWEB = register(RagemodModBlocks.ALIEN_COBWEB, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIEN_TRAP = register(RagemodModBlocks.ALIEN_TRAP, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIEN_STONE = register(RagemodModBlocks.ALIEN_STONE, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIENSHROOMBLOCK = register(RagemodModBlocks.ALIENSHROOMBLOCK, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item ALIEN_COBWEB = register(RagemodModBlocks.ALIEN_COBWEB, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item TRADERRT = register(
-			new SpawnEggItem(RagemodModEntities.TRADERRT, -3368704, -13424634, new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB))
-					.setRegistryName("traderrt_spawn_egg"));
 	public static final Item RAGEFLY = register(
 			new SpawnEggItem(RagemodModEntities.RAGEFLY, -10092493, -13434676, new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB))
 					.setRegistryName("ragefly_spawn_egg"));
 	public static final Item FLYLIEN = register(
-			new SpawnEggItem(RagemodModEntities.FLYLIEN, -5227856, -16737997, new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB))
+			new SpawnEggItem(RagemodModEntities.FLYLIEN, -5227856, -13989599, new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB))
 					.setRegistryName("flylien_spawn_egg"));
 	public static final Item ALIENSLIME = register(
-			new SpawnEggItem(RagemodModEntities.ALIENSLIME, -10053376, -6750055, new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB))
+			new SpawnEggItem(RagemodModEntities.ALIENSLIME, -11303404, -7339879, new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB))
 					.setRegistryName("alienslime_spawn_egg"));
 	public static final Item ALPIVBLOCK = register(RagemodModBlocks.ALPIVBLOCK, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALPIV_STAIRS = register(RagemodModBlocks.ALPIV_STAIRS, RagemodModTabs.TAB_TERMESZETTAB);
@@ -307,6 +289,10 @@ public class RagemodModItems {
 	public static final Item POLISHED_ALPIV_STAIRS = register(RagemodModBlocks.POLISHED_ALPIV_STAIRS, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item POLISHED_ALPIV_SLAB = register(RagemodModBlocks.POLISHED_ALPIV_SLAB, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item POLISHED_ALPIV_WALL = register(RagemodModBlocks.POLISHED_ALPIV_WALL, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALPIV_BRICKS = register(RagemodModBlocks.ALPIV_BRICKS, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALPIV_BRICKS_STAIRS = register(RagemodModBlocks.ALPIV_BRICKS_STAIRS, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALPIV_BRICKS_SLAB = register(RagemodModBlocks.ALPIV_BRICKS_SLAB, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALPIV_BRICKS_WALL = register(RagemodModBlocks.ALPIV_BRICKS_WALL, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item CHISELED_ALPIV = register(RagemodModBlocks.CHISELED_ALPIV, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALPIVPILLAR = register(RagemodModBlocks.ALPIVPILLAR, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALPIV_FLOOR = register(RagemodModBlocks.ALPIV_FLOOR, RagemodModTabs.TAB_TERMESZETTAB);
@@ -476,7 +462,6 @@ public class RagemodModItems {
 	public static final Item ROBTAI_DOOR = register(RagemodModBlocks.ROBTAI_DOOR, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item MAROKRIKSADOOR = register(RagemodModBlocks.MAROKRIKSADOOR, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item SEQUOIADOOR = register(RagemodModBlocks.SEQUOIADOOR, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item BLUE_RAGEWOOD_TRAPDOOR = register(RagemodModBlocks.BLUE_RAGEWOOD_TRAPDOOR, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item RED_RAGEWOOD_TRAPDOOR = register(RagemodModBlocks.RED_RAGEWOOD_TRAPDOOR, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item BEECH_TRAPDOOR = register(RagemodModBlocks.BEECH_TRAPDOOR, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item KIZUKRA_TRAPDOOR = register(RagemodModBlocks.KIZUKRA_TRAPDOOR, RagemodModTabs.TAB_TERMESZETTAB);
@@ -533,6 +518,15 @@ public class RagemodModItems {
 	public static final Item BROWN_GLOWING_OAK_LEAVES = register(RagemodModBlocks.BROWN_GLOWING_OAK_LEAVES, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item GREEN_GLOWING_OAK_LEAVES = register(RagemodModBlocks.GREEN_GLOWING_OAK_LEAVES, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item RED_GLOWING_OAK_LEAVES = register(RagemodModBlocks.RED_GLOWING_OAK_LEAVES, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item GENUS_WEIGELA = register(RagemodModBlocks.GENUS_WEIGELA, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item BLUEHYDRANGEA = register(RagemodModBlocks.BLUEHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item MAGENTAHYDRANGEA = register(RagemodModBlocks.MAGENTAHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item PURPLEHYDRANGEA = register(RagemodModBlocks.PURPLEHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item YELLOWHYDRANGEA = register(RagemodModBlocks.YELLOWHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ELDERFLOWER = register(new ElderberryflowerItem());
+	public static final Item ELDERFLOWER_SYRUP = register(new AlderflowerJuiceItem());
+	public static final Item RAGEFLOWER = register(RagemodModBlocks.RAGEFLOWER, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALIEN_FOOD = register(new AlienfoodItem());
 	public static final Item SAVASNOVENY = register(RagemodModBlocks.SAVASNOVENY, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item CROISSANT = register(new CroissantItem());
 	public static final Item CHOCOLATE = register(new ChocolateItem());
@@ -566,10 +560,10 @@ public class RagemodModItems {
 	public static final Item ALIEN_WALLTORCH = register(RagemodModBlocks.ALIEN_WALLTORCH, null);
 	public static final Item LIT_ALIEN_LAMP = register(RagemodModBlocks.LIT_ALIEN_LAMP, null);
 	public static final Item RAGEFLYLIT = register(
-			new SpawnEggItem(RagemodModEntities.RAGEFLYLIT, -10092493, -13434676, new Item.Properties().tab(null))
+			new SpawnEggItem(RagemodModEntities.RAGEFLYLIT, -3604380, -13434676, new Item.Properties().tab(null))
 					.setRegistryName("rageflylit_spawn_egg"));
 	public static final Item RAGEFLYLIT_2 = register(
-			new SpawnEggItem(RagemodModEntities.RAGEFLYLIT_2, -10092493, -13434676, new Item.Properties().tab(null))
+			new SpawnEggItem(RagemodModEntities.RAGEFLYLIT_2, -3866526, -13434676, new Item.Properties().tab(null))
 					.setRegistryName("rageflylit_2_spawn_egg"));
 	public static final Item BIGALIENMUSHROOMDEV_1 = register(RagemodModBlocks.BIGALIENMUSHROOMDEV_1, null);
 	public static final Item ALIENGROWTHDEV_1 = register(RagemodModBlocks.ALIENGROWTHDEV_1, null);
@@ -596,6 +590,7 @@ public class RagemodModItems {
 	public static final Item MAGENTA_GLOWONG_CAVEPLANT = register(RagemodModBlocks.MAGENTA_GLOWONG_CAVEPLANT, null);
 	public static final Item HANGING_GLOWING_MAGENTA_CAVEPLANT = register(RagemodModBlocks.HANGING_GLOWING_MAGENTA_CAVEPLANT, null);
 	public static final Item ALIEN_AIR = register(RagemodModBlocks.ALIEN_AIR, null);
+	public static final Item RAGE_AIR = register(RagemodModBlocks.RAGE_AIR, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

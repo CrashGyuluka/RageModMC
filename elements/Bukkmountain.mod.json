@@ -91,7 +91,7 @@
     "spawnNetherFossil": false,
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
-    "spawnRuinedPortal": "NONE",
+    "spawnRuinedPortal": "STANDARD",
     "defaultFeatures": [
       "Caves",
       "Ores",
@@ -108,38 +108,11 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "EntitySpider"
+          "value": "EntityAnimal"
         },
         "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 2,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:Traderrt"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 1,
-        "spawnType": "creature"
-      },
-      {
-        "entity": {
-          "value": "EntityBee"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 1,
-        "spawnType": "creature"
-      },
-      {
-        "entity": {
-          "value": "EntitySheep"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 1,
+        "maxGroup": 3,
+        "weight": 6,
         "spawnType": "creature"
       }
     ]

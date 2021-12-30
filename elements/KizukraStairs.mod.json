@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "kizukra_planks",
-    "textureTop": "kizukra_planks",
+    "texture": "kizukra_planks_newest11",
+    "textureTop": "kizukra_planks_newest11",
     "textureLeft": "",
-    "textureFront": "kizukra_planks",
+    "textureFront": "kizukra_planks_newest11",
     "textureRight": "",
     "textureBack": "",
     "renderType": 10,
@@ -35,14 +35,14 @@
     ],
     "name": "Kizukra Stairs",
     "specialInfo": [],
-    "hardness": 9.0,
+    "hardness": 2.0,
     "resistance": 6.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:Termeszettab"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
@@ -97,7 +97,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

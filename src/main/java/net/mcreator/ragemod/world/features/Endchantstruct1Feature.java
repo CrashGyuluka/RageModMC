@@ -42,7 +42,7 @@ public class Endchantstruct1Feature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "enchantstruct1"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 100) {
+		if ((context.random().nextInt(1000000) + 1) <= 50) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

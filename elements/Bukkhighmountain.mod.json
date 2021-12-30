@@ -91,7 +91,7 @@
     "spawnNetherFossil": false,
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
-    "spawnRuinedPortal": "NONE",
+    "spawnRuinedPortal": "MOUNTAIN",
     "defaultFeatures": [
       "Caves",
       "Ores",
@@ -127,15 +127,6 @@
         "maxGroup": 3,
         "weight": 2,
         "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:Traderrt"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 1,
-        "spawnType": "creature"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "parent": "block/template_wall_post",
   "textures": {
-    "wall": "ragemod:blocks/alpiv_block_animated_interpol1",
-    "particle": "ragemod:blocks/alpiv_block_animated_interpol1"
+    "wall": "ragemod:blocks/alpiv_block1",
+    "particle": "ragemod:blocks/alpiv_block1"
   }
 }

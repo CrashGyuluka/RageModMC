@@ -20,7 +20,7 @@ import java.util.Collections;
 
 public class BukkSlabBlock extends SlabBlock {
 	public BukkSlabBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 3f).requiresCorrectToolForDrops());
 		setRegistryName("beech_slab");
 	}
 
@@ -37,7 +37,7 @@ public class BukkSlabBlock extends SlabBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= -1;
 		return false;
 	}
 

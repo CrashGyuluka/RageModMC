@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/alpiv_smooth",
-    "particle": "ragemod:blocks/alpiv_smooth"
+    "all": "ragemod:blocks/smooth_alpiv",
+    "particle": "ragemod:blocks/smooth_alpiv"
   }
 }

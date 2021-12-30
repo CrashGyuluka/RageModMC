@@ -20,7 +20,6 @@ import net.mcreator.ragemod.block.entity.Fa5sapBlockEntity;
 import net.mcreator.ragemod.block.entity.Fa4sapBlockEntity;
 import net.mcreator.ragemod.block.entity.Fa3sapBlockEntity;
 import net.mcreator.ragemod.block.entity.ElderberryleavesBlockEntity;
-import net.mcreator.ragemod.block.entity.CrashchestBlockEntity;
 import net.mcreator.ragemod.block.entity.BukkspalingBlockEntity;
 
 import java.util.List;
@@ -29,7 +28,6 @@ import java.util.ArrayList;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RagemodModBlockEntities {
 	private static final List<BlockEntityType<?>> REGISTRY = new ArrayList<>();
-	public static final BlockEntityType<?> CRASHCHEST = register("ragemod:crashchest", RagemodModBlocks.CRASHCHEST, CrashchestBlockEntity::new);
 	public static final BlockEntityType<?> PORTALRT = register("ragemod:portalrt", RagemodModBlocks.PORTALRT, PortalrtBlockEntity::new);
 	public static final BlockEntityType<?> CONVERTER = register("ragemod:converter", RagemodModBlocks.CONVERTER, KonvertaloBlockEntity::new);
 	public static final BlockEntityType<?> RAGETREE_SAPLING = register("ragemod:ragetree_sapling", RagemodModBlocks.RAGETREE_SAPLING,

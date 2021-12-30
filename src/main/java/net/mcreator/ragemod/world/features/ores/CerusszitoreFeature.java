@@ -26,8 +26,8 @@ import java.util.Random;
 public class CerusszitoreFeature extends OreFeature {
 	public static final CerusszitoreFeature FEATURE = (CerusszitoreFeature) new CerusszitoreFeature().setRegistryName("ragemod:cerusszitore");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
-			.configured(new OreConfiguration(CerusszitoreFeatureRuleTest.INSTANCE, RagemodModBlocks.CERUSSZITORE.defaultBlockState(), 3))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(20), VerticalAnchor.absolute(128)))).squared().count(6);
+			.configured(new OreConfiguration(CerusszitoreFeatureRuleTest.INSTANCE, RagemodModBlocks.CERUSSZITORE.defaultBlockState(), 5))
+			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(20), VerticalAnchor.absolute(128)))).squared().count(8);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 
 	public CerusszitoreFeature() {

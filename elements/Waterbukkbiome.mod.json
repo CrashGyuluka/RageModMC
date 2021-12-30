@@ -4,7 +4,7 @@
   "definition": {
     "name": "Watery Beech Biome",
     "groundBlock": {
-      "value": "Blocks.DIRT#1"
+      "value": "Blocks.DIRT#0"
     },
     "undergroundBlock": {
       "value": "Blocks.STONE#0"
@@ -41,8 +41,8 @@
     },
     "rainingPossibility": 0.7000000000000001,
     "temperature": 0.4,
-    "baseHeight": -1.7,
-    "heightVariation": 0.1,
+    "baseHeight": -0.19999999999999998,
+    "heightVariation": 0.0,
     "biomeType": "WARM",
     "spawnBiome": true,
     "biomeWeight": 1,
@@ -95,21 +95,9 @@
     "defaultFeatures": [
       "Caves",
       "Ores",
-      "FrozenTopLayer",
-      "Lakes",
-      "OceanCaves",
-      "ExtraEmeraldOre"
+      "OceanCaves"
     ],
     "spawnEntries": [
-      {
-        "entity": {
-          "value": "EntitySalmon"
-        },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 20,
-        "spawnType": "creature"
-      },
       {
         "entity": {
           "value": "EntityTropicalFish"
@@ -126,15 +114,6 @@
         "minGroup": 2,
         "maxGroup": 2,
         "weight": 20,
-        "spawnType": "creature"
-      },
-      {
-        "entity": {
-          "value": "EntityGuardian"
-        },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 2,
         "spawnType": "creature"
       }
     ]

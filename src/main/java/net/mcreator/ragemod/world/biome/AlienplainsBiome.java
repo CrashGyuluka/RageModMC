@@ -41,7 +41,7 @@ import java.util.HashMap;
 public class AlienplainsBiome {
 	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT
 			.configured(new SurfaceBuilderBaseConfiguration(RagemodModBlocks.ALIEN_SOIL.defaultBlockState(),
-					RagemodModBlocks.HEGYIKO_1.defaultBlockState(), RagemodModBlocks.HEGYIKO_1.defaultBlockState()));
+					RagemodModBlocks.ALIEN_DIRT.defaultBlockState(), RagemodModBlocks.ALIEN_DIRT.defaultBlockState()));
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-4114751).waterColor(-8450233).waterFogColor(-10092493)

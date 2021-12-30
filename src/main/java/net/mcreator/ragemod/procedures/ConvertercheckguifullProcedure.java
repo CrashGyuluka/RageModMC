@@ -29,7 +29,7 @@ public class ConvertercheckguifullProcedure {
 						&& _splr.get()instanceof Map _slt ? ((Slot) _slt.get(5)).getItem() : ItemStack.EMPTY).getItem() == RagemodModItems.SAVERCR) {
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
 				ItemStack _setstack = new ItemStack(RagemodModItems.CVEX);
-				_setstack.setCount(4);
+				_setstack.setCount(6);
 				((Slot) _slots.get(6)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}

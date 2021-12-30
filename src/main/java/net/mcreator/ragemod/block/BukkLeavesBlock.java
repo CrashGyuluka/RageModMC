@@ -25,7 +25,7 @@ import net.mcreator.ragemod.init.RagemodModBlocks;
 
 public class BukkLeavesBlock extends LeavesBlock {
 	public BukkLeavesBlock() {
-		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.4f, 0.3f).requiresCorrectToolForDrops().noOcclusion());
+		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.2f, 0.3f).requiresCorrectToolForDrops().noOcclusion());
 		setRegistryName("bukk_leaves");
 	}
 

@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/alpiv_pillar_bottom2",
-    "up": "ragemod:blocks/alpiv_pillar_bottom2",
-    "north": "ragemod:blocks/alpiv_pillar",
-    "east": "ragemod:blocks/alpiv_pillar",
-    "south": "ragemod:blocks/alpiv_pillar",
-    "west": "ragemod:blocks/alpiv_pillar",
-    "particle": "ragemod:blocks/alpiv_pillar_bottom2"
+    "down": "ragemod:blocks/alpiv_pillar_bottom_new",
+    "up": "ragemod:blocks/alpiv_pillar_bottom_new",
+    "north": "ragemod:blocks/alpiv_pillar_new",
+    "east": "ragemod:blocks/alpiv_pillar_new",
+    "south": "ragemod:blocks/alpiv_pillar_new",
+    "west": "ragemod:blocks/alpiv_pillar_new",
+    "particle": "ragemod:blocks/alpiv_pillar_bottom_new"
   }
 }

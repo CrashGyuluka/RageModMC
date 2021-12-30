@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "robtai_log_side_new",
+    "texture": "robtai_log_side5",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -35,7 +35,7 @@
     ],
     "name": "Robtai Block Pressure Plate",
     "specialInfo": [],
-    "hardness": 4.0,
+    "hardness": 2.0,
     "resistance": 2.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -97,7 +97,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 3,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

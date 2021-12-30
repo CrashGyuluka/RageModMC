@@ -45,7 +45,7 @@ import java.util.HashMap;
 public class TotallyNotAlienBiome {
 	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT
 			.configured(new SurfaceBuilderBaseConfiguration(RagemodModBlocks.ALIEN_SOIL.defaultBlockState(),
-					RagemodModBlocks.HEGYIKO_1.defaultBlockState(), RagemodModBlocks.HEGYIKO_1.defaultBlockState()));
+					RagemodModBlocks.ALIEN_DIRT.defaultBlockState(), RagemodModBlocks.ALIEN_DIRT.defaultBlockState()));
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-6750055).waterColor(-10092493).waterFogColor(-10092493)
@@ -97,7 +97,6 @@ public class TotallyNotAlienBiome {
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 5, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 20, 4, 4));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.FLYLIEN, 10, 2, 5));
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIENSLIME, 7, 1, 3));
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.NONE).biomeCategory(Biome.BiomeCategory.NONE).depth(1.3f).scale(1.2f)
 				.temperature(0f).downfall(0f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "ragemod:blocks/alpiv_bricks_new",
+    "top": "ragemod:blocks/alpiv_bricks_new",
+    "side": "ragemod:blocks/alpiv_bricks_new"
+  }
+}

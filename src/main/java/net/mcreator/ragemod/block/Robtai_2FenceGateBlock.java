@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class Robtai_2FenceGateBlock extends FenceGateBlock {
 	public Robtai_2FenceGateBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(4f, 2f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops());
 		setRegistryName("robtai_block_fence_gate");
 	}
 
@@ -36,7 +36,7 @@ public class Robtai_2FenceGateBlock extends FenceGateBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 3;
+			return tieredItem.getTier().getLevel() >= 0;
 		return false;
 	}
 

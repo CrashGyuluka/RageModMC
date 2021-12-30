@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class Stripped_KizukraFenceBlock extends FenceBlock {
 	public Stripped_KizukraFenceBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 4f).requiresCorrectToolForDrops());
 		setRegistryName("stripped_kizukra_fence");
 	}
 
@@ -36,7 +36,7 @@ public class Stripped_KizukraFenceBlock extends FenceBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= 1;
 		return false;
 	}
 

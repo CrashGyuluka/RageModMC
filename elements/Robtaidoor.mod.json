@@ -2,8 +2,8 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "robtai_door_bottom",
-    "textureTop": "robtai_door_top",
+    "texture": "robtai_door_bottom_new",
+    "textureTop": "robtai_door_top_new",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
@@ -13,7 +13,7 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "m_kis",
+    "itemTexture": "robtai_dooru",
     "particleTexture": "",
     "blockBase": "Door",
     "tintType": "No tint",
@@ -35,7 +35,7 @@
     ],
     "name": "Robtai Door",
     "specialInfo": [],
-    "hardness": 3.0,
+    "hardness": 2.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -97,7 +97,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

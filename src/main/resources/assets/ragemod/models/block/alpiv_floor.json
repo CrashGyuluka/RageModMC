@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/alpiv_parkettea1",
-    "particle": "ragemod:blocks/alpiv_parkettea1"
+    "all": "ragemod:blocks/alpiv_floor_n",
+    "particle": "ragemod:blocks/alpiv_floor_n"
   }
 }

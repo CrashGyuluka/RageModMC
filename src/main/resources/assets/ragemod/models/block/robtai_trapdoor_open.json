@@ -1,7 +1,7 @@
 {
   "parent": "block/template_orientable_trapdoor_open",
   "textures": {
-    "texture": "ragemod:blocks/robtai_trapdoor_",
-    "particle": "ragemod:blocks/robtai_trapdoor_"
+    "texture": "ragemod:blocks/robtai_trapdoor_new",
+    "particle": "ragemod:blocks/robtai_trapdoor_new"
   }
 }

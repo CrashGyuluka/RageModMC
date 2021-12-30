@@ -5,9 +5,9 @@
     "structure": "bukk2",
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 100000,
+    "spawnProbability": 500000,
     "minCountPerChunk": 1,
-    "maxCountPerChunk": 2,
+    "maxCountPerChunk": 3,
     "spawnLocation": "Ground",
     "spawnHeightOffset": 1,
     "spawnXOffset": -2,
@@ -17,24 +17,18 @@
     ],
     "restrictionBlocks": [
       {
-        "value": "Blocks.GRASS"
-      },
-      {
-        "value": "Blocks.DIRT#0"
-      },
-      {
-        "value": "Blocks.DIRT#1"
-      },
-      {
         "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.GRAVEL"
+      },
+      {
+        "value": "Blocks.SAND#0"
       }
     ],
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Waterbukkbiome"
-      },
-      {
-        "value": "CUSTOM:Waterbukkbiomefordimension"
       }
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK"

@@ -106,39 +106,12 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "EntityRabbit"
+          "value": "EntityAnimal"
         },
         "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 2,
+        "maxGroup": 3,
+        "weight": 8,
         "spawnType": "creature"
-      },
-      {
-        "entity": {
-          "value": "EntityMule"
-        },
-        "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 1,
-        "spawnType": "creature"
-      },
-      {
-        "entity": {
-          "value": "EntitySkeleton"
-        },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 2,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "EntityCreeper"
-        },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 1,
-        "spawnType": "monster"
       }
     ]
   }

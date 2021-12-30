@@ -25,7 +25,7 @@ import java.util.Collections;
 
 public class BukkstrprplBlock extends PressurePlateBlock {
 	public BukkstrprplBlock() {
-		super(Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops()
+		super(Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 4f).requiresCorrectToolForDrops()
 				.noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("stripped_beech_block_pressure_plate");
 	}
@@ -38,7 +38,7 @@ public class BukkstrprplBlock extends PressurePlateBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= -1;
 		return false;
 	}
 

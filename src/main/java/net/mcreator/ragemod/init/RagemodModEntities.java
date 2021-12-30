@@ -14,7 +14,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.ragemod.entity.TraderrtEntity;
 import net.mcreator.ragemod.entity.SavragerobiEntity;
 import net.mcreator.ragemod.entity.RagemiteEntity;
 import net.mcreator.ragemod.entity.RageflylitEntity;
@@ -27,6 +26,7 @@ import net.mcreator.ragemod.entity.Mob1Entity;
 import net.mcreator.ragemod.entity.FlyilenEntity;
 import net.mcreator.ragemod.entity.AtomRageREntity;
 import net.mcreator.ragemod.entity.AlienslimeEntity;
+import net.mcreator.ragemod.entity.AlienMobEntity;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -43,18 +43,18 @@ public class RagemodModEntities {
 	public static final EntityType<Rageboos1Entity> RAGEBOOS_1 = register("rageboos_1",
 			EntityType.Builder.<Rageboos1Entity>of(Rageboos1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(Rageboos1Entity::new).sized(1.4f, 0.9f));
-	public static final EntityType<RagearrowEntity> RAGEARROW = register("entitybulletragearrow",
-			EntityType.Builder.<RagearrowEntity>of(RagearrowEntity::new, MobCategory.MISC).setCustomClientFactory(RagearrowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final EntityType<Mob1Entity> TOXIC_MOB = register("toxic_mob",
 			EntityType.Builder.<Mob1Entity>of(Mob1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(Mob1Entity::new).sized(0.6f, 1.8f));
 	public static final EntityType<SavragerobiEntity> SAVRAGEROBI = register("savragerobi",
 			EntityType.Builder.<SavragerobiEntity>of(SavragerobiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SavragerobiEntity::new).sized(0.6f, 2.8f));
-	public static final EntityType<TraderrtEntity> TRADERRT = register("traderrt",
-			EntityType.Builder.<TraderrtEntity>of(TraderrtEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TraderrtEntity::new).sized(0.6f, 1.8f));
+	public static final EntityType<AlienMobEntity> ALIEN_MOB = register("alien_mob",
+			EntityType.Builder.<AlienMobEntity>of(AlienMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(AlienMobEntity::new).sized(0.5f, 1.5999999999999999f));
+	public static final EntityType<RagearrowEntity> RAGEARROW = register("entitybulletragearrow",
+			EntityType.Builder.<RagearrowEntity>of(RagearrowEntity::new, MobCategory.MISC).setCustomClientFactory(RagearrowEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final EntityType<RageflyEntity> RAGEFLY = register("ragefly",
 			EntityType.Builder.<RageflyEntity>of(RageflyEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(RageflyEntity::new).fireImmune().sized(0.5f, 0.5f));
@@ -93,7 +93,7 @@ public class RagemodModEntities {
 			Rageboos1Entity.init();
 			Mob1Entity.init();
 			SavragerobiEntity.init();
-			TraderrtEntity.init();
+			AlienMobEntity.init();
 			RageflyEntity.init();
 			FlyilenEntity.init();
 			AlienslimeEntity.init();
@@ -110,7 +110,7 @@ public class RagemodModEntities {
 		event.put(RAGEBOOS_1, Rageboos1Entity.createAttributes().build());
 		event.put(TOXIC_MOB, Mob1Entity.createAttributes().build());
 		event.put(SAVRAGEROBI, SavragerobiEntity.createAttributes().build());
-		event.put(TRADERRT, TraderrtEntity.createAttributes().build());
+		event.put(ALIEN_MOB, AlienMobEntity.createAttributes().build());
 		event.put(RAGEFLY, RageflyEntity.createAttributes().build());
 		event.put(FLYLIEN, FlyilenEntity.createAttributes().build());
 		event.put(ALIENSLIME, AlienslimeEntity.createAttributes().build());

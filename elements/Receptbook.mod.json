@@ -26,7 +26,7 @@
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": false,
-    "guiBoundTo": "Crashchestgui",
+    "guiBoundTo": "<NONE>",
     "inventorySize": 56,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {

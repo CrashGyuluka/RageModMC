@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "ragemod:blocks/alpiv_bricks_new",
+    "particle": "ragemod:blocks/alpiv_bricks_new"
+  }
+}

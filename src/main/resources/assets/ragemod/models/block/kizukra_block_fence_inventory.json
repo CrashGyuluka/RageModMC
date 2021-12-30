@@ -1,7 +1,7 @@
 {
   "parent": "block/fence_inventory",
   "textures": {
-    "texture": "ragemod:blocks/kizukra_log_new",
-    "particle": "ragemod:blocks/kizukra_log_new"
+    "texture": "ragemod:blocks/kizukra_log_side_newest11",
+    "particle": "ragemod:blocks/kizukra_log_side_newest11"
   }
 }

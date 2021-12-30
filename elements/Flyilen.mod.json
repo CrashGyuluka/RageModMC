@@ -17,7 +17,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16737997,
+      "value": -13989599,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -127,9 +127,6 @@
       },
       {
         "value": "CUSTOM:Floweryalienplains"
-      },
-      {
-        "value": "CUSTOM:Ruinedalienbiome"
       },
       {
         "value": "CUSTOM:TotallyNotAlien"

@@ -27,7 +27,7 @@ public class AmazonitoreFeature extends OreFeature {
 	public static final AmazonitoreFeature FEATURE = (AmazonitoreFeature) new AmazonitoreFeature().setRegistryName("ragemod:amazonitore");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(new OreConfiguration(AmazonitoreFeatureRuleTest.INSTANCE, RagemodModBlocks.AMAZONITORE.defaultBlockState(), 3))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(20), VerticalAnchor.absolute(64)))).squared().count(6);
+			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(20), VerticalAnchor.absolute(64)))).squared().count(8);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 
 	public AmazonitoreFeature() {

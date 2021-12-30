@@ -19,8 +19,7 @@ import java.util.Collections;
 
 public class Robtai_2PressurePlateBlock extends PressurePlateBlock {
 	public Robtai_2PressurePlateBlock() {
-		super(Sensitivity.EVERYTHING,
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(4f, 2f).requiresCorrectToolForDrops());
+		super(Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops());
 		setRegistryName("robtai_block_pressure_plate");
 	}
 
@@ -37,7 +36,7 @@ public class Robtai_2PressurePlateBlock extends PressurePlateBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 3;
+			return tieredItem.getTier().getLevel() >= 0;
 		return false;
 	}
 

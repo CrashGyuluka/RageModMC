@@ -103,7 +103,7 @@ public class Book1Screen extends AbstractContainerScreen<Book1Menu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		drawString(poseStack, this.font, "RECEPT K\u00D6NYV", 77, 5, -65536);
+		this.font.draw(poseStack, "RECEPT K\u00D6NYV", 77, 5, -65536);
 	}
 
 	@Override

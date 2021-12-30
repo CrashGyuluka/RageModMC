@@ -41,7 +41,7 @@ public class StructportFeature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "portal_struct"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 100) {
+		if ((context.random().nextInt(1000000) + 1) <= 30) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

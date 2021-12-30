@@ -21,9 +21,9 @@ import java.util.Collections;
 public class Stripped_KizukraStairsBlock extends StairBlock {
 	public Stripped_KizukraStairsBlock() {
 		super(() -> new Block(
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops().dynamicShape())
+				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 4f).requiresCorrectToolForDrops().dynamicShape())
 						.defaultBlockState(),
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops().dynamicShape());
+				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 4f).requiresCorrectToolForDrops().dynamicShape());
 		setRegistryName("stripped_kizukra_stairs");
 	}
 
@@ -40,7 +40,7 @@ public class Stripped_KizukraStairsBlock extends StairBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= 1;
 		return false;
 	}
 

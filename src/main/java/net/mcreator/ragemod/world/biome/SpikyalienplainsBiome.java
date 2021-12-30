@@ -39,7 +39,7 @@ import java.util.HashMap;
 public class SpikyalienplainsBiome {
 	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT
 			.configured(new SurfaceBuilderBaseConfiguration(RagemodModBlocks.ALIEN_SOIL.defaultBlockState(),
-					RagemodModBlocks.HEGYIKO_1.defaultBlockState(), RagemodModBlocks.HEGYIKO_1.defaultBlockState()));
+					RagemodModBlocks.ALIEN_DIRT.defaultBlockState(), RagemodModBlocks.ALIEN_DIRT.defaultBlockState()));
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-4114751).waterColor(-8450233).waterFogColor(-10092493)
@@ -87,6 +87,7 @@ public class SpikyalienplainsBiome {
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 20, 1, 4));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.FLYLIEN, 10, 2, 6));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIENSLIME, 8, 1, 4));
+		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIEN_MOB, 7, 1, 4));
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.NONE).biomeCategory(Biome.BiomeCategory.NONE).depth(0.3f).scale(0.5f)
 				.temperature(0f).downfall(0f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();

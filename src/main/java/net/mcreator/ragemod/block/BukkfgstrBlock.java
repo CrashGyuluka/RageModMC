@@ -25,7 +25,7 @@ import java.util.Collections;
 
 public class BukkfgstrBlock extends FenceGateBlock {
 	public BukkfgstrBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops().noOcclusion()
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 4f).requiresCorrectToolForDrops().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("stripped_beech_block_fence_gate");
 	}
@@ -38,7 +38,7 @@ public class BukkfgstrBlock extends FenceGateBlock {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
+			return tieredItem.getTier().getLevel() >= -1;
 		return false;
 	}
 

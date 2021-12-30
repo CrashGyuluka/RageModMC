@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "----cerusszit",
+    "texture": "cerussite_ore",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -70,7 +70,7 @@
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
-    "slipperiness": 1.2000000000000002,
+    "slipperiness": 0.7000000000000001,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
@@ -130,8 +130,8 @@
         "value": "Blocks.NETHERRACK"
       }
     ],
-    "frequencyPerChunks": 6,
-    "frequencyOnChunk": 3,
+    "frequencyPerChunks": 8,
+    "frequencyOnChunk": 5,
     "minGenerateHeight": 20,
     "maxGenerateHeight": 128
   }

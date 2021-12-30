@@ -41,7 +41,7 @@
         {
           "type": "minecraft:item",
           "name": "ragemod:alien_dirt",
-          "weight": 40,
+          "weight": 30,
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -73,7 +73,7 @@
         {
           "type": "minecraft:item",
           "name": "ragemod:alien_food",
-          "weight": 1,
+          "weight": 3,
           "conditions": [
             {
               "condition": "minecraft:inverted",

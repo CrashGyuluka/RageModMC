@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class BukkFenceGateBlock extends FenceGateBlock {
 	public BukkFenceGateBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 4f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1f, 4f).requiresCorrectToolForDrops());
 		setRegistryName("beech_fence_gate");
 	}
 

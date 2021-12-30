@@ -159,6 +159,15 @@
         "maxGroup": 3,
         "weight": 7,
         "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:AlienMob"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 5,
+        "spawnType": "monster"
       }
     ]
   }

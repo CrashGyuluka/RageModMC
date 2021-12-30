@@ -9,7 +9,9 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -18,8 +20,10 @@ import java.util.Collections;
 
 public class KizukraStairsBlock extends StairBlock {
 	public KizukraStairsBlock() {
-		super(() -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(9f, 6f).dynamicShape()).defaultBlockState(),
-				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(9f, 6f).dynamicShape());
+		super(() -> new Block(
+				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 6f).requiresCorrectToolForDrops().dynamicShape())
+						.defaultBlockState(),
+				BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 6f).requiresCorrectToolForDrops().dynamicShape());
 		setRegistryName("kizukra_stairs");
 	}
 
@@ -31,6 +35,13 @@ public class KizukraStairsBlock extends StairBlock {
 	@Override
 	public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
 		return 15;
+	}
+
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 1;
+		return false;
 	}
 
 	@Override

@@ -1,0 +1,53 @@
+{
+  "_fv": 24,
+  "_type": "fluid",
+  "definition": {
+    "name": "Toxic Fluid",
+    "bucketName": "Toxic Fluid Bucket",
+    "textureStill": "--sav",
+    "textureFlowing": "--sav",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 5,
+    "levelDecrease": 1,
+    "slopeFindDistance": 3,
+    "spawnParticles": true,
+    "dripParticle": {
+      "value": "CUSTOM:Savaspart"
+    },
+    "flowStrength": 1.4000000000000001,
+    "luminosity": 1,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "temperature": 400,
+    "type": "LAVA",
+    "generateBucket": true,
+    "textureBucket": "--savb",
+    "creativeTab": {
+      "value": "CUSTOM:Ercek"
+    },
+    "emptySound": {
+      "value": "item.bucket.empty"
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 50.0,
+    "luminance": 2,
+    "lightOpacity": 0,
+    "emissiveRendering": true,
+    "tickRate": 10,
+    "flammability": 0,
+    "fireSpreadSpeed": 1,
+    "colorOnMap": "GREEN",
+    "frequencyOnChunks": 1,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Savasbiom"
+      }
+    ]
+  }
+}

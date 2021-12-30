@@ -1,7 +1,7 @@
 {
   "parent": "block/door_top",
   "textures": {
-    "bottom": "ragemod:blocks/robtai_door_bottom",
-    "top": "ragemod:blocks/robtai_door_top"
+    "bottom": "ragemod:blocks/robtai_door_bottom_new",
+    "top": "ragemod:blocks/robtai_door_top_new"
   }
 }

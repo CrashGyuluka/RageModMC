@@ -16,6 +16,15 @@
       },
       {
         "value": "CUSTOM:Hegyikoteglawall"
+      },
+      {
+        "value": "CUSTOM:AlpivBlockWall"
+      },
+      {
+        "value": "CUSTOM:Polishedalpivwall"
+      },
+      {
+        "value": "CUSTOM:AlpivBricksWall"
       }
     ],
     "functions": [],

@@ -39,7 +39,6 @@ import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.core.Registry;
 
-import net.mcreator.ragemod.init.RagemodModEntities;
 import net.mcreator.ragemod.init.RagemodModBlocks;
 import net.mcreator.ragemod.init.RagemodModBiomes;
 import net.mcreator.ragemod.RagemodMod;
@@ -60,6 +59,7 @@ public class BukkhighmountainBiome {
 		biomeGenerationSettings.addStructureStart(StructureFeatures.STRONGHOLD);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.MINESHAFT);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.JUNGLE_TEMPLE);
+		biomeGenerationSettings.addStructureStart(StructureFeatures.RUINED_PORTAL_MOUNTAIN);
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, register("trees", Feature.TREE
 				.configured((new TreeConfiguration.TreeConfigurationBuilder(new SimpleStateProvider(RagemodModBlocks.BUKK_LOG.defaultBlockState()),
 						new MegaJungleTrunkPlacer(5, 2, 19), new SimpleStateProvider(RagemodModBlocks.BUKK_LEAVES.defaultBlockState()),
@@ -113,7 +113,6 @@ public class BukkhighmountainBiome {
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.DONKEY, 1, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 2, 2, 3));
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(RagemodModEntities.TRADERRT, 1, 1, 1));
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.NONE).depth(3.9999999999999996f)
 				.scale(0.7f).temperature(0.25f).downfall(0.6f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();

@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "----amazonite",
+    "texture": "amazonite_ore",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -130,7 +130,7 @@
         "value": "Blocks.NETHERRACK"
       }
     ],
-    "frequencyPerChunks": 6,
+    "frequencyPerChunks": 8,
     "frequencyOnChunk": 3,
     "minGenerateHeight": 20,
     "maxGenerateHeight": 64

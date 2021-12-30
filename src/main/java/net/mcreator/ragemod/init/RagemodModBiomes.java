@@ -21,6 +21,7 @@ import net.mcreator.ragemod.world.biome.RichDesertBiome;
 import net.mcreator.ragemod.world.biome.RagetreebiomeBiome;
 import net.mcreator.ragemod.world.biome.GlowingOakForestMountainBiome;
 import net.mcreator.ragemod.world.biome.GlowingOakForestBiome;
+import net.mcreator.ragemod.world.biome.GlowingOakFieldeBiome;
 import net.mcreator.ragemod.world.biome.FloweryalienplainsBiome;
 import net.mcreator.ragemod.world.biome.BukkmountainBiome;
 import net.mcreator.ragemod.world.biome.BukkmeadowBiome;
@@ -44,7 +45,7 @@ public class RagemodModBiomes {
 	public static Biome BEECH_MEADOW = register("beech_meadow", BukkmeadowBiome.createBiome());
 	public static Biome BEECH_MOUNTAIN = register("beech_mountain", BukkhighmountainBiome.createBiome());
 	public static Biome BEECH_AMPLIFIED_MOUNTAIN = register("beech_amplified_mountain", BukkhighmountainvariatedBiome.createBiome());
-	public static Biome WATERBUKKBIOME = register("waterbukkbiome", WaterbukkbiomeBiome.createBiome());
+	public static Biome WATERED_BEECH_BIOME = register("watered_beech_biome", WaterbukkbiomeBiome.createBiome());
 	public static Biome ALIEN_HILLS = register("alien_hills", TotallyNotAlienBiome.createBiome());
 	public static Biome ALIEN_PLAINS = register("alien_plains", AlienplainsBiome.createBiome());
 	public static Biome ALIEN_LAKE = register("alien_lake", AlienlakeBiome.createBiome());
@@ -56,6 +57,7 @@ public class RagemodModBiomes {
 	public static Biome GLOWING_OAK_FOREST = register("glowing_oak_forest", GlowingOakForestBiome.createBiome());
 	public static Biome GLOWING_OAK_FOREST_MOUNTAIN = register("glowing_oak_forest_mountain", GlowingOakForestMountainBiome.createBiome());
 	public static Biome RICH_DESERT = register("rich_desert", RichDesertBiome.createBiome());
+	public static Biome GLOWING_OAK_FIELD = register("glowing_oak_field", GlowingOakFieldeBiome.createBiome());
 
 	private static Biome register(String registryname, Biome biome) {
 		REGISTRY.add(biome.setRegistryName(new ResourceLocation(RagemodMod.MODID, registryname)));
@@ -88,6 +90,7 @@ public class RagemodModBiomes {
 			GlowingOakForestBiome.init();
 			GlowingOakForestMountainBiome.init();
 			RichDesertBiome.init();
+			GlowingOakFieldeBiome.init();
 		});
 	}
 }

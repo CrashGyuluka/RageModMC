@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_down",
   "textures": {
-    "texture": "ragemod:blocks/robtai_log_side_new"
+    "texture": "ragemod:blocks/robtai_log_side5"
   }
 }

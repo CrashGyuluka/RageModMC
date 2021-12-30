@@ -25,8 +25,8 @@ import java.util.List;
 public class Bukkfastr5Feature extends Feature<NoneFeatureConfiguration> {
 	public static final Bukkfastr5Feature FEATURE = (Bukkfastr5Feature) new Bukkfastr5Feature().setRegistryName("ragemod:bukkfastr_5");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE.configured(FeatureConfiguration.NONE);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:waterbukkbiome"));
-	private final List<Block> base_blocks = List.of(Blocks.GRASS_BLOCK, Blocks.DIRT, Blocks.COARSE_DIRT, Blocks.STONE);
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:watered_beech_biome"));
+	private final List<Block> base_blocks = List.of(Blocks.STONE, Blocks.GRAVEL, Blocks.SAND);
 	private StructureTemplate template = null;
 
 	public Bukkfastr5Feature() {
@@ -45,9 +45,9 @@ public class Bukkfastr5Feature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "bukk2"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 100000) {
+		if ((context.random().nextInt(1000000) + 1) <= 500000) {
 			boolean anyPlaced = false;
-			int count = context.random().nextInt(2) + 1;
+			int count = context.random().nextInt(3) + 1;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);

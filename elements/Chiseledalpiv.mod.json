@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alpiv_chiseled_bottom3",
-    "textureTop": "alpiv_chiseled_bottom3",
-    "textureLeft": "alpiv_chiseled3",
-    "textureFront": "alpiv_chiseled3",
-    "textureRight": "alpiv_chiseled3",
-    "textureBack": "alpiv_chiseled3",
+    "texture": "chiseled_alpiv_bottom",
+    "textureTop": "chiseled_alpiv_bottom",
+    "textureLeft": "chiseled_alpiv",
+    "textureFront": "chiseled_alpiv",
+    "textureRight": "chiseled_alpiv",
+    "textureBack": "chiseled_alpiv",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -96,7 +96,7 @@
     },
     "luminance": 5,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"

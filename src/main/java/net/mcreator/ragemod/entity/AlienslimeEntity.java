@@ -39,8 +39,7 @@ import java.util.Set;
 
 @Mod.EventBusSubscriber
 public class AlienslimeEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("ragemod:alien_lake"),
-			new ResourceLocation("ragemod:alien_hills"), new ResourceLocation("ragemod:alien_plains"), new ResourceLocation("ragemod:alien_forest"),
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("ragemod:alien_forest"),
 			new ResourceLocation("ragemod:flowery_alien_plains"));
 
 	@SubscribeEvent

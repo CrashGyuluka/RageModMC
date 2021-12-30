@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alpiv_smooth",
+    "texture": "smooth_alpiv",
     "textureTop": "alpiv_smooth",
     "textureLeft": "alpiv_pillar",
     "textureFront": "alpiv_smooth",

@@ -49,8 +49,8 @@ import java.util.HashMap;
 import com.google.common.collect.ImmutableList;
 
 public class WaterbukkbiomeBiome {
-	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT.configured(new SurfaceBuilderBaseConfiguration(
-			Blocks.COARSE_DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.STONE.defaultBlockState()));
+	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT.configured(
+			new SurfaceBuilderBaseConfiguration(Blocks.DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.STONE.defaultBlockState()));
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
@@ -82,44 +82,40 @@ public class WaterbukkbiomeBiome {
 				register("disk_sand",
 						Feature.DISK
 								.configured(new DiskConfiguration(Blocks.SAND.defaultBlockState(), UniformInt.of(2, 4), 2,
-										ImmutableList.of(Blocks.COARSE_DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState())))
+										ImmutableList.of(Blocks.DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState())))
 								.decorated(Features.Decorators.TOP_SOLID_HEIGHTMAP_SQUARE).count(1)));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				register("disk_gravel",
 						Feature.DISK
 								.configured(new DiskConfiguration(Blocks.GRAVEL.defaultBlockState(), UniformInt.of(2, 3), 2,
-										ImmutableList.of(Blocks.COARSE_DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState())))
+										ImmutableList.of(Blocks.DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState())))
 								.decorated(Features.Decorators.TOP_SOLID_HEIGHTMAP_SQUARE).count(2)));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, register("patch_sugar_cane",
 				Feature.RANDOM_PATCH.configured(Features.Configs.SUGAR_CANE_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(1)));
 		BiomeDefaultFeatures.addDefaultCarvers(biomeGenerationSettings);
 		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
-		BiomeDefaultFeatures.addSurfaceFreezing(biomeGenerationSettings);
-		BiomeDefaultFeatures.addDefaultLakes(biomeGenerationSettings);
 		BiomeDefaultFeatures.addOceanCarvers(biomeGenerationSettings);
-		BiomeDefaultFeatures.addExtraEmeralds(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SALMON, 20, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.TROPICAL_FISH, 18, 1, 2));
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SQUID, 20, 2, 2));
-		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.GUARDIAN, 2, 1, 2));
-		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.NONE).depth(-1.7f).scale(0.1f)
+		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.NONE).depth(-0.2f).scale(0f)
 				.temperature(0.4f).downfall(0.7000000000000001f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();
 	}
 
 	public static void init() {
-		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new ResourceLocation(RagemodMod.MODID, "waterbukkbiome"), SURFACE_BUILDER);
+		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new ResourceLocation(RagemodMod.MODID, "watered_beech_biome"),
+				SURFACE_BUILDER);
 		CONFIGURED_FEATURES.forEach((resourceLocation, configuredFeature) -> Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, resourceLocation,
 				configuredFeature));
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(
-				ResourceKey.create(Registry.BIOME_REGISTRY, BuiltinRegistries.BIOME.getKey(RagemodModBiomes.WATERBUKKBIOME)), 1));
+				ResourceKey.create(Registry.BIOME_REGISTRY, BuiltinRegistries.BIOME.getKey(RagemodModBiomes.WATERED_BEECH_BIOME)), 1));
 	}
 
 	private static final Map<ResourceLocation, ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = new HashMap<>();
 
 	private static ConfiguredFeature<?, ?> register(String name, ConfiguredFeature<?, ?> configuredFeature) {
-		CONFIGURED_FEATURES.put(new ResourceLocation(RagemodMod.MODID, name + "_waterbukkbiome"), configuredFeature);
+		CONFIGURED_FEATURES.put(new ResourceLocation(RagemodMod.MODID, name + "_watered_beech_biome"), configuredFeature);
 		return configuredFeature;
 	}
 }

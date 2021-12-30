@@ -34,7 +34,7 @@
     ],
     "name": "Stripped Robtai Log",
     "specialInfo": [],
-    "hardness": 4.0,
+    "hardness": 2.0,
     "resistance": 2.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 3,
+    "breakHarvestLevel": -1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Rageparticle"
