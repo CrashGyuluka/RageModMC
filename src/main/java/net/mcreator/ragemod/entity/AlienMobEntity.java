@@ -46,7 +46,7 @@ public class AlienMobEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIEN_MOB, 6, 1, 3));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RagemodModEntities.ALIEN_MOB, 13, 2, 6));
 	}
 
 	public AlienMobEntity(FMLPlayMessages.SpawnEntity packet, Level world) {

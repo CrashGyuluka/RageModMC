@@ -7,23 +7,23 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:shulker_shell"
+      "item": "ragemod:amazonitrt"
     },
     "3": {
-      "item": "minecraft:shulker_shell"
+      "item": "ragemod:amazonitrt"
     },
     "4": {
       "item": "ragemod:parketta"
     },
     "5": {
-      "item": "minecraft:shulker_shell"
+      "item": "ragemod:amazonitrt"
     },
     "7": {
-      "item": "minecraft:shulker_shell"
+      "item": "ragemod:amazonitrt"
     }
   },
   "result": {
     "item": "ragemod:parklev",
-    "count": 3
+    "count": 1
   }
 }

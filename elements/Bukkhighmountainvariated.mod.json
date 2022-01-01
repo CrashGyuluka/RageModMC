@@ -7,7 +7,7 @@
       "value": "Blocks.GRASS"
     },
     "undergroundBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.DIRT#0"
     },
     "grassColor": {
       "value": -10838983,

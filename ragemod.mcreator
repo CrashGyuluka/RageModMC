@@ -839,114 +839,6 @@
       "path": "~/command"
     },
     {
-      "name": "Redgyfito",
-      "type": "recipe",
-      "sortid": 451,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "redgyfito",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito2",
-      "type": "recipe",
-      "sortid": 452,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_2",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito3",
-      "type": "recipe",
-      "sortid": 453,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_3",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito4",
-      "type": "recipe",
-      "sortid": 454,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_4",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito5",
-      "type": "recipe",
-      "sortid": 455,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_5",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito6",
-      "type": "recipe",
-      "sortid": 456,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_6",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito7",
-      "type": "recipe",
-      "sortid": 457,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_7",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito8",
-      "type": "recipe",
-      "sortid": 458,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_8",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Kito9",
-      "type": "recipe",
-      "sortid": 459,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "kito_9",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito9",
-      "type": "recipe",
-      "sortid": 460,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_9",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito10",
-      "type": "recipe",
-      "sortid": 461,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_10",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
-      "name": "Fito11",
-      "type": "recipe",
-      "sortid": 462,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fito_11",
-      "path": "~/jatek_kiegeszito/craft"
-    },
-    {
       "name": "EpitCommandExecuted",
       "type": "procedure",
       "sortid": 463,
@@ -1518,132 +1410,6 @@
       "path": "~/sav_teteju_block/craft"
     },
     {
-      "name": "Savasnyirfacraft",
-      "type": "recipe",
-      "sortid": 489,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnyirfacraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasakaccraft",
-      "type": "recipe",
-      "sortid": 490,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasakaccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasjunglecraft",
-      "type": "recipe",
-      "sortid": 491,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasjunglecraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasdarkoakcraft",
-      "type": "recipe",
-      "sortid": 492,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasdarkoakcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfenyocraft",
-      "type": "recipe",
-      "sortid": 493,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfenyocraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasakacplankcraft",
-      "type": "recipe",
-      "sortid": 494,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasakacplankcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasnyirfaplankcraft",
-      "type": "recipe",
-      "sortid": 495,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnyirfaplankcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savassotetoakplankscraft",
-      "type": "recipe",
-      "sortid": 496,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savassotetoakplankscraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasjungleplankscraft",
-      "type": "recipe",
-      "sortid": 497,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasjungleplankscraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspruceplankscraft",
-      "type": "recipe",
-      "sortid": 498,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspruceplankscraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspirosnetherfacraft",
-      "type": "recipe",
-      "sortid": 499,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspirosnetherfacraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskeknetherfacraft",
-      "type": "recipe",
-      "sortid": 500,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskeknetherfacraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspiroslogcraft",
-      "type": "recipe",
-      "sortid": 501,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspiroslogcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskeklogcraft",
-      "type": "recipe",
-      "sortid": 502,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskeklogcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
       "name": "Savasnetheritetormelekcraft",
       "type": "recipe",
       "sortid": 503,
@@ -1704,15 +1470,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "savasblackkoteglacraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasbedrockcraft",
-      "type": "recipe",
-      "sortid": 510,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasbedrockcraft",
       "path": "~/sav_teteju_block/craft"
     },
     {
@@ -1779,87 +1536,6 @@
       "path": "~/sav_teteju_block/craft"
     },
     {
-      "name": "Savasszenerccraft",
-      "type": "recipe",
-      "sortid": 518,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasszenerccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasdiamondorecraft",
-      "type": "recipe",
-      "sortid": 519,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasdiamondorecraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savassmaragderccraft",
-      "type": "recipe",
-      "sortid": 520,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savassmaragderccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasaranyerccraft",
-      "type": "recipe",
-      "sortid": 521,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasaranyerccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvaserccraft",
-      "type": "recipe",
-      "sortid": 522,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvaserccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslapiserccraft",
-      "type": "recipe",
-      "sortid": 523,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslapiserccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasnetheraranycraft",
-      "type": "recipe",
-      "sortid": 524,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnetheraranycraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskvarcerccraft",
-      "type": "recipe",
-      "sortid": 525,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskvarcerccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasredstoneerccraft",
-      "type": "recipe",
-      "sortid": 526,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasredstoneerccraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
       "name": "Savasobszidian",
       "type": "block",
       "sortid": 113,
@@ -1875,582 +1551,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "savasobszidiancraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savascryobszidiancraft",
-      "type": "recipe",
-      "sortid": 528,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savascryobszidiancraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfeketebetonporcraft",
-      "type": "recipe",
-      "sortid": 529,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfeketebetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfeketebetoncraft",
-      "type": "recipe",
-      "sortid": 530,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfeketebetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskekbetoncraft",
-      "type": "recipe",
-      "sortid": 531,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskekbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskekbetonporcraft",
-      "type": "recipe",
-      "sortid": 532,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskekbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasbarnabetoncraft",
-      "type": "recipe",
-      "sortid": 533,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasbarnabetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasbarnabetonporcraft",
-      "type": "recipe",
-      "sortid": 534,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasbarnabetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savascyanbetoncraft",
-      "type": "recipe",
-      "sortid": 535,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savascyanbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savascyanbetonporcraft",
-      "type": "recipe",
-      "sortid": 536,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savascyanbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasszurbetoncraft",
-      "type": "recipe",
-      "sortid": 537,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasszurbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasszurbetonporcraft",
-      "type": "recipe",
-      "sortid": 538,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasszurbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaszoldbetoncraft",
-      "type": "recipe",
-      "sortid": 539,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaszoldbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaszoldbetonporcraft",
-      "type": "recipe",
-      "sortid": 540,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaszoldbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilkekbetoncraft",
-      "type": "recipe",
-      "sortid": 541,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilkekbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilkekbetonporcraft",
-      "type": "recipe",
-      "sortid": 542,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilkekbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilszurbetoncraf",
-      "type": "recipe",
-      "sortid": 543,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilszurbetoncraf",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilszurbetonporcraft",
-      "type": "recipe",
-      "sortid": 544,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilszurbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslimebetoncraft",
-      "type": "recipe",
-      "sortid": 545,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslimebetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslimebetonporcraft",
-      "type": "recipe",
-      "sortid": 546,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslimebetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasmagbetoncraft",
-      "type": "recipe",
-      "sortid": 547,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasmagbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasmagbetonporcraft",
-      "type": "recipe",
-      "sortid": 548,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasmagbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasnarbetoncraft",
-      "type": "recipe",
-      "sortid": 549,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnarbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasnarbetonporcraft",
-      "type": "recipe",
-      "sortid": 550,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnarbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspinkbetoncraft",
-      "type": "recipe",
-      "sortid": 551,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspinkbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspinkbetonporcraft",
-      "type": "recipe",
-      "sortid": 552,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspinkbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslilabetoncraft",
-      "type": "recipe",
-      "sortid": 553,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslilabetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslilabetonporcraft",
-      "type": "recipe",
-      "sortid": 554,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslilabetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasredbetoncraft",
-      "type": "recipe",
-      "sortid": 555,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasredbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasredbetonporcraft",
-      "type": "recipe",
-      "sortid": 556,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasredbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfeherbetoncraft",
-      "type": "recipe",
-      "sortid": 557,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfeherbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfeherbetonporcraft",
-      "type": "recipe",
-      "sortid": 558,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfeherbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savassargbetoncraft",
-      "type": "recipe",
-      "sortid": 559,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savassargbetoncraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savassargbetonporcraft",
-      "type": "recipe",
-      "sortid": 560,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savassargbetonporcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfekgterracraft",
-      "type": "recipe",
-      "sortid": 561,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfekgterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskeksterracraft",
-      "type": "recipe",
-      "sortid": 562,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskeksterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasbarnasterracraft",
-      "type": "recipe",
-      "sortid": 563,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasbarnasterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savascyansterracraft",
-      "type": "recipe",
-      "sortid": 564,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savascyansterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasszursterracraft",
-      "type": "recipe",
-      "sortid": 565,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasszursterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaszoldsterracrfat",
-      "type": "recipe",
-      "sortid": 566,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaszoldsterracrfat",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilkeksterracraft",
-      "type": "recipe",
-      "sortid": 567,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilkeksterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilszursterracraft",
-      "type": "recipe",
-      "sortid": 568,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilszursterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilszursterracraft2",
-      "type": "recipe",
-      "sortid": 569,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilszursterracraft_2",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslimesterracraft",
-      "type": "recipe",
-      "sortid": 570,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslimesterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasnarsterracraft",
-      "type": "recipe",
-      "sortid": 571,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnarsterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspinksterracraft",
-      "type": "recipe",
-      "sortid": 572,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspinksterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslilasterracraft",
-      "type": "recipe",
-      "sortid": 573,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslilasterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspirossterracraft",
-      "type": "recipe",
-      "sortid": 574,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspirossterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfehersterracraft",
-      "type": "recipe",
-      "sortid": 575,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfehersterracraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfekterrcraft",
-      "type": "recipe",
-      "sortid": 576,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfekterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaskekterrcraft",
-      "type": "recipe",
-      "sortid": 577,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskekterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasbarterrcraft",
-      "type": "recipe",
-      "sortid": 578,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasbarterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savascyanterrcraft",
-      "type": "recipe",
-      "sortid": 579,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savascyanterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasszurterrcraft",
-      "type": "recipe",
-      "sortid": 580,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasszurterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaszoldterrcraft",
-      "type": "recipe",
-      "sortid": 581,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaszoldterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilkekterrcraft",
-      "type": "recipe",
-      "sortid": 582,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilkekterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasvilszurterrcraft",
-      "type": "recipe",
-      "sortid": 583,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvilszurterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslimeterrcraft",
-      "type": "recipe",
-      "sortid": 584,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslimeterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasmageterrcraft",
-      "type": "recipe",
-      "sortid": 585,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasmageterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasnaraterrcraft",
-      "type": "recipe",
-      "sortid": 586,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnaraterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaspinkterrcraft",
-      "type": "recipe",
-      "sortid": 587,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaspinkterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savaslilaterrcraft",
-      "type": "recipe",
-      "sortid": 588,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslilaterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasredterrcraft",
-      "type": "recipe",
-      "sortid": 589,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasredterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savasfeherterrcraft",
-      "type": "recipe",
-      "sortid": 590,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasfeherterrcraft",
-      "path": "~/sav_teteju_block/craft"
-    },
-    {
-      "name": "Savassargaterrcraft",
-      "type": "recipe",
-      "sortid": 591,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savassargaterrcraft",
       "path": "~/sav_teteju_block/craft"
     },
     {
@@ -3735,24 +2835,6 @@
       "path": "~/tabok"
     },
     {
-      "name": "Amazonitcraft",
-      "type": "recipe",
-      "sortid": 662,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amazonitcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Amazonitcraftb",
-      "type": "recipe",
-      "sortid": 663,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amazonitcraftb",
-      "path": "~/ercek/craft"
-    },
-    {
       "name": "Toroottegla",
       "type": "block",
       "sortid": 79,
@@ -3963,15 +3045,6 @@
       "path": "~/ercek/producer"
     },
     {
-      "name": "Amazonitcsakanycraft",
-      "type": "recipe",
-      "sortid": 673,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amazonitcsakanycraft",
-      "path": "~/ercek/craft"
-    },
-    {
       "name": "Amazsavasoproc",
       "type": "procedure",
       "sortid": 674,
@@ -4038,114 +3111,6 @@
       "path": "~/ercek/producer"
     },
     {
-      "name": "Apofillitblockcraft",
-      "type": "recipe",
-      "sortid": 676,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "apofillitblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Apofillitbcraft",
-      "type": "recipe",
-      "sortid": 677,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "apofillitbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Azuritblockcraft",
-      "type": "recipe",
-      "sortid": 678,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "azuritblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Azuritbcraft",
-      "type": "recipe",
-      "sortid": 679,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "azuritbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Bizmutblockcraft",
-      "type": "recipe",
-      "sortid": 680,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bizmutblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Bizmutbcraft",
-      "type": "recipe",
-      "sortid": 681,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bizmutbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Achatblockcraft",
-      "type": "recipe",
-      "sortid": 682,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "achatblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Achatbcraft",
-      "type": "recipe",
-      "sortid": 683,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "achatbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Adularblockcraft",
-      "type": "recipe",
-      "sortid": 684,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "adularblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Adularbcraft",
-      "type": "recipe",
-      "sortid": 685,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "adularbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Aktinolitblockcraft",
-      "type": "recipe",
-      "sortid": 686,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aktinolitblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Aktinolitbcraft",
-      "type": "recipe",
-      "sortid": 687,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aktinolitbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
       "name": "Opal",
       "type": "item",
       "sortid": 14,
@@ -4179,60 +3144,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "opalcook_2",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Opalblockcraft",
-      "type": "recipe",
-      "sortid": 690,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "opalblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Opalbcraft",
-      "type": "recipe",
-      "sortid": 691,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "opalbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Anapaitblockcraft",
-      "type": "recipe",
-      "sortid": 692,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "anapaitblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Anapaitbcraft",
-      "type": "recipe",
-      "sortid": 693,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "anapaitbcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Cerusszitblockcraft",
-      "type": "recipe",
-      "sortid": 694,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cerusszitblockcraft",
-      "path": "~/ercek/craft"
-    },
-    {
-      "name": "Cerusszitbcraft",
-      "type": "recipe",
-      "sortid": 695,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cerusszitbcraft",
       "path": "~/ercek/craft"
     },
     {
@@ -4727,15 +3638,6 @@
       "locked_code": false,
       "registry_name": "parkvakcraft",
       "path": "~/parkour/craft"
-    },
-    {
-      "name": "Portalcraft",
-      "type": "recipe",
-      "sortid": 720,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "portalcraft",
-      "path": "~/jatek_kiegeszito/craft"
     },
     {
       "name": "Ragegyuru",
@@ -6097,15 +4999,6 @@
       "locked_code": false,
       "registry_name": "stick_3",
       "path": "~/fa_fajtak/marokriksa"
-    },
-    {
-      "name": "Fakitocraft",
-      "type": "recipe",
-      "sortid": 783,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fakitocraft",
-      "path": "~/jatek_kiegeszito/craft"
     },
     {
       "name": "TraderrtOnInitialEntitySpawn",
@@ -9694,15 +8587,6 @@
       "path": "~/rageium_alapu/loottable"
     },
     {
-      "name": "Savasszenercloott",
-      "type": "loottable",
-      "sortid": 1063,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasszenercloott",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
       "name": "Savercloott",
       "type": "loottable",
       "sortid": 1064,
@@ -9710,78 +8594,6 @@
       "locked_code": false,
       "registry_name": "savercloott",
       "path": "~/sav/loottable"
-    },
-    {
-      "name": "Savasdiamondoreloott",
-      "type": "loottable",
-      "sortid": 1065,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasdiamondoreloott",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savassmaragdercloott",
-      "type": "loottable",
-      "sortid": 1066,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savassmaragdercloott",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savasaranyercloott",
-      "type": "loottable",
-      "sortid": 1067,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasaranyercloott",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savasvasercloot",
-      "type": "loottable",
-      "sortid": 1068,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasvasercloot",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savasnetheraranyloot",
-      "type": "loottable",
-      "sortid": 1069,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasnetheraranyloot",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savaslapisercloot",
-      "type": "loottable",
-      "sortid": 1070,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaslapisercloot",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savaskvarcercloot",
-      "type": "loottable",
-      "sortid": 1071,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savaskvarcercloot",
-      "path": "~/sav_teteju_block/loottable"
-    },
-    {
-      "name": "Savasredstoneercloot",
-      "type": "loottable",
-      "sortid": 1072,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "savasredstoneercloot",
-      "path": "~/sav_teteju_block/loottable"
     },
     {
       "name": "Opalstr2",
@@ -10773,15 +9585,6 @@
       "path": "~/fa_fajtak/bukk/biome"
     },
     {
-      "name": "Waterbukkbiome",
-      "type": "biome",
-      "sortid": 1150,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "watered_beech_biome",
-      "path": "~/fa_fajtak/bukk/biome"
-    },
-    {
       "name": "Bukkfastr5",
       "type": "structure",
       "sortid": 1151,
@@ -10926,15 +9729,6 @@
       "path": "~/dimensions"
     },
     {
-      "name": "Cvexoreloot",
-      "type": "loottable",
-      "sortid": 1161,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cvexoreloot",
-      "path": "~/dimensions/egyeb"
-    },
-    {
       "name": "Cvexblock",
       "type": "block",
       "sortid": 39,
@@ -10999,15 +9793,6 @@
       "locked_code": false,
       "registry_name": "marokriksaaliendimension",
       "path": "~/fa_fajtak/marokriksa/str"
-    },
-    {
-      "name": "Cvexportalcraft",
-      "type": "recipe",
-      "sortid": 1167,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cvexportalcraft",
-      "path": "~/dimensions/craft"
     },
     {
       "name": "Marokriksaalienstr",
@@ -17653,10 +16438,10 @@
       "block.ragemod.strhatarolo_6": "DEVBLOCK:RandomB6",
       "entity.ragemod.flylien": "Flyilen",
       "block.ragemod.strhatarolo_3": "DEVBLOCK:RandomB3",
-      "item.ragemod.alienslime_spawn_egg": "Alien Slime Spawn Egg",
-      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
-      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
       "biome.ragemod.beech_amplified_mountain": "Beech Amplified Mountain",
+      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
+      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
+      "item.ragemod.alienslime_spawn_egg": "Alien Slime Spawn Egg",
       "block.ragemod.hegyikoteglaslab": "Mountain Stone Bricks Slab",
       "block.ragemod.strhatarolo_5": "DEVBLOCK:RandomB5",
       "block.ragemod.strhatarolo_4": "DEVBLOCK:RandomB4",
@@ -17666,9 +16451,9 @@
       "block.ragemod.red_glowingcavemushroom": "Red Glowing Cavemushroom",
       "advancements.adv_3.descr": "Have at least 6 RagePotions in your inventory at the same time!",
       "enchantment.ragemod.vedelemplus": "LastHelp",
-      "advancements.adv_1.title": "Don\u0027t rage!",
-      "block.ragemod.kizukra_pressure_plate": "Kizukra Block Pressure Plate",
       "block.ragemod.flowery_elderberry_leaves": "Flowery Elderberry Leaves",
+      "block.ragemod.kizukra_pressure_plate": "Kizukra Block Pressure Plate",
+      "advancements.adv_1.title": "Don\u0027t rage!",
       "block.ragemod.beech_stairs": "Beech Stairs",
       "advancements.adv_30.title": "Hmm, Juicy!",
       "block.ragemod.hanging_redcaveplant": "Hanging Red Caveplant",
@@ -17705,7 +16490,6 @@
       "block.ragemod.robtai_wood": "Robtai Wood",
       "advancements.adv_31.descr": "Place down 100 Rageium Bricks blocks!",
       "block.ragemod.alien_mushroom": "Alien Mushroom",
-      "biome.ragemod.watered_beech_biome": "Watery Beech Biome",
       "item.ragemod.savasfejsze": "Toxic Axe",
       "effect.megamine_effect": "MegaMine",
       "block.ragemod.savasdiorit": "Toxic Diorite",
@@ -18261,10 +17045,10 @@
       "block.ragemod.strhatarolo_6": "DEVBLOCK:RandomB6",
       "entity.ragemod.flylien": "Flyilen",
       "block.ragemod.strhatarolo_3": "DEVBLOCK:RandomB3",
-      "item.ragemod.alienslime_spawn_egg": "Alien Slime Spawn Egg",
-      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
-      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
       "biome.ragemod.beech_amplified_mountain": "Beech Amplified Mountain",
+      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
+      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
+      "item.ragemod.alienslime_spawn_egg": "Alien Slime Spawn Egg",
       "block.ragemod.hegyikoteglaslab": "Mountain Stone Bricks Slab",
       "block.ragemod.strhatarolo_5": "DEVBLOCK:RandomB5",
       "block.ragemod.strhatarolo_4": "DEVBLOCK:RandomB4",
@@ -18274,9 +17058,9 @@
       "block.ragemod.red_glowingcavemushroom": "Red Glowing Cavemushroom",
       "advancements.adv_3.descr": "Have at least 6 RagePotions in your inventory at the same time!",
       "enchantment.ragemod.vedelemplus": "LastHelp",
-      "advancements.adv_1.title": "Don\u0027t rage!",
-      "block.ragemod.kizukra_pressure_plate": "Kizukra Block Pressure Plate",
       "block.ragemod.flowery_elderberry_leaves": "Flowery Elderberry Leaves",
+      "block.ragemod.kizukra_pressure_plate": "Kizukra Block Pressure Plate",
+      "advancements.adv_1.title": "Don\u0027t rage!",
       "block.ragemod.beech_stairs": "Beech Stairs",
       "advancements.adv_30.title": "Hmm, Juicy!",
       "block.ragemod.hanging_redcaveplant": "Hanging Red Caveplant",
@@ -18313,7 +17097,6 @@
       "block.ragemod.robtai_wood": "Robtai Wood",
       "advancements.adv_31.descr": "Place down 100 Rageium Bricks blocks!",
       "block.ragemod.alien_mushroom": "Alien Mushroom",
-      "biome.ragemod.watered_beech_biome": "Watery Beech Biome",
       "item.ragemod.savasfejsze": "Toxic Axe",
       "effect.megamine_effect": "MegaMine",
       "block.ragemod.savasdiorit": "Toxic Diorite",
@@ -19346,7 +18129,7 @@
   "workspaceSettings": {
     "modid": "ragemod",
     "modName": "RageMod",
-    "version": "1.1 Snapshot 21w52a",
+    "version": "1.1 Pre-release2",
     "description": "I hope you will enjoy this mod! Main dev: CrashGyuluka, some textures: Lyof",
     "author": "CrashGyuluka, Lyof",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/ragemod-by-rageteam",

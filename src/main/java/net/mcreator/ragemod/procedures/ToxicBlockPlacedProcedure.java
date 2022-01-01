@@ -347,64 +347,64 @@ public class ToxicBlockPlacedProcedure {
 					}
 				}
 			}
-		}
-		if ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace1 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace2 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace3 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace4 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace5 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace6 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace7 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace8 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace9 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace10 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace11 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace12 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace13 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace14 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace15 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace16 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace17 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace18 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace19 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace20 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace21 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace22 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace23 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace24 == true
-				&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace25 == true) {
-			if (entity instanceof ServerPlayer _player) {
-				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ragemod:adv_37"));
-				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-				if (!_ap.isDone()) {
-					Iterator _iterator = _ap.getRemainingCriteria().iterator();
-					while (_iterator.hasNext())
-						_player.getAdvancements().award(_adv, (String) _iterator.next());
+			if ((entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace1 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace2 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace3 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace4 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace5 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace6 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace7 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace8 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace9 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace10 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace11 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace12 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace13 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace14 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace15 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace16 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace17 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace18 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace19 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace20 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace21 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace22 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace23 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace24 == true
+					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace25 == true) {
+				if (entity instanceof ServerPlayer _player) {
+					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ragemod:adv_37"));
+					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemainingCriteria().iterator();
+						while (_iterator.hasNext())
+							_player.getAdvancements().award(_adv, (String) _iterator.next());
+					}
 				}
 			}
 		}

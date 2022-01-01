@@ -46,7 +46,10 @@ public class GlowingOakFieldeBiome {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
 				.foliageColorOverride(-12030686).grassColorOverride(-4287953).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder().surfaceBuilder(SURFACE_BUILDER);
+		biomeGenerationSettings.addStructureStart(StructureFeatures.MINESHAFT);
+		biomeGenerationSettings.addStructureStart(StructureFeatures.PILLAGER_OUTPOST);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.VILLAGE_PLAINS);
+		biomeGenerationSettings.addStructureStart(StructureFeatures.RUINED_PORTAL_STANDARD);
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				register("grass",
 						Feature.RANDOM_PATCH.configured(Features.Configs.DEFAULT_GRASS_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE)
@@ -88,7 +91,7 @@ public class GlowingOakFieldeBiome {
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 10, 1, 3));
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 5, 1, 2));
-		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.PLAINS).depth(0.1f).scale(0.1f)
+		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.PLAINS).depth(0.1f).scale(0f)
 				.temperature(0.5f).downfall(0.6f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();
 	}

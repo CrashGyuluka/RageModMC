@@ -115,7 +115,5 @@ public class Modelalien_mob<T extends Entity> extends EntityModel<T> {
 			float headPitch) {
 		this.head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.head.xRot = headPitch / (180F / (float) Math.PI);
-		this.legb.zRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-		this.legj.zRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 	}
 }

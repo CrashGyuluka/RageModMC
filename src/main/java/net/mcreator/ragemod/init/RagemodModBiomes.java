@@ -12,7 +12,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.resources.ResourceLocation;
 
-import net.mcreator.ragemod.world.biome.WaterbukkbiomeBiome;
 import net.mcreator.ragemod.world.biome.TotallyNotAlienBiome;
 import net.mcreator.ragemod.world.biome.SpikyalienplainsBiome;
 import net.mcreator.ragemod.world.biome.SequoiaforestBiome;
@@ -45,7 +44,6 @@ public class RagemodModBiomes {
 	public static Biome BEECH_MEADOW = register("beech_meadow", BukkmeadowBiome.createBiome());
 	public static Biome BEECH_MOUNTAIN = register("beech_mountain", BukkhighmountainBiome.createBiome());
 	public static Biome BEECH_AMPLIFIED_MOUNTAIN = register("beech_amplified_mountain", BukkhighmountainvariatedBiome.createBiome());
-	public static Biome WATERED_BEECH_BIOME = register("watered_beech_biome", WaterbukkbiomeBiome.createBiome());
 	public static Biome ALIEN_HILLS = register("alien_hills", TotallyNotAlienBiome.createBiome());
 	public static Biome ALIEN_PLAINS = register("alien_plains", AlienplainsBiome.createBiome());
 	public static Biome ALIEN_LAKE = register("alien_lake", AlienlakeBiome.createBiome());
@@ -78,7 +76,6 @@ public class RagemodModBiomes {
 			BukkmeadowBiome.init();
 			BukkhighmountainBiome.init();
 			BukkhighmountainvariatedBiome.init();
-			WaterbukkbiomeBiome.init();
 			TotallyNotAlienBiome.init();
 			AlienplainsBiome.init();
 			AlienlakeBiome.init();
