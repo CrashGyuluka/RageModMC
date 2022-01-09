@@ -66,6 +66,7 @@ import net.mcreator.ragemod.block.SequoiaLogBlock;
 import net.mcreator.ragemod.block.SequoiaLeavesBlock;
 import net.mcreator.ragemod.block.SequoiaFenceGateBlock;
 import net.mcreator.ragemod.block.SequoiaFenceBlock;
+import net.mcreator.ragemod.block.SeqAir1Block;
 import net.mcreator.ragemod.block.SecretboomkoBlock;
 import net.mcreator.ragemod.block.SavercBlock;
 import net.mcreator.ragemod.block.SavblockokBlock;
@@ -289,7 +290,6 @@ import net.mcreator.ragemod.block.Fa4sapBlock;
 import net.mcreator.ragemod.block.Fa3sapBlock;
 import net.mcreator.ragemod.block.EpitoblockBlock;
 import net.mcreator.ragemod.block.ElderberryleavesBlock;
-import net.mcreator.ragemod.block.DestroyablealiensoildevBlock;
 import net.mcreator.ragemod.block.DeepslateazuritoreBlock;
 import net.mcreator.ragemod.block.DeepslateanapaitoreBlock;
 import net.mcreator.ragemod.block.DeepslateaktinolitoreBlock;
@@ -700,7 +700,6 @@ public class RagemodModBlocks {
 	public static final Block STRUCTUREHATAROLO_1 = register(new Structurehatarolo1Block());
 	public static final Block STURTUREPLACER_1 = register(new Sturtureplacer1Block());
 	public static final Block STRUCTUREPLACER_2 = register(new Structureplacer2Block());
-	public static final Block DESTROYABLEALIENSOILDEV = register(new DestroyablealiensoildevBlock());
 	public static final Block HANGINGALIENOFF_1 = register(new Hangingalienoff1Block());
 	public static final Block ALIENTRAPBLOCKLIT = register(new AlientrapblocklitBlock());
 	public static final Block ALIENSHROOMDEV = register(new AlienshroomdevBlock());
@@ -740,6 +739,7 @@ public class RagemodModBlocks {
 	public static final Block HANGING_GLOWING_MAGENTA_CAVEPLANT = register(new HangingGlowingMagentaCaveplantBlock());
 	public static final Block ALIEN_AIR = register(new AlienAirBlock());
 	public static final Block RAGE_AIR = register(new RageAirBlock());
+	public static final Block SEQ_AIR_1 = register(new SeqAir1Block());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -850,6 +850,7 @@ public class RagemodModBlocks {
 			HangingGlowingMagentaCaveplantBlock.registerRenderLayer();
 			AlienAirBlock.registerRenderLayer();
 			RageAirBlock.registerRenderLayer();
+			SeqAir1Block.registerRenderLayer();
 		}
 
 		@SubscribeEvent

@@ -5,7 +5,7 @@
     "structure": "a_glow_oak2",
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 45000,
+    "spawnProbability": 20000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 3,
     "spawnLocation": "Ground",

@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_down",
   "textures": {
-    "texture": "ragemod:blocks/kizukra_planks"
+    "texture": "ragemod:blocks/kizukra_planks_newest11"
   }
 }

@@ -137,6 +137,7 @@ import net.mcreator.ragemod.world.features.Seqfol4Feature;
 import net.mcreator.ragemod.world.features.Seqfol3Feature;
 import net.mcreator.ragemod.world.features.Seqfol2Feature;
 import net.mcreator.ragemod.world.features.Seqfol1Feature;
+import net.mcreator.ragemod.world.features.SeqAirStrFeature;
 import net.mcreator.ragemod.world.features.SavstructFeature;
 import net.mcreator.ragemod.world.features.Richdesertkor2Feature;
 import net.mcreator.ragemod.world.features.Richdesertkor1Feature;
@@ -441,7 +442,7 @@ public class RagemodModFeatures {
 		REGISTRY.put(Str3Feature.FEATURE,
 				new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, Str3Feature.GENERATE_BIOMES, Str3Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(Str5Feature.FEATURE,
-				new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, Str5Feature.GENERATE_BIOMES, Str5Feature.CONFIGURED_FEATURE));
+				new FeatureRegistration(GenerationStep.Decoration.RAW_GENERATION, Str5Feature.GENERATE_BIOMES, Str5Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(Str6Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, Str6Feature.GENERATE_BIOMES,
 				Str6Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(Str7Feature.FEATURE,
@@ -730,6 +731,8 @@ public class RagemodModFeatures {
 				GlowingFieldBush3Feature.GENERATE_BIOMES, GlowingFieldBush3Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(GlowingFieldBush4Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
 				GlowingFieldBush4Feature.GENERATE_BIOMES, GlowingFieldBush4Feature.CONFIGURED_FEATURE));
+		REGISTRY.put(SeqAirStrFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, SeqAirStrFeature.GENERATE_BIOMES,
+				SeqAirStrFeature.CONFIGURED_FEATURE));
 	}
 
 	@SubscribeEvent

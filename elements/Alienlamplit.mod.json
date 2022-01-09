@@ -48,7 +48,7 @@
     "dropAmount": 1,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": false,
+    "plantsGrowOn": true,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
@@ -131,14 +131,11 @@
     "blocksToReplace": [
       {
         "value": "CUSTOM:Aliensoil"
-      },
-      {
-        "value": "CUSTOM:Destroyablealiensoildev"
       }
     ],
     "frequencyPerChunks": 1,
     "frequencyOnChunk": 1,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "maxGenerateHeight": 100
   }
 }

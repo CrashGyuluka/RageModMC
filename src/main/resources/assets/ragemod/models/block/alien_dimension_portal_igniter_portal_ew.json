@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "ragemod:blocks/portal_block3_animated",
-    "portal": "ragemod:blocks/portal_block3_animated"
+    "particle": "ragemod:blocks/obszontium_portal_animated",
+    "portal": "ragemod:blocks/obszontium_portal_animated"
   },
   "elements": [
     {

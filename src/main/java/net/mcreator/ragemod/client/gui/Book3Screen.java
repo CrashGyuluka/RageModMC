@@ -55,7 +55,7 @@ public class Book3Screen extends AbstractContainerScreen<Book3Menu> {
 		this.blit(ms, this.leftPos + 16, this.topPos + 21, 0, 0, 64, 32, 64, 32);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ragemod:textures/rageium_block2.png"));
-		this.blit(ms, this.leftPos + 7, this.topPos + 22, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 7, this.topPos + 22, 0, 0, -1, -1, -1, -1);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ragemod:textures/rageium.png"));
 		this.blit(ms, this.leftPos + 81, this.topPos + 13, 0, 0, 16, 16, 16, 16);

@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:RageBoosSpawner"
+      "value": "CUSTOM:AlienDimension"
     },
     "name": "ragebossspawneggcraft",
     "namespace": "mod"

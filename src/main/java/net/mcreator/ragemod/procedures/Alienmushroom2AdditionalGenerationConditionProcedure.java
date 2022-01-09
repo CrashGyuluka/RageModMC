@@ -11,7 +11,6 @@ public class Alienmushroom2AdditionalGenerationConditionProcedure {
 				&& ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == RagemodModBlocks.HEGYIKO_1
 						|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == RagemodModBlocks.ALIEN_SOIL
 						|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == RagemodModBlocks.ALIEN_TRAP
-						|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == RagemodModBlocks.DESTROYABLEALIENSOILDEV
 						|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == RagemodModBlocks.ALIENTRAPBLOCKLIT)) {
 			return true;
 		}

@@ -46,7 +46,7 @@ public class GlowingFieldTree2Feature extends Feature<NoneFeatureConfiguration> 
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "a_glow_oak2"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 45000) {
+		if ((context.random().nextInt(1000000) + 1) <= 20000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(3) + 1;
 			for (int a = 0; a < count; a++) {

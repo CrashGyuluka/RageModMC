@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alien_soil_top",
+    "texture": "alien_grass_top",
     "textureTop": "alien_soil_top",
     "textureLeft": "alien_soil",
     "textureFront": "alien_soil",
@@ -48,7 +48,7 @@
     "dropAmount": 1,
     "useLootTableForDrops": true,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": false,
+    "plantsGrowOn": true,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {

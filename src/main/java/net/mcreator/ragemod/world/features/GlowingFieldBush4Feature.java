@@ -46,7 +46,7 @@ public class GlowingFieldBush4Feature extends Feature<NoneFeatureConfiguration> 
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "glowing_bush4"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 3700) {
+		if ((context.random().nextInt(1000000) + 1) <= 20000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(2) + 1;
 			for (int a = 0; a < count; a++) {

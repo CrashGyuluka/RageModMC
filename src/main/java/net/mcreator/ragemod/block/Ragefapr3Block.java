@@ -54,4 +54,5 @@ public class Ragefapr3Block extends PressurePlateBlock {
 	public static void registerRenderLayer() {
 		ItemBlockRenderTypes.setRenderLayer(RagemodModBlocks.RED_RAGEWOOD_PRESSURE_PLATE, renderType -> renderType == RenderType.cutout());
 	}
+
 }

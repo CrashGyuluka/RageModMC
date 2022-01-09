@@ -45,7 +45,7 @@ public class YellowcaveairstrFeature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "yellowcave_air_str"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 5000) {
+		if ((context.random().nextInt(1000000) + 1) <= 18000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

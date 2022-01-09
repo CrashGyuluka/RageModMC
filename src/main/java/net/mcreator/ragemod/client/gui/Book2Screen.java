@@ -82,7 +82,7 @@ public class Book2Screen extends AbstractContainerScreen<Book2Menu> {
 		this.blit(ms, this.leftPos + 45, this.topPos + 22, 0, 0, 64, 32, 64, 32);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("ragemod:textures/rageium_block2.png"));
-		this.blit(ms, this.leftPos + 101, this.topPos + 23, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 101, this.topPos + 23, 0, 0, -1, -1, -1, -1);
 
 		RenderSystem.disableBlend();
 	}

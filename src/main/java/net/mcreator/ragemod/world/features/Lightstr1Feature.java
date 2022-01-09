@@ -29,7 +29,7 @@ public class Lightstr1Feature extends Feature<NoneFeatureConfiguration> {
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE.configured(FeatureConfiguration.NONE);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:alien_hills"),
 			new ResourceLocation("ragemod:alien_plains"), new ResourceLocation("ragemod:alien_forest"));
-	private final List<Block> base_blocks = List.of(RagemodModBlocks.ALIEN_SOIL, RagemodModBlocks.DESTROYABLEALIENSOILDEV);
+	private final List<Block> base_blocks = List.of(RagemodModBlocks.ALIEN_SOIL);
 	private StructureTemplate template = null;
 
 	public Lightstr1Feature() {

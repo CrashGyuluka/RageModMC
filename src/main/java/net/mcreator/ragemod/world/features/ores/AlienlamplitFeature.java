@@ -26,7 +26,7 @@ public class AlienlamplitFeature extends OreFeature {
 	public static final AlienlamplitFeature FEATURE = (AlienlamplitFeature) new AlienlamplitFeature().setRegistryName("ragemod:lit_alien_lamp");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(new OreConfiguration(AlienlamplitFeatureRuleTest.INSTANCE, RagemodModBlocks.LIT_ALIEN_LAMP.defaultBlockState(), 1))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)))).squared().count(1);
+			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100)))).squared().count(1);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 
 	public AlienlamplitFeature() {
@@ -53,8 +53,6 @@ public class AlienlamplitFeature extends OreFeature {
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == RagemodModBlocks.ALIEN_SOIL)
-				blockCriteria = true;
-			if (blockAt.getBlock() == RagemodModBlocks.DESTROYABLEALIENSOILDEV)
 				blockCriteria = true;
 			return blockCriteria;
 		}

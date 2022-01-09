@@ -43,8 +43,8 @@ import java.util.HashMap;
 import com.google.common.collect.ImmutableList;
 
 public class SequoiaforestBiome {
-	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT.configured(new SurfaceBuilderBaseConfiguration(
-			Blocks.PODZOL.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.STONE.defaultBlockState()));
+	private static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = SurfaceBuilder.DEFAULT.configured(
+			new SurfaceBuilderBaseConfiguration(Blocks.PODZOL.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.DIRT.defaultBlockState()));
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
@@ -87,13 +87,13 @@ public class SequoiaforestBiome {
 				register("disk_sand",
 						Feature.DISK
 								.configured(new DiskConfiguration(Blocks.SAND.defaultBlockState(), UniformInt.of(2, 4), 2,
-										ImmutableList.of(Blocks.PODZOL.defaultBlockState(), Blocks.STONE.defaultBlockState())))
+										ImmutableList.of(Blocks.PODZOL.defaultBlockState(), Blocks.DIRT.defaultBlockState())))
 								.decorated(Features.Decorators.TOP_SOLID_HEIGHTMAP_SQUARE).count(1)));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				register("disk_gravel",
 						Feature.DISK
 								.configured(new DiskConfiguration(Blocks.GRAVEL.defaultBlockState(), UniformInt.of(2, 3), 2,
-										ImmutableList.of(Blocks.PODZOL.defaultBlockState(), Blocks.STONE.defaultBlockState())))
+										ImmutableList.of(Blocks.PODZOL.defaultBlockState(), Blocks.DIRT.defaultBlockState())))
 								.decorated(Features.Decorators.TOP_SOLID_HEIGHTMAP_SQUARE).count(1)));
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, register("patch_sugar_cane",
 				Feature.RANDOM_PATCH.configured(Features.Configs.SUGAR_CANE_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(1)));

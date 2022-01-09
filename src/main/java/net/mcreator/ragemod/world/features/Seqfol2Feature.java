@@ -45,7 +45,7 @@ public class Seqfol2Feature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "seq_fol2"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 300000) {
+		if ((context.random().nextInt(1000000) + 1) <= 200000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(5) + 12;
 			for (int a = 0; a < count; a++) {

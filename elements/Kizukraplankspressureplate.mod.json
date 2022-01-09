@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "kizukra_planks",
+    "texture": "kizukra_planks_newest11",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Kizukra Block Pressure Plate",
+    "name": "Kizukra Pressure Plate",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 4.0,

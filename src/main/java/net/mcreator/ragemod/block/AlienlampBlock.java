@@ -1,6 +1,8 @@
 
 package net.mcreator.ragemod.block;
 
+import net.minecraftforge.common.IPlantable;
+
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -32,6 +34,11 @@ public class AlienlampBlock extends Block {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
+	}
+
+	@Override
+	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
+		return true;
 	}
 
 	@Override

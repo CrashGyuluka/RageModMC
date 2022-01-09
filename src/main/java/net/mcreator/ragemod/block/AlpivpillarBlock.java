@@ -1,6 +1,8 @@
 
 package net.mcreator.ragemod.block;
 
+import net.minecraftforge.common.IPlantable;
+
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -57,6 +59,11 @@ public class AlpivpillarBlock extends Block {
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		Direction.Axis axis = context.getClickedFace().getAxis();;
 		return this.defaultBlockState().setValue(AXIS, axis);
+	}
+
+	@Override
+	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
+		return true;
 	}
 
 	@Override

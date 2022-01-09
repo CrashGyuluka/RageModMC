@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alien_soil_bottom",
-    "textureTop": "alien_soil_top",
-    "textureLeft": "alien_soil",
-    "textureFront": "alien_soil",
-    "textureRight": "alien_soil",
-    "textureBack": "alien_soil",
+    "texture": "alien_grass_bottom",
+    "textureTop": "alien_grass_top",
+    "textureLeft": "alien_grass_b",
+    "textureFront": "alien_grass_b",
+    "textureRight": "alien_grass_b",
+    "textureBack": "alien_grass_b",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -48,7 +48,7 @@
     "dropAmount": 1,
     "useLootTableForDrops": true,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": false,
+    "plantsGrowOn": true,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
@@ -94,7 +94,7 @@
     "fallSound": {
       "value": ""
     },
-    "luminance": 1,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "spawnParticles": false,

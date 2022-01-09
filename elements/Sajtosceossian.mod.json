@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "croissantsajtos",
+    "texture": "cheesecroissant",
     "customModelName": "Normal",
     "name": "Cheese Croissant",
     "rarity": "COMMON",

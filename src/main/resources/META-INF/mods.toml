@@ -4,7 +4,7 @@ license="MIT License"
 
 [[mods]]
 modId="ragemod"
-version="1.1 Pre-release2"
+version="1.1"
 displayName="RageMod"
 credits="Made by CrashGyuluka"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/ragemod-by-rageteam"
@@ -23,4 +23,10 @@ I hope you will enjoy this mod! Main dev: CrashGyuluka, some textures: Lyof
 
 
 
+[[dependencies.ragemod]]
+    modId="r"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

@@ -15,12 +15,15 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
+import net.minecraft.nbt.NbtUtils;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
@@ -105,6 +108,7 @@ public class RagemodModVariables {
 				clone.ToxicBlockPlace28 = original.ToxicBlockPlace28;
 				clone.ToxicBlockPlace29 = original.ToxicBlockPlace29;
 				clone.ToxicBlockPlace30 = original.ToxicBlockPlace30;
+				clone.BlockLockVar = original.BlockLockVar;
 			}
 		}
 	}
@@ -172,6 +176,7 @@ public class RagemodModVariables {
 		public boolean ToxicBlockPlace28 = false;
 		public boolean ToxicBlockPlace29 = false;
 		public boolean ToxicBlockPlace30 = false;
+		public BlockState BlockLockVar = Blocks.AIR.defaultBlockState();
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -212,6 +217,7 @@ public class RagemodModVariables {
 			nbt.putBoolean("ToxicBlockPlace28", ToxicBlockPlace28);
 			nbt.putBoolean("ToxicBlockPlace29", ToxicBlockPlace29);
 			nbt.putBoolean("ToxicBlockPlace30", ToxicBlockPlace30);
+			nbt.put("BlockLockVar", NbtUtils.writeBlockState(BlockLockVar));
 			return nbt;
 		}
 
@@ -249,6 +255,7 @@ public class RagemodModVariables {
 			ToxicBlockPlace28 = nbt.getBoolean("ToxicBlockPlace28");
 			ToxicBlockPlace29 = nbt.getBoolean("ToxicBlockPlace29");
 			ToxicBlockPlace30 = nbt.getBoolean("ToxicBlockPlace30");
+			BlockLockVar = NbtUtils.readBlockState(nbt.getCompound("BlockLockVar"));
 		}
 	}
 
@@ -306,6 +313,7 @@ public class RagemodModVariables {
 					variables.ToxicBlockPlace28 = message.data.ToxicBlockPlace28;
 					variables.ToxicBlockPlace29 = message.data.ToxicBlockPlace29;
 					variables.ToxicBlockPlace30 = message.data.ToxicBlockPlace30;
+					variables.BlockLockVar = message.data.BlockLockVar;
 				}
 			});
 			context.setPacketHandled(true);

@@ -1,7 +1,7 @@
 {
   "parent": "block/door_bottom",
   "textures": {
-    "bottom": "ragemod:blocks/sequoia_door_bottom",
-    "top": "ragemod:blocks/sequoia_door_top"
+    "bottom": "ragemod:blocks/sequoia_door_bottom_123",
+    "top": "ragemod:blocks/sequoia_door_top_new98765"
   }
 }

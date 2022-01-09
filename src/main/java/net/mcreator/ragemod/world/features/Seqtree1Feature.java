@@ -45,9 +45,9 @@ public class Seqtree1Feature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "seq_tree1"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 1000000) {
+		if ((context.random().nextInt(1000000) + 1) <= 700000) {
 			boolean anyPlaced = false;
-			int count = context.random().nextInt(7) + 1;
+			int count = context.random().nextInt(5) + 1;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);

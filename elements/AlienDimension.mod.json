@@ -55,7 +55,7 @@
       "value": "CUSTOM:Ercek"
     },
     "texture": "dimension2_igniter",
-    "portalTexture": "portal_block3_animated",
+    "portalTexture": "obszontium_portal_animated",
     "enablePortal": true
   }
 }

@@ -44,14 +44,14 @@ public class Str5Feature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "str5"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 69) {
+		if ((context.random().nextInt(1000000) + 1) <= 4000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);
 				int j = context.level().getHeight(Heightmap.Types.OCEAN_FLOOR_WG, i, k);
-				j -= 1;
+				j += context.random().nextInt(50) + 16;
 				BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 				if (template.placeInWorld(context.level(), spawnTo, spawnTo,
 						new StructurePlaceSettings().setMirror(Mirror.values()[context.random().nextInt(2)])

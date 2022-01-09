@@ -30,7 +30,6 @@ import net.mcreator.ragemod.item.SavasoItem;
 import net.mcreator.ragemod.item.SavasfejszeItem;
 import net.mcreator.ragemod.item.SavascsakanyItem;
 import net.mcreator.ragemod.item.SavarmorItem;
-import net.mcreator.ragemod.item.SajtostallerItem;
 import net.mcreator.ragemod.item.SajtosceossianItem;
 import net.mcreator.ragemod.item.SajtItem;
 import net.mcreator.ragemod.item.ReceptbookItem;
@@ -46,9 +45,7 @@ import net.mcreator.ragemod.item.RageBoosSpawnerItem;
 import net.mcreator.ragemod.item.OpalItem;
 import net.mcreator.ragemod.item.MegaMinepotionItem;
 import net.mcreator.ragemod.item.MegaMinePotion2Item;
-import net.mcreator.ragemod.item.KakoscsigaItem;
 import net.mcreator.ragemod.item.FireItem;
-import net.mcreator.ragemod.item.FakitoItem;
 import net.mcreator.ragemod.item.ElderberryflowerItem;
 import net.mcreator.ragemod.item.EarthItem;
 import net.mcreator.ragemod.item.DiscinspirationItem;
@@ -255,7 +252,6 @@ public class RagemodModItems {
 	public static final Item AKTINOLITGYURU = register(new AktinolitgyuruItem());
 	public static final Item ANAPAITGYURU = register(new AnapaitgyuruItem());
 	public static final Item DETONATORRT = register(new DetonatorrtItem());
-	public static final Item FAKITO = register(new FakitoItem());
 	public static final Item DIAMONDNUGET = register(new DiamondnugetItem());
 	public static final Item ALIEN_SOIL = register(RagemodModBlocks.ALIEN_SOIL, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item ALIEN_DIRT = register(RagemodModBlocks.ALIEN_DIRT, RagemodModTabs.TAB_TERMESZETTAB);
@@ -526,15 +522,13 @@ public class RagemodModItems {
 	public static final Item ELDERFLOWER = register(new ElderberryflowerItem());
 	public static final Item ELDERFLOWER_SYRUP = register(new AlderflowerJuiceItem());
 	public static final Item RAGEFLOWER = register(RagemodModBlocks.RAGEFLOWER, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item ALIEN_FOOD = register(new AlienfoodItem());
 	public static final Item SAVASNOVENY = register(RagemodModBlocks.SAVASNOVENY, RagemodModTabs.TAB_TERMESZETTAB);
+	public static final Item ALIEN_FOOD = register(new AlienfoodItem());
 	public static final Item CROISSANT = register(new CroissantItem());
 	public static final Item CHOCOLATE = register(new ChocolateItem());
 	public static final Item SAJT = register(new SajtItem());
 	public static final Item CSOKISCROSSAINT = register(new CsokiscrossaintItem());
 	public static final Item SAJTOSCEOSSIAN = register(new SajtosceossianItem());
-	public static final Item KAKOSCSIGA = register(new KakoscsigaItem());
-	public static final Item SAJTOSTALLER = register(new SajtostallerItem());
 	public static final Item SAVASRAGEIUMSECRET = register(RagemodModBlocks.SAVASRAGEIUMSECRET, null);
 	public static final Item EPITOBLOCK = register(RagemodModBlocks.EPITOBLOCK, null);
 	public static final Item RECEPTBOOK = register(new ReceptbookItem());
@@ -543,7 +537,6 @@ public class RagemodModItems {
 	public static final Item STRUCTUREHATAROLO_1 = register(RagemodModBlocks.STRUCTUREHATAROLO_1, null);
 	public static final Item STURTUREPLACER_1 = register(RagemodModBlocks.STURTUREPLACER_1, null);
 	public static final Item STRUCTUREPLACER_2 = register(RagemodModBlocks.STRUCTUREPLACER_2, null);
-	public static final Item DESTROYABLEALIENSOILDEV = register(RagemodModBlocks.DESTROYABLEALIENSOILDEV, null);
 	public static final Item HANGINGALIENOFF_1 = register(RagemodModBlocks.HANGINGALIENOFF_1, null);
 	public static final Item ALIENTRAPBLOCKLIT = register(RagemodModBlocks.ALIENTRAPBLOCKLIT, null);
 	public static final Item ALIENSHROOMDEV = register(RagemodModBlocks.ALIENSHROOMDEV, null);
@@ -591,6 +584,7 @@ public class RagemodModItems {
 	public static final Item HANGING_GLOWING_MAGENTA_CAVEPLANT = register(RagemodModBlocks.HANGING_GLOWING_MAGENTA_CAVEPLANT, null);
 	public static final Item ALIEN_AIR = register(RagemodModBlocks.ALIEN_AIR, null);
 	public static final Item RAGE_AIR = register(RagemodModBlocks.RAGE_AIR, null);
+	public static final Item SEQ_AIR_1 = register(RagemodModBlocks.SEQ_AIR_1, null);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

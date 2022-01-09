@@ -7,7 +7,7 @@
       "value": "Blocks.DIRT#2"
     },
     "undergroundBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.DIRT#0"
     },
     "ambientSound": {
       "value": ""

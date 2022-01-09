@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "croissantcsokis1",
+    "texture": "cocoacroissant",
     "customModelName": "Normal",
     "name": "Chocolate Crossaint",
     "rarity": "COMMON",

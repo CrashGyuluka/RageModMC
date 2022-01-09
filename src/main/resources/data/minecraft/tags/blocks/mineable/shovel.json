@@ -7,7 +7,6 @@
     "ragemod:savasredsand",
     "ragemod:alien_soil",
     "ragemod:alien_dirt",
-    "ragemod:covered_alien_soil",
-    "ragemod:destroyablealiensoildev"
+    "ragemod:covered_alien_soil"
   ]
 }

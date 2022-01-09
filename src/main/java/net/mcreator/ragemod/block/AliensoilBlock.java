@@ -1,6 +1,8 @@
 
 package net.mcreator.ragemod.block;
 
+import net.minecraftforge.common.IPlantable;
+
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -9,18 +11,23 @@ import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class AliensoilBlock extends FallingBlock {
 	public AliensoilBlock() {
-		super(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.WET_GRASS).strength(2f, 10f).lightLevel(s -> 1)
-				.requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.WET_GRASS).strength(2f, 10f).requiresCorrectToolForDrops());
 		setRegistryName("alien_soil");
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
+	}
+
+	@Override
+	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
+		return true;
 	}
 
 	@Override

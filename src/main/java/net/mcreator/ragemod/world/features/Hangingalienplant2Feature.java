@@ -33,8 +33,7 @@ public class Hangingalienplant2Feature extends Feature<NoneFeatureConfiguration>
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE.configured(FeatureConfiguration.NONE);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final List<Block> base_blocks = List.of(Blocks.STONE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.GRANITE, Blocks.DIRT, Blocks.GRASS_BLOCK,
-			RagemodModBlocks.HEGYIKO_1, RagemodModBlocks.ALIEN_SOIL, RagemodModBlocks.ALIEN_DIRT, RagemodModBlocks.COVERED_ALIEN_SOIL,
-			RagemodModBlocks.DESTROYABLEALIENSOILDEV);
+			RagemodModBlocks.HEGYIKO_1, RagemodModBlocks.ALIEN_SOIL, RagemodModBlocks.ALIEN_DIRT, RagemodModBlocks.COVERED_ALIEN_SOIL);
 	private StructureTemplate template = null;
 
 	public Hangingalienplant2Feature() {

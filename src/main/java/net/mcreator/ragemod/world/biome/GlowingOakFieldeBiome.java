@@ -44,7 +44,7 @@ public class GlowingOakFieldeBiome {
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
-				.foliageColorOverride(-12030686).grassColorOverride(-4287953).build();
+				.foliageColorOverride(-12030686).grassColorOverride(-5405137).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder().surfaceBuilder(SURFACE_BUILDER);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.MINESHAFT);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.PILLAGER_OUTPOST);
@@ -91,7 +91,7 @@ public class GlowingOakFieldeBiome {
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder().setPlayerCanSpawn();
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 10, 1, 3));
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 5, 1, 2));
-		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.PLAINS).depth(0.1f).scale(0f)
+		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.PLAINS).depth(0f).scale(0f)
 				.temperature(0.5f).downfall(0.6f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build())
 				.generationSettings(biomeGenerationSettings.build()).build();
 	}

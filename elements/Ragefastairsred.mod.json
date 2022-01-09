@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "01011202",
-    "textureTop": "01011202",
+    "texture": "red_rageplanks",
+    "textureTop": "red_rageplanks",
     "textureLeft": "",
-    "textureFront": "01011202",
+    "textureFront": "red_rageplanks",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,

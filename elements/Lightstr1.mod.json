@@ -18,9 +18,6 @@
     "restrictionBlocks": [
       {
         "value": "CUSTOM:Aliensoil"
-      },
-      {
-        "value": "CUSTOM:Destroyablealiensoildev"
       }
     ],
     "restrictionBiomes": [

@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/mamutfenyo_level",
-    "particle": "ragemod:blocks/mamutfenyo_level"
+    "all": "ragemod:blocks/seq_leaves1",
+    "particle": "ragemod:blocks/seq_leaves1"
   }
 }

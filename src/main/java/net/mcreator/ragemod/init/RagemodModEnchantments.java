@@ -14,6 +14,7 @@ import net.mcreator.ragemod.enchantment.VedelemplusEnchantment;
 import net.mcreator.ragemod.enchantment.PingvinhunenchantEnchantment;
 import net.mcreator.ragemod.enchantment.LifeStealerEnchantment;
 import net.mcreator.ragemod.enchantment.ColliderEnchantment;
+import net.mcreator.ragemod.enchantment.BlockLockEnchantment;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class RagemodModEnchantments {
 	public static final Enchantment VEDELEMPLUS = register("ragemod:vedelemplus", new VedelemplusEnchantment());
 	public static final Enchantment LIFE_STEALER = register("ragemod:life_stealer", new LifeStealerEnchantment());
 	public static final Enchantment COLLIDER = register("ragemod:collider", new ColliderEnchantment());
+	public static final Enchantment BLOCK_LOCK = register("ragemod:block_lock", new BlockLockEnchantment());
 
 	private static Enchantment register(String registryname, Enchantment enchantment) {
 		REGISTRY.add(enchantment.setRegistryName(registryname));

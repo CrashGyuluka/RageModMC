@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "alien_food",
+    "texture": "alien_food_new",
     "customModelName": "Normal",
     "name": "Alien Food",
     "rarity": "COMMON",

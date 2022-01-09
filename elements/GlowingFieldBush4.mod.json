@@ -5,7 +5,7 @@
     "structure": "glowing_bush4",
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 3700,
+    "spawnProbability": 20000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 2,
     "spawnLocation": "Ground",

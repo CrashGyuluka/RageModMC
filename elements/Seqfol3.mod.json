@@ -5,7 +5,7 @@
     "structure": "seq_fol3",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 700000,
+    "spawnProbability": 500000,
     "minCountPerChunk": 5,
     "maxCountPerChunk": 11,
     "spawnLocation": "Ground",
