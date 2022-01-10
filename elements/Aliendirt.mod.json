@@ -2,7 +2,7 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "alien_grass_bottom",
+    "texture": "alien_grass_bloc",
     "textureTop": "alien_soil_top",
     "textureLeft": "alien_soil",
     "textureFront": "alien_soil",

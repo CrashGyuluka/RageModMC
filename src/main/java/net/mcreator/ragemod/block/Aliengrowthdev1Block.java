@@ -27,8 +27,8 @@ import java.util.Collections;
 
 public class Aliengrowthdev1Block extends FlowerBlock {
 	public Aliengrowthdev1Block() {
-		super(MobEffects.BLINDNESS, 5, BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).strength(0.5f, 0f)
-				.jumpFactor(1.1f).lightLevel(s -> 1));
+		super(MobEffects.BLINDNESS, 5,
+				BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).strength(0.5f, 0f).jumpFactor(1.1f));
 		setRegistryName("aliengrowthdev_1");
 	}
 
