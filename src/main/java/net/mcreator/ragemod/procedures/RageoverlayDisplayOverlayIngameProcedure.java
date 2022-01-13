@@ -6,18 +6,15 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.ragemod.entity.RagemiteEntity;
-import net.mcreator.ragemod.entity.Rageboos1Entity;
 import net.mcreator.ragemod.entity.AtomRageREntity;
 
 public class RageoverlayDisplayOverlayIngameProcedure {
 	public static boolean execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return false;
-		if (!world.getEntitiesOfClass(AtomRageREntity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 7, 7, 7),
+		if (!world.getEntitiesOfClass(AtomRageREntity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 3, 3, 3),
 				e -> true).isEmpty()
-				|| !world.getEntitiesOfClass(RagemiteEntity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 7, 7, 7),
-						e -> true).isEmpty()
-				|| !world.getEntitiesOfClass(Rageboos1Entity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 7, 7, 7),
+				|| !world.getEntitiesOfClass(RagemiteEntity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 3, 3, 3),
 						e -> true).isEmpty()) {
 			return true;
 		}

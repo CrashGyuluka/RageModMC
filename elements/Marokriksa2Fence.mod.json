@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "marokriksa_log_side",
-    "textureTop": "marokriksa_log_side",
+    "texture": "marokriksa_log_side_newesr",
+    "textureTop": "marokriksa_log_side_newesr",
     "textureLeft": "",
-    "textureFront": "marokriksa_log_side",
+    "textureFront": "marokriksa_log_side_newesr",
     "textureRight": "",
     "textureBack": "",
     "renderType": 10,

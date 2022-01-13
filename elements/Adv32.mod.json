@@ -5,7 +5,7 @@
     "achievementName": "Hmm.. Sus",
     "achievementDescription": "Enter the Alien Dimension",
     "achievementIcon": {
-      "value": "CUSTOM:Destroyablealiensoildev"
+      "value": "CUSTOM:Aliensoil"
     },
     "background": "Default",
     "disableDisplay": false,

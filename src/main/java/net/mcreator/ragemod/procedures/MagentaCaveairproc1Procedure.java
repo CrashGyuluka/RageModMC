@@ -10,7 +10,9 @@ public class MagentaCaveairproc1Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (Blocks.CAVE_AIR == (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()) {
 			if (Blocks.STONE == (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()) {
-				world.setBlock(new BlockPos((int) x, (int) (y - 1), (int) z), RagemodModBlocks.MAGENTA_CAVESTONE.defaultBlockState(), 3);
+				if (Math.random() < 0.7) {
+					world.setBlock(new BlockPos((int) x, (int) (y - 1), (int) z), RagemodModBlocks.MAGENTA_CAVESTONE.defaultBlockState(), 3);
+				}
 				if (0.1 >= Math.random()) {
 					if (0.66 >= Math.random()) {
 						world.setBlock(new BlockPos((int) x, (int) y, (int) z), RagemodModBlocks.MAGENTA_CAVEMUSHROOM.defaultBlockState(), 3);

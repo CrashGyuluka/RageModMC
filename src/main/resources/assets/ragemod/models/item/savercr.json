@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/war_toxic_ore"
+    "layer0": "ragemod:items/raw_toxic_crystal"
   }
 }

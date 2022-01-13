@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "ragemod:destroyablealiensoildev"
+      "item": "ragemod:alien_soil"
     },
     "title": {
       "translate": "advancements.adv_32.title"

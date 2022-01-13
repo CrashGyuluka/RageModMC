@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "ragemod:blocks/genusweigl",
-    "particle": "ragemod:blocks/genusweigl"
-  }
-}

@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/stripped_sequoia_log_side",
-    "particle": "ragemod:blocks/stripped_sequoia_log_side"
+    "all": "ragemod:blocks/stripped_sequoia_log_side_new",
+    "particle": "ragemod:blocks/stripped_sequoia_log_side_new"
   }
 }

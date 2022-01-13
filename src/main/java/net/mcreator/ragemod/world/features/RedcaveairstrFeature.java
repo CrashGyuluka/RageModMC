@@ -44,7 +44,7 @@ public class RedcaveairstrFeature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "redcave_air_str"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 24000) {
+		if ((context.random().nextInt(1000000) + 1) <= 60000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

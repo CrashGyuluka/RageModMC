@@ -14,7 +14,6 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -72,16 +71,15 @@ public class Mob1Entity extends Monster {
 	protected void registerGoals() {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Rageboos1Entity.class, false, false));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AlienMobEntity.class, false, false));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AtomRageREntity.class, false, false));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, RagemiteEntity.class, false, false));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false));
-		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(8, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
-		this.goalSelector.addGoal(11, new BreakDoorGoal(this, e -> true));
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false));
+		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
+		this.goalSelector.addGoal(10, new BreakDoorGoal(this, e -> true));
 	}
 
 	@Override

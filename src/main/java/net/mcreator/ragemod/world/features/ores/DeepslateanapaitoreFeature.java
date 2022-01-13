@@ -29,7 +29,7 @@ public class DeepslateanapaitoreFeature extends OreFeature {
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(
 					new OreConfiguration(DeepslateanapaitoreFeatureRuleTest.INSTANCE, RagemodModBlocks.DEEPSLATE_ANAPAIT_ORE.defaultBlockState(), 2))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)))).squared().count(4);
+			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)))).squared().count(6);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 
 	public DeepslateanapaitoreFeature() {

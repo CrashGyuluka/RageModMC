@@ -279,7 +279,6 @@ import net.mcreator.ragemod.block.HangingGlowingMagentaCaveplantBlock;
 import net.mcreator.ragemod.block.HangingGlowingCaveplantBlock;
 import net.mcreator.ragemod.block.HangingBlueCaveplantBlock;
 import net.mcreator.ragemod.block.GreenGlowingOakLeavesBlock;
-import net.mcreator.ragemod.block.GenusWeigelaBlock;
 import net.mcreator.ragemod.block.FullhegyikowallBlock;
 import net.mcreator.ragemod.block.FullhegyikostairBlock;
 import net.mcreator.ragemod.block.FullhegyikoslabBlock;
@@ -688,7 +687,6 @@ public class RagemodModBlocks {
 	public static final Block BROWN_GLOWING_OAK_LEAVES = register(new BrownGlowingOakLeavesBlock());
 	public static final Block GREEN_GLOWING_OAK_LEAVES = register(new GreenGlowingOakLeavesBlock());
 	public static final Block RED_GLOWING_OAK_LEAVES = register(new RedGlowingOakLeavesBlock());
-	public static final Block GENUS_WEIGELA = register(new GenusWeigelaBlock());
 	public static final Block BLUEHYDRANGEA = register(new BluehydrangeaBlock());
 	public static final Block MAGENTAHYDRANGEA = register(new MagentahydrangeaBlock());
 	public static final Block PURPLEHYDRANGEA = register(new PurplehydrangeaBlock());
@@ -815,7 +813,6 @@ public class RagemodModBlocks {
 			SequoiaSaplingBlock.registerRenderLayer();
 			ElderberryleavesBlock.registerRenderLayer();
 			FloweryElderberryLeavesBlock.registerRenderLayer();
-			GenusWeigelaBlock.registerRenderLayer();
 			BluehydrangeaBlock.registerRenderLayer();
 			MagentahydrangeaBlock.registerRenderLayer();
 			PurplehydrangeaBlock.registerRenderLayer();

@@ -22,7 +22,7 @@ import java.util.Collections;
 
 public class SecretboomkoBlock extends Block {
 	public SecretboomkoBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(3f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 10f).requiresCorrectToolForDrops());
 		setRegistryName("secretboomko");
 	}
 
@@ -34,7 +34,7 @@ public class SecretboomkoBlock extends Block {
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 3;
+			return tieredItem.getTier().getLevel() >= 2;
 		return false;
 	}
 

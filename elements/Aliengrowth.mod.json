@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "alien_growth2",
+    "texture": "alien_growth_new",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",
@@ -37,7 +37,7 @@
     },
     "hardness": 0.5,
     "resistance": 0.0,
-    "luminance": 1,
+    "luminance": 3,
     "unbreakable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
@@ -83,6 +83,9 @@
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
-    "patchSize": 37
+    "patchSize": 37,
+    "onRightClicked": {
+      "name": "AliengrowthPlantRightClicked"
+    }
   }
 }

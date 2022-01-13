@@ -25,7 +25,9 @@ import java.util.Set;
 public class SeqAirStrFeature extends Feature<NoneFeatureConfiguration> {
 	public static final SeqAirStrFeature FEATURE = (SeqAirStrFeature) new SeqAirStrFeature().setRegistryName("ragemod:seq_air_str");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE.configured(FeatureConfiguration.NONE);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:beech_forest"),
+			new ResourceLocation("ragemod:glowing_oak_forest"), new ResourceLocation("ragemod:beech_hill"),
+			new ResourceLocation("ragemod:sequoia_forest"), new ResourceLocation("ragemod:glowing_oak_forest_mountain"));
 	private StructureTemplate template = null;
 
 	public SeqAirStrFeature() {
@@ -44,9 +46,9 @@ public class SeqAirStrFeature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "seq_air_str1"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 80000) {
+		if ((context.random().nextInt(1000000) + 1) <= 170000) {
 			boolean anyPlaced = false;
-			int count = context.random().nextInt(1) + 1;
+			int count = context.random().nextInt(3) + 1;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);

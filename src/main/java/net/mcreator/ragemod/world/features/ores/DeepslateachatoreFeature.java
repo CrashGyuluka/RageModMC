@@ -28,7 +28,7 @@ public class DeepslateachatoreFeature extends OreFeature {
 			.setRegistryName("ragemod:deepslateachatore");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(new OreConfiguration(DeepslateachatoreFeatureRuleTest.INSTANCE, RagemodModBlocks.DEEPSLATEACHATORE.defaultBlockState(), 2))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)))).squared().count(4);
+			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)))).squared().count(7);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 
 	public DeepslateachatoreFeature() {

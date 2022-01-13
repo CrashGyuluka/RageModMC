@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/air_relic"
+    "layer0": "ragemod:items/air_relic_p"
   }
 }

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "air_relic",
+    "texture": "air_relic_p",
     "customModelName": "Normal",
     "name": "Air Relic",
     "rarity": "RARE",

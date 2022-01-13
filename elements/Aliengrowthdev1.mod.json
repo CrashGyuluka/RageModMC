@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "alien_growth2",
+    "texture": "alien_growth_new",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",
@@ -83,6 +83,9 @@
       "CUSTOM:AlienDimension"
     ],
     "restrictionBiomes": [],
-    "patchSize": 37
+    "patchSize": 37,
+    "onRightClicked": {
+      "name": "Aliengrowthdev1PlantRightClicked"
+    }
   }
 }

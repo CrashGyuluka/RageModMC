@@ -304,15 +304,6 @@
       "path": "~/boss"
     },
     {
-      "name": "RageBoosSpawner",
-      "type": "item",
-      "sortid": 84,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rage_boos_spawner",
-      "path": "~/boss"
-    },
-    {
       "name": "Ragebossspawneggcraft",
       "type": "recipe",
       "sortid": 410,
@@ -320,36 +311,6 @@
       "locked_code": false,
       "registry_name": "ragebossspawneggcraft",
       "path": "~/boss/craft"
-    },
-    {
-      "name": "Rageboos1",
-      "type": "livingentity",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rageboos_1",
-      "path": "~/entitas"
-    },
-    {
-      "name": "RageBoosSpawnerRightClickedOnBlock",
-      "type": "procedure",
-      "sortid": 411,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rage_boos_spawner_right_clicked_on_block",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/boss/producer"
     },
     {
       "name": "Ragemite",
@@ -376,15 +337,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "adv_3",
-      "path": "~/adv"
-    },
-    {
-      "name": "Adv4",
-      "type": "achievement",
-      "sortid": 414,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "adv_4",
       "path": "~/adv"
     },
     {
@@ -9724,15 +9676,6 @@
       "path": "~/dimensions/stucture"
     },
     {
-      "name": "GenusWeigela",
-      "type": "plant",
-      "sortid": 379,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "genus_weigela",
-      "path": "~/termeszet"
-    },
-    {
       "name": "Bluehydrangea",
       "type": "plant",
       "sortid": 380,
@@ -16147,7 +16090,7 @@
           }
         ]
       },
-      "path": "~/cave_biomes/seq"
+      "path": "~/cave_biomes/coarsedirt"
     },
     {
       "name": "SeqBiomeProc2",
@@ -16176,7 +16119,7 @@
           }
         ]
       },
-      "path": "~/cave_biomes/seq"
+      "path": "~/cave_biomes/coarsedirt"
     },
     {
       "name": "SeqAir1",
@@ -16185,7 +16128,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "seq_air_1",
-      "path": "~/cave_biomes/seq"
+      "path": "~/cave_biomes/coarsedirt"
     },
     {
       "name": "SeqAirStr",
@@ -16194,7 +16137,83 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "seq_air_str",
-      "path": "~/cave_biomes/seq"
+      "path": "~/cave_biomes/coarsedirt"
+    },
+    {
+      "name": "AliengrowthPlantRightClicked",
+      "type": "procedure",
+      "sortid": 1408,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aliengrowth_plant_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/novenyzet/proc"
+    },
+    {
+      "name": "Trophycraft",
+      "type": "recipe",
+      "sortid": 1409,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trophycraft",
+      "path": "~/dimensions/craft"
+    },
+    {
+      "name": "Aliengrowthdev1PlantRightClicked",
+      "type": "procedure",
+      "sortid": 1410,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aliengrowthdev_1_plant_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/novenyzet/proc"
+    },
+    {
+      "name": "ClimbableBlocks",
+      "type": "tag",
+      "sortid": 1411,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "climbable_blocks",
+      "path": "~/tag"
     }
   ],
   "variable_elements": [
@@ -16471,8 +16490,8 @@
       "block.ragemod.savashomokkopiros": "Toxic Red Sandstone",
       "block.ragemod.alienshroomblock": "Alien Shroom",
       "block.ragemod.alpiv_bricks_slab": "Alpiv Bricks Slab",
-      "block.ragemod.robtai_block_stairs": "Robtai Block Stairs",
       "RageLanguage": "",
+      "block.ragemod.robtai_block_stairs": "Robtai Block Stairs",
       "block.ragemod.savasnoveny": "Toxic Plant",
       "block.ragemod.sequoia_leaves": "Sequoia Leaves",
       "block.ragemod.better_stripped_ragewood_slab": "Better Stripped RageWood Slab ",
@@ -16483,7 +16502,6 @@
       "advancements.adv_28.descr": "Place down a floor block",
       "block.ragemod.savasrageiumore": "Toxic Rageium Ore",
       "item.minecraft.lingering_potion.effect.rage_potion_plus": "Lingering Potion of Rage ",
-      "item.ragemod.rageboos_1_spawn_egg": "RageBoss Spawn Egg",
       "item.ragemod.opal": "Opal",
       "block.ragemod.yellowcavestone": "Yellow Cavestone",
       "en_us": "",
@@ -16505,10 +16523,10 @@
       "block.ragemod.strhatarolo_6": "DEVBLOCK:RandomB6",
       "entity.ragemod.flylien": "Flyilen",
       "block.ragemod.strhatarolo_3": "DEVBLOCK:RandomB3",
-      "biome.ragemod.beech_amplified_mountain": "Beech Amplified Mountain",
-      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
-      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
       "item.ragemod.alienslime_spawn_egg": "Alien Slime Spawn Egg",
+      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
+      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
+      "biome.ragemod.beech_amplified_mountain": "Beech Amplified Mountain",
       "block.ragemod.hegyikoteglaslab": "Mountain Stone Bricks Slab",
       "block.ragemod.strhatarolo_5": "DEVBLOCK:RandomB5",
       "block.ragemod.strhatarolo_4": "DEVBLOCK:RandomB4",
@@ -16518,9 +16536,9 @@
       "block.ragemod.red_glowingcavemushroom": "Red Glowing Cavemushroom",
       "advancements.adv_3.descr": "Have at least 6 RagePotions in your inventory at the same time!",
       "enchantment.ragemod.vedelemplus": "LastHelp",
-      "block.ragemod.flowery_elderberry_leaves": "Flowery Elderberry Leaves",
-      "block.ragemod.kizukra_pressure_plate": "Kizukra Block Pressure Plate",
       "advancements.adv_1.title": "Don\u0027t rage!",
+      "block.ragemod.kizukra_pressure_plate": "Kizukra Block Pressure Plate",
+      "block.ragemod.flowery_elderberry_leaves": "Flowery Elderberry Leaves",
       "block.ragemod.beech_stairs": "Beech Stairs",
       "advancements.adv_30.title": "Hmm, Juicy!",
       "block.ragemod.hanging_redcaveplant": "Hanging Red Caveplant",
@@ -16567,7 +16585,6 @@
       "item.ragemod.alien_torch": "Alien Torch",
       "block.ragemod.savasko": "Toxic Stone",
       "effect.ragemod.megamine_effect": "MegaMine",
-      "entity.ragemod.rageboos_1": "RageBoss",
       "entity.ragemod.rageflylit_2": "RageFlyLit 2 (DEV)",
       "biome.ragemod.glowing_oak_forest": "Glowing Oak Forest",
       "block.ragemod.savasendko": "Toxic Endstone",
@@ -16659,7 +16676,6 @@
       "block.ragemod.stripped_robtai_pressure_plate": "Stripped Robtai Pressure Plate",
       "advancements.adv_1.descr": "Have a Rageium in your inventory",
       "item.ragemod.sajtosceossian": "Cheese Croissant",
-      "item.ragemod.rage_boos_spawner": "RageBoss Spawn Egg",
       "biome.ragemod.flowery_alien_plains": "Flowery Alien Plains",
       "block.ragemod.parklev": "Parkour - Levitate",
       "block.ragemod.hegyikopolished": "Polished Mountain Stone",
@@ -16768,7 +16784,6 @@
       "item.ragemod.savellenalasbottle": "PAT Potion",
       "block.ragemod.stripped_ragewood_block_pressure_plate": "Stripped RageWood Pressure Plate",
       "block.ragemod.stripped_beech_log": "Stripped Beech Log",
-      "advancements.adv_4.title": "I don\u0027t want to lose you.... :\u0027(",
       "block.ragemod.toxic_fluid": "Toxic Fluid",
       "block.ragemod.hegyiko_1": "Mountain Stone",
       "block.ragemod.stripped_kizukra_slab": "Stripped Kizukra Block Slab",
@@ -16777,7 +16792,6 @@
       "advancements.advstart.descr": "Just use RageMod.",
       "block.ragemod.kizukra_door": "Kizukra Door",
       "advancements.adv_35.descr": "Have an Alienite Sword",
-      "advancements.adv_4.descr": "Have a RageBoss spawn egg in your inventory",
       "block.ragemod.hegyikogreen": "Mossy Mountain Stone",
       "item.ragemod.achat": "Achat",
       "block.ragemod.kizukra_wood": "Kizukra Block",
@@ -17035,7 +17049,6 @@
       "advancements.adv_16.title": "Upgraded Rageium",
       "block.ragemod.deepslateadularore": "Deepslate Adularia Ore",
       "block.ragemod.savastegla": "Toxic Bricks",
-      "block.ragemod.genus_weigela": "Genus Weigela",
       "subtitles.alien_ambient4": "",
       "subtitles.alien_ambient1": "",
       "block.ragemod.sequoia_planks": "Sequoia Planks",
@@ -17076,8 +17089,8 @@
       "block.ragemod.savashomokkopiros": "Toxic Red Sandstone",
       "block.ragemod.alienshroomblock": "Alien Shroom",
       "block.ragemod.alpiv_bricks_slab": "Alpiv Bricks Slab",
-      "block.ragemod.robtai_block_stairs": "Robtai Block Stairs",
       "RageLanguage": "",
+      "block.ragemod.robtai_block_stairs": "Robtai Block Stairs",
       "block.ragemod.savasnoveny": "Toxic Plant",
       "block.ragemod.sequoia_leaves": "Sequoia Leaves",
       "block.ragemod.better_stripped_ragewood_slab": "Better Stripped RageWood Slab ",
@@ -17088,7 +17101,6 @@
       "advancements.adv_28.descr": "Place down a floor block",
       "block.ragemod.savasrageiumore": "Toxic Rageium Ore",
       "item.minecraft.lingering_potion.effect.rage_potion_plus": "Lingering Potion of Rage ",
-      "item.ragemod.rageboos_1_spawn_egg": "RageBoss Spawn Egg",
       "item.ragemod.opal": "Opal",
       "block.ragemod.yellowcavestone": "Yellow Cavestone",
       "en_us": "",
@@ -17110,10 +17122,10 @@
       "block.ragemod.strhatarolo_6": "DEVBLOCK:RandomB6",
       "entity.ragemod.flylien": "Flyilen",
       "block.ragemod.strhatarolo_3": "DEVBLOCK:RandomB3",
-      "biome.ragemod.beech_amplified_mountain": "Beech Amplified Mountain",
-      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
-      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
       "item.ragemod.alienslime_spawn_egg": "Alien Slime Spawn Egg",
+      "block.ragemod.stripped_marokriksa_fence": "Stripped Marokriksa Fence",
+      "block.ragemod.strhatarolo_2": "DEVBLOCK:RandomB2",
+      "biome.ragemod.beech_amplified_mountain": "Beech Amplified Mountain",
       "block.ragemod.hegyikoteglaslab": "Mountain Stone Bricks Slab",
       "block.ragemod.strhatarolo_5": "DEVBLOCK:RandomB5",
       "block.ragemod.strhatarolo_4": "DEVBLOCK:RandomB4",
@@ -17123,9 +17135,9 @@
       "block.ragemod.red_glowingcavemushroom": "Red Glowing Cavemushroom",
       "advancements.adv_3.descr": "Have at least 6 RagePotions in your inventory at the same time!",
       "enchantment.ragemod.vedelemplus": "LastHelp",
-      "block.ragemod.flowery_elderberry_leaves": "Flowery Elderberry Leaves",
-      "block.ragemod.kizukra_pressure_plate": "Kizukra Pressure Plate",
       "advancements.adv_1.title": "Don\u0027t rage!",
+      "block.ragemod.kizukra_pressure_plate": "Kizukra Pressure Plate",
+      "block.ragemod.flowery_elderberry_leaves": "Flowery Elderberry Leaves",
       "block.ragemod.beech_stairs": "Beech Stairs",
       "advancements.adv_30.title": "Hmm, Juicy!",
       "block.ragemod.hanging_redcaveplant": "Hanging Red Caveplant",
@@ -17172,7 +17184,6 @@
       "item.ragemod.alien_torch": "Alien Torch",
       "block.ragemod.savasko": "Toxic Stone",
       "effect.ragemod.megamine_effect": "MegaMine",
-      "entity.ragemod.rageboos_1": "RageBoss",
       "entity.ragemod.rageflylit_2": "RageFlyLit 2 (DEV)",
       "biome.ragemod.glowing_oak_forest": "Glowing Oak Forest",
       "block.ragemod.savasendko": "Toxic Endstone",
@@ -17264,7 +17275,6 @@
       "block.ragemod.stripped_robtai_pressure_plate": "Stripped Robtai Pressure Plate",
       "advancements.adv_1.descr": "Have a Rageium in your inventory",
       "item.ragemod.sajtosceossian": "Cheese Croissant",
-      "item.ragemod.rage_boos_spawner": "RageBoss Spawn Egg",
       "biome.ragemod.flowery_alien_plains": "Flowery Alien Plains",
       "block.ragemod.parklev": "Parkour - Levitate",
       "block.ragemod.hegyikopolished": "Polished Mountain Stone",
@@ -17373,7 +17383,6 @@
       "item.ragemod.savellenalasbottle": "PAT Potion",
       "block.ragemod.stripped_ragewood_block_pressure_plate": "Stripped RageWood Pressure Plate",
       "block.ragemod.stripped_beech_log": "Stripped Beech Log",
-      "advancements.adv_4.title": "I don\u0027t want to lose you.... :\u0027(",
       "block.ragemod.toxic_fluid": "Toxic Fluid",
       "block.ragemod.hegyiko_1": "Mountain Stone",
       "block.ragemod.stripped_kizukra_slab": "Stripped Kizukra Block Slab",
@@ -17382,7 +17391,6 @@
       "advancements.advstart.descr": "Just use RageMod.",
       "block.ragemod.kizukra_door": "Kizukra Door",
       "advancements.adv_35.descr": "Have an Alienite Sword",
-      "advancements.adv_4.descr": "Have a RageBoss spawn egg in your inventory",
       "block.ragemod.hegyikogreen": "Mossy Mountain Stone",
       "item.ragemod.achat": "Achat",
       "block.ragemod.kizukra_wood": "Kizukra Block",
@@ -17480,7 +17488,7 @@
       "biome.ragemod.glowing_oak_field": "Glowing Oak Forest",
       "block.ragemod.savasrageiumblock": "Toxic Block Of Rageium",
       "block.ragemod.hegyikowall": "Mountain Stone Wall",
-      "block.ragemod.seq_air_1": "Blue Caveair",
+      "block.ragemod.seq_air_1": "CoarseDirt Caveair",
       "block.ragemod.stripped_marokriksa_slab": "Stripped Marokriksa Slab",
       "block.ragemod.rageium_bricks_pressure_plate": "Rageium Bricks Pressure Plate",
       "block.ragemod.hegyikoteglawall": "Mountain Stone Bricks Wall",
@@ -17640,7 +17648,6 @@
       "advancements.adv_16.title": "Upgraded Rageium",
       "block.ragemod.deepslateadularore": "Deepslate Adularia Ore",
       "block.ragemod.savastegla": "Toxic Bricks",
-      "block.ragemod.genus_weigela": "Genus Weigela",
       "subtitles.alien_ambient4": "",
       "subtitles.alien_ambient1": "",
       "block.ragemod.sequoia_planks": "Sequoia Planks",
@@ -18187,7 +18194,7 @@
             "children": []
           },
           {
-            "name": "seq",
+            "name": "coarsedirt",
             "children": []
           }
         ]

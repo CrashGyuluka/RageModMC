@@ -16,7 +16,6 @@ import net.mcreator.ragemod.client.renderer.RagemiteRenderer;
 import net.mcreator.ragemod.client.renderer.RageflylitRenderer;
 import net.mcreator.ragemod.client.renderer.Rageflylit2Renderer;
 import net.mcreator.ragemod.client.renderer.RageflyRenderer;
-import net.mcreator.ragemod.client.renderer.Rageboos1Renderer;
 import net.mcreator.ragemod.client.renderer.PoliposRenderer;
 import net.mcreator.ragemod.client.renderer.Mob1Renderer;
 import net.mcreator.ragemod.client.renderer.FlyilenRenderer;
@@ -30,7 +29,6 @@ public class RagemodModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(RagemodModEntities.RAGEMITE, RagemiteRenderer::new);
 		event.registerEntityRenderer(RagemodModEntities.ATOM_RAGE_R, AtomRageRRenderer::new);
-		event.registerEntityRenderer(RagemodModEntities.RAGEBOOS_1, Rageboos1Renderer::new);
 		event.registerEntityRenderer(RagemodModEntities.TOXIC_MOB, Mob1Renderer::new);
 		event.registerEntityRenderer(RagemodModEntities.SAVRAGEROBI, SavragerobiRenderer::new);
 		event.registerEntityRenderer(RagemodModEntities.ALIEN_MOB, AlienMobRenderer::new);

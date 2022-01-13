@@ -3,8 +3,8 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "tall_alien_growth1",
-    "textureBottom": "tall_alien_growth2",
+    "texture": "alien_shroom_top_new",
+    "textureBottom": "tall_alien_growth2_new",
     "customModelName": "Cross model",
     "itemTexture": "tall_alien_growth2",
     "particleTexture": "",

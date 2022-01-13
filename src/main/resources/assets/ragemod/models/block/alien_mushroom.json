@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "ragemod:blocks/alien_mushroom",
-    "particle": "ragemod:blocks/alien_mushroom"
+    "cross": "ragemod:blocks/alien_mushroom_small",
+    "particle": "ragemod:blocks/alien_mushroom_small"
   }
 }

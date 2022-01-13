@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "water1",
+    "texture": "water_relic",
     "customModelName": "Normal",
     "name": "Water Relic",
     "rarity": "RARE",

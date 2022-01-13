@@ -19,7 +19,6 @@ import net.mcreator.ragemod.entity.RagemiteEntity;
 import net.mcreator.ragemod.entity.RageflylitEntity;
 import net.mcreator.ragemod.entity.Rageflylit2Entity;
 import net.mcreator.ragemod.entity.RageflyEntity;
-import net.mcreator.ragemod.entity.Rageboos1Entity;
 import net.mcreator.ragemod.entity.RagearrowEntity;
 import net.mcreator.ragemod.entity.PoliposEntity;
 import net.mcreator.ragemod.entity.Mob1Entity;
@@ -40,9 +39,6 @@ public class RagemodModEntities {
 	public static final EntityType<AtomRageREntity> ATOM_RAGE_R = register("atom_rage_r",
 			EntityType.Builder.<AtomRageREntity>of(AtomRageREntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(84).setUpdateInterval(3).setCustomClientFactory(AtomRageREntity::new).sized(0.6f, 1.7f));
-	public static final EntityType<Rageboos1Entity> RAGEBOOS_1 = register("rageboos_1",
-			EntityType.Builder.<Rageboos1Entity>of(Rageboos1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(Rageboos1Entity::new).sized(1.4f, 0.9f));
 	public static final EntityType<Mob1Entity> TOXIC_MOB = register("toxic_mob",
 			EntityType.Builder.<Mob1Entity>of(Mob1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(Mob1Entity::new).sized(0.6f, 1.8f));
@@ -90,7 +86,6 @@ public class RagemodModEntities {
 		event.enqueueWork(() -> {
 			RagemiteEntity.init();
 			AtomRageREntity.init();
-			Rageboos1Entity.init();
 			Mob1Entity.init();
 			SavragerobiEntity.init();
 			AlienMobEntity.init();
@@ -107,7 +102,6 @@ public class RagemodModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(RAGEMITE, RagemiteEntity.createAttributes().build());
 		event.put(ATOM_RAGE_R, AtomRageREntity.createAttributes().build());
-		event.put(RAGEBOOS_1, Rageboos1Entity.createAttributes().build());
 		event.put(TOXIC_MOB, Mob1Entity.createAttributes().build());
 		event.put(SAVRAGEROBI, SavragerobiEntity.createAttributes().build());
 		event.put(ALIEN_MOB, AlienMobEntity.createAttributes().build());

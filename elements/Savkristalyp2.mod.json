@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "savkristaly_p2",
+    "texture": "toxic_crystal",
     "customModelName": "Normal",
     "name": "Toxic Crystal",
     "rarity": "COMMON",

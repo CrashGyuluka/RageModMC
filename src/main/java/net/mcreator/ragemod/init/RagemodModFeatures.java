@@ -38,7 +38,6 @@ import net.mcreator.ragemod.world.features.plants.MagentacaveplantFeature;
 import net.mcreator.ragemod.world.features.plants.MagentaGlowongCaveplantFeature;
 import net.mcreator.ragemod.world.features.plants.MagentaGlowingCavemushroomFeature;
 import net.mcreator.ragemod.world.features.plants.MagentaCavemushroomFeature;
-import net.mcreator.ragemod.world.features.plants.GenusWeigelaFeature;
 import net.mcreator.ragemod.world.features.plants.Fa5sapFeature;
 import net.mcreator.ragemod.world.features.plants.Fa4sapFeature;
 import net.mcreator.ragemod.world.features.plants.Fa3sapFeature;
@@ -421,8 +420,6 @@ public class RagemodModFeatures {
 				Fa4sapFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(Fa5sapFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, Fa5sapFeature.GENERATE_BIOMES,
 				Fa5sapFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(GenusWeigelaFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
-				GenusWeigelaFeature.GENERATE_BIOMES, GenusWeigelaFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(BluehydrangeaFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				BluehydrangeaFeature.GENERATE_BIOMES, BluehydrangeaFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(MagentahydrangeaFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,

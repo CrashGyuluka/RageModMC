@@ -29,7 +29,7 @@ public class DeepslateaktinolitoreFeature extends OreFeature {
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(new OreConfiguration(DeepslateaktinolitoreFeatureRuleTest.INSTANCE,
 					RagemodModBlocks.DEEPSLATEAKTINOLITORE.defaultBlockState(), 2))
-			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(20)))).squared().count(4);
+			.range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(20)))).squared().count(6);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 
 	public DeepslateaktinolitoreFeature() {

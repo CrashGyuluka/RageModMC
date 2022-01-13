@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/marokriksa_log_top_",
     "up": "ragemod:blocks/marokriksa_log_top",
-    "north": "ragemod:blocks/marokriksa_log_side",
-    "east": "ragemod:blocks/marokriksa_log_side",
-    "south": "ragemod:blocks/marokriksa_log_side",
-    "west": "ragemod:blocks/marokriksa_log_side",
+    "north": "ragemod:blocks/marokriksa_log_side_newesr",
+    "east": "ragemod:blocks/marokriksa_log_side_newesr",
+    "south": "ragemod:blocks/marokriksa_log_side_newesr",
+    "west": "ragemod:blocks/marokriksa_log_side_newesr",
     "particle": "ragemod:blocks/marokriksa_log_top_"
   }
 }

@@ -41,7 +41,6 @@ import net.mcreator.ragemod.item.RagegyuruItem;
 import net.mcreator.ragemod.item.RagefastickItem;
 import net.mcreator.ragemod.item.RagearrowammoItem;
 import net.mcreator.ragemod.item.RagearrowItem;
-import net.mcreator.ragemod.item.RageBoosSpawnerItem;
 import net.mcreator.ragemod.item.OpalItem;
 import net.mcreator.ragemod.item.MegaMinepotionItem;
 import net.mcreator.ragemod.item.MegaMinePotion2Item;
@@ -140,9 +139,6 @@ public class RagemodModItems {
 	public static final Item ATOM_RAGE_R = register(
 			new SpawnEggItem(RagemodModEntities.ATOM_RAGE_R, -14927425, -5242880, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
 					.setRegistryName("atom_rage_r_spawn_egg"));
-	public static final Item RAGEBOOS_1 = register(
-			new SpawnEggItem(RagemodModEntities.RAGEBOOS_1, -8401716, -12844276, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
-					.setRegistryName("rageboos_1_spawn_egg"));
 	public static final Item TOXIC_MOB = register(
 			new SpawnEggItem(RagemodModEntities.TOXIC_MOB, -16724941, -14072293, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK))
 					.setRegistryName("toxic_mob_spawn_egg"));
@@ -199,7 +195,6 @@ public class RagemodModItems {
 	public static final Item WATER = register(new WaterItem());
 	public static final Item AIR_RELIC = register(new AirRelicItem());
 	public static final Item EARTH = register(new EarthItem());
-	public static final Item RAGE_BOOS_SPAWNER = register(new RageBoosSpawnerItem());
 	public static final Item TROFEA = register(new TrofeaItem());
 	public static final Item PARKOURFEL = register(RagemodModBlocks.PARKOURFEL, RagemodModTabs.TAB_ERCEK);
 	public static final Item PARKFELPLUS = register(RagemodModBlocks.PARKFELPLUS, RagemodModTabs.TAB_ERCEK);
@@ -514,7 +509,6 @@ public class RagemodModItems {
 	public static final Item BROWN_GLOWING_OAK_LEAVES = register(RagemodModBlocks.BROWN_GLOWING_OAK_LEAVES, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item GREEN_GLOWING_OAK_LEAVES = register(RagemodModBlocks.GREEN_GLOWING_OAK_LEAVES, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item RED_GLOWING_OAK_LEAVES = register(RagemodModBlocks.RED_GLOWING_OAK_LEAVES, RagemodModTabs.TAB_TERMESZETTAB);
-	public static final Item GENUS_WEIGELA = register(RagemodModBlocks.GENUS_WEIGELA, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item BLUEHYDRANGEA = register(RagemodModBlocks.BLUEHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item MAGENTAHYDRANGEA = register(RagemodModBlocks.MAGENTAHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);
 	public static final Item PURPLEHYDRANGEA = register(RagemodModBlocks.PURPLEHYDRANGEA, RagemodModTabs.TAB_TERMESZETTAB);

@@ -3,10 +3,10 @@
   "textures": {
     "down": "ragemod:blocks/stripped_sequoia_log_top",
     "up": "ragemod:blocks/stripped_sequoia_log_top",
-    "north": "ragemod:blocks/stripped_sequoia_log_side",
-    "east": "ragemod:blocks/stripped_sequoia_log_side",
-    "south": "ragemod:blocks/stripped_sequoia_log_side",
-    "west": "ragemod:blocks/stripped_sequoia_log_side",
+    "north": "ragemod:blocks/stripped_sequoia_log_side_new",
+    "east": "ragemod:blocks/stripped_sequoia_log_side_new",
+    "south": "ragemod:blocks/stripped_sequoia_log_side_new",
+    "west": "ragemod:blocks/stripped_sequoia_log_side_new",
     "particle": "ragemod:blocks/stripped_sequoia_log_top"
   }
 }

@@ -5,7 +5,7 @@
     "structure": "a_air_relic_structure",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 2000,
+    "spawnProbability": 700,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Air",

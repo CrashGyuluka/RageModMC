@@ -13,8 +13,9 @@ public class SeqBiomeProc2Procedure {
 		double zs = 0;
 		double ys = 0;
 		double xs = 0;
-		if (Blocks.PODZOL == (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()) {
-			if (Math.random() < 0.5) {
+		if (Blocks.PODZOL == (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()
+				|| Blocks.GRASS_BLOCK == (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()) {
+			if (Math.random() < 0.28) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
 					BlockState _bs = Blocks.COARSE_DIRT.defaultBlockState();

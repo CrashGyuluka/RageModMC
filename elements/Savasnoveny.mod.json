@@ -3,8 +3,8 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "savas_nov_tet",
-    "textureBottom": "savas_nov_al",
+    "texture": "toxic_plant_top",
+    "textureBottom": "toxic_plant_down",
     "customModelName": "Cross model",
     "itemTexture": "",
     "particleTexture": "",

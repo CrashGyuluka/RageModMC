@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "cverx_ore",
+    "texture": "cvex_ore",
     "customModelName": "Normal",
     "name": "CveX",
     "rarity": "COMMON",

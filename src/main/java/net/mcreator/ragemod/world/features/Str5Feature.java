@@ -44,7 +44,7 @@ public class Str5Feature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "str5"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 4000) {
+		if ((context.random().nextInt(1000000) + 1) <= 800) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

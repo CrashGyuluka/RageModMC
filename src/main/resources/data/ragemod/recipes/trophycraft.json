@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "3": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "4": {
+      "item": "ragemod:alien_dimension_portal_igniter"
+    },
+    "5": {
+      "item": "ragemod:savkristalyp_2"
+    },
+    "7": {
+      "item": "ragemod:savkristalyp_2"
+    }
+  },
+  "result": {
+    "item": "ragemod:trofea",
+    "count": 1
+  }
+}

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "fire1",
+    "texture": "fire_relic",
     "customModelName": "Normal",
     "name": "Fire Relic",
     "rarity": "RARE",
