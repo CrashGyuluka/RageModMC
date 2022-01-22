@@ -1,24 +1,48 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
+import net.minecraftforge.registries.ObjectHolder;
 
-import net.mcreator.ragemod.init.RagemodModTabs;
+import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.Food;
 
-public class SajtItem extends Item {
-	public SajtItem() {
-		super(new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB).stacksTo(64).rarity(Rarity.COMMON)
-				.food((new FoodProperties.Builder()).nutrition(6).saturationMod(6f)
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
 
-						.build()));
-		setRegistryName("sajt");
+@RagemodModElements.ModElement.Tag
+public class SajtItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:sajt")
+	public static final Item block = null;
+
+	public SajtItem(RagemodModElements instance) {
+		super(instance, 392);
 	}
 
 	@Override
-	public int getUseDuration(ItemStack stack) {
-		return 30;
+	public void initElements() {
+		elements.items.add(() -> new FoodItemCustom());
+	}
+
+	public static class FoodItemCustom extends Item {
+		public FoodItemCustom() {
+			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+					.food((new Food.Builder()).hunger(6).saturation(6f)
+
+							.build()));
+			setRegistryName("sajt");
+		}
+
+		@Override
+		public int getUseDuration(ItemStack stack) {
+			return 30;
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
+		}
 	}
 }

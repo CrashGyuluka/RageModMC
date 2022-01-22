@@ -1,29 +1,78 @@
 
 package net.mcreator.ragemod.enchantment;
 
-import net.minecraft.world.item.enchantment.EnchantmentCategory;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraftforge.registries.ObjectHolder;
 
-import net.mcreator.ragemod.init.RagemodModItems;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.enchantment.Enchantment;
 
-public class PingvinhunenchantEnchantment extends Enchantment {
-	public PingvinhunenchantEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.ARMOR_CHEST, slots);
+import net.mcreator.ragemod.item.RageiumaromrItem;
+import net.mcreator.ragemod.item.AlieniteArmorItem;
+import net.mcreator.ragemod.RagemodModElements;
+
+@RagemodModElements.ModElement.Tag
+public class PingvinhunenchantEnchantment extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:pingvinhunenchant")
+	public static final Enchantment enchantment = null;
+
+	public PingvinhunenchantEnchantment(RagemodModElements instance) {
+		super(instance, 397);
 	}
 
 	@Override
-	public int getMaxLevel() {
-		return 5;
+	public void initElements() {
+		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("pingvinhunenchant"));
 	}
 
-	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		if (stack.getItem() == RagemodModItems.RAGEIUMAROMR_CHESTPLATE)
+	public static class CustomEnchantment extends Enchantment {
+		public CustomEnchantment(EquipmentSlotType... slots) {
+			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST, slots);
+		}
+
+		@Override
+		public int getMinLevel() {
+			return 1;
+		}
+
+		@Override
+		public int getMaxLevel() {
+			return 5;
+		}
+
+		@Override
+		public boolean canApplyAtEnchantingTable(ItemStack stack) {
+			if (stack.getItem() == RageiumaromrItem.body)
+				return true;
+			if (stack.getItem() == AlieniteArmorItem.body)
+				return true;
+			return false;
+		}
+
+		@Override
+		public boolean isTreasureEnchantment() {
+			return false;
+		}
+
+		@Override
+		public boolean isCurse() {
+			return false;
+		}
+
+		@Override
+		public boolean isAllowedOnBooks() {
 			return true;
-		if (stack.getItem() == RagemodModItems.ALIENITE_ARMOR_CHESTPLATE)
+		}
+
+		@Override
+		public boolean canGenerateInLoot() {
 			return true;
-		return false;
+		}
+
+		@Override
+		public boolean canVillagerTrade() {
+			return true;
+		}
 	}
 }

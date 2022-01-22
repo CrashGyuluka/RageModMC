@@ -2,119 +2,181 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.world.BlockEvent;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
-import net.mcreator.ragemod.network.RagemodModVariables;
-import net.mcreator.ragemod.init.RagemodModBlocks;
+import net.mcreator.ragemod.block.SvaskekgombaBlock;
+import net.mcreator.ragemod.block.SavaszuzottBlock;
+import net.mcreator.ragemod.block.SavasteglaBlock;
+import net.mcreator.ragemod.block.SavassoderBlock;
+import net.mcreator.ragemod.block.SavassandBlock;
+import net.mcreator.ragemod.block.SavasredsandBlock;
+import net.mcreator.ragemod.block.SavaspirosgombaBlock;
+import net.mcreator.ragemod.block.SavaspanksBlock;
+import net.mcreator.ragemod.block.SavasnetherrackBlock;
+import net.mcreator.ragemod.block.SavasnetheritetormelekBlock;
+import net.mcreator.ragemod.block.SavaslogBlock;
+import net.mcreator.ragemod.block.SavaskoteglaBlock;
+import net.mcreator.ragemod.block.SavaskoBlock;
+import net.mcreator.ragemod.block.SavashomokkopirosBlock;
+import net.mcreator.ragemod.block.SavashomokkoBlock;
+import net.mcreator.ragemod.block.SavasgranitBlock;
+import net.mcreator.ragemod.block.SavasfoldBlock;
+import net.mcreator.ragemod.block.SavasendkoBlock;
+import net.mcreator.ragemod.block.SavasdioritBlock;
+import net.mcreator.ragemod.block.SavascsontBlock;
+import net.mcreator.ragemod.block.SavasbuzablockBlock;
+import net.mcreator.ragemod.block.SavasblackstoneBlock;
+import net.mcreator.ragemod.block.SavasblackkoteglaBlock;
+import net.mcreator.ragemod.block.SavasbazaltBlock;
+import net.mcreator.ragemod.block.SavasandesiteBlock;
+import net.mcreator.ragemod.RagemodModVariables;
+import net.mcreator.ragemod.RagemodMod;
 
-import javax.annotation.Nullable;
-
+import java.util.Map;
 import java.util.Iterator;
+import java.util.HashMap;
 
-@Mod.EventBusSubscriber
 public class ToxicBlockPlacedProcedure {
-	@SubscribeEvent
-	public static void onBlockPlace(BlockEvent.EntityPlaceEvent event) {
-		Entity entity = event.getEntity();
-		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), entity);
+	@Mod.EventBusSubscriber
+	private static class GlobalTrigger {
+		@SubscribeEvent
+		public static void onBlockPlace(BlockEvent.EntityPlaceEvent event) {
+			Entity entity = event.getEntity();
+			IWorld world = event.getWorld();
+			Map<String, Object> dependencies = new HashMap<>();
+			dependencies.put("x", event.getPos().getX());
+			dependencies.put("y", event.getPos().getY());
+			dependencies.put("z", event.getPos().getZ());
+			dependencies.put("px", entity.getPosX());
+			dependencies.put("py", entity.getPosY());
+			dependencies.put("pz", entity.getPosZ());
+			dependencies.put("world", world);
+			dependencies.put("entity", entity);
+			dependencies.put("blockstate", event.getState());
+			dependencies.put("placedagainst", event.getPlacedAgainst());
+			dependencies.put("event", event);
+			executeProcedure(dependencies);
+		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure ToxicBlockPlaced!");
 			return;
-		if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:toxic_blocks"))
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure ToxicBlockPlaced!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure ToxicBlockPlaced!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure ToxicBlockPlaced!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure ToxicBlockPlaced!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:toxic_blocks"))
 				.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASKO) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavaskoBlock.block) {
 				{
-					boolean _setval = true;
+					boolean _setval = (true);
 					entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.ToxicBlockPlace1 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			} else {
-				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASNETHERRACK) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavasnetherrackBlock.block) {
 					{
-						boolean _setval = true;
+						boolean _setval = (true);
 						entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.ToxicBlockPlace2 = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 				} else {
-					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASENDKO) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavasendkoBlock.block) {
 						{
-							boolean _setval = true;
+							boolean _setval = (true);
 							entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.ToxicBlockPlace3 = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					} else {
-						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASFOLD) {
+						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavasfoldBlock.block) {
 							{
-								boolean _setval = true;
+								boolean _setval = (true);
 								entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.ToxicBlockPlace4 = _setval;
 									capability.syncPlayerVariables(entity);
 								});
 							}
 						} else {
-							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASLOG) {
+							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavaslogBlock.block) {
 								{
-									boolean _setval = true;
+									boolean _setval = (true);
 									entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.ToxicBlockPlace5 = _setval;
 										capability.syncPlayerVariables(entity);
 									});
 								}
 							} else {
-								if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASPANKS) {
+								if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavaspanksBlock.block) {
 									{
-										boolean _setval = true;
+										boolean _setval = (true);
 										entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.ToxicBlockPlace6 = _setval;
 											capability.syncPlayerVariables(entity);
 										});
 									}
 								} else {
-									if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.SAVASANDESITE) {
+									if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavasandesiteBlock.block) {
 										{
-											boolean _setval = true;
+											boolean _setval = (true);
 											entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 												capability.ToxicBlockPlace7 = _setval;
 												capability.syncPlayerVariables(entity);
 											});
 										}
 									} else {
-										if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-												.getBlock() == RagemodModBlocks.SAVASDIORIT) {
+										if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavasdioritBlock.block) {
 											{
-												boolean _setval = true;
+												boolean _setval = (true);
 												entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 													capability.ToxicBlockPlace8 = _setval;
 													capability.syncPlayerVariables(entity);
 												});
 											}
 										} else {
-											if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-													.getBlock() == RagemodModBlocks.SAVASGRANIT) {
+											if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SavasgranitBlock.block) {
 												{
-													boolean _setval = true;
+													boolean _setval = (true);
 													entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 															.ifPresent(capability -> {
 																capability.ToxicBlockPlace9 = _setval;
@@ -123,9 +185,9 @@ public class ToxicBlockPlacedProcedure {
 												}
 											} else {
 												if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-														.getBlock() == RagemodModBlocks.SAVASCSONT) {
+														.getBlock() == SavascsontBlock.block) {
 													{
-														boolean _setval = true;
+														boolean _setval = (true);
 														entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																.ifPresent(capability -> {
 																	capability.ToxicBlockPlace10 = _setval;
@@ -134,9 +196,9 @@ public class ToxicBlockPlacedProcedure {
 													}
 												} else {
 													if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-															.getBlock() == RagemodModBlocks.SAVASTEGLA) {
+															.getBlock() == SavasteglaBlock.block) {
 														{
-															boolean _setval = true;
+															boolean _setval = (true);
 															entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																	.ifPresent(capability -> {
 																		capability.ToxicBlockPlace11 = _setval;
@@ -145,9 +207,9 @@ public class ToxicBlockPlacedProcedure {
 														}
 													} else {
 														if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																.getBlock() == RagemodModBlocks.SAVASKOTEGLA) {
+																.getBlock() == SavaskoteglaBlock.block) {
 															{
-																boolean _setval = true;
+																boolean _setval = (true);
 																entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																		.ifPresent(capability -> {
 																			capability.ToxicBlockPlace12 = _setval;
@@ -156,9 +218,9 @@ public class ToxicBlockPlacedProcedure {
 															}
 														} else {
 															if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																	.getBlock() == RagemodModBlocks.SAVASNETHERITETORMELEK) {
+																	.getBlock() == SavasnetheritetormelekBlock.block) {
 																{
-																	boolean _setval = true;
+																	boolean _setval = (true);
 																	entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																			.ifPresent(capability -> {
 																				capability.ToxicBlockPlace13 = _setval;
@@ -167,9 +229,9 @@ public class ToxicBlockPlacedProcedure {
 																}
 															} else {
 																if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																		.getBlock() == RagemodModBlocks.SAVASBAZALT) {
+																		.getBlock() == SavasbazaltBlock.block) {
 																	{
-																		boolean _setval = true;
+																		boolean _setval = (true);
 																		entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																				.ifPresent(capability -> {
 																					capability.ToxicBlockPlace14 = _setval;
@@ -178,9 +240,9 @@ public class ToxicBlockPlacedProcedure {
 																	}
 																} else {
 																	if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																			.getBlock() == RagemodModBlocks.SAVASZUZOTT) {
+																			.getBlock() == SavaszuzottBlock.block) {
 																		{
-																			boolean _setval = true;
+																			boolean _setval = (true);
 																			entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																					null).ifPresent(capability -> {
 																						capability.ToxicBlockPlace15 = _setval;
@@ -189,9 +251,9 @@ public class ToxicBlockPlacedProcedure {
 																		}
 																	} else {
 																		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																				.getBlock() == RagemodModBlocks.SAVASSODER) {
+																				.getBlock() == SavassoderBlock.block) {
 																			{
-																				boolean _setval = true;
+																				boolean _setval = (true);
 																				entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																						null).ifPresent(capability -> {
 																							capability.ToxicBlockPlace16 = _setval;
@@ -200,9 +262,9 @@ public class ToxicBlockPlacedProcedure {
 																			}
 																		} else {
 																			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																					.getBlock() == RagemodModBlocks.SAVASBUZABLOCK) {
+																					.getBlock() == SavasbuzablockBlock.block) {
 																				{
-																					boolean _setval = true;
+																					boolean _setval = (true);
 																					entity.getCapability(
 																							RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																							.ifPresent(capability -> {
@@ -212,9 +274,9 @@ public class ToxicBlockPlacedProcedure {
 																				}
 																			} else {
 																				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																						.getBlock() == RagemodModBlocks.SAVASBLACKSTONE) {
+																						.getBlock() == SavasblackstoneBlock.block) {
 																					{
-																						boolean _setval = true;
+																						boolean _setval = (true);
 																						entity.getCapability(
 																								RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																								.ifPresent(capability -> {
@@ -224,9 +286,9 @@ public class ToxicBlockPlacedProcedure {
 																					}
 																				} else {
 																					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																							.getBlock() == RagemodModBlocks.SAVASBLACKKOTEGLA) {
+																							.getBlock() == SavasblackkoteglaBlock.block) {
 																						{
-																							boolean _setval = true;
+																							boolean _setval = (true);
 																							entity.getCapability(
 																									RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																									null).ifPresent(capability -> {
@@ -237,9 +299,9 @@ public class ToxicBlockPlacedProcedure {
 																					} else {
 																						if ((world.getBlockState(
 																								new BlockPos((int) x, (int) y, (int) z)))
-																										.getBlock() == RagemodModBlocks.SVASKEKGOMBA) {
+																										.getBlock() == SvaskekgombaBlock.block) {
 																							{
-																								boolean _setval = true;
+																								boolean _setval = (true);
 																								entity.getCapability(
 																										RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																										null).ifPresent(capability -> {
@@ -250,9 +312,9 @@ public class ToxicBlockPlacedProcedure {
 																						} else {
 																							if ((world.getBlockState(
 																									new BlockPos((int) x, (int) y, (int) z)))
-																											.getBlock() == RagemodModBlocks.SAVASPIROSGOMBA) {
+																											.getBlock() == SavaspirosgombaBlock.block) {
 																								{
-																									boolean _setval = true;
+																									boolean _setval = (true);
 																									entity.getCapability(
 																											RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																											null).ifPresent(capability -> {
@@ -264,9 +326,9 @@ public class ToxicBlockPlacedProcedure {
 																							} else {
 																								if ((world.getBlockState(
 																										new BlockPos((int) x, (int) y, (int) z)))
-																												.getBlock() == RagemodModBlocks.SAVASSAND) {
+																												.getBlock() == SavassandBlock.block) {
 																									{
-																										boolean _setval = true;
+																										boolean _setval = (true);
 																										entity.getCapability(
 																												RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																												null).ifPresent(capability -> {
@@ -278,9 +340,9 @@ public class ToxicBlockPlacedProcedure {
 																								} else {
 																									if ((world.getBlockState(
 																											new BlockPos((int) x, (int) y, (int) z)))
-																													.getBlock() == RagemodModBlocks.SAVASREDSAND) {
+																													.getBlock() == SavasredsandBlock.block) {
 																										{
-																											boolean _setval = true;
+																											boolean _setval = (true);
 																											entity.getCapability(
 																													RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																													null).ifPresent(capability -> {
@@ -293,9 +355,9 @@ public class ToxicBlockPlacedProcedure {
 																									} else {
 																										if ((world.getBlockState(new BlockPos((int) x,
 																												(int) y, (int) z)))
-																														.getBlock() == RagemodModBlocks.SAVASHOMOKKO) {
+																														.getBlock() == SavashomokkoBlock.block) {
 																											{
-																												boolean _setval = true;
+																												boolean _setval = (true);
 																												entity.getCapability(
 																														RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																														null)
@@ -309,9 +371,9 @@ public class ToxicBlockPlacedProcedure {
 																										} else {
 																											if ((world.getBlockState(new BlockPos(
 																													(int) x, (int) y, (int) z)))
-																															.getBlock() == RagemodModBlocks.SAVASHOMOKKOPIROS) {
+																															.getBlock() == SavashomokkopirosBlock.block) {
 																												{
-																													boolean _setval = true;
+																													boolean _setval = (true);
 																													entity.getCapability(
 																															RagemodModVariables.PLAYER_VARIABLES_CAPABILITY,
 																															null)
@@ -397,13 +459,16 @@ public class ToxicBlockPlacedProcedure {
 							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace24 == true
 					&& (entity.getCapability(RagemodModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new RagemodModVariables.PlayerVariables())).ToxicBlockPlace25 == true) {
-				if (entity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ragemod:adv_37"));
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (entity instanceof ServerPlayerEntity) {
+					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+							.getAdvancement(new ResourceLocation("ragemod:adv_37"));
+					AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						Iterator _iterator = _ap.getRemaningCriteria().iterator();
+						while (_iterator.hasNext()) {
+							String _criterion = (String) _iterator.next();
+							((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+						}
 					}
 				}
 			}

@@ -1,28 +1,61 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
 
-import net.mcreator.ragemod.init.RagemodModItems;
+import net.mcreator.ragemod.item.SavascsakanyItem;
+import net.mcreator.ragemod.item.AlienitepickaxeItem;
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.Map;
 
 public class MegasavcsakaknyBlockDestroyedWithToolProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure MegasavcsakaknyBlockDestroyedWithTool!");
 			return;
-		if (((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RagemodModItems.SAVASCSAKANY
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getItem() == RagemodModItems.ALIENITEPICKAXE)
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure MegasavcsakaknyBlockDestroyedWithTool!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure MegasavcsakaknyBlockDestroyedWithTool!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure MegasavcsakaknyBlockDestroyedWithTool!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure MegasavcsakaknyBlockDestroyedWithTool!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavascsakanyItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == AlienitepickaxeItem.block)
 				&& (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GLASS) {
-			if (world instanceof Level _level && !_level.isClientSide()) {
-				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.GLASS));
-				entityToSpawn.setPickUpDelay(10);
-				_level.addFreshEntity(entityToSpawn);
+			if (world instanceof World && !world.isRemote()) {
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.GLASS));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
 			}
 		}
 	}

@@ -1,82 +1,96 @@
 
 package net.mcreator.ragemod.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.init.RagemodModParticles;
+import net.mcreator.ragemod.particle.CvexparticleParticle;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-public class CvexblockBlock extends Block {
-	public CvexblockBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.NETHERITE_BLOCK).strength(6f, 60f).requiresCorrectToolForDrops()
-				.jumpFactor(1.1f));
-		setRegistryName("cvex_block");
+@RagemodModElements.ModElement.Tag
+public class CvexblockBlock extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:cvex_block")
+	public static final Block block = null;
+
+	public CvexblockBlock(RagemodModElements instance) {
+		super(instance, 39);
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+	public void initElements() {
+		elements.blocks.add(() -> new CustomBlock());
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ErcekItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
-	@Override
-	public float getEnchantPowerBonus(BlockState state, LevelReader world, BlockPos pos) {
-		return 2f;
-	}
+	public static class CustomBlock extends Block {
+		public CustomBlock() {
+			super(Block.Properties.create(Material.IRON).sound(SoundType.NETHERITE).hardnessAndResistance(6f, 60f).setLightLevel(s -> 0)
+					.harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool().jumpFactor(1.1f));
+			setRegistryName("cvex_block");
+		}
 
-	@Override
-	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
-		return true;
-	}
+		@Override
+		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
+			return 15;
+		}
 
-	@Override
-	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 1;
-		return false;
-	}
+		@Override
+		public float getEnchantPowerBonus(BlockState state, IWorldReader world, BlockPos pos) {
+			return 2f;
+		}
 
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
-	}
+		@Override
+		public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
+			return true;
+		}
 
-	@OnlyIn(Dist.CLIENT)
-	@Override
-	public void animateTick(BlockState blockstate, Level world, BlockPos pos, Random random) {
-		super.animateTick(blockstate, world, pos, random);
-		Player entity = Minecraft.getInstance().player;
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		for (int l = 0; l < 1; ++l) {
-			double x0 = x + 0.5 + (random.nextFloat() - 0.5) * 0.1999999985098839D;
-			double y0 = y + 1.2 + (random.nextFloat() - 0.5) * 0.1999999985098839D;
-			double z0 = z + 0.5 + (random.nextFloat() - 0.5) * 0.1999999985098839D;
-			world.addParticle(RagemodModParticles.CVEXPARTICLE, x0, y0, z0, 0, 0, 0);
+		@Override
+		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+			if (!dropsOriginal.isEmpty())
+				return dropsOriginal;
+			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public void animateTick(BlockState blockstate, World world, BlockPos pos, Random random) {
+			super.animateTick(blockstate, world, pos, random);
+			PlayerEntity entity = Minecraft.getInstance().player;
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (true)
+				for (int l = 0; l < 1; ++l) {
+					double d0 = (double) ((float) x + 0.5) + (double) (random.nextFloat() - 0.5) * 0.1999999985098839D;
+					double d1 = ((double) ((float) y + 0.7) + (double) (random.nextFloat() - 0.5) * 0.1999999985098839D) + 0.5;
+					double d2 = (double) ((float) z + 0.5) + (double) (random.nextFloat() - 0.5) * 0.1999999985098839D;
+					world.addParticle(CvexparticleParticle.particle, d0, d1, d2, 0, 0, 0);
+				}
 		}
 	}
 }

@@ -2,144 +2,178 @@
 package net.mcreator.ragemod.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
-import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.network.FMLPlayMessages;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.DungeonHooks;
 
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.World;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.DamageSource;
+import net.minecraft.network.IPacket;
+import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.Item;
+import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.BreakDoorGoal;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.CreatureAttribute;
 
-import net.mcreator.ragemod.init.RagemodModParticles;
-import net.mcreator.ragemod.init.RagemodModEntities;
+import net.mcreator.ragemod.particle.Particle2Particle;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.entity.renderer.SavragerobiRenderer;
+import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Set;
+import java.util.Random;
 
-@Mod.EventBusSubscriber
-public class SavragerobiEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("badlands"), new ResourceLocation("ragemod:toxic_waste"));
+@RagemodModElements.ModElement.Tag
+public class SavragerobiEntity extends RagemodModElements.ModElement {
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("savragerobi").setRegistryName("savragerobi");
+
+	public SavragerobiEntity(RagemodModElements instance) {
+		super(instance, 43);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new SavragerobiRenderer.ModelRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+
+	@Override
+	public void initElements() {
+		elements.entities.add(() -> entity);
+		elements.items.add(() -> new SpawnEggItem(entity, -14075068, -6750208, new Item.Properties().group(ErcekItemGroup.tab))
+				.setRegistryName("savragerobi_spawn_egg"));
+	}
 
 	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(RagemodModEntities.SAVRAGEROBI, 1, 1, 1));
-	}
-
-	public SavragerobiEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
-		this(RagemodModEntities.SAVRAGEROBI, world);
-	}
-
-	public SavragerobiEntity(EntityType<SavragerobiEntity> type, Level world) {
-		super(type, world);
-		xpReward = 20;
-		setNoAi(false);
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("ragemod:toxic_waste").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("badlands").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 1, 1, 1));
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
+	public void init(FMLCommonSetupEvent event) {
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+				MonsterEntity::canMonsterSpawn);
+		DungeonHooks.addDungeonMob(entity, 180);
 	}
 
-	@Override
-	protected void registerGoals() {
-		super.registerGoals();
-		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AtomRageREntity.class, false, false));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, RagemiteEntity.class, false, false));
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false));
-		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
-		this.goalSelector.addGoal(7, new BreakDoorGoal(this, e -> true));
-		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(9, new FloatGoal(this));
-	}
-
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
-	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_idle2"));
-	}
-
-	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
-	}
-
-	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_death1"));
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	public void aiStep() {
-		super.aiStep();
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
-		for (int l = 0; l < 1; ++l) {
-			double x0 = x + random.nextFloat();
-			double y0 = y + random.nextFloat();
-			double z0 = z + random.nextFloat();
-			double dx = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
-			double dy = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
-			double dz = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
-			world.addParticle(RagemodModParticles.PARTICLE_2, x0, y0, z0, dx, dy, dz);
+	private static class EntityAttributesRegisterHandler {
+		@SubscribeEvent
+		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 40);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 2);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 1);
+			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 4);
+			event.put(entity, ammma.create());
 		}
 	}
 
-	public static void init() {
-		SpawnPlacements.register(RagemodModEntities.SAVRAGEROBI, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
-						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
-		DungeonHooks.addDungeonMob(RagemodModEntities.SAVRAGEROBI, 180);
-	}
+	public static class CustomEntity extends MonsterEntity {
+		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
+			this(entity, world);
+		}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
-		builder = builder.add(Attributes.MAX_HEALTH, 40);
-		builder = builder.add(Attributes.ARMOR, 2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 1);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 3);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 4);
-		return builder;
+		public CustomEntity(EntityType<CustomEntity> type, World world) {
+			super(type, world);
+			experienceValue = 20;
+			setNoAI(false);
+		}
+
+		@Override
+		public IPacket<?> createSpawnPacket() {
+			return NetworkHooks.getEntitySpawningPacket(this);
+		}
+
+		@Override
+		protected void registerGoals() {
+			super.registerGoals();
+			this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AtomRageREntity.CustomEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, RagemiteEntity.CustomEntity.class, false, false));
+			this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false));
+			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1));
+			this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(7, new BreakDoorGoal(this, e -> true));
+			this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(9, new SwimGoal(this));
+		}
+
+		@Override
+		public CreatureAttribute getCreatureAttribute() {
+			return CreatureAttribute.UNDEFINED;
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getAmbientSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_idle2"));
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getDeathSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_death1"));
+		}
+
+		@Override
+		public boolean attackEntityFrom(DamageSource source, float amount) {
+			if (source == DamageSource.CACTUS)
+				return false;
+			if (source == DamageSource.DROWN)
+				return false;
+			return super.attackEntityFrom(source, amount);
+		}
+
+		public void livingTick() {
+			super.livingTick();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Random random = this.rand;
+			Entity entity = this;
+			if (true)
+				for (int l = 0; l < 1; ++l) {
+					double d0 = (x + random.nextFloat());
+					double d1 = (y + random.nextFloat());
+					double d2 = (z + random.nextFloat());
+					int i1 = random.nextInt(2) * 2 - 1;
+					double d3 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.1999999985098839D;
+					world.addParticle(Particle2Particle.particle, d0, d1, d2, d3, d4, d5);
+				}
+		}
 	}
 }

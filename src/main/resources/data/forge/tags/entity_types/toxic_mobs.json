@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
+    "ragemod:polipos",
     "ragemod:savragerobi",
-    "ragemod:toxic_mob",
-    "ragemod:polipos"
+    "ragemod:toxic_mob"
   ]
 }

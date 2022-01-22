@@ -1,49 +1,67 @@
 
 package net.mcreator.ragemod.item;
 
+import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.entity.Entity;
 
-import net.mcreator.ragemod.init.RagemodModTabs;
-import net.mcreator.ragemod.init.RagemodModItems;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
 
-public abstract class AlieniteArmorItem extends ArmorItem {
-	public AlieniteArmorItem(EquipmentSlot slot, Item.Properties properties) {
-		super(new ArmorMaterial() {
+@RagemodModElements.ModElement.Tag
+public class AlieniteArmorItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:alienite_armor_helmet")
+	public static final Item helmet = null;
+	@ObjectHolder("ragemod:alienite_armor_chestplate")
+	public static final Item body = null;
+	@ObjectHolder("ragemod:alienite_armor_leggings")
+	public static final Item legs = null;
+	@ObjectHolder("ragemod:alienite_armor_boots")
+	public static final Item boots = null;
+
+	public AlieniteArmorItem(RagemodModElements instance) {
+		super(instance, 61);
+	}
+
+	@Override
+	public void initElements() {
+		IArmorMaterial armormaterial = new IArmorMaterial() {
 			@Override
-			public int getDurabilityForSlot(EquipmentSlot slot) {
+			public int getDurability(EquipmentSlotType slot) {
 				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 59;
 			}
 
 			@Override
-			public int getDefenseForSlot(EquipmentSlot slot) {
+			public int getDamageReductionAmount(EquipmentSlotType slot) {
 				return new int[]{4, 8, 9, 4}[slot.getIndex()];
 			}
 
 			@Override
-			public int getEnchantmentValue() {
+			public int getEnchantability() {
 				return 25;
 			}
 
 			@Override
-			public SoundEvent getEquipSound() {
-				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_netherite"));
+			public net.minecraft.util.SoundEvent getSoundEvent() {
+				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_netherite"));
 			}
 
 			@Override
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(RagemodModItems.CURSED_ALIENITE));
+			public Ingredient getRepairMaterial() {
+				return Ingredient.fromStacks(new ItemStack(CursedalieniteItem.block));
 			}
 
+			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
 				return "alienite_armor";
@@ -58,54 +76,31 @@ public abstract class AlieniteArmorItem extends ArmorItem {
 			public float getKnockbackResistance() {
 				return 0.2f;
 			}
-		}, slot, properties);
+		};
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ErcekItemGroup.tab)) {
+			@Override
+			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+				return "ragemod:textures/models/armor/alienite_armor__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+			}
+		}.setRegistryName("alienite_armor_helmet"));
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(ErcekItemGroup.tab)) {
+			@Override
+			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+				return "ragemod:textures/models/armor/alienite_armor__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+			}
+		}.setRegistryName("alienite_armor_chestplate"));
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ErcekItemGroup.tab)) {
+			@Override
+			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+				return "ragemod:textures/models/armor/alienite_armor__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+			}
+		}.setRegistryName("alienite_armor_leggings"));
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ErcekItemGroup.tab)) {
+			@Override
+			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+				return "ragemod:textures/models/armor/alienite_armor__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+			}
+		}.setRegistryName("alienite_armor_boots"));
 	}
 
-	public static class Helmet extends AlieniteArmorItem {
-		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
-			setRegistryName("alienite_armor_helmet");
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/alienite_armor__layer_1.png";
-		}
-	}
-
-	public static class Chestplate extends AlieniteArmorItem {
-		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
-			setRegistryName("alienite_armor_chestplate");
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/alienite_armor__layer_1.png";
-		}
-	}
-
-	public static class Leggings extends AlieniteArmorItem {
-		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
-			setRegistryName("alienite_armor_leggings");
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/alienite_armor__layer_2.png";
-		}
-	}
-
-	public static class Boots extends AlieniteArmorItem {
-		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
-			setRegistryName("alienite_armor_boots");
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ragemod:textures/models/armor/alienite_armor__layer_1.png";
-		}
-	}
 }

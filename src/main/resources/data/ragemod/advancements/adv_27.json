@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "ragemod:cvex_block"
-            ],
+            "item": "ragemod:cvex_block",
             "count": {
               "min": 10,
               "max": 1069

@@ -1,21 +1,51 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.entity.Entity;
 
 import net.mcreator.ragemod.entity.RagemiteEntity;
 import net.mcreator.ragemod.entity.AtomRageREntity;
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.function.Function;
+import java.util.Map;
+import java.util.Comparator;
 
 public class RageoverlayDisplayOverlayIngameProcedure {
-	public static boolean execute(LevelAccessor world, Entity entity) {
-		if (entity == null)
+
+	public static boolean executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure RageoverlayDisplayOverlayIngame!");
 			return false;
-		if (!world.getEntitiesOfClass(AtomRageREntity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 3, 3, 3),
-				e -> true).isEmpty()
-				|| !world.getEntitiesOfClass(RagemiteEntity.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 3, 3, 3),
-						e -> true).isEmpty()) {
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure RageoverlayDisplayOverlayIngame!");
+			return false;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		if (((Entity) world
+				.getEntitiesWithinAABB(AtomRageREntity.CustomEntity.class,
+						new AxisAlignedBB((entity.getPosX()) - (3 / 2d), (entity.getPosY()) - (3 / 2d), (entity.getPosZ()) - (3 / 2d),
+								(entity.getPosX()) + (3 / 2d), (entity.getPosY()) + (3 / 2d), (entity.getPosZ()) + (3 / 2d)),
+						null)
+				.stream().sorted(new Object() {
+					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+					}
+				}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null || ((Entity) world
+						.getEntitiesWithinAABB(RagemiteEntity.CustomEntity.class,
+								new AxisAlignedBB((entity.getPosX()) - (3 / 2d), (entity.getPosY()) - (3 / 2d), (entity.getPosZ()) - (3 / 2d),
+										(entity.getPosX()) + (3 / 2d), (entity.getPosY()) + (3 / 2d), (entity.getPosZ()) + (3 / 2d)),
+								null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) != null) {
 			return true;
 		}
 		return false;

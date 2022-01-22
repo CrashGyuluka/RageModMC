@@ -1,39 +1,55 @@
 
 package net.mcreator.ragemod.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.IPlantable;
 
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.FallingBlock;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
 
-public class CoveredaliengrassBlock extends FallingBlock {
-	public CoveredaliengrassBlock() {
-		super(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.WET_GRASS).strength(2f, 10f).requiresCorrectToolForDrops());
-		setRegistryName("covered_alien_soil");
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
+
+@RagemodModElements.ModElement.Tag
+public class CoveredaliengrassBlock extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:covered_alien_soil")
+	public static final Block block = null;
+
+	public CoveredaliengrassBlock(RagemodModElements instance) {
+		super(instance, 137);
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+	public void initElements() {
+		elements.blocks.add(() -> new CustomBlock());
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
-	@Override
-	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
-		return true;
-	}
+	public static class CustomBlock extends FallingBlock {
+		public CustomBlock() {
+			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.WET_GRASS).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0)
+					.harvestLevel(2).harvestTool(ToolType.SHOVEL).setRequiresTool());
+			setRegistryName("covered_alien_soil");
+		}
 
-	@Override
-	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= 2;
-		return false;
+		@Override
+		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
+			return 15;
+		}
+
+		@Override
+		public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
+			return true;
+		}
 	}
 }

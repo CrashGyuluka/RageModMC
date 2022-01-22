@@ -1,19 +1,28 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.DamageSource;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.Map;
 
 public class AlientrapblockEntityCollidesInTheBlockProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure AlientrapblockEntityCollidesInTheBlock!");
 			return;
-		if (((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
 				.getItem() == Items.IRON_CHESTPLATE) == false) {
-			entity.hurt(DamageSource.STARVE, 1);
+			entity.attackEntityFrom(DamageSource.STARVE, (float) 1);
 		}
 	}
 }

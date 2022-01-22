@@ -1,19 +1,36 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.Entity;
+
+import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 
 public class Favago6Procedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Favago6!");
 			return;
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(0)).remove(1);
-			_player.containerMenu.broadcastChanges();
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
 	}
 }

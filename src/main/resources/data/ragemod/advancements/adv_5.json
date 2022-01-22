@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "ragemod:croissant"
-            ],
+            "item": "ragemod:croissant",
             "count": {
               "min": 64,
               "max": 1000

@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "ragemod:elderflower_syrup"
-            ],
+            "item": "ragemod:elderflower_syrup",
             "count": {
               "min": 16,
               "max": 1069

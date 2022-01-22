@@ -1,69 +1,87 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.IItemTier;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.procedures.AlienitepickaxeBlockDestroyedWithToolProcedure;
-import net.mcreator.ragemod.init.RagemodModTabs;
-import net.mcreator.ragemod.init.RagemodModItems;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
 
+import java.util.stream.Stream;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
-public class AlienitepickaxeItem extends PickaxeItem {
-	public AlienitepickaxeItem() {
-		super(new Tier() {
-			public int getUses() {
+@RagemodModElements.ModElement.Tag
+public class AlienitepickaxeItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:alienitepickaxe")
+	public static final Item block = null;
+
+	public AlienitepickaxeItem(RagemodModElements instance) {
+		super(instance, 55);
+	}
+
+	@Override
+	public void initElements() {
+		elements.items.add(() -> new PickaxeItem(new IItemTier() {
+			public int getMaxUses() {
 				return 4690;
 			}
 
-			public float getSpeed() {
+			public float getEfficiency() {
 				return 14f;
 			}
 
-			public float getAttackDamageBonus() {
+			public float getAttackDamage() {
 				return -1f;
 			}
 
-			public int getLevel() {
+			public int getHarvestLevel() {
 				return 6;
 			}
 
-			public int getEnchantmentValue() {
+			public int getEnchantability() {
 				return 24;
 			}
 
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(RagemodModItems.ALIENITE), new ItemStack(RagemodModItems.CURSED_ALIENITE));
+			public Ingredient getRepairMaterial() {
+				return Ingredient.fromStacks(new ItemStack(AlieniteItem.block), new ItemStack(CursedalieniteItem.block));
 			}
-		}, 1, -3f, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).fireResistant());
-		setRegistryName("alienitepickaxe");
-	}
+		}, 1, -3f, new Item.Properties().group(ErcekItemGroup.tab).isImmuneToFire()) {
+			@Override
+			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
+				super.addInformation(itemstack, world, list, flag);
+				list.add(new StringTextComponent("Mine with the MegaMine effect active!"));
+			}
 
-	@Override
-	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
-		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
+			@Override
+			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+				boolean retval = super.onBlockDestroyed(itemstack, world, blockstate, pos, entity);
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
 
-		AlienitepickaxeBlockDestroyedWithToolProcedure.execute(world, x, y, z, entity);
-		return retval;
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("Mine with the MegaMine effect active!"));
+				AlienitepickaxeBlockDestroyedWithToolProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+								new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				return retval;
+			}
+		}.setRegistryName("alienitepickaxe"));
 	}
 }

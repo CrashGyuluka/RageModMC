@@ -1,13 +1,22 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.Map;
 
 public class AliencobwebEntityCollidesInTheBlockProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure AliencobwebEntityCollidesInTheBlock!");
 			return;
-		entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		entity.setMotionMultiplier(Blocks.AIR.getDefaultState(), new Vector3d(0.25D, (double) 0.05F, 0.25D));
 	}
 }

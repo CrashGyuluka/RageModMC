@@ -1,39 +1,101 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.Entity;
+
+import net.mcreator.ragemod.RagemodMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 
 public class ConverterSlotChangesProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure ConverterSlotChanges!");
 			return;
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(0)).remove(1);
-			_player.containerMenu.broadcastChanges();
 		}
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(1)).remove(1);
-			_player.containerMenu.broadcastChanges();
+		Entity entity = (Entity) dependencies.get("entity");
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(2)).remove(1);
-			_player.containerMenu.broadcastChanges();
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(3)).remove(1);
-			_player.containerMenu.broadcastChanges();
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(4)).remove(1);
-			_player.containerMenu.broadcastChanges();
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (3))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
-		if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-			((Slot) _slots.get(5)).remove(1);
-			_player.containerMenu.broadcastChanges();
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (4))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+		}
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) _ent).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (5))).decrStackSize((int) (1));
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
 	}
 }

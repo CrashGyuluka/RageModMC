@@ -1,32 +1,61 @@
 
 package net.mcreator.ragemod.block;
 
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 
-public class GreenGlowingOakLeavesBlock extends LeavesBlock {
-	public GreenGlowingOakLeavesBlock() {
-		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.2f, 1f).lightLevel(s -> 7).requiresCorrectToolForDrops()
-				.noOcclusion().noDrops());
-		setRegistryName("green_glowing_oak_leaves");
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
+
+import java.util.List;
+import java.util.Collections;
+
+@RagemodModElements.ModElement.Tag
+public class GreenGlowingOakLeavesBlock extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:green_glowing_oak_leaves")
+	public static final Block block = null;
+
+	public GreenGlowingOakLeavesBlock(RagemodModElements instance) {
+		super(instance, 379);
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 1;
+	public void initElements() {
+		elements.blocks.add(() -> new CustomBlock());
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(TermeszettabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
-	@Override
-	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
-			return tieredItem.getTier().getLevel() >= -1;
-		return false;
+	public static class CustomBlock extends LeavesBlock {
+		public CustomBlock() {
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 1f).setLightLevel(s -> 7)
+					.harvestLevel(-1).harvestTool(ToolType.HOE).setRequiresTool().notSolid());
+			setRegistryName("green_glowing_oak_leaves");
+		}
+
+		@Override
+		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
+			return 1;
+		}
+
+		@Override
+		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+			if (!dropsOriginal.isEmpty())
+				return dropsOriginal;
+			return Collections.singletonList(new ItemStack(this, 0));
+		}
 	}
 }

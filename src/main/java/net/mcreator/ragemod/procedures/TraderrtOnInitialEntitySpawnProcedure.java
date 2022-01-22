@@ -1,13 +1,28 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.IWorld;
+import net.minecraft.entity.Entity;
+
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.Map;
 
 public class TraderrtOnInitialEntitySpawnProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure TraderrtOnInitialEntitySpawn!");
 			return;
-		if (!world.isClientSide()) {
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure TraderrtOnInitialEntitySpawn!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		if (!world.isRemote()) {
 			entity.getPersistentData().putDouble("randomTradeItem1", Math.random());
 			if (entity.getPersistentData().getDouble("randomTradeItem1") >= 0.83) {
 				entity.getPersistentData().putDouble("tradeItem1", 1);

@@ -1,38 +1,51 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.level.GameType;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.GameType;
+import net.minecraft.util.DamageSource;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.Map;
+
 public class ParkolEntityWalksOnTheBlockProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure ParkolEntityWalksOnTheBlock!");
 			return;
+		}
+		Entity entity = (Entity) dependencies.get("entity");
 		if (new Object() {
 			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance()
-							.getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
+				if (_ent instanceof ServerPlayerEntity) {
+					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
+					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+							.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
+					return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
 				}
 				return false;
 			}
 		}.checkGamemode(entity) || new Object() {
 			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.ADVENTURE;
-				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance()
-							.getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.ADVENTURE;
+				if (_ent instanceof ServerPlayerEntity) {
+					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
+					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+							.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
+					return _npi != null && _npi.getGameType() == GameType.ADVENTURE;
 				}
 				return false;
 			}
 		}.checkGamemode(entity)) {
-			entity.hurt(DamageSource.GENERIC, 69420);
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) 69420);
 		}
 	}
 }

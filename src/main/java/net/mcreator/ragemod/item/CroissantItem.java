@@ -1,24 +1,48 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
+import net.minecraftforge.registries.ObjectHolder;
 
-import net.mcreator.ragemod.init.RagemodModTabs;
+import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.Food;
 
-public class CroissantItem extends Item {
-	public CroissantItem() {
-		super(new Item.Properties().tab(RagemodModTabs.TAB_TERMESZETTAB).stacksTo(64).rarity(Rarity.COMMON)
-				.food((new FoodProperties.Builder()).nutrition(7).saturationMod(7f)
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
 
-						.build()));
-		setRegistryName("croissant");
+@RagemodModElements.ModElement.Tag
+public class CroissantItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:croissant")
+	public static final Item block = null;
+
+	public CroissantItem(RagemodModElements instance) {
+		super(instance, 390);
 	}
 
 	@Override
-	public int getUseDuration(ItemStack stack) {
-		return 20;
+	public void initElements() {
+		elements.items.add(() -> new FoodItemCustom());
+	}
+
+	public static class FoodItemCustom extends Item {
+		public FoodItemCustom() {
+			super(new Item.Properties().group(TermeszettabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+					.food((new Food.Builder()).hunger(7).saturation(7f)
+
+							.build()));
+			setRegistryName("croissant");
+		}
+
+		@Override
+		public int getUseDuration(ItemStack stack) {
+			return 20;
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
+		}
 	}
 }

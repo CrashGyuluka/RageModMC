@@ -1,92 +1,134 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
 
-import net.mcreator.ragemod.init.RagemodModBlocks;
+import net.mcreator.ragemod.block.AlienWalltorchBlock;
+import net.mcreator.ragemod.block.AlienTorchFloorBlock;
+import net.mcreator.ragemod.RagemodMod;
+
+import java.util.Map;
 
 public class AlienTorchFloorNeighbourBlockChangesProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.ALIEN_WALLTORCH) {
+
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure AlienTorchFloorNeighbourBlockChanges!");
+			return;
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure AlienTorchFloorNeighbourBlockChanges!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure AlienTorchFloorNeighbourBlockChanges!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure AlienTorchFloorNeighbourBlockChanges!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienWalltorchBlock.block) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
-						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
 				}
 			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH) {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
+				if (world instanceof World) {
+					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
 			} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
-						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
 				}
 			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH) {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
+				if (world instanceof World) {
+					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
 			} else if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
-						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
 				}
 			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST) {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
+				if (world instanceof World) {
+					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
 			} else if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR && (new Object() {
 				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property)instanceof Direction _dir)
-						return _dir;
-					property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (property != null && _bs.getValue(property)instanceof Direction.Axis _axis)
-						return Direction.fromAxisAndDirection(_axis, Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
+					try {
+						BlockState _bs = world.getBlockState(pos);
+						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+						if (property != null)
+							return _bs.get(property);
+						return Direction.getFacingFromAxisDirection(
+								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+								Direction.AxisDirection.POSITIVE);
+					} catch (Exception e) {
+						return Direction.NORTH;
+					}
 				}
 			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST) {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
+				if (world instanceof World) {
+					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RagemodModBlocks.ALIEN_TORCH_FLOOR) {
+		} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AlienTorchFloorBlock.block) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR) {
-				if (world instanceof Level) {
-					Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
+				if (world instanceof World) {
+					Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 							new BlockPos((int) (x + 0.5), (int) (y + 0.5), (int) (z + 0.5)));
 					world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 				}

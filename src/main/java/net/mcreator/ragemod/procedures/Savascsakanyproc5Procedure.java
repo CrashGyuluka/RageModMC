@@ -2,282 +2,322 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.state.Property;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
 
-import net.mcreator.ragemod.init.RagemodModItems;
-import net.mcreator.ragemod.init.RagemodModBlocks;
-
-import javax.annotation.Nullable;
+import net.mcreator.ragemod.item.SavascsakanyItem;
+import net.mcreator.ragemod.item.AlienitepickaxeItem;
+import net.mcreator.ragemod.block.TorootteglaBlock;
+import net.mcreator.ragemod.RagemodMod;
 
 import java.util.Map;
+import java.util.HashMap;
 
-@Mod.EventBusSubscriber
 public class Savascsakanyproc5Procedure {
-	@SubscribeEvent
-	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-		Player entity = event.getPlayer();
-		if (event.getHand() != entity.getUsedItemHand())
-			return;
-		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), entity);
+	@Mod.EventBusSubscriber
+	private static class GlobalTrigger {
+		@SubscribeEvent
+		public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+			PlayerEntity entity = event.getPlayer();
+			if (event.getHand() != entity.getActiveHand()) {
+				return;
+			}
+			double i = event.getPos().getX();
+			double j = event.getPos().getY();
+			double k = event.getPos().getZ();
+			IWorld world = event.getWorld();
+			BlockState state = world.getBlockState(event.getPos());
+			Map<String, Object> dependencies = new HashMap<>();
+			dependencies.put("x", i);
+			dependencies.put("y", j);
+			dependencies.put("z", k);
+			dependencies.put("world", world);
+			dependencies.put("entity", entity);
+			dependencies.put("direction", event.getFace());
+			dependencies.put("blockstate", state);
+			dependencies.put("event", event);
+			executeProcedure(dependencies);
+		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				RagemodMod.LOGGER.warn("Failed to load dependency world for procedure Savascsakanyproc5!");
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RagemodModItems.SAVASCSAKANY
-				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getItem() == RagemodModItems.ALIENITEPICKAXE) {
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				RagemodMod.LOGGER.warn("Failed to load dependency x for procedure Savascsakanyproc5!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				RagemodMod.LOGGER.warn("Failed to load dependency y for procedure Savascsakanyproc5!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				RagemodMod.LOGGER.warn("Failed to load dependency z for procedure Savascsakanyproc5!");
+			return;
+		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Savascsakanyproc5!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == SavascsakanyItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == AlienitepickaxeItem.block) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.MOSSY_STONE_BRICK_SLAB) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = Blocks.STONE_BRICK_SLAB.defaultBlockState();
+					BlockState _bs = Blocks.STONE_BRICK_SLAB.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.getValue(_property) != null)
+						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+						if (_property != null && _bs.get(_property) != null)
 							try {
-								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+								_bs = _bs.with(_property, (Comparable) entry.getValue());
 							} catch (Exception e) {
 							}
 					}
-					world.setBlock(_bp, _bs, 3);
+					world.setBlockState(_bp, _bs, 3);
 				}
 			} else {
 				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.POLISHED_BLACKSTONE_SLAB) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_SLAB.defaultBlockState();
+						BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_SLAB.getDefaultState();
 						BlockState _bso = world.getBlockState(_bp);
 						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.get(_property) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.with(_property, (Comparable) entry.getValue());
 								} catch (Exception e) {
 								}
 						}
-						world.setBlock(_bp, _bs, 3);
+						world.setBlockState(_bp, _bs, 3);
 					}
 				} else {
 					if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BLACKSTONE_SLAB) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = Blocks.POLISHED_BLACKSTONE_SLAB.defaultBlockState();
+							BlockState _bs = Blocks.POLISHED_BLACKSTONE_SLAB.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
 									} catch (Exception e) {
 									}
 							}
-							world.setBlock(_bp, _bs, 3);
+							world.setBlockState(_bp, _bs, 3);
 						}
 					} else {
 						if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.STONE_STAIRS) {
 							{
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								BlockState _bs = Blocks.STONE_BRICK_STAIRS.defaultBlockState();
+								BlockState _bs = Blocks.STONE_BRICK_STAIRS.getDefaultState();
 								BlockState _bso = world.getBlockState(_bp);
 								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.getValue(_property) != null)
+									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+									if (_property != null && _bs.get(_property) != null)
 										try {
-											_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											_bs = _bs.with(_property, (Comparable) entry.getValue());
 										} catch (Exception e) {
 										}
 								}
-								world.setBlock(_bp, _bs, 3);
+								world.setBlockState(_bp, _bs, 3);
 							}
 						} else {
 							if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.COBBLESTONE_STAIRS) {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = Blocks.STONE_STAIRS.defaultBlockState();
+									BlockState _bs = Blocks.STONE_STAIRS.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-										if (_property != null && _bs.getValue(_property) != null)
+										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.get(_property) != null)
 											try {
-												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+												_bs = _bs.with(_property, (Comparable) entry.getValue());
 											} catch (Exception e) {
 											}
 									}
-									world.setBlock(_bp, _bs, 3);
+									world.setBlockState(_bp, _bs, 3);
 								}
 							} else {
 								if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.MOSSY_STONE_BRICK_STAIRS) {
 									{
 										BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-										BlockState _bs = Blocks.STONE_BRICK_STAIRS.defaultBlockState();
+										BlockState _bs = Blocks.STONE_BRICK_STAIRS.getDefaultState();
 										BlockState _bso = world.getBlockState(_bp);
 										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-											Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-											if (_property != null && _bs.getValue(_property) != null)
+											Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+											if (_property != null && _bs.get(_property) != null)
 												try {
-													_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+													_bs = _bs.with(_property, (Comparable) entry.getValue());
 												} catch (Exception e) {
 												}
 										}
-										world.setBlock(_bp, _bs, 3);
+										world.setBlockState(_bp, _bs, 3);
 									}
 								} else {
 									if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 											.getBlock() == Blocks.POLISHED_BLACKSTONE_STAIRS) {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS.defaultBlockState();
+											BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
+												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+												if (_property != null && _bs.get(_property) != null)
 													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														_bs = _bs.with(_property, (Comparable) entry.getValue());
 													} catch (Exception e) {
 													}
 											}
-											world.setBlock(_bp, _bs, 3);
+											world.setBlockState(_bp, _bs, 3);
 										}
 									} else {
 										if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.BLACKSTONE_STAIRS) {
 											{
 												BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-												BlockState _bs = Blocks.POLISHED_BLACKSTONE_STAIRS.defaultBlockState();
+												BlockState _bs = Blocks.POLISHED_BLACKSTONE_STAIRS.getDefaultState();
 												BlockState _bso = world.getBlockState(_bp);
 												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-													if (_property != null && _bs.getValue(_property) != null)
+													Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.get(_property) != null)
 														try {
-															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+															_bs = _bs.with(_property, (Comparable) entry.getValue());
 														} catch (Exception e) {
 														}
 												}
-												world.setBlock(_bp, _bs, 3);
+												world.setBlockState(_bp, _bs, 3);
 											}
 										} else {
 											if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 													.getBlock() == Blocks.COBBLESTONE_WALL) {
 												{
 													BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-													BlockState _bs = Blocks.STONE_BRICK_WALL.defaultBlockState();
+													BlockState _bs = Blocks.STONE_BRICK_WALL.getDefaultState();
 													BlockState _bso = world.getBlockState(_bp);
 													for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-														Property _property = _bs.getBlock().getStateDefinition()
-																.getProperty(entry.getKey().getName());
-														if (_property != null && _bs.getValue(_property) != null)
+														Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+														if (_property != null && _bs.get(_property) != null)
 															try {
-																_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+																_bs = _bs.with(_property, (Comparable) entry.getValue());
 															} catch (Exception e) {
 															}
 													}
-													world.setBlock(_bp, _bs, 3);
+													world.setBlockState(_bp, _bs, 3);
 												}
 											} else {
 												if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 														.getBlock() == Blocks.POLISHED_BLACKSTONE_WALL) {
 													{
 														BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-														BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_WALL.defaultBlockState();
+														BlockState _bs = Blocks.POLISHED_BLACKSTONE_BRICK_WALL.getDefaultState();
 														BlockState _bso = world.getBlockState(_bp);
 														for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-															Property _property = _bs.getBlock().getStateDefinition()
+															Property _property = _bs.getBlock().getStateContainer()
 																	.getProperty(entry.getKey().getName());
-															if (_property != null && _bs.getValue(_property) != null)
+															if (_property != null && _bs.get(_property) != null)
 																try {
-																	_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+																	_bs = _bs.with(_property, (Comparable) entry.getValue());
 																} catch (Exception e) {
 																}
 														}
-														world.setBlock(_bp, _bs, 3);
+														world.setBlockState(_bp, _bs, 3);
 													}
 												} else {
 													if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 															.getBlock() == Blocks.BLACKSTONE_WALL) {
 														{
 															BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-															BlockState _bs = Blocks.POLISHED_BLACKSTONE_WALL.defaultBlockState();
+															BlockState _bs = Blocks.POLISHED_BLACKSTONE_WALL.getDefaultState();
 															BlockState _bso = world.getBlockState(_bp);
 															for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-																Property _property = _bs.getBlock().getStateDefinition()
+																Property _property = _bs.getBlock().getStateContainer()
 																		.getProperty(entry.getKey().getName());
-																if (_property != null && _bs.getValue(_property) != null)
+																if (_property != null && _bs.get(_property) != null)
 																	try {
-																		_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+																		_bs = _bs.with(_property, (Comparable) entry.getValue());
 																	} catch (Exception e) {
 																	}
 															}
-															world.setBlock(_bp, _bs, 3);
+															world.setBlockState(_bp, _bs, 3);
 														}
 													} else {
 														if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																.getBlock() == Blocks.MOSSY_STONE_BRICK_WALL) {
 															{
 																BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-																BlockState _bs = Blocks.STONE_BRICK_WALL.defaultBlockState();
+																BlockState _bs = Blocks.STONE_BRICK_WALL.getDefaultState();
 																BlockState _bso = world.getBlockState(_bp);
 																for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-																	Property _property = _bs.getBlock().getStateDefinition()
+																	Property _property = _bs.getBlock().getStateContainer()
 																			.getProperty(entry.getKey().getName());
-																	if (_property != null && _bs.getValue(_property) != null)
+																	if (_property != null && _bs.get(_property) != null)
 																		try {
-																			_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+																			_bs = _bs.with(_property, (Comparable) entry.getValue());
 																		} catch (Exception e) {
 																		}
 																}
-																world.setBlock(_bp, _bs, 3);
+																world.setBlockState(_bp, _bs, 3);
 															}
 														} else {
 															if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
 																	.getBlock() == Blocks.BRICKS) {
 																{
 																	BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-																	BlockState _bs = RagemodModBlocks.TOROOTTEGLA.defaultBlockState();
+																	BlockState _bs = TorootteglaBlock.block.getDefaultState();
 																	BlockState _bso = world.getBlockState(_bp);
 																	for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-																		Property _property = _bs.getBlock().getStateDefinition()
+																		Property _property = _bs.getBlock().getStateContainer()
 																				.getProperty(entry.getKey().getName());
-																		if (_property != null && _bs.getValue(_property) != null)
+																		if (_property != null && _bs.get(_property) != null)
 																			try {
-																				_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+																				_bs = _bs.with(_property, (Comparable) entry.getValue());
 																			} catch (Exception e) {
 																			}
 																	}
-																	world.setBlock(_bp, _bs, 3);
+																	world.setBlockState(_bp, _bs, 3);
 																}
 															} else {
 																if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-																		.getBlock() == RagemodModBlocks.TOROOTTEGLA) {
+																		.getBlock() == TorootteglaBlock.block) {
 																	{
 																		BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-																		BlockState _bs = Blocks.BRICKS.defaultBlockState();
+																		BlockState _bs = Blocks.BRICKS.getDefaultState();
 																		BlockState _bso = world.getBlockState(_bp);
 																		for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues()
 																				.entrySet()) {
-																			Property _property = _bs.getBlock().getStateDefinition()
+																			Property _property = _bs.getBlock().getStateContainer()
 																					.getProperty(entry.getKey().getName());
-																			if (_property != null && _bs.getValue(_property) != null)
+																			if (_property != null && _bs.get(_property) != null)
 																				try {
-																					_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+																					_bs = _bs.with(_property, (Comparable) entry.getValue());
 																				} catch (Exception e) {
 																				}
 																		}
-																		world.setBlock(_bp, _bs, 3);
+																		world.setBlockState(_bp, _bs, 3);
 																	}
 																}
 															}

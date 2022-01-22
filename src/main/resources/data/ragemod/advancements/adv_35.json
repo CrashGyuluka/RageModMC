@@ -19,9 +19,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": [
-            "ragemod:alienitesword"
-          ]
+          "item": "ragemod:alienitesword"
         }
       }
     }

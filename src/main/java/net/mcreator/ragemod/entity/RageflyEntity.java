@@ -2,188 +2,220 @@
 package net.mcreator.ragemod.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
-import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.network.FMLPlayMessages;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.control.FlyingMoveControl;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.World;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Hand;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.pathfinding.FlyingPathNavigator;
+import net.minecraft.network.IPacket;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.goal.TemptGoal;
+import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.entity.ai.controller.FlyingMovementController;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.CreatureEntity;
+import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.block.BlockState;
 
 import net.mcreator.ragemod.procedures.RageflyRightClickedOnEntityProcedure;
-import net.mcreator.ragemod.init.RagemodModItems;
-import net.mcreator.ragemod.init.RagemodModEntities;
-import net.mcreator.ragemod.init.RagemodModBlocks;
+import net.mcreator.ragemod.itemgroup.TermeszettabItemGroup;
+import net.mcreator.ragemod.item.RageiumItem;
+import net.mcreator.ragemod.entity.renderer.RageflyRenderer;
+import net.mcreator.ragemod.block.AlienlampBlock;
+import net.mcreator.ragemod.RagemodModElements;
 
-import java.util.Set;
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
-@Mod.EventBusSubscriber
-public class RageflyEntity extends PathfinderMob {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("ragemod:ragetree_forest"));
+@RagemodModElements.ModElement.Tag
+public class RageflyEntity extends RagemodModElements.ModElement {
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(0.5f, 0.5f)).build("ragefly").setRegistryName("ragefly");
+
+	public RageflyEntity(RagemodModElements instance) {
+		super(instance, 151);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new RageflyRenderer.ModelRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+
+	@Override
+	public void initElements() {
+		elements.entities.add(() -> entity);
+		elements.items.add(() -> new SpawnEggItem(entity, -10092493, -13434676, new Item.Properties().group(TermeszettabItemGroup.tab))
+				.setRegistryName("ragefly_spawn_egg"));
+	}
 
 	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.AMBIENT).add(new MobSpawnSettings.SpawnerData(RagemodModEntities.RAGEFLY, 9, 3, 5));
-	}
-
-	public RageflyEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
-		this(RagemodModEntities.RAGEFLY, world);
-	}
-
-	public RageflyEntity(EntityType<RageflyEntity> type, Level world) {
-		super(type, world);
-		xpReward = 0;
-		setNoAi(false);
-		this.moveControl = new FlyingMoveControl(this, 10, true);
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("ragemod:ragetree_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 9, 3, 5));
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
+	public void init(FMLCommonSetupEvent event) {
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
+				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
 	}
 
-	@Override
-	protected PathNavigation createNavigation(Level world) {
-		return new FlyingPathNavigation(this, world);
+	private static class EntityAttributesRegisterHandler {
+		@SubscribeEvent
+		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 8);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 1);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 1);
+			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.3);
+			event.put(entity, ammma.create());
+		}
 	}
 
-	@Override
-	protected void registerGoals() {
-		super.registerGoals();
-		this.goalSelector.addGoal(1, new TemptGoal(this, 1.3, Ingredient.of(RagemodModBlocks.ALIEN_LAMP.asItem()), false));
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
-			@Override
-			protected Vec3 getPosition() {
-				Random random = RageflyEntity.this.getRandom();
-				double dir_x = RageflyEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = RageflyEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = RageflyEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
-				return new Vec3(dir_x, dir_y, dir_z);
-			}
-		});
-		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(4, new FloatGoal(this));
-		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
-	}
+	public static class CustomEntity extends CreatureEntity {
+		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
+			this(entity, world);
+		}
 
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
+		public CustomEntity(EntityType<CustomEntity> type, World world) {
+			super(type, world);
+			experienceValue = 0;
+			setNoAI(false);
+			this.moveController = new FlyingMovementController(this, 10, true);
+			this.navigator = new FlyingPathNavigator(this, this.world);
+		}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(RagemodModItems.RAGEIUM));
-	}
+		@Override
+		public IPacket<?> createSpawnPacket() {
+			return NetworkHooks.getEntitySpawningPacket(this);
+		}
 
-	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
-	}
+		@Override
+		protected void registerGoals() {
+			super.registerGoals();
+			this.goalSelector.addGoal(1, new TemptGoal(this, 1.3, Ingredient.fromItems(AlienlampBlock.block.asItem()), false));
+			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.8, 20) {
+				@Override
+				protected Vector3d getPosition() {
+					Random random = CustomEntity.this.getRNG();
+					double dir_x = CustomEntity.this.getPosX() + ((random.nextFloat() * 2 - 1) * 16);
+					double dir_y = CustomEntity.this.getPosY() + ((random.nextFloat() * 2 - 1) * 16);
+					double dir_z = CustomEntity.this.getPosZ() + ((random.nextFloat() * 2 - 1) * 16);
+					return new Vector3d(dir_x, dir_y, dir_z);
+				}
+			});
+			this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(4, new SwimGoal(this));
+			this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
+		}
 
-	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
+		@Override
+		public CreatureAttribute getCreatureAttribute() {
+			return CreatureAttribute.UNDEFINED;
+		}
 
-	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
-		return false;
-	}
+		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+			super.dropSpecialItems(source, looting, recentlyHitIn);
+			this.entityDropItem(new ItemStack(RageiumItem.block));
+		}
 
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof ThrownPotion)
+		@Override
+		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getDeathSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		}
+
+		@Override
+		public boolean onLivingFall(float l, float d) {
 			return false;
-		if (source == DamageSource.FALL)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
-			return false;
-		if (source.isExplosion())
-			return false;
-		if (source == DamageSource.ANVIL)
-			return false;
-		return super.hurt(source, amount);
-	}
+		}
 
-	@Override
-	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
-		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
-		super.mobInteract(sourceentity, hand);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
+		@Override
+		public boolean attackEntityFrom(DamageSource source, float amount) {
+			if (source.getImmediateSource() instanceof PotionEntity)
+				return false;
+			if (source == DamageSource.FALL)
+				return false;
+			if (source == DamageSource.DROWN)
+				return false;
+			if (source == DamageSource.LIGHTNING_BOLT)
+				return false;
+			if (source.isExplosion())
+				return false;
+			if (source == DamageSource.ANVIL)
+				return false;
+			return super.attackEntityFrom(source, amount);
+		}
 
-		RageflyRightClickedOnEntityProcedure.execute(world, x, y, z, entity);
-		return retval;
-	}
+		@Override
+		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
+			ItemStack itemstack = sourceentity.getHeldItem(hand);
+			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
+			super.func_230254_b_(sourceentity, hand);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
 
-	@Override
-	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
-	}
+			RageflyRightClickedOnEntityProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			return retval;
+		}
 
-	@Override
-	public void setNoGravity(boolean ignored) {
-		super.setNoGravity(true);
-	}
+		@Override
+		protected void updateFallState(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+		}
 
-	public void aiStep() {
-		super.aiStep();
-		this.setNoGravity(true);
-	}
+		@Override
+		public void setNoGravity(boolean ignored) {
+			super.setNoGravity(true);
+		}
 
-	public static void init() {
-		SpawnPlacements.register(RagemodModEntities.RAGEFLY, SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				Mob::checkMobSpawnRules);
-	}
-
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 8);
-		builder = builder.add(Attributes.ARMOR, 1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
-		return builder;
+		public void livingTick() {
+			super.livingTick();
+			this.setNoGravity(true);
+		}
 	}
 }

@@ -1,57 +1,73 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.world.World;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.IItemTier;
+import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.ragemod.procedures.SavkardLivingEntityIsHitWithToolProcedure;
-import net.mcreator.ragemod.init.RagemodModTabs;
-import net.mcreator.ragemod.init.RagemodModItems;
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
 
-public class SavkardItem extends SwordItem {
-	public SavkardItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 1500;
-			}
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
-			public float getSpeed() {
-				return 4f;
-			}
+@RagemodModElements.ModElement.Tag
+public class SavkardItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:savkard")
+	public static final Item block = null;
 
-			public float getAttackDamageBonus() {
-				return 6.6f;
-			}
-
-			public int getLevel() {
-				return 1;
-			}
-
-			public int getEnchantmentValue() {
-				return 2;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(RagemodModItems.SAVKRISTALYP_2));
-			}
-		}, 3, -3f, new Item.Properties().tab(RagemodModTabs.TAB_ERCEK));
-		setRegistryName("savkard");
+	public SavkardItem(RagemodModElements instance) {
+		super(instance, 49);
 	}
 
 	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		Level world = entity.level;
+	public void initElements() {
+		elements.items.add(() -> new SwordItem(new IItemTier() {
+			public int getMaxUses() {
+				return 1500;
+			}
 
-		SavkardLivingEntityIsHitWithToolProcedure.execute(entity);
-		return retval;
+			public float getEfficiency() {
+				return 4f;
+			}
+
+			public float getAttackDamage() {
+				return 6.6f;
+			}
+
+			public int getHarvestLevel() {
+				return 1;
+			}
+
+			public int getEnchantability() {
+				return 2;
+			}
+
+			public Ingredient getRepairMaterial() {
+				return Ingredient.fromStacks(new ItemStack(Savkristalyp2Item.block));
+			}
+		}, 3, -3f, new Item.Properties().group(ErcekItemGroup.tab)) {
+			@Override
+			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+				boolean retval = super.hitEntity(itemstack, entity, sourceentity);
+				double x = entity.getPosX();
+				double y = entity.getPosY();
+				double z = entity.getPosZ();
+				World world = entity.world;
+
+				SavkardLivingEntityIsHitWithToolProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				return retval;
+			}
+		}.setRegistryName("savkard"));
 	}
 }

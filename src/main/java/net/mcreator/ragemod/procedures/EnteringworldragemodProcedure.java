@@ -2,31 +2,43 @@ package net.mcreator.ragemod.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.ragemod.RagemodMod;
 
-@Mod.EventBusSubscriber
+import java.util.Map;
+import java.util.HashMap;
+
 public class EnteringworldragemodProcedure {
-	@SubscribeEvent
-	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		Entity entity = event.getPlayer();
-		execute(event, entity);
+	@Mod.EventBusSubscriber
+	private static class GlobalTrigger {
+		@SubscribeEvent
+		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+			Entity entity = event.getPlayer();
+			Map<String, Object> dependencies = new HashMap<>();
+			dependencies.put("x", entity.getPosX());
+			dependencies.put("y", entity.getPosY());
+			dependencies.put("z", entity.getPosZ());
+			dependencies.put("world", entity.world);
+			dependencies.put("entity", entity);
+			dependencies.put("event", event);
+			executeProcedure(dependencies);
+		}
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity) {
-		if (entity == null)
+	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				RagemodMod.LOGGER.warn("Failed to load dependency entity for procedure Enteringworldragemod!");
 			return;
-		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(new TextComponent("\u00A7l\u00A7bHi! Thanks for downloading \u00A7eRageMod!"), (false));
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7l\u00A7bHi! Thanks for downloading \u00A7eRageMod!"), (false));
+		}
 	}
 }

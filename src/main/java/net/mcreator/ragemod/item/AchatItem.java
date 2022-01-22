@@ -1,20 +1,49 @@
 
 package net.mcreator.ragemod.item;
 
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
+import net.minecraftforge.registries.ObjectHolder;
 
-import net.mcreator.ragemod.init.RagemodModTabs;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.block.BlockState;
 
-public class AchatItem extends Item {
-	public AchatItem() {
-		super(new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).stacksTo(64).rarity(Rarity.COMMON));
-		setRegistryName("achat");
+import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
+import net.mcreator.ragemod.RagemodModElements;
+
+@RagemodModElements.ModElement.Tag
+public class AchatItem extends RagemodModElements.ModElement {
+	@ObjectHolder("ragemod:achat")
+	public static final Item block = null;
+
+	public AchatItem(RagemodModElements instance) {
+		super(instance, 6);
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
-		return 0;
+	public void initElements() {
+		elements.items.add(() -> new ItemCustom());
+	}
+
+	public static class ItemCustom extends Item {
+		public ItemCustom() {
+			super(new Item.Properties().group(ErcekItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("achat");
+		}
+
+		@Override
+		public int getItemEnchantability() {
+			return 0;
+		}
+
+		@Override
+		public int getUseDuration(ItemStack itemstack) {
+			return 0;
+		}
+
+		@Override
+		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+			return 1F;
+		}
 	}
 }

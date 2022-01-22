@@ -4,11 +4,11 @@
   "definition": {
     "mobName": "Protector of Toxic",
     "mobLabel": "",
-    "mobModelName": "Modeltoxic_helper_1_17",
+    "mobModelName": "Modeltoxic_helper_16_2",
     "mobModelTexture": "savrob_texture1.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
-    "modelHeight": 2.8,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
