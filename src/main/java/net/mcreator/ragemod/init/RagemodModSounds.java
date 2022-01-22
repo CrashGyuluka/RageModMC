@@ -23,8 +23,8 @@ public class RagemodModSounds {
 		REGISTRY.put(new ResourceLocation("ragemod", "toxicmob_death1"), new SoundEvent(new ResourceLocation("ragemod", "toxicmob_death1")));
 		REGISTRY.put(new ResourceLocation("ragemod", "toxic_mob_sendhelp1"), new SoundEvent(new ResourceLocation("ragemod", "toxic_mob_sendhelp1")));
 		REGISTRY.put(new ResourceLocation("ragemod", "alien_ambient2_1"), new SoundEvent(new ResourceLocation("ragemod", "alien_ambient2_1")));
-		REGISTRY.put(new ResourceLocation("ragemod", "alien_ambient_3_1"), new SoundEvent(new ResourceLocation("ragemod", "alien_ambient_3_1")));
 		REGISTRY.put(new ResourceLocation("ragemod", "alien_ambient1"), new SoundEvent(new ResourceLocation("ragemod", "alien_ambient1")));
+		REGISTRY.put(new ResourceLocation("ragemod", "alien_ambient_3_1"), new SoundEvent(new ResourceLocation("ragemod", "alien_ambient_3_1")));
 	}
 
 	@SubscribeEvent

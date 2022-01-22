@@ -3,17 +3,17 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "toxic_helmet2",
+    "textureHelmet": "toxic_helmet_1",
     "enableBody": true,
-    "textureBody": "--savmellvert",
+    "textureBody": "toxic_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "--savnaci",
+    "textureLeggings": "toxic_leggings",
     "enableBoots": true,
-    "textureBoots": "--savcipo",
+    "textureBoots": "toxic_boots",
     "creativeTab": {
       "value": "CUSTOM:Ercek"
     },
-    "armorTextureFile": "--savarmor_",
+    "armorTextureFile": "toxic_armor_",
     "helmetName": "Toxic Helmet",
     "bodyName": "Toxic Chestplate",
     "leggingsName": "Toxic Leggings",

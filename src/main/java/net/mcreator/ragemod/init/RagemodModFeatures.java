@@ -54,8 +54,6 @@ import net.mcreator.ragemod.world.features.plants.AlienshroomFeature;
 import net.mcreator.ragemod.world.features.plants.AlienmushroomFeature;
 import net.mcreator.ragemod.world.features.plants.Aliengrowthdev1Feature;
 import net.mcreator.ragemod.world.features.plants.AliengrowthFeature;
-import net.mcreator.ragemod.world.features.plants.AliendripstonetopdevFeature;
-import net.mcreator.ragemod.world.features.plants.AliendripstonebottomFeature;
 import net.mcreator.ragemod.world.features.ores.SvaskekgombaFeature;
 import net.mcreator.ragemod.world.features.ores.SecretboomkoFeature;
 import net.mcreator.ragemod.world.features.ores.SavercFeature;
@@ -251,6 +249,8 @@ import net.mcreator.ragemod.world.features.Aliencloud3Feature;
 import net.mcreator.ragemod.world.features.Aliencloud2Feature;
 import net.mcreator.ragemod.world.features.Aliencloud1Feature;
 import net.mcreator.ragemod.world.features.AlienairstrFeature;
+import net.mcreator.ragemod.world.features.AlienStrFloor2Feature;
+import net.mcreator.ragemod.world.features.AlienDirtAirStrFeature;
 
 import java.util.Set;
 import java.util.Map;
@@ -398,18 +398,18 @@ public class RagemodModFeatures {
 				BlueCavemushroomFeature.GENERATE_BIOMES, BlueCavemushroomFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(RedCavemushroomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				RedCavemushroomFeature.GENERATE_BIOMES, RedCavemushroomFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(YellowcavemushroomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
-				YellowcavemushroomFeature.GENERATE_BIOMES, YellowcavemushroomFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(MagentaCavemushroomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				MagentaCavemushroomFeature.GENERATE_BIOMES, MagentaCavemushroomFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(YellowcavemushroomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
+				YellowcavemushroomFeature.GENERATE_BIOMES, YellowcavemushroomFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(BlueCaveplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				BlueCaveplantFeature.GENERATE_BIOMES, BlueCaveplantFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(RedCaveplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				RedCaveplantFeature.GENERATE_BIOMES, RedCaveplantFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(YellowCaveplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
-				YellowCaveplantFeature.GENERATE_BIOMES, YellowCaveplantFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(MagentacaveplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				MagentacaveplantFeature.GENERATE_BIOMES, MagentacaveplantFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(YellowCaveplantFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
+				YellowCaveplantFeature.GENERATE_BIOMES, YellowCaveplantFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(RagefasaplingFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				RagefasaplingFeature.GENERATE_BIOMES, RagefasaplingFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(BukkspalingFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
@@ -536,10 +536,6 @@ public class RagemodModFeatures {
 				Aliengrowthdev1Feature.GENERATE_BIOMES, Aliengrowthdev1Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(Ragingvinesdev2Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
 				Ragingvinesdev2Feature.GENERATE_BIOMES, Ragingvinesdev2Feature.CONFIGURED_FEATURE));
-		REGISTRY.put(AliendripstonebottomFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
-				AliendripstonebottomFeature.GENERATE_BIOMES, AliendripstonebottomFeature.CONFIGURED_FEATURE));
-		REGISTRY.put(AliendripstonetopdevFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION,
-				AliendripstonetopdevFeature.GENERATE_BIOMES, AliendripstonetopdevFeature.CONFIGURED_FEATURE));
 		REGISTRY.put(Aliencloud1Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.RAW_GENERATION, Aliencloud1Feature.GENERATE_BIOMES,
 				Aliencloud1Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(Aliencloud2Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.RAW_GENERATION, Aliencloud2Feature.GENERATE_BIOMES,
@@ -730,6 +726,10 @@ public class RagemodModFeatures {
 				GlowingFieldBush4Feature.GENERATE_BIOMES, GlowingFieldBush4Feature.CONFIGURED_FEATURE));
 		REGISTRY.put(SeqAirStrFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, SeqAirStrFeature.GENERATE_BIOMES,
 				SeqAirStrFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(AlienDirtAirStrFeature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
+				AlienDirtAirStrFeature.GENERATE_BIOMES, AlienDirtAirStrFeature.CONFIGURED_FEATURE));
+		REGISTRY.put(AlienStrFloor2Feature.FEATURE, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES,
+				AlienStrFloor2Feature.GENERATE_BIOMES, AlienStrFloor2Feature.CONFIGURED_FEATURE));
 	}
 
 	@SubscribeEvent

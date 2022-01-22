@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/dimension2_igniter"
+    "layer0": "ragemod:items/alien_dimension_igniter"
   }
 }

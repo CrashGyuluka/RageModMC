@@ -33,8 +33,9 @@ import java.util.Collections;
 
 public class HangingGlowingRedCavestoneBlock extends Block {
 	public HangingGlowingRedCavestoneBlock() {
-		super(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).instabreak().noCollission().speedFactor(0.9f).noOcclusion()
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).instabreak().lightLevel(s -> 3).noCollission().speedFactor(0.9f)
+				.noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
+				.isRedstoneConductor((bs, br, bp) -> false));
 		setRegistryName("hanging_glowing_red_cavestone");
 	}
 

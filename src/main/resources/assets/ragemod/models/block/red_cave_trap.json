@@ -1,0 +1,9 @@
+{
+  "parent": "ragemod:custom/red_cavetrap",
+  "textures": {
+    "all": "ragemod:blocks/red_cavestone_trap",
+    "particle": "ragemod:blocks/red_cavestone_trap",
+    "0": "ragemod:blocks/red_cavestone_trap",
+    "missing": "ragemod:blocks/"
+  }
+}

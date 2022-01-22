@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "magenta2_hydrangea",
+    "texture": "magenta_hydra_flower_new2",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",
@@ -78,7 +78,7 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 9,
+    "frequencyOnChunks": 13,
     "spawnWorldTypes": [
       "Surface"
     ],

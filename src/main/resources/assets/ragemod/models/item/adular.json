@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/adularia_new"
+    "layer0": "ragemod:items/adularia_newest"
   }
 }

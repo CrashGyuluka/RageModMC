@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "structure",
   "definition": {
-    "structure": "alien_str_floor1",
+    "structure": "alien_str_tower1",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 0,
+    "spawnProbability": 10000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 0,
+    "spawnHeightOffset": 12,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [

@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Hard drink!",
-    "achievementDescription": "Have at least 6 RagePotions in your inventory at the same time!",
+    "achievementDescription": "Have at least 1 RagePotion in your inventory",
     "achievementIcon": {
       "value": "CUSTOM:Ragepotion"
     },
@@ -22,6 +22,6 @@
     "parent": {
       "value": "CUSTOM:Adv16"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"22\" y=\"87\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">6</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">69</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Ragepotion</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"22\" y=\"87\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">69</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Ragepotion</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

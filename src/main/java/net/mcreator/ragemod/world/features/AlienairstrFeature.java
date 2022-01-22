@@ -45,7 +45,7 @@ public class AlienairstrFeature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "alien_air_str"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 100000) {
+		if ((context.random().nextInt(1000000) + 1) <= 80000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

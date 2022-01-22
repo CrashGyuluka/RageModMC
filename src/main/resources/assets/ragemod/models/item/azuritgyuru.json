@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/azurit_ring"
+    "layer0": "ragemod:items/azurit_ring_n"
   }
 }

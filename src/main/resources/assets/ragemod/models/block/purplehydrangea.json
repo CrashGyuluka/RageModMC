@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "ragemod:blocks/purple2_hydrangea",
-    "particle": "ragemod:blocks/purple2_hydrangea"
+    "cross": "ragemod:blocks/purple_hydra_flower_new2",
+    "particle": "ragemod:blocks/purple_hydra_flower_new2"
   }
 }

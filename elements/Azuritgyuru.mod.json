@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "azurit_ring",
+    "texture": "azurit_ring_n",
     "customModelName": "Normal",
     "name": "Azurite Ring",
     "rarity": "COMMON",

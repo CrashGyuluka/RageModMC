@@ -18,7 +18,7 @@
             },
             "weight": 1,
             "minCount": 1,
-            "maxCount": 2,
+            "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": true,
@@ -43,7 +43,7 @@
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 1,
-            "maxEnchantmentLevel": 2,
+            "maxEnchantmentLevel": 3,
             "affectedByFortune": false,
             "explosionDecay": false,
             "silkTouchMode": 0
@@ -159,9 +159,9 @@
             "item": {
               "value": "CUSTOM:Alienite"
             },
-            "weight": 3,
+            "weight": 2,
             "minCount": 1,
-            "maxCount": 4,
+            "maxCount": 2,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": true,
@@ -184,7 +184,7 @@
             },
             "weight": 3,
             "minCount": 2,
-            "maxCount": 7,
+            "maxCount": 5,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": true,

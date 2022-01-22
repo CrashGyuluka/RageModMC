@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "amazonite_ring",
+    "texture": "amazonite_ring_n",
     "customModelName": "Normal",
     "name": "Amazonite Ring",
     "rarity": "COMMON",

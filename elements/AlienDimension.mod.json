@@ -54,7 +54,7 @@
     "igniterTab": {
       "value": "CUSTOM:Ercek"
     },
-    "texture": "dimension2_igniter",
+    "texture": "alien_dimension_igniter",
     "portalTexture": "obszontium_portal_animated",
     "enablePortal": true
   }

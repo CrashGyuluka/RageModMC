@@ -9,7 +9,7 @@ public class SeqBiomeProc1Procedure {
 		double zs = 0;
 		double ys = 0;
 		double xs = 0;
-		if (y <= 80) {
+		if (y <= 100) {
 			zs = -10;
 			for (int index0 = 0; index0 < (int) (20); index0++) {
 				xs = -10;

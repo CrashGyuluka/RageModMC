@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "mountain_stone_mossy",
-    "textureTop": "mountain_stone_mossy",
+    "texture": "mountain_stone_newest_mossy",
+    "textureTop": "mountain_stone_newest_mossy",
     "textureLeft": "",
-    "textureFront": "mountain_stone_mossy",
+    "textureFront": "mountain_stone_newest_mossy",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,

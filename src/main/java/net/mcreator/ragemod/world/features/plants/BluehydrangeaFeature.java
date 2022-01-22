@@ -23,14 +23,14 @@ public class BluehydrangeaFeature extends DefaultFlowerFeature {
 	public static final BluehydrangeaFeature FEATURE = (BluehydrangeaFeature) new BluehydrangeaFeature().setRegistryName("ragemod:bluehydrangea");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE
 			.configured(new RandomPatchConfiguration.GrassConfigurationBuilder(
-					new SimpleStateProvider(RagemodModBlocks.BLUEHYDRANGEA.defaultBlockState()), SimpleBlockPlacer.INSTANCE).tries(5)
+					new SimpleStateProvider(RagemodModBlocks.BLUEHYDRANGEA.defaultBlockState()), SimpleBlockPlacer.INSTANCE).tries(6)
 
 							.build())
 			.decorated(FeatureDecorator.HEIGHTMAP.configured(new HeightmapConfiguration(Heightmap.Types.MOTION_BLOCKING))).squared().rarity(32)
-			.count(9);
+			.count(11);
 	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("sunflower_plains"),
-			new ResourceLocation("ragemod:beech_forest"), new ResourceLocation("ragemod:alien_hills"), new ResourceLocation("ragemod:beech_hill"),
-			new ResourceLocation("beach"), new ResourceLocation("jungle_edge"), new ResourceLocation("plains"), new ResourceLocation("birch_forest"),
+			new ResourceLocation("ragemod:beech_forest"), new ResourceLocation("ragemod:beech_hill"), new ResourceLocation("beach"),
+			new ResourceLocation("jungle_edge"), new ResourceLocation("plains"), new ResourceLocation("birch_forest"),
 			new ResourceLocation("flower_forest"), new ResourceLocation("ragemod:beech_meadow"), new ResourceLocation("jungle"));
 
 	public BluehydrangeaFeature() {

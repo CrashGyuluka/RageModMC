@@ -24,7 +24,7 @@
               "ragemod:cvex_block"
             ],
             "count": {
-              "min": 14,
+              "min": 10,
               "max": 1069
             }
           }

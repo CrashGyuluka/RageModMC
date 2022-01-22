@@ -22,11 +22,14 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.procedures.AlientrapblockOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.procedures.AlientrapblockEntityCollidesInTheBlockProcedure;
 import net.mcreator.ragemod.init.RagemodModParticles;
+import net.mcreator.ragemod.init.RagemodModBlocks;
 
 import java.util.Random;
 import java.util.List;
@@ -102,4 +105,10 @@ public class AlientrapblockBlock extends Block {
 		AlientrapblockOnBlockRightClickedProcedure.execute(world, x, y, z);
 		return InteractionResult.SUCCESS;
 	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void registerRenderLayer() {
+		ItemBlockRenderTypes.setRenderLayer(RagemodModBlocks.ALIEN_TRAP, renderType -> renderType == RenderType.cutout());
+	}
+
 }

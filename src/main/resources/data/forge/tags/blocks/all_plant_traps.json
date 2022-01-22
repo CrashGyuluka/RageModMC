@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ragemod:blue_cave_trap",
+    "ragemod:yellow_cave_trap",
+    "ragemod:alien_plant_trap",
+    "ragemod:magenta_cave_trap",
+    "ragemod:red_cave_trap"
+  ]
+}

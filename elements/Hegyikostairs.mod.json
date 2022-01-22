@@ -2,10 +2,10 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "hegyiko1",
-    "textureTop": "hegyiko1",
+    "texture": "mountain_stone_newest",
+    "textureTop": "mountain_stone_newest",
     "textureLeft": "",
-    "textureFront": "hegyiko1",
+    "textureFront": "mountain_stone_newest",
     "textureRight": "",
     "textureBack": "",
     "renderType": 11,

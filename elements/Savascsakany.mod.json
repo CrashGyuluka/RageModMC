@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "sav_csakany",
+    "texture": "toxic_pickaxe",
     "customModelName": "Normal",
     "name": "Toxic Pickaxe",
     "specialInfo": [],

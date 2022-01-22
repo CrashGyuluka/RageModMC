@@ -48,7 +48,7 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -124,7 +124,16 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
+    "onNeighbourBlockChanges": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
     "onTickUpdate": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
+    "onRedstoneOff": {
       "name": "Structurehatarolo1BlockAdded"
     },
     "spawnWorldTypes": [],

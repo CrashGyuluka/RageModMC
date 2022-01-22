@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "ragemod:blocks/mountain_stone1",
-    "particle": "ragemod:blocks/mountain_stone1"
+    "all": "ragemod:blocks/mountain_stone_newest",
+    "particle": "ragemod:blocks/mountain_stone_newest"
   }
 }

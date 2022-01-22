@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/----achat",
-    "up": "ragemod:blocks/----achat",
-    "north": "ragemod:blocks/----achat",
-    "east": "ragemod:blocks/----achat",
-    "south": "ragemod:blocks/----achat",
-    "west": "ragemod:blocks/----achat",
-    "particle": "ragemod:blocks/----achat"
+    "down": "ragemod:blocks/achat_ore_n",
+    "up": "ragemod:blocks/achat_ore_n",
+    "north": "ragemod:blocks/achat_ore_n",
+    "east": "ragemod:blocks/achat_ore_n",
+    "south": "ragemod:blocks/achat_ore_n",
+    "west": "ragemod:blocks/achat_ore_n",
+    "particle": "ragemod:blocks/achat_ore_n"
   }
 }

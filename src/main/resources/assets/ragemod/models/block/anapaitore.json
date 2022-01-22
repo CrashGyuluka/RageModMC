@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/a_anapait_ore",
-    "up": "ragemod:blocks/a_anapait_ore",
-    "north": "ragemod:blocks/a_anapait_ore",
-    "east": "ragemod:blocks/a_anapait_ore",
-    "south": "ragemod:blocks/a_anapait_ore",
-    "west": "ragemod:blocks/a_anapait_ore",
-    "particle": "ragemod:blocks/a_anapait_ore"
+    "down": "ragemod:blocks/anapait_ore_new",
+    "up": "ragemod:blocks/anapait_ore_new",
+    "north": "ragemod:blocks/anapait_ore_new",
+    "east": "ragemod:blocks/anapait_ore_new",
+    "south": "ragemod:blocks/anapait_ore_new",
+    "west": "ragemod:blocks/anapait_ore_new",
+    "particle": "ragemod:blocks/anapait_ore_new"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/earth_rel"
+    "layer0": "ragemod:items/earth_relic_newest"
   }
 }

@@ -44,20 +44,20 @@
       }
     ]
   },
-  "alien_ambient_3_1": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ragemod:at6_mono",
-        "stream": false
-      }
-    ]
-  },
   "alien_ambient1": {
     "category": "ambient",
     "sounds": [
       {
         "name": "ragemod:am3_mono",
+        "stream": false
+      }
+    ]
+  },
+  "alien_ambient_3_1": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ragemod:at6_mono",
         "stream": false
       }
     ]

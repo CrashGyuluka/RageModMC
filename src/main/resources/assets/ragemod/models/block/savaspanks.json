@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/oak_planks",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/savas_planks",
-    "east": "ragemod:blocks/savas_planks",
-    "south": "ragemod:blocks/savas_planks",
-    "west": "ragemod:blocks/savas_planks",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_plank",
+    "east": "ragemod:blocks/toxic_plank",
+    "south": "ragemod:blocks/toxic_plank",
+    "west": "ragemod:blocks/toxic_plank",
     "particle": "ragemod:blocks/oak_planks"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "yellow_cavestone_trap",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

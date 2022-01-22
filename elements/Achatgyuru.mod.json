@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "achat_ring",
+    "texture": "achat_ring_n",
     "customModelName": "Normal",
     "name": "Achat Ring",
     "rarity": "COMMON",

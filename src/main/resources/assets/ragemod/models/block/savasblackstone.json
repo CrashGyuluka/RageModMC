@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/blackstone_top",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/savas_blackstone",
-    "east": "ragemod:blocks/savas_blackstone",
-    "south": "ragemod:blocks/savas_blackstone",
-    "west": "ragemod:blocks/savas_blackstone",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_black",
+    "east": "ragemod:blocks/toxic_black",
+    "south": "ragemod:blocks/toxic_black",
+    "west": "ragemod:blocks/toxic_black",
     "particle": "ragemod:blocks/blackstone_top"
   }
 }

@@ -58,7 +58,7 @@
       "value": "ROCK"
     },
     "tickRate": 10,
-    "tickRandomly": false,
+    "tickRandomly": true,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {
@@ -124,7 +124,19 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
+    "onNeighbourBlockChanges": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
     "onTickUpdate": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
+    "onRedstoneOn": {
+      "name": "Structurehatarolo1BlockAdded"
+    },
+    "onRedstoneOff": {
       "name": "Structurehatarolo1BlockAdded"
     },
     "spawnWorldTypes": [],

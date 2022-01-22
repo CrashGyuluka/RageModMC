@@ -2,10 +2,12 @@
   "replace": false,
   "values": [
     "ragemod:structurehatarolo_1",
+    "ragemod:str_block_8",
     "ragemod:strhatarolo_4",
     "ragemod:strhatarolo_5",
     "ragemod:strhatarolo_2",
     "ragemod:strhatarolo_3",
-    "ragemod:strhatarolo_6"
+    "ragemod:strhatarolo_6",
+    "ragemod:strblock_7"
   ]
 }

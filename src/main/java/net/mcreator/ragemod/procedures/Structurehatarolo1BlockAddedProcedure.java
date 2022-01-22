@@ -1,10 +1,5 @@
 package net.mcreator.ragemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.block.state.properties.Property;
@@ -13,7 +8,6 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -22,25 +16,10 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.ragemod.init.RagemodModGameRules;
 import net.mcreator.ragemod.init.RagemodModBlocks;
 
-import javax.annotation.Nullable;
-
 import java.util.Map;
 
-@Mod.EventBusSubscriber
 public class Structurehatarolo1BlockAddedProcedure {
-	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			Entity entity = event.player;
-			execute(event, entity.level, entity.getX(), entity.getY(), entity.getZ());
-		}
-	}
-
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		execute(null, world, x, y, z);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
 		if (world.getLevelData().getGameRules().getBoolean(RagemodModGameRules.RAGEMODDEVMODE) == false) {
 			if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("minecraft:random_changer_blocks"))
 					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
@@ -109,6 +88,15 @@ public class Structurehatarolo1BlockAddedProcedure {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 											BlockState _bs = RagemodModBlocks.ALIEN_TRAP.defaultBlockState();
+											BlockState _bso = world.getBlockState(_bp);
+											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+												if (_property != null && _bs.getValue(_property) != null)
+													try {
+														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+													} catch (Exception e) {
+													}
+											}
 											world.setBlock(_bp, _bs, 3);
 										}
 									} else {
@@ -131,6 +119,40 @@ public class Structurehatarolo1BlockAddedProcedure {
 												BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 												BlockState _bs = Blocks.AIR.defaultBlockState();
 												world.setBlock(_bp, _bs, 3);
+											}
+										}
+									} else {
+										if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+												.getBlock() == RagemodModBlocks.STRBLOCK_7) {
+											if (Math.random() < 0.4) {
+												{
+													BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+													BlockState _bs = RagemodModBlocks.ALIEN_PLANT_TRAP.defaultBlockState();
+													world.setBlock(_bp, _bs, 3);
+												}
+											} else {
+												{
+													BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+													BlockState _bs = Blocks.AIR.defaultBlockState();
+													world.setBlock(_bp, _bs, 3);
+												}
+											}
+										} else {
+											if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+													.getBlock() == RagemodModBlocks.STR_BLOCK_8) {
+												if (Math.random() < 0.4) {
+													{
+														BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+														BlockState _bs = RagemodModBlocks.ALIEN_COBWEB.defaultBlockState();
+														world.setBlock(_bp, _bs, 3);
+													}
+												} else {
+													{
+														BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+														BlockState _bs = Blocks.AIR.defaultBlockState();
+														world.setBlock(_bp, _bs, 3);
+													}
+												}
 											}
 										}
 									}

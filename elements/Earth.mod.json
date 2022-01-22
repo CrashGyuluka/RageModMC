@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "earth_rel",
+    "texture": "earth_relic_newest",
     "customModelName": "Normal",
     "name": "Earth Relic",
     "rarity": "RARE",

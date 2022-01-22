@@ -99,6 +99,18 @@
       },
       {
         "value": "CUSTOM:HangingGlowingMagentaCaveplant"
+      },
+      {
+        "value": "CUSTOM:RedCaveTrap"
+      },
+      {
+        "value": "CUSTOM:BlueCaveTrap"
+      },
+      {
+        "value": "CUSTOM:MagentaCaveTrap"
+      },
+      {
+        "value": "CUSTOM:YellowCaveTrap"
       }
     ],
     "blocks": [],

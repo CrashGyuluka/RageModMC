@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ragemod:blocks/big_mushroom_down",
+    "particle": "ragemod:blocks/big_mushroom_down"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:RedCaveTrap"
+      },
+      {
+        "value": "CUSTOM:BlueCaveTrap"
+      },
+      {
+        "value": "CUSTOM:MagentaCaveTrap"
+      },
+      {
+        "value": "CUSTOM:YellowCaveTrap"
+      },
+      {
+        "value": "CUSTOM:AlienPlantTrap"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "all_plant_traps",
+    "namespace": "forge"
+  }
+}

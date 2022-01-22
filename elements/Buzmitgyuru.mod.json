@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "bizmut_ring",
+    "texture": "bizmuth_ring_n",
     "customModelName": "Normal",
     "name": "Buzmith Ring",
     "rarity": "COMMON",

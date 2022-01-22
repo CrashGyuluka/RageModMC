@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "raw_amazonite",
+    "texture": "amazonite_ore",
     "customModelName": "Normal",
     "name": "Amazonite",
     "rarity": "COMMON",

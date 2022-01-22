@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/a_apofilli_o",
-    "up": "ragemod:blocks/a_apofilli_o",
-    "north": "ragemod:blocks/a_apofilli_o",
-    "east": "ragemod:blocks/a_apofilli_o",
-    "south": "ragemod:blocks/a_apofilli_o",
-    "west": "ragemod:blocks/a_apofilli_o",
-    "particle": "ragemod:blocks/a_apofilli_o"
+    "down": "ragemod:blocks/apofillit_ore_newest",
+    "up": "ragemod:blocks/apofillit_ore_newest",
+    "north": "ragemod:blocks/apofillit_ore_newest",
+    "east": "ragemod:blocks/apofillit_ore_newest",
+    "south": "ragemod:blocks/apofillit_ore_newest",
+    "west": "ragemod:blocks/apofillit_ore_newest",
+    "particle": "ragemod:blocks/apofillit_ore_newest"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "alien_trap",
+        "missing": "alien_trap"
+      },
+      "name": "default"
+    }
+  }
+}

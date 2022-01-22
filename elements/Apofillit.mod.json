@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "apofillit",
+    "texture": "apofillit_newset",
     "customModelName": "Normal",
     "name": "Apophyllite ",
     "rarity": "COMMON",

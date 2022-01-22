@@ -11,12 +11,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.ragemod.procedures.TrofeaFoodEatenProcedure;
-import net.mcreator.ragemod.init.RagemodModTabs;
 import net.mcreator.ragemod.init.RagemodModItems;
 
 public class TrofeaItem extends Item {
 	public TrofeaItem() {
-		super(new Item.Properties().tab(RagemodModTabs.TAB_ERCEK).stacksTo(1).rarity(Rarity.EPIC)
+		super(new Item.Properties().tab(null).stacksTo(1).rarity(Rarity.EPIC)
 				.food((new FoodProperties.Builder()).nutrition(30).saturationMod(0f).alwaysEat()
 
 						.build()));

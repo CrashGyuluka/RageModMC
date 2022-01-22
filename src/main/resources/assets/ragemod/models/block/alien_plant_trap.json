@@ -1,0 +1,9 @@
+{
+  "parent": "ragemod:custom/alien_planttrap",
+  "textures": {
+    "all": "ragemod:blocks/alien_trap",
+    "particle": "ragemod:blocks/alien_trap",
+    "1": "ragemod:blocks/alien_trap",
+    "missing": "ragemod:blocks/alien_trap"
+  }
+}

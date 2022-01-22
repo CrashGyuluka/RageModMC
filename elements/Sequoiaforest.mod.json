@@ -9,6 +9,10 @@
     "undergroundBlock": {
       "value": "Blocks.DIRT#0"
     },
+    "foliageColor": {
+      "value": -14515440,
+      "falpha": 0.0
+    },
     "ambientSound": {
       "value": ""
     },

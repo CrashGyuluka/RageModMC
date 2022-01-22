@@ -43,7 +43,7 @@
       },
       {
         "minrolls": 1,
-        "maxrolls": 2,
+        "maxrolls": 1,
         "minbonusrolls": 1,
         "maxbonusrolls": 1,
         "hasbonusrolls": false,
@@ -53,9 +53,9 @@
             "item": {
               "value": "CUSTOM:Alienite"
             },
-            "weight": 4,
-            "minCount": 2,
-            "maxCount": 6,
+            "weight": 3,
+            "minCount": 1,
+            "maxCount": 3,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": true,

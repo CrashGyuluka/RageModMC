@@ -24,7 +24,7 @@ import java.util.Collections;
 
 public class Strhatarolo4Block extends Block {
 	public Strhatarolo4Block() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 40f));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 40f).randomTicks());
 		setRegistryName("strhatarolo_4");
 	}
 
@@ -51,7 +51,18 @@ public class Strhatarolo4Block extends Block {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 10);
+		Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		if (world.getBestNeighborSignal(pos) > 0) {
+			Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		} else {
+			Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		}
+		Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
@@ -62,6 +73,5 @@ public class Strhatarolo4Block extends Block {
 		int z = pos.getZ();
 
 		Structurehatarolo1BlockAddedProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 10);
 	}
 }

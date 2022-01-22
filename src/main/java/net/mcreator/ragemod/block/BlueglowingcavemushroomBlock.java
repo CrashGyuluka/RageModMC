@@ -6,6 +6,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -27,10 +28,13 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.mcreator.ragemod.procedures.BlueCavemushroomPlantRightClickedProcedure;
 import net.mcreator.ragemod.init.RagemodModBlocks;
 
+import java.util.List;
+import java.util.Collections;
+
 public class BlueglowingcavemushroomBlock extends FlowerBlock {
 	public BlueglowingcavemushroomBlock() {
 		super(MobEffects.MOVEMENT_SPEED, 3, BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).instabreak()
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).lightLevel(s -> 3).noDrops());
+				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).lightLevel(s -> 3));
 		setRegistryName("blueglowingcavemushroom");
 	}
 
@@ -57,6 +61,14 @@ public class BlueglowingcavemushroomBlock extends FlowerBlock {
 	@Override
 	public ItemStack getPickBlock(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
 		return new ItemStack(RagemodModBlocks.BLUE_CAVEMUSHROOM);
+	}
+
+	@Override
+	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+		if (!dropsOriginal.isEmpty())
+			return dropsOriginal;
+		return Collections.singletonList(new ItemStack(RagemodModBlocks.BLUE_CAVEMUSHROOM));
 	}
 
 	@Override

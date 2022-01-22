@@ -22,6 +22,8 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.procedures.AlientrapblocklitOnBlockRightClickedProcedure;
@@ -101,4 +103,10 @@ public class AlientrapblocklitBlock extends Block {
 		AlientrapblocklitOnBlockRightClickedProcedure.execute(world, x, y, z);
 		return InteractionResult.SUCCESS;
 	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void registerRenderLayer() {
+		ItemBlockRenderTypes.setRenderLayer(RagemodModBlocks.ALIENTRAPBLOCKLIT, renderType -> renderType == RenderType.cutout());
+	}
+
 }

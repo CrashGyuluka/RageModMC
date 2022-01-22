@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "aktinolit_ring",
+    "texture": "aktionolit_ring_nt",
     "customModelName": "Normal",
     "name": "Aktinolite Ring",
     "rarity": "COMMON",

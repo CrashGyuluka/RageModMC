@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "ragemod:blocks/----azurit",
-    "up": "ragemod:blocks/----azurit",
-    "north": "ragemod:blocks/----azurit",
-    "east": "ragemod:blocks/----azurit",
-    "south": "ragemod:blocks/----azurit",
-    "west": "ragemod:blocks/----azurit",
-    "particle": "ragemod:blocks/----azurit"
+    "down": "ragemod:blocks/azurit_ore_newest",
+    "up": "ragemod:blocks/azurit_ore_newest",
+    "north": "ragemod:blocks/azurit_ore_newest",
+    "east": "ragemod:blocks/azurit_ore_newest",
+    "south": "ragemod:blocks/azurit_ore_newest",
+    "west": "ragemod:blocks/azurit_ore_newest",
+    "particle": "ragemod:blocks/azurit_ore_newest"
   }
 }

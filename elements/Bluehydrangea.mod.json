@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "blue2_hydrangea",
+    "texture": "blue_hydra_flower_new2",
     "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",
@@ -78,7 +78,7 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 9,
+    "frequencyOnChunks": 11,
     "spawnWorldTypes": [
       "Surface"
     ],
@@ -91,9 +91,6 @@
       },
       {
         "value": "CUSTOM:Bukkmountain"
-      },
-      {
-        "value": "CUSTOM:TotallyNotAlien"
       },
       {
         "value": "beaches"
@@ -123,6 +120,6 @@
         "value": "plains"
       }
     ],
-    "patchSize": 5
+    "patchSize": 6
   }
 }

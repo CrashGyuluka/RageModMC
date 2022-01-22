@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "ragemod:blocks/alien_dripstone_2",
-    "particle": "ragemod:blocks/alien_dripstone_2"
-  }
-}

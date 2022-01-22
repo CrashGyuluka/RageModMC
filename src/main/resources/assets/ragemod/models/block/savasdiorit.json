@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/diorite",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/svas_diorit",
-    "east": "ragemod:blocks/svas_diorit",
-    "south": "ragemod:blocks/svas_diorit",
-    "west": "ragemod:blocks/svas_diorit",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_dior",
+    "east": "ragemod:blocks/toxic_dior",
+    "south": "ragemod:blocks/toxic_dior",
+    "west": "ragemod:blocks/toxic_dior",
     "particle": "ragemod:blocks/diorite"
   }
 }

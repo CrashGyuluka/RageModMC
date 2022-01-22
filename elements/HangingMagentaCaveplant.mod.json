@@ -104,6 +104,9 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.19999999850988387,
     "particleAmount": 1,
+    "placingCondition": {
+      "name": "AliendripstonetopdevAdditionalPlacinggrowthCondition"
+    },
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

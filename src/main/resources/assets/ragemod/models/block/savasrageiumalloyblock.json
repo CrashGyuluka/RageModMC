@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/rageium_alloy_block_new2",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/toxic_rageium_alloy_block_new",
-    "east": "ragemod:blocks/toxic_rageium_alloy_block_new",
-    "south": "ragemod:blocks/toxic_rageium_alloy_block_new",
-    "west": "ragemod:blocks/toxic_rageium_alloy_block_new",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_rage2",
+    "east": "ragemod:blocks/toxic_rage2",
+    "south": "ragemod:blocks/toxic_rage2",
+    "west": "ragemod:blocks/toxic_rage2",
     "particle": "ragemod:blocks/rageium_alloy_block_new2"
   }
 }

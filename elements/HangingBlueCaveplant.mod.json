@@ -97,13 +97,16 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:BlueCaveparticle"
     },
     "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.19999999850988387,
-    "particleAmount": 1,
+    "particleSpawningRadious": 1.0,
+    "particleAmount": 2,
+    "placingCondition": {
+      "name": "AliendripstonetopdevAdditionalPlacinggrowthCondition"
+    },
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

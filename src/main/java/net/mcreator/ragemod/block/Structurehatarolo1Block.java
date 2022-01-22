@@ -1,7 +1,6 @@
 
 package net.mcreator.ragemod.block;
 
-import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -20,11 +19,10 @@ import net.mcreator.ragemod.procedures.Structurehatarolo1BlockAddedProcedure;
 
 import java.util.Random;
 import java.util.List;
-import java.util.Collections;
 
 public class Structurehatarolo1Block extends Block {
 	public Structurehatarolo1Block() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 40f));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 40f).noDrops());
 		setRegistryName("structurehatarolo_1");
 	}
 
@@ -41,17 +39,20 @@ public class Structurehatarolo1Block extends Block {
 	}
 
 	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
-	}
-
-	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		world.getBlockTicks().scheduleTick(pos, this, 10);
+		Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		if (world.getBestNeighborSignal(pos) > 0) {
+		} else {
+			Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		}
+		Structurehatarolo1BlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

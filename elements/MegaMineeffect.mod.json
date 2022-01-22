@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "MegaMine",
-    "icon": "megamine_effect2.png",
+    "icon": "megamine_effect.png",
     "color": {
       "value": -13434829,
       "falpha": 0.0

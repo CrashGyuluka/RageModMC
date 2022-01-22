@@ -44,9 +44,9 @@ public class BluecaveairstrFeature extends Feature<NoneFeatureConfiguration> {
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "blue_caveair"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 70000) {
+		if ((context.random().nextInt(1000000) + 1) <= 20000) {
 			boolean anyPlaced = false;
-			int count = context.random().nextInt(2) + 1;
+			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);

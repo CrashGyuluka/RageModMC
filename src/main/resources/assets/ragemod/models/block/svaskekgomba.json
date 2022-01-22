@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/warped_wart_block",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/savas_kekgomba",
-    "east": "ragemod:blocks/savas_kekgomba",
-    "south": "ragemod:blocks/savas_kekgomba",
-    "west": "ragemod:blocks/savas_kekgomba",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_warped",
+    "east": "ragemod:blocks/toxic_warped",
+    "south": "ragemod:blocks/toxic_warped",
+    "west": "ragemod:blocks/toxic_warped",
     "particle": "ragemod:blocks/warped_wart_block"
   }
 }

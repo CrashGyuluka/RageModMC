@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/--savmellvert"
+    "layer0": "ragemod:items/toxic_chestplate"
   }
 }

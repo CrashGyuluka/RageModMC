@@ -1,7 +1,7 @@
 {
   "parent": "block/wall_inventory",
   "textures": {
-    "wall": "ragemod:blocks/hegyiko1",
-    "particle": "ragemod:blocks/hegyiko1"
+    "wall": "ragemod:blocks/mountain_stone_newest",
+    "particle": "ragemod:blocks/mountain_stone_newest"
   }
 }

@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "savaso",
+    "texture": "toxic_shovel",
     "customModelName": "Normal",
     "name": "Toxic Shovel",
     "specialInfo": [],

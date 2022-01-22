@@ -24,7 +24,7 @@
               "ragemod:ragepotion"
             ],
             "count": {
-              "min": 6,
+              "min": 1,
               "max": 69
             }
           }
@@ -35,7 +35,7 @@
   "rewards": {
     "experience": 1,
     "recipes": [
-      "ragemod:patcraft"
+      "ragemod:deleted_mod_element"
     ]
   },
   "parent": "ragemod:adv_16"

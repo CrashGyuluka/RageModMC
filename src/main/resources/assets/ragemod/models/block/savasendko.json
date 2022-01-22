@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/end_stone",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/svas_endko",
-    "east": "ragemod:blocks/svas_endko",
-    "south": "ragemod:blocks/svas_endko",
-    "west": "ragemod:blocks/svas_endko",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_end",
+    "east": "ragemod:blocks/toxic_end",
+    "south": "ragemod:blocks/toxic_end",
+    "west": "ragemod:blocks/toxic_end",
     "particle": "ragemod:blocks/end_stone"
   }
 }

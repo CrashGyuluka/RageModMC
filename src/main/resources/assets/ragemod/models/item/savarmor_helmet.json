@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ragemod:items/toxic_helmet2"
+    "layer0": "ragemod:items/toxic_helmet_1"
   }
 }

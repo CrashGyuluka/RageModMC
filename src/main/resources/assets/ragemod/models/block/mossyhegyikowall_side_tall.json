@@ -1,7 +1,7 @@
 {
   "parent": "block/template_wall_side_tall",
   "textures": {
-    "wall": "ragemod:blocks/mountain_stone_mossy",
-    "particle": "ragemod:blocks/mountain_stone_mossy"
+    "wall": "ragemod:blocks/mountain_stone_newest_mossy",
+    "particle": "ragemod:blocks/mountain_stone_newest_mossy"
   }
 }

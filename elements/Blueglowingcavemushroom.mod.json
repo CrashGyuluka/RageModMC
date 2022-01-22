@@ -60,9 +60,9 @@
     },
     "useLootTableForDrops": false,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:BlueCavemushroom"
     },
-    "dropAmount": 0,
+    "dropAmount": 1,
     "forceTicking": false,
     "emissiveRendering": true,
     "hasTileEntity": false,

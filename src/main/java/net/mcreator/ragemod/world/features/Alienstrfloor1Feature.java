@@ -45,10 +45,10 @@ public class Alienstrfloor1Feature extends Feature<NoneFeatureConfiguration> {
 		if (!dimensionCriteria)
 			return false;
 		if (template == null)
-			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "alien_str_floor1"));
+			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("ragemod", "alien_str_tower1"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 0) {
+		if ((context.random().nextInt(1000000) + 1) <= 10000) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {
@@ -58,7 +58,7 @@ public class Alienstrfloor1Feature extends Feature<NoneFeatureConfiguration> {
 				j -= 1;
 				if (!base_blocks.contains(context.level().getBlockState(new BlockPos(i, j, k)).getBlock()))
 					continue;
-				BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+				BlockPos spawnTo = new BlockPos(i + 0, j + 12, k + 0);
 				if (template.placeInWorld(context.level(), spawnTo, spawnTo,
 						new StructurePlaceSettings().setMirror(Mirror.values()[context.random().nextInt(2)])
 								.setRotation(Rotation.values()[context.random().nextInt(3)]).setRandom(context.random())

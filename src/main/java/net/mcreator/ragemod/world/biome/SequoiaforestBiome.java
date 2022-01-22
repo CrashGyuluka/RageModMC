@@ -48,7 +48,7 @@ public class SequoiaforestBiome {
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
-				.foliageColorOverride(10387789).grassColorOverride(9470285).build();
+				.foliageColorOverride(-14515440).grassColorOverride(9470285).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder().surfaceBuilder(SURFACE_BUILDER);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.MINESHAFT);
 		biomeGenerationSettings.addStructureStart(StructureFeatures.RUINED_PORTAL_JUNGLE);

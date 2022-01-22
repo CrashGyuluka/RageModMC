@@ -45,8 +45,7 @@ public class RagearrowItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("Of course"));
-		list.add(new TextComponent("texture by Lyof! ^^"));
+		list.add(new TextComponent("Texture by Lyof! ^^"));
 	}
 
 	@Override

@@ -2,11 +2,11 @@
   "parent": "block/cube",
   "textures": {
     "down": "ragemod:blocks/red_sand",
-    "up": "ragemod:blocks/savas_felul",
-    "north": "ragemod:blocks/savas_homok_piros",
-    "east": "ragemod:blocks/savas_homok_piros",
-    "south": "ragemod:blocks/savas_homok_piros",
-    "west": "ragemod:blocks/savas_homok_piros",
+    "up": "ragemod:blocks/toxic_top",
+    "north": "ragemod:blocks/toxic_sand2",
+    "east": "ragemod:blocks/toxic_sand2",
+    "south": "ragemod:blocks/toxic_sand2",
+    "west": "ragemod:blocks/toxic_sand2",
     "particle": "ragemod:blocks/red_sand"
   }
 }

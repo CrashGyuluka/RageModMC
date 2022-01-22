@@ -10,7 +10,10 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -22,11 +25,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.ragemod.procedures.HangingBlueCaveplantOnBlockRightClickedProcedure;
 import net.mcreator.ragemod.procedures.HangingBlueCaveplantBlockAddedProcedure;
+import net.mcreator.ragemod.procedures.AliendripstonetopdevAdditionalPlacinggrowthConditionProcedure;
+import net.mcreator.ragemod.init.RagemodModParticles;
 import net.mcreator.ragemod.init.RagemodModBlocks;
 
+import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
@@ -45,6 +52,25 @@ public class HangingBlueCaveplantBlock extends Block {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
+	}
+
+	@Override
+	public boolean canSurvive(BlockState blockstate, LevelReader worldIn, BlockPos pos) {
+		if (worldIn instanceof LevelAccessor world) {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return AliendripstonetopdevAdditionalPlacinggrowthConditionProcedure.execute(world, x, y, z);
+		}
+		return super.canSurvive(blockstate, worldIn, pos);
+	}
+
+	@Override
+	public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos,
+			BlockPos facingPos) {
+		return !state.canSurvive(world, currentPos)
+				? Blocks.AIR.defaultBlockState()
+				: super.updateShape(state, facing, facingState, world, currentPos, facingPos);
 	}
 
 	@Override
@@ -70,6 +96,25 @@ public class HangingBlueCaveplantBlock extends Block {
 	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
 		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
 		HangingBlueCaveplantBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	@Override
+	public void animateTick(BlockState blockstate, Level world, BlockPos pos, Random random) {
+		super.animateTick(blockstate, world, pos, random);
+		Player entity = Minecraft.getInstance().player;
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		for (int l = 0; l < 2; ++l) {
+			double x0 = x + random.nextFloat();
+			double y0 = y + random.nextFloat();
+			double z0 = z + random.nextFloat();
+			double dx = (random.nextFloat() - 0.5D) * 1D;
+			double dy = (random.nextFloat() - 0.5D) * 1D;
+			double dz = (random.nextFloat() - 0.5D) * 1D;
+			world.addParticle(RagemodModParticles.BLUE_CAVEPARTICLE, x0, y0, z0, dx, dy, dz);
+		}
 	}
 
 	@Override
