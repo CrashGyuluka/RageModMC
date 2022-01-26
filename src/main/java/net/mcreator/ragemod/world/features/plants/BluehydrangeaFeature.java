@@ -28,10 +28,11 @@ public class BluehydrangeaFeature extends DefaultFlowerFeature {
 							.build())
 			.decorated(FeatureDecorator.HEIGHTMAP.configured(new HeightmapConfiguration(Heightmap.Types.MOTION_BLOCKING))).squared().rarity(32)
 			.count(11);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("sunflower_plains"),
-			new ResourceLocation("ragemod:beech_forest"), new ResourceLocation("ragemod:beech_hill"), new ResourceLocation("beach"),
-			new ResourceLocation("jungle_edge"), new ResourceLocation("plains"), new ResourceLocation("birch_forest"),
-			new ResourceLocation("flower_forest"), new ResourceLocation("ragemod:beech_meadow"), new ResourceLocation("jungle"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:beech_highlands"),
+			new ResourceLocation("forest"), new ResourceLocation("sunflower_plains"), new ResourceLocation("ragemod:beech_forest"),
+			new ResourceLocation("ragemod:beech_hill"), new ResourceLocation("beach"), new ResourceLocation("jungle_edge"),
+			new ResourceLocation("plains"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"),
+			new ResourceLocation("jungle"));
 
 	public BluehydrangeaFeature() {
 		super(RandomPatchConfiguration.CODEC);

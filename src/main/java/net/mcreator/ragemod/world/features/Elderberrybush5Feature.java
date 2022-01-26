@@ -26,11 +26,12 @@ public class Elderberrybush5Feature extends Feature<NoneFeatureConfiguration> {
 	public static final Elderberrybush5Feature FEATURE = (Elderberrybush5Feature) new Elderberrybush5Feature()
 			.setRegistryName("ragemod:elderberrybush_5");
 	public static final ConfiguredFeature<?, ?> CONFIGURED_FEATURE = FEATURE.configured(FeatureConfiguration.NONE);
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("wooded_hills"),
-			new ResourceLocation("sunflower_plains"), new ResourceLocation("ragemod:beech_forest"), new ResourceLocation("birch_forest"),
-			new ResourceLocation("flower_forest"), new ResourceLocation("beach"), new ResourceLocation("plains"),
-			new ResourceLocation("dark_forest_hills"), new ResourceLocation("ragemod:beech_hill"), new ResourceLocation("tall_birch_hills"),
-			new ResourceLocation("jungle"), new ResourceLocation("ragemod:beech_meadow"), new ResourceLocation("tall_birch_forest"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ragemod:beech_highlands"),
+			new ResourceLocation("forest"), new ResourceLocation("wooded_hills"), new ResourceLocation("sunflower_plains"),
+			new ResourceLocation("ragemod:beech_forest"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"),
+			new ResourceLocation("beach"), new ResourceLocation("plains"), new ResourceLocation("dark_forest_hills"),
+			new ResourceLocation("ragemod:beech_hill"), new ResourceLocation("tall_birch_hills"), new ResourceLocation("jungle"),
+			new ResourceLocation("tall_birch_forest"));
 	private final List<Block> base_blocks = List.of(Blocks.GRASS_BLOCK);
 	private StructureTemplate template = null;
 

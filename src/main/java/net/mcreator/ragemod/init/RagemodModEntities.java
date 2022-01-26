@@ -44,7 +44,7 @@ public class RagemodModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(Mob1Entity::new).sized(0.6f, 1.8f));
 	public static final EntityType<SavragerobiEntity> SAVRAGEROBI = register("savragerobi",
 			EntityType.Builder.<SavragerobiEntity>of(SavragerobiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SavragerobiEntity::new).sized(0.6f, 2.8f));
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SavragerobiEntity::new).sized(0.6f, 1.8f));
 	public static final EntityType<AlienMobEntity> ALIEN_MOB = register("alien_mob",
 			EntityType.Builder.<AlienMobEntity>of(AlienMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(AlienMobEntity::new).sized(0.5f, 1.5999999999999999f));

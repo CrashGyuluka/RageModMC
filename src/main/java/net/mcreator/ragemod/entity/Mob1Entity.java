@@ -73,7 +73,7 @@ public class Mob1Entity extends Monster {
 		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AlienMobEntity.class, false, false));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AtomRageREntity.class, false, false));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, RagemiteEntity.class, false, false));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AlienMobEntity.class, false, false));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false));
 		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));

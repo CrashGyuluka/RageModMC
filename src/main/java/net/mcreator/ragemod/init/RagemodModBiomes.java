@@ -41,7 +41,7 @@ public class RagemodModBiomes {
 	public static Biome TOXIC_WASTE = register("toxic_waste", SavasbiomBiome.createBiome());
 	public static Biome BEECH_FOREST = register("beech_forest", BukkbiomeBiome.createBiome());
 	public static Biome BEECH_HILL = register("beech_hill", BukkmountainBiome.createBiome());
-	public static Biome BEECH_MEADOW = register("beech_meadow", BukkmeadowBiome.createBiome());
+	public static Biome BEECH_HIGHLANDS = register("beech_highlands", BukkmeadowBiome.createBiome());
 	public static Biome BEECH_MOUNTAIN = register("beech_mountain", BukkhighmountainBiome.createBiome());
 	public static Biome BEECH_AMPLIFIED_MOUNTAIN = register("beech_amplified_mountain", BukkhighmountainvariatedBiome.createBiome());
 	public static Biome ALIEN_HILLS = register("alien_hills", TotallyNotAlienBiome.createBiome());

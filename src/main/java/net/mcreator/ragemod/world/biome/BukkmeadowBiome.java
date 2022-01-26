@@ -91,17 +91,17 @@ public class BukkmeadowBiome {
 	}
 
 	public static void init() {
-		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new ResourceLocation(RagemodMod.MODID, "beech_meadow"), SURFACE_BUILDER);
+		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new ResourceLocation(RagemodMod.MODID, "beech_highlands"), SURFACE_BUILDER);
 		CONFIGURED_FEATURES.forEach((resourceLocation, configuredFeature) -> Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, resourceLocation,
 				configuredFeature));
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(
-				ResourceKey.create(Registry.BIOME_REGISTRY, BuiltinRegistries.BIOME.getKey(RagemodModBiomes.BEECH_MEADOW)), 5));
+				ResourceKey.create(Registry.BIOME_REGISTRY, BuiltinRegistries.BIOME.getKey(RagemodModBiomes.BEECH_HIGHLANDS)), 5));
 	}
 
 	private static final Map<ResourceLocation, ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = new HashMap<>();
 
 	private static ConfiguredFeature<?, ?> register(String name, ConfiguredFeature<?, ?> configuredFeature) {
-		CONFIGURED_FEATURES.put(new ResourceLocation(RagemodMod.MODID, name + "_beech_meadow"), configuredFeature);
+		CONFIGURED_FEATURES.put(new ResourceLocation(RagemodMod.MODID, name + "_beech_highlands"), configuredFeature);
 		return configuredFeature;
 	}
 }
