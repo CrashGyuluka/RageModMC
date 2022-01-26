@@ -98,9 +98,25 @@ public class BukkmeadowBiome extends RagemodModElements.ModElement {
 		}
 	}
 
+<<<<<<< HEAD
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,
 				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 5));
+=======
+	public static void init() {
+		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new ResourceLocation(RagemodMod.MODID, "beech_highlands"), SURFACE_BUILDER);
+		CONFIGURED_FEATURES.forEach((resourceLocation, configuredFeature) -> Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, resourceLocation,
+				configuredFeature));
+		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(
+				ResourceKey.create(Registry.BIOME_REGISTRY, BuiltinRegistries.BIOME.getKey(RagemodModBiomes.BEECH_HIGHLANDS)), 5));
+	}
+
+	private static final Map<ResourceLocation, ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = new HashMap<>();
+
+	private static ConfiguredFeature<?, ?> register(String name, ConfiguredFeature<?, ?> configuredFeature) {
+		CONFIGURED_FEATURES.put(new ResourceLocation(RagemodMod.MODID, name + "_beech_highlands"), configuredFeature);
+		return configuredFeature;
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 	}
 }

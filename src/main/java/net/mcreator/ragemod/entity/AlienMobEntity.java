@@ -12,6 +12,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.DungeonHooks;
 
+<<<<<<< HEAD
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
@@ -34,6 +35,30 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
+=======
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.Difficulty;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 
 import net.mcreator.ragemod.particle.AlienparticleParticle;
 import net.mcreator.ragemod.itemgroup.ErcekItemGroup;
@@ -83,6 +108,7 @@ public class AlienMobEntity extends RagemodModElements.ModElement {
 		DungeonHooks.addDungeonMob(entity, 180);
 	}
 
+<<<<<<< HEAD
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -94,6 +120,67 @@ public class AlienMobEntity extends RagemodModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 0.1);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 0.5);
 			event.put(entity, ammma.create());
+=======
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AlienMobEntity.class, false, false));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+	}
+
+	@Override
+	public MobType getMobType() {
+		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+	}
+
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source == DamageSource.FALL)
+			return false;
+		if (source == DamageSource.CACTUS)
+			return false;
+		if (source == DamageSource.DROWN)
+			return false;
+		if (source == DamageSource.ANVIL)
+			return false;
+		if (source == DamageSource.DRAGON_BREATH)
+			return false;
+		if (source == DamageSource.WITHER)
+			return false;
+		if (source.getMsgId().equals("witherSkull"))
+			return false;
+		return super.hurt(source, amount);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		for (int l = 0; l < 1; ++l) {
+			double x0 = x + random.nextFloat();
+			double y0 = y + random.nextFloat();
+			double z0 = z + random.nextFloat();
+			double dx = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+			double dy = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+			double dz = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+			world.addParticle(RagemodModParticles.ALIENPARTICLE, x0, y0, z0, dx, dy, dz);
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 		}
 	}
 

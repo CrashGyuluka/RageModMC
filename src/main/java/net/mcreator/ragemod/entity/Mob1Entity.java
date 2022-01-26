@@ -86,6 +86,7 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 		DungeonHooks.addDungeonMob(entity, 180);
 	}
 
+<<<<<<< HEAD
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -97,6 +98,76 @@ public class Mob1Entity extends RagemodModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 5);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 2);
 			event.put(entity, ammma.create());
+=======
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AlienMobEntity.class, false, false));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AtomRageREntity.class, false, false));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AlienMobEntity.class, false, false));
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false));
+		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
+		this.goalSelector.addGoal(10, new BreakDoorGoal(this, e -> true));
+	}
+
+	@Override
+	public MobType getMobType() {
+		return MobType.UNDEFINED;
+	}
+
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(RagemodModItems.SAVERCR));
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_idle2"));
+	}
+
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+	}
+
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ragemod:toxicmob_death1"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.getDirectEntity() instanceof ThrownPotion)
+			return false;
+		if (source == DamageSource.CACTUS)
+			return false;
+		if (source == DamageSource.DROWN)
+			return false;
+		if (source == DamageSource.LIGHTNING_BOLT)
+			return false;
+		return super.hurt(source, amount);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		for (int l = 0; l < 4; ++l) {
+			double x0 = x + random.nextFloat();
+			double y0 = y + random.nextFloat();
+			double z0 = z + random.nextFloat();
+			double dx = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+			double dy = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+			double dz = (random.nextFloat() - 0.5D) * 0.3999999985098839D;
+			world.addParticle(RagemodModParticles.SAVASPART, x0, y0, z0, dx, dy, dz);
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 		}
 	}
 

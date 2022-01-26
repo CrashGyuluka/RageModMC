@@ -60,7 +60,31 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/8.0.9/763b9402d22e49db0daab3a0ded1b42a3f19e7d4/modlauncher-8.0.9-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/8.0.9/bb848f57758808692b9108df61c909c0a961ba81/modlauncher-8.0.9.jar">
+=======
+	<classpathentry kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/forge_gradle/mcp_repo/net/minecraft/mapping/1.17.1/mapping-1.17.1-mapping.zip">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/0.9.54/abbfe7c00af7379dd31f482f21d36713da517c00/securejarhandler-0.9.54-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/0.9.54/24b670f2c026ec9777e64a2c2126ebc8635dbe8d/securejarhandler-0.9.54.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.3/d1b08eaf27fa4468ea714555377d74079b8b9e99/nashorn-core-15.3-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.3/43977e804697048fc8d81d333a36c17d07a5b3dd/nashorn-core-15.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.1.1/c58327590fc05b4470e2a5d6786580e01eac1a93/fmlloader-1.17.1-37.1.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.1.1/c60816266dffed18933396bc31e7019a5ca76e1c/fmlloader-1.17.1-37.1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/9.0.24/3421556ce51d1e355734f920c06201312d1b84ea/modlauncher-9.0.24-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/9.0.24/d581f56ce7e1f1bc5acb467918cb976f440604d/modlauncher-9.0.24.jar">
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -110,12 +134,25 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/3.2.0/56b92992f07b8bd2f99c8769ff91e18d64746cde/forgespi-3.2.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/3.2.0/c6ca4e4e4a0343701407c760e642537b613b543/forgespi-3.2.0.jar">
+=======
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/eventbus/5.0.7/893e672b5a7e768aeaf0fd4a6104021a4c5a7232/eventbus-5.0.7-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/eventbus/5.0.7/5589e7511c4993054e6a80890618b46ed53519a0/eventbus-5.0.7.jar">
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/4.0.6/a6e7174676719543c22c3f9f3dc24ff27d10547a/coremods-4.0.6-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/4.0.6/d6d761379c841e2610abebcbf70ed20b65f728f0/coremods-4.0.6.jar">
+=======
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/4.0.11/6ca77f2060059bdace81c3606d774cee5d40d451/forgespi-4.0.11-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/4.0.11/beba03c49f418c8d66aae30a6df69bde4fce2f18/forgespi-4.0.11.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/5.0.2/eaf5c5d7d2a7962d59cd19099f96d39c1c5d4a8d/coremods-5.0.2-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/5.0.2/ca04eeee6c3764c151b2a2efa675057a7531acc4/coremods-5.0.2.jar">
+>>>>>>> branch 'master' of https://github.com/CrashGyuluka/RageModMc.git
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -157,7 +194,7 @@
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.15.0/9f65403ec51628737d799ebf1a02d56e4cbcd81d/log4j-core-2.15.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.15.0/ba55c13d7ac2fd44df9cc8074455719a33f375b9/log4j-core-2.15.0.jar">
 		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.15.0/a97557c733710589929407ba23f0449547a47a60/log4j-slf4j18-impl-2.15.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.15.0/88f72ad364bfc3a7cf43186fc17212f2b4bb8d97/log4j-slf4j18-impl-2.15.0.jar">
@@ -167,7 +204,7 @@
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.15.0/b0b2c8ee48c4c57804056fe18494e61bb18404ab/log4j-api-2.15.0-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.15.0/4a5aa7e55a29391c6f66e0b259d5189aa11e45d0/log4j-api-2.15.0.jar">
 		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/950831646d014c9162999019a3cb17d5fc01ac0d/jopt-simple-5.0.4-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar">
@@ -361,6 +398,21 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/b19b5927c2c25b6c70f093767041e641ae0b1b35/jsr305-3.0.2-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/0.9.61/e03849da6b68d9d91ebb453213032487b03b944b/securejarhandler-0.9.61-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/0.9.61/75cc4baec8f8e8f539c91e74ab50a59f0214bc33/securejarhandler-0.9.61.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.17.1/311c00d3764db7fa3ba5f26d0acb5840e52454aa/log4j-core-2.17.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.17.1/779f60f3844dadc3ef597976fcb1e5127b1f343d/log4j-core-2.17.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.17.1/d23d37cc41300a7f6eba7813855dbb224e2a3177/log4j-api-2.17.1-sources.jar" kind="lib" path="C:/Users/Felhasználó/.mcreator/gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.17.1/d771af8e336e372fb5399c99edabe0919aeaf5b2/log4j-api-2.17.1.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
